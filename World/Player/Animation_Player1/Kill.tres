@@ -7,7 +7,7 @@ length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Hexe/Body/Hüfte/Leg L:position")
+tracks/0/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ Vector2( -54.8519, 176.524 ), Vector2( -54.8519, 176.524 ), Vector2( -54.8519, 176.524 ), Vector2( -54.8519, 176.524 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Hexe/Body/Hüfte/Leg L:rotation_degrees")
+tracks/1/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ -29.8041, -31.5502, -34.1693, -38.5345 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Hexe/Body/Hüfte/Leg L/Leg Down L:position")
+tracks/2/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L/Leg Down L:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ Vector2( -16.44, 145.947 ), Vector2( -16.44, 145.947 ), Vector2( -16.44, 145.947 ), Vector2( -16.44, 145.947 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Hexe/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
+tracks/3/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 28.5235, 13.9043, -8.02454, 39.4106 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Hexe/Body/Hüfte/Leg R/Leg Down R:position")
+tracks/4/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R/Leg Down R:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ Vector2( 54.0061, 151.867 ), Vector2( 54.0061, 151.867 ), Vector2( 54.0061, 151.867 ), Vector2( 54.0061, 151.867 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Hexe/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
+tracks/5/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -79,7 +79,7 @@ tracks/5/keys = {
 "values": [ 44.1628, 26.2075, -0.725492, 69.3174 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Hexe/Body/Arm R:rotation_degrees")
+tracks/6/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ 17.0783, -21.381, -91.6877, -79.9994 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Hexe/Body/Arm R:position")
+tracks/7/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ Vector2( 108.007, -122.474 ), Vector2( 108.007, -122.474 ), Vector2( 108.007, -122.474 ), Vector2( 108.007, -122.474 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Hexe/Body/Hüfte/Leg R:position")
+tracks/8/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -112,10 +112,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 82.5976, 139.503 ), Vector2( 82.5976, 139.503 ), Vector2( 82.5976, 139.503 ), Vector2( 82.5976, 139.503 ) ]
+"values": [ Vector2( 0, 139.503 ), Vector2( 82.5976, 139.503 ), Vector2( 82.5976, 139.503 ), Vector2( 82.5976, 139.503 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Hexe/Body/Hüfte/Leg R:rotation_degrees")
+tracks/9/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -127,7 +127,7 @@ tracks/9/keys = {
 "values": [ 15.3211, 15.3211, 15.3211, 15.3211 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Hexe:position")
+tracks/10/path = NodePath("AnimationTreePlayer/Sprite/base:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ Vector2( 425.797, 273.435 ), Vector2( 425.797, 321.267 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Hexe:rotation_degrees")
+tracks/11/path = NodePath("AnimationTreePlayer/Sprite/base:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -151,7 +151,7 @@ tracks/11/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Hexe/Body:position")
+tracks/12/path = NodePath("AnimationTreePlayer/Sprite/base/Body:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -163,7 +163,7 @@ tracks/12/keys = {
 "values": [ Vector2( 0, -50 ), Vector2( 0, 57.578 ), Vector2( 0, 218.945 ), Vector2( 0, 199.09 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Hexe/Body:rotation_degrees")
+tracks/13/path = NodePath("AnimationTreePlayer/Sprite/base/Body:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -175,7 +175,7 @@ tracks/13/keys = {
 "values": [ 0.0, -17.9988, -44.9969, -89.9939 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Hexe/Body/Arm L:position")
+tracks/14/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -187,7 +187,7 @@ tracks/14/keys = {
 "values": [ Vector2( -58.4597, -169.593 ), Vector2( -58.4597, -169.593 ), Vector2( -58.4597, -169.593 ), Vector2( -58.4597, -169.593 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Hexe/Body/Arm L:rotation_degrees")
+tracks/15/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L:rotation_degrees")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -199,7 +199,7 @@ tracks/15/keys = {
 "values": [ 0.372466, -79.4205, -76.9764, -42.6927 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Hexe/Body/Arm R/Arm Down R:rotation_degrees")
+tracks/16/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R/Arm Down R:rotation_degrees")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -211,7 +211,7 @@ tracks/16/keys = {
 "values": [ -14.0231, 20.8081, 32.4286, -29.5807 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Hexe/Body/Arm R/Arm Down R:position")
+tracks/17/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R/Arm Down R:position")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -223,7 +223,7 @@ tracks/17/keys = {
 "values": [ Vector2( 127.685, 121.546 ), Vector2( 127.685, 121.546 ), Vector2( 127.685, 121.546 ), Vector2( 127.685, 121.546 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("Hexe/Body/Head:position")
+tracks/18/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Head:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -235,7 +235,7 @@ tracks/18/keys = {
 "values": [ Vector2( 43.4237, -222.36 ), Vector2( 43.4237, -222.36 ), Vector2( 43.4237, -222.36 ), Vector2( 43.4237, -222.36 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("Hexe/Body/Head:rotation_degrees")
+tracks/19/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Head:rotation_degrees")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -247,7 +247,7 @@ tracks/19/keys = {
 "values": [ 15.9063, 36.9095, 34.4027, -58.0686 ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("Hexe/Body/Arm L/Arm Down L:position")
+tracks/20/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L/Arm Down L:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -259,7 +259,7 @@ tracks/20/keys = {
 "values": [ Vector2( -174.842, 147.596 ), Vector2( -174.842, 147.596 ), Vector2( -174.842, 147.596 ), Vector2( -174.842, 147.596 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("Hexe/Body/Arm L/Arm Down L:rotation_degrees")
+tracks/21/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L/Arm Down L:rotation_degrees")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false

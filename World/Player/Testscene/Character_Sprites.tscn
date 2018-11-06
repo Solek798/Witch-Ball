@@ -11,15 +11,17 @@
 [ext_resource path="res://World/Player/Images_Player1/Prototyp  1 Hexe/legrighttop.png" type="Texture" id=9]
 [ext_resource path="res://World/Player/Images_Player1/Prototyp  1 Hexe/legrightbottom.png" type="Texture" id=10]
 [ext_resource path="res://World/Player/Images_Player1/Prototyp  1 Hexe/Kopf.png" type="Texture" id=11]
-[ext_resource path="res://World/Player/Animation_Player1/Hit.tres" type="Animation" id=12]
+[ext_resource path="res://World/Player/Animation_Player1/Throwing.tres" type="Animation" id=12]
 [ext_resource path="res://World/Player/Animation_Player1/Idle.tres" type="Animation" id=13]
-[ext_resource path="res://World/Player/Animation_Player1/Idle Beine.tres" type="Animation" id=14]
-[ext_resource path="res://World/Player/Animation_Player1/Kill.tres" type="Animation" id=15]
-[ext_resource path="res://World/Player/Animation_Player1/Throwing.tres" type="Animation" id=16]
-[ext_resource path="res://World/Player/Animation_Player1/Walk  bein.tres" type="Animation" id=17]
-[ext_resource path="res://World/Player/Animation_Player1/Walk  Bein (noloop).tres" type="Animation" id=18]
-[ext_resource path="res://World/Player/Animation_Player1/Walk  Hand.tres" type="Animation" id=19]
+[ext_resource path="res://World/Player/Animation_Player1/Walk  bein.tres" type="Animation" id=14]
+[ext_resource path="res://World/Player/Animation_Player1/Walk  Hand.tres" type="Animation" id=15]
+[ext_resource path="res://World/Player/Animation_Player1/Walk  Bein (noloop).tres" type="Animation" id=16]
+[ext_resource path="res://World/Player/Animation_Player1/Idle Beine.tres" type="Animation" id=17]
+[ext_resource path="res://World/Player/Animation_Player1/Hit.tres" type="Animation" id=18]
+[ext_resource path="res://World/Player/Animation_Player1/Kill.tres" type="Animation" id=19]
 [ext_resource path="res://World/Player/Animation_Player1/Winn (Fullsreen no in game.tres" type="Animation" id=20]
+
+
 
 [sub_resource type="Gradient" id=1]
 
@@ -72,10 +74,12 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Scale" ]
 
-[node name="Prototyp Charackter" type="Node" index="0"]
+[node name="Character_Sprites" type="Node" index="0"]
 
 [node name="base" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
+position = Vector2( 425.797, 321.267 )
 scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
 
@@ -87,15 +91,16 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Body" type="Sprite" parent="base" index="1"]
 
-editor/display_folded = true
-position = Vector2( -89, 3.69626 )
+position = Vector2( -34.71, 10.5359 )
 texture = ExtResource( 2 )
 offset = Vector2( 89, 1.00002 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arm L" type="Sprite" parent="base/Body" index="0"]
 
+editor/display_folded = true
 position = Vector2( -58.4597, -169.593 )
+rotation = -0.074797
 texture = ExtResource( 3 )
 offset = Vector2( 147.46, 170.593 )
 _sections_unfolded = [ "Transform" ]
@@ -106,18 +111,20 @@ __meta__ = {
 [node name="Arm Down L" type="Sprite" parent="base/Body/Arm L" index="0"]
 
 position = Vector2( -174.842, 147.596 )
-rotation = -0.00475254
+rotation = -0.0467799
 z_index = 2
 texture = ExtResource( 4 )
 offset = Vector2( 322.302, 22.997 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
 [node name="Arm R" type="Sprite" parent="base/Body" index="1"]
 
+editor/display_folded = true
 position = Vector2( 108.007, -122.474 )
+rotation = 0.148475
 z_index = -1
 texture = ExtResource( 5 )
 offset = Vector2( -19.0074, 123.474 )
@@ -129,7 +136,7 @@ __meta__ = {
 [node name="Arm Down R" type="Sprite" parent="base/Body/Arm R" index="0"]
 
 position = Vector2( 127.685, 121.546 )
-rotation = 0.0118756
+rotation = -0.0789261
 z_index = -2
 texture = ExtResource( 6 )
 offset = Vector2( -146.692, 1.92842 )
@@ -166,6 +173,7 @@ _sections_unfolded = [ "Process Material", "Time" ]
 [node name="Leg L" type="Sprite" parent="base/Body" index="2"]
 
 position = Vector2( -54.8519, 176.524 )
+rotation = -0.405251
 texture = ExtResource( 7 )
 offset = Vector2( 143.852, -175.524 )
 _sections_unfolded = [ "Transform" ]
@@ -176,6 +184,7 @@ __meta__ = {
 [node name="Leg Down L" type="Sprite" parent="base/Body/Leg L" index="0"]
 
 position = Vector2( -16.44, 145.947 )
+rotation = 0.594064
 texture = ExtResource( 8 )
 offset = Vector2( 160.292, -321.471 )
 _sections_unfolded = [ "Transform" ]
@@ -185,7 +194,8 @@ __meta__ = {
 
 [node name="Leg R" type="Sprite" parent="base/Body" index="3"]
 
-position = Vector2( 85.0336, 142.371 )
+position = Vector2( 95.5301, 140.622 )
+rotation = 0.56284
 z_index = -1
 texture = ExtResource( 9 )
 offset = Vector2( 6.4024, -138.503 )
@@ -197,7 +207,7 @@ __meta__ = {
 [node name="Leg Down R" type="Sprite" parent="base/Body/Leg R" index="0"]
 
 position = Vector2( 54.0061, 151.867 )
-rotation = 0.00192979
+rotation = 0.202682
 texture = ExtResource( 10 )
 offset = Vector2( -47.6037, -290.37 )
 _sections_unfolded = [ "Transform" ]
@@ -208,73 +218,50 @@ __meta__ = {
 [node name="Head" type="Sprite" parent="base/Body" index="4"]
 
 position = Vector2( 43.4237, -222.36 )
-rotation = -0.0139445
+rotation = -0.00268899
 texture = ExtResource( 11 )
 offset = Vector2( 45.5763, 223.36 )
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="base" index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/Hit = ExtResource( 12 )
-anims/Idle = ExtResource( 13 )
-"anims/Idle Beine" = ExtResource( 14 )
-"anims/Kill   (not in game" = ExtResource( 15 )
-anims/Throwing = ExtResource( 16 )
-"anims/Walk  Bein" = ExtResource( 17 )
-"anims/Walk  Bein (noloop)" = ExtResource( 18 )
-"anims/Walk  Hand" = ExtResource( 19 )
-"anims/Winn (Fullsreen no in game" = ExtResource( 20 )
-blend_times = [  ]
-
-[node name="Charakter tree" type="AnimationTreePlayer" parent="base" index="3"]
+[node name="Charakter tree" type="AnimationTreePlayer" parent="." index="1"]
 
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("..")
-active = false
+active = true
 data = {
-"active": false,
-"connections": [ "Hier Wurf im Stand", "out", 0, "Walk", "Speed", 0, "Hier Hit Loop", "Hier Wurf im Stand", 0, "Stand Werfen", "Hier Wurf im Stand", 1, "Hier Wurf im Lauf", "Hier Hit Loop", 0, "Hit ", "Hier Hit Loop", 1, "anim 4", "Walk", 0, "anim 3", "Walk", 1, "Idle", "Hier Walk", 0, "Speed", "Hier Walk", 1, "anim 6", "Stand Werfen", 0, "anim 7", "Stand Werfen", 1, "Hier Walk", "Hier Wurf im Lauf", 0, "Laufen Werfen", "Hier Wurf im Lauf", 1, "anim 5", "Laufen Werfen", 0, "anim", "Laufen Werfen", 1 ],
+"active": true,
+"connections": [ "Hier Wurf im Stand", "out", 0, "Hier Hit Loop", "Hier Wurf im Stand", 0, "Stand Werfen", "Hier Wurf im Stand", 1, "anim 7", "Stand Werfen", 0, "anim 6", "Stand Werfen", 1, "anim 5", "Laufen Werfen", 0, "anim", "Laufen Werfen", 1, "Walk handbewegung implementieren", "Speed", 0, "Hier Wurf im Lauf", "Hier Hit Loop", 0, "Hit ", "Hier Hit Loop", 1, "Hier Walk", "Hier Wurf im Lauf", 0, "Laufen Werfen", "Hier Wurf im Lauf", 1, "anim 4", "Walk handbewegung implementieren", 0, "anim 3", "Walk handbewegung implementieren", 1, "Idle", "Hier Walk", 0, "Speed", "Hier Walk", 1 ],
 "master": NodePath(""),
 "nodes": [ {
-"animation": ExtResource( 16 ),
+"animation": ExtResource( 12 ),
 "filter": [  ],
 "id": "anim",
-"position": Vector2( 17, 381 ),
+"position": Vector2( 115, 369 ),
 "type": "animation"
 }, {
 "id": "out",
-"position": Vector2( 875, 322 ),
+"position": Vector2( 1232, 285 ),
 "type": "output"
 }, {
 "animation": ExtResource( 13 ),
 "filter": [  ],
 "id": "Idle",
-"position": Vector2( 187, 15 ),
+"position": Vector2( 172, 5 ),
 "type": "animation"
 }, {
-"id": "Speed",
-"position": Vector2( 438, 94 ),
-"scale": 1.0,
-"type": "timescale"
-}, {
-"animation": ExtResource( 12 ),
+"animation": ExtResource( 14 ),
 "filter": [  ],
-"id": "Hit ",
-"position": Vector2( 156, 448 ),
+"id": "anim 4",
+"position": Vector2( 49, 40 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 18 ),
+"animation": ExtResource( 15 ),
 "filter": [  ],
-"id": "anim 5",
-"position": Vector2( 22, 278 ),
+"id": "anim 3",
+"position": Vector2( 37, 160 ),
 "type": "animation"
 }, {
 "autorestart": true,
@@ -285,13 +272,34 @@ data = {
 "filter": [  ],
 "id": "Hier Wurf im Stand",
 "mix": false,
-"position": Vector2( 465, 347 ),
+"position": Vector2( 758, 481 ),
 "type": "oneshot"
+}, {
+"id": "Stand Werfen",
+"mix": 1.0,
+"position": Vector2( 225, 532 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 16 ),
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 89, 266 ),
+"type": "animation"
+}, {
+"id": "Laufen Werfen",
+"mix": 1.0,
+"position": Vector2( 220, 291 ),
+"type": "mix"
+}, {
+"id": "Speed",
+"position": Vector2( 592, 93 ),
+"scale": 1.0,
+"type": "timescale"
 }, {
 "animation": ExtResource( 17 ),
 "filter": [  ],
-"id": "anim 4",
-"position": Vector2( 49, 40 ),
+"id": "anim 7",
+"position": Vector2( 9, 454 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -302,35 +310,13 @@ data = {
 "filter": [  ],
 "id": "Hier Hit Loop",
 "mix": false,
-"position": Vector2( 575, 205 ),
+"position": Vector2( 768, 327 ),
 "type": "oneshot"
 }, {
-"id": "Walk",
-"mix": 1.0,
-"position": Vector2( 176, 122 ),
-"type": "mix"
-}, {
-"blend": 0.0,
+"animation": ExtResource( 18 ),
 "filter": [  ],
-"id": "Hier Walk",
-"position": Vector2( 578, 23 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 16 ),
-"filter": [  ],
-"id": "anim 6",
-"position": Vector2( 22, 527 ),
-"type": "animation"
-}, {
-"id": "Stand Werfen",
-"mix": 1.0,
-"position": Vector2( 156, 561 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 19 ),
-"filter": [  ],
-"id": "anim 3",
-"position": Vector2( 37, 160 ),
+"id": "Hit ",
+"position": Vector2( 247, 416 ),
 "type": "animation"
 }, {
 "autorestart": true,
@@ -341,21 +327,45 @@ data = {
 "filter": [  ],
 "id": "Hier Wurf im Lauf",
 "mix": false,
-"position": Vector2( 413, 204 ),
+"position": Vector2( 763, 183 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 14 ),
+"id": "Walk handbewegung implementieren",
+"mix": 0.17,
+"position": Vector2( 220, 124 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 12 ),
 "filter": [  ],
-"id": "anim 7",
-"position": Vector2( 21, 652 ),
+"id": "anim 6",
+"position": Vector2( 5, 588 ),
 "type": "animation"
 }, {
-"id": "Laufen Werfen",
-"mix": 1.0,
-"position": Vector2( 136, 299 ),
-"type": "mix"
+"blend": 0.61,
+"filter": [  ],
+"id": "Hier Walk",
+"position": Vector2( 760, 5 ),
+"type": "blend2"
 } ]
 }
 _sections_unfolded = [ "Playback" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Hit = ExtResource( 18 )
+anims/Idle = ExtResource( 13 )
+"anims/Idle Beine" = ExtResource( 17 )
+"anims/Kill   (not in game" = ExtResource( 19 )
+anims/Throwing = ExtResource( 12 )
+"anims/Walk  Bein" = ExtResource( 14 )
+"anims/Walk  Bein (noloop)" = ExtResource( 16 )
+"anims/Walk  Hand" = ExtResource( 15 )
+"anims/Winn (Fullsreen no in game" = ExtResource( 20 )
+blend_times = [  ]
 
 
