@@ -1,0 +1,26 @@
+--- Player.tscn
++++ Player.tscn
+@@ -1,3 +1,3 @@
+-[gd_scene load_steps=4 format=2]
++[gd_scene load_steps=14 format=2]
+ 
+ [ext_resource path="res://World/Player/Player.gd" type="Script" id=1]
+@@ -2,7 +2,17 @@
+ 
+ [ext_resource path="res://World/Player/Player.gd" type="Script" id=1]
+-[ext_resource path="res://icon.png" type="Texture" id=2]
++[ext_resource path="res://witchball_jessymais_finalcharacter2.png" type="Texture" id=2]
++[ext_resource path="res://World/Player/Animation_Player1/Hit.tres" type="Animation" id=3]
++[ext_resource path="res://World/Player/Animation_Player1/Idle.tres" type="Animation" id=4]
++[ext_resource path="res://World/Player/Animation_Player1/Idle Beine.tres" type="Animation" id=5]
++[ext_resource path="res://World/Player/Animation_Player1/Kill.tres" type="Animation" id=6]
++[ext_resource path="res://World/Player/Animation_Player1/Throwing.tres" type="Animation" id=7]
++[ext_resource path="res://World/Player/Animation_Player1/Walk .tres" type="Animation" id=8]
++[ext_resource path="res://World/Player/Animation_Player1/Walk  Bein (noloop).tres" type="Animation" id=9]
++[ext_resource path="res://World/Player/Animation_Player1/Walk  Hand.tres" type="Animation" id=10]
++[ext_resource path="res://World/Player/Animation_Player1/Walk  bein.tres" type="Animation" id=11]
++[ext_resource path="res://World/Player/Animation_Player1/Winn (Fullsreen no in game.tres" type="Animation" id=12]
+ 
+ [sub_resource type="RectangleShape2D" id=1]
+ 
+ custom_solver_bias = 0.0

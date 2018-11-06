@@ -16,27 +16,117 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.139, 31.9587 )
+extents = Vector2( 70.2353, 98.9913 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-movementSpeed = 100
+movementSpeed = 400
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+position = Vector2( 17.8383, -22.61 )
+scale = Vector2( 0.0988627, 0.0988627 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( 20.6424, -24.2257 )
+scale = Vector2( 0.718136, 0.718136 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Hexe" type="Sprite" parent="." index="2"]
+[node name="Hexe" type="Sprite" parent="." index="2"]
+
+[node name="Body" type="Sprite" parent="Hexe" index="0"]
+
+[node name="Arm R" type="Sprite" parent="Hexe/Body" index="0"]
+
+editor/display_folded = true
+
+[node name="Arm Down R" type="Sprite" parent="Hexe/Body/Arm R" index="0"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Hexe/Body/Arm R/Arm Down R" index="0"]
+
+[node name="Arm L" type="Sprite" parent="Hexe/Body" index="1"]
+
+editor/display_folded = true
+
+[node name="Arm Down L" type="Sprite" parent="Hexe/Body/Arm L" index="0"]
+
+[node name="Sprite" type="Sprite" parent="Hexe/Body/Arm L/Arm Down L" index="0"]
+
+[node name="Head" type="Sprite" parent="Hexe/Body" index="2"]
+
+[node name="Hüfte" type="Sprite" parent="Hexe/Body" index="3"]
+
+[node name="Leg R" type="Sprite" parent="Hexe/Body/Hüfte" index="0"]
+
+editor/display_folded = true
+
+[node name="Leg Down R" type="Sprite" parent="Hexe/Body/Hüfte/Leg R" index="0"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Hexe/Body/Hüfte/Leg R/Leg Down R" index="0"]
+
+[node name="Leg L" type="Sprite" parent="Hexe/Body/Hüfte" index="1"]
+
+editor/display_folded = true
+
+[node name="Leg Down L" type="Sprite" parent="Hexe/Body/Hüfte/Leg L" index="0"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Hexe/Body/Hüfte/Leg L/Leg Down L" index="0"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Hit = ExtResource( 3 )
+anims/Idle = ExtResource( 4 )
+"anims/Idle Beine" = ExtResource( 5 )
+anims/Kill = ExtResource( 6 )
+anims/Throwing = ExtResource( 7 )
+"anims/Walk " = ExtResource( 8 )
+"anims/Walk  Bein (noloop)" = ExtResource( 9 )
+"anims/Walk  Hand" = ExtResource( 10 )
+"anims/Walk  bein" = ExtResource( 11 )
+"anims/Winn (Fullsreen no in game" = ExtResource( 12 )
+blend_times = [  ]
+
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="4"]
+
+playback_process_mode = 1
+master_player = NodePath("")
+base_path = NodePath("..")
+active = false
+data = {
+"active": false,
+"connections": [  ],
+"master": NodePath(""),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 40, 40 ),
+"type": "output"
+} ]
+}
+
+
+editor/display_folded = true
+visible = false
 
 [node name="Body" type="Sprite" parent="Hexe" index="0"]
 

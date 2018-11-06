@@ -1,11 +1,69 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://World/World.gd" type="Script" id=1]
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Arena_Versuch_latest_.png" type="Texture" id=3]
 
-[node name="World" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 76.0756, 498.054 )
+
+[node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 player_scene = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 965.948, 542.653 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( -95.8174, -49.0478 )
+scale = Vector2( 1, 1.12348 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 1050.9, 519.049 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 164.12, 521.8 )
+scale = Vector2( 1.11342, 1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( 1944.46, 524.551 )
+scale = Vector2( 0.996157, 1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 1058.93, 949.39 )
+scale = Vector2( 11.9993, 0.140263 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( 1051.2, 153.66 )
+scale = Vector2( 11.8625, 0.226833 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 
