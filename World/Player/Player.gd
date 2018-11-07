@@ -2,19 +2,34 @@ extends KinematicBody2D
 
 export(int) var movementSpeed 
 
-enum action {UP, DOWN, LEFT, RIGHT}
+enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW}
+
+const DEGREE_IN_RADIANT = PI / 180
 
 # template for action event Strings
-var ctr = ["player%d_up", "player%d_down", "player%d_left", "player%d_right"]
+var ctr
 var player_id
+# TODO
+onready var aim = get_node("Aim")
 
 # formating action event Strings for this Player
 func _ready():
+	ctr = [
+			"player%d_up", 
+			"player%d_down", 
+			"player%d_left", 
+			"player%d_right",
+			"player%d_aim_up",
+			"player%d_aim_down",
+			"player%d_throw"
+	]
+	
 	for i in range(ctr.size()):
 		ctr[i] = ctr[i] % player_id
 
 func _process(delta):
 	get_movement(delta)
+	get_aim()
 
 func get_movement(delta):
 	var input = Vector2()
@@ -29,3 +44,11 @@ func get_movement(delta):
 		input.x += 1
 	
 	move_and_collide(input * delta * movementSpeed)
+
+func get_aim():
+	var input = 0
+	if Input.is_action_pressed(ctr[AIM_UP]):
+		input -= DEGREE_IN_RADIANT
+	if Input.is_action_pressed(ctr[AIM_DOWN]):
+		input += DEGREE_IN_RADIANT
+	aim.rotate(input)
