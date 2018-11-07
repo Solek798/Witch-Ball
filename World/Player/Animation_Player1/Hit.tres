@@ -7,7 +7,7 @@ length = 0.2
 loop = false
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Head:rotation_degrees")
+tracks/0/path = NodePath("AnimationTreePlayer/base/Body/Head:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ -0.76342, 6.3093, -0.76342 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R:rotation_degrees")
+tracks/1/path = NodePath("AnimationTreePlayer/base/Body/Arm R:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 106.017, 84.2835, 106.017 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationTreePlayer/Sprite/base/Body:rotation_degrees")
+tracks/2/path = NodePath("AnimationTreePlayer/base/Body:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L:rotation_degrees")
+tracks/3/path = NodePath("AnimationTreePlayer/base/Body/Arm L:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ -54.5849, -85.6838, -76.4041, -54.5849 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm L/Arm Down L:rotation_degrees")
+tracks/4/path = NodePath("AnimationTreePlayer/base/Body/Arm L/Arm Down L:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ -25.3402, 0.234434, -4.9051, -25.3402 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Arm R/Arm Down R:rotation_degrees")
+tracks/5/path = NodePath("AnimationTreePlayer/base/Body/Arm R/Arm Down R:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -79,7 +79,7 @@ tracks/5/keys = {
 "values": [ -44.8731, -59.278, -44.8731 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("AnimationTreePlayer/Sprite/base/Body:position")
+tracks/6/path = NodePath("AnimationTreePlayer/base/Body:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ Vector2( -19.6438, 0 ), Vector2( -83.4862, 0 ), Vector2( -19.6438, 0 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R:position")
+tracks/7/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0, 139.503 ), Vector2( 82.5976, 139.503 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R:rotation_degrees")
+tracks/8/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R:rotation_degrees")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -115,7 +115,7 @@ tracks/8/keys = {
 "values": [ 47.7907, 37.6379, 47.7907 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
+tracks/9/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -127,7 +127,7 @@ tracks/9/keys = {
 "values": [ 37.1903, 42.2657, 37.1903 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
+tracks/10/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ 2.75302, 6.46294, 2.75302 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("AnimationTreePlayer/Sprite/base/Body/Hüfte/Leg L:rotation_degrees")
+tracks/11/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false

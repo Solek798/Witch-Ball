@@ -11,7 +11,7 @@ func _ready():
 	players.back().player_id = players.size()
 	add_child(players.back())
 	
-	players.append(player_scene.instance())
-	players.back().player_id = players.size()
-	add_child(players.back())
+	#players.append(player_scene.instance())
+	#players.back().player_id = players.size()
+	#add_child(players.back())
 
