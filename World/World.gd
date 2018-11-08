@@ -9,9 +9,12 @@ onready var players = []
 func _ready():
 	players.append(player_scene.instance())
 	players.back().player_id = players.size()
+	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
 	add_child(players.back())
 	
 	#players.append(player_scene.instance())
 	#players.back().player_id = players.size()
 	#add_child(players.back())
 
+func _on_projectile_thrown(node):
+	add_child(node) 
