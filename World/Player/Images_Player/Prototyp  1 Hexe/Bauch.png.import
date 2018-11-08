@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/legleftdown.png-497b0777370eb6a904777ab76414db75.stex"
+path="res://.import/Bauch.png-d09d7acc3a0dd80a27ab2c58faec3a3e.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/legleftdown.png"
-dest_files=[ "res://.import/legleftdown.png-497b0777370eb6a904777ab76414db75.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/Bauch.png"
+dest_files=[ "res://.import/Bauch.png-d09d7acc3a0dd80a27ab2c58faec3a3e.stex" ]
 
 [params]
 

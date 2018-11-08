@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/amleftbottom.png-8bbf3db707ec765b2fde2b1593f2eb3f.stex"
+path="res://.import/Ground test.png-0ca58f96817090311eb23c5b1fdf70e6.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/amleftbottom.png"
-dest_files=[ "res://.import/amleftbottom.png-8bbf3db707ec765b2fde2b1593f2eb3f.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/Ground test.png"
+dest_files=[ "res://.import/Ground test.png-0ca58f96817090311eb23c5b1fdf70e6.stex" ]
 
 [params]
 

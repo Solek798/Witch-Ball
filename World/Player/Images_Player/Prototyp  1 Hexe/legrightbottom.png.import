@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bauch.png-28167b94a2a440830d89d2b9e33bb34b.stex"
+path="res://.import/legrightbottom.png-a8ba909c4e38d5ed89410c89895d1a96.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/Bauch.png"
-dest_files=[ "res://.import/Bauch.png-28167b94a2a440830d89d2b9e33bb34b.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/legrightbottom.png"
+dest_files=[ "res://.import/legrightbottom.png-a8ba909c4e38d5ed89410c89895d1a96.stex" ]
 
 [params]
 

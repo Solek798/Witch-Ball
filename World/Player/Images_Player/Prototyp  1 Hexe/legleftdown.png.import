@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rechte Hand.png-80b22ae1d7bb08fdcf7342b3e4a10c7f.stex"
+path="res://.import/legleftdown.png-3aa39e1599ecd0fd53b3bf830a51874e.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/rechte Hand.png"
-dest_files=[ "res://.import/rechte Hand.png-80b22ae1d7bb08fdcf7342b3e4a10c7f.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/legleftdown.png"
+dest_files=[ "res://.import/legleftdown.png-3aa39e1599ecd0fd53b3bf830a51874e.stex" ]
 
 [params]
 

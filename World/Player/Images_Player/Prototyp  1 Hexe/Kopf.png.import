@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kopf.png-575c015f97e82db6a35c735264603e05.stex"
+path="res://.import/Kopf.png-30023f27245394b2c3d571fc12f0fe45.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/Kopf.png"
-dest_files=[ "res://.import/Kopf.png-575c015f97e82db6a35c735264603e05.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/Kopf.png"
+dest_files=[ "res://.import/Kopf.png-30023f27245394b2c3d571fc12f0fe45.stex" ]
 
 [params]
 

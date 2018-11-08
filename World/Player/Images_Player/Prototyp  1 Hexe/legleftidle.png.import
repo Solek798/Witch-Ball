@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/leglefttop.png-766b448aa73950af6abd5e958a057658.stex"
+path="res://.import/legleftidle.png-58742a4b4c0b264162335b8c34e1968d.stex"
 
 [deps]
 
-source_file="res://World/Player/Images_Player1/Prototyp  1 Hexe/leglefttop.png"
-dest_files=[ "res://.import/leglefttop.png-766b448aa73950af6abd5e958a057658.stex" ]
+source_file="res://World/Player/Images_Player/Prototyp  1 Hexe/legleftidle.png"
+dest_files=[ "res://.import/legleftidle.png-58742a4b4c0b264162335b8c34e1968d.stex" ]
 
 [params]
 

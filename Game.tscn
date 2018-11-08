@@ -19,4 +19,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="World" parent="." index="2" instance=ExtResource( 3 )]
 
+player1_position = Vector2( 200, 300 )
+player2_position = Vector2( 800, 300 )
+
 
