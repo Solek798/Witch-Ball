@@ -7,7 +7,7 @@ export(int) var projectile_speed
 
 signal projectile_thrown(node)
 
-enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW}
+enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
 const DEGREE_IN_RADIANT = PI / 180
 
