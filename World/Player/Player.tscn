@@ -89,9 +89,10 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 projectile_template = ExtResource( 2 )
-movement_speed = 250
+movement_speed = 200
 aim_speed = 100
-projectile_speed = 200
+projectile_speed = 400
+dodge_multiplier = 6.0
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
@@ -383,5 +384,14 @@ position = Vector2( 110, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlayerController" parent="." index="4" instance=ExtResource( 25 )]
+
+[node name="DodgeTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 0.15
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="DodgeTimer" to="PlayerController" method="_on_DodgeTimer_timeout"]
 
 
