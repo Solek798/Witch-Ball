@@ -29,7 +29,7 @@ func _process(delta):
 	$Aim.rotate(aim * delta * aim_speed)
 	
 	if $PlayerController.state(THROW):
-		throw(movement)
+		throw()
 	if $PlayerController.state(DODGE):
 		dodge(movement)
 
@@ -57,19 +57,18 @@ func get_aim():
 	
 	return aim
 
-func throw(movement):
+func throw():
 	var projectile = projectile_template.instance()
 	projectile.position = $Aim/throw_point.global_position
 	
 	var velocity = $Aim/throw_point.position.normalized().rotated($Aim.rotation)
-	velocity = velocity*projectile_speed + movement*movement_speed
+	velocity = velocity * projectile_speed
 	
 	projectile.linear_velocity = velocity
 	emit_signal("projectile_thrown", projectile)
 
 func dodge(movement):
 	if movement == Vector2(0, 0):
-		print("nope")
 		return
 	
 	if $DodgeTimer.is_stopped():
