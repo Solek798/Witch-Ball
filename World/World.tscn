@@ -4,6 +4,11 @@
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Environment_Blockout_latest_2.jpg" type="Texture" id=3]
 
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 72.7819, 413.859 )
+
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -24,11 +29,6 @@ extents = Vector2( 457.284, 23.3026 )
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
 
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 72.7819, 413.859 )
-
 [node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -45,7 +45,25 @@ scale = Vector2( 0.99979, 0.999322 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Borders" type="StaticBody2D" parent="." index="1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+
+scale = Vector2( 1, 1 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 4
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="Center" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 936.611, 589.975 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 5 )
+
+[node name="Borders" type="StaticBody2D" parent="." index="2"]
 
 input_pickable = false
 collision_layer = 1
@@ -54,6 +72,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="Left" type="CollisionShape2D" parent="Borders" index="0"]
 
@@ -78,10 +97,5 @@ shape = SubResource( 3 )
 
 position = Vector2( 989.898, 1001.73 )
 shape = SubResource( 4 )
-
-[node name="Center" type="CollisionShape2D" parent="Borders" index="4"]
-
-position = Vector2( 936.611, 589.975 )
-shape = SubResource( 5 )
 
 

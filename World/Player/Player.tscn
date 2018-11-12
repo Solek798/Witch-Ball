@@ -84,10 +84,11 @@ extents = Vector2( 32.139, 31.7823 )
 [node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 11
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 projectile_template = ExtResource( 2 )
 movement_speed = 200
 aim_speed = 100
