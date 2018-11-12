@@ -7,7 +7,7 @@ length = 0.5
 loop = true
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationTreePlayer/base/Body/Arm R/Arm Down R:rotation_degrees")
+tracks/0/path = NodePath("base/Body/Arm L/Arm Down L:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,10 +16,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.13, 0.25, 0.39, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -44.8731, -44.8731, -44.8731, -44.8731, -44.8731 ]
+"values": [ -25.3402, -25.3402, -25.3402, -25.3402, -25.3402 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationTreePlayer/base/Body/Arm R:rotation_degrees")
+tracks/1/path = NodePath("base/Body/Arm L:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -28,10 +28,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.13, 0.25, 0.39, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 77.4684, 62.7139, 90.4922, 67.9663, 77.3966 ]
+"values": [ -45.7753, -26.183, -47.4282, -31.1771, -43.7515 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationTreePlayer/base/Body/Arm L:rotation_degrees")
+tracks/2/path = NodePath("base/Body/Arm R:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -40,10 +40,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.13, 0.25, 0.39, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -45.7753, -26.183, -47.4282, -31.1771, -43.7515 ]
+"values": [ 77.4684, 62.7139, 90.4922, 67.9663, 77.3966 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationTreePlayer/base/Body/Arm L/Arm Down L:rotation_degrees")
+tracks/3/path = NodePath("base/Body/Arm R/Arm Down R:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -52,6 +52,6 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.13, 0.25, 0.39, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -25.3402, -25.3402, -25.3402, -25.3402, -25.3402 ]
+"values": [ -44.8731, -44.8731, -44.8731, -44.8731, -44.8731 ]
 }
 

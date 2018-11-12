@@ -7,7 +7,7 @@ length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R:position")
+tracks/0/path = NodePath("base/Body/Arm R/Arm Down R:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,10 +16,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 82.5976, 139.503 ) ]
+"values": [ -44.8731 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R:rotation_degrees")
+tracks/1/path = NodePath("base/Body/Arm R/Arm Down R:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -28,10 +28,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 47.7907 ]
+"values": [ Vector2( 127.685, 121.546 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R/Leg Down R:position")
+tracks/2/path = NodePath("base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -40,10 +40,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 54.0061, 151.867 ) ]
+"values": [ 37.1903 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
+tracks/3/path = NodePath("base/Body/Hüfte/Leg L/Leg Down L:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -52,10 +52,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 2.75302 ]
+"values": [ Vector2( -16.44, 145.947 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationTreePlayer/base/Body:position")
+tracks/4/path = NodePath("base/Body/Arm L/Arm Down L:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -64,10 +64,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ -25.3402 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("AnimationTreePlayer/base/Body:rotation_degrees")
+tracks/5/path = NodePath("base/Body/Arm L/Arm Down L:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -76,10 +76,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Vector2( -174.842, 147.596 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L:position")
+tracks/6/path = NodePath("base/Body/Arm R:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -88,10 +88,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -54.8519, 176.524 ) ]
+"values": [ 90.4922 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L:rotation_degrees")
+tracks/7/path = NodePath("base/Body/Arm R:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -100,10 +100,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -42.9969 ]
+"values": [ Vector2( 108.007, -122.474 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("AnimationTreePlayer/base/Body/Arm L:position")
+tracks/8/path = NodePath("base/Body/Head:rotation_degrees")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -112,10 +112,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -58.4597, -169.593 ) ]
+"values": [ 14.631 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("AnimationTreePlayer/base/Body/Arm L:rotation_degrees")
+tracks/9/path = NodePath("base/Body/Head:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -124,10 +124,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -47.4282 ]
+"values": [ Vector2( 43.4237, -222.36 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("AnimationTreePlayer/base/Body/Head:position")
+tracks/10/path = NodePath("base/Body/Arm L:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -136,10 +136,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 43.4237, -222.36 ) ]
+"values": [ -47.4282 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("AnimationTreePlayer/base/Body/Head:rotation_degrees")
+tracks/11/path = NodePath("base/Body/Arm L:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -148,10 +148,10 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 14.631 ]
+"values": [ Vector2( -58.4597, -169.593 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("AnimationTreePlayer/base/Body/Arm R:position")
+tracks/12/path = NodePath("base/Body/Hüfte/Leg L:rotation_degrees")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -160,10 +160,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 108.007, -122.474 ) ]
+"values": [ -42.9969 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("AnimationTreePlayer/base/Body/Arm R:rotation_degrees")
+tracks/13/path = NodePath("base/Body/Hüfte/Leg L:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -172,10 +172,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 90.4922 ]
+"values": [ Vector2( -54.8519, 176.524 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("AnimationTreePlayer/base/Body/Arm L/Arm Down L:position")
+tracks/14/path = NodePath("base/Body:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -184,10 +184,10 @@ tracks/14/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -174.842, 147.596 ) ]
+"values": [ 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("AnimationTreePlayer/base/Body/Arm L/Arm Down L:rotation_degrees")
+tracks/15/path = NodePath("base/Body:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -196,10 +196,10 @@ tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -25.3402 ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L/Leg Down L:position")
+tracks/16/path = NodePath("base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -208,10 +208,10 @@ tracks/16/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16.44, 145.947 ) ]
+"values": [ 2.75302 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("AnimationTreePlayer/base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
+tracks/17/path = NodePath("base/Body/Hüfte/Leg R/Leg Down R:position")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -220,10 +220,10 @@ tracks/17/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 37.1903 ]
+"values": [ Vector2( 54.0061, 151.867 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("AnimationTreePlayer/base/Body/Arm R/Arm Down R:position")
+tracks/18/path = NodePath("base/Body/Hüfte/Leg R:rotation_degrees")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -232,10 +232,10 @@ tracks/18/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 127.685, 121.546 ) ]
+"values": [ 47.7907 ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("AnimationTreePlayer/base/Body/Arm R/Arm Down R:rotation_degrees")
+tracks/19/path = NodePath("base/Body/Hüfte/Leg R:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -244,6 +244,6 @@ tracks/19/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -44.8731 ]
+"values": [ Vector2( 82.5976, 139.503 ) ]
 }
 
