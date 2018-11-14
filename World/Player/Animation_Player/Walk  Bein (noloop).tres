@@ -7,7 +7,7 @@ length = 0.5
 loop = false
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("base/Body/Hüfte/Leg R:rotation_degrees")
+tracks/0/path = NodePath("../base/Body/Hüfte/Leg R:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ -6.15152, -15.7717, 29.9949, 38.5369, 47.7907, 55.5151, -4.8948, -39.0306, -6.15152 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("base/Body/Hüfte/Leg L:rotation_degrees")
+tracks/1/path = NodePath("../base/Body/Hüfte/Leg L:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 19.1646, 11.4871, -56.3624, -89.7224, -42.9969, -35.4898, -11.9162, 3.0026, 19.1646 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
+tracks/2/path = NodePath("../base/Body/Hüfte/Leg R/Leg Down R:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 2.75302, 60.1027, 7.55929, -4.95193, 2.75302, 27.4833, 83.2081, 77.6576, 2.75302 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
+tracks/3/path = NodePath("../base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 37.1903, 72.0516, 104.231, 106.624, 37.1903, 65.5112, 37.1903, 29.653, 37.1903 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("base/Body:position")
+tracks/4/path = NodePath("../base/Body:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 25 ), Vector2( 0, -10 ), Vector2( 0, -25 ), Vector2( 0, 0 ), Vector2( 0, 25 ), Vector2( 0, -10 ), Vector2( 0, -25 ), Vector2( 0, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("base/Body/Hüfte/Leg R:position")
+tracks/5/path = NodePath("../base/Body/Hüfte/Leg R:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
