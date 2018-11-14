@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 export(PackedScene) var player_scene
 export(Vector2) var player1_position
