@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://World/GUI/runde.png" type="Texture" id=1]
+[ext_resource path="res://World/GUI/ziel.png" type="Texture" id=2]
+[ext_resource path="res://World/GUI/heart.png" type="Texture" id=3]
 
-[node name="GUI" type="MarginContainer" index="0"]
+[node name="GUI" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -20,7 +22,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="VSplitContainer" type="VSplitContainer" parent="." index="0"]
+[node name="VSplitContainer" type="Container" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -35,10 +37,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-split_offset = 44
-collapsed = false
-dragger_visibility = 0
-_sections_unfolded = [ "Margin", "Size Flags" ]
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
 [node name="Top" type="HBoxContainer" parent="VSplitContainer" index="0"]
 
@@ -47,7 +46,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1852.0
-margin_bottom = 108.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -55,6 +54,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="Player1wins" type="VBoxContainer" parent="VSplitContainer/Top" index="0"]
 
@@ -63,9 +63,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 758.0
-margin_right = 890.0
-margin_bottom = 108.0
+margin_left = 663.0
+margin_right = 847.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -81,9 +81,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 44.0
-margin_right = 132.0
-margin_bottom = 108.0
+margin_top = 39.0
+margin_right = 184.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -92,14 +92,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="0"]
+[node name="P1Round1" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 90.0
+margin_bottom = 91.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -109,15 +109,15 @@ size_flags_vertical = 1
 texture = ExtResource( 1 )
 stretch_mode = 0
 
-[node name="TextureRect2" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="1"]
+[node name="P1Round2" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 68.0
-margin_right = 132.0
-margin_bottom = 64.0
+margin_left = 94.0
+margin_right = 184.0
+margin_bottom = 91.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -134,9 +134,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 894.0
-margin_right = 958.0
-margin_bottom = 108.0
+margin_left = 851.0
+margin_right = 1001.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -151,15 +151,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 150.0
+margin_bottom = 119.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
 [node name="Player2wins" type="VBoxContainer" parent="VSplitContainer/Top" index="2"]
@@ -169,9 +169,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 962.0
-margin_right = 1094.0
-margin_bottom = 108.0
+margin_left = 1005.0
+margin_right = 1189.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -187,9 +187,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 44.0
-margin_right = 132.0
-margin_bottom = 108.0
+margin_top = 39.0
+margin_right = 184.0
+margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -198,14 +198,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="0"]
+[node name="P2Round2" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 90.0
+margin_bottom = 91.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -215,15 +215,15 @@ size_flags_vertical = 1
 texture = ExtResource( 1 )
 stretch_mode = 0
 
-[node name="TextureRect2" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="1"]
+[node name="P2Round1" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 68.0
-margin_right = 132.0
-margin_bottom = 64.0
+margin_left = 94.0
+margin_right = 184.0
+margin_bottom = 91.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -234,30 +234,32 @@ texture = ExtResource( 1 )
 stretch_mode = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Healthbars" type="HBoxContainer" parent="VSplitContainer" index="1"]
+[node name="Healthbars" type="Container" parent="." index="1"]
 
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -64.0
+margin_right = 1860.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Player1Healthbar" type="HBoxContainer" parent="Healthbars" index="0"]
+
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 120.0
-margin_right = 1852.0
-margin_bottom = 1020.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-
-[node name="CheckBox" type="HBoxContainer" parent="VSplitContainer/Healthbars" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 1.0
-margin_right = 200.0
+margin_right = 924.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -265,67 +267,70 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer/Healthbars/CheckBox" index="0"]
+[node name="P1Life1" type="TextureRect" parent="Healthbars/Player1Healthbar" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 900.0
+margin_right = 70.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="TextureRect2" type="TextureRect" parent="VSplitContainer/Healthbars/CheckBox" index="1"]
+[node name="P1Life2" type="TextureRect" parent="Healthbars/Player1Healthbar" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 68.0
-margin_right = 132.0
-margin_bottom = 900.0
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="TextureRect3" type="TextureRect" parent="VSplitContainer/Healthbars/CheckBox" index="2"]
+[node name="P1Life3" type="TextureRect" parent="Healthbars/Player1Healthbar" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 136.0
-margin_right = 200.0
-margin_bottom = 900.0
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/Healthbars" index="1"]
+[node name="Player2Healthbar" type="HBoxContainer" parent="Healthbars" index="1"]
 
-anchor_left = 1.0
+editor/display_folded = true
+anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -200.0
+anchor_bottom = 0.0
+margin_left = 928.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -333,58 +338,60 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 2
+_sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer/Healthbars/HBoxContainer" index="0"]
+[node name="P2Life1" type="TextureRect" parent="Healthbars/Player2Healthbar" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 900.0
+margin_left = 706.0
+margin_right = 776.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="TextureRect2" type="TextureRect" parent="VSplitContainer/Healthbars/HBoxContainer" index="1"]
+[node name="P2Life2" type="TextureRect" parent="Healthbars/Player2Healthbar" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 66.0
-margin_right = 130.0
-margin_bottom = 900.0
+margin_left = 780.0
+margin_right = 850.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="TextureRect3" type="TextureRect" parent="VSplitContainer/Healthbars/HBoxContainer" index="2"]
+[node name="P2Life3" type="TextureRect" parent="Healthbars/Player2Healthbar" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 136.0
-margin_right = 200.0
-margin_bottom = 900.0
+margin_left = 854.0
+margin_right = 924.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 
