@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World/World.gd" type="Script" id=1]
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Environment_Blockout_latest_2.jpg" type="Texture" id=3]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,9 +30,15 @@ extents = Vector2( 457.284, 23.3026 )
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
 
-[node name="World" type="Node2D"]
+[node name="World" type="CanvasLayer" index="0"]
 
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 player_scene = ExtResource( 2 )
 player1_position = Vector2( 500, 500 )
 player2_position = Vector2( 1200, 500 )
@@ -47,6 +54,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Median" type="StaticBody2D" parent="." index="1"]
 
+editor/display_folded = true
+visible = false
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -63,6 +72,8 @@ shape = SubResource( 1 )
 
 [node name="Borders" type="StaticBody2D" parent="." index="2"]
 
+editor/display_folded = true
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -95,5 +106,7 @@ shape = SubResource( 4 )
 
 position = Vector2( 989.898, 1001.73 )
 shape = SubResource( 5 )
+
+[node name="GUI" parent="." index="3" instance=ExtResource( 4 )]
 
 
