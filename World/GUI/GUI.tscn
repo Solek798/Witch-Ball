@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://World/GUI/runde.png" type="Texture" id=1]
-[ext_resource path="res://World/GUI/ziel.png" type="Texture" id=2]
-[ext_resource path="res://World/GUI/heart.png" type="Texture" id=3]
+[ext_resource path="res://World/GUI/GUI.gd" type="Script" id=1]
+[ext_resource path="res://World/GUI/runde.png" type="Texture" id=2]
+[ext_resource path="res://World/GUI/ziel.png" type="Texture" id=3]
+[ext_resource path="res://World/GUI/heart.png" type="Texture" id=4]
 
-[node name="GUI" type="Container"]
+[node name="GUI" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -20,6 +21,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
 
 [node name="VSplitContainer" type="Container" parent="." index="0"]
@@ -106,7 +108,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
 [node name="P1Round2" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="1"]
@@ -124,7 +126,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
 [node name="Goal" type="VBoxContainer" parent="VSplitContainer/Top" index="1"]
@@ -159,7 +161,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="Player2wins" type="VBoxContainer" parent="VSplitContainer/Top" index="2"]
@@ -212,7 +214,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
 [node name="P2Round1" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="1"]
@@ -230,7 +232,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Size Flags" ]
 
@@ -283,7 +285,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="P1Life2" type="TextureRect" parent="Healthbars/Player1Healthbar" index="1"]
@@ -301,7 +303,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="P1Life3" type="TextureRect" parent="Healthbars/Player1Healthbar" index="2"]
@@ -319,7 +321,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="Player2Healthbar" type="HBoxContainer" parent="Healthbars" index="1"]
@@ -355,7 +357,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="P2Life2" type="TextureRect" parent="Healthbars/Player2Healthbar" index="1"]
@@ -373,7 +375,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="P2Life3" type="TextureRect" parent="Healthbars/Player2Healthbar" index="2"]
@@ -391,7 +393,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 

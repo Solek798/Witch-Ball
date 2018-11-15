@@ -4,6 +4,7 @@ export(PackedScene) var projectile_template
 export(int) var movement_speed 
 export(int) var aim_speed
 export(int) var projectile_speed
+export(int) var health
 export(float) var dodge_multiplier
 
 signal projectile_thrown(node)
