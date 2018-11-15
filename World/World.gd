@@ -18,6 +18,7 @@ func _ready():
 	players.back().scale = player1_scale
 	players.back().player_id = players.size()
 	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
+	players.back().connect("player_damaged", $GUI, "_on_player_damaged")
 	add_child(players.back())
 	emit_signal("player_created", players.back())
 	
@@ -26,6 +27,7 @@ func _ready():
 	players.back().scale = player2_scale
 	players.back().player_id = players.size()
 	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
+	players.back().connect("player_damaged", $GUI, "_on_player_damaged")
 	add_child(players.back())
 	emit_signal("player_created", players.back())
 

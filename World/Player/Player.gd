@@ -8,6 +8,7 @@ export(int) var health
 export(float) var dodge_multiplier
 
 signal projectile_thrown(node)
+signal player_damaged(player_id, ammount)
 
 enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
@@ -75,3 +76,7 @@ func dodge(movement):
 	if $DodgeTimer.is_stopped():
 		$PlayerController.lock()
 		$DodgeTimer.start()
+
+func take_damage(ammount):
+	health -= ammount
+	emit_signal("player_damaged", player_id, ammount)

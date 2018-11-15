@@ -81,7 +81,7 @@ anim_loop = false
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 4
@@ -376,14 +376,13 @@ texture = ExtResource( 23 )
 
 [node name="Aim" type="Sprite" parent="." index="3"]
 
-editor/display_folded = true
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 24 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="throw_point" type="Position2D" parent="Aim" index="0"]
 
-position = Vector2( 110, 0 )
+position = Vector2( 150, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlayerController" parent="." index="4" instance=ExtResource( 25 )]
