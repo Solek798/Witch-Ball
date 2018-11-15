@@ -10,7 +10,7 @@ func _on_player_created(player):
 func _on_player_damaged(player_id, ammount):
 	var children = get_node("Healthbars/Player%dHealthbar" % player_id).get_children()
 	
-	if not children:
-		return
 	for i in ammount:
+		if not children:
+			break
 		children.pop_back().queue_free()

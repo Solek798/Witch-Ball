@@ -9,6 +9,7 @@ export(float) var dodge_multiplier
 
 signal projectile_thrown(node)
 signal player_damaged(player_id, ammount)
+signal player_dead(player_id)
 
 enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
@@ -78,5 +79,10 @@ func dodge(movement):
 		$DodgeTimer.start()
 
 func take_damage(ammount):
+	
 	health -= ammount
 	emit_signal("player_damaged", player_id, ammount)
+	
+	if health <= 0:
+		emit_signal("player_dead", player_id)
+		self.queue_free()

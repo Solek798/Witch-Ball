@@ -19,6 +19,7 @@ func _ready():
 	players.back().player_id = players.size()
 	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
 	players.back().connect("player_damaged", $GUI, "_on_player_damaged")
+	players.back().connect("player_dead", self, "_on_player_dead")
 	add_child(players.back())
 	emit_signal("player_created", players.back())
 	
@@ -28,8 +29,16 @@ func _ready():
 	players.back().player_id = players.size()
 	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
 	players.back().connect("player_damaged", $GUI, "_on_player_damaged")
+	players.back().connect("player_dead", self, "_on_player_dead")
 	add_child(players.back())
 	emit_signal("player_created", players.back())
 
 func _on_projectile_thrown(node):
 	add_child(node) 
+
+func _on_player_dead(player_id):
+	print("blub")
+	# display Win Message
+	pass
+
+
