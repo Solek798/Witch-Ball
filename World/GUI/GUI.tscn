@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://World/GUI/GUI.gd" type="Script" id=1]
 [ext_resource path="res://World/GUI/runde.png" type="Texture" id=2]
 [ext_resource path="res://World/GUI/ziel.png" type="Texture" id=3]
-[ext_resource path="res://World/GUI/heart.png" type="Texture" id=4]
 
-[node name="GUI" type="Container" index="0"]
+[node name="GUI" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -23,6 +22,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
+life_template = null
 
 [node name="VSplitContainer" type="Container" parent="." index="0"]
 
@@ -255,7 +255,6 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="Player1Healthbar" type="HBoxContainer" parent="Healthbars" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -271,62 +270,8 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="P1Life1" type="TextureRect" parent="Healthbars/Player1Healthbar" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 70.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-
-[node name="P1Life2" type="TextureRect" parent="Healthbars/Player1Healthbar" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 74.0
-margin_right = 144.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-
-[node name="P1Life3" type="TextureRect" parent="Healthbars/Player1Healthbar" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 148.0
-margin_right = 218.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-
 [node name="Player2Healthbar" type="HBoxContainer" parent="Healthbars" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -341,59 +286,5 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 2
 _sections_unfolded = [ "Anchor", "Margin" ]
-
-[node name="P2Life1" type="TextureRect" parent="Healthbars/Player2Healthbar" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 706.0
-margin_right = 776.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-
-[node name="P2Life2" type="TextureRect" parent="Healthbars/Player2Healthbar" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 780.0
-margin_right = 850.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-
-[node name="P2Life3" type="TextureRect" parent="Healthbars/Player2Healthbar" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 854.0
-margin_right = 924.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
 
 

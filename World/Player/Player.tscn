@@ -81,7 +81,7 @@ anim_loop = false
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
@@ -93,7 +93,7 @@ projectile_template = ExtResource( 2 )
 movement_speed = 200
 aim_speed = 100
 projectile_speed = 400
-health = 4
+health = 3
 dodge_multiplier = 6.0
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
