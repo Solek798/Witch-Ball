@@ -4,11 +4,10 @@ export(PackedScene) var projectile_template
 export(int) var movement_speed 
 export(int) var aim_speed
 export(int) var projectile_speed
-export(float) var dodge_multiplier
 
 signal projectile_thrown(node)
 
-enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
+enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW}
 
 const DEGREE_IN_RADIANT = PI / 180
 
@@ -20,18 +19,14 @@ func _ready():
 
 func _process(delta):
 	var movement = get_movement()
-	var mult = 1
-	if $DodgeTimer.time_left > 0:
-		mult = dodge_multiplier
-	move_and_collide(movement * delta * movement_speed * mult)
+	move_and_collide(movement * delta * movement_speed)
 	
 	var aim = get_aim()
 	$Aim.rotate(aim * delta * aim_speed)
 	
 	if $PlayerController.state(THROW):
 		throw(movement)
-	if $PlayerController.state(DODGE):
-		dodge(movement)
+	
 
 func get_movement():
 	var movement = Vector2()
@@ -57,21 +52,13 @@ func get_aim():
 	
 	return aim
 
-func throw(movement):
+func throw(current_movement):
 	var projectile = projectile_template.instance()
 	projectile.position = $Aim/throw_point.global_position
 	
 	var velocity = $Aim/throw_point.position.normalized().rotated($Aim.rotation)
-	velocity = velocity*projectile_speed + movement*movement_speed
+	velocity = velocity*projectile_speed + current_movement*movement_speed
 	
 	projectile.linear_velocity = velocity
 	emit_signal("projectile_thrown", projectile)
 
-func dodge(movement):
-	if movement == Vector2(0, 0):
-		print("nope")
-		return
-	
-	if $DodgeTimer.is_stopped():
-		$PlayerController.lock()
-		$DodgeTimer.start()
