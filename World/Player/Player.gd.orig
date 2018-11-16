@@ -1,77 +1,54 @@
 extends KinematicBody2D
 
-export(PackedScene) var projectile_template
-export(int) var movement_speed 
-export(int) var aim_speed
-export(int) var projectile_speed
-export(float) var dodge_multiplier
+export(int) var movementSpeed 
 
-signal projectile_thrown(node)
-
-enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
+enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW}
 
 const DEGREE_IN_RADIANT = PI / 180
 
+# template for action event Strings
+var ctr 
 var player_id
 
-
+# formating action event Strings for this Player
 func _ready():
-	$PlayerController.setup(player_id)
+	ctr= [
+		"player%d_up", 
+		"player%d_down", 
+		"player%d_left", 
+		"player%d_right",
+		"player%d_aim_up",
+		"player%d_aim_down",
+		"player%d_throw"
+	]
+	
+	for i in range(ctr.size()):
+		ctr[i] = ctr[i] % player_id
 
 func _process(delta):
-	var movement = get_movement()
-	var mult = 1
-	if $DodgeTimer.time_left > 0:
-		mult = dodge_multiplier
-	move_and_collide(movement * delta * movement_speed * mult)
-	
-	var aim = get_aim()
-	$Aim.rotate(aim * delta * aim_speed)
-	
-	if $PlayerController.state(THROW):
-		throw(movement)
-	if $PlayerController.state(DODGE):
-		dodge(movement)
+	get_movement(delta)
+	get_aim()
 
-func get_movement():
-	var movement = Vector2()
+func get_movement(delta):
+	var input = Vector2()
 	
-	if $PlayerController.state(UP):
-		movement.y -= 1
-	if $PlayerController.state(DOWN):
-		movement.y += 1
-	if $PlayerController.state(LEFT):
-		movement.x -= 1
-	if $PlayerController.state(RIGHT):
-		movement.x += 1
+	if Input.is_action_pressed(ctr[UP]):
+		input.y -= 1
+	if Input.is_action_pressed(ctr[DOWN]):
+		input.y += 1
+	if Input.is_action_pressed(ctr[LEFT]):
+		input.x -= 1
+	if Input.is_action_pressed(ctr[RIGHT]):
+		input.x += 1
 	
-	return movement
+	move_and_collide(input * delta * movementSpeed)
 
 func get_aim():
-	var aim = 0
+	var input = 0
+	if Input.is_action_pressed(ctr[AIM_UP]):
+		input.x += 1
+	if Input.is_action_pressed(ctr[AIM_DOWN]
 	
-	if $PlayerController.state(AIM_UP):
-		aim -= DEGREE_IN_RADIANT
-	if $PlayerController.state(AIM_DOWN):
-		aim += DEGREE_IN_RADIANT
 	
-	return aim
 
-func throw(movement):
-	var projectile = projectile_template.instance()
-	projectile.position = $Aim/throw_point.global_position
-	
-	var velocity = $Aim/throw_point.position.normalized().rotated($Aim.rotation)
-	velocity = velocity*projectile_speed + movement*movement_speed
-	
-	projectile.linear_velocity = velocity
-	emit_signal("projectile_thrown", projectile)
 
-func dodge(movement):
-	if movement == Vector2(0, 0):
-		print("nope")
-		return
-	
-	if $DodgeTimer.is_stopped():
-		$PlayerController.lock()
-		$DodgeTimer.start()
