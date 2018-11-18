@@ -81,7 +81,7 @@ anim_loop = false
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 4
@@ -93,6 +93,7 @@ projectile_template = ExtResource( 2 )
 movement_speed = 200
 aim_speed = 100
 projectile_speed = 400
+max_health = 3
 dodge_multiplier = 6.0
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
@@ -104,7 +105,7 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "Walk", "speed", 0, "anim 8", "mix", 0, "anim 9", "mix", 1, "oneshot", "out", 0, "Walk input", "hit", 0, "anim 4", "hit", 1, "hit", "werfen Laufen", 0, "mix 3", "werfen Laufen", 1, "werfen Laufen", "oneshot", 0, "mix", "oneshot", 1, "anim", "Walk input", 0, "speed", "Walk input", 1, "anim 6", "mix 3", 0, "anim 7", "mix 3", 1, "Beine", "Walk", 0, "Hände ", "Walk", 1 ],
+"connections": [ "Walk", "speed", 0, "anim 8", "mix", 0, "anim 9", "mix", 1, "oneshot", "out", 0, "Walk input", "hit", 0, "anim 4", "hit", 1, "anim", "Walk input", 0, "speed", "Walk input", 1, "werfen Laufen", "oneshot", 0, "mix", "oneshot", 1, "hit", "werfen Laufen", 0, "mix 3", "werfen Laufen", 1, "Beine", "Walk", 0, "Hände ", "Walk", 1, "anim 6", "mix 3", 0, "anim 7", "mix 3", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "speed",
@@ -126,12 +127,6 @@ data = {
 "id": "out",
 "position": Vector2( 667, 376 ),
 "type": "output"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 6",
-"position": Vector2( 6, 365 ),
-"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 0.0,
@@ -156,34 +151,23 @@ data = {
 "position": Vector2( 7, 261 ),
 "type": "animation"
 }, {
+"blend": 1.0,
+"filter": [  ],
+"id": "Walk input",
+"position": Vector2( 552, 5 ),
+"type": "blend2"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 6, 365 ),
+"type": "animation"
+}, {
 "animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "Beine",
 "position": Vector2( 6, 51 ),
 "type": "animation"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 9",
-"position": Vector2( 5, 578 ),
-"type": "animation"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 7",
-"position": Vector2( 6, 469 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "werfen Laufen",
-"mix": false,
-"position": Vector2( 368, 207 ),
-"type": "oneshot"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -196,27 +180,44 @@ data = {
 "position": Vector2( 509, 207 ),
 "type": "oneshot"
 }, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "werfen Laufen",
+"mix": false,
+"position": Vector2( 368, 207 ),
+"type": "oneshot"
+}, {
 "animation": null,
 "filter": [  ],
-"id": "anim 8",
-"position": Vector2( 117, 512 ),
+"id": "anim 9",
+"position": Vector2( 5, 578 ),
 "type": "animation"
 }, {
-"blend": 1.0,
-"filter": [  ],
-"id": "Walk input",
-"position": Vector2( 552, 5 ),
-"type": "blend2"
+"id": "Walk",
+"mix": 0.56,
+"position": Vector2( 357, 78 ),
+"type": "mix"
 }, {
 "id": "mix 3",
 "mix": 0.0,
 "position": Vector2( 113, 387 ),
 "type": "mix"
 }, {
-"id": "Walk",
-"mix": 0.56,
-"position": Vector2( 357, 78 ),
-"type": "mix"
+"animation": null,
+"filter": [  ],
+"id": "anim 8",
+"position": Vector2( 117, 512 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 7",
+"position": Vector2( 6, 469 ),
+"type": "animation"
 } ]
 }
 
@@ -375,14 +376,13 @@ texture = ExtResource( 23 )
 
 [node name="Aim" type="Sprite" parent="." index="3"]
 
-editor/display_folded = true
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 24 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="throw_point" type="Position2D" parent="Aim" index="0"]
 
-position = Vector2( 110, 0 )
+position = Vector2( 150, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlayerController" parent="." index="4" instance=ExtResource( 25 )]

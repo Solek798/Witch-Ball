@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/World.gd" type="Script" id=1]
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Environment_Blockout_latest_2.jpg" type="Texture" id=3]
-[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/GUI/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/GUI/Life.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,10 +41,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 player_scene = ExtResource( 2 )
-player1_position = Vector2( 500, 500 )
-player2_position = Vector2( 1200, 500 )
-player1_scale = Vector2( 1, 1 )
-player2_scale = Vector2( 1, 1 )
+player_count = 2
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -55,7 +53,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="Median" type="StaticBody2D" parent="." index="1"]
 
 editor/display_folded = true
-visible = false
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -73,7 +70,6 @@ shape = SubResource( 1 )
 [node name="Borders" type="StaticBody2D" parent="." index="2"]
 
 editor/display_folded = true
-visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -108,5 +104,25 @@ position = Vector2( 989.898, 1001.73 )
 shape = SubResource( 5 )
 
 [node name="GUI" parent="." index="3" instance=ExtResource( 4 )]
+
+life_template = ExtResource( 5 )
+
+[node name="PositionPlayer1" type="Position2D" parent="." index="4"]
+
+position = Vector2( 515, 487 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PositionPlayer2" type="Position2D" parent="." index="5"]
+
+position = Vector2( 1400, 487 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="EndRound" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 

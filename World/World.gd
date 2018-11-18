@@ -1,29 +1,44 @@
 extends CanvasLayer
 
 export(PackedScene) var player_scene
-export(Vector2) var player1_position
-export(Vector2) var player2_position
-export(Vector2) var player1_scale
-export(Vector2) var player2_scale
+export(int) var player_count
 
 signal player_created
 
 onready var players = []
 
 func _ready():
-	players.append(player_scene.instance())
-	players.back().position = player1_position
-	players.back().scale = player1_scale
-	players.back().player_id = players.size()
-	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
-	add_child(players.back())
+	self.connect("player_created", $GUI, "_on_player_created")
 	
-	players.append(player_scene.instance())
-	players.back().position = player2_position
-	players.back().scale = player2_scale
-	players.back().player_id = players.size()
-	players.back().connect("projectile_thrown", self, "_on_projectile_thrown")
-	add_child(players.back())
+	for i in player_count:
+		players.append(create_player(players.size() + 1))
+	
+
+func create_player(id):
+	var player = player_scene.instance()
+	player.position = get_node("PositionPlayer%d" % id).position
+	player.player_id = id
+	player.connect("projectile_thrown", self, "_on_projectile_thrown")
+	player.connect("player_damaged", $GUI, "_on_player_damaged")
+	player.connect("player_dead", self, "_on_player_dead")
+	player.connect("player_reset", $GUI, "_on_player_reset")
+	add_child(player)
+	emit_signal("player_created", player)
+	return player
+
+func reset_all_players():
+	$EndRound.start()
+	yield($EndRound, "timeout")
+	
+	for player in players:
+		player.reset()
+		player.position = get_node("PositionPlayer%d" % player.player_id).position
 
 func _on_projectile_thrown(node):
 	add_child(node) 
+
+func _on_player_dead(player):
+	# display Win Message
+	reset_all_players()
+
+
