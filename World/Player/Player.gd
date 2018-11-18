@@ -4,28 +4,31 @@ export(PackedScene) var projectile_template
 export(int) var movement_speed 
 export(int) var aim_speed
 export(int) var projectile_speed
-export(int) var health
+export(int) var max_health
 export(float) var dodge_multiplier
 
 signal projectile_thrown(node)
-signal player_damaged(player_id, ammount)
-signal player_dead(player_id)
+signal player_damaged(player, ammount)
+signal player_dead(player)
+signal player_reset(player)
 
 enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
 const DEGREE_IN_RADIANT = PI / 180
 
 var player_id
-
+var health
 
 func _ready():
 	$PlayerController.setup(player_id)
+	health = max_health
 
 func _process(delta):
 	var movement = get_movement()
 	var mult = 1
 	if $DodgeTimer.time_left > 0:
 		mult = dodge_multiplier
+	
 	move_and_collide(movement * delta * movement_speed * mult)
 	
 	var aim = get_aim()
@@ -35,6 +38,7 @@ func _process(delta):
 		throw()
 	if $PlayerController.state(DODGE):
 		dodge(movement)
+	
 
 func get_movement():
 	var movement = Vector2()
@@ -63,8 +67,8 @@ func get_aim():
 func throw():
 	var projectile = projectile_template.instance()
 	projectile.position = $Aim/throw_point.global_position
-	
-	var velocity = $Aim/throw_point.position.normalized().rotated($Aim.rotation)
+	var velocity = $Aim/throw_point.position.normalized()
+	velocity = velocity.rotated($Aim.rotation)
 	velocity = velocity * projectile_speed
 	
 	projectile.linear_velocity = velocity
@@ -79,10 +83,14 @@ func dodge(movement):
 		$DodgeTimer.start()
 
 func take_damage(ammount):
-	
 	health -= ammount
-	emit_signal("player_damaged", player_id, ammount)
+	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
-		emit_signal("player_dead", player_id)
-		self.queue_free()
+		$PlayerController.lock()
+		emit_signal("player_dead", self)
+
+func reset():
+	health = max_health
+	$Aim.rotation = 0
+	emit_signal("player_reset", self)
