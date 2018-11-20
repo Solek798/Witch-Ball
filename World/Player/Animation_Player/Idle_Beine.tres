@@ -2,7 +2,7 @@
 
 [resource]
 
-resource_name = "Idle Beine"
+resource_name = "Idle_Beine"
 length = 0.5
 loop = false
 step = 0.05
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -89, -1.00002 ), Vector2( -89, 4.88074 ), Vector2( -89, -1.00002 ) ]
+"values": [ Vector2( -89, 0.3481 ), Vector2( -89, 4.88074 ), Vector2( -89, -1.00002 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../base/Body:rotation_degrees")
@@ -52,7 +52,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.25, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.138456, 0.0 ]
+"values": [ 0.03174, 0.138456, 0.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("../base/Body/Hüfte/Leg L:rotation_degrees")
@@ -65,29 +65,5 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("../base/Body/Hüfte/Leg L/Leg Down L:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("../base/Body/Hüfte/Leg R:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 139.503 ) ]
 }
 
