@@ -1,0 +1,69 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "Idle_Beine"
+length = 0.5
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -89, 0.3481 ), Vector2( -89, 4.88074 ), Vector2( -89, -1.00002 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter_Sprites/Ch1_T:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.03174, 0.138456, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
