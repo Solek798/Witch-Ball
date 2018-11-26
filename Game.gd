@@ -1,8 +1,8 @@
 extends Node
 
+export(PackedScene) var arena_template
+
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
+	var arena = arena_template.instance()
+	add_child(arena)
