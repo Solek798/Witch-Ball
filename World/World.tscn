@@ -2,14 +2,14 @@
 
 [ext_resource path="res://World/World.gd" type="Script" id=1]
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/Environment_Blockout_latest_2.jpg" type="Texture" id=3]
+[ext_resource path="res://World/Environment_Blockout_temp.png" type="Texture" id=3]
 [ext_resource path="res://World/GUI/GUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/GUI/Life.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 72.7819, 413.859 )
+extents = Vector2( 33.2111, 413.859 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -43,16 +43,15 @@ _sections_unfolded = [ "Transform" ]
 player_scene = ExtResource( 2 )
 player_count = 2
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Background" type="Sprite" parent="." index="0"]
 
-position = Vector2( 959.563, 539.881 )
-scale = Vector2( 0.99979, 0.999322 )
+position = Vector2( 963.434, 542.199 )
+scale = Vector2( 0.499053, 0.497761 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Median" type="StaticBody2D" parent="." index="1"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -64,12 +63,12 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Center" type="CollisionShape2D" parent="Median" index="0"]
 
-position = Vector2( 936.611, 589.975 )
+position = Vector2( 960, 589.975 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Borders" type="StaticBody2D" parent="." index="2"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -100,7 +99,7 @@ shape = SubResource( 4 )
 
 [node name="Bottom" type="CollisionShape2D" parent="Borders" index="3"]
 
-position = Vector2( 989.898, 1001.73 )
+position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
 [node name="GUI" parent="." index="3" instance=ExtResource( 4 )]

@@ -21,7 +21,7 @@ var id
 var health
 
 func _ready():
-	$PlayerController.setup(player_id)
+	$PlayerController.setup(id)
 	health = max_health
 
 func _process(delta):
