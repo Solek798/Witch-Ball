@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ch1_A_l.png-52bafb1379b45c8178cc4910e11ffbf0.stex"
+path="res://.import/Ch1_A_d_r.png-93091a7e25c4b4cf309bb0b6124d5708.stex"
 
 [deps]
 
-source_file="res://Arena/Player/Animation_Player/Ch1_Images/Idle-standart/Ch1_A_l.png"
-dest_files=[ "res://.import/Ch1_A_l.png-52bafb1379b45c8178cc4910e11ffbf0.stex" ]
+source_file="res://Arena/Player/Animation/Ch1_Images/Idle-standart/Ch1_A_d_r.png"
+dest_files=[ "res://.import/Ch1_A_d_r.png-93091a7e25c4b4cf309bb0b6124d5708.stex" ]
 
 [params]
 

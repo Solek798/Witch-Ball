@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_menu.png-9046fa5a5224cead639e8c7a4b8fd6a0.stex"
+path="res://.import/Titel_kleiner.png-896ea2ba6f77ab658ea3769ea087b7db.stex"
 
 [deps]
 
-source_file="res://MenuUI/test_menu.png"
-dest_files=[ "res://.import/test_menu.png-9046fa5a5224cead639e8c7a4b8fd6a0.stex" ]
+source_file="res://Menu/Titel_kleiner.png"
+dest_files=[ "res://.import/Titel_kleiner.png-896ea2ba6f77ab658ea3769ea087b7db.stex" ]
 
 [params]
 
