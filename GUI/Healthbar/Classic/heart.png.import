@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ziel.png-34435866d9364537a5bfb76a477c1f2b.stex"
+path="res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex"
 
 [deps]
 
-source_file="res://GUI/ziel.png"
-dest_files=[ "res://.import/ziel.png-34435866d9364537a5bfb76a477c1f2b.stex" ]
+source_file="res://GUI/Healthbar/Classic/heart.png"
+dest_files=[ "res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex" ]
 
 [params]
 

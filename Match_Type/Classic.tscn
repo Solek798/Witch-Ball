@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Match_Type/MatchType.gd" type="Script" id=1]
+
+[node name="Classic" type="Node" index="0"]
+
+script = ExtResource( 1 )
+arena = null
+gui = null
+backstage = null
+player_scene = null
+player_count = null
+
+

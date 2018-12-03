@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="Position" type="Node2D"]
+
+editor/display_folded = true
+
+[node name="Player1" type="Position2D" parent="." index="0"]
+
+position = Vector2( 515, 487 )
+scale = Vector2( 1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player2" type="Position2D" parent="." index="1"]
+
+position = Vector2( 1400, 487 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+_sections_unfolded = [ "Transform" ]
+
+

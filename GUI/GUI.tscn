@@ -1,11 +1,12 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GUI/GUI.gd" type="Script" id=1]
-[ext_resource path="res://GUI/runde.png" type="Texture" id=2]
-[ext_resource path="res://GUI/ziel.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Info/Classic/Info_Classic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GUI/Healthbar/Classic/Healthbar_Classic.tscn" type="PackedScene" id=3]
 
 
-[node name="GUI" type="Container"]
+
+[node name="GUI" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -25,7 +26,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
 life_template = null
 
-[node name="VSplitContainer" type="Container" parent="." index="0"]
+[node name="Top" type="Container" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -42,250 +43,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
-[node name="Top" type="HBoxContainer" parent="VSplitContainer" index="0"]
+[node name="Info" parent="Top" index="0" instance=ExtResource( 2 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1852.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Anchor", "Margin" ]
-
-[node name="Player1wins" type="VBoxContainer" parent="VSplitContainer/Top" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 663.0
-margin_right = 847.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 2
-
-[node name="Player1Rounds" type="HBoxContainer" parent="VSplitContainer/Top/Player1wins" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 39.0
-margin_right = 184.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="P1Round1" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 90.0
-margin_bottom = 91.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
-
-[node name="P1Round2" type="TextureRect" parent="VSplitContainer/Top/Player1wins/Player1Rounds" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 94.0
-margin_right = 184.0
-margin_bottom = 91.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
-
-[node name="Goal" type="VBoxContainer" parent="VSplitContainer/Top" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 851.0
-margin_right = 1001.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="GoalSprite" type="TextureRect" parent="VSplitContainer/Top/Goal" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 150.0
-margin_bottom = 119.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-
-[node name="Player2wins" type="VBoxContainer" parent="VSplitContainer/Top" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1005.0
-margin_right = 1189.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 2
-
-[node name="Player2Rounds" type="HBoxContainer" parent="VSplitContainer/Top/Player2wins" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 39.0
-margin_right = 184.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="P2Round2" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 90.0
-margin_bottom = 91.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
-
-[node name="P2Round1" type="TextureRect" parent="VSplitContainer/Top/Player2wins/Player2Rounds" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 94.0
-margin_right = 184.0
-margin_bottom = 91.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="Healthbars" type="Container" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 1.0
-anchor_right = 0.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = -64.0
-margin_right = 1860.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Margin" ]
-
-[node name="Player1Healthbar" type="HBoxContainer" parent="Healthbars" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 924.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Margin" ]
-
-[node name="Player2Healthbar" type="HBoxContainer" parent="Healthbars" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 0.0
-margin_left = 928.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 2
-_sections_unfolded = [ "Anchor", "Margin" ]
+[node name="Healthbar" parent="." index="1" instance=ExtResource( 3 )]
 
 

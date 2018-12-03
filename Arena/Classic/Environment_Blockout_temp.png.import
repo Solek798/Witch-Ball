@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.png-48bdf35dce895243fd6b4f2e2a68ef8b.stex"
+path="res://.import/Environment_Blockout_temp.png-63eec6abddf3ddf0526d51ab5fb592e8.stex"
 
 [deps]
 
-source_file="res://GUI/heart.png"
-dest_files=[ "res://.import/heart.png-48bdf35dce895243fd6b4f2e2a68ef8b.stex" ]
+source_file="res://Arena/Classic/Environment_Blockout_temp.png"
+dest_files=[ "res://.import/Environment_Blockout_temp.png-63eec6abddf3ddf0526d51ab5fb592e8.stex" ]
 
 [params]
 

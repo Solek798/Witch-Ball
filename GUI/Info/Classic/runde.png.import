@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Environment_Blockout_temp.png-fbef432d76d7759b53ed35b96fea32e9.stex"
+path="res://.import/runde.png-56be65ac4a62516a7598446f85bc0e4b.stex"
 
 [deps]
 
-source_file="res://Arena/Environment_Blockout_temp.png"
-dest_files=[ "res://.import/Environment_Blockout_temp.png-fbef432d76d7759b53ed35b96fea32e9.stex" ]
+source_file="res://GUI/Info/Classic/runde.png"
+dest_files=[ "res://.import/runde.png-56be65ac4a62516a7598446f85bc0e4b.stex" ]
 
 [params]
 

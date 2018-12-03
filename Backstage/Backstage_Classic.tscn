@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Backstage" type="Node"]
+
+editor/display_folded = true
+
+[node name="EndRoundTimer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+
