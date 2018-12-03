@@ -27,18 +27,198 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "anim", "out", 0 ],
+"connections": [ "anim 2", "mix", 0, "anim 12", "mix", 1, "oneshot", "out", 0, "oneshot 4", "oneshot", 0, "mix 6", "oneshot", 1, "oneshot 2", "oneshot 3", 0, "mix 3", "oneshot 3", 1, "anim 10", "mix 2", 0, "anim 9", "mix 2", 1, "anim 11", "mix 4", 0, "anim", "mix 4", 1, "blend2", "oneshot 2", 0, "mix 4", "oneshot 2", 1, "anim 13", "mix 3", 0, "anim 3", "mix 3", 1, "mix 5", "blend2", 0, "mix 2", "blend2", 1, "oneshot 3", "oneshot 4", 0, "mix", "oneshot 4", 1, "anim 8", "mix 5", 0, "anim 14", "mix 5", 1, "anim 4", "mix 8", 0, "anim 17", "mix 8", 1, "anim 5", "mix 7", 0, "anim 6", "mix 7", 1, "anim 16", "mix 6", 0, "anim 18", "mix 6", 1 ],
 "master": NodePath(""),
 "nodes": [ {
+"id": "mix",
+"mix": 0.928235,
+"position": Vector2( 671, 413 ),
+"type": "mix"
+}, {
 "animation": ExtResource( 1 ),
 "filter": [  ],
 "id": "anim",
-"position": Vector2( 50, 50 ),
+"position": Vector2( 296, 529 ),
 "type": "animation"
 }, {
 "id": "out",
-"position": Vector2( 473, 81 ),
+"position": Vector2( 1731, 213 ),
 "type": "output"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot",
+"mix": false,
+"position": Vector2( 1598, 244 ),
+"type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 9",
+"position": Vector2( 138, 379 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 3",
+"mix": false,
+"position": Vector2( 633, 241 ),
+"type": "oneshot"
+}, {
+"id": "mix 2",
+"mix": 0.928235,
+"position": Vector2( 294, 290 ),
+"type": "mix"
+}, {
+"id": "mix 4",
+"mix": 0.928235,
+"position": Vector2( 433, 447 ),
+"type": "mix"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 12",
+"position": Vector2( 533, 529 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 11",
+"position": Vector2( 305, 433 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 2",
+"mix": false,
+"position": Vector2( 523, 236 ),
+"type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 819, 583 ),
+"type": "animation"
+}, {
+"id": "mix 3",
+"mix": 0.0,
+"position": Vector2( 545, 15 ),
+"type": "mix"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend2",
+"position": Vector2( 428, 228 ),
+"type": "blend2"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 10",
+"position": Vector2( 127, 271 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 3",
+"position": Vector2( 411, 112 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 4",
+"mix": false,
+"position": Vector2( 761, 250 ),
+"type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 8",
+"position": Vector2( 147, 56 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 818, 475 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 13",
+"position": Vector2( 407, 5 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 1074, 481 ),
+"type": "animation"
+}, {
+"id": "mix 5",
+"mix": 0.928235,
+"position": Vector2( 307, 97 ),
+"type": "mix"
+}, {
+"id": "mix 8",
+"mix": 0.928235,
+"position": Vector2( 1220, 528 ),
+"type": "mix"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 17",
+"position": Vector2( 1078, 598 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 14",
+"position": Vector2( 164, 156 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 16",
+"position": Vector2( 967, 12 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 18",
+"position": Vector2( 967, 124 ),
+"type": "animation"
+}, {
+"id": "mix 7",
+"mix": 0.928235,
+"position": Vector2( 938, 516 ),
+"type": "mix"
+}, {
+"id": "mix 6",
+"mix": 0.0,
+"position": Vector2( 1105, 56 ),
+"type": "mix"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 541, 407 ),
+"type": "animation"
 } ]
 }
 
