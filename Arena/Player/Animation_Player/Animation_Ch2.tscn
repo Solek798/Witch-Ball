@@ -1,0 +1,241 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=1]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=2]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=3]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_l.png" type="Texture" id=4]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_r.png" type="Texture" id=5]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_r.png" type="Texture" id=6]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_rr.png" type="Texture" id=7]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H.png" type="Texture" id=8]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_f.png" type="Texture" id=9]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_b.png" type="Texture" id=10]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H_m.png" type="Texture" id=11]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_r.png" type="Texture" id=12]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_r.png" type="Texture" id=13]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_l.png" type="Texture" id=14]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_l.png" type="Texture" id=15]
+[ext_resource path="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_lw.png" type="Texture" id=16]
+
+[node name="Scene" type="Sprite" index="0"]
+
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
+
+playback_process_mode = 1
+master_player = NodePath("")
+base_path = NodePath("..")
+active = false
+data = {
+"active": false,
+"connections": [ "anim", "out", 0 ],
+"master": NodePath(""),
+"nodes": [ {
+"animation": ExtResource( 1 ),
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 50, 50 ),
+"type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 473, 81 ),
+"type": "output"
+} ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTreePlayer" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+[node name="Ch2_Sprites" type="Node2D" parent="." index="1"]
+
+[node name="Ch2_T" type="Sprite" parent="Ch2_Sprites" index="0"]
+
+editor/display_folded = true
+position = Vector2( 0, -0.0262058 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Head&Arms" type="Node2D" parent="Ch2_Sprites/Ch2_T" index="0"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_A_l" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms" index="0"]
+
+editor/display_folded = true
+position = Vector2( 21.0251, -52.5668 )
+rotation = 1.00282
+z_index = -5
+texture = ExtResource( 3 )
+offset = Vector2( -23.4915, 54.9353 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_A_d_l" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_A_l" index="0"]
+
+position = Vector2( 160.468, 4.0683 )
+rotation = -0.0207941
+z_index = 1
+texture = ExtResource( 4 )
+offset = Vector2( -184.675, 51.2988 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_A_r" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms" index="1"]
+
+editor/display_folded = true
+position = Vector2( -121.355, -14.2008 )
+rotation = -0.186181
+z_index = 1
+texture = ExtResource( 5 )
+offset = Vector2( 115.846, 3.52861 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_A_d_r" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_A_r" index="0"]
+
+visible = false
+z_index = 4
+texture = ExtResource( 6 )
+offset = Vector2( 188.628, -95.8364 )
+_sections_unfolded = [ "Animation", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_A_d_rr" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_A_r" index="1"]
+
+position = Vector2( -51.8834, 93.3846 )
+rotation = -0.623599
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 7 )
+offset = Vector2( 174.778, -24.6302 )
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
+[node name="Ch2_H" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms" index="2"]
+
+editor/display_folded = true
+position = Vector2( -38.0608, -65.9989 )
+rotation = -0.000155051
+z_index = 1
+texture = ExtResource( 8 )
+offset = Vector2( 17.0357, 118.566 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_Ha_f" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_H" index="0"]
+
+position = Vector2( -128.931, -238.894 )
+rotation = 0.00506925
+z_index = 1
+texture = ExtResource( 9 )
+offset = Vector2( 145.576, 357.073 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_Ha_b" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f" index="0"]
+
+position = Vector2( 147.004, 356.487 )
+rotation = 4.65661e-010
+z_index = -5
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Ch2_H_m" type="Sprite" parent="Ch2_Sprites/Ch2_T/Head&Arms/Ch2_H" index="1"]
+
+visible = false
+texture = ExtResource( 11 )
+
+[node name="Legs" type="Node2D" parent="Ch2_Sprites/Ch2_T" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_L_r" type="Sprite" parent="Ch2_Sprites/Ch2_T/Legs" index="0"]
+
+position = Vector2( -39.0679, 290.996 )
+rotation = 0.151728
+z_index = -1
+texture = ExtResource( 12 )
+offset = Vector2( 39.0679, -290.996 )
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_L_d_r" type="Sprite" parent="Ch2_Sprites/Ch2_T/Legs/Ch2_L_r" index="0"]
+
+position = Vector2( 29.5789, 124.968 )
+rotation = -0.0187435
+z_index = -1
+texture = ExtResource( 13 )
+offset = Vector2( 9.48901, -415.964 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_L_l" type="Sprite" parent="Ch2_Sprites/Ch2_T/Legs" index="1"]
+
+position = Vector2( 49.202, 250.398 )
+rotation = 0.182654
+scale = Vector2( 1, 1.2 )
+z_index = -2
+texture = ExtResource( 14 )
+offset = Vector2( -49.202, -208.665 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_L_d_l" type="Sprite" parent="Ch2_Sprites/Ch2_T/Legs/Ch2_L_l" index="0"]
+
+visible = false
+position = Vector2( 63.0907, 79.5739 )
+scale = Vector2( 1, 0.833333 )
+z_index = -2
+texture = ExtResource( 15 )
+offset = Vector2( -112.293, -345.887 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch2_L_d_lw" type="Sprite" parent="Ch2_Sprites/Ch2_T/Legs/Ch2_L_l" index="1"]
+
+position = Vector2( 63.0907, 79.5739 )
+rotation = 0.345298
+scale = Vector2( 1, 0.833333 )
+z_index = -1
+texture = ExtResource( 16 )
+offset = Vector2( -119.677, -307.506 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+
