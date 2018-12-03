@@ -1,10 +1,12 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
-[ext_resource path="res://Arena/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Arena/Environment_Blockout_temp.png" type="Texture" id=3]
-[ext_resource path="res://Arena/GUI/GUI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Arena/GUI/Life.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GUI/Life.tscn" type="PackedScene" id=5]
+
+
 
 
 

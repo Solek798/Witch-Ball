@@ -1,0 +1,358 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Player/Animation/Ch1_Animation/Idle/Idle.tres" type="Animation" id=1]
+[ext_resource path="res://Player/Animation/Ch1_Animation/throwing/Throwing.tres" type="Animation" id=2]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Idle/Idle_Beine.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Walk/Walk_Bein.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Walk/Walk_Hand.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Hit/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Walk/Walk _Bein_(noloop).tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Ch1_Animation/Kill.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_T.png" type="Texture" id=9]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_A_r.png" type="Texture" id=10]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_A_d_r.png" type="Texture" id=11]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_A_l.png" type="Texture" id=12]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_A_d_l.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_H.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_Ha_f.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_Ha_b.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_L_r.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_L_d_r.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_L_l.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Ch1_Images/Idle-standart/Ch1_L_d_l.png" type="Texture" id=20]
+
+
+
+
+
+
+
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.664063, 1, 0, 0.0276471, 1, 0.914063, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 10, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 0.0
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
+linear_accel = 100.0
+linear_accel_random = 1.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 50.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 45.0
+angle_random = 1.0
+scale = 5.0
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+
+[node name="Animationen" type="Sprite"]
+
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
+
+playback_process_mode = 1
+master_player = NodePath("")
+base_path = NodePath("")
+active = true
+data = {
+"active": true,
+"connections": [ "Walk", "speed", 0, "anim 8", "mix", 0, "anim 9", "mix", 1, "Stehen wefern", "out", 0, "Beine", "Walk", 0, "Hände ", "Walk", 1, "hit", "werfen Laufen", 0, "mix 3", "werfen Laufen", 1, "anim", "Walk input", 0, "speed", "Walk input", 1, "werfen Laufen", "Stehen wefern", 0, "mix", "Stehen wefern", 1, "anim 6", "mix 3", 0, "anim 7", "mix 3", 1, "Walk input", "hit", 0, "anim 4", "hit", 1 ],
+"master": NodePath(""),
+"nodes": [ {
+"id": "speed",
+"position": Vector2( 727, 78 ),
+"scale": 1.0,
+"type": "timescale"
+}, {
+"id": "mix",
+"mix": 1.0,
+"position": Vector2( 351, 347 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 1 ),
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 124, 5 ),
+"type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 1080, 207 ),
+"type": "output"
+}, {
+"id": "Walk",
+"mix": 1.0,
+"position": Vector2( 592, 78 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 6, 365 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "anim 8",
+"position": Vector2( 195, 347 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "werfen Laufen",
+"mix": false,
+"position": Vector2( 678, 207 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Beine",
+"position": Vector2( 6, 51 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "Hände ",
+"position": Vector2( 7, 156 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Walk input",
+"position": Vector2( 868, 5 ),
+"type": "blend2"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "Stehen wefern",
+"mix": false,
+"position": Vector2( 883, 207 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "anim 9",
+"position": Vector2( 195, 463 ),
+"type": "animation"
+}, {
+"id": "mix 3",
+"mix": 1.0,
+"position": Vector2( 113, 387 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 7, 261 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 7",
+"position": Vector2( 6, 469 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "hit",
+"mix": false,
+"position": Vector2( 558, 207 ),
+"type": "oneshot"
+} ]
+}
+_sections_unfolded = [ "Playback" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTreePlayer" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Hit = ExtResource( 6 )
+anims/Idle = ExtResource( 1 )
+anims/Idle_Beine = ExtResource( 3 )
+anims/Kill = ExtResource( 8 )
+anims/Throwing = ExtResource( 2 )
+anims/Walk_Bein = ExtResource( 4 )
+anims/Walk_Bein_(noloop) = ExtResource( 7 )
+anims/Walk_Hand = ExtResource( 5 )
+blend_times = [  ]
+
+[node name="Charakter_Sprites" type="Sprite" parent="." index="1"]
+
+position = Vector2( 0, -68.3323 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 6
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
+
+position = Vector2( -89, 4.44539 )
+texture = ExtResource( 9 )
+
+[node name="Head&Arms" type="Sprite" parent="Charakter_Sprites/Ch1_T" index="0"]
+
+[node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
+
+editor/display_folded = true
+position = Vector2( -121.355, -14.2008 )
+z_index = 1
+texture = ExtResource( 10 )
+offset = Vector2( 121.355, 14.2008 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Ch1_A_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="0"]
+
+position = Vector2( -56.27, 95.4885 )
+rotation = 0.0137699
+z_index = 1
+texture = ExtResource( 11 )
+offset = Vector2( 177.369, -81.5146 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
+
+editor/display_folded = true
+position = Vector2( 21.0251, -52.5668 )
+z_index = -2
+texture = ExtResource( 12 )
+offset = Vector2( -21.0251, 52.5667 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Ch1_A_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l" index="0"]
+
+position = Vector2( 160.468, 4.0683 )
+rotation = -0.00551064
+z_index = 1
+texture = ExtResource( 13 )
+offset = Vector2( -181.604, 48.8227 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
+
+editor/display_folded = true
+position = Vector2( -33.183, -123.135 )
+rotation = -0.0161688
+z_index = 1
+texture = ExtResource( 14 )
+offset = Vector2( 33.2301, 123.153 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Ch1_Ha_f" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="0"]
+
+position = Vector2( 32.6898, 123.267 )
+rotation = 0.00400291
+z_index = 2
+texture = ExtResource( 15 )
+
+[node name="Ch1_Ha_b" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f" index="0"]
+
+z_index = -5
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Legs" type="Sprite" parent="Charakter_Sprites/Ch1_T" index="1"]
+
+editor/display_folded = true
+
+[node name="Ch1_L_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="0"]
+
+position = Vector2( -51.6161, 278.183 )
+z_index = -1
+texture = ExtResource( 17 )
+offset = Vector2( 57.7921, -295.961 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ch1_L_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_r" index="0"]
+
+position = Vector2( 41.8584, 116.897 )
+rotation = 0.00223762
+z_index = -1
+texture = ExtResource( 18 )
+offset = Vector2( 15.293, -412.801 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Ch1_L_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="1"]
+
+position = Vector2( 61.708, 265.422 )
+z_index = -1
+texture = ExtResource( 19 )
+offset = Vector2( -61.708, -265.422 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Ch1_L_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="0"]
+
+position = Vector2( 40.327, 92.3949 )
+z_index = -1
+texture = ExtResource( 20 )
+offset = Vector2( -102.035, -357.817 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="wurf explosion" type="Particles2D" parent="Charakter_Sprites" index="1"]
+
+z_index = 6
+emitting = false
+amount = 1000
+lifetime = 7.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Transform", "Z Index" ]
+
+
