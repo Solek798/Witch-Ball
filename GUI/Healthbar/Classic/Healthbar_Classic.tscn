@@ -1,4 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GUI/Healthbar/Classic/Healthbar_Classic.gd" type="Script" id=1]
+[ext_resource path="res://GUI/Healthbar/Classic/Life.tscn" type="PackedScene" id=2]
 
 [node name="Healthbar" type="Container"]
 
@@ -15,7 +18,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
+life_template = ExtResource( 2 )
 
 [node name="Player1" type="HBoxContainer" parent="." index="0"]
 

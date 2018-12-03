@@ -1,10 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Arena/Classic/Environment_Blockout_temp.png" type="Texture" id=3]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=4]
-
+[ext_resource path="res://Arena/Classic/Environment_Blockout_temp.png" type="Texture" id=2]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,32 +29,26 @@ extents = Vector2( 457.284, 23.3026 )
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
 
-[node name="Arena" type="CanvasLayer" index="0"]
+[node name="Arena" type="Node2D"]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
 scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-player_scene = ExtResource( 2 )
-player_count = 2
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
+scale = Vector2( 1, 1 )
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
-scale = Vector2( 1, 1 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -74,7 +66,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Border" type="StaticBody2D" parent="Boundary" index="1"]
 
-scale = Vector2( 1, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -108,6 +99,8 @@ shape = SubResource( 4 )
 position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
-[node name="Position" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Position" parent="." index="2" instance=ExtResource( 3 )]
+
+scale = Vector2( 1, 1 )
 
 

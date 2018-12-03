@@ -8,10 +8,9 @@ export(int) var max_health
 export(float) var dodge_multiplier
 
 signal bullet_thrown(bullet)
-signal player_created(player)
 signal player_damaged(player, ammount)
-signal player_dead(player)
-signal player_reset(player)
+signal player_died(player)
+signal player_reseted(player)
 
 enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
@@ -99,11 +98,14 @@ func take_damage(ammount):
 	
 	if health <= 0:
 		$PlayerController.lock()
-		emit_signal("player_dead", self)
+		emit_signal("player_died", self)
 
 func reset():
 	# all values that could have been changed are reset to default
 	health = max_health
 	$Aim.rotation = 0
 	$PlayerController.unlock()
-	emit_signal("player_reset", self)
+	emit_signal("player_reseted", self)
+
+func _on_round_finished():
+	reset()
