@@ -1,0 +1,81 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "Doge_Sprint_Bein"
+length = 0.2
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 36.3911, 4.40539, -103.233, -59.566, -2.65664, 11.4413 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -41.8976, 32.1183, 75.2672, 91.4739, 77.3632, 34.2009 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 54.9308, 58.2002, 70.7218, -14.6377, -37.8272, 50.6562 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -35.1978, -65.3763, -94.9926, -67.1598, -48.5638, -38.2254 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Ch1_Sprites/Ch1_T:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 158.446, 97.1758 ), Vector2( 126.757, 67.4044 ), Vector2( 95.0674, 37.6329 ), Vector2( 63.3783, 7.8614 ), Vector2( 31.6891, 111.925 ), Vector2( 0, 75.282 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Ch1_Sprites/Ch1_T:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 23.8153, 19.0522, 14.2892, 9.52611, 4.76305, 0.0 ]
+}
+
