@@ -1,4 +1,4 @@
-extends Node
+extends Object
 
 # TODO
 const FORMAT_STRINGS = [
@@ -13,11 +13,14 @@ const FORMAT_STRINGS = [
 ]
 
 # TODO
-onready var keys = []
-onready var locked_states = []
+var keys
+var locked_states
 
 # TODO
 func setup(id):
+	keys = []
+	locked_states = []
+	
 	for string in FORMAT_STRINGS:
 		keys.append(string % id)
 
@@ -43,3 +46,4 @@ func unlock():
 # TODO
 func _on_DodgeTimer_timeout():
 	unlock()
+
