@@ -4,10 +4,10 @@
 
 resource_name = "Idle"
 length = 0.2
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:rotation_degrees")
+tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l:position")
+tracks/1/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ Vector2( 21.0251, -52.5668 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l:scale")
+tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r:rotation_degrees")
+tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:position")
+tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ Vector2( -128.539, -238.508 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:scale")
+tracks/5/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -79,7 +79,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l:rotation_degrees")
+tracks/6/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:position")
+tracks/7/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ Vector2( 29.5789, 124.968 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:scale")
+tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -115,7 +115,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H:rotation_degrees")
+tracks/9/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -127,7 +127,7 @@ tracks/9/keys = {
 "values": [ 0.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:position")
+tracks/10/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ Vector2( 160.468, 4.0683 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:scale")
+tracks/11/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -151,7 +151,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:rotation_degrees")
+tracks/12/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:rotation_degrees")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -163,7 +163,7 @@ tracks/12/keys = {
 "values": [ 0.0 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r:position")
+tracks/13/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -175,7 +175,7 @@ tracks/13/keys = {
 "values": [ Vector2( -39.0679, 290.996 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r:scale")
+tracks/14/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -187,7 +187,7 @@ tracks/14/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("../Ch1_Sprites/Ch1_T:rotation_degrees")
+tracks/15/path = NodePath("../Charakter_Sprites/Ch1_T:rotation_degrees")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -199,7 +199,7 @@ tracks/15/keys = {
 "values": [ 0.0 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms:position")
+tracks/16/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -211,7 +211,7 @@ tracks/16/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms:scale")
+tracks/17/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms:scale")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -223,7 +223,7 @@ tracks/17/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("../Ch1_Sprites:rotation_degrees")
+tracks/18/path = NodePath("../Charakter_Sprites:rotation_degrees")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -235,7 +235,7 @@ tracks/18/keys = {
 "values": [ 0.0 ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("../Ch1_Sprites/Ch1_T/Legs:position")
+tracks/19/path = NodePath("../Charakter_Sprites/Ch1_T/Legs:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -247,7 +247,7 @@ tracks/19/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("../Ch1_Sprites/Ch1_T/Legs:scale")
+tracks/20/path = NodePath("../Charakter_Sprites/Ch1_T/Legs:scale")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -259,7 +259,7 @@ tracks/20/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:position")
+tracks/21/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -271,7 +271,7 @@ tracks/21/keys = {
 "values": [ Vector2( 63.0907, 79.5739 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:scale")
+tracks/22/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:scale")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -283,7 +283,7 @@ tracks/22/keys = {
 "values": [ Vector2( 1, 0.833333 ) ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l:rotation_degrees")
+tracks/23/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:rotation_degrees")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -295,7 +295,7 @@ tracks/23/keys = {
 "values": [ 0.0 ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r:position")
+tracks/24/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:position")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
@@ -307,7 +307,7 @@ tracks/24/keys = {
 "values": [ Vector2( -121.355, -14.2008 ) ]
 }
 tracks/25/type = "value"
-tracks/25/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r:scale")
+tracks/25/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:scale")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/imported = false
@@ -319,7 +319,7 @@ tracks/25/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/26/type = "value"
-tracks/26/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:rotation_degrees")
+tracks/26/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:rotation_degrees")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/imported = false
@@ -331,7 +331,7 @@ tracks/26/keys = {
 "values": [ 0.0 ]
 }
 tracks/27/type = "value"
-tracks/27/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l:position")
+tracks/27/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:position")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/imported = false
@@ -343,7 +343,7 @@ tracks/27/keys = {
 "values": [ Vector2( 49.202, 250.398 ) ]
 }
 tracks/28/type = "value"
-tracks/28/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l:scale")
+tracks/28/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:scale")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/imported = false
@@ -355,7 +355,7 @@ tracks/28/keys = {
 "values": [ Vector2( 1, 1.2 ) ]
 }
 tracks/29/type = "value"
-tracks/29/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
+tracks/29/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/imported = false
@@ -367,7 +367,7 @@ tracks/29/keys = {
 "values": [ 0.0 ]
 }
 tracks/30/type = "value"
-tracks/30/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H:position")
+tracks/30/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:position")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/imported = false
@@ -379,7 +379,7 @@ tracks/30/keys = {
 "values": [ Vector2( -38.0608, -65.9989 ) ]
 }
 tracks/31/type = "value"
-tracks/31/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H:scale")
+tracks/31/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:scale")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/imported = false
@@ -391,7 +391,7 @@ tracks/31/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/32/type = "value"
-tracks/32/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:rotation_degrees")
+tracks/32/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:rotation_degrees")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/imported = false
@@ -403,7 +403,7 @@ tracks/32/keys = {
 "values": [ 0.0 ]
 }
 tracks/33/type = "value"
-tracks/33/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:position")
+tracks/33/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:position")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/imported = false
@@ -415,7 +415,7 @@ tracks/33/keys = {
 "values": [ Vector2( -51.8834, 93.3846 ) ]
 }
 tracks/34/type = "value"
-tracks/34/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:scale")
+tracks/34/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:scale")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/imported = false
@@ -427,7 +427,7 @@ tracks/34/keys = {
 "values": [ Vector2( 0.999999, 0.999999 ) ]
 }
 tracks/35/type = "value"
-tracks/35/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_r:rotation_degrees")
+tracks/35/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:rotation_degrees")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/imported = false
@@ -439,7 +439,7 @@ tracks/35/keys = {
 "values": [ 0.0 ]
 }
 tracks/36/type = "value"
-tracks/36/path = NodePath("../Ch1_Sprites/Ch1_T:position")
+tracks/36/path = NodePath("../Charakter_Sprites/Ch1_T:position")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/imported = false
@@ -451,7 +451,7 @@ tracks/36/keys = {
 "values": [ Vector2( 0, 0.3481 ) ]
 }
 tracks/37/type = "value"
-tracks/37/path = NodePath("../Ch1_Sprites/Ch1_T:scale")
+tracks/37/path = NodePath("../Charakter_Sprites/Ch1_T:scale")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/imported = false
@@ -463,7 +463,7 @@ tracks/37/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/38/type = "value"
-tracks/38/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms:rotation_degrees")
+tracks/38/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms:rotation_degrees")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/imported = false
@@ -475,7 +475,7 @@ tracks/38/keys = {
 "values": [ 0.0 ]
 }
 tracks/39/type = "value"
-tracks/39/path = NodePath("../Ch1_Sprites/Ch1_T/Legs:rotation_degrees")
+tracks/39/path = NodePath("../Charakter_Sprites/Ch1_T/Legs:rotation_degrees")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/imported = false
@@ -487,7 +487,7 @@ tracks/39/keys = {
 "values": [ 0.0 ]
 }
 tracks/40/type = "value"
-tracks/40/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:visible")
+tracks/40/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:visible")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/imported = false
@@ -499,7 +499,7 @@ tracks/40/keys = {
 "values": [ true, false ]
 }
 tracks/41/type = "value"
-tracks/41/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:visible")
+tracks/41/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:visible")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/imported = false
@@ -511,7 +511,7 @@ tracks/41/keys = {
 "values": [ true, false ]
 }
 tracks/42/type = "value"
-tracks/42/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:position")
+tracks/42/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:position")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/imported = false
@@ -523,7 +523,7 @@ tracks/42/keys = {
 "values": [ Vector2( -51.8834, 93.3846 ) ]
 }
 tracks/43/type = "value"
-tracks/43/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_lw:visible")
+tracks/43/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:visible")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/imported = false
@@ -532,10 +532,10 @@ tracks/43/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true ]
 }
 tracks/44/type = "value"
-tracks/44/path = NodePath("../Ch1_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:visible")
+tracks/44/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:visible")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/imported = false
@@ -547,19 +547,19 @@ tracks/44/keys = {
 "values": [ false, true ]
 }
 tracks/45/type = "value"
-tracks/45/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:visible")
+tracks/45/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f/Ch1_Ha_b:position")
 tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/imported = false
 tracks/45/enabled = true
 tracks/45/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 145.136, 356.02 ) ]
 }
 tracks/46/type = "value"
-tracks/46/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f/Ch1_Ha_b:position")
+tracks/46/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:position")
 tracks/46/interp = 1
 tracks/46/loop_wrap = true
 tracks/46/imported = false
@@ -568,18 +568,18 @@ tracks/46/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 145.136, 356.02 ) ]
+"values": [ Vector2( 19.2195, 193.701 ) ]
 }
 tracks/47/type = "value"
-tracks/47/path = NodePath("../Ch1_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:position")
+tracks/47/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch_L_d_lw:visible")
 tracks/47/interp = 1
 tracks/47/loop_wrap = true
 tracks/47/imported = false
 tracks/47/enabled = true
 tracks/47/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 19.2195, 193.701 ) ]
+"times": PoolRealArray( 0.0143029, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
