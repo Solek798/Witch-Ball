@@ -1,8 +1,9 @@
 extends Node
 
-export(PackedScene) var arena_template
+# TEMP
+export(PackedScene) var match_template
 
 
 func _ready():
-	var arena = arena_template.instance()
-	add_child(arena)
+	var new_match = match_template.instance()
+	add_child(new_match)

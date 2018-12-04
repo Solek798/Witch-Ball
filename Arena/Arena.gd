@@ -1,47 +1,15 @@
-extends CanvasLayer
+extends Node2D
 
-export(PackedScene) var player_scene
-export(int) var player_count
-
-onready var players = []
-
-
-func _ready():
-	# creates the in player_count specified ammount of players
-	for i in player_count:
-		players.append(create_player(players.size() + 1))
-	
-
-func create_player(id):
-	#instanciates and sets th player to the specified position
-	var player = player_scene.instance()
-	player.position = get_node("PositionPlayer%d" % id).position
-	player.id = id
-	# connects all player relevant signals
-	player.connect("bullet_thrown", self, "_on_bullet_thrown")
-	player.connect("player_created", $GUI, "_on_player_created")
-	player.connect("player_damaged", $GUI, "_on_player_damaged")
-	player.connect("player_dead", self, "_on_player_dead")
-	player.connect("player_reset", $GUI, "_on_player_reset")
-	# adds the player to the world
-	add_child(player)
-	return player
-
-func reset_all_players():
-	# startes and waits for the EndRoundTimer (EndScreenTimer) to finish
-	$EndRoundTimer.start()
-	yield($EndRoundTimer, "timeout")
-	
-	# resets all players
-	for player in players:
-		player.reset()
-		player.position = get_node("PositionPlayer%d" % player.id).position
 
 func _on_bullet_thrown(bullet):
-	add_child(bullet) 
+	add_child(bullet)
 
-func _on_player_dead(player):
-	# TODO; display Win Message
-	reset_all_players()
+func _on_player_created(player):
+	player.position = $Position.get_by_id(player.id)
+	# TEMP
+	if player.id == 2:
+		player.scale = Vector2(-1, 1)
+	add_child(player)
 
-
+func _on_player_reseted(player):
+	player.position = $Position.get_by_id(player.id)
