@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ch1_L_d_r1.png-dd09188b14bdae0644c7a09857bed952.stex"
+path="res://.import/Ch1_L_d_r1.png-2f7eda781b0f37f8b659b5172251f60e.stex"
 
 [deps]
 
-source_file="res://Arena/Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_r1.png"
-dest_files=[ "res://.import/Ch1_L_d_r1.png-dd09188b14bdae0644c7a09857bed952.stex" ]
+source_file="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_r1.png"
+dest_files=[ "res://.import/Ch1_L_d_r1.png-2f7eda781b0f37f8b659b5172251f60e.stex" ]
 
 [params]
 
