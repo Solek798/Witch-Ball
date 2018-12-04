@@ -31,10 +31,8 @@ func _process(delta):
 	var mult = 1
 	if $DodgeTimer.time_left > 0:
 		mult = dodge_multiplier
-	
 	# moves player and scans for collisions
-	move_and_collide(movement * delta * movement_speed * mult)
-	
+	move_and_slide(movement * movement_speed * mult)
 	# rotates aim pointer
 	var aim = get_aim()
 	$Aim.rotate(aim * delta * aim_speed)
@@ -70,17 +68,15 @@ func get_aim():
 	return aim
 
 func throw():
+	var player_position = self.global_position
+	var throw_point_position = $Aim/throw_point.global_position
+	var impulse = (throw_point_position - player_position) * bullet_speed
+	
 	# instanciates and sets a new bullet to thropoint position
 	var bullet = bullet_template.instance()
-	bullet.position = $Aim/throw_point.global_position
+	bullet.position = throw_point_position
 	
-	# creates velocity for the bullet based on its position to the player
-	var velocity = $Aim/throw_point.position.normalized()
-	velocity = velocity.rotated($Aim.rotation)
-	velocity = velocity * bullet_speed
-	
-	# throws bullet
-	bullet.linear_velocity = velocity
+	bullet.apply_impulse(throw_point_position, impulse)
 	emit_signal("bullet_thrown", bullet)
 
 func dodge(movement):
