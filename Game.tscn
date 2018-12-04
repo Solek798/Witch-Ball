@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
-[ext_resource path="res://Arena/Arena.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
 
 [node name="Game" type="Node"]
 
 script = ExtResource( 1 )
-arena_template = ExtResource( 2 )
+match_template = ExtResource( 2 )
 
 

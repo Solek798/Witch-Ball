@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Match_Type/MatchType.gd" type="Script" id=1]
+[ext_resource path="res://Arena/Classic/Arena_Classic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Backstage/Backstage_Classic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+
+[node name="Classic" type="Node" index="0"]
+
+script = ExtResource( 1 )
+arena_template = ExtResource( 2 )
+gui_template = ExtResource( 3 )
+backstage_template = ExtResource( 4 )
+player_count = 2
+player_template = ExtResource( 5 )
+
+
