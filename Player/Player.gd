@@ -12,9 +12,6 @@ signal player_damaged(player, ammount)
 signal player_died(player)
 signal player_reseted(player)
 
-enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
-
-const DEGREE_IN_RADIANT = PI / 180
 
 onready var player_controller_class = preload("res://Player/PlayerController.gd")
 
@@ -29,7 +26,7 @@ func _ready():
 	emit_signal("player_created", self)
 
 func _process(delta):
-	var movement = get_movement()
+	var movement = controlls.get_movement()
 	
 	# sets dodge-multiplier if player is dodging
 	var mult = 1
@@ -37,39 +34,17 @@ func _process(delta):
 		mult = dodge_multiplier
 	# moves player and scans for collisions
 	move_and_slide(movement * movement_speed * mult)
+	
 	# rotates aim pointer
-	var aim = get_aim()
+	var direction = controlls.get_aim()
+	print(direction)
+	var aim = -(direction.angle_to(Vector2(1, 0).rotated($Aim.rotation)))
 	$Aim.rotate(aim * delta * aim_speed)
 	
-	if controlls.state(THROW):
+	if controlls.state(Action.THROW):
 		throw()
-	if controlls.state(DODGE):
+	if controlls.state(Action.DODGE):
 		dodge(movement)
-	
-
-func get_movement():
-	var movement = Vector2()
-	
-	if controlls.state(UP):
-		movement.y -= 1
-	if controlls.state(DOWN):
-		movement.y += 1
-	if controlls.state(LEFT):
-		movement.x -= 1
-	if controlls.state(RIGHT):
-		movement.x += 1
-	
-	return movement
-
-func get_aim():
-	var aim = 0
-	
-	if controlls.state(AIM_UP):
-		aim -= DEGREE_IN_RADIANT
-	if controlls.state(AIM_DOWN):
-		aim += DEGREE_IN_RADIANT
-	
-	return aim
 
 func throw():
 	var player_position = self.global_position
@@ -109,3 +84,6 @@ func reset():
 
 func _on_round_finished():
 	reset()
+
+func _on_DodgeTimer_timeout():
+	pass # replace with function body

@@ -21,7 +21,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
 bullet_template = ExtResource( 2 )
 movement_speed = 200
-aim_speed = 150
+aim_speed = 2
 bullet_speed = 8
 max_health = 3
 dodge_multiplier = 6.0
@@ -54,5 +54,9 @@ process_mode = 1
 wait_time = 0.15
 one_shot = true
 autostart = false
+
+[node name="Aimer" type="Node2D" parent="." index="5"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 
