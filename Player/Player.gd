@@ -12,20 +12,21 @@ signal player_damaged(player, ammount)
 signal player_died(player)
 signal player_reseted(player)
 
-enum action {UP, DOWN, LEFT, RIGHT, AIM_UP, AIM_DOWN, THROW, DODGE}
 
-const DEGREE_IN_RADIANT = PI / 180
+onready var player_controller_class = preload("res://Player/PlayerController.gd")
 
+var controlls
 var id
 var health
 
 func _ready():
-	$PlayerController.setup(id)
+	controlls = player_controller_class.new()
+	controlls.setup(id)
 	health = max_health
 	emit_signal("player_created", self)
 
 func _process(delta):
-	var movement = get_movement()
+	var movement = controlls.get_movement()
 	
 	# sets dodge-multiplier if player is dodging
 	var mult = 1
@@ -33,39 +34,17 @@ func _process(delta):
 		mult = dodge_multiplier
 	# moves player and scans for collisions
 	move_and_slide(movement * movement_speed * mult)
+	
 	# rotates aim pointer
-	var aim = get_aim()
+	var direction = controlls.get_aim()
+	print(direction)
+	var aim = -(direction.angle_to(Vector2(1, 0).rotated($Aim.rotation)))
 	$Aim.rotate(aim * delta * aim_speed)
 	
-	if $PlayerController.state(THROW):
+	if controlls.state(Action.THROW):
 		throw()
-	if $PlayerController.state(DODGE):
+	if controlls.state(Action.DODGE):
 		dodge(movement)
-	
-
-func get_movement():
-	var movement = Vector2()
-	
-	if $PlayerController.state(UP):
-		movement.y -= 1
-	if $PlayerController.state(DOWN):
-		movement.y += 1
-	if $PlayerController.state(LEFT):
-		movement.x -= 1
-	if $PlayerController.state(RIGHT):
-		movement.x += 1
-	
-	return movement
-
-func get_aim():
-	var aim = 0
-	
-	if $PlayerController.state(AIM_UP):
-		aim -= DEGREE_IN_RADIANT
-	if $PlayerController.state(AIM_DOWN):
-		aim += DEGREE_IN_RADIANT
-	
-	return aim
 
 func throw():
 	var player_position = self.global_position
@@ -85,7 +64,7 @@ func dodge(movement):
 	
 	# if player is not allready dodging, he starts to dodge
 	if $DodgeTimer.is_stopped():
-		$PlayerController.lock()
+		controlls.lock()
 		$DodgeTimer.start()
 
 func take_damage(ammount):
@@ -93,15 +72,18 @@ func take_damage(ammount):
 	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
-		$PlayerController.lock()
+		controlls.lock()
 		emit_signal("player_died", self)
 
 func reset():
 	# all values that could have been changed are reset to default
 	health = max_health
 	$Aim.rotation = 0
-	$PlayerController.unlock()
+	controlls.unlock()
 	emit_signal("player_reseted", self)
 
 func _on_round_finished():
 	reset()
+
+func _on_DodgeTimer_timeout():
+	pass # replace with function body
