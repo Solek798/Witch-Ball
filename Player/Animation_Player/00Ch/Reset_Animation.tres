@@ -582,4 +582,28 @@ tracks/47/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/48/type = "value"
+tracks/48/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch_L_d_lw:position")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 63.0907, 79.5739 ) ]
+}
+tracks/49/type = "value"
+tracks/49/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch_L_d_lw:rotation_degrees")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -16.2111 ]
+}
 
