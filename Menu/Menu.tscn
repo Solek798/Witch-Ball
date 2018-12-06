@@ -4,8 +4,7 @@
 [ext_resource path="res://Menu/start.png" type="Texture" id=2]
 [ext_resource path="res://Menu/opptions.png" type="Texture" id=3]
 
-
-[node name="MenuUI" type="CanvasLayer"]
+[node name="MenuUI" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
