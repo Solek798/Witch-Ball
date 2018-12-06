@@ -53,9 +53,13 @@
 [ext_resource path="res://Player/Particles Scenen/fire/51.png" type="Texture" id=51]
 [ext_resource path="res://Player/Particles Scenen/Fire1-10_test.tres" type="Animation" id=52]
 
-[node name="Effeckte" type="Node2D" index="0"]
+[node name="Effeckte" type="Node2D"]
 
 [node name="Flamme" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+scale = Vector2( 0.1, 0.1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="1-10" type="Node2D" parent="Flamme" index="0"]
 
@@ -176,7 +180,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite19" type="Sprite" parent="Flamme/11-20" index="8"]
 
-visible = false
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -316,7 +319,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="41-51" type="Node2D" parent="Flamme" index="4"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite41" type="Sprite" parent="Flamme/41-51" index="0"]
@@ -375,6 +377,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite50" type="Sprite" parent="Flamme/41-51" index="9"]
 
+visible = false
 texture = ExtResource( 50 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -389,7 +392,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
-autoplay = ""
+autoplay = "Fire"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0

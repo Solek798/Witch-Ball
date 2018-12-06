@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Bein.tres" type="Animation" id=1]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_l.png" type="Texture" id=24]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_l.png" type="Texture" id=25]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_lw.png" type="Texture" id=26]
+[ext_resource path="res://Player/Particles Scenen/Effeckte_Frame_by_Fram.tscn" type="PackedScene" id=27]
 
 [sub_resource type="Animation" id=2]
 
@@ -669,7 +670,7 @@ __meta__ = {
 
 [node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
 
-position = Vector2( -6.18036, 4.01705 )
+position = Vector2( -8.06232, 4.09771 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -687,7 +688,7 @@ __meta__ = {
 [node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
 
 position = Vector2( 21.0251, -52.5668 )
-rotation = 1.0645
+rotation = 1.05256
 z_index = -5
 texture = ExtResource( 13 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -710,7 +711,7 @@ __meta__ = {
 [node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
 
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.437508
+rotation = -0.420057
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( 115.846, 3.52861 )
@@ -733,7 +734,7 @@ __meta__ = {
 [node name="Ch1_A_d_rr" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="1"]
 
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.432519
+rotation = -0.45287
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 17 )
 offset = Vector2( 174.778, -24.6302 )
@@ -742,7 +743,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
 
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.0315813
+rotation = 0.0137327
 z_index = 1
 texture = ExtResource( 18 )
 offset = Vector2( 17.0357, 118.566 )
@@ -754,7 +755,7 @@ __meta__ = {
 [node name="Ch1_Ha_f" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="0"]
 
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0289383
+rotation = -0.00459226
 z_index = 1
 texture = ExtResource( 19 )
 offset = Vector2( 145.576, 357.073 )
@@ -773,7 +774,6 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ch1_H_m" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="1"]
 
-visible = false
 position = Vector2( 19.2195, 193.701 )
 texture = ExtResource( 21 )
 
@@ -788,7 +788,7 @@ __meta__ = {
 [node name="Ch1_L_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="0"]
 
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.0553567
+rotation = -0.0722131
 z_index = -1
 texture = ExtResource( 22 )
 offset = Vector2( 39.0679, -290.996 )
@@ -800,7 +800,7 @@ __meta__ = {
 [node name="Ch1_L_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.0557265
+rotation = 0.0726956
 z_index = -1
 texture = ExtResource( 23 )
 offset = Vector2( 9.48901, -415.964 )
@@ -812,7 +812,7 @@ __meta__ = {
 [node name="Ch1_L_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="1"]
 
 position = Vector2( 49.202, 250.398 )
-rotation = -0.046884
+rotation = -0.0611605
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 24 )
@@ -825,7 +825,7 @@ __meta__ = {
 [node name="Ch1_L_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.0285846
+rotation = 0.0372887
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 25 )
@@ -849,6 +849,8 @@ __meta__ = {
 }
 
 [node name="Partickles" type="Node2D" parent="Charakter_Sprites/Ch1_T" index="2"]
+
+editor/display_folded = true
 
 [node name="Hit" type="Particles2D" parent="Charakter_Sprites/Ch1_T/Partickles" index="0"]
 
@@ -875,5 +877,11 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Process Material", "Time", "Visibility", "Z Index" ]
+
+[node name="Effeckte" parent="Charakter_Sprites/Ch1_T" index="3" instance=ExtResource( 27 )]
+
+position = Vector2( 15.4666, -762.533 )
+scale = Vector2( 10, 10 )
+_sections_unfolded = [ "Transform" ]
 
 
