@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ziel.png-b503b13146c245b558bb62b5c27884a4.stex"
+path="res://.import/button_start_menu_pressed_200.png-89d88ea98712dd7c391b083277ee7457.stex"
 
 [deps]
 
-source_file="res://GUI/Info/Classic/ziel.png"
-dest_files=[ "res://.import/ziel.png-b503b13146c245b558bb62b5c27884a4.stex" ]
+source_file="res://Menu/button_start_menu_pressed_200.png"
+dest_files=[ "res://.import/button_start_menu_pressed_200.png-89d88ea98712dd7c391b083277ee7457.stex" ]
 
 [params]
 

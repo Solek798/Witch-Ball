@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/runde.png-56be65ac4a62516a7598446f85bc0e4b.stex"
+path="res://.import/lifes_heart_2_56.png-0302a4226a514ec3d81cc33b5d415502.stex"
 
 [deps]
 
-source_file="res://GUI/Info/Classic/runde.png"
-dest_files=[ "res://.import/runde.png-56be65ac4a62516a7598446f85bc0e4b.stex" ]
+source_file="res://GUI/Healthbar/Classic/lifes_heart_2_56.png"
+dest_files=[ "res://.import/lifes_heart_2_56.png-0302a4226a514ec3d81cc33b5d415502.stex" ]
 
 [params]
 

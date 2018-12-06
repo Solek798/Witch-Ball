@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex"
+path="res://.import/Title_Witchball_lightning_fire_400.png-32e1e27a65b150af7081f112ec0d04ec.stex"
 
 [deps]
 
-source_file="res://GUI/Healthbar/Classic/heart.png"
-dest_files=[ "res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex" ]
+source_file="res://Menu/Title_Witchball_lightning_fire_400.png"
+dest_files=[ "res://.import/Title_Witchball_lightning_fire_400.png-32e1e27a65b150af7081f112ec0d04ec.stex" ]
 
 [params]
 
