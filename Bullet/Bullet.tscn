@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://Bullet/TestBullet.png" type="Texture" id=2]
+[ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 12.4002
 
-[node name="Bullet" type="RigidBody2D"]
+[node name="Bullet" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 8
@@ -30,6 +30,9 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_vertical_guides_": [ -983.436 ]
+}
 damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -38,7 +41,8 @@ shape = SubResource( 1 )
 
 [node name="Texture" type="Sprite" parent="." index="1"]
 
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( -1.21818, -0.150352 )
+scale = Vector2( 0.0344211, 0.0344211 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

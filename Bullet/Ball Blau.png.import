@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TestBullet.png-e0de758e5cd4efc8a7e0739756a98863.stex"
+path="res://.import/Ball Blau.png-d6fd1e1ff4d6b2d575ec38657f0e704d.stex"
 
 [deps]
 
-source_file="res://Bullet/TestBullet.png"
-dest_files=[ "res://.import/TestBullet.png-e0de758e5cd4efc8a7e0739756a98863.stex" ]
+source_file="res://Bullet/Ball Blau.png"
+dest_files=[ "res://.import/Ball Blau.png-d6fd1e1ff4d6b2d575ec38657f0e704d.stex" ]
 
 [params]
 
