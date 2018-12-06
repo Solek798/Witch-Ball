@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/AnimationTreePlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Player/aim.png" type="Texture" id=5]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
@@ -55,7 +56,13 @@ wait_time = 0.15
 one_shot = true
 autostart = false
 
-[node name="Aimer" type="Node2D" parent="." index="5"]
+[node name="Controlls" parent="." index="5" instance=ExtResource( 6 )]
+
+prefere_controller_mode = true
+movement_x_axis = 0
+movement_y_axis = 1
+aim_x_axis = 2
+aim_y_axis = 3
 
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 

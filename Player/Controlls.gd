@@ -4,10 +4,6 @@ enum modes {KEYBOARD, CONTROLLER}
 
 # TODO
 const DEGREE_IN_RADIANT = PI / 180
-const MOVEMENT_X_AXIS = 0
-const MOVEMENT_Y_AXIS = 1
-const AIM_X_AXIS = 2
-const AIM_Y_AXIS = 3
 const FORMAT_STRINGS = [
 	"player%d_up", 
 	"player%d_down", 
@@ -21,17 +17,21 @@ const FORMAT_STRINGS = [
 	"player%d_move"
 ]
 
+export var prefere_controller_mode = true
+export var movement_x_axis = 0
+export var movement_y_axis = 1
+export var aim_x_axis = 2
+export var aim_y_axis = 3
+
 # TODO
+onready var keys = []
+onready var locked_states = []
+onready var active = true
 var mode
-var keys
-var locked_states
 var device
 
 # TODO
-func setup(id, prefere_controller_mode=true):
-	keys = []
-	locked_states = []
-	
+func setup(id):
 	connect(id)
 	
 	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
@@ -46,6 +46,9 @@ func connect(id):
 
 # TODO
 func state(action):
+	if not active:
+		return 0
+	
 	if locked_states.size() == keys.size():
 		return locked_states[action]
 	
@@ -60,12 +63,15 @@ func state(action):
 			return Input.is_action_pressed(keys[action])
 
 func get_movement():
+	if not active:
+		return Vector2(0, 0)
+	
 	var x = 0.0
 	var y = 0.0
 	
 	if mode == CONTROLLER:
-		x = Input.get_joy_axis(device, MOVEMENT_X_AXIS)
-		y = Input.get_joy_axis(device, MOVEMENT_Y_AXIS)
+		x = Input.get_joy_axis(device, movement_x_axis)
+		y = Input.get_joy_axis(device, movement_y_axis)
 	else:
 		if Input.is_action_pressed(keys[Action.UP]):
 			y -= 1.0
@@ -79,11 +85,14 @@ func get_movement():
 	return Vector2(x, y)
 
 func get_aim():
+	if not active:
+		return Vector2(0, 0)
+	
 	var aim = Vector2(0, 0)
 	
 	if mode == CONTROLLER:
-		aim.x = Input.get_joy_axis(device, AIM_X_AXIS)
-		aim.y = Input.get_joy_axis(device, AIM_Y_AXIS)
+		aim.x = Input.get_joy_axis(device, aim_x_axis)
+		aim.y = Input.get_joy_axis(device, aim_y_axis)
 		
 		if aim.x < 0.01 and aim.x > -0.01:
 			aim.x = 0
