@@ -14,11 +14,13 @@ signal player_reseted(player)
 
 var id
 var health
+var won_rounds
 
 
 func _ready():
 	$Controlls.setup(id)
 	health = max_health
+	won_rounds = 0
 	emit_signal("player_created", self)
 
 func _process(delta):
