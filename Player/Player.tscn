@@ -5,7 +5,7 @@
 [ext_resource path="res://Player/Animation/AnimationTreePlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Player/aim.png" type="Texture" id=5]
-[ext_resource path="res://Player/PlayerController.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
 bullet_template = ExtResource( 2 )
 movement_speed = 200
-aim_speed = 150
+aim_speed = 2
 bullet_speed = 8
 max_health = 3
 dodge_multiplier = 6.0
@@ -50,15 +50,15 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 150, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PlayerController" parent="." index="4" instance=ExtResource( 6 )]
-
-[node name="DodgeTimer" type="Timer" parent="." index="5"]
+[node name="DodgeTimer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 0.15
 one_shot = true
 autostart = false
 
-[connection signal="timeout" from="DodgeTimer" to="PlayerController" method="_on_DodgeTimer_timeout"]
+[node name="Controlls" parent="." index="5" instance=ExtResource( 6 )]
+
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 
