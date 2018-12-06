@@ -606,4 +606,16 @@ tracks/49/keys = {
 "update": 0,
 "values": [ -16.2111 ]
 }
+tracks/50/type = "value"
+tracks/50/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f/Ch1_Ha_b:rotation_degrees")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.66804e-008 ]
+}
 
