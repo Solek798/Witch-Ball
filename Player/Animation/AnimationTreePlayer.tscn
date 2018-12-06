@@ -3,8 +3,8 @@
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Bein.tres" type="Animation" id=1]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=2]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation_Player/ChXX_work_Animation/Doge_Down_Arm.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation_Player/ChXX_work_Animation/Doge_Down_Bein.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=5]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Arm.tres" type="Animation" id=6]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=8]
@@ -32,7 +32,7 @@
 
 resource_name = "Doge_Up_arm"
 length = 0.3
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:rotation_degrees")
@@ -135,7 +135,7 @@ tracks/7/keys = {
 
 resource_name = "Doge_Up_Bein"
 length = 0.3
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
@@ -233,6 +233,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [ 23.8153, 0.0 ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Animationen" type="Sprite" index="0"]
 
@@ -249,7 +261,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "oneshot", "out", 0, "blend2", "oneshot", 0, "mix 1", "oneshot", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "Idle_mix", "blend2", 0, "Walk_mix", "blend2", 1, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "Doge_Down-Bein", "Doge_Dow", 0, "Doge_Down_Arm", "Doge_Dow", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1 ],
+"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "oneshot 4", "out", 0, "blend2", "oneshot", 0, "mix 1", "oneshot", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "Idle_mix", "blend2", 0, "Walk_mix", "blend2", 1, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "Doge_Down_Arm", "Doge_Dow", 0, "Doge_Down-Bein", "Doge_Dow", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1, "oneshot 5", "oneshot 4", 0, "Doge_Up", "oneshot 4", 1, "oneshot", "oneshot 2", 0, "mix 0", "oneshot 2", 1, "oneshot 3", "oneshot 5", 0, "mix", "oneshot 5", 1, "oneshot 2", "oneshot 3", 0, "Doge_Dow", "oneshot 3", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "mix",
@@ -275,7 +287,7 @@ data = {
 "filter": [  ],
 "id": "oneshot",
 "mix": false,
-"position": Vector2( 446, 216 ),
+"position": Vector2( 469, 216 ),
 "type": "oneshot"
 }, {
 "animation": ExtResource( 2 ),
@@ -295,7 +307,7 @@ data = {
 "position": Vector2( 251, 452 ),
 "type": "animation"
 }, {
-"blend": 1.0,
+"blend": 0.0,
 "filter": [ NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees") ],
 "id": "blend2",
 "position": Vector2( 307, 216 ),
@@ -309,7 +321,7 @@ data = {
 "animation": ExtResource( 4 ),
 "filter": [  ],
 "id": "Doge_Down_Arm",
-"position": Vector2( 646, 351 ),
+"position": Vector2( 480, 351 ),
 "type": "animation"
 }, {
 "id": "Walk_mix",
@@ -325,7 +337,7 @@ data = {
 "animation": ExtResource( 5 ),
 "filter": [  ],
 "id": "Doge_Down-Bein",
-"position": Vector2( 646, 453 ),
+"position": Vector2( 473, 462 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 6 ),
@@ -366,7 +378,7 @@ data = {
 }, {
 "id": "Doge_Dow",
 "mix": 1.0,
-"position": Vector2( 802, 351 ),
+"position": Vector2( 671, 350 ),
 "type": "mix"
 }, {
 "animation": ExtResource( 10 ),
@@ -397,6 +409,50 @@ data = {
 "id": "Walk_Bein ",
 "position": Vector2( 293, 108 ),
 "type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 4",
+"mix": false,
+"position": Vector2( 1020, 219 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 2",
+"mix": false,
+"position": Vector2( 588, 216 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 5",
+"mix": false,
+"position": Vector2( 902, 218 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 3",
+"mix": false,
+"position": Vector2( 742, 216 ),
+"type": "oneshot"
 } ]
 }
 
@@ -433,9 +489,9 @@ __meta__ = {
 
 [node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
 
-position = Vector2( 0, 34.0967 )
+position = Vector2( -13.7323, 7.68277 )
 texture = ExtResource( 13 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
 "_edit_bone_": true
 }
@@ -450,7 +506,7 @@ __meta__ = {
 [node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
 
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.986102
+rotation = 1.02052
 z_index = -5
 texture = ExtResource( 14 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -462,7 +518,6 @@ __meta__ = {
 [node name="Ch1_A_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = 0.0102935
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( -184.675, 51.2988 )
@@ -474,7 +529,7 @@ __meta__ = {
 [node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
 
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.197619
+rotation = -0.36748
 z_index = 1
 texture = ExtResource( 16 )
 offset = Vector2( 115.846, 3.52861 )
@@ -486,7 +541,6 @@ __meta__ = {
 [node name="Ch1_A_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="0"]
 
 visible = false
-position = Vector2( -51.8834, 93.3846 )
 z_index = 4
 texture = ExtResource( 17 )
 offset = Vector2( 188.628, -95.8364 )
@@ -498,7 +552,7 @@ __meta__ = {
 [node name="Ch1_A_d_rr" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="1"]
 
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.614185
+rotation = -0.514183
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 18 )
 offset = Vector2( 174.778, -24.6302 )
@@ -507,7 +561,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
 
 position = Vector2( -38.0608, -65.9989 )
-rotation = -9.08104e-006
+rotation = 0.0233904
 z_index = 1
 texture = ExtResource( 19 )
 offset = Vector2( 17.0357, 118.566 )
@@ -519,7 +573,7 @@ __meta__ = {
 [node name="Ch1_Ha_f" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="0"]
 
 position = Vector2( -128.539, -238.508 )
-rotation = 0.000296896
+rotation = -0.00782185
 z_index = 1
 texture = ExtResource( 20 )
 offset = Vector2( 145.576, 357.073 )
@@ -530,7 +584,8 @@ __meta__ = {
 
 [node name="Ch1_Ha_b" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f" index="0"]
 
-position = Vector2( 145.136, 356.02 )
+position = Vector2( 147.004, 356.487 )
+rotation = 4.65661e-010
 scale = Vector2( 1e-005, 1e-005 )
 z_index = -5
 texture = ExtResource( 21 )
@@ -538,7 +593,6 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ch1_H_m" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="1"]
 
-visible = false
 position = Vector2( 19.2195, 193.701 )
 texture = ExtResource( 22 )
 
@@ -553,7 +607,7 @@ __meta__ = {
 [node name="Ch1_L_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="0"]
 
 position = Vector2( -39.0679, 290.996 )
-rotation = 0.552768
+rotation = -0.122998
 z_index = -1
 texture = ExtResource( 23 )
 offset = Vector2( 39.0679, -290.996 )
@@ -565,7 +619,7 @@ __meta__ = {
 [node name="Ch1_L_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = -0.0023785
+rotation = 0.12382
 z_index = -1
 texture = ExtResource( 24 )
 offset = Vector2( 9.48901, -415.964 )
@@ -577,7 +631,7 @@ __meta__ = {
 [node name="Ch1_L_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="1"]
 
 position = Vector2( 49.202, 250.398 )
-rotation = -0.253545
+rotation = -0.104173
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 25 )
@@ -589,9 +643,8 @@ __meta__ = {
 
 [node name="Ch1_L_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="0"]
 
-visible = false
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.0967183
+rotation = 0.0635127
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 26 )
@@ -603,8 +656,8 @@ __meta__ = {
 
 [node name="Ch_L_d_lw" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="1"]
 
+visible = false
 position = Vector2( 63.0907, 79.5739 )
-rotation = -0.203216
 scale = Vector2( 1, 0.833333 )
 z_index = -1
 texture = ExtResource( 27 )
