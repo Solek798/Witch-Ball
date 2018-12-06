@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Menu/Titel_kleiner.png" type="Texture" id=1]
-[ext_resource path="res://Menu/start.png" type="Texture" id=2]
-[ext_resource path="res://Menu/opptions.png" type="Texture" id=3]
+[ext_resource path="res://Menu/Title_Witchball_lightning_fire_500.png" type="Texture" id=1]
+[ext_resource path="res://Menu/button_start_menu_normal_200.png" type="Texture" id=2]
+[ext_resource path="res://Menu/button_start_menu_pressed_200.png" type="Texture" id=3]
+[ext_resource path="res://Menu/button_start_menu_hovering_200.png" type="Texture" id=4]
+[ext_resource path="res://Menu/button_quit_menu_normal_200.png" type="Texture" id=5]
+[ext_resource path="res://Menu/button_quit_menu_pressed_200.png" type="Texture" id=6]
+[ext_resource path="res://Menu/button_quit_menu_hovering_200.png" type="Texture" id=7]
 
-[node name="MenuUI" type="CanvasLayer" index="0"]
+[node name="MenuUI" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -31,6 +35,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -2.0
+margin_right = -2.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -45,10 +51,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 810.0
-margin_top = 334.0
-margin_right = 1110.0
-margin_bottom = 745.0
+margin_left = 717.0
+margin_top = 269.0
+margin_right = 1203.0
+margin_bottom = 810.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -57,14 +63,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="TextureRect" type="TextureRect" parent="Control/CenterContainer/VBoxContainer" index="0"]
+[node name="title" type="TextureRect" parent="Control/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 300.0
-margin_bottom = 234.0
+margin_right = 486.0
+margin_bottom = 391.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -80,9 +86,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 238.0
-margin_right = 300.0
-margin_bottom = 411.0
+margin_top = 395.0
+margin_right = 486.0
+margin_bottom = 541.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -97,9 +103,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 50.0
-margin_right = 250.0
-margin_bottom = 173.0
+margin_left = 143.0
+margin_right = 343.0
+margin_bottom = 146.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -108,14 +114,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
+[node name="start" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 200.0
-margin_bottom = 55.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -128,17 +134,19 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="TextureButton2" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
+[node name="quit" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 59.0
+margin_top = 75.0
 margin_right = 200.0
-margin_bottom = 114.0
+margin_bottom = 146.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -150,30 +158,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-_sections_unfolded = [ "Textures" ]
-
-[node name="TextureButton3" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 118.0
-margin_right = 200.0
-margin_bottom = 173.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
 _sections_unfolded = [ "Textures" ]
 
 

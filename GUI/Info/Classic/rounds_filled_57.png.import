@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex"
+path="res://.import/rounds_filled_57.png-df7f0cd34adba1eade9e8f5d9ed67951.stex"
 
 [deps]
 
-source_file="res://GUI/Healthbar/Classic/heart.png"
-dest_files=[ "res://.import/heart.png-6de8389264ab9cb548d04ce83def5b38.stex" ]
+source_file="res://GUI/Info/Classic/rounds_filled_57.png"
+dest_files=[ "res://.import/rounds_filled_57.png-df7f0cd34adba1eade9e8f5d9ed67951.stex" ]
 
 [params]
 

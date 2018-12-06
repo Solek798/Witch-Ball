@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ziel.png-b503b13146c245b558bb62b5c27884a4.stex"
+path="res://.import/Title_Witchball_lightning_fire_400.png-32e1e27a65b150af7081f112ec0d04ec.stex"
 
 [deps]
 
-source_file="res://GUI/Info/Classic/ziel.png"
-dest_files=[ "res://.import/ziel.png-b503b13146c245b558bb62b5c27884a4.stex" ]
+source_file="res://Menu/Title_Witchball_lightning_fire_400.png"
+dest_files=[ "res://.import/Title_Witchball_lightning_fire_400.png-32e1e27a65b150af7081f112ec0d04ec.stex" ]
 
 [params]
 
