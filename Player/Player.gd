@@ -28,12 +28,12 @@ func _process(delta):
 	var mult = 1
 	if $DodgeTimer.time_left > 0:
 		mult = dodge_multiplier
+	
 	# moves player and scans for collisions
 	move_and_slide(movement * movement_speed * mult)
 	
-	# rotates aim pointer
+	# calculates the rotation in this frame and rotates the aim pointer
 	var direction = $Controlls.get_aim()
-	#print(direction)
 	var aim = -(direction.angle_to(Vector2(1, 0).rotated($Aim.rotation)))
 	$Aim.rotate(aim * delta * aim_speed)
 	
@@ -43,6 +43,7 @@ func _process(delta):
 		dodge(movement)
 
 func throw():
+	# calculates throm impuls
 	var player_position = self.global_position
 	var throw_point_position = $Aim/throw_point.global_position
 	var impulse = (throw_point_position - player_position) * bullet_speed
@@ -80,6 +81,3 @@ func reset():
 
 func _on_round_finished():
 	reset()
-
-func _on_DodgeTimer_timeout():
-	$Controlls.unlock()

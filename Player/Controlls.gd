@@ -2,7 +2,6 @@ extends Object
 
 enum modes {KEYBOARD, CONTROLLER}
 
-# TODO
 const DEGREE_IN_RADIANT = PI / 180
 const FORMAT_STRINGS = [
 	"player%d_up", 
@@ -23,14 +22,14 @@ export var movement_y_axis = 1
 export var aim_x_axis = 2
 export var aim_y_axis = 3
 
-# TODO
 onready var keys = []
 onready var locked_states = []
 onready var active = true
 var mode
 var device
 
-# TODO
+
+# sets up action Strings and decides by which Controll-Mode the Player is controlled
 func setup(id):
 	connect(id)
 	
@@ -44,7 +43,7 @@ func connect(id):
 	for string in FORMAT_STRINGS:
 		keys.append(string % id)
 
-# TODO
+# gets the state or vales of the given action
 func state(action):
 	if not active:
 		return 0
@@ -93,7 +92,7 @@ func get_aim():
 	if mode == CONTROLLER:
 		aim.x = Input.get_joy_axis(device, aim_x_axis)
 		aim.y = Input.get_joy_axis(device, aim_y_axis)
-		
+		# Workaround for inaccurate Controller Input
 		if aim.x < 0.01 and aim.x > -0.01:
 			aim.x = 0
 		if aim.y < 0.01 and aim.y > -0.01:
@@ -115,7 +114,6 @@ func lock():
 func unlock():
 	locked_states.clear()
 
-# TODO
 func _on_DodgeTimer_timeout():
 	unlock()
 

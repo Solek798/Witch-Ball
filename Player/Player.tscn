@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 4
@@ -58,12 +58,6 @@ autostart = false
 
 [node name="Controlls" parent="." index="5" instance=ExtResource( 6 )]
 
-prefere_controller_mode = true
-movement_x_axis = 0
-movement_y_axis = 1
-aim_x_axis = 2
-aim_y_axis = 3
-
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 
