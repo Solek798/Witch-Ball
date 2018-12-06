@@ -1,42 +1,28 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Menu/Title_Witchball_lightning_fire_500.png" type="Texture" id=1]
-[ext_resource path="res://Menu/button_start_menu_normal_200.png" type="Texture" id=2]
-[ext_resource path="res://Menu/button_start_menu_pressed_200.png" type="Texture" id=3]
-[ext_resource path="res://Menu/button_start_menu_hovering_200.png" type="Texture" id=4]
-[ext_resource path="res://Menu/button_quit_menu_normal_200.png" type="Texture" id=5]
-[ext_resource path="res://Menu/button_quit_menu_pressed_200.png" type="Texture" id=6]
-[ext_resource path="res://Menu/button_quit_menu_hovering_200.png" type="Texture" id=7]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Title_Witchball_lightning_fire_500.png" type="Texture" id=2]
+[ext_resource path="res://Menu/button_start_menu_normal_200.png" type="Texture" id=3]
+[ext_resource path="res://Menu/button_start_menu_pressed_200.png" type="Texture" id=4]
+[ext_resource path="res://Menu/button_start_menu_hovering_200.png" type="Texture" id=5]
+[ext_resource path="res://Menu/button_quit_menu_normal_200.png" type="Texture" id=6]
+[ext_resource path="res://Menu/button_quit_menu_pressed_200.png" type="Texture" id=7]
+[ext_resource path="res://Menu/button_quit_menu_hovering_200.png" type="Texture" id=8]
 
-[node name="MenuUI" type="CanvasLayer"]
+[node name="Menu" type="Node2D"]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin" ]
+match_template = null
 
-[node name="Control" type="Control" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="Control" index="0"]
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -2.0
-margin_right = -2.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -44,8 +30,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
+_sections_unfolded = [ "Margin" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -63,7 +50,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="title" type="TextureRect" parent="Control/CenterContainer/VBoxContainer" index="0"]
+[node name="title" type="TextureRect" parent="CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,10 +64,10 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="Control/CenterContainer/VBoxContainer" index="1"]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -97,7 +84,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/VBoxContainer/CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -114,7 +101,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
 
-[node name="start" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
+[node name="start" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -133,12 +120,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="quit" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
+[node name="quit" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -158,9 +145,13 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
 _sections_unfolded = [ "Textures" ]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 
 

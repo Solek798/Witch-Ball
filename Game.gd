@@ -1,9 +1,9 @@
 extends Node
 
-# TEMP
-export(PackedScene) var match_template
-
 
 func _ready():
-	var new_match = match_template.instance()
+	$Menu.connect("match_instantiated", self, "_on_match_instantiated")
+
+func _on_match_instantiated(new_match):
 	add_child(new_match)
+	$Menu.visible = false
