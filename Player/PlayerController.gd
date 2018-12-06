@@ -27,7 +27,6 @@ var keys
 var locked_states
 var device
 
-
 # TODO
 func setup(id, prefere_controller_mode=true):
 	keys = []
@@ -35,7 +34,7 @@ func setup(id, prefere_controller_mode=true):
 	
 	connect(id)
 	
-	if prefere_controller_mode:
+	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
 		mode = CONTROLLER
 		device = id - 1
 	else:
@@ -47,7 +46,7 @@ func connect(id):
 
 # TODO
 func state(action):
-	if locked_states.size() > 0:
+	if locked_states.size() == keys.size():
 		return locked_states[action]
 	
 	match action:
@@ -76,16 +75,13 @@ func get_movement():
 			x -= 1.0
 		if Input.is_action_pressed(keys[Action.RIGHT]):
 			x += 1.0
-	#print(x, ", ", y)
+	
 	return Vector2(x, y)
 
 func get_aim():
 	var aim = Vector2(0, 0)
 	
 	if mode == CONTROLLER:
-		#if not Input.is_action_pressed(keys[Action.AIM]):
-		#	return Vector2(0, 0)
-		
 		aim.x = Input.get_joy_axis(device, AIM_X_AXIS)
 		aim.y = Input.get_joy_axis(device, AIM_Y_AXIS)
 		
@@ -93,13 +89,6 @@ func get_aim():
 			aim.x = 0
 		if aim.y < 0.01 and aim.y > -0.01:
 			aim.y = 0
-		
-		#aim = direction.angle()
-		#if angle >= DEGREE_IN_RADIANT:
-		#	aim = DEGREE_IN_RADIANT
-		#else:
-		#	aim = DEGREE_IN_RADIANT - angle
-		#print(aim)
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):
 			aim.y -= DEGREE_IN_RADIANT
@@ -110,8 +99,8 @@ func get_aim():
 
 # locks the player Input to current state
 func lock():
-	for key in keys:
-		locked_states.append(Input.is_action_pressed(key))
+	for a in Action.action.values():
+		locked_states.append(state(a))
 
 # unlocks the Player Input
 func unlock():

@@ -37,7 +37,7 @@ func _process(delta):
 	
 	# rotates aim pointer
 	var direction = controlls.get_aim()
-	print(direction)
+	#print(direction)
 	var aim = -(direction.angle_to(Vector2(1, 0).rotated($Aim.rotation)))
 	$Aim.rotate(aim * delta * aim_speed)
 	
@@ -86,4 +86,4 @@ func _on_round_finished():
 	reset()
 
 func _on_DodgeTimer_timeout():
-	pass # replace with function body
+	controlls.unlock()
