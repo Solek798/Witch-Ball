@@ -12,9 +12,9 @@ signal player_damaged(player, ammount)
 signal player_died(player)
 signal player_reseted(player)
 
-
 var id
 var health
+
 
 func _ready():
 	$Controlls.setup(id)
@@ -43,6 +43,10 @@ func _process(delta):
 		dodge(movement)
 
 func throw():
+	# Don't throw while ThrowTimer is running
+	if $ThrowTimer.time_left > 0:
+		return
+	
 	# calculates throm impuls
 	var player_position = self.global_position
 	var throw_point_position = $Aim/throw_point.global_position
@@ -52,7 +56,10 @@ func throw():
 	var bullet = bullet_template.instance()
 	bullet.position = throw_point_position
 	
+	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
+	# start Timer for throw delay
+	$ThrowTimer.start()
 	emit_signal("bullet_thrown", bullet)
 
 func dodge(movement):

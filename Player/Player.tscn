@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 31.7823 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
@@ -57,6 +57,13 @@ one_shot = true
 autostart = false
 
 [node name="Controlls" parent="." index="5" instance=ExtResource( 6 )]
+
+[node name="ThrowTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
