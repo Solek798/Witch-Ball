@@ -222,4 +222,16 @@ tracks/17/keys = {
 "update": 0,
 "values": [ 2.66804e-008, 2.66804e-008 ]
 }
+tracks/18/type = "value"
+tracks/18/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.0898438, 0.0898438, 1 ) ]
+}
 

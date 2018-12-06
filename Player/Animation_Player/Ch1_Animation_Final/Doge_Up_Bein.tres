@@ -4,7 +4,7 @@
 
 resource_name = "Doge_Up_Bein"
 length = 0.3
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
