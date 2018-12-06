@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rounds_empty_72.png-53503377ce0736f6d9406830df24c7b2.stex"
+path="res://.import/rounds_filled_72.png-71fee8724ba54c523bb1bec5de3b2bfb.stex"
 
 [deps]
 
-source_file="res://GUI/Info/Classic/rounds_empty_72.png"
-dest_files=[ "res://.import/rounds_empty_72.png-53503377ce0736f6d9406830df24c7b2.stex" ]
+source_file="res://GUI/Info/Classic/Round/rounds_filled_72.png"
+dest_files=[ "res://.import/rounds_filled_72.png-71fee8724ba54c523bb1bec5de3b2bfb.stex" ]
 
 [params]
 

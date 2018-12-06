@@ -4,12 +4,13 @@ export(PackedScene) var arena_template
 export(PackedScene) var gui_template
 export(PackedScene) var backstage_template
 export(int) var player_count
+export(int) var round_count
 # TEMP
 export(PackedScene) var player_template
 
 signal player_created(player)
-
-onready var players = []
+signal match_started(round_count)
+signal match_finished(finished_match)
 
 var arena
 var gui
@@ -27,10 +28,15 @@ func _ready():
 	
 	self.connect("player_created", arena, "_on_player_created")
 	self.connect("player_created", gui, "_on_player_created")
+	self.connect("player_created", backstage, "_on_player_created")
+	self.connect("match_started", gui, "_on_match_started")
+	backstage.connect("player_won_round", gui, "_on_player_won_round")
+	gui.connect("player_won_match", self, "_on_player_won_match")
 	
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		players.append(create_player(players.size() + 1))
+		create_player(i + 1)
+	emit_signal("match_started", round_count)
 
 func create_player(id):
 	#instanciates and sets th player to the specified position
@@ -42,7 +48,11 @@ func create_player(id):
 	player.connect("player_died", backstage, "_on_player_died")
 	player.connect("player_reseted", gui, "_on_player_reseted")
 	player.connect("player_reseted", arena, "_on_player_reseted")
+	player.connect("player_reseted", backstage, "_on_player_reseted")
 	backstage.connect("round_finished", player, "_on_round_finished")
 	
 	emit_signal("player_created", player)
-	return player
+
+func _on_player_won_match(player):
+	print("Spieler ", player.id, " kriegt einen Keks")
+	emit_signal("match_finished", self)
