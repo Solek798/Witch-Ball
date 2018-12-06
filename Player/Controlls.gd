@@ -64,6 +64,9 @@ func state(action):
 func get_movement():
 	if not active:
 		return Vector2(0, 0)
+	# TODO
+	if locked_states.size() == keys.size():
+		return locked_states[action]
 	
 	var x = 0.0
 	var y = 0.0
@@ -86,6 +89,9 @@ func get_movement():
 func get_aim():
 	if not active:
 		return Vector2(0, 0)
+	# TODO
+	if locked_states.size() == keys.size():
+		return locked_states[action]
 	
 	var aim = Vector2(0, 0)
 	
