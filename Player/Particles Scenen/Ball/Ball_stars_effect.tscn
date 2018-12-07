@@ -1,0 +1,156 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Arena/Classic/Environment_Blockout_temp.png" type="Texture" id=1]
+[ext_resource path="res://Player/Particles Scenen/Ball/little_Star.png" type="Texture" id=2]
+[ext_resource path="res://Player/Particles Scenen/Ball/cirle.png" type="Texture" id=3]
+[ext_resource path="res://Player/Particles Scenen/Ball/Ball_stars_effect.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Particles Scenen/Ball/Ball_drawing_5.png" type="Texture" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+render_priority = 1
+blend_mode = 0
+light_mode = 1
+
+[sub_resource type="Curve" id=2]
+
+min_value = 0.0
+max_value = 200.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.996511, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+
+flags = 4
+width = 2048
+curve = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+
+min_value = -1.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+
+flags = 4
+width = 2048
+curve = SubResource( 4 )
+
+[sub_resource type="Curve" id=6]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.00348929, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.513124, 0.102539 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0166016 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+
+flags = 4
+width = 2048
+curve = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 5, 5, 0 )
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 0.5
+angular_velocity = 40.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 100.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.35
+scale_random = 0.0
+scale_curve = SubResource( 7 )
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+hue_variation_curve = SubResource( 5 )
+anim_speed = 5.0
+anim_speed_random = 0.0
+anim_speed_curve = SubResource( 3 )
+anim_offset = 0.5
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Environment_Blockout_latest_2_Lines" type="Sprite" parent="." index="0"]
+
+position = Vector2( 510, 590 )
+scale = Vector2( 0.231771, 0.361111 )
+texture = ExtResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="." index="1"]
+
+modulate = Color( 0.949219, 0.942498, 0.84169, 1 )
+self_modulate = Color( 0.962282, 0.964844, 0.636948, 1 )
+material = SubResource( 1 )
+position = Vector2( 480.878, 289.906 )
+scale = Vector2( 0.285056, 0.309556 )
+emitting = true
+amount = 15
+lifetime = 2.28
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.5
+explosiveness = 0.5
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 8 )
+texture = ExtResource( 2 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="cirle" type="Sprite" parent="." index="2"]
+
+position = Vector2( 480, 290 )
+scale = Vector2( 0.0571756, 0.0589257 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "Ball stars effect"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+"anims/Ball stars effect" = ExtResource( 4 )
+blend_times = [  ]
+
+[node name="Ball drawing 5" type="Sprite" parent="." index="4"]
+
+position = Vector2( 480, 289.606 )
+scale = Vector2( 0.0657801, 0.0657801 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+
