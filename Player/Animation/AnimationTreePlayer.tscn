@@ -436,7 +436,7 @@ __meta__ = {
 
 [node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
 
-position = Vector2( -29.3848, 17.7923 )
+position = Vector2( -2.37108, 1.75568 )
 texture = ExtResource( 14 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -454,7 +454,7 @@ __meta__ = {
 [node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
 
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.932308
+rotation = 1.0862
 z_index = -5
 texture = ExtResource( 15 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -477,7 +477,7 @@ __meta__ = {
 [node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
 
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.222334
+rotation = -0.472831
 z_index = 1
 texture = ExtResource( 17 )
 offset = Vector2( 115.846, 3.52861 )
@@ -500,7 +500,7 @@ __meta__ = {
 [node name="Ch1_A_d_rr" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="1"]
 
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.683444
+rotation = -0.391327
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 19 )
 offset = Vector2( 174.778, -24.6302 )
@@ -509,7 +509,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
 
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.0687889
+rotation = 0.012116
 z_index = 1
 texture = ExtResource( 20 )
 offset = Vector2( 17.0357, 118.566 )
@@ -521,7 +521,7 @@ __meta__ = {
 [node name="Ch1_Ha_f" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="0"]
 
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0375054
+rotation = -0.0130897
 z_index = 1
 texture = ExtResource( 21 )
 offset = Vector2( 145.576, 357.073 )
@@ -541,6 +541,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ch1_H_m" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="1"]
 
+visible = false
 position = Vector2( 19.2195, 193.701 )
 texture = ExtResource( 23 )
 
@@ -554,7 +555,7 @@ __meta__ = {
 [node name="Ch1_L_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="0"]
 
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.263196
+rotation = -0.0212374
 z_index = -1
 texture = ExtResource( 24 )
 offset = Vector2( 39.0679, -290.996 )
@@ -566,7 +567,7 @@ __meta__ = {
 [node name="Ch1_L_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.264954
+rotation = 0.0213793
 z_index = -1
 texture = ExtResource( 25 )
 offset = Vector2( 9.48901, -415.964 )
@@ -578,7 +579,7 @@ __meta__ = {
 [node name="Ch1_L_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="1"]
 
 position = Vector2( 49.202, 250.398 )
-rotation = -0.222912
+rotation = -0.0179869
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 26 )
@@ -591,7 +592,7 @@ __meta__ = {
 [node name="Ch1_L_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.135907
+rotation = 0.0109664
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 27 )

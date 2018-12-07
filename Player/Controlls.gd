@@ -36,6 +36,8 @@ func setup(id):
 	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
 		mode = CONTROLLER
 		device = id - 1
+		
+		
 	else:
 		mode = KEYBOARD
 
@@ -74,6 +76,11 @@ func get_movement():
 	if mode == CONTROLLER:
 		x = Input.get_joy_axis(device, movement_x_axis)
 		y = Input.get_joy_axis(device, movement_y_axis)
+		
+		if x < 0.01 and x > -0.01:
+			x = 0
+		if y < 0.01 and y > -0.01:
+			y = 0
 	else:
 		if Input.is_action_pressed(keys[Action.UP]):
 			y -= 1.0
@@ -97,6 +104,9 @@ func get_aim():
 	
 	if mode == CONTROLLER:
 		aim.x = Input.get_joy_axis(device, aim_x_axis)
+		# TEMP
+		if device == 1:
+			aim.x *= -1
 		aim.y = Input.get_joy_axis(device, aim_y_axis)
 		# Workaround for inaccurate Controller Input
 		if aim.x < 0.01 and aim.x > -0.01:

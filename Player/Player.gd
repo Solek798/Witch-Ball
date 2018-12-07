@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export(PackedScene) var bullet_template
 export(int) var movement_speed 
-export(int) var aim_speed
+export(float) var aim_speed
 export(int) var bullet_speed
 export(int) var max_health
 export(float) var dodge_multiplier
@@ -62,6 +62,7 @@ func throw(movement):
 	# instanciates and sets a new bullet to thropoint position
 	var bullet = bullet_template.instance()
 	bullet.position = throw_point_position
+	bullet.own_player = self
 	
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
