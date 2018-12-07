@@ -6,6 +6,8 @@ export(int) var aim_speed
 export(int) var bullet_speed
 export(int) var max_health
 export(float) var dodge_multiplier
+# TEMP
+export(float) var dodge_up_time
 
 signal bullet_thrown(bullet)
 signal player_damaged(player, ammount)
@@ -25,7 +27,10 @@ func _ready():
 
 func _process(delta):
 	var movement = $Controlls.get_movement()
-	
+	if movement:
+		$Animationen.play_walk()
+	else:
+		$Animationen.stop_walk()
 	# sets dodge-multiplier if player is dodging
 	var mult = 1
 	if $DodgeTimer.time_left > 0:
@@ -40,11 +45,11 @@ func _process(delta):
 	$Aim.rotate(aim * delta * aim_speed)
 	
 	if $Controlls.state(Action.THROW):
-		throw()
+		throw(movement)
 	if $Controlls.state(Action.DODGE):
 		dodge(movement)
 
-func throw():
+func throw(movement):
 	# Don't throw while ThrowTimer is running
 	if $ThrowTimer.time_left > 0:
 		return
@@ -62,18 +67,26 @@ func throw():
 	bullet.apply_impulse(throw_point_position, impulse)
 	# start Timer for throw delay
 	$ThrowTimer.start()
+	$Animationen.play_throw(movement)
 	emit_signal("bullet_thrown", bullet)
 
 func dodge(movement):
 	if movement == Vector2(0, 0):
 		return
 	
+	$Animationen.play_dodge_down()
+	
 	# if player is not allready dodging, he starts to dodge
 	if $DodgeTimer.is_stopped():
 		$Controlls.lock()
 		$DodgeTimer.start()
+		$Animationen.play_dodge_down()
+		$AinimationTween.interpolate_callback($Animationen, dodge_up_time, "play_dodge_up")
+
+
 
 func take_damage(ammount):
+	$Animationen.play_hit()
 	health -= ammount
 	emit_signal("player_damaged", self, ammount)
 	
@@ -90,3 +103,6 @@ func reset():
 
 func _on_round_finished():
 	reset()
+
+func _on_DodgeTimer_timeout():
+	$Animationen.play_dodge_up()

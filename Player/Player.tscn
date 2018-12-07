@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.139, 31.7823 )
+extents = Vector2( 32.139, 57.1739 )
 
 [node name="Player" type="KinematicBody2D" index="0"]
 
@@ -26,11 +26,13 @@ aim_speed = 2
 bullet_speed = 8
 max_health = 3
 dodge_multiplier = 6.0
+dodge_up_time = 0.25
 
 [node name="Animationen" parent="." index="0" instance=ExtResource( 3 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( 0, -46.7705 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -53,7 +55,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="DodgeTimer" type="Timer" parent="." index="4"]
 
 process_mode = 1
-wait_time = 0.15
+wait_time = 0.3
 one_shot = true
 autostart = false
 
@@ -65,6 +67,17 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[node name="AinimationTween" type="Tween" parent="." index="7"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
