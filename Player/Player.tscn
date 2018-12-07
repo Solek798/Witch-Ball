@@ -78,8 +78,8 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 

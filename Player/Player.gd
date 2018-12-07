@@ -16,6 +16,7 @@ signal player_reseted(player)
 
 var id
 var health
+var is_dead
 var won_rounds
 
 
@@ -23,6 +24,7 @@ func _ready():
 	$Controlls.setup(id)
 	health = max_health
 	won_rounds = 0
+	is_dead = false
 	emit_signal("player_created", self)
 
 func _process(delta):
@@ -75,8 +77,6 @@ func dodge(movement):
 	if movement == Vector2(0, 0):
 		return
 	
-	$Animationen.play_dodge_down()
-	
 	# if player is not allready dodging, he starts to dodge
 	if $DodgeTimer.is_stopped():
 		$Controlls.lock()
@@ -87,12 +87,15 @@ func dodge(movement):
 
 
 func take_damage(ammount):
+	if is_dead:
+		return
 	$Animationen.play_hit()
 	health -= ammount
 	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
 		$Controlls.active = false
+		is_dead = true
 		emit_signal("player_died", self)
 
 func reset():
@@ -100,6 +103,7 @@ func reset():
 	health = max_health
 	$Aim.rotation = 0
 	$Controlls.active = true
+	is_dead = false
 	emit_signal("player_reseted", self)
 
 func _on_round_finished():
