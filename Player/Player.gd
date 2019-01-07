@@ -37,8 +37,10 @@ func _process(delta):
 	var movement = $Controlls.get_movement()
 	if movement:
 		$Animationen.play_walk()
+		$Smoke.emitting = true
 	else:
 		$Animationen.stop_walk()
+		$Smoke.emitting = false
 	# sets dodge-multiplier if player is dodging
 	var mult = 1
 	if $DodgeTimer.time_left > 0:
