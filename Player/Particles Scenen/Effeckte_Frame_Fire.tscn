@@ -57,9 +57,9 @@
 
 [node name="Flamme" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 scale = Vector2( 0.1, 0.1 )
-_sections_unfolded = [ "Transform" ]
+z_index = 4
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="1-10" type="Node2D" parent="Flamme" index="0"]
 
@@ -180,6 +180,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite19" type="Sprite" parent="Flamme/11-20" index="8"]
 
+visible = false
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -213,7 +214,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite24" type="Sprite" parent="Flamme/21-30" index="3"]
 
-visible = false
 texture = ExtResource( 24 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -319,6 +319,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="41-51" type="Node2D" parent="Flamme" index="4"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite41" type="Sprite" parent="Flamme/41-51" index="0"]
