@@ -6,6 +6,9 @@ signal bullet_destroyed()
 
 var own_player
 
+func _ready():
+	add_collision_exception_with(own_player)
+
 func _process(delta):
 	# scans for collisions
 	var collision = get_colliding_bodies()

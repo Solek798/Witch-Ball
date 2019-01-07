@@ -18,13 +18,19 @@ var id
 var health
 var is_dead
 var won_rounds
-
+# TEMP
+var throw_vector
 
 func _ready():
 	$Controlls.setup(id)
 	health = max_health
 	won_rounds = 0
 	is_dead = false
+	if id % 2 == 0:
+		throw_vector = Vector2(-1, 0)
+	else:
+		throw_vector = Vector2(1, 0)
+	
 	emit_signal("player_created", self)
 
 func _process(delta):
@@ -58,8 +64,9 @@ func throw(movement):
 	
 	# calculates throm impuls
 	var player_position = self.global_position
-	var throw_point_position = $Aim/throw_point.global_position
-	var impulse = (throw_point_position - player_position) * bullet_speed
+	var throw_point_position = $Animationen.get_throw_point()
+	#var impulse = (throw_point_position - player_position) * bullet_speed
+	var impulse = throw_vector.rotated($Aim.rotation) * bullet_speed
 	
 	# instanciates and sets a new bullet to thropoint position
 	var bullet = bullet_template.instance()

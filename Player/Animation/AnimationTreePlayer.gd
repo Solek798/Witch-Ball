@@ -7,6 +7,9 @@ func _ready():
 	#$AnimationTreePlayer/AnimationPlayer.play("Idle_Arm")
 	pass
 
+func get_throw_point():
+	return get_node("Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr/throw_point").global_position
+
 func play_walk():
 	$AnimationTreePlayer.blend2_node_set_amount("blend_walk", 1.0)
 
