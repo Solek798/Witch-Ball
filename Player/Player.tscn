@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 57.1739 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
