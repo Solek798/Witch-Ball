@@ -38,8 +38,9 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
+z_index = -10
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
 
