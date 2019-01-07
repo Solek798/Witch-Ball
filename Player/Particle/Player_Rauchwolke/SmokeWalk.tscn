@@ -83,6 +83,8 @@ _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Emiss
 
 [node name="Particles2D" type="Particles2D"]
 
+position = Vector2( 0.206436, 0.71543 )
+scale = Vector2( 0.1, 0.1 )
 emitting = true
 amount = 5
 lifetime = 0.25
@@ -101,6 +103,6 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
 
