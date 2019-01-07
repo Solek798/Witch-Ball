@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 57.1739 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -45,6 +45,7 @@ texture = ExtResource( 4 )
 [node name="Aim" type="Sprite" parent="." index="3"]
 
 editor/display_folded = true
+visible = false
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
