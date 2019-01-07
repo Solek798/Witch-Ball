@@ -1,0 +1,1249 @@
+[gd_scene load_steps=32 format=2]
+
+<<<<<<< working copy
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Bein.tres" type="Animation" id=1]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=2]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Winning_1.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Arm.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Arm.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Destroy_Hut.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Create_Hut.tres" type="Animation" id=13]
+[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=14]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_l.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_r.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_r.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_rr.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H_m.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_f.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_b.png" type="Texture" id=24]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_r.png" type="Texture" id=25]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_r.png" type="Texture" id=26]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_l.png" type="Texture" id=27]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_l.png" type="Texture" id=28]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_lw.png" type="Texture" id=29]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Doge_Up_arm"
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -11.6562, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 53.9859, -28.351 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -79.6759, -20.9523 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 37.5464, 62.9178 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -16.1632, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.2499, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -128.539, -238.508 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -121.355, -14.2008 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 19.2195, 193.701 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 21.0251, -52.5668 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 160.468, 4.0683 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -51.8834, 93.3846 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f/Ch1_Ha_b:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 147.004, 356.487 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f/Ch1_Ha_b:rotation_degrees")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.66804e-008 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -38.0608, -65.9989 ) ]
+}
+=======
+[ext_resource path="res://Player/Animation/AnimationTreePlayer.gd" type="Script" id=1]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Bein.tres" type="Animation" id=2]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Arm.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Bein.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Arm.tres" type="Animation" id=13]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_l.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_r.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_r.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_rr.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_f.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_Ha_b.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_H_m.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_r.png" type="Texture" id=24]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_r.png" type="Texture" id=25]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_l.png" type="Texture" id=26]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_l.png" type="Texture" id=27]
+[ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_lw.png" type="Texture" id=28]
+>>>>>>> merge rev
+
+[sub_resource type="Animation" id=2]
+
+<<<<<<< working copy
+length = 0.3
+=======
+resource_name = "Doge_Up_Bein"
+length = 0.05
+>>>>>>> merge rev
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 54.9308, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 36.3911, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -35.1978, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -41.8976, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch_L_d_lw:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Charakter_Sprites/Ch1_T:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 158.446, 97.1758 ), Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Charakter_Sprites/Ch1_T:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 23.8153, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r/Ch1_L_d_r:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 29.5789, 124.968 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 49.202, 250.398 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_l/Ch1_L_d_l:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 63.0907, 79.5739 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Charakter_Sprites/Ch1_T/Legs/Ch1_L_r:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -39.0679, 290.996 ) ]
+}
+
+[node name="Animationen" type="Sprite"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 50.4075, 59.9567, 41.7738, 35.1858 ],
+"_edit_vertical_guides_": [ -13.7186, 1.75687 ]
+}
+
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
+
+playback_process_mode = 1
+master_player = NodePath("")
+base_path = NodePath("")
+active = true
+data = {
+<<<<<<< working copy
+"active": false,
+"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "Hit", "out", 0, "Destroy_Hut", "Create_Hut", 0, "CreateHut", "Create_Hut", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "Destroy_Hu", "Destroy_Hut", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "Doge_Down_Arm", "Doge_Dow", 0, "Doge_Down-Bein", "Doge_Dow", 1, "Doge_Down", "Doge_U", 0, "Doge_Up", "Doge_U", 1, "Idle-or-Walk", "Throw_Stand", 0, "mix 1", "Throw_Stand", 1, "Throw_Stand", "Throw_Walk", 0, "mix 0", "Throw_Walk", 1, "Throw_Walk", "Doge_Down", 0, "Doge_Dow", "Doge_Down", 1, "Doge_U", "Hit", 0, "mix", "Hit", 1, "Winning", "oneshot", 1, "Idle_mix", "Idle-or-Walk", 0, "Walk_mix", "Idle-or-Walk", 1 ],
+=======
+"active": true,
+"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "oneshot_dodge_up", "out", 0, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "oneshot_hit", "oneshot_dodge_up", 0, "Doge_Up", "oneshot_dodge_up", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "mix 0", "oneshot_walk_throw", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "Doge_Down_Arm", "Doge_Dow", 0, "Doge_Down-Bein", "Doge_Dow", 1, "Idle_mix", "blend_walk", 0, "Walk_mix", "blend_walk", 1, "blend_walk", "oneshot_idle_throw", 0, "mix 1", "oneshot_idle_throw", 1, "oneshot_walk_throw", "oneshot_dodge_down", 0, "Doge_Dow", "oneshot_dodge_down", 1, "oneshot_dodge_down", "oneshot_hit", 0, "mix", "oneshot_hit", 1 ],
+>>>>>>> merge rev
+"master": NodePath(""),
+"nodes": [ {
+"id": "mix",
+"mix": 1.0,
+"position": Vector2( 956, 40 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 849, 110 ),
+"type": "animation"
+}, {
+"id": "out",
+<<<<<<< working copy
+"position": Vector2( 1572, 215 ),
+=======
+"position": Vector2( 1275.97, 220.003 ),
+>>>>>>> merge rev
+"type": "output"
+}, {
+<<<<<<< working copy
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "Doge_Down-Bein",
+"position": Vector2( 473, 462 ),
+"type": "animation"
+}, {
+=======
+>>>>>>> merge rev
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "Winning",
+"position": Vector2( 1032, 44 ),
+"type": "animation"
+}, {
+<<<<<<< working copy
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "Create_Hut",
+"mix": false,
+"position": Vector2( 1169, 361 ),
+"type": "oneshot"
+}, {
+"id": "Doge_Up",
+"mix": 1.0,
+"position": Vector2( 711, 44 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Throwing ",
+"position": Vector2( 252, 347 ),
+"type": "animation"
+}, {
+=======
+>>>>>>> merge rev
+"id": "mix 1",
+"mix": 1.0,
+"position": Vector2( 380, 347 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+<<<<<<< working copy
+"id": "Idle_Bein",
+"position": Vector2( 5, 8 ),
+=======
+"id": "anim 3",
+"position": Vector2( 800, 6 ),
+>>>>>>> merge rev
+"type": "animation"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 1026, 361 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "Idle_Bein",
+"position": Vector2( 5, 50 ),
+"type": "animation"
+}, {
+<<<<<<< working copy
+"animation": ExtResource( 2 ),
+=======
+"id": "Doge_Up",
+"mix": 1.0,
+"position": Vector2( 906, 35 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 6 ),
+>>>>>>> merge rev
+"filter": [  ],
+<<<<<<< working copy
+"id": "anim 4",
+"position": Vector2( 554, 109 ),
+=======
+"id": "Walk_Bein",
+"position": Vector2( 5, 424 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "Throwing",
+"position": Vector2( 297, 5 ),
+>>>>>>> merge rev
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_dodge_up",
+"mix": false,
+"position": Vector2( 1098.96, 218.001 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+<<<<<<< working copy
+"id": "Walk_Bein",
+"position": Vector2( 5, 424 ),
+=======
+"id": "anim 4",
+"position": Vector2( 798, 112 ),
+"type": "animation"
+}, {
+"id": "mix 0",
+"mix": 1.0,
+"position": Vector2( 415, 48 ),
+"type": "mix"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_throw",
+"mix": false,
+"position": Vector2( 608.989, 216 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 9 ),
+"filter": [  ],
+"id": "Doge_Down_Arm",
+"position": Vector2( 480, 351 ),
+>>>>>>> merge rev
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "Destroy_Hut",
+"mix": false,
+"position": Vector2( 1036, 359 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 849, 5 ),
+"type": "animation"
+}, {
+<<<<<<< working copy
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "Walk_Hand",
+"position": Vector2( 5, 322 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Throwing",
+"position": Vector2( 297, 5 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "Walk_Bein ",
+"position": Vector2( 293, 108 ),
+"type": "animation"
+}, {
+"id": "Idle_mix",
+"mix": 1.0,
+"position": Vector2( 119, 97 ),
+"type": "mix"
+=======
+"animation": ExtResource( 10 ),
+"filter": [  ],
+"id": "Idle_Arm",
+"position": Vector2( 5, 154 ),
+"type": "animation"
+>>>>>>> merge rev
+}, {
+<<<<<<< working copy
+"id": "mix 0",
+"mix": 1.0,
+"position": Vector2( 415, 48 ),
+"type": "mix"
+=======
+"id": "Idle_mix",
+"mix": 1.0,
+"position": Vector2( 110, 132 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 11 ),
+"filter": [  ],
+"id": "Walk_Hand",
+"position": Vector2( 5, 322 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "Walk_Bein ",
+"position": Vector2( 293, 108 ),
+"type": "animation"
+}, {
+"id": "Walk_mix",
+"mix": 1.0,
+"position": Vector2( 118, 322 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 12 ),
+"filter": [  ],
+"id": "Doge_Down-Bein",
+"position": Vector2( 473, 462 ),
+"type": "animation"
+>>>>>>> merge rev
+}, {
+"id": "Doge_Dow",
+"mix": 1.0,
+"position": Vector2( 671, 350 ),
+"type": "mix"
+}, {
+<<<<<<< working copy
+"animation": ExtResource( 9 ),
+"filter": [  ],
+"id": "Doge_Down_Arm",
+"position": Vector2( 480, 351 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 10 ),
+=======
+"animation": ExtResource( 13 ),
+>>>>>>> merge rev
+"filter": [  ],
+<<<<<<< working copy
+"id": "anim 3",
+"position": Vector2( 555, 6 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "Idle_Bein ",
+"position": Vector2( 251, 452 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 11 ),
+"filter": [  ],
+"id": "Idle_Arm",
+"position": Vector2( 5, 110 ),
+=======
+"id": "anim 2",
+"position": Vector2( 591, 5 ),
+>>>>>>> merge rev
+"type": "animation"
+}, {
+<<<<<<< working copy
+"animation": ExtResource( 12 ),
+"filter": [  ],
+"id": "Destroy_Hu",
+"position": Vector2( 808, 374 ),
+"type": "animation"
+=======
+"blend": 0.0,
+"filter": [ NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees") ],
+"id": "blend_walk",
+"position": Vector2( 307, 217.998 ),
+"type": "blend2"
+>>>>>>> merge rev
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+<<<<<<< working copy
+"id": "Doge_U",
+"mix": false,
+"position": Vector2( 824, 215 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "Throw_Stand",
+=======
+"id": "oneshot_idle_throw",
+>>>>>>> merge rev
+"mix": false,
+<<<<<<< working copy
+"position": Vector2( 447, 216 ),
+"type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 1326, 402 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 1414, 85 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 13 ),
+"filter": [  ],
+"id": "CreateHut",
+"position": Vector2( 925, 374 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "Throw_Walk",
+"mix": false,
+"position": Vector2( 588, 216 ),
+=======
+"position": Vector2( 439.016, 216 ),
+>>>>>>> merge rev
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+<<<<<<< working copy
+"id": "Doge_Down",
+=======
+"id": "oneshot_dodge_down",
+>>>>>>> merge rev
+"mix": false,
+<<<<<<< working copy
+"position": Vector2( 705, 215 ),
+=======
+"position": Vector2( 786.976, 216 ),
+>>>>>>> merge rev
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+<<<<<<< working copy
+"id": "Hit",
+=======
+"id": "oneshot_hit",
+>>>>>>> merge rev
+"mix": false,
+<<<<<<< working copy
+"position": Vector2( 918, 215 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot",
+"mix": false,
+"position": Vector2( 1176, 48 ),
+=======
+"position": Vector2( 972.963, 213.005 ),
+>>>>>>> merge rev
+"type": "oneshot"
+}, {
+"blend": 0.0,
+"filter": [ NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees") ],
+"id": "Idle-or-Walk",
+"position": Vector2( 311, 216 ),
+"type": "blend2"
+} ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTreePlayer" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+<<<<<<< working copy
+anims/Create_Hut = ExtResource( 13 )
+anims/Destroy_Hut = ExtResource( 12 )
+anims/Doge_Down_Arm = ExtResource( 9 )
+anims/Doge_Down_Bein = ExtResource( 2 )
+anims/Doge_Up_Arm = SubResource( 1 )
+=======
+anims/Doge_Down_Arm = ExtResource( 9 )
+anims/Doge_Down_Bein = ExtResource( 12 )
+anims/Doge_Up_Arm = ExtResource( 4 )
+>>>>>>> merge rev
+anims/Doge_Up_Bein = SubResource( 2 )
+<<<<<<< working copy
+anims/Hit-Arm = ExtResource( 7 )
+anims/Hit-Bein = ExtResource( 1 )
+anims/Idle_Arm = ExtResource( 11 )
+anims/Idle_Bein = ExtResource( 5 )
+anims/Reset_Animation = ExtResource( 14 )
+anims/Throwing = ExtResource( 4 )
+anims/Walk_Arm = ExtResource( 8 )
+anims/Walk_Bein = ExtResource( 6 )
+anims/Winning = ExtResource( 3 )
+=======
+anims/Hit-Arm = ExtResource( 13 )
+anims/Hit-Bein = ExtResource( 2 )
+anims/Idle_Arm = ExtResource( 10 )
+anims/Idle_Bein = ExtResource( 3 )
+anims/Reset_Animation = ExtResource( 5 )
+anims/Throwing = ExtResource( 7 )
+anims/Walk_Arm = ExtResource( 11 )
+anims/Walk_Bein = ExtResource( 6 )
+>>>>>>> merge rev
+blend_times = [  ]
+
+[node name="Charakter_Sprites" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 0, -54.0362 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 6
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
+
+<<<<<<< working copy
+editor/display_folded = true
+position = Vector2( 0, 0.3481 )
+texture = ExtResource( 15 )
+=======
+position = Vector2( -2.37108, 1.75568 )
+texture = ExtResource( 14 )
+>>>>>>> merge rev
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Head&Arms" type="Node2D" parent="Charakter_Sprites/Ch1_T" index="0"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
+
+position = Vector2( 21.0251, -52.5668 )
+<<<<<<< working copy
+rotation = 0.967266
+=======
+rotation = 1.0862
+>>>>>>> merge rev
+z_index = -5
+<<<<<<< working copy
+texture = ExtResource( 16 )
+=======
+texture = ExtResource( 15 )
+>>>>>>> merge rev
+offset = Vector2( -23.4915, 54.9353 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_A_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l" index="0"]
+
+position = Vector2( 160.468, 4.0683 )
+<<<<<<< working copy
+texture = ExtResource( 17 )
+=======
+z_index = 1
+texture = ExtResource( 16 )
+>>>>>>> merge rev
+offset = Vector2( -184.675, 51.2988 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
+
+position = Vector2( -121.355, -14.2008 )
+<<<<<<< working copy
+rotation = -0.279237
+=======
+rotation = -0.472831
+>>>>>>> merge rev
+z_index = 1
+<<<<<<< working copy
+texture = ExtResource( 18 )
+=======
+texture = ExtResource( 17 )
+>>>>>>> merge rev
+offset = Vector2( 115.846, 3.52861 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_A_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="0"]
+
+visible = false
+position = Vector2( -51.8834, 93.3846 )
+z_index = 4
+<<<<<<< working copy
+texture = ExtResource( 19 )
+=======
+texture = ExtResource( 18 )
+>>>>>>> merge rev
+offset = Vector2( 188.628, -95.8364 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_A_d_rr" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="1"]
+
+position = Vector2( -51.8834, 93.3846 )
+<<<<<<< working copy
+rotation = -0.617087
+=======
+rotation = -0.391327
+>>>>>>> merge rev
+scale = Vector2( 0.999999, 0.999999 )
+<<<<<<< working copy
+texture = ExtResource( 20 )
+=======
+texture = ExtResource( 19 )
+>>>>>>> merge rev
+offset = Vector2( 174.778, -24.6302 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
+
+position = Vector2( -38.0608, -65.9989 )
+<<<<<<< working copy
+rotation = 0.079241
+z_index = 4
+texture = ExtResource( 21 )
+=======
+rotation = 0.012116
+z_index = 1
+texture = ExtResource( 20 )
+>>>>>>> merge rev
+offset = Vector2( 17.0357, 118.566 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_H_m" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="0"]
+
+position = Vector2( 19.2195, 193.701 )
+texture = ExtResource( 22 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Ch1_Ha_f" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="1"]
+
+position = Vector2( -128.539, -238.508 )
+<<<<<<< working copy
+rotation = -0.0571799
+=======
+rotation = -0.0130897
+>>>>>>> merge rev
+z_index = 1
+<<<<<<< working copy
+texture = ExtResource( 23 )
+=======
+texture = ExtResource( 21 )
+>>>>>>> merge rev
+offset = Vector2( 145.576, 357.073 )
+_sections_unfolded = [ "Offset", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_Ha_b" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f" index="0"]
+
+position = Vector2( 147.004, 356.487 )
+<<<<<<< working copy
+rotation = 4.65661e-010
+=======
+rotation = 4.65661e-10
+scale = Vector2( 1e-05, 1e-05 )
+>>>>>>> merge rev
+z_index = -5
+<<<<<<< working copy
+texture = ExtResource( 24 )
+=======
+texture = ExtResource( 22 )
+>>>>>>> merge rev
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+<<<<<<< working copy
+=======
+[node name="Ch1_H_m" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H" index="1"]
+
+visible = false
+position = Vector2( 19.2195, 193.701 )
+texture = ExtResource( 23 )
+
+>>>>>>> merge rev
+[node name="Legs" type="Node2D" parent="Charakter_Sprites/Ch1_T" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_L_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="0"]
+
+position = Vector2( -39.0679, 290.996 )
+<<<<<<< working copy
+rotation = -0.145613
+=======
+rotation = -0.0212374
+>>>>>>> merge rev
+z_index = -1
+<<<<<<< working copy
+texture = ExtResource( 25 )
+=======
+texture = ExtResource( 24 )
+>>>>>>> merge rev
+offset = Vector2( 39.0679, -290.996 )
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_L_d_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_r" index="0"]
+
+position = Vector2( 29.5789, 124.968 )
+<<<<<<< working copy
+rotation = 0.146586
+=======
+rotation = 0.0213793
+>>>>>>> merge rev
+z_index = -1
+<<<<<<< working copy
+texture = ExtResource( 26 )
+=======
+texture = ExtResource( 25 )
+>>>>>>> merge rev
+offset = Vector2( 9.48901, -415.964 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_L_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs" index="1"]
+
+position = Vector2( 49.202, 250.398 )
+<<<<<<< working copy
+rotation = -0.123326
+=======
+rotation = -0.0179869
+>>>>>>> merge rev
+scale = Vector2( 1, 1.2 )
+z_index = -2
+<<<<<<< working copy
+texture = ExtResource( 27 )
+=======
+texture = ExtResource( 26 )
+>>>>>>> merge rev
+offset = Vector2( -49.202, -208.665 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch1_L_d_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="0"]
+
+position = Vector2( 63.0907, 79.5739 )
+<<<<<<< working copy
+rotation = 0.0751903
+=======
+rotation = 0.0109664
+>>>>>>> merge rev
+scale = Vector2( 1, 0.833333 )
+z_index = -2
+<<<<<<< working copy
+texture = ExtResource( 28 )
+=======
+texture = ExtResource( 27 )
+>>>>>>> merge rev
+offset = Vector2( -112.293, -345.887 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ch_L_d_lw" type="Sprite" parent="Charakter_Sprites/Ch1_T/Legs/Ch1_L_l" index="1"]
+
+visible = false
+position = Vector2( 63.0907, 79.5739 )
+scale = Vector2( 1, 0.833333 )
+z_index = -1
+<<<<<<< working copy
+texture = ExtResource( 29 )
+=======
+texture = ExtResource( 28 )
+>>>>>>> merge rev
+offset = Vector2( -119.677, -307.506 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_bone_": true
+}
+
+
