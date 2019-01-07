@@ -1,63 +1,73 @@
-[gd_scene load_steps=18 format=2]
+<<<<<<< working copy
+[gd_scene load_steps=9 format=2]
+=======
+[gd_scene load_steps=16 format=2]
+>>>>>>> merge rev
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
+<<<<<<< working copy
+[ext_resource path="res://Player/Animation/Animation_Ch1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Animation/Animation_Ch2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://Player/Particles Scenen/Aim_Particles.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=7]
+=======
 [ext_resource path="res://Player/Animation/AnimationTreePlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Player/Particles Scenen/Aim_Particles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.png" type="Texture" id=7]
-[ext_resource path="res://Player/Animation/Animation_Ch1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Player/Animation/Animation_Ch2.tscn" type="PackedScene" id=9]
+>>>>>>> merge rev
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.139, 57.1739 )
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0, 0.725586 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.242187 ), -1.55971, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=3]
+[sub_resource type="CurveTexture" id=2]
 
 flags = 4
 width = 2048
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=5]
 
 offsets = PoolRealArray( 0, 0.00191571, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 0.98659, 0.98659, 0.98659, 1, 1, 1, 1, 0.397804 )
 
-[sub_resource type="GradientTexture" id=5]
+[sub_resource type="GradientTexture" id=6]
 
 flags = 4
-gradient = SubResource( 4 )
+gradient = SubResource( 5 )
 width = 2048
 
-[sub_resource type="Curve" id=6]
+[sub_resource type="Curve" id=7]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.00199696, 0.435547 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.145508 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=7]
+[sub_resource type="CurveTexture" id=8]
 
 flags = 4
 width = 2048
-curve = SubResource( 6 )
+curve = SubResource( 7 )
 
-[sub_resource type="ParticlesMaterial" id=8]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
-trail_size_modifier = SubResource( 7 )
-trail_color_modifier = SubResource( 5 )
+trail_size_modifier = SubResource( 8 )
+trail_color_modifier = SubResource( 6 )
 emission_shape = 0
 flag_align_y = false
 flag_rotate_y = true
@@ -83,7 +93,7 @@ angle = 0.0
 angle_random = 1.0
 scale = 0.21
 scale_random = 1.0
-scale_curve = SubResource( 3 )
+scale_curve = SubResource( 2 )
 color = Color( 1, 1, 1, 0.591137 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -111,18 +121,26 @@ max_health = 5
 dodge_multiplier = 3.5
 dodge_up_time = 0.05
 
-[node name="Animationen" parent="." index="0" instance=ExtResource( 3 )]
+[node name="Charackter_Wahl" type="Node2D" parent="." index="0"]
+
+scale = Vector2( 1, 1 )
+
+[node name="Ch1" parent="Charackter_Wahl" index="0" instance=ExtResource( 3 )]
+
+[node name="Ch2" parent="Charackter_Wahl" index="1" instance=ExtResource( 4 )]
+
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 0, -46.7705 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Test" type="Sprite" parent="." index="2"]
 
 visible = false
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Aim" type="Sprite" parent="." index="3"]
 
@@ -136,7 +154,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 150, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Aim_Particles" parent="Aim" index="1" instance=ExtResource( 5 )]
+[node name="Aim_Particles" parent="Aim" index="1" instance=ExtResource( 6 )]
 
 [node name="DodgeTimer" type="Timer" parent="." index="4"]
 
@@ -145,7 +163,7 @@ wait_time = 0.1
 one_shot = true
 autostart = false
 
-[node name="Controlls" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Controlls" parent="." index="5" instance=ExtResource( 7 )]
 
 [node name="ThrowTimer" type="Timer" parent="." index="6"]
 
@@ -163,6 +181,11 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
+<<<<<<< working copy
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+=======
 [node name="Particles2D" type="Particles2D" parent="." index="8"]
 
 position = Vector2( 0.206436, 0.71543 )
@@ -180,25 +203,18 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 8 )
+process_material = SubResource( 3 )
 texture = ExtResource( 7 )
 normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+>>>>>>> merge rev
 
-[node name="Final CharakterScenen" type="Node2D" parent="." index="9"]
 
-[node name="Ch1" parent="Final CharakterScenen" index="0" instance=ExtResource( 8 )]
-
-visible = false
-
-[node name="Ch2" parent="Final CharakterScenen" index="1" instance=ExtResource( 9 )]
-
-visible = false
-
-[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
-
+<<<<<<< working copy
+=======
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 
+>>>>>>> merge rev
