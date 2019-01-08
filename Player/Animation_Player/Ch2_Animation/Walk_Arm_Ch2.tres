@@ -66,4 +66,16 @@ tracks/4/keys = {
 "update": 0,
 "values": [ -11.3837, -10.2148, -9.04593, -10.2148, -11.3837 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -104.808, -207.38 ) ]
+}
 
