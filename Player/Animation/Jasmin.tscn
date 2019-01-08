@@ -278,7 +278,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, 4.40732 )
+editor/display_folded = true
+position = Vector2( 0, 1.19705 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Visibility" ]
@@ -288,6 +289,7 @@ __meta__ = {
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -306,7 +308,7 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_A_d_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
+[node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 169.429, -4.91098 )
 rotation = -0.0604356
@@ -320,6 +322,7 @@ __meta__ = {
 
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
+editor/display_folded = true
 position = Vector2( -114.023, -17.0859 )
 rotation = -0.162346
 z_index = 2
@@ -340,8 +343,9 @@ _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
 [node name="throw_point" type="Position2D" parent="Charakter/Torso/Head_Arms/Arm_r/Hand_r" index="0"]
 
-[node name="Ch2_H" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
+[node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
+editor/display_folded = true
 position = Vector2( -27.0435, -111.468 )
 rotation = -0.00509191
 z_index = 1
@@ -352,9 +356,8 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_Ha_f" type="Sprite" parent="Charakter/Torso/Head_Arms/Ch2_H" index="0"]
+[node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -104.808, -207.38 )
 rotation = 0.0100226
@@ -366,7 +369,7 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_Ha_b" type="Sprite" parent="Charakter/Torso/Head_Arms/Ch2_H/Ch2_Ha_f" index="0"]
+[node name="Hut2" type="Sprite" parent="Charakter/Torso/Head_Arms/Head/Hut" index="0"]
 
 position = Vector2( -304.55, 318.848 )
 z_index = -5
@@ -381,10 +384,11 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_L_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
+[node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
+editor/display_folded = true
 position = Vector2( 24.9636, 233.633 )
-rotation = -0.257373
+rotation = 0.265769
 z_index = -4
 texture = ExtResource( 23 )
 offset = Vector2( -24.9636, -233.633 )
@@ -393,7 +397,7 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_L_d_l" type="Sprite" parent="Charakter/Torso/Legs/Ch2_L_l" index="0"]
+[node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 82.0213, 125.083 )
 z_index = 1
@@ -404,10 +408,11 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_L_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
+[node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
+editor/display_folded = true
 position = Vector2( -57.0587, 270.543 )
-rotation = 0.556287
+rotation = 0.0753126
 z_index = -1
 texture = ExtResource( 25 )
 offset = Vector2( 57.0587, -270.543 )
@@ -416,10 +421,10 @@ __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="Ch2_L_d_r" type="Sprite" parent="Charakter/Torso/Legs/Ch2_L_r" index="0"]
+[node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 43.0608, 145.589 )
-rotation = 0.0661112
+rotation = -0.0218617
 z_index = -1
 texture = ExtResource( 26 )
 offset = Vector2( 13.9972, -416.131 )

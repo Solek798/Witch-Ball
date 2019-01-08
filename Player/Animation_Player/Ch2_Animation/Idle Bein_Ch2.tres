@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0.3481 ), Vector2( -1.00245, 4.88074 ), Vector2( 0, 0.162249 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Charakter/Torso/Legs/Ch2_L_r/Ch2_L_d_r:rotation_degrees")
+tracks/1/path = NodePath("../Charakter/Torso/Legs/Leg_r/Foot_r:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 0.0, 30.9489, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Charakter/Torso/Legs/Ch2_L_r:rotation_degrees")
+tracks/2/path = NodePath("../Charakter/Torso/Legs/Leg_r:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0.0, -27.6238, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Charakter/Torso/Legs/Ch2_L_l:rotation_degrees")
+tracks/3/path = NodePath("../Charakter/Torso/Legs/Leg_l:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 0.0, -24.6921, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Charakter/Torso/Legs/Ch2_L_l/Ch2_L_d_l:rotation_degrees")
+tracks/4/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
