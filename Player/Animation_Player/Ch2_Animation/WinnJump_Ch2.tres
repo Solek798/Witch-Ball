@@ -79,7 +79,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 11.2848, 13.402 ), Vector2( -1.98367, -29.5689 ), Vector2( 11.2848, 8.25632 ), Vector2( 0, 0 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_l:rotation_degrees")
+tracks/6/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ 62.9178, 45.8544, 75.2083, 48.3251, 62.9178 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_r:rotation_degrees")
+tracks/7/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ -28.351, -41.9473, -4.52175, -1.19404, -28.351 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_r/Ch2_A_d_r:rotation_degrees")
+tracks/8/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -115,7 +115,7 @@ tracks/8/keys = {
 "values": [ 0.0, 47.5118, -14.0793, 0.0 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H:rotation_degrees")
+tracks/9/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -127,7 +127,7 @@ tracks/9/keys = {
 "values": [ 0.0, 0.0, 33.3884, 0.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_l/Ch2_A_d_l:rotation_degrees")
+tracks/10/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ 0.0, -55.9312, 0.0, -7.38097, 0.0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f:position")
+tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -151,7 +151,7 @@ tracks/11/keys = {
 "values": [ Vector2( -104.808, -207.38 ), Vector2( -104.808, -207.38 ), Vector2( -134.494, -281.249 ), Vector2( -145.246, -286.798 ), Vector2( -104.808, -207.38 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f:rotation_degrees")
+tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:rotation_degrees")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false

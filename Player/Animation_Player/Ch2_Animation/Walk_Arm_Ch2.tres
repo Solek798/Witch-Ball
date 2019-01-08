@@ -7,7 +7,7 @@ length = 1.0
 loop = true
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_l:rotation_degrees")
+tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 56.6968, 57.9375, 59.1783, 57.9375, 56.6968 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H:rotation_degrees")
+tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 0.0, -0.601206, -0.369421, -0.0144961, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f:rotation_degrees")
+tracks/2/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.529989, 0.602355, 0.473936, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_l/Ch2_A_d_l:rotation_degrees")
+tracks/3/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 0.0, -1.94409, -3.88817, -1.94409, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_A_r:rotation_degrees")
+tracks/4/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ -11.3837, -10.2148, -9.04593, -10.2148, -11.3837 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Charakter_Sprites/Ch2_T/Head&Arms/Ch2_H/Ch2_Ha_f:position")
+tracks/5/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
