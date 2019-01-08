@@ -5,9 +5,9 @@
 resource_name = "Walk_Bein"
 length = 1.0
 loop = true
-step = 0.05
+step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Ch2_Sprites/Ch2_T:position")
+tracks/0/path = NodePath("../Charakter_Sprites/Ch2_T:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,66 +16,66 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 39.0904 ), Vector2( 0, -25.1229 ), Vector2( 0, 39.0904 ), Vector2( 0, -25.1229 ), Vector2( 0, 39.0904 ) ]
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Ch2_Sprites/Ch2_T:rotation_degrees")
+tracks/1/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_r:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.75 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 35.0109, -7.9327, -50.8763, -7.9327, 35.0109 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Ch2_Sprites/Ch2_T/Legs/Ch2_L_l/Ch2_L_d_l:visible")
+tracks/2/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_l:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -18.1595, 28.549, 75.2575, 28.549, -18.1595 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Ch2_Sprites/Ch2_T/Legs/Ch2_L_r:rotation_degrees")
+tracks/3/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_r/Ch2_L_d_r:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 35.0109, -50.8763, 35.0109 ]
+"values": [ 0.0, 51.8375, -3.50474, -1.75237, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Ch2_Sprites/Ch2_T/Legs/Ch2_L_l:rotation_degrees")
+tracks/4/path = NodePath("../Charakter_Sprites/Ch2_T:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -18.1595, 75.2575, -18.1595 ]
+"values": [ Vector2( 0, 4.32024 ), Vector2( 0, 5.51189 ), Vector2( 0, 9.88124 ), Vector2( 0, -0.0491133 ), Vector2( 0, 4.32024 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Ch2_Sprites/Ch2_T/Legs/Ch2_L_r/Ch2_L_d_r:rotation_degrees")
+tracks/5/path = NodePath("../Charakter_Sprites/Ch2_T:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, 51.8375, -3.50474, 0.0 ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
