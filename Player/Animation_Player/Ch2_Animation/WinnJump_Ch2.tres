@@ -7,7 +7,7 @@ length = 1.0
 loop = false
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_l/Ch2_L_d_l:rotation_degrees")
+tracks/0/path = NodePath("../Charakter/Torso/Legs/Ch2_L_l/Ch2_L_d_l:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 0.0, 36.3911, 7.53045, 36.3911, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_l:rotation_degrees")
+tracks/1/path = NodePath("../Charakter/Torso/Legs/Ch2_L_l:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 0.0, -31.3029, 13.4873, -31.3029, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_r/Ch2_L_d_r:rotation_degrees")
+tracks/2/path = NodePath("../Charakter/Torso/Legs/Ch2_L_r/Ch2_L_d_r:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0.0, 54.9308, -22.1469, 54.9308, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Charakter_Sprites/Ch2_T/Legs/Ch2_L_r:rotation_degrees")
+tracks/3/path = NodePath("../Charakter/Torso/Legs/Ch2_L_r:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 0.0, -35.1978, 21.0572, -35.1978, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Charakter_Sprites/Ch2_T:rotation_degrees")
+tracks/4/path = NodePath("../Charakter/Torso:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ 0.0, 23.8153, -19.1328, 23.8153, 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Charakter_Sprites/Ch2_T:position")
+tracks/5/path = NodePath("../Charakter/Torso:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -163,7 +163,7 @@ tracks/12/keys = {
 "values": [ 0.0, 0.0, -5.0477, 7.25419, 0.0 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter_Sprites/Ch2_T:modulate")
+tracks/13/path = NodePath("../Charakter/Torso:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
