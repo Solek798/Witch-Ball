@@ -440,7 +440,7 @@ tracks/12/keys = {
 "values": [ Vector2( -39.0679, 290.996 ) ]
 }
 
-[node name="Scarlet" type="Sprite" index="0"]
+[node name="Scarlet" type="Sprite"]
 
 script = ExtResource( 1 )
 __meta__ = {
