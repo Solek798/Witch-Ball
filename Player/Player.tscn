@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
@@ -7,8 +7,6 @@
 [ext_resource path="res://Player/Particles Scenen/Aim_Particles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.png" type="Texture" id=7]
-[ext_resource path="res://Player/Animation/Animation_Ch1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Player/Animation/Animation_Ch2.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -186,16 +184,6 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
-
-[node name="Final CharakterScenen" type="Node2D" parent="." index="9"]
-
-[node name="Ch1" parent="Final CharakterScenen" index="0" instance=ExtResource( 8 )]
-
-visible = false
-
-[node name="Ch2" parent="Final CharakterScenen" index="1" instance=ExtResource( 9 )]
-
-visible = false
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 

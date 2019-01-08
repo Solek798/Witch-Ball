@@ -7,7 +7,7 @@ length = 0.1
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:visible")
+tracks/0/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_H/Ch1_Ha_f:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_rr:position")
+tracks/2/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_A_r/Ch1_A_d_rr:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ Vector2( -51.8834, 93.3846 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l:position")
+tracks/3/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_A_l:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ Vector2( 21.0251, -52.5668 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r:position")
+tracks/4/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_A_r:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ Vector2( -121.355, -14.2008 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_l/Ch1_A_d_l:position")
+tracks/5/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_A_l/Ch1_A_d_l:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -79,7 +79,7 @@ tracks/5/keys = {
 "values": [ Vector2( 160.468, 4.0683 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H:position")
+tracks/6/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_H:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ Vector2( -38.0608, -65.9989 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f:position")
+tracks/7/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_H/Ch1_Ha_f:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ Vector2( -128.539, -238.508 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:position")
+tracks/8/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_H/Ch1_H_m:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -115,7 +115,7 @@ tracks/8/keys = {
 "values": [ Vector2( 19.2195, 193.701 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r/Ch1_A_d_r:position")
+tracks/9/path = NodePath("../Charakter_Sprites/Ch1_T/Head_Arms/Ch1_A_r/Ch1_A_d_r:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
