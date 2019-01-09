@@ -9,13 +9,13 @@
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=11]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=12]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Winning_1.tres" type="Animation" id=13]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Create_Hut.tres" type="Animation" id=14]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Destroy_Hut.tres" type="Animation" id=15]
-[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=16]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Winning_1.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Create_Hut.tres" type="Animation" id=13]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Destroy_Hut.tres" type="Animation" id=14]
+[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=15]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=16]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=17]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=18]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_l.png" type="Texture" id=19]
@@ -515,7 +515,7 @@ data = {
 "position": Vector2( 554, 109 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 10 ),
+"animation": ExtResource( 5 ),
 "filter": [  ],
 "id": "Throwing",
 "position": Vector2( 297, 5 ),
@@ -548,25 +548,25 @@ data = {
 "position": Vector2( 246, 217 ),
 "type": "blend2"
 }, {
-"animation": ExtResource( 11 ),
+"animation": ExtResource( 10 ),
 "filter": [  ],
 "id": "Walk_Bein ",
 "position": Vector2( 293, 108 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 11 ),
+"animation": ExtResource( 10 ),
 "filter": [  ],
 "id": "Walk_Bein",
 "position": Vector2( 5, 424 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 12 ),
+"animation": ExtResource( 11 ),
 "filter": [  ],
 "id": "Doge_Down_Arm",
 "position": Vector2( 480, 351 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 10 ),
+"animation": ExtResource( 5 ),
 "filter": [  ],
 "id": "Throwing ",
 "position": Vector2( 252, 347 ),
@@ -600,7 +600,7 @@ data = {
 "position": Vector2( 1344, 215 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 13 ),
+"animation": ExtResource( 12 ),
 "filter": [  ],
 "id": "Winning",
 "position": Vector2( 1254, 43 ),
@@ -626,9 +626,9 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Create_Hut = ExtResource( 14 )
-anims/Destroy_Hut = ExtResource( 15 )
-anims/Doge_Down_Arm = ExtResource( 12 )
+anims/Create_Hut = ExtResource( 13 )
+anims/Destroy_Hut = ExtResource( 14 )
+anims/Doge_Down_Arm = ExtResource( 11 )
 anims/Doge_Down_Bein = ExtResource( 9 )
 anims/Doge_Up_Arm = SubResource( 1 )
 anims/Doge_Up_Bein = SubResource( 2 )
@@ -637,11 +637,11 @@ anims/Hit-Bein = ExtResource( 2 )
 anims/Idle_Arm = ExtResource( 8 )
 anims/Idle_Bein = ExtResource( 3 )
 anims/New_Hit = ExtResource( 4 )
-anims/Reset_Animation = ExtResource( 16 )
-anims/Throwing = ExtResource( 10 )
+anims/Reset_Animation = ExtResource( 15 )
+anims/Throwing = ExtResource( 16 )
 anims/Walk_Arm = ExtResource( 7 )
-anims/Walk_Bein = ExtResource( 11 )
-anims/Winning = ExtResource( 13 )
+anims/Walk_Bein = ExtResource( 10 )
+anims/Winning = ExtResource( 12 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -656,7 +656,7 @@ __meta__ = {
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( -21.2932, 12.4635 )
+position = Vector2( -9.35034, 5.89889 )
 texture = ExtResource( 17 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -672,8 +672,9 @@ __meta__ = {
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
+editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.977787
+rotation = 1.04644
 z_index = -5
 texture = ExtResource( 18 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -695,7 +696,7 @@ __meta__ = {
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.297368
+rotation = -0.408113
 z_index = 1
 texture = ExtResource( 20 )
 offset = Vector2( 115.846, 3.52861 )
@@ -707,7 +708,7 @@ __meta__ = {
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.595944
+rotation = -0.466798
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 21 )
 offset = Vector2( 174.778, -24.6302 )
@@ -720,7 +721,7 @@ rotation = 0.765874
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -76.1216, -131.998 )
-rotation = 0.036269
+rotation = 0.0477796
 z_index = 4
 texture = ExtResource( 22 )
 offset = Vector2( 17.0357, 118.566 )
@@ -732,7 +733,7 @@ __meta__ = {
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0121285
+rotation = -0.042127
 z_index = 1
 texture = ExtResource( 23 )
 offset = Vector2( 145.576, 357.073 )
@@ -758,8 +759,9 @@ __meta__ = {
 
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
+editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.19072
+rotation = -0.0837497
 z_index = -1
 texture = ExtResource( 25 )
 offset = Vector2( 39.0679, -290.996 )
@@ -771,7 +773,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.191995
+rotation = 0.0843092
 z_index = -1
 texture = ExtResource( 26 )
 offset = Vector2( 9.48901, -415.964 )
@@ -783,7 +785,7 @@ __meta__ = {
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( 49.202, 250.398 )
-rotation = -0.16153
+rotation = -0.0709314
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 27 )
@@ -796,7 +798,7 @@ __meta__ = {
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.0984824
+rotation = 0.0432459
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 28 )
