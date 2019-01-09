@@ -3,9 +3,9 @@
 [resource]
 
 resource_name = "Hit-Arm"
-length = 0.5
+length = 0.25
 loop = false
-step = 0.02
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
 tracks/0/interp = 1
@@ -13,7 +13,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.5 ),
+"times": PoolRealArray( 0, 0.03, 0.17, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -104.808, -207.38 ), Vector2( -47.5728, -239.211 ), Vector2( -99.3462, -239.009 ), Vector2( -104.808, -207.38 ) ]
@@ -25,7 +25,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.5 ),
+"times": PoolRealArray( 0, 0.03, 0.17, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 15.0241, -0.26817, 0.0 ]
@@ -37,7 +37,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.06, 0.5 ),
+"times": PoolRealArray( 0, 0.03, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 62.9178, 42.4837, 62.9178 ]
@@ -49,7 +49,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.06, 0.2, 0.5 ),
+"times": PoolRealArray( 0, 0.03, 0.1, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, -24.9994, -41.8063, 0.0 ]
@@ -61,7 +61,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.06, 0.5 ),
+"times": PoolRealArray( 0, 0.03, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -28.351, 33.8291, -28.351 ]
