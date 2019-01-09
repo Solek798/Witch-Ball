@@ -202,6 +202,7 @@ __meta__ = {
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
+editor/display_folded = true
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("")
@@ -426,6 +427,7 @@ blend_times = [  ]
 
 [node name="Charakter_Sprites" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, -54.0362 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 6
@@ -436,6 +438,7 @@ __meta__ = {
 
 [node name="Ch1_T" type="Sprite" parent="Charakter_Sprites" index="0"]
 
+editor/display_folded = true
 modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 14 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
@@ -445,6 +448,7 @@ __meta__ = {
 
 [node name="Head&Arms" type="Node2D" parent="Charakter_Sprites/Ch1_T" index="0"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -452,6 +456,7 @@ __meta__ = {
 
 [node name="Ch1_A_l" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="0"]
 
+editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
 rotation = 1.07129
 z_index = -5
@@ -475,6 +480,7 @@ __meta__ = {
 
 [node name="Ch1_A_r" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="1"]
 
+editor/display_folded = true
 position = Vector2( -121.355, -14.2008 )
 rotation = -0.450785
 z_index = 1
@@ -498,6 +504,7 @@ __meta__ = {
 
 [node name="Ch1_A_d_rr" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_A_r" index="1"]
 
+editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
 rotation = -0.417036
 scale = Vector2( 0.999999, 0.999999 )
@@ -509,6 +516,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Ch1_H" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms" index="2"]
 
+editor/display_folded = true
 position = Vector2( -38.0608, -65.9989 )
 rotation = 0.00808826
 z_index = 1
