@@ -36,10 +36,10 @@ func _ready():
 func _process(delta):
 	var movement = $Controlls.get_movement()
 	if movement:
-		$Animationen.play_walk()
+		$Scarlet.play_walk()
 		$Smoke.emitting = true
 	else:
-		$Animationen.stop_walk()
+		$Scarlet.stop_walk()
 		$Smoke.emitting = false
 	# sets dodge-multiplier if player is dodging
 	var mult = 1
@@ -66,7 +66,7 @@ func throw(movement):
 	
 	# calculates throm impuls
 	var player_position = self.global_position
-	var throw_point_position = $Animationen.get_throw_point()
+	var throw_point_position = $Scarlet.get_throw_point()
 	#var impulse = (throw_point_position - player_position) * bullet_speed
 	var impulse = throw_vector.rotated($Aim.rotation) * bullet_speed
 	
@@ -79,7 +79,7 @@ func throw(movement):
 	bullet.apply_impulse(throw_point_position, impulse)
 	# start Timer for throw delay
 	$ThrowTimer.start()
-	$Animationen.play_throw(movement)
+	$Scarlet.play_throw(movement)
 	emit_signal("bullet_thrown", bullet)
 
 func dodge(movement):
@@ -90,15 +90,13 @@ func dodge(movement):
 	if $DodgeTimer.is_stopped():
 		$Controlls.lock()
 		$DodgeTimer.start()
-		$Animationen.play_dodge_down()
-		$AinimationTween.interpolate_callback($Animationen, dodge_up_time, "play_dodge_up")
-
-
+		$Scarlet.play_dodge_down()
+		$AinimationTween.interpolate_callback($Scarlet, dodge_up_time, "play_dodge_up")
 
 func take_damage(ammount):
 	if is_dead:
 		return
-	$Animationen.play_hit()
+	$Scarlet.play_hit()
 	health -= ammount
 	emit_signal("player_damaged", self, ammount)
 	
@@ -119,4 +117,4 @@ func _on_round_finished():
 	reset()
 
 func _on_DodgeTimer_timeout():
-	$Animationen.play_dodge_up()
+	$Scarlet.play_dodge_up()
