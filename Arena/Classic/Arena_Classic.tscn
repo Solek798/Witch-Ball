@@ -28,6 +28,7 @@ extents = Vector2( 457.284, 23.3026 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
+_sections_unfolded = [ "Resource" ]
 
 [node name="Arena" type="Node2D" index="0"]
 
@@ -44,10 +45,9 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -79,7 +79,6 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 115.043, 547.785 )
 rotation = 0.349066
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="CollisionShape2D" parent="Boundary/Border" index="1"]
 
@@ -99,5 +98,193 @@ position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
 [node name="Position" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Stone_Areas" type="Node2D" parent="." index="3"]
+
+[node name="TopSton" type="Node2D" parent="Stone_Areas" index="0"]
+
+editor/display_folded = true
+position = Vector2( 579.936, 157.934 )
+rotation = 1.54696
+scale = Vector2( 1, 1.5 )
+
+[node name="Stone4" type="Area2D" parent="Stone_Areas/TopSton" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material", "Transform" ]
+
+[node name="Stone5" type="Area2D" parent="Stone_Areas/TopSton" index="1"]
+
+position = Vector2( 6.84962, -343.714 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material", "Transform" ]
+
+[node name="Stone6" type="Area2D" parent="Stone_Areas/TopSton" index="2"]
+
+position = Vector2( 1.84456, -622.298 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Right" type="Node2D" parent="Stone_Areas" index="1"]
+
+editor/display_folded = true
+
+[node name="Stone7" type="Area2D" parent="Stone_Areas/Right" index="0"]
+
+position = Vector2( 1685.93, 167.456 )
+rotation = 1.54696
+scale = Vector2( 1, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Stone8" type="Area2D" parent="Stone_Areas/Right" index="1"]
+
+position = Vector2( 1738.99, 293.972 )
+rotation = 1.54696
+scale = Vector2( 1, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Stone9" type="Area2D" parent="Stone_Areas/Right" index="2"]
+
+position = Vector2( 1763.74, 357.346 )
+rotation = 1.54696
+scale = Vector2( 1, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Stone10" type="Area2D" parent="Stone_Areas/Right" index="3"]
+
+position = Vector2( 1826.35, 401.545 )
+rotation = 1.54696
+scale = Vector2( 1, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Bottom" type="Node2D" parent="Stone_Areas" index="2"]
+
+[node name="Stone" type="Area2D" parent="Stone_Areas/Bottom" index="0"]
+
+position = Vector2( 1608, 959.273 )
+scale = Vector2( 4, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Stone2" type="Area2D" parent="Stone_Areas/Bottom" index="1"]
+
+position = Vector2( 995.826, 976.958 )
+scale = Vector2( 4, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Stone3" type="Area2D" parent="Stone_Areas/Bottom" index="2"]
+
+position = Vector2( 995.826, 976.958 )
+scale = Vector2( 4, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Left" type="Node2D" parent="Stone_Areas" index="3"]
+
+editor/display_folded = true
+
+[node name="Stone" type="Area2D" parent="Stone_Areas/Left" index="0"]
+
+position = Vector2( 213.581, 291.123 )
+rotation = 1.91241
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material" ]
+
+[node name="Stone2" type="Area2D" parent="Stone_Areas/Left" index="1"]
+
+position = Vector2( 219.433, 166.096 )
+rotation = 0.978797
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material" ]
+
+[node name="Stone3" type="Area2D" parent="Stone_Areas/Left" index="2"]
+
+position = Vector2( 159.576, 470.823 )
+rotation = 0.978797
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material" ]
 
 
