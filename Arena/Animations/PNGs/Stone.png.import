@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Butterfly.png-c5a7935913f851e86053adae527d9972.stex"
+path="res://.import/Stone.png-ac49724b8f353642bb8d458cc5e023a4.stex"
 
 [deps]
 
-source_file="res://Arena/Animations/PNGs/Butterfly.png"
-dest_files=[ "res://.import/Butterfly.png-c5a7935913f851e86053adae527d9972.stex" ]
+source_file="res://Arena/Animations/PNGs/Stone.png"
+dest_files=[ "res://.import/Stone.png-ac49724b8f353642bb8d458cc5e023a4.stex" ]
 
 [params]
 
