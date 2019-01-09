@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 export(PackedScene) var bullet_template
+export(PackedScene) var bullet_fast_template
+export(PackedScene) var bullet_big_template
 export(int) var movement_speed 
 export(float) var aim_speed
 export(int) var bullet_speed
@@ -20,6 +22,7 @@ signal player_died(player)
 signal player_reseted(player)
 
 var id
+var next_bullet
 onready var health = max_health
 onready var is_dead = false
 onready var won_rounds = 0
@@ -30,6 +33,7 @@ func _ready():
 	$Controlls.setup(id)
 	$Mana.max_value = max_mana
 	$Mana.value = start_mana
+	next_bullet = bullet_template
 	
 	if id % 2 == 0:
 		throw_vector = Vector2(-1, 0)
@@ -76,12 +80,13 @@ func throw(movement):
 	var player_position = self.global_position
 	var throw_point_position = $Scarlet.get_throw_point()
 	#var impulse = (throw_point_position - player_position) * bullet_speed
-	var impulse = throw_vector.rotated($Aim.rotation) * bullet_speed
+	
 	
 	# instanciates and sets a new bullet to thropoint position
-	var bullet = bullet_template.instance()
+	var bullet = next_bullet.instance()
 	bullet.position = throw_point_position
 	bullet.own_player = self
+	var impulse = throw_vector.rotated($Aim.rotation) * bullet.speed
 	
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)

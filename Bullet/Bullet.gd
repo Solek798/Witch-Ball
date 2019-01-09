@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+export(int) var speed
 export(int) var damage
 
 signal bullet_destroyed()
@@ -15,7 +16,7 @@ func _process(delta):
 	
 	if collision:
 		# if the collider is a player, he takes the specified ammount of damage
-		if collision.front().has_method("take_damage") and collision.front() != own_player:
+		if collision.front().has_method("take_damage"):
 			collision.front().take_damage(damage)
 		queue_free()
 		#emit_signal("bullet_destroyed")

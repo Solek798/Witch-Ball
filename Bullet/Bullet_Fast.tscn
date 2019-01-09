@@ -6,18 +6,18 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 17.9689
+radius = 12.1109
 
-[node name="Bullet" type="RigidBody2D"]
+[node name="Bullet_Fast" type="RigidBody2D"]
 
 input_pickable = false
-collision_layer = 8
-collision_mask = 13
+collision_layer = 1
+collision_mask = 1
 mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 0.0
+gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 1
@@ -29,22 +29,19 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
-__meta__ = {
-"_edit_vertical_guides_": [ -983.436 ]
-}
-speed = 600
+speed = 900
 damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
 
-[node name="Texture" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( -2.38551, -0.150352 )
-scale = Vector2( 0.045, 0.045 )
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -1.4592, 0 )
+scale = Vector2( 0.03, 0.03 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 
