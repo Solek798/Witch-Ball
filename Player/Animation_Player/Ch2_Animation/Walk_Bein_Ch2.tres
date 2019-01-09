@@ -13,10 +13,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 0.0, 0.0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../Charakter/Torso/Legs/Leg_r:rotation_degrees")
@@ -64,7 +64,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 4.32024 ), Vector2( 0, 5.51189 ), Vector2( 0, 9.88124 ), Vector2( 0, -0.0491133 ), Vector2( 0, 4.32024 ) ]
+"values": [ Vector2( 0, 4.32024 ), Vector2( 0, 2.54081 ), Vector2( 0, 4.64378 ), Vector2( 0, 3.18787 ), Vector2( 0, 4.32024 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("../Charakter/Torso:modulate")
