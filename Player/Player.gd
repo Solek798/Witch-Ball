@@ -59,8 +59,8 @@ func _process(delta):
 	
 	# calculates the rotation in this frame and rotates the aim pointer
 	var direction = $Controlls.get_aim()
-	var aim = -(direction.angle_to(Vector2(1, 0).rotated($Aim.rotation)))
-	$Aim.rotate(aim * delta * aim_speed)
+	var aim = atan2(direction.y, direction.x)
+	$Aim.rotation = aim
 	
 	if $Controlls.state(Action.THROW):
 		throw(movement)

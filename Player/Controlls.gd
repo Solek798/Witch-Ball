@@ -22,6 +22,7 @@ export var movement_y_axis = 1
 export var aim_x_axis = 2
 export var aim_y_axis = 3
 export var movement_tolerance = 0.3
+export var aim_tolerance = 0.3
 
 onready var keys = []
 onready var locked_states = []
@@ -108,9 +109,13 @@ func get_aim():
 			aim.x *= -1
 		aim.y = Input.get_joy_axis(device, aim_y_axis)
 		# Workaround for inaccurate Controller Input
-		if aim.x < 0.01 and aim.x > -0.01:
+		#if aim.x < aim_tolerance and aim.x > -aim_tolerance:
+		#	aim.x = 0
+		#if aim.y < aim_tolerance and aim.y > -aim_tolerance:
+		#	aim.y = 0
+		print(aim.length())
+		if aim.length() < aim_tolerance:
 			aim.x = 0
-		if aim.y < 0.01 and aim.y > -0.01:
 			aim.y = 0
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):
