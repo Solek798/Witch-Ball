@@ -140,7 +140,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="Boundary" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
-visible = false
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
@@ -309,8 +308,7 @@ editor/display_folded = true
 
 [node name="Area2D" type="Area2D" parent="Leaf_Areas" index="0"]
 
-position = Vector2( -1.52588e-005, 0 )
-scale = Vector2( 1, 1 )
+position = Vector2( -1.52588e-05, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -419,11 +417,13 @@ shape = SubResource( 22 )
 
 [node name="Needel_Areas" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 
 [node name="Area2D" type="Area2D" parent="Needel_Areas" index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
