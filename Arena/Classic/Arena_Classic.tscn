@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=2]
@@ -29,6 +29,101 @@ extents = Vector2( 457.284, 23.3026 )
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
 
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=18]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=19]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=20]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=22]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=23]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=24]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [node name="Arena" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -45,9 +140,11 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="Boundary" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
+visible = false
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -79,7 +176,6 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 115.043, 547.785 )
 rotation = 0.349066
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="CollisionShape2D" parent="Boundary/Border" index="1"]
 
@@ -99,5 +195,255 @@ position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
 [node name="Position" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Stone_Areas" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="Area2D" type="Area2D" parent="Stone_Areas" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="0"]
+
+position = Vector2( 183.855, 143.306 )
+rotation = -1.83405
+scale = Vector2( 6.51667, 5.34836 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="1"]
+
+position = Vector2( 166.956, 284.893 )
+rotation = -1.73738
+scale = Vector2( 5.1384, 7.17266 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="2"]
+
+position = Vector2( 133.608, 467.173 )
+rotation = -2.52845
+scale = Vector2( 4.46964, 4.39536 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="3"]
+
+position = Vector2( 206.261, 1010.12 )
+rotation = -1.58151
+scale = Vector2( 6.23645, 6.52341 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="4"]
+
+position = Vector2( 700.135, 1009.88 )
+rotation = -1.58151
+scale = Vector2( 6.23645, 11.2968 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="5"]
+
+position = Vector2( 986.494, 1019.62 )
+rotation = -1.58151
+scale = Vector2( 6.23645, 11.2968 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="6"]
+
+position = Vector2( 1602.07, 1000.14 )
+rotation = -1.58151
+scale = Vector2( 6.23645, 11.2968 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="7"]
+
+position = Vector2( 1849.74, 408.575 )
+rotation = -1.00238
+scale = Vector2( 4.71575, 4.62437 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="8"]
+
+position = Vector2( 1748.2, 326.845 )
+rotation = -0.521776
+scale = Vector2( 5.03628, 6.69716 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="9"]
+
+position = Vector2( 1674.89, 169.312 )
+scale = Vector2( 4.02967, 3.90106 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="10"]
+
+position = Vector2( 1512.93, 141.963 )
+scale = Vector2( 5.71513, 3.28833 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="11"]
+
+position = Vector2( 1095.37, 150.128 )
+scale = Vector2( 5.71513, 3.28833 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="12"]
+
+position = Vector2( 915.613, 114.841 )
+scale = Vector2( 4.02967, 3.90106 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="13"]
+
+position = Vector2( 576.205, 149.832 )
+scale = Vector2( 4.02967, 3.90106 )
+shape = SubResource( 19 )
+
+[node name="Leaf_Areas" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Area2D" type="Area2D" parent="Leaf_Areas" index="0"]
+
+position = Vector2( -1.52588e-005, 0 )
+scale = Vector2( 1, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="0"]
+
+position = Vector2( 138.176, 191.104 )
+rotation = -0.184992
+scale = Vector2( 4.7984, 2.62606 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="1"]
+
+position = Vector2( 73.8658, 1000.21 )
+rotation = 0.00819565
+scale = Vector2( 6.77201, 6.04167 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="2"]
+
+position = Vector2( 428.611, 1008.1 )
+rotation = 0.00819565
+scale = Vector2( 15.2594, 6.04167 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="3"]
+
+position = Vector2( 1190.35, 1017.53 )
+rotation = 0.00819565
+scale = Vector2( 7.94896, 6.04167 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="4"]
+
+position = Vector2( 1339.28, 997.482 )
+rotation = 0.00819565
+scale = Vector2( 7.94896, 6.04167 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="5"]
+
+position = Vector2( 1824.79, 1003.33 )
+rotation = -0.16355
+scale = Vector2( 9.0508, 4.94148 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="6"]
+
+position = Vector2( 1882.34, 910.566 )
+rotation = -0.95157
+scale = Vector2( 6.71741, 4.05513 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="7"]
+
+position = Vector2( 1814.97, 470.565 )
+rotation = -0.214772
+scale = Vector2( 6.71741, 4.05513 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="8"]
+
+position = Vector2( 1721.37, 230.696 )
+scale = Vector2( 5.58671, 3.21236 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="9"]
+
+position = Vector2( 1429.99, 127.342 )
+scale = Vector2( 4.60903, 3.14252 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="10"]
+
+position = Vector2( 1273.91, 121.057 )
+scale = Vector2( 5.90096, 3.56153 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="11"]
+
+position = Vector2( 1055.33, 91.0285 )
+scale = Vector2( 5.90096, 3.56153 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="12"]
+
+position = Vector2( 809.051, 112.677 )
+scale = Vector2( 6.57625, 4.46937 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="13"]
+
+position = Vector2( 673.106, 110.233 )
+scale = Vector2( 5.20262, 2.4791 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="14"]
+
+position = Vector2( 407.388, 118.264 )
+scale = Vector2( 12.7796, 3.42186 )
+shape = SubResource( 22 )
+
+[node name="Needel_Areas" type="Node2D" parent="." index="5"]
+
+position = Vector2( 963.434, 542.199 )
+scale = Vector2( 0.499053, 0.497761 )
+
+[node name="Area2D" type="Area2D" parent="Needel_Areas" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Needel_Areas/Area2D" index="0"]
+
+position = Vector2( -1845.66, 192.391 )
+rotation = 0.174339
+scale = Vector2( 6.49806, 29.0539 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Needel_Areas/Area2D" index="1"]
+
+position = Vector2( 1812.43, 278.246 )
+rotation = -0.336242
+scale = Vector2( 4.66024, 27.9107 )
+shape = SubResource( 24 )
 
 

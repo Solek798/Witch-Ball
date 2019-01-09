@@ -2,17 +2,17 @@
 
 [ext_resource path="res://Player/Animation/AnimationTreePlayer.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Bein.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Arm.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Arm.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Hit-Arm.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Arm.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Bein.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Throwing.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Bein.tres" type="Animation" id=11]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Arm.tres" type="Animation" id=12]
-[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Down_Bein.tres" type="Animation" id=13]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation_Player/00Ch/Reset_Animation.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Doge_Up_Arm.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=13]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=14]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=15]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_d_l.png" type="Texture" id=16]
@@ -192,7 +192,7 @@ tracks/12/keys = {
 "values": [ Vector2( -39.0679, 290.996 ) ]
 }
 
-[node name="Animationen" type="Sprite" index="0"]
+[node name="Animationen" type="Sprite"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -209,7 +209,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "oneshot_dodge_up", "out", 0, "blend_walk", "oneshot_idle_throw", 0, "mix 1", "oneshot_idle_throw", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "oneshot_hit", "oneshot_dodge_up", 0, "Doge_Up", "oneshot_dodge_up", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "mix 0", "oneshot_walk_throw", 1, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "oneshot_walk_throw", "oneshot_dodge_down", 0, "Doge_Dow", "oneshot_dodge_down", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "Doge_Down_Arm", "Doge_Dow", 0, "Doge_Down-Bein", "Doge_Dow", 1, "Idle_mix", "blend_walk", 0, "Walk_mix", "blend_walk", 1, "oneshot_dodge_down", "oneshot_hit", 0, "mix", "oneshot_hit", 1 ],
+"connections": [ "anim 2", "mix", 0, "anim", "mix", 1, "oneshot_dodge_up", "out", 0, "oneshot_walk_throw", "oneshot_dodge_down", 0, "Doge_Dow", "oneshot_dodge_down", 1, "anim 3", "Doge_Up", 0, "anim 4", "Doge_Up", 1, "oneshot_hit", "oneshot_dodge_up", 0, "Doge_Up", "oneshot_dodge_up", 1, "oneshot_dodge_down", "oneshot_hit", 0, "mix", "oneshot_hit", 1, "Idle_mix", "blend_walk", 0, "Walk_mix", "blend_walk", 1, "Walk_Hand", "Walk_mix", 0, "Walk_Bein", "Walk_mix", 1, "Throwing", "mix 0", 0, "Walk_Bein ", "mix 0", 1, "Doge_Down_Arm", "Doge_Dow", 0, "Doge_Down-Bein", "Doge_Dow", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "mix 0", "oneshot_walk_throw", 1, "Throwing ", "mix 1", 0, "Idle_Bein ", "mix 1", 1, "Idle_Bein", "Idle_mix", 0, "Idle_Arm", "Idle_mix", 1, "blend_walk", "oneshot_idle_throw", 0, "mix 1", "oneshot_idle_throw", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "mix",
@@ -227,111 +227,22 @@ data = {
 "position": Vector2( 1275.97, 220.003 ),
 "type": "output"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 439.016, 216 ),
-"type": "oneshot"
-}, {
 "animation": ExtResource( 3 ),
 "filter": [  ],
-"id": "Idle_Bein ",
-"position": Vector2( 251, 452 ),
+"id": "Doge_Down-Bein",
+"position": Vector2( 473, 462 ),
 "type": "animation"
-}, {
-"id": "mix 0",
-"mix": 1.0,
-"position": Vector2( 415, 48 ),
-"type": "mix"
 }, {
 "animation": ExtResource( 4 ),
 "filter": [  ],
-"id": "anim 5",
-"position": Vector2( 1026, 361 ),
+"id": "Walk_Bein",
+"position": Vector2( 5, 424 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 5 ),
 "filter": [  ],
-"id": "anim 2",
-"position": Vector2( 591, 5 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_up",
-"mix": false,
-"position": Vector2( 1098.96, 218.001 ),
-"type": "oneshot"
-}, {
-"id": "Idle_mix",
-"mix": 1.0,
-"position": Vector2( 110, 132 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "anim 3",
-"position": Vector2( 800, 6 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "Walk_Hand",
-"position": Vector2( 5, 322 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 608.989, 216 ),
-"type": "oneshot"
-}, {
-"id": "mix 1",
-"mix": 1.0,
-"position": Vector2( 380, 347 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "Idle_Bein",
-"position": Vector2( 5, 50 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "Idle_Arm",
-"position": Vector2( 5, 154 ),
-"type": "animation"
-}, {
-"id": "Walk_mix",
-"mix": 1.0,
-"position": Vector2( 118, 322 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 9 ),
-"filter": [  ],
-"id": "anim 4",
-"position": Vector2( 798, 112 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 10 ),
-"filter": [  ],
-"id": "Throwing",
-"position": Vector2( 297, 5 ),
+"id": "Doge_Down_Arm",
+"position": Vector2( 480, 351 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -350,36 +261,24 @@ data = {
 "position": Vector2( 906, 35 ),
 "type": "mix"
 }, {
-"id": "Doge_Dow",
-"mix": 1.0,
-"position": Vector2( 671, 350 ),
-"type": "mix"
-}, {
-"blend": 0.0,
-"filter": [ NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees") ],
-"id": "blend_walk",
-"position": Vector2( 307, 217.998 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 11 ),
+"animation": ExtResource( 6 ),
 "filter": [  ],
-"id": "Walk_Bein ",
-"position": Vector2( 293, 108 ),
+"id": "anim 2",
+"position": Vector2( 591, 5 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 11 ),
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
 "filter": [  ],
-"id": "Walk_Bein",
-"position": Vector2( 5, 424 ),
-"type": "animation"
+"id": "oneshot_dodge_up",
+"mix": false,
+"position": Vector2( 1098.96, 218.001 ),
+"type": "oneshot"
 }, {
-"animation": ExtResource( 12 ),
-"filter": [  ],
-"id": "Doge_Down_Arm",
-"position": Vector2( 480, 351 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 10 ),
+"animation": ExtResource( 7 ),
 "filter": [  ],
 "id": "Throwing ",
 "position": Vector2( 252, 347 ),
@@ -396,11 +295,112 @@ data = {
 "position": Vector2( 972.963, 213.005 ),
 "type": "oneshot"
 }, {
+"blend": 0.0,
+"filter": [ NodePath("../Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_H_m:rotation_degrees") ],
+"id": "blend_walk",
+"position": Vector2( 307, 217.998 ),
+"type": "blend2"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "Idle_Arm",
+"position": Vector2( 5, 154 ),
+"type": "animation"
+}, {
+"id": "Walk_mix",
+"mix": 1.0,
+"position": Vector2( 118, 322 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 9 ),
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 798, 112 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "Throwing",
+"position": Vector2( 297, 5 ),
+"type": "animation"
+}, {
+"id": "mix 0",
+"mix": 1.0,
+"position": Vector2( 415, 48 ),
+"type": "mix"
+}, {
+"id": "Doge_Dow",
+"mix": 1.0,
+"position": Vector2( 671, 350 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Walk_Bein ",
+"position": Vector2( 293, 108 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_throw",
+"mix": false,
+"position": Vector2( 608.989, 216 ),
+"type": "oneshot"
+}, {
+"id": "mix 1",
+"mix": 1.0,
+"position": Vector2( 380, 347 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 10 ),
+"filter": [  ],
+"id": "Idle_Bein ",
+"position": Vector2( 251, 452 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 11 ),
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 1026, 361 ),
+"type": "animation"
+}, {
+"id": "Idle_mix",
+"mix": 1.0,
+"position": Vector2( 110, 132 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 12 ),
+"filter": [  ],
+"id": "anim 3",
+"position": Vector2( 800, 6 ),
+"type": "animation"
+}, {
 "animation": ExtResource( 13 ),
 "filter": [  ],
-"id": "Doge_Down-Bein",
-"position": Vector2( 473, 462 ),
+"id": "Walk_Hand",
+"position": Vector2( 5, 322 ),
 "type": "animation"
+}, {
+"animation": ExtResource( 10 ),
+"filter": [  ],
+"id": "Idle_Bein",
+"position": Vector2( 5, 50 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 439.016, 216 ),
+"type": "oneshot"
 } ]
 }
 
@@ -411,18 +411,18 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Doge_Down_Arm = ExtResource( 12 )
-anims/Doge_Down_Bein = ExtResource( 13 )
-anims/Doge_Up_Arm = ExtResource( 6 )
+anims/Doge_Down_Arm = ExtResource( 5 )
+anims/Doge_Down_Bein = ExtResource( 3 )
+anims/Doge_Up_Arm = ExtResource( 12 )
 anims/Doge_Up_Bein = SubResource( 1 )
-anims/Hit-Arm = ExtResource( 5 )
+anims/Hit-Arm = ExtResource( 6 )
 anims/Hit-Bein = ExtResource( 2 )
 anims/Idle_Arm = ExtResource( 8 )
-anims/Idle_Bein = ExtResource( 3 )
-anims/Reset_Animation = ExtResource( 4 )
-anims/Throwing = ExtResource( 10 )
-anims/Walk_Arm = ExtResource( 7 )
-anims/Walk_Bein = ExtResource( 11 )
+anims/Idle_Bein = ExtResource( 10 )
+anims/Reset_Animation = ExtResource( 11 )
+anims/Throwing = ExtResource( 7 )
+anims/Walk_Arm = ExtResource( 13 )
+anims/Walk_Bein = ExtResource( 4 )
 blend_times = [  ]
 
 [node name="Charakter_Sprites" type="Node2D" parent="." index="1"]
@@ -542,8 +542,8 @@ __meta__ = {
 [node name="Ch1_Ha_b" type="Sprite" parent="Charakter_Sprites/Ch1_T/Head&Arms/Ch1_H/Ch1_Ha_f" index="0"]
 
 position = Vector2( 147.004, 356.487 )
-rotation = 4.65661e-010
-scale = Vector2( 1e-005, 1e-005 )
+rotation = 4.65661e-10
+scale = Vector2( 1e-05, 1e-05 )
 z_index = -5
 texture = ExtResource( 22 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]

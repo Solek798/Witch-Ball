@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player/Controlls.gd" type="Script" id=1]
 
-[node name="Controlls" type="Node"]
+[node name="Controlls" type="Node" index="0"]
 
 script = ExtResource( 1 )
 prefere_controller_mode = true
@@ -10,5 +10,7 @@ movement_x_axis = 0
 movement_y_axis = 1
 aim_x_axis = 2
 aim_y_axis = 3
+movement_tolerance = 0.3
+aim_tolerance = 0.3
 
 
