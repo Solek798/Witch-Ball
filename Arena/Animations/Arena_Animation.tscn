@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Arena/Animations/Colision_Stone.tres" type="Animation" id=1]
-[ext_resource path="res://Arena/Animations/Colision_Enviorment.tres" type="Animation" id=2]
-[ext_resource path="res://Arena/Animations/Eyes.tres" type="Animation" id=3]
-[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=4]
+[ext_resource path="res://Arena/Animations/Eyes.tres" type="Animation" id=1]
+[ext_resource path="res://Arena/Animations/Butterfly.tres" type="Animation" id=2]
+[ext_resource path="res://Arena/Animations/Colision_Enviorment.tres" type="Animation" id=3]
+[ext_resource path="res://Arena/Animations/Colision_Stone.tres" type="Animation" id=4]
 [ext_resource path="res://Arena/Animations/PNGs/Stone.png" type="Texture" id=5]
 [ext_resource path="res://Arena/Animations/PNGs/Leaf.png" type="Texture" id=6]
 [ext_resource path="res://Arena/Animations/PNGs/Eyes.png" type="Texture" id=7]
@@ -13,10 +13,10 @@
 
 resource_name = "Butterfly"
 length = 0.7
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Butterfly_Sprite/Butterfly:position")
+tracks/0/path = NodePath("Node2D/Butterfly:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -28,7 +28,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1789.87, 216.3 ), Vector2( -1755.1, 133.102 ), Vector2( -1737.59, 174.042 ), Vector2( -1790.35, 149.664 ), Vector2( -1826.75, 150.719 ), Vector2( -1829.39, 200.536 ), Vector2( -1825.03, 281.648 ), Vector2( -1789.87, 216.3 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Butterfly_Sprite/Butterfly:rotation_degrees")
+tracks/1/path = NodePath("Node2D/Butterfly:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -40,7 +40,7 @@ tracks/1/keys = {
 "values": [ -29.8917, -19.5495, -46.5852, -70.448, -22.5792, -70.599, -6.89266, -29.8917 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Butterfly_Sprite/Butterfly:scale")
+tracks/2/path = NodePath("Node2D/Butterfly:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -132,11 +132,102 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Radial Accel" ]
 
-[node name="Animation_Backround" type="Sprite" index="0"]
+[node name="Arena_Effect" type="Node2D" index="0"]
 
-_sections_unfolded = [ "Animation", "Transform" ]
+scale = Vector2( -1789.34, 216.317 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+[node name="AnimationTreeArea" type="AnimationTreePlayer" parent="." index="0"]
+
+playback_process_mode = 1
+master_player = NodePath("")
+base_path = NodePath("..")
+active = false
+data = {
+"active": false,
+"connections": [ "oneshot 4", "out", 0, "oneshot 3", "oneshot 4", 0, "Butterfly", "oneshot 4", 1, "oneshot 2", "oneshot 3", 0, "Stones", "oneshot 3", 1, "oneshot", "oneshot 2", 0, "Leafs", "oneshot 2", 1, "anim", "oneshot", 0, "Eyes", "oneshot", 1 ],
+"master": NodePath(""),
+"nodes": [ {
+"animation": ExtResource( 1 ),
+"filter": [  ],
+"id": "Eyes",
+"position": Vector2( 37, 177 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 41, 55 ),
+"type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 1314, 19 ),
+"type": "output"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "Butterfly",
+"position": Vector2( 781, 166 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 4",
+"mix": false,
+"position": Vector2( 908, 35 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 3",
+"mix": false,
+"position": Vector2( 631, 50 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 2",
+"mix": false,
+"position": Vector2( 411, 51 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "Leafs",
+"position": Vector2( 284, 190 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Stones",
+"position": Vector2( 510, 193 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.884706,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot",
+"mix": false,
+"position": Vector2( 202, 46 ),
+"type": "oneshot"
+} ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -144,22 +235,17 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Butterfly = SubResource( 1 )
-anims/Colision_Stone = ExtResource( 1 )
-anims/Colision_leaf = ExtResource( 2 )
-anims/Eyes = ExtResource( 3 )
+anims/Colision_Stone = ExtResource( 4 )
+anims/Colision_leaf = ExtResource( 3 )
+anims/Eyes = ExtResource( 1 )
 blend_times = [  ]
-
-[node name="Backround" type="Sprite" parent="." index="1"]
-
-texture = ExtResource( 4 )
 
 [node name="Stone_Particles2d" type="Particles2D" parent="." index="2"]
 
-scale = Vector2( 0.341882, 0.252776 )
 emitting = false
 amount = 4
 lifetime = 2.0
-one_shot = true
+one_shot = false
 preprocess = 0.0
 speed_scale = 5.91
 explosiveness = 0.7
@@ -174,15 +260,14 @@ texture = ExtResource( 5 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
 [node name="Leafs_Particles2D" type="Particles2D" parent="." index="3"]
 
-scale = Vector2( 0.341882, 0.252776 )
 emitting = false
 amount = 7
 lifetime = 2.0
-one_shot = true
+one_shot = false
 preprocess = 0.0
 speed_scale = 6.0
 explosiveness = 0.7
@@ -197,26 +282,27 @@ texture = ExtResource( 6 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
 [node name="Eyes" type="Sprite" parent="." index="4"]
 
-scale = Vector2( 0.341882, 0.227648 )
+position = Vector2( 449.007, -762.132 )
+scale = Vector2( 0.341882, 0.113835 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Butterfly_Sprite" type="Sprite" parent="." index="5"]
-
-editor/display_folded = true
-position = Vector2( 1789.87, -216.3 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Butterfly" type="Sprite" parent="Butterfly_Sprite" index="0"]
+[node name="Node2D" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 1826.75, -150.719 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Butterfly" type="Sprite" parent="Node2D" index="0"]
 
 position = Vector2( -1789.87, 216.3 )
 rotation = -0.521709
 scale = Vector2( 5.61534e-007, 0.470875 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 
