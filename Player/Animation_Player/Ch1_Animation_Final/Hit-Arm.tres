@@ -151,7 +151,7 @@ tracks/11/keys = {
 "values": [ -0.0625245, -0.0625245 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:position")
+tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -159,11 +159,11 @@ tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 147.004, 356.487 ), Vector2( 147.004, 356.487 ) ]
+"update": 1,
+"values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
+tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -172,10 +172,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 2.66804e-008, 2.66804e-008 ]
+"values": [ -0.0625245, -0.0625245 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:visible")
+tracks/14/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -183,7 +183,19 @@ tracks/14/enabled = true
 tracks/14/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
+"update": 0,
+"values": [ Vector2( 147.004, 356.487 ), Vector2( 147.004, 356.487 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 2.66804e-008, 2.66804e-008 ]
 }
 
