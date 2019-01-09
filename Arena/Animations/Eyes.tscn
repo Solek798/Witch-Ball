@@ -11,7 +11,7 @@ length = 0.7
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Butterfly:position")
+tracks/0/path = NodePath("Sprite/Butterfly:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1789.87, 216.3 ), Vector2( -1755.1, 133.102 ), Vector2( -1737.59, 174.042 ), Vector2( -1790.35, 149.664 ), Vector2( -1826.75, 150.719 ), Vector2( -1829.39, 200.536 ), Vector2( -1825.03, 281.648 ), Vector2( -1789.87, 216.3 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Butterfly:rotation_degrees")
+tracks/1/path = NodePath("Sprite/Butterfly:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -35,7 +35,7 @@ tracks/1/keys = {
 "values": [ -29.8917, -19.5495, -46.5852, -70.448, -22.5792, -70.599, -6.89266, -29.8917 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Butterfly:scale")
+tracks/2/path = NodePath("Sprite/Butterfly:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -101,9 +101,8 @@ tracks/3/keys = {
 "values": [ Vector2( 0.341882, -0.00130238 ), Vector2( 0.341882, 0.341882 ), Vector2( 0.341882, -0.00130239 ) ]
 }
 
-[node name="Eyes" type="Sprite" index="0"]
+[node name="vftilö<cla" type="Sprite" index="0"]
 
-position = Vector2( 580.4, 436.127 )
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
@@ -123,15 +122,22 @@ texture = ExtResource( 1 )
 
 [node name="Eyes" type="Sprite" parent="." index="2"]
 
-position = Vector2( 449.007, -771.245 )
-scale = Vector2( 0.341882, 0.320935 )
+position = Vector2( 449.007, -764.115 )
+scale = Vector2( 0.341882, 0.158904 )
 texture = ExtResource( 2 )
 
-[node name="Butterfly" type="Sprite" parent="." index="3"]
+[node name="Sprite" type="Sprite" parent="." index="3"]
 
-position = Vector2( -1772.31, 174.288 )
-rotation = -0.430561
-scale = Vector2( 0.0550852, 0.470875 )
+editor/display_folded = true
+position = Vector2( 1789.87, -216.3 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Butterfly" type="Sprite" parent="Sprite" index="0"]
+
+position = Vector2( -1825.97, 264.227 )
+rotation = -0.35911
+scale = Vector2( 0.332873, 0.470875 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 
