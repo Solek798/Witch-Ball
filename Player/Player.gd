@@ -23,12 +23,13 @@ var id
 onready var health = max_health
 onready var is_dead = false
 onready var won_rounds = 0
-onready var mana = start_mana
 # TEMP
 var throw_vector
 
 func _ready():
 	$Controlls.setup(id)
+	$Mana.max_value = max_mana
+	$Mana.value = start_mana
 	
 	if id % 2 == 0:
 		throw_vector = Vector2(-1, 0)
@@ -68,7 +69,7 @@ func _process(delta):
 
 func throw(movement):
 	# Don't throw while ThrowTimer is running or while you have no mana
-	if $ThrowTimer.time_left > 0 or mana < throw_mana:
+	if $ThrowTimer.time_left > 0 or $Mana.value < throw_mana:
 		return
 	
 	# calculates throm impuls
@@ -84,7 +85,7 @@ func throw(movement):
 	
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
-	mana -= throw_mana
+	$Mana.value -= throw_mana
 	
 	# start Timer for throw delay
 	$ThrowTimer.start()
@@ -92,12 +93,12 @@ func throw(movement):
 	emit_signal("bullet_thrown", bullet)
 
 func dodge(movement):
-	if movement == Vector2(0, 0) or mana < dodge_mana:
+	if movement == Vector2(0, 0) or $Mana.value < dodge_mana:
 		return
 	
 	# if player is not allready dodging, he starts to dodge
 	if $DodgeTimer.is_stopped():
-		mana -= dodge_mana
+		$Mana.value -= dodge_mana
 		$Controlls.lock()
 		$DodgeTimer.start()
 		$Scarlet.play_dodge_down()
@@ -131,4 +132,4 @@ func _on_DodgeTimer_timeout():
 
 
 func _on_ManaTimer_timeout():
-	mana += mana_increase
+	$Mana.value += mana_increase
