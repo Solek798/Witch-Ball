@@ -21,6 +21,7 @@ export var movement_x_axis = 0
 export var movement_y_axis = 1
 export var aim_x_axis = 2
 export var aim_y_axis = 3
+export var movement_tolerance = 0.3
 
 onready var keys = []
 onready var locked_states = []
@@ -36,8 +37,6 @@ func setup(id):
 	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
 		mode = CONTROLLER
 		device = id - 1
-		
-		
 	else:
 		mode = KEYBOARD
 
@@ -77,9 +76,9 @@ func get_movement():
 		x = Input.get_joy_axis(device, movement_x_axis)
 		y = Input.get_joy_axis(device, movement_y_axis)
 		
-		if x < 0.01 and x > -0.01:
+		if x < movement_tolerance and x > -movement_tolerance:
 			x = 0
-		if y < 0.01 and y > -0.01:
+		if y < movement_tolerance and y > -movement_tolerance:
 			y = 0
 	else:
 		if Input.is_action_pressed(keys[Action.UP]):
