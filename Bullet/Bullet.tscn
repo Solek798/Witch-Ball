@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 17.9689
 
-[node name="Bullet" type="RigidBody2D" index="0"]
+[node name="Bullet" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 8
@@ -33,6 +33,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_vertical_guides_": [ -983.436 ]
 }
+speed = 600
 damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
