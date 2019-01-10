@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Backstage/Backstage_Classic.gd" type="Script" id=1]
+[ext_resource path="res://Backstage/backround_game.wav" type="AudioStream" id=2]
+[ext_resource path="res://Backstage/Round_won_indicator.wav" type="AudioStream" id=3]
 
 [node name="Backstage" type="Node"]
 
@@ -12,5 +14,27 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 2 )
+volume_db = -15.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="RoundOverSound" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
+
+[connection signal="finished" from="RoundOverSound" to="." method="_on_RoundOverSound_finished"]
 
 

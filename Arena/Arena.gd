@@ -13,9 +13,9 @@ func _ready():
 
 func set_spawn_time():
 	$SpawnTimer.wait_time = (randi() % (max_spawn_time - min_spawn_time)) + min_spawn_time
-	print($SpawnTimer.wait_time)
 
 func _on_bullet_thrown(bullet):
+	bullet.connect("bullet_destroyed", self, "_on_bullet_destroyed")
 	add_child(bullet)
 
 func _on_player_created(player):
@@ -46,4 +46,5 @@ func _on_SpawnTimer_timeout():
 	
 	set_spawn_time()
 
-
+func _on_bullet_destroyed(sounds):
+	add_child(sounds)

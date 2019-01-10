@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ball_shot.wav-42f8ac4d54b207ca77ef951e8b8cbe54.sample"
+
+[deps]
+
+source_file="res://Bullet/Ball_shot.wav"
+dest_files=[ "res://.import/Ball_shot.wav-42f8ac4d54b207ca77ef951e8b8cbe54.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

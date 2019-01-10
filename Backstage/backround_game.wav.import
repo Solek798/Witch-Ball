@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/backround_game.wav-cbaa1ee2c0a33ce2fb018cf94a9f74af.sample"
+
+[deps]
+
+source_file="res://Backstage/backround_game.wav"
+dest_files=[ "res://.import/backround_game.wav-cbaa1ee2c0a33ce2fb018cf94a9f74af.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
