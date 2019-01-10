@@ -1,19 +1,18 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bullet/Bullet_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bullet/Bullet_Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Scarlet.tscn" type="PackedScene" id=5]
-[ext_resource path="res://icon.png" type="Texture" id=6]
-[ext_resource path="res://Player/Particles Scenen/Aim_Particles.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/Arrow_512_V1.0.png" type="Texture" id=6]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.139, 57.1739 )
+extents = Vector2( 18.7156, 57.1739 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -44,7 +43,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -76,41 +75,34 @@ position = Vector2( 0, -46.7705 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Test" type="Sprite" parent="." index="2"]
+[node name="Aim" type="Node2D" parent="." index="2"]
 
-visible = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Aim" index="0"]
+
+position = Vector2( 100, 0 )
+scale = Vector2( 0.15, 0.1 )
 texture = ExtResource( 6 )
-
-[node name="Aim" type="Sprite" parent="." index="3"]
-
-editor/display_folded = true
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="throw_point" type="Position2D" parent="Aim" index="0"]
-
-position = Vector2( 150, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Aim_Particles" parent="Aim" index="1" instance=ExtResource( 7 )]
-
-[node name="DodgeTimer" type="Timer" parent="." index="4"]
+[node name="DodgeTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 0.1
 one_shot = true
 autostart = false
 
-[node name="Controlls" parent="." index="5" instance=ExtResource( 8 )]
+[node name="Controlls" parent="." index="4" instance=ExtResource( 7 )]
 
-[node name="ThrowTimer" type="Timer" parent="." index="6"]
+[node name="ThrowTimer" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 0.45
 one_shot = true
 autostart = false
 
-[node name="AinimationTween" type="Tween" parent="." index="7"]
+[node name="AinimationTween" type="Tween" parent="." index="6"]
 
 repeat = false
 playback_process_mode = 1
@@ -119,16 +111,16 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Smoke" parent="." index="8" instance=ExtResource( 9 )]
+[node name="Smoke" parent="." index="7" instance=ExtResource( 8 )]
 
-[node name="ManaTimer" type="Timer" parent="." index="9"]
+[node name="ManaTimer" type="Timer" parent="." index="8"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
 
-[node name="Mana" type="ProgressBar" parent="." index="10"]
+[node name="Mana" type="ProgressBar" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
