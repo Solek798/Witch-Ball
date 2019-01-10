@@ -5,7 +5,6 @@ export(PackedScene) var bullet_fast_template
 export(PackedScene) var bullet_big_template
 export(int) var movement_speed 
 export(float) var aim_speed
-export(int) var bullet_speed
 export(int) var max_health
 export(float) var dodge_multiplier
 export(int) var max_mana

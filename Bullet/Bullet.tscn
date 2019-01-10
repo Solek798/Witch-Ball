@@ -33,7 +33,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_vertical_guides_": [ -983.436 ]
 }
-speed = 600
+speed = 1250
 damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]

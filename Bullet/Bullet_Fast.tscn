@@ -29,7 +29,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-speed = 900
+speed = 1750
 damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
