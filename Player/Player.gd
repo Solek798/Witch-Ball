@@ -105,8 +105,8 @@ func throw(movement):
 	
 	if next_bullet != bullet_template:
 		next_bullet = bullet_template
-		fast_shot = false
-		big_shot = false
+		set_fast_shot(false)
+		set_big_shot(false)
 	
 	# start Timer for throw delay
 	$ThrowTimer.start()
@@ -152,14 +152,18 @@ func increase_mana(ammount):
 func set_big_shot(new_value):
 	if new_value:
 		fast_shot = false
+		$Special/Fast.visible = false
 	
 	big_shot = new_value
+	$Special/Big.visible = new_value
 
 func set_fast_shot(new_value):
 	if new_value:
 		big_shot = false
+		$Special/Big.visible = false
 	
 	fast_shot = new_value
+	$Special/Fast.visible = new_value
 
 func _on_round_finished():
 	reset()

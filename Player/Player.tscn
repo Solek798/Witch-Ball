@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Player/Arrow_512_V1.0.png" type="Texture" id=6]
 [ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=8]
+[ext_resource path="res://PickUP/Fast_PickUp.png" type="Texture" id=9]
+[ext_resource path="res://PickUP/Big_PickUp.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -128,7 +130,7 @@ anchor_bottom = 0.0
 margin_left = -50.0
 margin_top = 15.0
 margin_right = 50.0
-margin_bottom = 31.0
+margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -146,7 +148,26 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Special" type="Node2D" parent="." index="10"]
+
+position = Vector2( -62, 25 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Fast" type="Sprite" parent="Special" index="0"]
+
+visible = false
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Big" type="Sprite" parent="Special" index="1"]
+
+visible = false
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
