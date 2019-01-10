@@ -113,7 +113,6 @@ func get_aim():
 		#	aim.x = 0
 		#if aim.y < aim_tolerance and aim.y > -aim_tolerance:
 		#	aim.y = 0
-		print(aim.length())
 		if aim.length() < aim_tolerance:
 			aim.x = 0
 			aim.y = 0

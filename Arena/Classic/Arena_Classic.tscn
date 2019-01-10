@@ -1,8 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
-[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=2]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/PickUp_Mana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/PickUp_Fast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/PickUp_Big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=5]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -124,17 +127,29 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Arena" type="Node2D"]
+[sub_resource type="Curve2D" id=25]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
+}
+
+[node name="Arena" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+pickup_mana_template = ExtResource( 2 )
+pickup_fast_template = ExtResource( 3 )
+pickup_big_template = ExtResource( 4 )
+min_spawn_time = 10
+max_spawn_time = 20
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 z_index = -10
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
@@ -143,7 +158,6 @@ editor/display_folded = true
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -193,7 +207,7 @@ shape = SubResource( 4 )
 position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
-[node name="Position" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Position" parent="." index="2" instance=ExtResource( 6 )]
 
 [node name="Stone_Areas" type="Node2D" parent="." index="3"]
 
@@ -445,5 +459,32 @@ position = Vector2( 1812.43, 278.246 )
 rotation = -0.336242
 scale = Vector2( 4.66024, 27.9107 )
 shape = SubResource( 24 )
+
+[node name="PickUp_Spawn" type="Path2D" parent="." index="6"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 965.891, 205.723 )
+curve = SubResource( 25 )
+
+[node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]
+
+position = Vector2( 1.50659, 731.846 )
+rotation = -1.58092
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="SpawnTimer" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
 

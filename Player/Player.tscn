@@ -44,7 +44,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -157,9 +157,9 @@ rounded = false
 percent_visible = false
 _sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
 

@@ -2,6 +2,7 @@ extends Node
 
 
 func _ready():
+	randomize()
 	$Menu.connect("match_instantiated", self, "_on_match_instantiated")
 
 func _on_match_instantiated(new_match):
