@@ -10,7 +10,9 @@
 custom_solver_bias = 0.0
 radius = 17.9689
 
-[node name="Bullet" type="RigidBody2D"]
+[node name="Bullet" type="RigidBody2D" groups=[
+"Bullet",
+]]
 
 input_pickable = false
 collision_layer = 8
@@ -62,7 +64,6 @@ area_mask = 1
 
 [node name="Collide" type="AudioStreamPlayer2D" parent="." index="3"]
 
-scale = Vector2( 1, 1 )
 stream = ExtResource( 4 )
 volume_db = 0.0
 pitch_scale = 1.0

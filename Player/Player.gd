@@ -93,7 +93,11 @@ func throw(movement):
 	var bullet = next_bullet.instance()
 	bullet.position = throw_point_position
 	bullet.own_player = self
-	var impulse = throw_vector.rotated($Aim.rotation) * bullet.speed
+	var impulse
+	if id % 2 == 0:
+		impulse = throw_vector.rotated(-$Aim.rotation) * bullet.speed
+	else:
+		impulse = throw_vector.rotated($Aim.rotation) * bullet.speed
 	
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
