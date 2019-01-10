@@ -6,6 +6,10 @@ signal player_won_round(player)
 onready var players = []
 onready var match_winner = null
 
+
+func _ready():
+	$Music.play()
+
 func _on_player_created(player):
 	players.append(player)
 
@@ -29,3 +33,6 @@ func update_round_state():
 			pass
 		else:
 			emit_signal("round_finished")
+
+func _on_AudioStreamPlayer_finished():
+	$Music.play()

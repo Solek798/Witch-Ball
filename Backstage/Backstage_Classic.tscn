@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Backstage/Backstage_Classic.gd" type="Script" id=1]
+[ext_resource path="res://Backstage/Background.wav" type="AudioStream" id=2]
 
-[node name="Backstage" type="Node"]
+[node name="Backstage" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -12,5 +13,16 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 2 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="finished" from="Music" to="." method="_on_AudioStreamPlayer_finished"]
 
 
