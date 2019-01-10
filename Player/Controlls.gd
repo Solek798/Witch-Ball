@@ -13,7 +13,8 @@ const FORMAT_STRINGS = [
 	"player%d_throw",
 	"player%d_dodge",
 	"player%d_aim",
-	"player%d_move"
+	"player%d_move",
+	"player%d_throw_special"
 ]
 
 export var prefere_controller_mode = true
@@ -58,7 +59,7 @@ func state(action):
 			return get_movement()
 		Action.AIM:
 			return get_aim()
-		Action.THROW, Action.DODGE:
+		Action.THROW, Action.DODGE, Action.THROW_SPECIAL:
 			return Input.is_action_just_pressed(keys[action])
 		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT, Action.AIM_UP, Action.AIM_DOWN:
 			return Input.is_action_pressed(keys[action])
@@ -108,11 +109,7 @@ func get_aim():
 		if device == 1:
 			aim.x *= -1
 		aim.y = Input.get_joy_axis(device, aim_y_axis)
-		# Workaround for inaccurate Controller Input
-		#if aim.x < aim_tolerance and aim.x > -aim_tolerance:
-		#	aim.x = 0
-		#if aim.y < aim_tolerance and aim.y > -aim_tolerance:
-		#	aim.y = 0
+		
 		if aim.length() < aim_tolerance:
 			aim.x = 0
 			aim.y = 0

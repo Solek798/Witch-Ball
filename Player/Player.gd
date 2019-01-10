@@ -25,6 +25,8 @@ var id
 var next_bullet
 onready var health = max_health
 onready var is_dead = false
+onready var fast_shot = false setget set_fast_shot
+onready var big_shot = false setget set_big_shot
 onready var won_rounds = 0
 # TEMP
 var throw_vector
@@ -70,6 +72,13 @@ func _process(delta):
 		throw(movement)
 	if $Controlls.state(Action.DODGE):
 		dodge(movement)
+	if $Controlls.state(Action.THROW_SPECIAL):
+		if fast_shot:
+			next_bullet = bullet_fast_template
+			throw(movement)
+		if big_shot:
+			next_bullet = bullet_big_template
+			throw(movement)
 
 func throw(movement):
 	# Don't throw while ThrowTimer is running or while you have no mana
@@ -79,7 +88,6 @@ func throw(movement):
 	# calculates throm impuls
 	var player_position = self.global_position
 	var throw_point_position = $Scarlet.get_throw_point()
-	#var impulse = (throw_point_position - player_position) * bullet_speed
 	
 	
 	# instanciates and sets a new bullet to thropoint position
@@ -91,6 +99,11 @@ func throw(movement):
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
 	$Mana.value -= throw_mana
+	
+	if next_bullet != bullet_template:
+		next_bullet = bullet_template
+		fast_shot = false
+		big_shot = false
 	
 	# start Timer for throw delay
 	$ThrowTimer.start()
@@ -129,12 +142,26 @@ func reset():
 	is_dead = false
 	emit_signal("player_reseted", self)
 
+func increase_mana(ammount):
+	$Mana.value += ammount
+
+func set_big_shot(new_value):
+	if new_value:
+		fast_shot = false
+	
+	big_shot = new_value
+
+func set_fast_shot(new_value):
+	if new_value:
+		big_shot = false
+	
+	fast_shot = new_value
+
 func _on_round_finished():
 	reset()
 
 func _on_DodgeTimer_timeout():
 	$Scarlet.play_dodge_up()
 
-
 func _on_ManaTimer_timeout():
-	$Mana.value += mana_increase
+	increase_mana(mana_increase)
