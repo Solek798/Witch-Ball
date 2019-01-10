@@ -140,6 +140,7 @@ func take_damage(ammount):
 func reset():
 	# all values that could have been changed are reset to default
 	health = max_health
+	$Mana.value = start_mana
 	$Aim.rotation = 0
 	$Controlls.active = true
 	is_dead = false
