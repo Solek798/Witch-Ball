@@ -293,9 +293,21 @@ polygon = PoolVector2Array( -1907.02, 519.644, -1739.17, 155.682, -1817.24, 81.3
 build_mode = 0
 polygon = PoolVector2Array( 1172.79, -893.155, 1340.64, -814.883, 1325.03, -1045.78 )
 
+<<<<<<< working copy
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Needel_Areas/CollisionPoly_Needl_Area2D" index="4"]
 
 build_mode = 0
 polygon = PoolVector2Array( -1727.46, -294.378, -1723.56, -396.131, -1914.83, -474.403 )
+=======
+[node name="PickUp_Big" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 757.985, 585.198 )
+
+[node name="PickUp_Big2" parent="." index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 1184.34, 580.681 )
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+>>>>>>> destination
 
 
