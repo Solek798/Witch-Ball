@@ -14,9 +14,9 @@ radius = 39.5678
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 101.177
+radius = 108.181
 
-[node name="Bullet_Big" type="RigidBody2D" groups=[
+[node name="Bullet_Big" type="RigidBody2D" index="0" groups=[
 "Bullet",
 ]]
 
@@ -55,8 +55,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
+collision_mask = 8
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
