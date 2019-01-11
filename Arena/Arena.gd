@@ -13,7 +13,6 @@ func _ready():
 
 func set_spawn_time():
 	$SpawnTimer.wait_time = (randi() % (max_spawn_time - min_spawn_time)) + min_spawn_time
-	print($SpawnTimer.wait_time)
 
 func _on_bullet_thrown(bullet):
 	bullet.connect("bullet_destroyed", self, "_on_bullet_destroyed")
@@ -49,3 +48,14 @@ func _on_SpawnTimer_timeout():
 
 func _on_bullet_destroyed(sound_effect):
 	add_child(sound_effect)
+
+func _on_round_finished():
+	
+	
+	for child in get_children():
+		if child.is_in_group("Bullet") or child.is_in_group("PickUp"):
+			child.queue_free()
+	
+	$SpawnTimer.stop()
+	set_spawn_time()
+	$SpawnTimer.start()
