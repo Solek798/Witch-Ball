@@ -163,8 +163,8 @@ pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
 animation_template = ExtResource( 5 )
-min_spawn_time = 10
-max_spawn_time = 20
+min_spawn_time = 6
+max_spawn_time = 10
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
