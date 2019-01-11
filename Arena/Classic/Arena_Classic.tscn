@@ -1,11 +1,12 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/PickUp_Mana.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PickUP/PickUp_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PickUP/PickUp_Big.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=5]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Arena/Animations/Arena_Animation.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=6]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,6 +32,26 @@ extents = Vector2( 457.284, 23.3026 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 1001.2, 26.6879 )
+
+[sub_resource type="RectangleShape2D" id=26]
+
+custom_solver_bias = 0.0
+extents = Vector2( 710.443, 34.175 )
+
+[sub_resource type="RectangleShape2D" id=27]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1197.81, 22.7575 )
+
+[sub_resource type="RectangleShape2D" id=28]
+
+custom_solver_bias = 0.0
+extents = Vector2( 44.252, 713.883 )
+
+[sub_resource type="RectangleShape2D" id=29]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1163.57, 26.179 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -134,13 +155,14 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
 }
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
+animation_template = ExtResource( 5 )
 min_spawn_time = 10
 max_spawn_time = 20
 
@@ -149,10 +171,12 @@ max_spawn_time = 20
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 z_index = -10
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
@@ -205,12 +229,49 @@ shape = SubResource( 4 )
 position = Vector2( 953.173, 978.37 )
 shape = SubResource( 5 )
 
-[node name="Position" parent="." index="2" instance=ExtResource( 6 )]
+[node name="Bullet" type="StaticBody2D" parent="Boundary" index="2"]
 
-[node name="Stone_Areas" type="Node2D" parent="." index="3"]
+input_pickable = false
+collision_layer = 16
+collision_mask = 16
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
-[node name="Area2D" type="Area2D" parent="Stone_Areas" index="0"]
+[node name="Left" type="CollisionShape2D" parent="Boundary/Bullet" index="0"]
 
+position = Vector2( -188.457, 529.301 )
+rotation = 1.5708
+scale = Vector2( 1, 1 )
+shape = SubResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Top" type="CollisionShape2D" parent="Boundary/Bullet" index="1"]
+
+position = Vector2( 972.133, -201.863 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 27 )
+
+[node name="Right" type="CollisionShape2D" parent="Boundary/Bullet" index="2"]
+
+position = Vector2( 2125.69, 533.74 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 28 )
+
+[node name="Bottom" type="CollisionShape2D" parent="Boundary/Bullet" index="3"]
+
+position = Vector2( 999.517, 1211.18 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 29 )
+
+[node name="Position" parent="." index="2" instance=ExtResource( 7 )]
+
+[node name="Stones" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -219,106 +280,104 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="0"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Stones" index="0"]
 
 position = Vector2( 183.855, 143.306 )
 rotation = -1.83405
 scale = Vector2( 6.51667, 5.34836 )
 shape = SubResource( 6 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="1"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Stones" index="1"]
 
 position = Vector2( 166.956, 284.893 )
 rotation = -1.73738
 scale = Vector2( 5.1384, 7.17266 )
 shape = SubResource( 7 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="2"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Stones" index="2"]
 
 position = Vector2( 133.608, 467.173 )
 rotation = -2.52845
 scale = Vector2( 4.46964, 4.39536 )
 shape = SubResource( 8 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="3"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Stones" index="3"]
 
 position = Vector2( 206.261, 1010.12 )
 rotation = -1.58151
 scale = Vector2( 6.23645, 6.52341 )
 shape = SubResource( 9 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="4"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Stones" index="4"]
 
 position = Vector2( 700.135, 1009.88 )
 rotation = -1.58151
 scale = Vector2( 6.23645, 11.2968 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="5"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Stones" index="5"]
 
 position = Vector2( 986.494, 1019.62 )
 rotation = -1.58151
 scale = Vector2( 6.23645, 11.2968 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="6"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Stones" index="6"]
 
 position = Vector2( 1602.07, 1000.14 )
 rotation = -1.58151
 scale = Vector2( 6.23645, 11.2968 )
 shape = SubResource( 12 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="7"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Stones" index="7"]
 
 position = Vector2( 1849.74, 408.575 )
 rotation = -1.00238
 scale = Vector2( 4.71575, 4.62437 )
 shape = SubResource( 13 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="8"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stones" index="8"]
 
 position = Vector2( 1748.2, 326.845 )
 rotation = -0.521776
 scale = Vector2( 5.03628, 6.69716 )
 shape = SubResource( 14 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="9"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Stones" index="9"]
 
 position = Vector2( 1674.89, 169.312 )
 scale = Vector2( 4.02967, 3.90106 )
 shape = SubResource( 15 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="10"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stones" index="10"]
 
 position = Vector2( 1512.93, 141.963 )
 scale = Vector2( 5.71513, 3.28833 )
 shape = SubResource( 16 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="11"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stones" index="11"]
 
 position = Vector2( 1095.37, 150.128 )
 scale = Vector2( 5.71513, 3.28833 )
 shape = SubResource( 17 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="12"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stones" index="12"]
 
 position = Vector2( 915.613, 114.841 )
 scale = Vector2( 4.02967, 3.90106 )
 shape = SubResource( 18 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone_Areas/Area2D" index="13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stones" index="13"]
 
 position = Vector2( 576.205, 149.832 )
 scale = Vector2( 4.02967, 3.90106 )
 shape = SubResource( 19 )
 
-[node name="Leaf_Areas" type="Node2D" parent="." index="4"]
+[node name="Leafs" type="Area2D" parent="." index="4"]
 
 editor/display_folded = true
-
-[node name="Area2D" type="Area2D" parent="Leaf_Areas" index="0"]
-
 position = Vector2( -1.52588e-05, 0 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -327,113 +386,109 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="0"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Leafs" index="0"]
 
 position = Vector2( 138.176, 191.104 )
 rotation = -0.184992
 scale = Vector2( 4.7984, 2.62606 )
 shape = SubResource( 20 )
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="1"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Leafs" index="1"]
 
 position = Vector2( 73.8658, 1000.21 )
 rotation = 0.00819565
 scale = Vector2( 6.77201, 6.04167 )
 shape = SubResource( 21 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="2"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Leafs" index="2"]
 
 position = Vector2( 428.611, 1008.1 )
 rotation = 0.00819565
 scale = Vector2( 15.2594, 6.04167 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="3"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Leafs" index="3"]
 
 position = Vector2( 1190.35, 1017.53 )
 rotation = 0.00819565
 scale = Vector2( 7.94896, 6.04167 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="4"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Leafs" index="4"]
 
 position = Vector2( 1339.28, 997.482 )
 rotation = 0.00819565
 scale = Vector2( 7.94896, 6.04167 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="5"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Leafs" index="5"]
 
 position = Vector2( 1824.79, 1003.33 )
 rotation = -0.16355
 scale = Vector2( 9.0508, 4.94148 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="6"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Leafs" index="6"]
 
 position = Vector2( 1882.34, 910.566 )
 rotation = -0.95157
 scale = Vector2( 6.71741, 4.05513 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="7"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Leafs" index="7"]
 
 position = Vector2( 1814.97, 470.565 )
 rotation = -0.214772
 scale = Vector2( 6.71741, 4.05513 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="8"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Leafs" index="8"]
 
 position = Vector2( 1721.37, 230.696 )
 scale = Vector2( 5.58671, 3.21236 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="9"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Leafs" index="9"]
 
 position = Vector2( 1429.99, 127.342 )
 scale = Vector2( 4.60903, 3.14252 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="10"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Leafs" index="10"]
 
 position = Vector2( 1273.91, 121.057 )
 scale = Vector2( 5.90096, 3.56153 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="11"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Leafs" index="11"]
 
 position = Vector2( 1055.33, 91.0285 )
 scale = Vector2( 5.90096, 3.56153 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="12"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Leafs" index="12"]
 
 position = Vector2( 809.051, 112.677 )
 scale = Vector2( 6.57625, 4.46937 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="13"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Leafs" index="13"]
 
 position = Vector2( 673.106, 110.233 )
 scale = Vector2( 5.20262, 2.4791 )
 shape = SubResource( 22 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf_Areas/Area2D" index="14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leafs" index="14"]
 
 position = Vector2( 407.388, 118.264 )
 scale = Vector2( 12.7796, 3.42186 )
 shape = SubResource( 22 )
 
-[node name="Needel_Areas" type="Node2D" parent="." index="5"]
+[node name="Needles" type="Area2D" parent="." index="5"]
 
 editor/display_folded = true
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
-
-[node name="Area2D" type="Area2D" parent="Needel_Areas" index="0"]
-
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -442,14 +497,14 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Needel_Areas/Area2D" index="0"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Needles" index="0"]
 
 position = Vector2( -1845.66, 192.391 )
 rotation = 0.174339
 scale = Vector2( 6.49806, 29.0539 )
 shape = SubResource( 23 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Needel_Areas/Area2D" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Needles" index="1"]
 
 position = Vector2( 1812.43, 278.246 )
 rotation = -0.336242
@@ -480,6 +535,12 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
+
+[connection signal="body_entered" from="Leafs" to="." method="_on_Leafs_body_entered"]
+
+[connection signal="body_entered" from="Needles" to="." method="_on_Needles_body_entered"]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 

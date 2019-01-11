@@ -3,6 +3,7 @@ extends Node2D
 export(PackedScene) var pickup_mana_template
 export(PackedScene) var pickup_fast_template
 export(PackedScene) var pickup_big_template
+export(PackedScene) var animation_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
 
@@ -60,3 +61,12 @@ func _on_round_finished():
 	$SpawnTimer.stop()
 	set_spawn_time()
 	$SpawnTimer.start()
+
+func _on_Stones_body_entered(body):
+	pass
+
+func _on_Leafs_body_entered(body):
+	pass # replace with function body
+
+func _on_Needles_body_entered(body):
+	pass # replace with function body
