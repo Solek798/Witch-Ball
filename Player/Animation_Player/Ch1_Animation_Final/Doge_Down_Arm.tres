@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ Vector2( -51.8834, 93.3846 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:position")
+tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -148,19 +148,19 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 147.004, 356.487 ) ]
+"values": [ Vector2( -38.0608, -65.9989 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
+tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 2.66804e-008 ]
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Head:position")
@@ -169,30 +169,6 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -38.0608, -65.9989 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:visible")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.05 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("../Charakter/Torso/Head_Arms/Head:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
