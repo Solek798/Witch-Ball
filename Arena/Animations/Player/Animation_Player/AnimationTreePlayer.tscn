@@ -10,7 +10,7 @@
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Idle_Bein.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation_Player/Ch1_Animation_Final/Walk_Arm.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation_Player/ChXX_Animation/Doge/Doge_Sprint_Arm.tres" type="Animation" id=10]
-[ext_resource path="res://Arena/Player/Animation_Player/Ch2_Animationen_Final/Doge_Down_Gesamt_Bugs.tres" type="Animation" id=11]
+[ext_resource path="res://Arena/Animations/Player/Animation_Player/Ch2_Animationen_Final/Doge_Down_Gesamt_Bugs.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation_Player/Reset_Animation.tres" type="Animation" id=12]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_T.png" type="Texture" id=13]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_A_l.png" type="Texture" id=14]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_l.png" type="Texture" id=25]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_l.png" type="Texture" id=26]
 [ext_resource path="res://Player/Animation_Player/Ch1_Images/Ch1_Images/Ch1_L_d_lw.png" type="Texture" id=27]
+
 
 
 [sub_resource type="Animation" id=1]
