@@ -92,10 +92,11 @@ player2_throw_special=[ Object(InputEventJoypadButton,"resource_local_to_scene":
 
 [layer_names]
 
-2d_physics/layer_1="Borders"
+2d_physics/layer_1="Player_Borders"
 2d_physics/layer_2="Median"
 2d_physics/layer_3="Players"
 2d_physics/layer_4="Projectiles"
+2d_physics/layer_5="Bullet_Border"
 
 [rendering]
 

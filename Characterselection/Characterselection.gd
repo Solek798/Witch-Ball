@@ -32,7 +32,7 @@ func _on_Scarlett_pressed():
 	match current_mode:
 		PLAYER_1:
 			$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.player_1 = true
-			player_2_selection = scarlett
+			player_1_selection = scarlett
 			switch_player()
 		PLAYER_2:
 			$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.player_2 = true

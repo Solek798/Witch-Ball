@@ -46,8 +46,9 @@ func _on_SpawnTimer_timeout():
 	
 	set_spawn_time()
 
-func _on_bullet_destroyed(sound_effect):
+func _on_bullet_destroyed(sound_effect, vfx_effect):
 	add_child(sound_effect)
+	add_child(vfx_effect)
 
 func _on_round_finished():
 	

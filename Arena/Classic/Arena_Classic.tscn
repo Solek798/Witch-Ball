@@ -134,7 +134,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
 }
 
-[node name="Arena" type="Node2D"]
+[node name="Arena" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -153,8 +153,6 @@ texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
 
@@ -210,8 +208,6 @@ shape = SubResource( 5 )
 [node name="Position" parent="." index="2" instance=ExtResource( 6 )]
 
 [node name="Stone_Areas" type="Node2D" parent="." index="3"]
-
-editor/display_folded = true
 
 [node name="Area2D" type="Area2D" parent="Stone_Areas" index="0"]
 
@@ -484,14 +480,6 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
-
-[node name="PickUp_Big" parent="." index="8" instance=ExtResource( 4 )]
-
-position = Vector2( 757.985, 585.198 )
-
-[node name="PickUp_Big2" parent="." index="9" instance=ExtResource( 4 )]
-
-position = Vector2( 1184.34, 580.681 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
