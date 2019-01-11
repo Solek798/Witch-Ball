@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/this_will_be_a_wicked_game_Choosen.wav-b2b2145a7d0637ec8422233f2d5771ac.sample"
+
+[deps]
+
+source_file="res://Characterselection/this_will_be_a_wicked_game_Choosen.wav"
+dest_files=[ "res://.import/this_will_be_a_wicked_game_Choosen.wav-b2b2145a7d0637ec8422233f2d5771ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

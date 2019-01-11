@@ -38,6 +38,7 @@ func _on_Scarlett_pressed():
 			$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.player_2 = true
 			player_2_selection = scarlett
 			end_selection()
+	$CenterContainer/VBoxContainer/Characters/Scarlett/Sound.play()
 
 func _on_Jasmine_pressed():
 	match current_mode:
@@ -49,6 +50,7 @@ func _on_Jasmine_pressed():
 			$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.player_2 = true
 			player_2_selection = jasmine
 			end_selection()
+	$CenterContainer/VBoxContainer/Characters/Jasmine/Sound.play()
 
 func _on_Play_pressed():
 	var new_match = match_template.instance()
