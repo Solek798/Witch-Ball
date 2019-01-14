@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Characterselection/Characterselection.gd" type="Script" id=1]
 [ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/Animation/Scarlet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/Animation/Jasmin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characterselection/Character Selection Scarlett_normal_200.png" type="Texture" id=5]
 [ext_resource path="res://Characterselection/Character Selection Scarlett_normal_200_hovering.png" type="Texture" id=6]
 [ext_resource path="res://Characterselection/Selection.tscn" type="PackedScene" id=7]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Characterselection/Button_Quadratisch_ResumePlaying_normal.png" type="Texture" id=14]
 [ext_resource path="res://Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=15]
 [ext_resource path="res://Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=16]
+
+
 
 [node name="Characterselection" type="Control" index="0"]
 
