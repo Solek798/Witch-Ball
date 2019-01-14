@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tiemforsomeentchantment_choosen.wav-7a284b897b662beb45f05b5de4c03266.sample"
+
+[deps]
+
+source_file="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav"
+dest_files=[ "res://.import/tiemforsomeentchantment_choosen.wav-7a284b897b662beb45f05b5de4c03266.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
