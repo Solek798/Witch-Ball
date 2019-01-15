@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://Player/Particles Scenen/Effeckte_Frame_Explosion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=3]
 [ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=4]
 [ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=5]
@@ -16,7 +16,7 @@ radius = 39.5678
 custom_solver_bias = 0.0
 radius = 108.181
 
-[node name="Bullet_Big" type="RigidBody2D" index="0" groups=[
+[node name="Bullet_Big" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3.png-49b8e39c95c718879a7cc299ea8ed1e8.stex"
+path="res://.import/Explosion_3.png-309cfc7e984ae6ae436063cd2ce8431f.stex"
 
 [deps]
 
-source_file="res://Player/Particles Scenen/explosion/3.png"
-dest_files=[ "res://.import/3.png-49b8e39c95c718879a7cc299ea8ed1e8.stex" ]
+source_file="res://Bullet/Effects/Explosion/Explosion_3.png"
+dest_files=[ "res://.import/Explosion_3.png-309cfc7e984ae6ae436063cd2ce8431f.stex" ]
 
 [params]
 
