@@ -37,10 +37,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15, 0.25, 0.3, 0.35, 0.4, 0.45, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.25, 0.3, 0.35, 0.4, 0.45, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 28.9004, -88.1336, -127.665, -157.26, -117.945, -74.6987, 0.0 ]
+"values": [ 0.0, -88.1336, -127.665, -157.26, -117.945, -74.6987, 0.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
