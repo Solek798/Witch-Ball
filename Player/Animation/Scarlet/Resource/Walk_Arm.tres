@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ Vector2( -51.8834, 93.3846 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head:position")
+tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -148,7 +148,7 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -38.0608, -65.9989 ) ]
+"values": [ Vector2( -128.539, -238.508 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Head:position")
@@ -161,17 +161,5 @@ tracks/12/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -38.0608, -65.9989 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -128.539, -238.508 ) ]
 }
 
