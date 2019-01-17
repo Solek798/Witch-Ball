@@ -52,7 +52,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 62.9178, 47.8245, 62.9178 ]
+"values": [ 21.3357, 25.7409, 21.3357 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
@@ -64,7 +64,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -28.351, -23.907, -28.351 ]
+"values": [ 4.15037, 7.81924, 4.15037 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
