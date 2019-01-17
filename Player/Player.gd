@@ -48,6 +48,13 @@ func _ready():
 	emit_signal("player_created", self)
 
 func _process(delta):
+	# TEMP!
+	# Cheat-shortcuts are going to be removed in final Version
+	if Input.is_action_just_pressed("cheat_fast_bullet"):
+		self.fast_shot = true
+	if Input.is_action_just_pressed("cheat_big_bullet"):
+		self.big_shot = true
+	
 	var movement = $Controlls.get_movement()
 	
 	if movement:
