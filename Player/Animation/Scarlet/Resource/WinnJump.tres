@@ -1,0 +1,129 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "Winning"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 63.0086, 0.0, -17.9076, -17.9076, 11.7627, 63.0086 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -7.04029, -7.04029, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -58.6828, -95.9539, -95.9539, -120.548, -22.6394, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -28.351, 0.0, 21.9809, -17.8489, -1.61965, -28.351 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -0.184765, 0.0, 12.7096, -0.649352, -0.184765 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -27.4674, -107.4, -136.483, -20.9523 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -63.2367, 0.0, 8.52354 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Charakter/Torso/Legs/Leg_l:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -13.9802, -13.9802, 7.36057, -13.9802, -13.9802 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -128.539, -238.508 ), Vector2( -128.539, -238.508 ), Vector2( -117.508, -327.83 ), Vector2( -128.539, -238.508 ), Vector2( -128.539, -238.508 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Charakter/Torso:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
