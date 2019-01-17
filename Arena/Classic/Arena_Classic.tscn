@@ -532,16 +532,11 @@ autostart = false
 
 [node name="AreasArenaColision" type="Node2D" parent="." index="8"]
 
-editor/display_folded = true
-
 [node name="Leaf_Areas" type="Node2D" parent="AreasArenaColision" index="0"]
-
-editor/display_folded = true
 
 [node name="CoolisionPoly_Leaf_Area2D" type="Area2D" parent="AreasArenaColision/Leaf_Areas" index="0"]
 
 editor/display_folded = true
-visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -606,8 +601,6 @@ build_mode = 0
 polygon = PoolVector2Array( 5.88626, 1022.93, 146.144, 1050.2, 161.728, 974.232, 134.456, 904.103, 76.0151, 929.427, 42.8987, 929.427, 11.7303, 935.271 )
 
 [node name="Stone_Areas" type="Node2D" parent="AreasArenaColision" index="1"]
-
-editor/display_folded = true
 
 [node name="CollisonPoly_Stone_Area2D2" type="Area2D" parent="AreasArenaColision/Stone_Areas" index="0"]
 
@@ -687,7 +680,6 @@ polygon = PoolVector2Array( 132.508, 208.659, 206.533, 206.711, 255.233, 191.127
 
 [node name="Needel_Areas" type="Node2D" parent="AreasArenaColision" index="2"]
 
-editor/display_folded = true
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 
