@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=2]
-[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=3]
-[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=4]
+[ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=3]
+[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=4]
+[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -15,8 +16,8 @@ radius = 12.1109
 ]]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 8
+collision_mask = 16
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -33,6 +34,8 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+explosion_template = ExtResource( 2 )
 speed = 1750
 damage = 1
 
@@ -45,12 +48,12 @@ shape = SubResource( 1 )
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -1.4592, 0 )
 scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Shot" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = false
@@ -61,7 +64,7 @@ area_mask = 1
 
 [node name="Collide" type="AudioStreamPlayer2D" parent="." index="3"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false

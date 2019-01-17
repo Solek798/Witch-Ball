@@ -1,2 +1,5 @@
 syntax: glob
 .import/*
+export_presets.cfg
+*.exe
+*.pck

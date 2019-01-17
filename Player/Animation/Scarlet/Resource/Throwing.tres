@@ -1,0 +1,69 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "Throwing"
+length = 0.5
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.41, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -27.8424, 52.7803, -79.2072, -79.2072, -28.351 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.17, 0.31, 0.34, 0.43, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.13617, 60.4925, 59.0717, 59.0717, -27.8367, -27.2439, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15, 0.17, 0.31, 0.34, 0.34, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 8.79008, 8.79008, 8.79008, -0.229341, -0.22935, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15, 0.17, 0.31, 0.34, 0.43, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 62.1404, -35.1721, -51.4557, -51.4557, 0.0, -1.35023, 63.0086 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.27, 0.36, 0.41, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -21.5928, -142.383, -39.0163, -39.0163, -20.9523 ]
+}
+
