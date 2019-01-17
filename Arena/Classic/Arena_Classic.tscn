@@ -155,7 +155,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
 }
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -371,7 +371,7 @@ shape = SubResource( 23 )
 [node name="Leafs" type="Area2D" parent="." index="4"]
 
 editor/display_folded = true
-position = Vector2( -1.52588e-005, 0 )
+position = Vector2( -1.52588e-05, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

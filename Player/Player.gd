@@ -24,6 +24,7 @@ var id
 var selection
 var body
 var next_bullet
+onready var modifiers = []
 onready var health = max_health
 onready var is_dead = false
 onready var fast_shot = false setget set_fast_shot
@@ -63,6 +64,9 @@ func _process(delta):
 	else:
 		body.stop_walk()
 		$Smoke.emitting = false
+	
+	for mod in modifiers:
+		movement += mod.get_impuls()
 	
 	# sets dodge-multiplier if player is dodging
 	# TEMP!
@@ -184,3 +188,6 @@ func _on_DodgeTimer_timeout():
 
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
+
+func _on_pick_up_spawned(impulse, position):
+	print((self.global_position - position).length())

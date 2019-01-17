@@ -44,7 +44,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false

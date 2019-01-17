@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://PickUP/PickUp_Mana.gd" type="Script" id=1]
-[ext_resource path="res://PickUP/Mana_PickUp.png" type="Texture" id=2]
+[ext_resource path="res://PickUP/Impuls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/Mana_PickUp.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -20,6 +21,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+impulse_template = ExtResource( 2 )
 mana_increase = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -28,7 +30,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="DespawnTimer" type="Timer" parent="." index="2"]
 
