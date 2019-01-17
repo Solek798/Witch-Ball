@@ -43,9 +43,9 @@ __meta__ = {
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("")
-active = false
+active = true
 data = {
-"active": false,
+"active": true,
 "connections": [ "oneshot_WinnJump", "out", 0, "Idle_Arm", "Idle", 0, "Idle_bein", "Idle", 1, "doge_a_u", "Doge up", 0, "doge_b_u", "Doge up", 1, "blend_walk", "oneshot_walk_throw", 0, "mix 4", "oneshot_walk_throw", 1, "onesho_doge_down", "oneshot_doge_up", 0, "Doge up", "oneshot_doge_up", 1, "oneshot_walk_throw", "oneshot_idle_throw", 0, "throw_Idle", "oneshot_idle_throw", 1, "Idle", "blend_walk", 0, "Walk", "blend_walk", 1, "Throw", "throw_Idle", 0, "Idle_Bein", "throw_Idle", 1, "oneshot_doge_up", "oneshot_hit", 0, "hit", "oneshot_hit", 1, "Doge_a_d", "doge_Down", 0, "Doge_b_d", "doge_Down", 1, "throw", "mix 4", 0, "waqlk_bein", "mix 4", 1, "hit_arm", "hit", 0, "hit_bein", "hit", 1, "oneshot_hit", "oneshot_hit2", 0, "new_Hit", "oneshot_hit2", 1, "oneshot_idle_throw", "onesho_doge_down", 0, "doge_Down", "onesho_doge_down", 1, "oneshot_hit2", "oneshot_WinnJump", 0, "WinnJump", "oneshot_WinnJump", 1, "Walk_Arm", "Walk", 0, "Walk_Bein", "Walk", 1 ],
 "master": NodePath(""),
 "nodes": [ {
@@ -296,11 +296,12 @@ blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
 
+position = Vector2( 0, -54.0362 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, 0.3481 )
+position = Vector2( 0, 3.37994 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 17 )
 _sections_unfolded = [ "Visibility" ]
@@ -319,7 +320,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 17.7513, -41.9383 )
-rotation = 1.09812
+rotation = 1.01984
 z_index = -5
 texture = ExtResource( 18 )
 offset = Vector2( -17.7513, 41.9383 )
@@ -331,6 +332,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 169.429, -4.91098 )
+rotation = -0.0474699
 z_index = 1
 texture = ExtResource( 19 )
 offset = Vector2( -187.18, 46.8493 )
@@ -343,7 +345,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -114.023, -17.0859 )
-rotation = -0.494818
+rotation = -0.170142
 z_index = 2
 texture = ExtResource( 20 )
 offset = Vector2( 114.023, 17.0859 )
@@ -369,6 +371,7 @@ rotation = -2.39889
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -27.0435, -111.468 )
+rotation = -0.00887881
 z_index = 1
 texture = ExtResource( 22 )
 offset = Vector2( 27.0435, 111.468 )
@@ -381,6 +384,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -104.808, -207.38 )
+rotation = 0.00975403
 z_index = 1
 texture = ExtResource( 23 )
 offset = Vector2( 131.851, 318.848 )
@@ -407,6 +411,7 @@ __meta__ = {
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 24.9636, 233.633 )
+rotation = 0.823564
 z_index = -4
 texture = ExtResource( 25 )
 offset = Vector2( -24.9636, -233.633 )
@@ -429,6 +434,7 @@ __meta__ = {
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -57.0587, 270.543 )
+rotation = -0.437522
 z_index = -1
 texture = ExtResource( 27 )
 offset = Vector2( 57.0587, -270.543 )
@@ -440,6 +446,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 43.0608, 145.589 )
+rotation = 0.519317
 z_index = -1
 texture = ExtResource( 28 )
 offset = Vector2( 13.9972, -416.131 )
