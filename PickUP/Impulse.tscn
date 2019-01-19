@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PickUP/Impulse.gd" type="Script" id=1]
 
-[node name="Impulse" type="Tween"]
+[node name="Impulse" type="Tween" index="0"]
 
 repeat = false
 playback_process_mode = 1

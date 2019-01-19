@@ -88,5 +88,5 @@ func _on_Leafs_body_entered(body):
 func _on_Needles_body_entered(body):
 	pass # replace with function body
 
-func _on_pick_up_spawned(pick_up, position):
-	add_child(pick_up)
+func _on_pick_up_spawned(impulse, position):
+	add_child(impulse)
