@@ -5,7 +5,7 @@ export(PackedScene) var life_template
 func add_life(player_id, ammount):
 	for i in ammount:
 		var new_life = life_template.instance()
-		get_node("Player%d" % player_id).add_child(new_life)
+		get_node("Text%d/Player%d" % [player_id, player_id]).add_child(new_life)
 
 func remove_life(player_id, ammount):
 	for i in ammount:
