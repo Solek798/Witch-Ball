@@ -17,8 +17,6 @@
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=16]
 
-
-
 [node name="Characterselection" type="Control"]
 
 anchor_left = 0.0
@@ -70,6 +68,7 @@ alignment = 0
 
 [node name="Characters" type="HBoxContainer" parent="CenterContainer/VBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -213,6 +212,7 @@ _sections_unfolded = [ "Textures" ]
 
 [node name="Selection" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
