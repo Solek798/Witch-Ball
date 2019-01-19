@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(PackedScene) var bullet_template
 export(PackedScene) var bullet_fast_template
 export(PackedScene) var bullet_big_template
-export(int) var movement_speed 
+export(int) var movement_speed
 export(float) var aim_speed
 export(int) var max_health
 export(float) var dodge_multiplier
@@ -32,6 +32,7 @@ onready var big_shot = false setget set_big_shot
 onready var won_rounds = 0
 # TEMP
 var throw_vector
+var imp
 
 func _ready():
 	body = selection.instance()
@@ -66,7 +67,8 @@ func _process(delta):
 		$Smoke.emitting = false
 	
 	for mod in modifiers:
-		movement += mod.get_impuls()
+		#print("Movement: ", movement, " + Ipmpulse: ", imp, " = ", movement + imp)
+		movement += imp * mod.strength
 	
 	# sets dodge-multiplier if player is dodging
 	# TEMP!
@@ -190,4 +192,15 @@ func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
 
 func _on_pick_up_spawned(impulse, position):
-	print((self.global_position - position).length())
+	#print("Player ", id)
+	var length = (self.global_position - position).length()
+	#print("Length: ", length)
+	var diff = impulse.distance - length
+	#print("Diff: ", diff)
+	#print(impulse.distance / diff)
+	imp = self.global_position - position
+	imp /= imp.length() * (impulse.distance / diff)
+	#print(norm, ", ", norm.length())
+	impulse.apply_impulse()
+	modifiers.append(impulse)
+	#print(modifiers.back().get_current_impulse())

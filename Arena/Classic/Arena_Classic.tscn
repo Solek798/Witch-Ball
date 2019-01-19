@@ -508,14 +508,14 @@ shape = SubResource( 28 )
 [node name="PickUp_Spawn" type="Path2D" parent="." index="6"]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
-position = Vector2( 965.891, 205.723 )
+position = Vector2( 964.041, 205.723 )
 curve = SubResource( 29 )
 
 [node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]
 
-position = Vector2( 1.50659, 731.846 )
+position = Vector2( -2.25564, 360.314 )
 rotation = -1.58092
-offset = 0.0
+offset = 372.825
 h_offset = 0.0
 v_offset = 0.0
 rotate = true

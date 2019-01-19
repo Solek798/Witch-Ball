@@ -12,7 +12,7 @@ onready var players = []
 
 func _ready():
 	set_spawn_time()
-	$SpawnTimer.start()
+	#$SpawnTimer.start()
 
 func _process(delta):
 	# TEMP!
@@ -33,6 +33,7 @@ func set_spawn_time():
 func spawn_pickup(template):
 	var pick_up = template.instance()
 	pick_up.global_position = $PickUp_Spawn/Follow.global_position
+	pick_up.connect("pick_up_spawned", self, "_on_pick_up_spawned")
 	for player in players:
 		pick_up.connect("pick_up_spawned", player, "_on_pick_up_spawned")
 	add_child(pick_up)
@@ -86,3 +87,6 @@ func _on_Leafs_body_entered(body):
 
 func _on_Needles_body_entered(body):
 	pass # replace with function body
+
+func _on_pick_up_spawned(impulse, position):
+	add_child(impulse)

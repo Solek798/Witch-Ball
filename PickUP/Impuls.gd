@@ -1,10 +1,12 @@
 extends AnimationPlayer
 
-export(float) var distance = 200.0
+export(float) var distance = 400.0
+export(float) var strength = 1.0
 
+var mov
 
 func apply_impulse():
-	pass
+	self.play("Impulse")
 
 func get_current_impulse():
-	pass
+	return strength
