@@ -24,6 +24,7 @@ var id
 var selection
 var body
 var next_bullet
+onready var modifiers = []
 onready var health = max_health
 onready var is_dead = false
 onready var fast_shot = false setget set_fast_shot
@@ -31,6 +32,7 @@ onready var big_shot = false setget set_big_shot
 onready var won_rounds = 0
 # TEMP
 var throw_vector
+var imp
 
 func _ready():
 	body = selection.instance()
@@ -63,6 +65,9 @@ func _process(delta):
 	else:
 		body.stop_walk()
 		$Smoke.emitting = false
+	
+	for mod in modifiers:
+		movement += imp * mod.get_strength()
 	
 	# sets dodge-multiplier if player is dodging
 	# TEMP!
@@ -184,3 +189,14 @@ func _on_DodgeTimer_timeout():
 
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
+
+func _on_pick_up_spawned(impulse, position):
+	var length = (self.global_position - position).length()
+	var diff = impulse.distance - length
+	imp = self.global_position - position
+	if imp.length() >= impulse.distance:
+		return 
+	imp /= imp.length() * (impulse.distance / diff)
+	
+	impulse.apply_impulse()
+	modifiers.append(impulse)
