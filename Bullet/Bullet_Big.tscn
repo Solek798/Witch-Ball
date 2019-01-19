@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=3]
 [ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=4]
 [ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=5]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Sterne Effect/Sterne.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -93,6 +94,8 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="Node" parent="." index="5" instance=ExtResource( 6 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
