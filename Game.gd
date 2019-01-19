@@ -3,9 +3,21 @@ extends Node
 
 func _ready():
 	randomize()
-	$Menu.selection = $Characterselection
-	$Characterselection.connect("match_instantiated", self, "_on_match_instantiated")
 	$Music.play()
+	
+	$Menu.selection = $Characterselection
+	$Menu.selection1 = $OptionScene
+	$Menu.Credits = $Credits
+	
+	$Characterselection.connect("match_instantiated", self, "_on_match_instantiated")
+	
+	$OptionScene.selectionMenu = $Menu
+	
+	$Credits.selectionMenu = $Menu
+	
+	
+	
+	
 
 func _on_match_instantiated(new_match):
 	new_match.connect("match_finished", self, "_on_match_finished")
