@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Daten/daten/Feuer/fire.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.100592, 1 )
+colors = PoolColorArray( 0.961329, 0.96875, 0.0189209, 1, 0.894531, 0.782223, 0.0489197, 1, 0.921875, 0.050415, 0.050415, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.0195293, 0 ), 0.0, 1.24375, 0, 0, Vector2( 1, 0.0273438 ), -0.389926, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 3
+emission_point_count = 1
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 20.0
+flatness = 0.0
+gravity = Vector3( -90, 0, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 0.0
+angular_velocity = 2.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 20.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 2.0
+scale_random = 0.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Scale" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Material" ]
+
+[node name="Particles2D" type="Particles2D" parent="." index="0"]
+
+rotation = 1.53076
+scale = Vector2( 5, 5 )
+emitting = true
+amount = 100
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 5 )
+texture = ExtResource( 1 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Transform" ]
+
+
