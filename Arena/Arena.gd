@@ -7,32 +7,36 @@ export(PackedScene) var animation_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
 
+onready var players = []
+
 
 func _ready():
 	set_spawn_time()
-	$SpawnTimer.start()
+	#$SpawnTimer.start()
 
 func _process(delta):
 	# TEMP!
 	# Cheat-shortcuts are going to be removed in final Version
 	if Input.is_action_just_pressed("cheat_mana_pickup"):
-		var new_pickup = pickup_mana_template.instance()
 		$PickUp_Spawn/Follow.unit_offset = 0.5
-		new_pickup.global_position = $PickUp_Spawn/Follow.global_position
-		add_child(new_pickup)
+		spawn_pickup(pickup_mana_template)
 	if Input.is_action_just_pressed("cheat_fast_pickup"):
-		var new_pickup = pickup_fast_template.instance()
 		$PickUp_Spawn/Follow.unit_offset = 0.5
-		new_pickup.global_position = $PickUp_Spawn/Follow.global_position
-		add_child(new_pickup)
+		spawn_pickup(pickup_fast_template)
 	if Input.is_action_just_pressed("cheat_big_pickup"):
-		var new_pickup = pickup_big_template.instance()
 		$PickUp_Spawn/Follow.unit_offset = 0.5
-		new_pickup.global_position = $PickUp_Spawn/Follow.global_position
-		add_child(new_pickup)
+		spawn_pickup(pickup_big_template)
 
 func set_spawn_time():
 	$SpawnTimer.wait_time = (randi() % (max_spawn_time - min_spawn_time)) + min_spawn_time
+
+func spawn_pickup(template):
+	var pick_up = template.instance()
+	pick_up.global_position = $PickUp_Spawn/Follow.global_position
+	pick_up.connect("pick_up_spawned", self, "_on_pick_up_spawned")
+	for player in players:
+		pick_up.connect("pick_up_spawned", player, "_on_pick_up_spawned")
+	add_child(pick_up)
 
 func _on_bullet_thrown(bullet):
 	bullet.connect("bullet_destroyed", self, "_on_bullet_destroyed")
@@ -44,6 +48,7 @@ func _on_player_created(player):
 	if player.id == 2:
 		player.scale.x *= -1
 	add_child(player)
+	players.append(player)
 
 func _on_player_reseted(player):
 	player.position = $Position.get_by_id(player.id)
@@ -51,18 +56,13 @@ func _on_player_reseted(player):
 func _on_SpawnTimer_timeout():
 	$PickUp_Spawn/Follow.unit_offset = randf()
 	
-	var pick_up
-	
 	match randi() % 10:
 		0, 1, 2, 3, 4:
-			pick_up = pickup_mana_template.instance()
+			spawn_pickup(pickup_mana_template)
 		5, 6, 7:
-			pick_up = pickup_fast_template.instance()
+			spawn_pickup(pickup_fast_template)
 		8, 9:
-			pick_up = pickup_big_template.instance()
-	
-	pick_up.global_position = $PickUp_Spawn/Follow.global_position
-	add_child(pick_up)
+			spawn_pickup(pickup_big_template)
 	
 	set_spawn_time()
 
@@ -87,3 +87,6 @@ func _on_Leafs_body_entered(body):
 
 func _on_Needles_body_entered(body):
 	pass # replace with function body
+
+func _on_pick_up_spawned(pick_up, position):
+	add_child(pick_up)

@@ -184,3 +184,6 @@ func _on_DodgeTimer_timeout():
 
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
+
+func _on_pick_up_spawned(pick_up, position):
+	print(pick_up, ", ", position)

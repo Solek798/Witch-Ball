@@ -1,7 +1,14 @@
 extends Area2D
 
-export(int) var mana_increase = 15
+signal pick_up_spawned(impulse, position)
 
+export(int) var mana_increase = 15
+export(PackedScene) var impulse_template
+
+
+func _ready():
+	var impulse = impulse_template.instance()
+	emit_signal("pick_up_spawned", impulse, self.global_position)
 
 func _on_PickUp_Mana_body_entered(body):
 	
