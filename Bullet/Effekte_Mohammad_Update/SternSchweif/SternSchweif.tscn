@@ -1,13 +1,26 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Daten/daten/SternSchweif/little Star.png" type="Texture" id=1]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/SternSchweif/little Star.png" type="Texture" id=1]
 
-[sub_resource type="Curve" id=3]
+[sub_resource type="Curve" id=1]
 
 min_value = -200.0
 max_value = 200.0
 bake_resolution = 100
 _data = [ Vector2( 0.0311947, -73.0469 ), 0.0, 1996.18, 0, 0, Vector2( 0.995782, -200 ), 1830.55, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+
+flags = 4
+width = 2048
+curve = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.025362, 0 ), 0.0, 0.517505, 0, 0, Vector2( 0.319186, 0 ), -1.55747, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=4]
 
@@ -15,20 +28,7 @@ flags = 4
 width = 2048
 curve = SubResource( 3 )
 
-[sub_resource type="Curve" id=5]
-
-min_value = 0.0
-max_value = 1.0
-bake_resolution = 100
-_data = [ Vector2( 0.025362, 0 ), 0.0, 0.517505, 0, 0, Vector2( 0.319186, 0 ), -1.55747, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=6]
-
-flags = 4
-width = 2048
-curve = SubResource( 5 )
-
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=5]
 
 render_priority = 0
 trail_divisor = 1
@@ -48,7 +48,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 linear_accel = 20.0
 linear_accel_random = 1.0
-linear_accel_curve = SubResource( 4 )
+linear_accel_curve = SubResource( 2 )
 radial_accel = 20.0
 radial_accel_random = 1.0
 tangential_accel = -20.0
@@ -59,7 +59,7 @@ angle = 50.0
 angle_random = 0.5
 scale = 0.01
 scale_random = 0.0
-scale_curve = SubResource( 6 )
+scale_curve = SubResource( 4 )
 color = Color( 0.03125, 0.90918, 1, 1 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -70,7 +70,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
@@ -90,7 +90,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 7 )
+process_material = SubResource( 5 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
