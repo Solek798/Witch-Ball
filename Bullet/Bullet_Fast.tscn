@@ -35,7 +35,6 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
 explosion_template = ExtResource( 2 )
 speed = 1750
 damage = 1

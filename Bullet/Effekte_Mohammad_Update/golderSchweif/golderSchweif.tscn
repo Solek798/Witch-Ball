@@ -81,13 +81,14 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Gravity", "Linear Accel", "Orbit Velocity", "Scale" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
 modulate = Color( 0.59375, 0.59375, 0.59375, 1 )
 position = Vector2( -0.129093, -0.569189 )
 rotation = 1.57694
+scale = Vector2( 1, 1 )
 emitting = true
 amount = 300
 lifetime = 0.5
