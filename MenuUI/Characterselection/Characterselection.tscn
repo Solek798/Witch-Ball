@@ -17,7 +17,7 @@
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=16]
 
-[node name="Characterselection" type="Control" index="0"]
+[node name="Characterselection" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -33,6 +33,7 @@ script = ExtResource( 1 )
 match_template = ExtResource( 2 )
 scarlett = ExtResource( 3 )
 jasmine = ExtResource( 4 )
+lilith = null
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 
@@ -163,7 +164,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Character3" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="2"]
+[node name="Lilith" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -185,6 +186,13 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 12 )
 _sections_unfolded = [ "Textures" ]
+
+[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Lilith" index="0" instance=ExtResource( 7 )]
+
+margin_left = 27.0
+margin_top = -33.0
+margin_right = 67.0
+margin_bottom = 7.0
 
 [node name="Character4" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="3"]
 
@@ -275,6 +283,8 @@ _sections_unfolded = [ "Textures" ]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Lilith" to="." method="_on_Lilith_pressed"]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Selection/Play" to="." method="_on_Play_pressed"]
 
