@@ -8,8 +8,7 @@ var Credits #Credits
 func _on_start_pressed():
 	selection.visible = true
 	self.visible = false
-	
-	
+
 	
 func _on_options_pressed():
 	selection1.visible = true
