@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Big_PickUp.png-9bbc974ed6c9264a034205ccaa59a76c.stex"
+path="res://.import/mana_bottle_v3.png-b77ac9423d23370e459b0fbcaf2055af.stex"
 
 [deps]
 
-source_file="res://PickUP/Big_PickUp.png"
-dest_files=[ "res://.import/Big_PickUp.png-9bbc974ed6c9264a034205ccaa59a76c.stex" ]
+source_file="res://PickUP/mana_bottle_v3.png"
+dest_files=[ "res://.import/mana_bottle_v3.png-b77ac9423d23370e459b0fbcaf2055af.stex" ]
 
 [params]
 

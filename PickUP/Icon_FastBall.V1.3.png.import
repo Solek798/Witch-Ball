@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fast_PickUp.png-d43c95f0d90b27df6e6ef483db0665cc.stex"
+path="res://.import/Icon_FastBall.V1.3.png-c5b07188c415ccc3307f0870b009e429.stex"
 
 [deps]
 
-source_file="res://PickUP/Fast_PickUp.png"
-dest_files=[ "res://.import/Fast_PickUp.png-d43c95f0d90b27df6e6ef483db0665cc.stex" ]
+source_file="res://PickUP/Icon_FastBall.V1.3.png"
+dest_files=[ "res://.import/Icon_FastBall.V1.3.png-c5b07188c415ccc3307f0870b009e429.stex" ]
 
 [params]
 

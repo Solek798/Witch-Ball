@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mana_PickUp.png-100ab717898601f176a954f0881485f8.stex"
+path="res://.import/Icon_BigBall.V1.0.png-712a33f275f08739829957d8d2c0d6cc.stex"
 
 [deps]
 
-source_file="res://PickUP/Mana_PickUp.png"
-dest_files=[ "res://.import/Mana_PickUp.png-100ab717898601f176a954f0881485f8.stex" ]
+source_file="res://PickUP/Icon_BigBall.V1.0.png"
+dest_files=[ "res://.import/Icon_BigBall.V1.0.png-712a33f275f08739829957d8d2c0d6cc.stex" ]
 
 [params]
 

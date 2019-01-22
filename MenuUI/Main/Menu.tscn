@@ -17,7 +17,7 @@
 [ext_resource path="res://MenuUI/Main/button_quit_menu_pressed_200.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Main/button_quit_menu_hovering_200.png" type="Texture" id=16]
 
-[node name="Menu" type="Node2D" index="0"]
+[node name="Menu" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -257,9 +257,9 @@ script = ExtResource( 7 )
 
 [connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
-
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit/UI_Particel_Menu" method="_on_quit_mouse_entered"]
 

@@ -2,12 +2,12 @@
 
 [ext_resource path="res://PickUP/PickUp_Fast.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PickUP/Fast_PickUp.png" type="Texture" id=3]
+[ext_resource path="res://PickUP/Icon_FastBall.V1.3.png" type="Texture" id=3]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
+radius = 84.0437
 
 [node name="PickUp_Fast" type="Area2D" groups=[
 "PickUp",
@@ -25,15 +25,15 @@ impulse_template = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0, 20.5416 )
-scale = Vector2( 7.33732, 8.40886 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 2.77902, -0.79364 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="DespawnTimer" type="Timer" parent="." index="2"]
 
