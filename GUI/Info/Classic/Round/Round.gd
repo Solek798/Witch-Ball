@@ -1,4 +1,4 @@
-extends TextureRect
+extends Sprite
 
 export(Resource) var round_filled
 export(Resource) var round_empty

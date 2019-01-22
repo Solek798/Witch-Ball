@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GUI/Info/Classic/Info_Classic.gd" type="Script" id=1]
-[ext_resource path="res://GUI/Info/Classic/Round/Round.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GUI/Info/Classic/goal_einzeln_98.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Info/Classic/Railing_Rounds_Ingame_Panel_500.png" type="Texture" id=2]
+[ext_resource path="res://GUI/Info/Classic/Round/Round.tscn" type="PackedScene" id=3]
 
-[node name="Info" type="HBoxContainer" index="0"]
+[node name="Info" type="HBoxContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -21,17 +21,17 @@ size_flags_vertical = 1
 alignment = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
-round_template = ExtResource( 2 )
+round_empty_template = null
+round_won_template = null
 
-[node name="Player1wins" type="VBoxContainer" parent="." index="0"]
+[node name="Railing" type="TextureRect" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 873.0
-margin_right = 873.0
+margin_left = 676.0
+margin_right = 1176.0
 margin_bottom = 130.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -39,93 +39,36 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="Player1Rounds" type="HBoxContainer" parent="Player1wins" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 65.0
-margin_bottom = 65.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Margin" ]
-
-[node name="Goal" type="VBoxContainer" parent="." index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 877.0
-margin_right = 975.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="GoalSprite" type="TextureRect" parent="Goal" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 98.0
-margin_bottom = 103.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 stretch_mode = 0
+_sections_unfolded = [ "Margin", "Rect" ]
 
-[node name="Player2wins" type="VBoxContainer" parent="." index="2"]
+[node name="Player1" type="Node2D" parent="Railing" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 979.0
-margin_right = 979.0
-margin_bottom = 130.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
+[node name="Round1" parent="Railing/Player1" index="0" instance=ExtResource( 3 )]
 
-[node name="Player2Rounds" type="HBoxContainer" parent="Player2wins" index="0"]
+position = Vector2( 46.7016, 77.2372 )
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 65.0
-margin_bottom = 65.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 2
+[node name="Round2" parent="Railing/Player1" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 105.977, 76.6385 )
+
+[node name="Round3" parent="Railing/Player1" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 164.653, 76.6385 )
+
+[node name="Player2" type="Node2D" parent="Railing" index="1"]
+
+[node name="Round1" parent="Railing/Player2" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 457.436, 76.0397 )
+
+[node name="Round2" parent="Railing/Player2" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 395.167, 76.0397 )
+
+[node name="Round3" parent="Railing/Player2" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 334.089, 74.8422 )
 
 
