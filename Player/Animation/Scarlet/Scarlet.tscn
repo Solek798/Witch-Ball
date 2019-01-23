@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/WinnJump.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/WinnJump.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Temp/00Ch/Reset_Animation.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=9]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=10]
@@ -21,7 +21,7 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=20]
 
-[node name="Scarlet" type="Sprite" index="0"]
+[node name="Scarlet" type="Sprite"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -38,7 +38,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "oneshot_WinnJump", "out", 0, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Doge_Down_Arm", "Mix_Trow", 0, "Doge_Down-Bein", "Mix_Trow", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "oneshot_hit", "oneshot_WinnJump", 0, "WinnJump", "oneshot_WinnJump", 1, "blend_walk", "oneshot_idle_throw", 0, "Throwing ", "oneshot_idle_throw", 1, "anim", "blend_walk", 0, "Walk", "blend_walk", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "Mix_Trow", "oneshot_walk_throw", 1 ],
+"connections": [ "oneshot_WinnJump", "out", 0, "blend_walk", "oneshot_idle_throw", 0, "Throwing ", "oneshot_idle_throw", 1, "anim", "blend_walk", 0, "Walk", "blend_walk", 1, "oneshot_hit", "oneshot_WinnJump", 0, "WinnJump", "oneshot_WinnJump", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "Mix_Trow", "oneshot_walk_throw", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Doge_Down_Arm", "Mix_Trow", 0, "Doge_Down-Bein", "Mix_Trow", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "animation": ExtResource( 2 ),
@@ -50,85 +50,6 @@ data = {
 "id": "out",
 "position": Vector2( 1027, 218 ),
 "type": "output"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "Doge_Down-Bein",
-"position": Vector2( 161, 279 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 4 ),
-"filter": [  ],
-"id": "Throwing ",
-"position": Vector2( 5, 253 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "Doge_Down_Arm",
-"position": Vector2( 160, 174 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_up",
-"mix": false,
-"position": Vector2( 664, 350 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_down",
-"mix": false,
-"position": Vector2( 469, 350 ),
-"type": "oneshot"
-}, {
-"id": "Mix_Trow",
-"mix": 1.0,
-"position": Vector2( 333, 172 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 654, 182 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 713, 43 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 881, 43 ),
-"type": "oneshot"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 0.0,
@@ -148,6 +69,40 @@ data = {
 "type": "blend2"
 }, {
 "autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 881, 43 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "WinnJump",
+"position": Vector2( 654, 182 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Hit",
+"position": Vector2( 458, 187 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_hit",
+"mix": false,
+"position": Vector2( 713, 43 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 1.0,
 "fade_in": 0.0,
@@ -158,10 +113,55 @@ data = {
 "position": Vector2( 463, 43 ),
 "type": "oneshot"
 }, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "Throwing ",
+"position": Vector2( 5, 253 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_dodge_up",
+"mix": false,
+"position": Vector2( 664, 350 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "Doge_Down-Bein",
+"position": Vector2( 161, 279 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_dodge_down",
+"mix": false,
+"position": Vector2( 469, 350 ),
+"type": "oneshot"
+}, {
 "animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "Hit",
-"position": Vector2( 458, 187 ),
+"id": "Doge_Down_Arm",
+"position": Vector2( 160, 174 ),
+"type": "animation"
+}, {
+"id": "Mix_Trow",
+"mix": 1.0,
+"position": Vector2( 333, 172 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "Walk",
+"position": Vector2( 6, 146 ),
 "type": "animation"
 } ]
 }
@@ -173,13 +173,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 7 )
+anims/Hit = ExtResource( 4 )
 anims/Idle = ExtResource( 2 )
-anims/Idle_Throw = ExtResource( 4 )
+anims/Idle_Throw = ExtResource( 5 )
 anims/Reset_Animation = ExtResource( 8 )
-anims/Throwing = ExtResource( 5 )
-anims/Walk_Ch1 = ExtResource( 3 )
-anims/Winning = ExtResource( 6 )
+anims/Throwing = ExtResource( 7 )
+anims/Walk_Ch1 = ExtResource( 6 )
+anims/Winning = ExtResource( 3 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -195,7 +195,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 editor/display_folded = true
-position = Vector2( 0, 6.60551 )
+position = Vector2( 0, 2.68777 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -214,7 +214,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.0678833
+rotation = 0.0651114
 z_index = 4
 texture = ExtResource( 10 )
 offset = Vector2( 17.0357, 118.566 )
@@ -227,7 +227,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0369899
+rotation = 0.0621332
 z_index = 1
 texture = ExtResource( 11 )
 offset = Vector2( 145.576, 357.073 )
@@ -249,7 +249,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.119665
+rotation = 0.04212
 z_index = -5
 texture = ExtResource( 13 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -261,7 +261,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.0623735
+rotation = -0.0656337
 texture = ExtResource( 14 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -273,7 +273,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.0754491
+rotation = -0.0249376
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( 115.846, 3.52861 )
@@ -286,7 +286,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = 0.0430302
+rotation = 0.0334922
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 16 )
 offset = Vector2( 174.778, -24.6302 )
@@ -308,7 +308,7 @@ __meta__ = {
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.50879
+rotation = -0.463062
 z_index = -1
 texture = ExtResource( 17 )
 offset = Vector2( 39.0679, -290.996 )
@@ -320,7 +320,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = -0.0456968
+rotation = -0.0438308
 z_index = -1
 texture = ExtResource( 18 )
 offset = Vector2( 9.48901, -415.964 )
@@ -332,7 +332,7 @@ __meta__ = {
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( 49.202, 250.398 )
-rotation = 0.901081
+rotation = 0.851343
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 19 )
