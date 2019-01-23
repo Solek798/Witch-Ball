@@ -1,14 +1,14 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_for_throw.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Hit.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Idle.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch2.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch2.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch3.tres" type="Animation" id=2]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Hit.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Idle.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch2.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_for_throw.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_lilith.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=11]
 [ext_resource path="res://Player/Animation/Lilith/Images/Arm_l.png" type="Texture" id=12]
@@ -23,11 +23,11 @@
 [ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=21]
 [ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=22]
 
-[node name="Lilith" type="Sprite"]
+[node name="Lilith" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [  ],
+"_edit_horizontal_guides_": [ -3.99382 ],
 "_edit_vertical_guides_": [  ]
 }
 
@@ -36,10 +36,10 @@ __meta__ = {
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("")
-active = true
+active = false
 data = {
-"active": true,
-"connections": [ "troww", "mix", 0, "anim 2", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_hit", "oneshot_WinnJump", 0, "winn", "oneshot_WinnJump", 1, "oneshot_walk_Throw", "oneshot_idle_throw", 0, "mix", "oneshot_idle_throw", 1, "blend_walk", "oneshot_walk_Throw", 0, "mix 2", "oneshot_walk_Throw", 1, "oneshot_idle_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "Idle+", "blend_walk", 0, "Walk", "blend_walk", 1, "trow", "mix 2", 0, "anim", "mix 2", 1 ],
+"active": false,
+"connections": [ "troww", "mix", 0, "anim 2", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_idle_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "trow", "mix 2", 0, "anim", "mix 2", 1, "blend_walk", "oneshot_walk_Throw", 0, "mix 2", "oneshot_walk_Throw", 1, "oneshot_walk_Throw", "oneshot_idle_throw", 0, "mix", "oneshot_idle_throw", 1, "oneshot_hit", "oneshot_WinnJump", 0, "winn", "oneshot_WinnJump", 1, "Idle+", "blend_walk", 0, "Walk", "blend_walk", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "mix",
@@ -50,80 +50,17 @@ data = {
 "animation": ExtResource( 2 ),
 "filter": [  ],
 "id": "anim",
-"position": Vector2( 5, 376 ),
+"position": Vector2( 5, 384 ),
 "type": "animation"
 }, {
 "id": "out",
 "position": Vector2( 1024, 78 ),
 "type": "output"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 796, 78 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 479, 78 ),
-"type": "oneshot"
-}, {
 "animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "troww",
-"position": Vector2( 335, 234 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "trow",
-"position": Vector2( 5, 271 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 4 ),
 "filter": [  ],
 "id": "Hit",
 "position": Vector2( 523, 269 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "Idle+",
-"position": Vector2( 5, 43 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 5, 157 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_walk_Throw",
-"mix": false,
-"position": Vector2( 289, 78 ),
-"type": "oneshot"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "winn",
-"position": Vector2( 667, 261 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -137,22 +74,85 @@ data = {
 "position": Vector2( 661, 78 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 5 ),
+"animation": ExtResource( 4 ),
 "filter": [  ],
 "id": "anim 2",
 "position": Vector2( 336, 336 ),
 "type": "animation"
 }, {
-"blend": 1.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 162, 78 ),
-"type": "blend2"
-}, {
 "id": "mix 2",
 "mix": 1.0,
-"position": Vector2( 155, 278 ),
+"position": Vector2( 161, 275 ),
 "type": "mix"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "winn",
+"position": Vector2( 667, 261 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_Throw",
+"mix": false,
+"position": Vector2( 289, 78 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "troww",
+"position": Vector2( 335, 234 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "trow",
+"position": Vector2( 5, 270 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 479, 78 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Idle+",
+"position": Vector2( 5, 43 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "Walk",
+"position": Vector2( 5, 157 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 796, 78 ),
+"type": "oneshot"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 135, 76 ),
+"type": "blend2"
 } ]
 }
 _sections_unfolded = [ "Pause", "Playback" ]
@@ -164,15 +164,15 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 4 )
-anims/Idle = ExtResource( 5 )
-anims/New_Hit_Ch2 = ExtResource( 8 )
-anims/Reset = ExtResource( 9 )
-anims/Throw_Ch2 = ExtResource( 3 )
-anims/Walk_Ch2 = ExtResource( 6 )
-anims/Walk_for_throw = ExtResource( 2 )
+anims/Hit = ExtResource( 3 )
+anims/Idle = ExtResource( 4 )
+anims/New_Hit_Ch2 = ExtResource( 7 )
+anims/Reset = ExtResource( 8 )
+anims/Throw_Ch2 = ExtResource( 6 )
+anims/Walk_Ch2 = ExtResource( 2 )
+anims/Walk_for_throw = ExtResource( 9 )
 anims/Walk_lilith = ExtResource( 10 )
-anims/WinnJump_Ch2 = ExtResource( 7 )
+anims/WinnJump_Ch2 = ExtResource( 5 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -181,7 +181,8 @@ position = Vector2( 0, -45.1694 )
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, -2.1192 )
+position = Vector2( -0.389289, -2.30261 )
+rotation = 0.0414735
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
@@ -190,8 +191,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
+editor/display_folded = true
 position = Vector2( 57.9063, -117.896 )
-rotation = 0.0633742
+rotation = 0.459941
 z_index = -1
 texture = ExtResource( 12 )
 offset = Vector2( 36.764, 5.99338 )
@@ -200,7 +202,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 91.1528, 17.1476 )
-rotation = -0.0987531
+rotation = 0.0212518
 z_index = -1
 texture = ExtResource( 13 )
 offset = Vector2( 233.807, 27.1501 )
@@ -208,8 +210,9 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
+editor/display_folded = true
 position = Vector2( -87.3967, -91.7234 )
-rotation = -0.0375213
+rotation = 0.063139
 z_index = 1
 texture = ExtResource( 14 )
 offset = Vector2( -52.4912, 71.8683 )
@@ -217,8 +220,9 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
+editor/display_folded = true
 position = Vector2( -72.2002, 97.4703 )
-rotation = 0.0503927
+rotation = 0.0329083
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( -161.694, 75.4783 )
@@ -231,7 +235,7 @@ position = Vector2( -204.205, -29.8997 )
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -9.59668, -193.373 )
-rotation = 0.0521144
+rotation = 0.0387375
 z_index = 1
 texture = ExtResource( 16 )
 offset = Vector2( 12.8547, -108.81 )
@@ -240,16 +244,15 @@ _sections_unfolded = [ "Z Index" ]
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
 position = Vector2( -110, -201 )
-rotation = 0.0934862
+rotation = 0.0774082
 z_index = 1
 texture = ExtResource( 17 )
 offset = Vector2( -89.0399, 6.45297 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Hut_b" type="Sprite" parent="Charakter/Torso/Head_Arms/Head/Hut" index="0"]
+[node name="Hut_b" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="1"]
 
-position = Vector2( 242.015, -27.8773 )
-rotation = 0.000511026
+position = Vector2( 132.001, -229.001 )
 z_index = -2
 texture = ExtResource( 18 )
 offset = Vector2( 67.7378, 8.22672 )
@@ -262,7 +265,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 64.529, 154.377 )
-rotation = 0.618139
+rotation = 0.148858
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 28.828, 77.913 )
@@ -271,13 +274,14 @@ _sections_unfolded = [ "Z Index" ]
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 61.3702, 128.155 )
+rotation = 0.135897
 texture = ExtResource( 20 )
 offset = Vector2( -27.3255, 55.9917 )
 
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -46.4789, 194.989 )
-rotation = -0.248655
+rotation = -0.158295
 z_index = -1
 texture = ExtResource( 21 )
 offset = Vector2( 32.0744, 57.6429 )
@@ -286,7 +290,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 63.1752, 147.108 )
-rotation = -0.0350816
+rotation = 0.960431
 texture = ExtResource( 22 )
 offset = Vector2( -41.0731, 95.577 )
 
