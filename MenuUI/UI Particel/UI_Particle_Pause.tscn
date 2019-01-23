@@ -40,7 +40,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Radial Accel" ]
 
-[node name="UI Particel" type="Node2D" index="0"]
+[node name="UI Particel" type="Node2D"]
 
 [node name="PausePartickle" type="Particles2D" parent="." index="0"]
 

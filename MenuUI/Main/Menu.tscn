@@ -17,7 +17,7 @@
 [ext_resource path="res://MenuUI/Main/button_quit_menu_pressed_200.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Main/button_quit_menu_hovering_200.png" type="Texture" id=16]
 
-[node name="Menu" type="Node2D" index="0"]
+[node name="Menu" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -137,7 +137,6 @@ _sections_unfolded = [ "Pause", "Textures" ]
 
 [node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" index="0" instance=ExtResource( 6 )]
 
-visible = false
 position = Vector2( 100.41, 33.4949 )
 script = ExtResource( 7 )
 

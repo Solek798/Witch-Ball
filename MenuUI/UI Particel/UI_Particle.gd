@@ -30,3 +30,10 @@ func _on_quit_mouse_exited():
 	visible = false
 
 
+func _on_Menu_mouse_entered():
+	visible = true
+func _on_Menu_mouse_exited():
+	visible = false
+func _on_Menu_pressed():
+	_on_Menu_mouse_exited()
+

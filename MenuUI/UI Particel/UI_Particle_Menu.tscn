@@ -51,7 +51,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Gravity", "Initial Velocity", "Orbit Velocity", "Radial Accel", "Resource" ]
 
-[node name="MenuParticleStart" type="Particles2D" index="0"]
+[node name="MenuParticleStart" type="Particles2D"]
 
 position = Vector2( 107.528, 38.3479 )
 scale = Vector2( 1.16937, 0.321133 )
