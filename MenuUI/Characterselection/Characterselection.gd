@@ -14,6 +14,7 @@ signal match_instantiated(new_match)
 export(PackedScene) var match_template
 export(PackedScene) var scarlett
 export(PackedScene) var jasmine
+export(PackedScene) var lilith
 
 func _ready():
 	current_mode = PLAYER_1
@@ -52,6 +53,20 @@ func _on_Jasmine_pressed():
 			end_selection()
 	$CenterContainer/VBoxContainer/Characters/Jasmine/Sound.play()
 
+func _on_Lilith_pressed():
+	match current_mode:
+		PLAYER_1:
+			$CenterContainer/VBoxContainer/Characters/Lilith/Selection.player_1 = true
+			player_1_selection = lilith
+			switch_player()
+		PLAYER_2:
+			$CenterContainer/VBoxContainer/Characters/Lilith/Selection.player_2 = true
+			player_2_selection = lilith
+			end_selection()
+	# TODO
+	# Insert Sounds
+	#$CenterContainer/VBoxContainer/Characters/Lilith/Sound.play()
+
 func _on_Play_pressed():
 	var new_match = match_template.instance()
 	new_match.player_1_selection = self.player_1_selection
@@ -61,3 +76,5 @@ func _on_Play_pressed():
 	current_mode = PLAYER_1
 	$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.reset()
 	$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.reset()
+
+
