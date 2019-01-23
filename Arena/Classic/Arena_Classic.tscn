@@ -1,13 +1,13 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/PickUp_Mana.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PickUP/PickUp_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PickUP/PickUp_Big.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Arena/Animations/EyesEffect.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=6]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=7]
-
+[ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Arena/Animations/LeafEffect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=7]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -61,14 +61,15 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
 }
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
-animation_template = ExtResource( 5 )
+stone_effect_template = ExtResource( 5 )
+leaf_effect_template = ExtResource( 6 )
 min_spawn_time = 6
 max_spawn_time = 10
 
@@ -77,7 +78,7 @@ max_spawn_time = 10
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 z_index = -10
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Boundary" type="Node2D" parent="." index="1"]
@@ -168,19 +169,20 @@ shape = SubResource( 8 )
 position = Vector2( 999.517, 1211.18 )
 shape = SubResource( 9 )
 
-[node name="Position" parent="." index="2" instance=ExtResource( 7 )]
+[node name="Position" parent="." index="2" instance=ExtResource( 8 )]
 
 [node name="Leafs" type="Area2D" parent="." index="3"]
 
 editor/display_folded = true
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 8
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Leafs" index="0"]
 
@@ -240,14 +242,15 @@ polygon = PoolVector2Array( 5.88626, 1022.93, 146.144, 1050.2, 161.728, 974.232,
 [node name="Stones" type="Area2D" parent="." index="4"]
 
 editor/display_folded = true
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 8
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stones" index="0"]
 
@@ -389,6 +392,10 @@ editor/display_folded = true
 
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
+
+[connection signal="body_entered" from="Leafs" to="." method="_on_Leafs_body_entered"]
+
+[connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 

@@ -4,7 +4,7 @@
 [ext_resource path="res://Arena/Animations/Arena_Animation.gd" type="Script" id=2]
 [ext_resource path="res://Arena/Animations/PNGs/Eyes.png" type="Texture" id=3]
 
-[node name="EyesEffect" type="AnimationPlayer" index="0"]
+[node name="EyesEffect" type="AnimationPlayer"]
 
 root_node = NodePath("..")
 autoplay = ""

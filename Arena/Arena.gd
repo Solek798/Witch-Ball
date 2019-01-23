@@ -3,7 +3,8 @@ extends Node2D
 export(PackedScene) var pickup_mana_template
 export(PackedScene) var pickup_fast_template
 export(PackedScene) var pickup_big_template
-export(PackedScene) var animation_template
+export(PackedScene) var stone_effect_template
+export(PackedScene) var leaf_effect_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
 
@@ -80,10 +81,19 @@ func _on_round_finished():
 	$SpawnTimer.start()
 
 func _on_Stones_body_entered(body):
-	pass
+	if body is RigidBody2D:
+		var anim = stone_effect_template.instance()
+		anim.global_position = body.global_position
+		anim.emitting = true
+		add_child(anim)
+		body.destroy()
 
 func _on_Leafs_body_entered(body):
-	pass # replace with function body
+	if body is RigidBody2D:
+		var anim = leaf_effect_template.instance()
+		anim.global_position = body.global_position
+		anim.emitting = true
+		add_child(anim)
 
 func _on_Needles_body_entered(body):
 	pass # replace with function body
