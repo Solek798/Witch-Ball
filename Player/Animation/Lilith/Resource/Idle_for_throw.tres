@@ -2,7 +2,7 @@
 
 [resource]
 
-resource_name = "Idle"
+resource_name = "idle for throw"
 length = 1.0
 loop = true
 step = 0.5
@@ -161,17 +161,5 @@ tracks/12/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:scale")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
 }
 
