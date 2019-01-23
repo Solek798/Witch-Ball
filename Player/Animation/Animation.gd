@@ -30,3 +30,10 @@ func play_dodge_up():
 
 func play_hit():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_hit")
+
+
+
+
+func play_WinnJump():
+	$AnimationTreePlayer.oneshot_node_start("oneshot_WinnJump")
+	
