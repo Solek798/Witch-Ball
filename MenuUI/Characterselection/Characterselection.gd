@@ -76,5 +76,5 @@ func _on_Play_pressed():
 	current_mode = PLAYER_1
 	$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.reset()
 	$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.reset()
-
+	$CenterContainer/VBoxContainer/Characters/Lilith/Selection.reset()
 

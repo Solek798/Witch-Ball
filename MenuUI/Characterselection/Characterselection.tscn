@@ -1,21 +1,22 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/Characterselection.gd" type="Script" id=1]
 [ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200_hovering.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=8]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200_hovering.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=11]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection unbekannt_normal.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/Characterselection/Railing_350.png" type="Texture" id=13]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_normal.png" type="Texture" id=14]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200_hovering.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200_hovering.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=12]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection unbekannt_normal.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Characterselection/Railing_350.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_normal.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=17]
 
 [node name="Characterselection" type="Control"]
 
@@ -33,7 +34,7 @@ script = ExtResource( 1 )
 match_template = ExtResource( 2 )
 scarlett = ExtResource( 3 )
 jasmine = ExtResource( 4 )
-lilith = null
+lilith = ExtResource( 5 )
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 
@@ -104,11 +105,11 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Scarlett" index="0" instance=ExtResource( 7 )]
+[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Scarlett" index="0" instance=ExtResource( 8 )]
 
 margin_left = 23.0
 margin_top = -35.0
@@ -117,7 +118,7 @@ margin_bottom = 5.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Characters/Scarlett" index="1"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -144,11 +145,11 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Jasmine" index="0" instance=ExtResource( 7 )]
+[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Jasmine" index="0" instance=ExtResource( 8 )]
 
 margin_left = 23.0
 margin_top = -38.0
@@ -157,7 +158,7 @@ margin_bottom = 2.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Characters/Jasmine" index="1"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -184,10 +185,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Lilith" index="0" instance=ExtResource( 7 )]
+[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Lilith" index="0" instance=ExtResource( 8 )]
 
 margin_left = 27.0
 margin_top = -33.0
@@ -214,7 +215,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Selection" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
@@ -250,7 +251,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 stretch_mode = 0
 
 [node name="Play" type="TextureButton" parent="CenterContainer/VBoxContainer/Selection" index="1"]
@@ -274,10 +275,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 15 )
-texture_hover = ExtResource( 16 )
-texture_disabled = ExtResource( 15 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+texture_disabled = ExtResource( 16 )
 _sections_unfolded = [ "Textures" ]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
