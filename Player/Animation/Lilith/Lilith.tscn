@@ -1,33 +1,209 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_for_throw.tres" type="Animation" id=2]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Hit.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Idle.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch2.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch2.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_lilith.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=11]
-[ext_resource path="res://Player/Animation/Lilith/Images/Arm_l.png" type="Texture" id=12]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hand_l.png" type="Texture" id=13]
-[ext_resource path="res://Player/Animation/Lilith/Images/Arm_r.png" type="Texture" id=14]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hand_r.png" type="Texture" id=15]
-[ext_resource path="res://Player/Animation/Lilith/Images/Head.png" type="Texture" id=16]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hut.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hut_b.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Lilith/Images/Bein_l.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Lilith/Images/Foot_L.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Idle_for_throw.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch3.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Idle.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch2.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_lilith.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=12]
+[ext_resource path="res://Player/Animation/Lilith/Images/Arm_l.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hand_l.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Lilith/Images/Arm_r.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hand_r.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Lilith/Images/Head.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hut.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hut_b.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Lilith/Images/Bein_l.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Lilith/Images/Foot_L.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=23]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Walk for throw"
+length = 1.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 24.3524, -9.31166, -47.3673, 30.7817, 24.3524 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Charakter/Torso/Legs/Leg_r/Foot_r:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -6.77913, 57.3265, 24.0553, 23.1207, -8.02348 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Charakter/Torso/Legs/Leg_r:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 35.0109, -50.8763, 35.0109 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Charakter/Torso/Legs/Leg_l:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -18.1595, 75.2575, -18.1595 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -6.63349, -9.49077, -19.9851, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.17726, 0.0, 16.249, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -2.5204, 0.0, -8.54516, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.385, 0.0, 4.87349, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Charakter/Torso/Head_Arms/Head:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 9.45688, 0.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Charakter/Torso:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Charakter/Torso:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -0.627251 ), Vector2( 0, -5.49886 ), Vector2( 0, -0.139614 ), Vector2( 0, -2.72851 ), Vector2( 0, -0.627251 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut_b:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.25, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.21416, -12.0192, 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.25, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.12002, -10.6597, 0.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../Charakter/Torso:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.25, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [node name="Lilith" type="Sprite"]
 
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [  ],
+"_edit_horizontal_guides_": [ -3.99382 ],
 "_edit_vertical_guides_": [  ]
 }
 
@@ -39,7 +215,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "troww", "mix", 0, "anim 2", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_idle_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "Idle+", "blend_walk", 0, "Walk", "blend_walk", 1, "oneshot_walk_Throw", "oneshot_idle_throw", 0, "mix", "oneshot_idle_throw", 1, "oneshot_hit", "oneshot_WinnJump", 0, "winn", "oneshot_WinnJump", 1, "trow", "mix 2", 0, "anim", "mix 2", 1, "blend_walk", "oneshot_walk_Throw", 0, "mix 2", "oneshot_walk_Throw", 1 ],
+"connections": [ "troww", "mix", 0, "anim 2", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_walk_Throw", "oneshot_idle_throw", 0, "mix", "oneshot_idle_throw", 1, "Idle+", "blend_walk", 0, "Walk", "blend_walk", 1, "oneshot_hit", "oneshot_WinnJump", 0, "winn", "oneshot_WinnJump", 1, "oneshot_idle_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "trow", "mix 2", 0, "anim", "mix 2", 1, "blend_walk", "oneshot_walk_Throw", 0, "mix 2", "oneshot_walk_Throw", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "mix",
@@ -50,12 +226,40 @@ data = {
 "animation": ExtResource( 2 ),
 "filter": [  ],
 "id": "anim",
-"position": Vector2( 212, 330 ),
+"position": Vector2( 5, 384 ),
 "type": "animation"
 }, {
 "id": "out",
 "position": Vector2( 1024, 78 ),
 "type": "output"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 479, 78 ),
+"type": "oneshot"
+}, {
+"blend": 1.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 135, 76 ),
+"type": "blend2"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 796, 78 ),
+"type": "oneshot"
 }, {
 "animation": ExtResource( 3 ),
 "filter": [  ],
@@ -74,43 +278,10 @@ data = {
 "position": Vector2( 661, 78 ),
 "type": "oneshot"
 }, {
-"id": "blend_walk",
-"mix": 0.94,
-"position": Vector2( 161, 78 ),
-"type": "mix"
-}, {
 "animation": ExtResource( 4 ),
 "filter": [  ],
 "id": "anim 2",
 "position": Vector2( 336, 336 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 479, 78 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 796, 78 ),
-"type": "oneshot"
-}, {
-"animation": ExtResource( 4 ),
-"filter": [  ],
-"id": "Idle+",
-"position": Vector2( 5, 43 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 5 ),
@@ -121,8 +292,14 @@ data = {
 }, {
 "id": "mix 2",
 "mix": 1.0,
-"position": Vector2( 112, 267 ),
+"position": Vector2( 161, 275 ),
 "type": "mix"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "trow",
+"position": Vector2( 5, 270 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -137,20 +314,20 @@ data = {
 }, {
 "animation": ExtResource( 6 ),
 "filter": [  ],
-"id": "winn",
-"position": Vector2( 667, 261 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
 "id": "troww",
 "position": Vector2( 335, 234 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "trow",
-"position": Vector2( 207, 234 ),
+"id": "Idle+",
+"position": Vector2( 5, 43 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "winn",
+"position": Vector2( 667, 261 ),
 "type": "animation"
 } ]
 }
@@ -164,14 +341,15 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Hit = ExtResource( 3 )
-anims/Idle = ExtResource( 4 )
-anims/New_Hit_Ch2 = ExtResource( 8 )
-anims/Reset = ExtResource( 9 )
-anims/Throw_Ch2 = ExtResource( 7 )
+anims/Idle = ExtResource( 7 )
+anims/New_Hit_Ch2 = ExtResource( 9 )
+anims/Reset = ExtResource( 10 )
+anims/Throw_Ch2 = ExtResource( 6 )
+"anims/Walk for throw" = SubResource( 1 )
 anims/Walk_Ch2 = ExtResource( 5 )
-anims/Walk_for_throw = ExtResource( 2 )
-anims/Walk_lilith = ExtResource( 10 )
-anims/WinnJump_Ch2 = ExtResource( 6 )
+anims/Walk_lilith = ExtResource( 11 )
+anims/WinnJump_Ch2 = ExtResource( 8 )
+"anims/idle for throw" = ExtResource( 4 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -180,117 +358,118 @@ position = Vector2( 0, -45.1694 )
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( -0.490911, -0.715719 )
-rotation = 0.0523001
+position = Vector2( 0, -2.56948 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
+[node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
+
 editor/display_folded = true
-
-[node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
-
 position = Vector2( 57.9063, -117.896 )
-rotation = 0.478433
-z_index = -1
-texture = ExtResource( 12 )
-offset = Vector2( 36.764, 5.99338 )
-_sections_unfolded = [ "Z Index" ]
-
-[node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
-
-position = Vector2( 91.1528, 17.1476 )
-rotation = 0.0336032
 z_index = -1
 texture = ExtResource( 13 )
-offset = Vector2( 233.807, 27.1501 )
-_sections_unfolded = [ "Z Index" ]
-
-[node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
-
-position = Vector2( -87.3967, -91.7234 )
-rotation = 0.0632967
-z_index = 1
-texture = ExtResource( 14 )
-offset = Vector2( -52.4912, 71.8683 )
+offset = Vector2( 36.764, 5.99338 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
-editor/display_folded = true
-position = Vector2( -72.2002, 97.4703 )
-rotation = 0.0380271
-z_index = 1
-texture = ExtResource( 15 )
-offset = Vector2( -161.694, 75.4783 )
-_sections_unfolded = [ "Z Index" ]
+position = Vector2( 91.1528, 17.1476 )
+rotation = -0.143035
+z_index = -1
+texture = ExtResource( 14 )
+offset = Vector2( 233.807, 27.1501 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="throw_point" type="Position2D" parent="Charakter/Torso/Head_Arms/Arm_r/Hand_r" index="0"]
 
-position = Vector2( -204.205, -29.8997 )
+position = Vector2( 337.784, 137.974 )
+rotation = 2.27363
+scale = Vector2( 1, -1 )
+
+[node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
+
+editor/display_folded = true
+position = Vector2( -87.3967, -91.7234 )
+rotation = -0.00271536
+z_index = 4
+texture = ExtResource( 15 )
+offset = Vector2( -52.4912, 71.8683 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
+
+position = Vector2( -72.2002, 97.4703 )
+rotation = 0.0267864
+z_index = 1
+texture = ExtResource( 16 )
+offset = Vector2( -161.694, 75.4783 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -9.59668, -193.373 )
-rotation = 0.0461798
+rotation = 0.127636
 z_index = 1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 offset = Vector2( 12.8547, -108.81 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
 position = Vector2( -110, -201 )
-rotation = 0.0911746
+rotation = -0.0112748
 z_index = 1
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 offset = Vector2( -89.0399, 6.45297 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hut_b" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="1"]
 
 position = Vector2( 132.001, -229.001 )
+rotation = -0.0165657
 z_index = -2
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( 67.7378, 8.22672 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Legs" type="Node2D" parent="Charakter/Torso" index="1"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 64.529, 154.377 )
-rotation = 0.241564
+rotation = 0.943874
 z_index = -1
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 offset = Vector2( 28.828, 77.913 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 61.3702, 128.155 )
-rotation = 0.21085
-texture = ExtResource( 20 )
+rotation = -0.525571
+texture = ExtResource( 21 )
 offset = Vector2( -27.3255, 55.9917 )
 
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -46.4789, 194.989 )
-rotation = -0.35175
+rotation = -0.548135
 z_index = -1
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 offset = Vector2( 32.0744, 57.6429 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 63.1752, 147.108 )
-rotation = 0.236365
-texture = ExtResource( 22 )
+rotation = 0.683128
+texture = ExtResource( 23 )
 offset = Vector2( -41.0731, 95.577 )
 
 
