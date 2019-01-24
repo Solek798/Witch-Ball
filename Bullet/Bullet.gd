@@ -11,7 +11,6 @@ var own_player
 func _ready():
 	add_collision_exception_with(own_player)
 	$Shot.play()
-	print("Start: ", self)
 
 func _physics_process(delta):
 	# scans for collisions
@@ -39,6 +38,6 @@ func destroy():
 func _on_Area2D_body_entered(body):
 	if body == self:
 		return
-	print(body)
+	
 	if body.is_in_group("Bullet") and not body.name.matchn("*Bullet_Big*"):
 		body.queue_free()
