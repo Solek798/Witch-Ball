@@ -66,7 +66,7 @@ damping = 100.0
 damping_random = 1.0
 angle = 50.0
 angle_random = 0.5
-scale = 2.0
+scale = 20.0
 scale_random = 0.0
 scale_curve = SubResource( 6 )
 color_ramp = SubResource( 2 )
@@ -84,7 +84,7 @@ _sections_unfolded = [ "Color", "Scale" ]
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
 modulate = Color( 0.59375, 0.59375, 0.59375, 1 )
-position = Vector2( -0.0980988, 0.191925 )
+position = Vector2( 8.74057, -0.511543 )
 rotation = 1.57694
 emitting = true
 amount = 300
@@ -104,6 +104,6 @@ texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing" ]
+_sections_unfolded = [ "Drawing", "Process Material" ]
 
 
