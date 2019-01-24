@@ -200,3 +200,9 @@ func _on_pick_up_spawned(impulse, position):
 	
 	impulse.apply_impulse()
 	modifiers.append(impulse)
+	
+	
+	
+	
+func _on_player_won_round():
+	body.play_WinnJump()
