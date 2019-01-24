@@ -19,5 +19,5 @@ func _on_player_won_round(player):
 	if won_match:
 		emit_signal("player_won_match", player)
 
-func _on_match_started(round_count):
-	$Top/Info.set_rounds(round_count)
+#func _on_match_started(round_count):
+#	$Top/Info.set_rounds(round_count)

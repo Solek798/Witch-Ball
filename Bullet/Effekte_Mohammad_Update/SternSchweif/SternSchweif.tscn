@@ -69,7 +69,7 @@ anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 

@@ -1,40 +1,33 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_Arm_Ch2.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/WinnJump_Ch2.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Doge_Down_Arm_Ch2.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Hit-Bein_Ch2.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Idle_Arm_Ch2.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/New_Hit_Ch2.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/New_Throw_Ch2.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Doge_Up_Arm_Ch2.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_Bein_Ch2.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Doge_Up_Bein_Ch2.tres" type="Animation" id=11]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Hit-Arm_Ch2.tres" type="Animation" id=12]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Doge_Down_Bein_Ch2.tres" type="Animation" id=13]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Idle Bein_Ch2.tres" type="Animation" id=14]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Reset_Animation_Ch2.tres" type="Animation" id=15]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk02/Walk_Bein_Ch2_v2.tres" type="Animation" id=16]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_T.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_l.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_l.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_r.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_r.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Head.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_f.png" type="Texture" id=23]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_b.png" type="Texture" id=24]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_l.png" type="Texture" id=25]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_l.png" type="Texture" id=26]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=27]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=28]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Idle.tres" type="Animation" id=2]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Throw_Ch2.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_for_throw.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/New_Hit_Ch2.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_Ch2.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/WinnJump_Ch2.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Reset.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_T.png" type="Texture" id=10]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_l.png" type="Texture" id=11]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_l.png" type="Texture" id=12]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_r.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_r.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Head.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_f.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_b.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_l.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_l.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=21]
 
-[node name="Jasmin" type="Sprite" index="0"]
+[node name="Jasmin" type="Sprite"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_edit_horizontal_guides_": [ -1.7225, 36.8254, 61.2331, 50.3852 ],
+"_edit_horizontal_guides_": [ -4.11663, 6.23647 ],
 "_edit_vertical_guides_": [ 4.71877 ]
 }
 
@@ -46,140 +39,34 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "oneshot_WinnJump", "out", 0, "Idle_Arm", "Idle", 0, "Idle_bein", "Idle", 1, "Walk_Arm", "Walk", 0, "Walk_Bein", "Walk", 1, "doge_a_u", "Doge up", 0, "doge_b_u", "Doge up", 1, "blend_walk", "oneshot_walk_throw", 0, "mix 4", "oneshot_walk_throw", 1, "oneshot_doge_up", "oneshot_hit", 0, "hit", "oneshot_hit", 1, "Throw", "throw_Idle", 0, "Idle_Bein", "throw_Idle", 1, "throw", "mix 4", 0, "waqlk_bein", "mix 4", 1, "hit_arm", "hit", 0, "hit_bein", "hit", 1, "Doge_a_d", "doge_Down", 0, "Doge_b_d", "doge_Down", 1, "oneshot_hit", "oneshot_hit2", 0, "new_Hit", "oneshot_hit2", 1, "oneshot_walk_throw", "oneshot_idle_throw", 0, "throw_Idle", "oneshot_idle_throw", 1, "onesho_doge_down", "oneshot_doge_up", 0, "Doge up", "oneshot_doge_up", 1, "Idle", "blend_walk", 0, "Walk", "blend_walk", 1, "oneshot_hit2", "oneshot_WinnJump", 0, "WinnJump", "oneshot_WinnJump", 1, "oneshot_idle_throw", "onesho_doge_down", 0, "doge_Down", "onesho_doge_down", 1 ],
+"connections": [ "anim 2", "scale", 0, "oneshot_WinnJump", "out", 0, "new_Hit", "oneshot_hit2", 1, "Idle_Bein", "scale 4", 0, "Throw", "throw_Idle", 0, "scale 4", "throw_Idle", 1, "anim 3", "mix 4", 0, "anim 4", "mix 4", 1, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "oneshot_walk_throw", "oneshot_idle_throw", 0, "scale 3", "oneshot_idle_throw", 1, "oneshot_hit", "oneshot_WinnJump", 0, "scale 5", "oneshot_WinnJump", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_idle_throw", "oneshot_hit", 0, "hit_arm", "oneshot_hit", 1, "WinnJump", "scale 5", 0, "throw_Idle", "scale 3", 0, "mix 4", "scale 2", 0 ],
 "master": NodePath(""),
 "nodes": [ {
-"id": "out",
-"position": Vector2( 466, 144 ),
-"type": "output"
-}, {
-"id": "Idle",
-"mix": 1.0,
-"position": Vector2( 114, 113 ),
-"type": "mix"
-}, {
-"id": "Walk",
-"mix": 1.0,
-"position": Vector2( 118, 399 ),
-"type": "mix"
-}, {
-"id": "Doge up",
-"mix": 1.0,
-"position": Vector2( 779, 41 ),
-"type": "mix"
+"id": "scale",
+"position": Vector2( 111, 196 ),
+"scale": 2.9,
+"type": "timescale"
 }, {
 "animation": ExtResource( 2 ),
 "filter": [  ],
-"id": "Walk_Arm",
-"position": Vector2( 5, 373 ),
+"id": "anim",
+"position": Vector2( 5, 84 ),
 "type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 1086, 230 ),
+"type": "output"
 }, {
 "animation": ExtResource( 3 ),
 "filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 994, 49 ),
+"id": "anim 3",
+"position": Vector2( 5, 312 ),
 "type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 127, 238 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 853, 240 ),
-"type": "oneshot"
 }, {
 "animation": ExtResource( 4 ),
 "filter": [  ],
-"id": "Doge_a_d",
-"position": Vector2( 516, 386 ),
-"type": "animation"
-}, {
-"id": "throw_Idle",
-"mix": 1.0,
-"position": Vector2( 290, 109 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "hit_bein",
-"position": Vector2( 755, 508 ),
-"type": "animation"
-}, {
-"id": "mix 4",
-"mix": 1.0,
-"position": Vector2( 433, 447 ),
-"type": "mix"
-}, {
-"id": "hit",
-"mix": 0.928235,
-"position": Vector2( 924, 368 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "Idle_Arm",
-"position": Vector2( 5, 32 ),
-"type": "animation"
-}, {
-"id": "doge_Down",
-"mix": 1.0,
-"position": Vector2( 621, 410 ),
-"type": "mix"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "new_Hit",
-"position": Vector2( 1017, 463 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "throw",
-"position": Vector2( 297, 424 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 9 ),
-"filter": [  ],
-"id": "doge_a_u",
-"position": Vector2( 659, 6 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 10 ),
-"filter": [  ],
-"id": "Walk_Bein",
-"position": Vector2( 5, 474 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 11 ),
-"filter": [  ],
-"id": "doge_b_u",
-"position": Vector2( 670, 123 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 12 ),
-"filter": [  ],
-"id": "hit_arm",
-"position": Vector2( 756, 396 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 10 ),
-"filter": [  ],
-"id": "waqlk_bein",
-"position": Vector2( 296, 529 ),
+"id": "anim 4",
+"position": Vector2( 5, 419 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -190,7 +77,51 @@ data = {
 "filter": [  ],
 "id": "oneshot_hit2",
 "mix": false,
-"position": Vector2( 1024, 240 ),
+"position": Vector2( 808, 446 ),
+"type": "oneshot"
+}, {
+"id": "scale 4",
+"position": Vector2( 328, 129 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "new_Hit",
+"position": Vector2( 527, 468 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "hit_arm",
+"position": Vector2( 406, 361 ),
+"type": "animation"
+}, {
+"id": "throw_Idle",
+"mix": 1.0,
+"position": Vector2( 430, 42 ),
+"type": "mix"
+}, {
+"id": "mix 4",
+"mix": 1.0,
+"position": Vector2( 189, 331 ),
+"type": "mix"
+}, {
+"animation": ExtResource( 2 ),
+"filter": [  ],
+"id": "Idle_Bein",
+"position": Vector2( 227, 203 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_throw",
+"mix": false,
+"position": Vector2( 389, 230 ),
 "type": "oneshot"
 }, {
 "autorestart": false,
@@ -201,37 +132,8 @@ data = {
 "filter": [  ],
 "id": "oneshot_idle_throw",
 "mix": false,
-"position": Vector2( 303, 240 ),
+"position": Vector2( 577, 230 ),
 "type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_doge_up",
-"mix": false,
-"position": Vector2( 659, 240 ),
-"type": "oneshot"
-}, {
-"blend": 1.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 17, 238 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "Throw",
-"position": Vector2( 175, 12 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 13 ),
-"filter": [  ],
-"id": "Doge_b_d",
-"position": Vector2( 516, 490 ),
-"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -241,34 +143,61 @@ data = {
 "filter": [  ],
 "id": "oneshot_WinnJump",
 "mix": false,
-"position": Vector2( 1206, 240 ),
+"position": Vector2( 887, 230 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 14 ),
+"animation": ExtResource( 3 ),
 "filter": [  ],
-"id": "Idle_bein",
-"position": Vector2( 5, 133 ),
+"id": "Throw",
+"position": Vector2( 297, 14 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 14 ),
+"animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "Idle_Bein",
-"position": Vector2( 178, 117 ),
+"id": "anim 2",
+"position": Vector2( 5, 195 ),
 "type": "animation"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "WinnJump",
+"position": Vector2( 658, 32 ),
+"type": "animation"
+}, {
+"blend": 1.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 140, 69 ),
+"type": "blend2"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
+"autorestart_random_delay": 0.0,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "onesho_doge_down",
+"id": "oneshot_hit",
 "mix": false,
-"position": Vector2( 476, 240 ),
+"position": Vector2( 761, 230 ),
 "type": "oneshot"
+}, {
+"id": "scale 5",
+"position": Vector2( 786, 80 ),
+"scale": 1.5,
+"type": "timescale"
+}, {
+"id": "scale 3",
+"position": Vector2( 544, 99 ),
+"scale": 2.9,
+"type": "timescale"
+}, {
+"id": "scale 2",
+"position": Vector2( 281, 311 ),
+"scale": 2.9,
+"type": "timescale"
 } ]
 }
-_sections_unfolded = [ "Pause" ]
+_sections_unfolded = [ "Pause", "Playback" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTreePlayer" index="0"]
 
@@ -277,34 +206,27 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Doge_Down_Arm_Ch2 = ExtResource( 4 )
-anims/Doge_Down_Bein_Ch2 = ExtResource( 13 )
-anims/Doge_Up_Arm_Ch2 = ExtResource( 9 )
-anims/Doge_Up_Bein_Ch2 = ExtResource( 11 )
-anims/Hit-Arm_Ch2 = ExtResource( 12 )
-anims/Hit-Bein_Ch2 = ExtResource( 5 )
-"anims/Idle Bein_Ch2" = ExtResource( 14 )
-anims/Idle_Arm_Ch2 = ExtResource( 6 )
-anims/New_Hit = ExtResource( 7 )
-anims/New_Throw_Ch2 = ExtResource( 8 )
-anims/Reset_Animation_Ch2 = ExtResource( 15 )
-anims/Walk_Arm_Ch2 = ExtResource( 2 )
-anims/Walk_Bein_Ch2 = ExtResource( 10 )
-anims/Walk_Bein_Ch2_v2 = ExtResource( 16 )
-anims/WinnJump_Ch2 = ExtResource( 3 )
+anims/Hit = ExtResource( 6 )
+anims/Idle = ExtResource( 2 )
+anims/New_Hit_Ch2 = ExtResource( 5 )
+anims/Reset = ExtResource( 9 )
+anims/Throw_Ch2 = ExtResource( 3 )
+anims/Walk_Ch2 = ExtResource( 7 )
+anims/Walk_for_throw = ExtResource( 4 )
+anims/WinnJump_Ch2 = ExtResource( 8 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
 
-position = Vector2( 0, -54.0362 )
+position = Vector2( 0, -51.2557 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, 3.60859 )
+position = Vector2( 0, -0.737453 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 17 )
-_sections_unfolded = [ "Visibility" ]
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
@@ -318,11 +240,10 @@ __meta__ = {
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
-editor/display_folded = true
 position = Vector2( 17.7513, -41.9383 )
-rotation = 1.01746
+rotation = 0.0076361
 z_index = -5
-texture = ExtResource( 18 )
+texture = ExtResource( 11 )
 offset = Vector2( -17.7513, 41.9383 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -332,9 +253,9 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 169.429, -4.91098 )
-rotation = -0.0437359
+rotation = -0.0039802
 z_index = 1
-texture = ExtResource( 19 )
+texture = ExtResource( 12 )
 offset = Vector2( -187.18, 46.8493 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -343,11 +264,10 @@ __meta__ = {
 
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
-editor/display_folded = true
 position = Vector2( -114.023, -17.0859 )
-rotation = -0.172387
+rotation = -0.00481459
 z_index = 2
-texture = ExtResource( 20 )
+texture = ExtResource( 13 )
 offset = Vector2( 114.023, 17.0859 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -356,10 +276,10 @@ __meta__ = {
 
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
-editor/display_folded = true
 position = Vector2( -92.8417, 161.357 )
+rotation = 0.00274587
 z_index = 1
-texture = ExtResource( 21 )
+texture = ExtResource( 14 )
 offset = Vector2( 199.156, -105.902 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
@@ -370,11 +290,10 @@ rotation = -2.39889
 
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
-editor/display_folded = true
 position = Vector2( -27.0435, -111.468 )
-rotation = -0.0020431
+rotation = 0.0014667
 z_index = 1
-texture = ExtResource( 22 )
+texture = ExtResource( 15 )
 offset = Vector2( 27.0435, 111.468 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -383,11 +302,10 @@ __meta__ = {
 
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
-editor/display_folded = true
 position = Vector2( -104.808, -207.38 )
-rotation = 0.00891944
+rotation = -0.00236042
 z_index = 1
-texture = ExtResource( 23 )
+texture = ExtResource( 16 )
 offset = Vector2( 131.851, 318.848 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
@@ -398,12 +316,11 @@ __meta__ = {
 
 position = Vector2( -304.55, 318.848 )
 z_index = -5
-texture = ExtResource( 24 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Legs" type="Node2D" parent="Charakter/Torso" index="1"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -412,9 +329,9 @@ __meta__ = {
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 24.9636, 233.633 )
-rotation = 0.733853
+rotation = -0.290626
 z_index = -4
-texture = ExtResource( 25 )
+texture = ExtResource( 18 )
 offset = Vector2( -24.9636, -233.633 )
 _sections_unfolded = [ "Offset", "Z Index" ]
 __meta__ = {
@@ -425,7 +342,7 @@ __meta__ = {
 
 position = Vector2( 82.0213, 125.083 )
 z_index = 1
-texture = ExtResource( 26 )
+texture = ExtResource( 19 )
 offset = Vector2( -106.985, -358.716 )
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
@@ -435,9 +352,9 @@ __meta__ = {
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -57.0587, 270.543 )
-rotation = -0.355042
+rotation = 0.58686
 z_index = -1
-texture = ExtResource( 27 )
+texture = ExtResource( 20 )
 offset = Vector2( 57.0587, -270.543 )
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
@@ -447,9 +364,9 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 43.0608, 145.589 )
-rotation = -0.0394229
+rotation = -0.000987336
 z_index = -1
-texture = ExtResource( 28 )
+texture = ExtResource( 21 )
 offset = Vector2( 13.9972, -416.131 )
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {

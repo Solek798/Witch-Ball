@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://PickUP/PickUp_Big.gd" type="Script" id=1]
-[ext_resource path="res://PickUP/Big_PickUp.png" type="Texture" id=2]
+[ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Shockwafe.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Icon_BigBall.V1.0.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -20,16 +22,25 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+impulse_template = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Shockwafe" parent="." index="1" instance=ExtResource( 3 )]
 
-texture = ExtResource( 2 )
+position = Vector2( 1.19101, 9.12693 )
+scale = Vector2( 1.5, 1.5 )
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
-[node name="DespawnTimer" type="Timer" parent="." index="2"]
+[node name="Sprite" type="Sprite" parent="." index="2"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DespawnTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 5.0

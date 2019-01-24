@@ -45,4 +45,6 @@ _sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
 [node name="Healthbar" parent="." index="1" instance=ExtResource( 3 )]
 
+margin_top = 20.0
+
 

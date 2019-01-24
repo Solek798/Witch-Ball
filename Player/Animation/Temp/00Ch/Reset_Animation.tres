@@ -511,19 +511,19 @@ tracks/41/keys = {
 "values": [ Vector2( 145.136, 356.02 ) ]
 }
 tracks/42/type = "value"
-tracks/42/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l2:visible")
+tracks/42/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/imported = false
 tracks/42/enabled = true
 tracks/42/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.66804e-008 ]
 }
 tracks/43/type = "value"
-tracks/43/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l2:position")
+tracks/43/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/imported = false
@@ -532,10 +532,10 @@ tracks/43/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 63.0907, 79.5739 ) ]
+"values": [ 2.66804e-008 ]
 }
 tracks/44/type = "value"
-tracks/44/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l2:rotation_degrees")
+tracks/44/path = NodePath("../Charakter/Torso:modulate")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/imported = false
@@ -544,42 +544,6 @@ tracks/44/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -16.2111 ]
-}
-tracks/45/type = "value"
-tracks/45/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
-tracks/45/interp = 1
-tracks/45/loop_wrap = true
-tracks/45/imported = false
-tracks/45/enabled = true
-tracks/45/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 2.66804e-008 ]
-}
-tracks/46/type = "value"
-tracks/46/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l2:rotation_degrees")
-tracks/46/interp = 1
-tracks/46/loop_wrap = true
-tracks/46/imported = false
-tracks/46/enabled = true
-tracks/46/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -16.2111 ]
-}
-tracks/47/type = "value"
-tracks/47/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut/Hut2:rotation_degrees")
-tracks/47/interp = 1
-tracks/47/loop_wrap = true
-tracks/47/imported = false
-tracks/47/enabled = true
-tracks/47/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 2.66804e-008 ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
