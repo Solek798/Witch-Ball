@@ -7,13 +7,19 @@ export(PackedScene) var stone_effect_template
 export(PackedScene) var leaf_effect_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
+export(int) var time_divider
 
 onready var players = []
 
+var min_time
+var max_time
 
 func _ready():
+	min_time = min_spawn_time
+	max_time = max_spawn_time
 	set_spawn_time()
-	#$SpawnTimer.start()
+	$SpawnTimer.start()
+	$PickUpTimer.start()
 
 func _process(delta):
 	# TEMP!
@@ -29,7 +35,8 @@ func _process(delta):
 		spawn_pickup(pickup_big_template)
 
 func set_spawn_time():
-	$SpawnTimer.wait_time = (randi() % (max_spawn_time - min_spawn_time)) + min_spawn_time
+	$SpawnTimer.wait_time = (randi() % (max_time - min_time)) + min_time
+	print($SpawnTimer.wait_time)
 
 func spawn_pickup(template):
 	var pick_up = template.instance()
@@ -77,6 +84,8 @@ func _on_round_finished():
 			child.queue_free()
 	
 	$SpawnTimer.stop()
+	min_time = min_spawn_time
+	max_time = max_spawn_time
 	set_spawn_time()
 	$SpawnTimer.start()
 
@@ -100,3 +109,8 @@ func _on_Needles_body_entered(body):
 
 func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)
+
+func _on_PickUpTimer_timeout():
+	min_time /= time_divider
+	max_time /= time_divider
+	print("Changed: ", min_time, ", ", max_time)
