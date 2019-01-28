@@ -5,7 +5,7 @@
 render_priority = 0
 trail_divisor = 1
 emission_shape = 2
-emission_box_extents = Vector3( -200, 1, 100 )
+emission_box_extents = Vector3( -300, 1, 100 )
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
@@ -26,9 +26,9 @@ tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 0.0
 damping_random = 0.0
-angle = 0.0
-angle_random = 0.0
-scale = 2.0
+angle = 90.0
+angle_random = 1.0
+scale = 0.5
 scale_random = 0.0
 color = Color( 1, 1, 1, 1 )
 hue_variation = 1.0
@@ -38,15 +38,16 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Gravity" ]
+_sections_unfolded = [ "Angular Velocity", "Linear Accel", "Scale" ]
 
 [node name="Particles2D" type="Particles2D" index="0"]
 
-position = Vector2( 1290.21, -198.585 )
+position = Vector2( 1206.12, -202.79 )
 rotation = 0.175533
 scale = Vector2( 4.17685, 3.30727 )
+z_index = 10
 emitting = true
-amount = 50
+amount = 150
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -63,6 +64,6 @@ texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing" ]
+_sections_unfolded = [ "Process Material" ]
 
 

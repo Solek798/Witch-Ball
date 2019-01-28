@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/aim.png-e1699b8a988369721bf63bca69d3dc62.stex"
+path="res://.import/Arrow_512_V1.0.png-fb9b5acdac5f256917ded5900fa2fd17.stex"
 
 [deps]
 
-source_file="res://Player/aim.png"
-dest_files=[ "res://.import/aim.png-e1699b8a988369721bf63bca69d3dc62.stex" ]
+source_file="res://Player/Aim/old/Arrow_512_V1.0.png"
+dest_files=[ "res://.import/Arrow_512_V1.0.png-fb9b5acdac5f256917ded5900fa2fd17.stex" ]
 
 [params]
 
