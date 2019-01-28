@@ -3,9 +3,9 @@
 [ext_resource path="res://GUI/Info/Classic/Round/Rounds_V.2.2_empty_55.png" type="Texture" id=1]
 [ext_resource path="res://GUI/Info/Classic/Round/Round.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Info/Classic/Round/Rounds_V.2.2_won_55.png" type="Texture" id=3]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Gewinn/Gewinn.tres" type="Animation" id=4]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Gewinn/1.png" type="Texture" id=5]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Gewinn/little Star.png" type="Texture" id=6]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/UI/Gewinn/Gewinn.tres" type="Animation" id=4]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/UI/Gewinn/1.png" type="Texture" id=5]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/UI/Gewinn/little Star.png" type="Texture" id=6]
 
 [sub_resource type="Gradient" id=1]
 
@@ -72,7 +72,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color" ]
 
-[node name="Round" type="Sprite"]
+[node name="Round" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -85,9 +85,9 @@ round_empty = ExtResource( 1 )
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("")
-active = false
+active = true
 data = {
-"active": false,
+"active": true,
 "connections": [ "oneshot_Round", "out", 0, "anim 2", "oneshot_Round", 0, "anim", "oneshot_Round", 1 ],
 "master": NodePath(""),
 "nodes": [ {
@@ -101,6 +101,12 @@ data = {
 "position": Vector2( 336, 42 ),
 "type": "output"
 }, {
+"animation": null,
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 16, 52 ),
+"type": "animation"
+}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 1.0,
@@ -111,12 +117,6 @@ data = {
 "mix": false,
 "position": Vector2( 188, 69 ),
 "type": "oneshot"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 16, 52 ),
-"type": "animation"
 } ]
 }
 
@@ -137,6 +137,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Rounds_V.2.2_won" type="Sprite" parent="Node2D" index="0"]
 
+scale = Vector2( 1e-005, 1e-005 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 

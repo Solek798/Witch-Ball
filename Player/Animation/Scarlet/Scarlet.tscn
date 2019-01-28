@@ -21,7 +21,7 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=20]
 
-[node name="Scarlet" type="Sprite" index="0"]
+[node name="Scarlet" type="Sprite"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -211,7 +211,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 editor/display_folded = true
-position = Vector2( 0, 58.5769 )
+position = Vector2( 0, 15.1662 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -230,7 +230,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.00967832
+rotation = 0.0461251
 z_index = 4
 texture = ExtResource( 10 )
 offset = Vector2( 17.0357, 118.566 )
@@ -243,7 +243,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
-rotation = 0.0233472
+rotation = 0.107934
 z_index = 1
 texture = ExtResource( 11 )
 offset = Vector2( 145.576, 357.073 )
@@ -265,7 +265,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.0158271
+rotation = 0.0731685
 z_index = -5
 texture = ExtResource( 13 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -277,7 +277,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.0246626
+rotation = -0.114015
 texture = ExtResource( 14 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -289,7 +289,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.00937057
+rotation = -0.0433202
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( 115.846, 3.52861 )
@@ -302,7 +302,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = 0.0125851
+rotation = 0.0581807
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 16 )
 offset = Vector2( 174.778, -24.6302 )
@@ -325,7 +325,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
-rotation = 0.50174
+rotation = -0.225156
 z_index = -1
 texture = ExtResource( 17 )
 offset = Vector2( 39.0679, -290.996 )
@@ -337,7 +337,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.175924
+rotation = 0.944326
 z_index = -1
 texture = ExtResource( 18 )
 offset = Vector2( 9.48901, -415.964 )
@@ -350,7 +350,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 49.202, 250.398 )
-rotation = -0.167087
+rotation = 0.674815
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 19 )
@@ -363,7 +363,7 @@ __meta__ = {
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = -0.826297
+rotation = -1.10966
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 20 )
