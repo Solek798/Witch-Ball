@@ -1,13 +1,26 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/1.png" type="Texture" id=1]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/2.png" type="Texture" id=2]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/3.png" type="Texture" id=3]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/4.png" type="Texture" id=4]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/5.png" type="Texture" id=5]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/6.png" type="Texture" id=6]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/7.png" type="Texture" id=7]
-[ext_resource path="res://Daten/daten/2D explosion/Explsion Bilder/kleine Bilder/8.png" type="Texture" id=8]
+<<<<<<< working copy
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/1.png" type="Texture" id=1]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/2.png" type="Texture" id=2]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/3.png" type="Texture" id=3]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/4.png" type="Texture" id=4]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/5.png" type="Texture" id=5]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/6.png" type="Texture" id=6]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/7.png" type="Texture" id=7]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/8.png" type="Texture" id=8]
+=======
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/1.png" type="Texture" id=1]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/2.png" type="Texture" id=2]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/3.png" type="Texture" id=3]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/4.png" type="Texture" id=4]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/5.png" type="Texture" id=5]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/6.png" type="Texture" id=6]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/7.png" type="Texture" id=7]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/2D explosion/Explsion Bilder/kleine Bilder/8.png" type="Texture" id=8]
+
+>>>>>>> merge rev
+
 
 [sub_resource type="Animation" id=1]
 
