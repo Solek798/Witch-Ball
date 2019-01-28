@@ -142,7 +142,6 @@ script = ExtResource( 7 )
 
 [node name="options" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -169,12 +168,10 @@ _sections_unfolded = [ "Textures" ]
 [node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" index="0" instance=ExtResource( 6 )]
 
 visible = false
-position = Vector2( 102.028, 35.7889 )
 script = ExtResource( 7 )
 
 [node name="Credits" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -201,12 +198,10 @@ _sections_unfolded = [ "Textures" ]
 [node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" index="0" instance=ExtResource( 6 )]
 
 visible = false
-position = Vector2( 102.028, 36.045 )
 script = ExtResource( 7 )
 
 [node name="quit" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -233,7 +228,6 @@ _sections_unfolded = [ "Textures" ]
 [node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" index="0" instance=ExtResource( 6 )]
 
 visible = false
-position = Vector2( 102.028, 37.4987 )
 script = ExtResource( 7 )
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start/UI_Particel_Menu" method="_on_start_mouse_entered"]
@@ -248,17 +242,17 @@ script = ExtResource( 7 )
 
 [connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options/UI_Particel_Menu" method="_on_options_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
-
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options/UI_Particel_Menu" method="_on_options_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_mouse_entered"]
 
 [connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
-
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit/UI_Particel_Menu" method="_on_quit_mouse_entered"]
 
