@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.png-bc808d4ecdc9d5ba66c3202e9ea3d26a.stex"
+path="res://.import/little Star.png-e01570d187ac0e05bd7d68c03066c5ac.stex"
 
 [deps]
 
-source_file="res://Bullet/Effekte_Mohammad_Update/UI/Gewinn/1.png"
-dest_files=[ "res://.import/1.png-bc808d4ecdc9d5ba66c3202e9ea3d26a.stex" ]
+source_file="res://GUI/Info/UI/Gewinn/little Star.png"
+dest_files=[ "res://.import/little Star.png-e01570d187ac0e05bd7d68c03066c5ac.stex" ]
 
 [params]
 

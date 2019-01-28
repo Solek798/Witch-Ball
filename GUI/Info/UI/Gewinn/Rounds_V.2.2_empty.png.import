@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rounds_V.2.2_won.png-9117ddde1326db6ec0d8126aeac43af6.stex"
+path="res://.import/Rounds_V.2.2_empty.png-ccbe7416e94d720e8286ad5be2e7eeef.stex"
 
 [deps]
 
-source_file="res://Bullet/Effekte_Mohammad_Update/UI/Gewinn/Rounds_V.2.2_won.png"
-dest_files=[ "res://.import/Rounds_V.2.2_won.png-9117ddde1326db6ec0d8126aeac43af6.stex" ]
+source_file="res://GUI/Info/UI/Gewinn/Rounds_V.2.2_empty.png"
+dest_files=[ "res://.import/Rounds_V.2.2_empty.png-ccbe7416e94d720e8286ad5be2e7eeef.stex" ]
 
 [params]
 
