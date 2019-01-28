@@ -7,7 +7,7 @@ length = 0.2
 loop = false
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r/Hand_r:rotation_degrees")
+tracks/0/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 0.0, -24.9994, -24.9994 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
+tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
