@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://MenuUI/Main/Menu.gd" type="Script" id=1]
+[ext_resource path="res://MenuUI/Options/OptionScene.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Options/Options Hintergrund_400.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/Options/Music_Font_25.png" type="Texture" id=3]
 [ext_resource path="res://MenuUI/Options/Sound_Font_20.png" type="Texture" id=4]
@@ -11,8 +11,18 @@
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_pressed.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/UI Particel/UI_Particle_Pause.tscn" type="PackedScene" id=10]
 
-[node name="OptionScene" type="Node2D"]
+[node name="OptionScene" type="Control"]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 script = ExtResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]

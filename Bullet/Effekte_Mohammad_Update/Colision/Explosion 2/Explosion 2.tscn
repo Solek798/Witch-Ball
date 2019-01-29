@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/Feuer Explsion/cirle.png" type="Texture" id=1]
 
-
 [sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.00591716, 1 )

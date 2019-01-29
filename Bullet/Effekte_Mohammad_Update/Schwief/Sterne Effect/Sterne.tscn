@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Schwief/Sterne Effect/little Star.png" type="Texture" id=1]
 
-
 [sub_resource type="ParticlesMaterial" id=1]
 
 render_priority = 0
@@ -43,7 +42,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Animation", "Emission Shape", "Linear Accel", "Radial Accel" ]
 
-[node name="Node" type="Node2D" index="0"]
+[node name="Node" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 

@@ -79,14 +79,13 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Gravity", "Scale" ]
 
-[node name="Rauch" type="Node2D" index="0"]
+[node name="Rauch" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
 modulate = Color( 0.59375, 0.59375, 0.59375, 1 )
-position = Vector2( 2.04124, -0.0972252 )
 rotation = 1.57694
 emitting = true
 amount = 300

@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Colision/Feuer Explsion/cirle.png" type="Texture" id=1]
 
-
 [sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0.343195, 0.863905 )
@@ -82,7 +81,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Gravity", "Linear Accel", "Orbit Velocity", "Scale" ]
 
-[node name="GoldenerSchweif" type="Node2D" index="0"]
+[node name="GoldenerSchweif" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 

@@ -14,10 +14,6 @@ func _ready():
 	$OptionScene.selectionMenu = $Menu
 	
 	$Credits.selectionMenu = $Menu
-	
-	
-	
-	
 
 func _on_match_instantiated(new_match):
 	new_match.connect("match_finished", self, "_on_match_finished")

@@ -5,7 +5,7 @@
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_pressed.png" type="Texture" id=3]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_hovering.png" type="Texture" id=4]
 
-[node name="Credits" type="Control" index="0"]
+[node name="Credits" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

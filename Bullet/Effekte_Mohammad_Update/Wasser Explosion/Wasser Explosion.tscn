@@ -80,7 +80,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Scale" ]
 
-[node name="WasserExplosion" type="Node" index="0"]
+[node name="WasserExplosion" type="Node"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
