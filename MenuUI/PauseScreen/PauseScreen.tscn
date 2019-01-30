@@ -15,42 +15,31 @@
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Return_pressed.png" type="Texture" id=13]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Return_hovering.png" type="Texture" id=14]
 
-[node name="PauseScreen" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Bitte loesch mich!" type="Control" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="Bitte loesch mich!" index="0"]
+[node name="PauseScreen" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 360.0
-margin_bottom = 139.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Content" type="CenterContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 760.0
+margin_top = 450.0
+margin_right = 1160.0
+margin_bottom = 629.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -59,7 +48,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="pausebackgroundpanel" type="TextureRect" parent="Bitte loesch mich!/CenterContainer" index="0"]
+[node name="pausebackgroundpanel" type="TextureRect" parent="Content" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,16 +66,34 @@ texture = ExtResource( 1 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="buttonBarPause" type="CenterContainer" parent="Bitte loesch mich!" index="1"]
+[node name="N1" type="Control" parent="Content" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 59.0
-margin_top = 75.0
-margin_right = 327.0
-margin_bottom = 106.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 89.0
+margin_right = 200.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="C1" type="CenterContainer" parent="Content/N1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -154.0
+margin_top = -36.0
+margin_right = 154.0
+margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -95,7 +102,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Bitte loesch mich!/buttonBarPause" index="0"]
+[node name="Buttons" type="HBoxContainer" parent="Content/N1/C1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -111,7 +118,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="options" type="TextureButton" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer" index="0"]
+[node name="options" type="TextureButton" parent="Content/N1/C1/Buttons" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -135,12 +142,12 @@ texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI Particel" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer/options" index="0" instance=ExtResource( 5 )]
+[node name="UI Particel" parent="Content/N1/C1/Buttons/options" index="0" instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 36.9241, 36.5657 )
 
-[node name="Resume" type="TextureButton" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer" index="1"]
+[node name="Resume" type="TextureButton" parent="Content/N1/C1/Buttons" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -165,12 +172,12 @@ texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI Particel" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume" index="0" instance=ExtResource( 5 )]
+[node name="UI Particel" parent="Content/N1/C1/Buttons/Resume" index="0" instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 37.6411, 35.8487 )
 
-[node name="Restart" type="TextureButton" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer" index="2"]
+[node name="Restart" type="TextureButton" parent="Content/N1/C1/Buttons" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -195,12 +202,12 @@ texture_pressed = ExtResource( 10 )
 texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI Particel" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart" index="0" instance=ExtResource( 5 )]
+[node name="UI Particel" parent="Content/N1/C1/Buttons/Restart" index="0" instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 36.5657, 36.2072 )
 
-[node name="Cancel" type="TextureButton" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer" index="3"]
+[node name="Cancel" type="TextureButton" parent="Content/N1/C1/Buttons" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -225,39 +232,39 @@ texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 14 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI Particel" parent="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel" index="0" instance=ExtResource( 5 )]
+[node name="UI Particel" parent="Content/N1/C1/Buttons/Cancel" index="0" instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 37.6412, 36.5657 )
 
-[connection signal="mouse_entered" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/options" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/options/UI Particel" method="_on_options_mouse_entered"]
+[connection signal="mouse_entered" from="Content/N1/C1/Buttons/options" to="Content/N1/C1/Buttons/options/UI Particel" method="_on_options_mouse_entered"]
 
-[connection signal="mouse_exited" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/options" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/options/UI Particel" method="_on_options_mouse_exited"]
+[connection signal="mouse_exited" from="Content/N1/C1/Buttons/options" to="Content/N1/C1/Buttons/options/UI Particel" method="_on_options_mouse_exited"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/options" to="." method="_on_options_pressed"]
 
-[connection signal="mouse_entered" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume/UI Particel" method="_on_Resume_mouse_entered"]
+[connection signal="mouse_entered" from="Content/N1/C1/Buttons/Resume" to="Content/N1/C1/Buttons/Resume/UI Particel" method="_on_Resume_mouse_entered"]
 
-[connection signal="mouse_exited" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume/UI Particel" method="_on_Resume_mouse_exited"]
+[connection signal="mouse_exited" from="Content/N1/C1/Buttons/Resume" to="Content/N1/C1/Buttons/Resume/UI Particel" method="_on_Resume_mouse_exited"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Resume" to="Content/N1/C1/Buttons/Resume/UI Particel" method="_on_Resume_pressed"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Resume/UI Particel" method="_on_Resume_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Resume" to="." method="_on_Resume_pressed"]
 
-[connection signal="mouse_entered" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_mouse_entered"]
+[connection signal="mouse_entered" from="Content/N1/C1/Buttons/Restart" to="Content/N1/C1/Buttons/Restart/UI Particel" method="_on_Restart_mouse_entered"]
 
-[connection signal="mouse_exited" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_mouse_exited"]
+[connection signal="mouse_exited" from="Content/N1/C1/Buttons/Restart" to="Content/N1/C1/Buttons/Restart/UI Particel" method="_on_Restart_mouse_exited"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Restart" to="Content/N1/C1/Buttons/Restart/UI Particel" method="_on_Restart_pressed"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Restart" to="." method="_on_Restart_pressed"]
 
-[connection signal="mouse_entered" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_mouse_entered"]
+[connection signal="mouse_entered" from="Content/N1/C1/Buttons/Cancel" to="Content/N1/C1/Buttons/Cancel/UI Particel" method="_on_Cancel_mouse_entered"]
 
-[connection signal="mouse_exited" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_mouse_exited"]
+[connection signal="mouse_exited" from="Content/N1/C1/Buttons/Cancel" to="Content/N1/C1/Buttons/Cancel/UI Particel" method="_on_Cancel_mouse_exited"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel" to="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Cancel" to="." method="_on_Cancel_pressed"]
 
-[connection signal="pressed" from="Bitte loesch mich!/buttonBarPause/HBoxContainer/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Content/N1/C1/Buttons/Cancel" to="Content/N1/C1/Buttons/Cancel/UI Particel" method="_on_Cancel_pressed"]
 
 

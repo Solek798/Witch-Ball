@@ -18,25 +18,7 @@
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=16]
 [ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=17]
 
-[node name="Characterselection" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 1 )
-match_template = ExtResource( 2 )
-scarlett = ExtResource( 3 )
-jasmine = ExtResource( 4 )
-lilith = ExtResource( 5 )
-
-[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+[node name="Characterselection" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -49,8 +31,13 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
+script = ExtResource( 1 )
+match_template = ExtResource( 2 )
+scarlett = ExtResource( 3 )
+jasmine = ExtResource( 4 )
+lilith = ExtResource( 5 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -68,7 +55,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Characters" type="HBoxContainer" parent="CenterContainer/VBoxContainer" index="0"]
+[node name="Characters" type="HBoxContainer" parent="VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -86,7 +73,7 @@ custom_constants/separation = -16
 alignment = 0
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Scarlett" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="0"]
+[node name="Scarlett" type="TextureButton" parent="VBoxContainer/Characters" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -109,14 +96,14 @@ texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 7 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Scarlett" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="VBoxContainer/Characters/Scarlett" index="0" instance=ExtResource( 8 )]
 
 margin_left = 23.0
 margin_top = -35.0
 margin_right = 63.0
 margin_bottom = 5.0
 
-[node name="Sound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Characters/Scarlett" index="1"]
+[node name="Sound" type="AudioStreamPlayer" parent="VBoxContainer/Characters/Scarlett" index="1"]
 
 stream = ExtResource( 9 )
 volume_db = 0.0
@@ -125,7 +112,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Jasmine" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="1"]
+[node name="Jasmine" type="TextureButton" parent="VBoxContainer/Characters" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -149,14 +136,14 @@ texture_normal = ExtResource( 10 )
 texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Jasmine" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="VBoxContainer/Characters/Jasmine" index="0" instance=ExtResource( 8 )]
 
 margin_left = 23.0
 margin_top = -38.0
 margin_right = 63.0
 margin_bottom = 2.0
 
-[node name="Sound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Characters/Jasmine" index="1"]
+[node name="Sound" type="AudioStreamPlayer" parent="VBoxContainer/Characters/Jasmine" index="1"]
 
 stream = ExtResource( 12 )
 volume_db = 0.0
@@ -165,7 +152,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Lilith" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="2"]
+[node name="Lilith" type="TextureButton" parent="VBoxContainer/Characters" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -188,14 +175,14 @@ group = null
 texture_normal = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" parent="CenterContainer/VBoxContainer/Characters/Lilith" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="VBoxContainer/Characters/Lilith" index="0" instance=ExtResource( 8 )]
 
 margin_left = 27.0
 margin_top = -33.0
 margin_right = 67.0
 margin_bottom = 7.0
 
-[node name="Character4" type="TextureButton" parent="CenterContainer/VBoxContainer/Characters" index="3"]
+[node name="Character4" type="TextureButton" parent="VBoxContainer/Characters" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -218,7 +205,7 @@ group = null
 texture_normal = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
+[node name="Selection" type="CenterContainer" parent="VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -235,7 +222,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="Railing" type="TextureRect" parent="CenterContainer/VBoxContainer/Selection" index="0"]
+[node name="Railing" type="TextureRect" parent="VBoxContainer/Selection" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -254,7 +241,7 @@ size_flags_vertical = 1
 texture = ExtResource( 14 )
 stretch_mode = 0
 
-[node name="Play" type="TextureButton" parent="CenterContainer/VBoxContainer/Selection" index="1"]
+[node name="Play" type="TextureButton" parent="VBoxContainer/Selection" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -281,12 +268,12 @@ texture_hover = ExtResource( 17 )
 texture_disabled = ExtResource( 16 )
 _sections_unfolded = [ "Textures" ]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
+[connection signal="pressed" from="VBoxContainer/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
+[connection signal="pressed" from="VBoxContainer/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Characters/Lilith" to="." method="_on_Lilith_pressed"]
+[connection signal="pressed" from="VBoxContainer/Characters/Lilith" to="." method="_on_Lilith_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Selection/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Selection/Play" to="." method="_on_Play_pressed"]
 
 
