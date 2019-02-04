@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Wasser Explosion/tropfen.png" type="Texture" id=1]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer Explsion/cirle.png" type="Texture" id=1]
 
 [sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.213018, 0.621302, 0.804734, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 0.108948, 0.570224, 0.820313, 1, 0.0765381, 0.432701, 0.890625, 1, 0.120249, 0.107117, 0.527344, 1 )
+colors = PoolColorArray( 0.887952, 0.894531, 0.0524139, 1, 0.874603, 0.729019, 0.0643966, 1, 0.820313, 0.325692, 0.108948, 1, 0.886719, 0.185939, 0.0623474, 1, 0.191406, 0.178696, 0.178696, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 
@@ -43,13 +43,14 @@ curve = SubResource( 5 )
 
 render_priority = 0
 trail_divisor = 1
-emission_shape = 0
+emission_shape = 1
+emission_sphere_radius = 2.0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
 spread = 180.0
 flatness = 0.5
-gravity = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, 98, 0 )
 initial_velocity = 100.0
 initial_velocity_random = 0.5
 angular_velocity = 0.0
@@ -65,7 +66,7 @@ tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 0.0
 damping_random = 0.0
-angle = 50.0
+angle = 0.0
 angle_random = 0.0
 scale = 0.01
 scale_random = 0.0
@@ -157,7 +158,6 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Background", "Glow" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -165,23 +165,23 @@ _sections_unfolded = [ "Background", "Glow" ]
 
 emitting = true
 amount = 200
-lifetime = 0.4
+lifetime = 0.5
 one_shot = false
 preprocess = 0.0
-speed_scale = 0.5
+speed_scale = 1.0
 explosiveness = 0.5
-randomness = 0.5
+randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = false
+local_coords = true
 draw_order = 0
 process_material = SubResource( 7 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Transform" ]
+_sections_unfolded = [ "Process Material", "Textures" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 
