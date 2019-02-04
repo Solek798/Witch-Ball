@@ -129,7 +129,6 @@ _sections_unfolded = [ "Textures" ]
 
 [node name="UI Particel" parent="Control/buttonBarPause/HBoxContainer/options" index="0" instance=ExtResource( 6 )]
 
-visible = false
 position = Vector2( 36.9241, 36.5657 )
 
 [node name="Resume" type="TextureButton" parent="Control/buttonBarPause/HBoxContainer" index="1"]
@@ -240,16 +239,16 @@ position = Vector2( 37.6412, 36.5657 )
 
 [connection signal="mouse_exited" from="Control/buttonBarPause/HBoxContainer/Restart" to="Control/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_mouse_exited"]
 
-[connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Restart" to="Control/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_pressed"]
-
 [connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+
+[connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Restart" to="Control/buttonBarPause/HBoxContainer/Restart/UI Particel" method="_on_Restart_pressed"]
 
 [connection signal="mouse_entered" from="Control/buttonBarPause/HBoxContainer/Cancel" to="Control/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_mouse_entered"]
 
 [connection signal="mouse_exited" from="Control/buttonBarPause/HBoxContainer/Cancel" to="Control/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_mouse_exited"]
 
-[connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Cancel" to="Control/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_pressed"]
-
 [connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Cancel" to="." method="_on_Cancel_pressed"]
+
+[connection signal="pressed" from="Control/buttonBarPause/HBoxContainer/Cancel" to="Control/buttonBarPause/HBoxContainer/Cancel/UI Particel" method="_on_Cancel_pressed"]
 
 

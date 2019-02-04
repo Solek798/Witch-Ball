@@ -1,17 +1,17 @@
 [gd_scene load_steps=7 format=2]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 1 )
 colors = PoolColorArray( 0.480469, 0.926941, 1, 1, 0.433594, 0.986725, 1, 0 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=2]
 
 flags = 4
-gradient = SubResource( 2 )
+gradient = SubResource( 1 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -41,7 +41,7 @@ angle = 90.0
 angle_random = 1.0
 scale = 4.0
 scale_random = 0.0
-color_ramp = SubResource( 3 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -51,18 +51,18 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Resource" ]
 
-[sub_resource type="Gradient" id=5]
+[sub_resource type="Gradient" id=4]
 
 offsets = PoolRealArray( 0, 1 )
 colors = PoolColorArray( 1, 1, 1, 0, 0, 0.861137, 1, 1 )
 
-[sub_resource type="GradientTexture" id=6]
+[sub_resource type="GradientTexture" id=5]
 
 flags = 4
-gradient = SubResource( 5 )
+gradient = SubResource( 4 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=6]
 
 render_priority = 0
 trail_divisor = 1
@@ -92,7 +92,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 2.0
 scale_random = 1.0
-color_ramp = SubResource( 6 )
+color_ramp = SubResource( 5 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -102,7 +102,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Resource" ]
 
-[node name="Aim" type="Node2D" index="0"]
+[node name="Aim" type="Node2D"]
 
 [node name="Aim" type="Particles2D" parent="." index="0"]
 
@@ -119,12 +119,12 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 1 )
+process_material = SubResource( 3 )
 texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material" ]
+_sections_unfolded = [ "Drawing", "Visibility" ]
 
 [node name="Cross" type="Node2D" parent="." index="1"]
 
@@ -147,14 +147,14 @@ randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
+local_coords = false
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material" ]
+_sections_unfolded = [ "Drawing", "Process Material" ]
 
 [node name="Particle4" type="Particles2D" parent="Cross" index="1"]
 
@@ -175,12 +175,12 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Time", "Transform" ]
+_sections_unfolded = [ "Drawing", "Transform" ]
 
 [node name="Particle" type="Particles2D" parent="Cross" index="2"]
 
@@ -201,7 +201,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = null
 normal_map = null
 h_frames = 1
@@ -227,11 +227,11 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Time", "Transform" ]
+_sections_unfolded = [ "Drawing", "Transform" ]
 
 
