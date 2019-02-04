@@ -76,6 +76,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
+position = Vector2( 0, -54.0832 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
 
@@ -89,7 +91,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" parent="Aim" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 191.063, 0 )
+position = Vector2( 406.378, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="DodgeTimer" type="Timer" parent="." index="2"]
@@ -157,7 +159,6 @@ _sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts", "cus
 
 [node name="Special" type="Node2D" parent="." index="9"]
 
-editor/display_folded = true
 position = Vector2( -62, 25 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 

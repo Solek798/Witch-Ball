@@ -2,23 +2,106 @@
 
 [node name="Ch3" type="Sprite" index="0"]
 
-editor/display_folded = true
-
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
-editor/display_folded = true
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [  ],
+"connections": [ "oneshot", "out", 0, "anim", "blend2", 0, "anim 2", "blend2", 1, "blend2", "oneshot 3", 0, "anim 3", "oneshot 3", 1, "oneshot 3", "oneshot 4", 0, "anim 4", "oneshot 4", 1, "oneshot 2", "oneshot", 0, "anim 6", "oneshot", 1, "oneshot 4", "oneshot 2", 0, "anim 5", "oneshot 2", 1 ],
 "master": NodePath(""),
 "nodes": [ {
+"animation": null,
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 5, 63 ),
+"type": "animation"
+}, {
 "id": "out",
-"position": Vector2( 40, 40 ),
+"position": Vector2( 1255, 65 ),
 "type": "output"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 850, 189 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 619, 190 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 373, 189 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 3",
+"position": Vector2( 154, 191 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend2",
+"position": Vector2( 153, 65 ),
+"type": "blend2"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 3",
+"mix": false,
+"position": Vector2( 373, 65 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 4",
+"mix": false,
+"position": Vector2( 619, 65 ),
+"type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 5, 168 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot",
+"mix": false,
+"position": Vector2( 1083, 65 ),
+"type": "oneshot"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot 2",
+"mix": false,
+"position": Vector2( 850, 65 ),
+"type": "oneshot"
 } ]
 }
 
