@@ -11,56 +11,56 @@ var player_2_selection
 signal match_instantiated(new_match)
 
 # TEMP
-export(PackedScene) var match_template
 export(PackedScene) var scarlett
 export(PackedScene) var jasmine
 export(PackedScene) var lilith
 
 func _ready():
 	current_mode = PLAYER_1
-	$CenterContainer/VBoxContainer/Selection/Railing.modulate = player_1_color
+	$Content/Selection/Railing.modulate = player_1_color
+	$Content/Characters/Scarlett.grab_focus()
 
 func switch_player():
 	current_mode = PLAYER_2
-	$CenterContainer/VBoxContainer/Selection/Railing.modulate = player_2_color
+	$Content/Selection/Railing.modulate = player_2_color
 
 func end_selection():
 	current_mode = null
-	$CenterContainer/VBoxContainer/Selection/Railing.modulate = Color("ffffff")
-	$CenterContainer/VBoxContainer/Selection/Play.disabled = false
+	$Content/Selection/Railing.modulate = Color("ffffff")
+	$Content/Selection/Play.disabled = false
 
 func _on_Scarlett_pressed():
 	match current_mode:
 		PLAYER_1:
-			$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.player_1 = true
+			$Content/Characters/Scarlett/Selection.player_1 = true
 			player_1_selection = scarlett
 			switch_player()
 		PLAYER_2:
-			$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.player_2 = true
+			$Content/Characters/Scarlett/Selection.player_2 = true
 			player_2_selection = scarlett
 			end_selection()
-	$CenterContainer/VBoxContainer/Characters/Scarlett/Sound.play()
+	$Content/Characters/Scarlett/Sound.play()
 
 func _on_Jasmine_pressed():
 	match current_mode:
 		PLAYER_1:
-			$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.player_1 = true
+			$Content/Characters/Jasmine/Selection.player_1 = true
 			player_1_selection = jasmine
 			switch_player()
 		PLAYER_2:
-			$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.player_2 = true
+			$Content/Characters/Jasmine/Selection.player_2 = true
 			player_2_selection = jasmine
 			end_selection()
-	$CenterContainer/VBoxContainer/Characters/Jasmine/Sound.play()
+	$Content/Characters/Jasmine/Sound.play()
 
 func _on_Lilith_pressed():
 	match current_mode:
 		PLAYER_1:
-			$CenterContainer/VBoxContainer/Characters/Lilith/Selection.player_1 = true
+			$Content/Characters/Lilith/Selection.player_1 = true
 			player_1_selection = lilith
 			switch_player()
 		PLAYER_2:
-			$CenterContainer/VBoxContainer/Characters/Lilith/Selection.player_2 = true
+			$Content/Characters/Lilith/Selection.player_2 = true
 			player_2_selection = lilith
 			end_selection()
 	# TODO
@@ -68,13 +68,13 @@ func _on_Lilith_pressed():
 	#$CenterContainer/VBoxContainer/Characters/Lilith/Sound.play()
 
 func _on_Play_pressed():
-	var new_match = match_template.instance()
-	new_match.player_1_selection = self.player_1_selection
-	new_match.player_2_selection = self.player_2_selection
-	emit_signal("match_instantiated", new_match)
+	if get_parent().has_method("request_match_start"):
+		get_parent().request_match_start([player_1_selection, player_2_selection])
 	
 	current_mode = PLAYER_1
-	$CenterContainer/VBoxContainer/Characters/Scarlett/Selection.reset()
-	$CenterContainer/VBoxContainer/Characters/Jasmine/Selection.reset()
-	$CenterContainer/VBoxContainer/Characters/Lilith/Selection.reset()
+	$Content/Characters/Scarlett/Selection.reset()
+	$Content/Characters/Jasmine/Selection.reset()
+	$Content/Characters/Lilith/Selection.reset()
+	
+	self.queue_free()
 

@@ -1,20 +1,25 @@
 extends Node
 
+export(PackedScene) var match_template
+
 var current_match
+
 
 func _ready():
 	randomize()
 	$Music.play()
-	$Menu/Characterselection.connect("match_instantiated", self, "_on_match_instantiated")
-	$Menu/PauseScreen/Content/N1/C1/Buttons/Cancel.connect("pressed", self, "_on_cancel_pressed")
-	$Menu/PauseScreen/Content/N1/C1/Buttons/Restart.connect("pressed", self, "_on_restart_pressed")
-	$Menu/Main/content/C1/buttons/quit.connect("pressed", self, "_on_quit_pressed")
+	$Menu.connect("requested_match_start", self, "_on_requested_match_start")
 
-func _on_match_instantiated(new_match):
-	current_match = new_match
-	new_match.connect("match_finished", self, "_on_match_finished")
-	add_child(new_match)
+func _on_requested_match_start(selection):
+	current_match = match_template.instance()
+	current_match.connect("match_finished", self, "_on_match_finished")
+	$Menu.connect("requested_match_restart", current_match, "_on_requested_match_restart")
+	$Menu.connect("requested_match_canceled", current_match, "_on_requested_match_canceled")
+	current_match.player_1_selection = selection[0]
+	current_match.player_2_selection = selection[1]
+	add_child(current_match)
 	$Music.stop()
+	$Menu.visible = false
 
 func _on_match_finished(finished_match):
 	current_match.queue_free()
@@ -23,13 +28,3 @@ func _on_match_finished(finished_match):
 
 func _on_Music_finished():
 	$Music.play()
-
-func _on_cancel_pressed():
-	current_match.queue_free()
-	$Music.play()
-
-func _on_restart_pressed():
-	current_match.restart()
-
-func _on_quit_pressed():
-	get_tree().quit()
