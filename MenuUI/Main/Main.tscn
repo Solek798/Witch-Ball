@@ -17,19 +17,12 @@
 [ext_resource path="res://MenuUI/Main/button_quit_menu_pressed_200.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Main/button_quit_menu_hovering_200.png" type="Texture" id=16]
 
-[node name="Menu" type="Node2D"]
-
-script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+[node name="Main" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1856.0
-margin_bottom = 1016.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -37,18 +30,19 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
-_sections_unfolded = [ "Margin" ]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Transform" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
+[node name="Content" type="VBoxContainer" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 760.0
-margin_top = 236.0
+margin_top = 234.0
 margin_right = 1160.0
-margin_bottom = 844.0
+margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -58,7 +52,7 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="title" type="TextureRect" parent="CenterContainer/VBoxContainer" index="0"]
+[node name="title" type="TextureRect" parent="Content" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -75,7 +69,7 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
+[node name="C1" type="CenterContainer" parent="Content" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -92,7 +86,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer" index="0"]
+[node name="Buttons" type="VBoxContainer" parent="Content/C1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -109,9 +103,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = -3
 alignment = 1
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
-[node name="start" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
+[node name="start" type="TextureButton" parent="Content/C1/Buttons" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -135,12 +129,12 @@ texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 _sections_unfolded = [ "Pause", "Textures" ]
 
-[node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" index="0" instance=ExtResource( 6 )]
+[node name="UI_Particel_Menu" parent="Content/C1/Buttons/start" index="0" instance=ExtResource( 6 )]
 
 visible = false
 script = ExtResource( 7 )
 
-[node name="options" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="1"]
+[node name="options" type="TextureButton" parent="Content/C1/Buttons" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -165,12 +159,12 @@ texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" index="0" instance=ExtResource( 6 )]
+[node name="UI_Particel_Menu" parent="Content/C1/Buttons/options" index="0" instance=ExtResource( 6 )]
 
 visible = false
 script = ExtResource( 7 )
 
-[node name="Credits" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="2"]
+[node name="Credits" type="TextureButton" parent="Content/C1/Buttons" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -195,12 +189,12 @@ texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" index="0" instance=ExtResource( 6 )]
+[node name="UI_Particel_Menu" parent="Content/C1/Buttons/Credits" index="0" instance=ExtResource( 6 )]
 
 visible = false
 script = ExtResource( 7 )
 
-[node name="quit" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" index="3"]
+[node name="quit" type="TextureButton" parent="Content/C1/Buttons" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -225,39 +219,39 @@ texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 16 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="UI_Particel_Menu" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" index="0" instance=ExtResource( 6 )]
+[node name="UI_Particel_Menu" parent="Content/C1/Buttons/quit" index="0" instance=ExtResource( 6 )]
 
 visible = false
 script = ExtResource( 7 )
 
-[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start/UI_Particel_Menu" method="_on_start_mouse_entered"]
+[connection signal="mouse_entered" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_mouse_entered"]
 
-[connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start/UI_Particel_Menu" method="_on_start_mouse_exited"]
+[connection signal="mouse_exited" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start/UI_Particel_Menu" method="_on_start_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/start" to="." method="_on_start_pressed"]
 
-[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options/UI_Particel_Menu" method="_on_options_mouse_entered"]
+[connection signal="mouse_entered" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_mouse_entered"]
 
-[connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options/UI_Particel_Menu" method="_on_options_mouse_exited"]
+[connection signal="mouse_exited" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options/UI_Particel_Menu" method="_on_options_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/options" to="." method="_on_options_pressed"]
 
-[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_mouse_entered"]
+[connection signal="mouse_entered" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_mouse_entered"]
 
-[connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_mouse_exited"]
+[connection signal="mouse_exited" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/Credits" to="." method="_on_Credits_pressed"]
 
-[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit/UI_Particel_Menu" method="_on_quit_mouse_entered"]
+[connection signal="mouse_entered" from="Content/C1/Buttons/quit" to="Content/C1/Buttons/quit/UI_Particel_Menu" method="_on_quit_mouse_entered"]
 
-[connection signal="mouse_exited" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit/UI_Particel_Menu" method="_on_quit_mouse_exited"]
+[connection signal="mouse_exited" from="Content/C1/Buttons/quit" to="Content/C1/Buttons/quit/UI_Particel_Menu" method="_on_quit_mouse_exited"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Content/C1/Buttons/quit" to="." method="_on_quit_pressed"]
 
 
