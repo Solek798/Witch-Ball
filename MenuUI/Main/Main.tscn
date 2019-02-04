@@ -32,6 +32,7 @@ size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Transform" ]
+own_template = null
 
 [node name="Content" type="VBoxContainer" parent="." index="0"]
 
@@ -40,9 +41,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 760.0
-margin_top = 234.0
+margin_top = 236.0
 margin_right = 1160.0
-margin_bottom = 846.0
+margin_bottom = 844.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -228,25 +229,25 @@ script = ExtResource( 7 )
 
 [connection signal="mouse_exited" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_mouse_exited"]
 
-[connection signal="pressed" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_pressed"]
-
 [connection signal="pressed" from="Content/C1/Buttons/start" to="." method="_on_start_pressed"]
+
+[connection signal="pressed" from="Content/C1/Buttons/start" to="Content/C1/Buttons/start/UI_Particel_Menu" method="_on_start_pressed"]
 
 [connection signal="mouse_entered" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_mouse_entered"]
 
 [connection signal="mouse_exited" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_mouse_exited"]
 
-[connection signal="pressed" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_pressed"]
-
 [connection signal="pressed" from="Content/C1/Buttons/options" to="." method="_on_options_pressed"]
+
+[connection signal="pressed" from="Content/C1/Buttons/options" to="Content/C1/Buttons/options/UI_Particel_Menu" method="_on_options_pressed"]
 
 [connection signal="mouse_entered" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_mouse_entered"]
 
 [connection signal="mouse_exited" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_mouse_exited"]
 
-[connection signal="pressed" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
-
 [connection signal="pressed" from="Content/C1/Buttons/Credits" to="." method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="Content/C1/Buttons/Credits" to="Content/C1/Buttons/Credits/UI_Particel_Menu" method="_on_Credits_pressed"]
 
 [connection signal="mouse_entered" from="Content/C1/Buttons/quit" to="Content/C1/Buttons/quit/UI_Particel_Menu" method="_on_quit_mouse_entered"]
 

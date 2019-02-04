@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://MenuUI/Main/Menu.gd" type="Script" id=1]
+[ext_resource path="res://MenuUI/Options/OptionScene.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Options/Options Hintergrund_400.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/Options/Music_Font_25.png" type="Texture" id=3]
 [ext_resource path="res://MenuUI/Options/Sound_Font_20.png" type="Texture" id=4]
