@@ -71,7 +71,7 @@ angle_random = 1.0
 scale = 0.21
 scale_random = 1.0
 scale_curve = SubResource( 2 )
-color = Color( 1, 1, 1, 0.591137 )
+color = Color( 0.816597, 0.871094, 0.786026, 0.657451 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -79,11 +79,10 @@ anim_speed_random = 0.11
 anim_offset = 0.0
 anim_offset_random = 0.09
 anim_loop = false
-_sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Emission Shape", "Flags", "Gravity", "Linear Accel", "Resource", "Scale", "Spread", "Trail" ]
+_sections_unfolded = [ "Animation", "Color", "Emission Shape", "Flags", "Gravity", "Resource", "Spread", "Trail" ]
 
-[node name="Smoke" type="Particles2D"]
+[node name="Smoke" type="Particles2D" index="0"]
 
-position = Vector2( 0.206436, 0.71543 )
 scale = Vector2( 0.1, 0.1 )
 emitting = true
 amount = 5

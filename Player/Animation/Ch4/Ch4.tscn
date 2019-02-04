@@ -1,6 +1,6 @@
 [gd_scene format=2]
 
-[node name="Ch3" type="Sprite" index="0"]
+[node name="Ch3" type="Sprite"]
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
