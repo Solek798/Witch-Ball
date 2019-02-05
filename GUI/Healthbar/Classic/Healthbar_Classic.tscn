@@ -2,9 +2,9 @@
 
 [ext_resource path="res://GUI/Healthbar/Classic/Healthbar_Classic.gd" type="Script" id=1]
 [ext_resource path="res://GUI/Healthbar/Classic/Life.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GUI/Healthbar/Classic/HealthBarPanel_Basic_Rendering.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Healthbar/Classic/HealthBarPanel_Basic_Rendering_edited.png" type="Texture" id=3]
 
-[node name="Healthbar" type="Container"]
+[node name="Healthbar" type="Container" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.0

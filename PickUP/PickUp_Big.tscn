@@ -3,7 +3,7 @@
 [ext_resource path="res://PickUP/PickUp_Big.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Shockwafe.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PickUP/Icon_BigBall_V2.png" type="Texture" id=4]
+[ext_resource path="res://PickUP/Icon_BigBall_V2_200.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -30,6 +30,7 @@ shape = SubResource( 1 )
 
 [node name="Shockwafe" parent="." index="1" instance=ExtResource( 3 )]
 
+modulate = Color( 0.403922, 0.243137, 0.815686, 1 )
 position = Vector2( 1.19101, 9.12693 )
 scale = Vector2( 1.5, 1.5 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
