@@ -31,9 +31,12 @@ func play_dodge_up():
 func play_hit():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_hit")
 
-
-
-
 func play_WinnJump():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_WinnJump")
-	
+
+func play_indestructable():
+	$AnimationTreePlayer/AnimationPlayer.play("indestructable")
+
+func stop_indestructabel():
+	$AnimationTreePlayer/AnimationPlayer.stop()
+	$Charakter.modulate.a = 1.0

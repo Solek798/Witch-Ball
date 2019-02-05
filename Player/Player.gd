@@ -142,9 +142,11 @@ func dodge(movement):
 		$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
 
 func take_damage(ammount):
-	if is_dead:
+	print($IndestructableTimer.time_left)
+	if is_dead or $IndestructableTimer.time_left:
 		return
-	body.play_hit()
+	body.play_indestructable()
+	$IndestructableTimer.start()
 	health -= ammount
 	emit_signal("player_damaged", self, ammount)
 	
@@ -200,9 +202,9 @@ func _on_pick_up_spawned(impulse, position):
 	
 	impulse.apply_impulse()
 	modifiers.append(impulse)
-	
-	
-	
-	
+
 func _on_player_won_round():
 	body.play_WinnJump()
+
+func _on_IndestructableTimer_timeout():
+	body.stop_indestructabel()
