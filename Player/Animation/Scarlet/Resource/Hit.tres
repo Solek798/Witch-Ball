@@ -150,4 +150,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [ Vector2( -128.539, -238.508 ) ]
 }
+tracks/12/type = "method"
+tracks/12/path = NodePath("..")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_indestructable"
+} ]
+}
 

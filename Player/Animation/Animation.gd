@@ -35,8 +35,10 @@ func play_WinnJump():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_WinnJump")
 
 func play_indestructable():
-	$AnimationTreePlayer/AnimationPlayer.play("indestructable")
+	print("Los!")
+	$AnimationTreePlayer/AnimationPlayer.play("Indestructable")
 
 func stop_indestructabel():
 	$AnimationTreePlayer/AnimationPlayer.stop()
 	$Charakter.modulate.a = 1.0
+

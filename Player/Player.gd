@@ -142,10 +142,10 @@ func dodge(movement):
 		$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
 
 func take_damage(ammount):
-	print($IndestructableTimer.time_left)
 	if is_dead or $IndestructableTimer.time_left:
 		return
-	body.play_indestructable()
+	
+	body.play_hit()
 	$IndestructableTimer.start()
 	health -= ammount
 	emit_signal("player_damaged", self, ammount)
