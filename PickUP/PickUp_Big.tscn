@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 65.207
 
-[node name="PickUp_Big" type="Area2D" groups=[
+[node name="PickUp_Big" type="Area2D" index="0" groups=[
 "PickUp",
 ]]
 
@@ -30,6 +30,7 @@ shape = SubResource( 1 )
 
 [node name="Shockwafe" parent="." index="1" instance=ExtResource( 3 )]
 
+modulate = Color( 0.403922, 0.243137, 0.815686, 1 )
 position = Vector2( 1.19101, 9.12693 )
 scale = Vector2( 1.5, 1.5 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
