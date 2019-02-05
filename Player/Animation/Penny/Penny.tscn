@@ -145,7 +145,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
-editor/display_folded = true
 position = Vector2( -8.12253, -194.239 )
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
@@ -172,6 +171,11 @@ position = Vector2( 280.806, 37.7318 )
 z_index = 1
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Z Index" ]
+
+[node name="throw_point" type="Position2D" parent="Charakter/Torso/Head_Arms/Arm_r/Hand_r" index="0"]
+
+position = Vector2( -203.637, -11.2105 )
+rotation = -2.39889
 
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
