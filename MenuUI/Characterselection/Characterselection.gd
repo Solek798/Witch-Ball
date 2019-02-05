@@ -16,6 +16,7 @@ export(PackedScene) var match_template
 export(PackedScene) var scarlett
 export(PackedScene) var jasmine
 export(PackedScene) var lilith
+export(PackedScene) var penny
 
 func _ready():
 	$Content/Characters/Scarlett.grab_focus()
@@ -69,9 +70,25 @@ func _on_Lilith_pressed():
 	# Insert Sounds
 	#$CenterContainer/VBoxContainer/Characters/Lilith/Sound.play()
 
+func _on_Penny_pressed():
+	match current_mode:
+		PLAYER_1:
+			$Content/Characters/Penny/Selection.player_1 = true
+			player_1_selection = penny
+			switch_player()
+		PLAYER_2:
+			$Content/Characters/Penny/Selection.player_2 = true
+			player_2_selection = penny
+			end_selection()
+	# TODO
+	# Insert Sounds
+	#$CenterContainer/VBoxContainer/Characters/Penny/Sound.play()
+	
+
 func _on_Play_pressed():
 	if get_parent().has_method("confirm_selection"):
 		get_parent().confirm_selection([player_1_selection, player_2_selection])
 	
 	self.queue_free()
+
 

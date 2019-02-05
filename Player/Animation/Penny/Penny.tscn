@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0000_line.png" type="Texture" id=1]
+[ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0000_Torso.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0000s_0006_arm_l.png" type="Texture" id=3]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0000s_0005_Hand_l.png" type="Texture" id=4]
@@ -15,10 +15,9 @@
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0004_Foot_r.png" type="Texture" id=13]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0002_Schrit.png" type="Texture" id=14]
 
-
 [node name="Penny" type="Sprite" index="0"]
 
-texture = ExtResource( 1 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -701.629 ]
 }
@@ -31,7 +30,7 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "oneshot", "out", 0, "oneshot 4", "oneshot 2", 0, "anim 5", "oneshot 2", 1, "blend2", "oneshot 3", 0, "anim 3", "oneshot 3", 1, "oneshot 3", "oneshot 4", 0, "anim 4", "oneshot 4", 1, "oneshot 2", "oneshot", 0, "anim 6", "oneshot", 1, "anim", "blend2", 0, "anim 2", "blend2", 1 ],
+"connections": [ "oneshot", "out", 0, "blend2", "oneshot 3", 0, "anim 3", "oneshot 3", 1, "anim", "blend2", 0, "anim 2", "blend2", 1, "oneshot 4", "oneshot 2", 0, "anim 5", "oneshot 2", 1, "oneshot 3", "oneshot 4", 0, "anim 4", "oneshot 4", 1, "oneshot 2", "oneshot", 0, "anim 6", "oneshot", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "animation": null,
@@ -50,10 +49,28 @@ data = {
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot 2",
+"id": "oneshot 3",
 "mix": false,
-"position": Vector2( 850, 65 ),
+"position": Vector2( 373, 65 ),
 "type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 5, 168 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend2",
+"position": Vector2( 153, 65 ),
+"type": "blend2"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 373, 189 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -61,10 +78,16 @@ data = {
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot 3",
+"id": "oneshot 2",
 "mix": false,
-"position": Vector2( 373, 65 ),
+"position": Vector2( 850, 65 ),
 "type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 6",
+"position": Vector2( 850, 189 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -90,32 +113,8 @@ data = {
 }, {
 "animation": null,
 "filter": [  ],
-"id": "anim 2",
-"position": Vector2( 5, 168 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend2",
-"position": Vector2( 153, 65 ),
-"type": "blend2"
-}, {
-"animation": null,
-"filter": [  ],
 "id": "anim 3",
 "position": Vector2( 154, 191 ),
-"type": "animation"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 6",
-"position": Vector2( 850, 189 ),
-"type": "animation"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 4",
-"position": Vector2( 373, 189 ),
 "type": "animation"
 }, {
 "animation": null,
@@ -139,9 +138,10 @@ blend_times = [  ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 8.12253, 194.239 )
+position = Vector2( 0, -46.7087 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
