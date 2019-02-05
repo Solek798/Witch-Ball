@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PickUP/PickUp_Mana.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PickUP/mana_bottle_v3.png" type="Texture" id=3]
+[ext_resource path="res://PickUP/mana_bottle_v3_final.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
