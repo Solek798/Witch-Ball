@@ -45,7 +45,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -76,6 +76,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, -54.0832 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
@@ -109,7 +110,14 @@ wait_time = 0.45
 one_shot = true
 autostart = false
 
-[node name="AinimationTween" type="Tween" parent="." index="5"]
+[node name="IndestructableTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="AinimationTween" type="Tween" parent="." index="6"]
 
 repeat = false
 playback_process_mode = 1
@@ -118,16 +126,16 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Smoke" parent="." index="6" instance=ExtResource( 8 )]
+[node name="Smoke" parent="." index="7" instance=ExtResource( 8 )]
 
-[node name="ManaTimer" type="Timer" parent="." index="7"]
+[node name="ManaTimer" type="Timer" parent="." index="8"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
 
-[node name="Mana" type="ProgressBar" parent="." index="8"]
+[node name="Mana" type="ProgressBar" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -154,13 +162,13 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Special" type="Node2D" parent="." index="9"]
+[node name="Special" type="Node2D" parent="." index="10"]
 
-editor/display_folded = true
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -62, 25 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Fast" type="Sprite" parent="Special" index="0"]
 
@@ -179,6 +187,8 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
 [connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
 
