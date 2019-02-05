@@ -25,4 +25,10 @@ script = ExtResource( 1 )
 next_scene = null
 particle_template = null
 
+[connection signal="focus_entered" from="." to="." method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="." to="." method="_on_MagicButton_focus_exited"]
+
+[connection signal="mouse_entered" from="." to="." method="_on_MagicButton_mouse_entered"]
+
 

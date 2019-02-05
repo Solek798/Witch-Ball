@@ -1,15 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
-[ext_resource path="res://MenuUI/Menu.gd" type="Script" id=2]
-[ext_resource path="res://MenuUI/Main/Main.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MenuUI/Options/OptionScene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MenuUI/Characterselection/Characterselection.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MenuUI/Menu.gd" type="Script" id=3]
+[ext_resource path="res://MenuUI/Main/Main.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MenuUI/PauseScreen/PauseScreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://MenuUI/Main/Main_Menu.wav" type="AudioStream" id=6]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
+match_template = ExtResource( 2 )
 
 [node name="Menu" type="Control" parent="." index="0"]
 
@@ -23,18 +24,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin" ]
+main_scene_template = ExtResource( 4 )
+pause_scene_template = ExtResource( 5 )
 
-[node name="Main" parent="Menu" index="0" instance=ExtResource( 3 )]
-
-[node name="OptionScene" parent="Menu" index="1" instance=ExtResource( 4 )]
-
-visible = false
-
-[node name="Characterselection" parent="Menu" index="2" instance=ExtResource( 5 )]
-
-visible = false
+[node name="Main" parent="Menu" index="0" instance=ExtResource( 4 )]
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="1"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MenuUI/Options/OptionScene.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Options/Options Hintergrund_400.png" type="Texture" id=2]
@@ -7,11 +7,13 @@
 [ext_resource path="res://MenuUI/Options/checkbox_unchecked_10.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/Options/checkbox_checked_15.png" type="Texture" id=6]
 [ext_resource path="res://MenuUI/Options/Fullscreen_Font_20.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_normal.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_pressed.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/UI Particel/UI_Particle_Pause.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_normal.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_pressed.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_home_hovering.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/UI Particel/UI_Particle_Menu.tscn" type="PackedScene" id=12]
 
-[node name="OptionScene" type="CenterContainer" index="0"]
+[node name="OptionScene" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -67,6 +69,7 @@ alignment = 0
 
 [node name="Options" type="CenterContainer" parent="Conent" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -228,40 +231,17 @@ size_flags_vertical = 1
 texture = ExtResource( 7 )
 stretch_mode = 0
 
-[node name="Menu" type="TextureButton" parent="Conent" index="1"]
+[node name="Menu" parent="Conent" index="1" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 98.0
 margin_right = 141.0
 margin_bottom = 169.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
-
-[node name="UI Particel" parent="Conent/Menu" index="0" instance=ExtResource( 10 )]
-
-position = Vector2( 37.851, 36.9707 )
-
-[connection signal="mouse_entered" from="Conent/Menu" to="Conent/Menu/UI Particel" method="_on_Menu_mouse_entered"]
-
-[connection signal="mouse_exited" from="Conent/Menu" to="Conent/Menu/UI Particel" method="_on_Menu_mouse_exited"]
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+_sections_unfolded = [ "Focus", "Textures" ]
+particle_template = ExtResource( 12 )
 
 [connection signal="pressed" from="Conent/Menu" to="." method="_on_Menu_pressed"]
-
-[connection signal="pressed" from="Conent/Menu" to="Conent/Menu/UI Particel" method="_on_Menu_pressed"]
 
 

@@ -1,6 +1,13 @@
 extends Control
-var selectionMenu
+
+var return_scene_template
+
+
+func _ready():
+	$Menu.grab_focus()
 
 func _on_Menu_pressed():
-	selectionMenu.visible = true
-	self.visible = false
+	if get_parent().has_method("switch_scene"):
+		get_parent().switch_scene(return_scene_template, null)
+	
+	self.queue_free()

@@ -1,10 +1,13 @@
 extends CenterContainer
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var return_scene_template
+
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	$Conent/Menu.grab_focus()
+
+func _on_Menu_pressed():
+	if get_parent().has_method("switch_scene"):
+		print(return_scene_template)
+		get_parent().switch_scene(return_scene_template, null)
+	self.queue_free()

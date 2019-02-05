@@ -76,7 +76,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 0, -54.0832 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
@@ -177,9 +176,9 @@ scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
 

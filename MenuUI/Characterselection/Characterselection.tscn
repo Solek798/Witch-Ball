@@ -1,22 +1,23 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/Characterselection.gd" type="Script" id=1]
 [ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=5]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200_hovering.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=8]
-[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=9]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200_hovering.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=12]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection unbekannt_normal.png" type="Texture" id=13]
-[ext_resource path="res://MenuUI/Characterselection/Railing_350.png" type="Texture" id=14]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_normal.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=16]
-[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Scarlett_normal_200_hovering.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=10]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection Jasmine_200_hovering.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=13]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection unbekannt_normal.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/Railing_350.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_normal.png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_pressed.png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/Characterselection/Button_Quadratisch_ResumePlaying_hovering.png" type="Texture" id=18]
 
 [node name="Characterselection" type="CenterContainer" index="0"]
 
@@ -37,7 +38,7 @@ scarlett = ExtResource( 3 )
 jasmine = ExtResource( 4 )
 lilith = ExtResource( 5 )
 
-[node name="Conent" type="VBoxContainer" parent="." index="0"]
+[node name="Content" type="VBoxContainer" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -55,7 +56,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Characters" type="HBoxContainer" parent="Conent" index="0"]
+[node name="Characters" type="HBoxContainer" parent="Content" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -73,139 +74,88 @@ custom_constants/separation = -16
 alignment = 0
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Scarlett" type="TextureButton" parent="Conent/Characters" index="0"]
+[node name="Scarlett" parent="Content/Characters" index="0" instance=ExtResource( 6 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 200.0
 margin_bottom = 355.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
-_sections_unfolded = [ "Textures" ]
+focus_neighbour_left = NodePath("../Lilith")
+focus_neighbour_right = NodePath("../Jasmine")
+focus_neighbour_bottom = NodePath("../../Selection/Play")
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+_sections_unfolded = [ "Focus", "Textures" ]
 
-[node name="Selection" parent="Conent/Characters/Scarlett" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 9 )]
 
-margin_left = 23.0
-margin_top = -35.0
-margin_right = 63.0
-margin_bottom = 5.0
+margin_left = 26.0
+margin_top = -39.0
+margin_right = 66.0
+margin_bottom = 1.0
 
-[node name="Sound" type="AudioStreamPlayer" parent="Conent/Characters/Scarlett" index="1"]
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Scarlett" index="1"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Jasmine" type="TextureButton" parent="Conent/Characters" index="1"]
+[node name="Jasmine" parent="Content/Characters" index="1" instance=ExtResource( 6 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 184.0
 margin_right = 384.0
 margin_bottom = 355.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
-_sections_unfolded = [ "Textures" ]
+focus_neighbour_left = NodePath("../Scarlett")
+focus_neighbour_right = NodePath("../Lilith")
+focus_neighbour_bottom = NodePath("../../Selection/Play")
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Textures" ]
 
-[node name="Selection" parent="Conent/Characters/Jasmine" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="Content/Characters/Jasmine" index="0" instance=ExtResource( 9 )]
 
-margin_left = 23.0
+margin_left = 25.0
 margin_top = -38.0
-margin_right = 63.0
+margin_right = 65.0
 margin_bottom = 2.0
 
-[node name="Sound" type="AudioStreamPlayer" parent="Conent/Characters/Jasmine" index="1"]
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Jasmine" index="1"]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Lilith" type="TextureButton" parent="Conent/Characters" index="2"]
+[node name="Lilith" parent="Content/Characters" index="2" instance=ExtResource( 6 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 368.0
 margin_right = 568.0
 margin_bottom = 355.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 13 )
-_sections_unfolded = [ "Textures" ]
+focus_neighbour_left = NodePath("../Jasmine")
+focus_neighbour_right = NodePath("../Scarlett")
+focus_neighbour_bottom = NodePath("../../Selection/Play")
+texture_normal = ExtResource( 14 )
+_sections_unfolded = [ "Focus", "Textures" ]
 
-[node name="Selection" parent="Conent/Characters/Lilith" index="0" instance=ExtResource( 8 )]
+[node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 9 )]
 
-margin_left = 27.0
-margin_top = -33.0
-margin_right = 67.0
-margin_bottom = 7.0
+margin_left = 25.0
+margin_top = -38.0
+margin_right = 65.0
+margin_bottom = 2.0
 
-[node name="Character4" type="TextureButton" parent="Conent/Characters" index="3"]
+[node name="Character4" parent="Content/Characters" index="3" instance=ExtResource( 6 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 552.0
 margin_right = 752.0
 margin_bottom = 355.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 14 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Selection" type="CenterContainer" parent="Conent" index="1"]
+[node name="Selection" type="CenterContainer" parent="Content" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -222,7 +172,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="Railing" type="TextureRect" parent="Conent/Selection" index="0"]
+[node name="Railing" type="TextureRect" parent="Content/Selection" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -238,42 +188,25 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 stretch_mode = 0
 
-[node name="Play" type="TextureButton" parent="Conent/Selection" index="1"]
+[node name="Play" parent="Content/Selection" index="1" instance=ExtResource( 6 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 339.0
 margin_right = 413.0
 margin_bottom = 71.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-disabled = true
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-texture_disabled = ExtResource( 16 )
-_sections_unfolded = [ "Textures" ]
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
+_sections_unfolded = [ "Focus", "Textures" ]
 
-[connection signal="pressed" from="Conent/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
+[connection signal="pressed" from="Content/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
 
-[connection signal="pressed" from="Conent/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
+[connection signal="pressed" from="Content/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
 
-[connection signal="pressed" from="Conent/Characters/Lilith" to="." method="_on_Lilith_pressed"]
+[connection signal="pressed" from="Content/Characters/Lilith" to="." method="_on_Lilith_pressed"]
 
-[connection signal="pressed" from="Conent/Selection/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Content/Selection/Play" to="." method="_on_Play_pressed"]
 
 
