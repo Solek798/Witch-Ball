@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/penny_ingame_0001s_0005_Foot_l.png-e2aeec1e31fe0dfdafffc79d5ba58c28.stex"
+path="res://.import/penny_ingame_0001s_0004_Foot_r.png-61099e420f4a14f96bcc39fb8bbb09c7.stex"
 
 [deps]
 
-source_file="res://Player/Animation/Ch4/Images/penny_ingame_0001s_0005_Foot_l.png"
-dest_files=[ "res://.import/penny_ingame_0001s_0005_Foot_l.png-e2aeec1e31fe0dfdafffc79d5ba58c28.stex" ]
+source_file="res://Player/Animation/Penny/Images/penny_ingame_0001s_0004_Foot_r.png"
+dest_files=[ "res://.import/penny_ingame_0001s_0004_Foot_r.png-61099e420f4a14f96bcc39fb8bbb09c7.stex" ]
 
 [params]
 
