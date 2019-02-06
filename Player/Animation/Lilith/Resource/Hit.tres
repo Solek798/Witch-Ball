@@ -174,18 +174,4 @@ tracks/13/keys = {
 "update": 0,
 "values": [ 0.0, -28.5776, 0.0 ]
 }
-tracks/14/type = "method"
-tracks/14/path = NodePath("..")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0.25 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "play_indestructable"
-} ]
-}
 
