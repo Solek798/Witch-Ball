@@ -2,17 +2,17 @@
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/Ball Blau.png" type="Texture" id=3]
-[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=4]
-[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=5]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/Feuer 7.1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/Feuer 7.1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bullet/Fast.png" type="Texture" id=4]
+[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=5]
+[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 12.1109
 
-[node name="Bullet_Fast" type="RigidBody2D" index="0" groups=[
+[node name="Bullet_Fast" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 
@@ -43,17 +43,17 @@ damage = 1
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Node2D" parent="." index="1" instance=ExtResource( 3 )]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -1.4592, 0 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 3 )
+[node name="Sprite" type="Sprite" parent="." index="2"]
+
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Shot" type="AudioStreamPlayer2D" parent="." index="2"]
+[node name="Shot" type="AudioStreamPlayer2D" parent="." index="3"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = false
@@ -62,9 +62,9 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Collide" type="AudioStreamPlayer2D" parent="." index="3"]
+[node name="Collide" type="AudioStreamPlayer2D" parent="." index="4"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -72,7 +72,5 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-
-[node name="Node2D" parent="." index="4" instance=ExtResource( 6 )]
 
 
