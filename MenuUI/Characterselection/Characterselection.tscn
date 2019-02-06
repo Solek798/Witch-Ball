@@ -23,6 +23,8 @@
 [ext_resource path="res://MenuUI/Main/Button_Menu_Rendered_Base_hover.png" type="Texture" id=21]
 [ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=22]
 
+
+
 [node name="Characterselection" type="CenterContainer"]
 
 anchor_left = 0.0
