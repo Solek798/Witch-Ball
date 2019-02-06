@@ -16,10 +16,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.03, 0.12, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -7.7522, -26.9123, 0.0 ]
+"values": [ 0.0, 15.0241, 5.22409, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Arm_r:rotation_degrees")
+tracks/1/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -139,48 +139,24 @@ tracks/10/keys = {
 "values": [ Vector2( 0, 0.3481 ), Vector2( -5.18467, 0.3481 ), Vector2( 0, 0.3481 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:scale")
+tracks/11/path = NodePath("../Charakter/Torso:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("../Charakter/Torso:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
 "times": PoolRealArray( 0, 0.02, 0.03, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.902344, 0.2952, 0.15509, 1 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Head/Hut_b:rotation_degrees")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 0.12, 0.25 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -28.5776, 0.0 ]
-}
-tracks/14/type = "method"
-tracks/14/path = NodePath("..")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
+tracks/12/type = "method"
+tracks/12/path = NodePath("..")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
 "times": PoolRealArray( 0.25 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
