@@ -1,14 +1,21 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bullet/Bullet_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bullet/Bullet_Big.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/Arrow_512_V1.0.png" type="Texture" id=5]
-[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=7]
-[ext_resource path="res://PickUP/Icon_FastBall.V1.3.png" type="Texture" id=8]
-[ext_resource path="res://PickUP/Icon_BigBall.V1.0.png" type="Texture" id=9]
+[ext_resource path="res://Player/Aim/old/Arrow_512_V1.0.png" type="Texture" id=5]
+[ext_resource path="res://Player/Aim/Aim.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=8]
+<<<<<<< working copy
+[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=9]
+[ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=10]
+=======
+[ext_resource path="res://Player/shadow.png" type="Texture" id=9]
+[ext_resource path="res://PickUP/Icon_FastBall.V1.3.png" type="Texture" id=10]
+[ext_resource path="res://PickUP/Icon_BigBall.V1.0.png" type="Texture" id=11]
+>>>>>>> merge rev
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -44,7 +51,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -75,13 +82,22 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
+position = Vector2( 0, -54.0832 )
+scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Aim" index="0"]
 
-position = Vector2( 100, 0 )
-scale = Vector2( 0.15, 0.1 )
+visible = false
+position = Vector2( 300, 0 )
+scale = Vector2( 0.1, -0.05 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Aim" parent="Aim" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 406.378, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="DodgeTimer" type="Timer" parent="." index="2"]
@@ -91,7 +107,7 @@ wait_time = 0.1
 one_shot = true
 autostart = false
 
-[node name="Controlls" parent="." index="3" instance=ExtResource( 6 )]
+[node name="Controlls" parent="." index="3" instance=ExtResource( 7 )]
 
 [node name="ThrowTimer" type="Timer" parent="." index="4"]
 
@@ -100,7 +116,14 @@ wait_time = 0.45
 one_shot = true
 autostart = false
 
-[node name="AinimationTween" type="Tween" parent="." index="5"]
+[node name="IndestructableTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="AinimationTween" type="Tween" parent="." index="6"]
 
 repeat = false
 playback_process_mode = 1
@@ -109,16 +132,22 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Smoke" parent="." index="6" instance=ExtResource( 7 )]
+[node name="Smoke" parent="." index="7" instance=ExtResource( 8 )]
 
-[node name="ManaTimer" type="Timer" parent="." index="7"]
+[node name="ManaTimer" type="Timer" parent="." index="8"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
 
-[node name="Mana" type="ProgressBar" parent="." index="8"]
+[node name="shadow" type="Sprite" parent="." index="9"]
+
+position = Vector2( -0.348047, 7.65879 )
+scale = Vector2( 0.70025, 0.70025 )
+texture = ExtResource( 9 )
+
+[node name="Mana" type="ProgressBar" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -145,30 +174,43 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Special" type="Node2D" parent="." index="9"]
+[node name="Special" type="Node2D" parent="." index="11"]
 
 position = Vector2( -62, 25 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Fast" type="Sprite" parent="Special" index="0"]
 
 visible = false
+<<<<<<< working copy
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+=======
 scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 [node name="Big" type="Sprite" parent="Special" index="1"]
 
 visible = false
+<<<<<<< working copy
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+=======
 scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
+>>>>>>> merge rev
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
 [connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
 
