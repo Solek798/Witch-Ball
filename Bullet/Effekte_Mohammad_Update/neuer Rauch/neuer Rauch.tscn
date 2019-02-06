@@ -27,9 +27,9 @@ curve = SubResource( 3 )
 [sub_resource type="Curve" id=5]
 
 min_value = 0.0
-max_value = 1.0
+max_value = 2.0
 bake_resolution = 100
-_data = [ Vector2( 0.160973, 0.0595703 ), 0.0, 1.71322, 0, 0, Vector2( 0.901, 0.145508 ), -6.69713, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 2 ), 0.0, 0.109275, 0, 0, Vector2( 1, 0.144724 ), 0.409951, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=6]
 
@@ -52,7 +52,7 @@ gravity = Vector3( 0, 0, 0 )
 initial_velocity = 1.5
 initial_velocity_random = 1.0
 angular_velocity = 360.0
-angular_velocity_random = 0.0
+angular_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 linear_accel = 20.0
@@ -77,7 +77,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Color", "Gravity", "Scale" ]
+_sections_unfolded = [ "Angular Velocity", "Color", "Gravity", "Scale" ]
 
 [node name="Rauch" type="Node2D" index="0"]
 
@@ -89,8 +89,8 @@ modulate = Color( 0.59375, 0.59375, 0.59375, 1 )
 position = Vector2( 2.04124, -0.0972252 )
 rotation = 1.57694
 emitting = true
-amount = 300
-lifetime = 0.5
+amount = 20
+lifetime = 0.2
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -106,6 +106,6 @@ texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Transform" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform" ]
 
 

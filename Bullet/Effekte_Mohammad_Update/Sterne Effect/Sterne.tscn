@@ -135,12 +135,13 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Glow" ]
 
-[node name="Sterne" type="Node2D" index="0"]
+[node name="Sterne" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
+modulate = Color( 0.12062, 0.740639, 0, 1 )
 position = Vector2( -1.93712, 2.71197 )
 scale = Vector2( 1, 0.974194 )
 emitting = true
@@ -161,7 +162,7 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Transform" ]
+_sections_unfolded = [ "Process Material", "Transform", "Visibility" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Particles2D" index="0"]
 
