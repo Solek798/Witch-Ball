@@ -7,7 +7,6 @@
 [ext_resource path="res://GUI/Healthbar/Classic/HeartAnimation/New folder/2.png" type="Texture" id=5]
 [ext_resource path="res://GUI/Healthbar/Classic/HeartAnimation/New folder/1.png" type="Texture" id=6]
 
-
 [sub_resource type="ParticlesMaterial" id=1]
 
 render_priority = 0
@@ -48,7 +47,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Radial Accel", "Tangential Accel", "Trail" ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
@@ -63,26 +62,21 @@ blend_times = [  ]
 [node name="Sprite5" type="Sprite" parent="." index="1"]
 
 editor/display_folded = true
-visible = false
-modulate = Color( 0.0165558, 0.847656, 0.847656, 1 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite4" type="Sprite" parent="Sprite5" index="0"]
 
-visible = false
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite3" type="Sprite" parent="Sprite5/Sprite4" index="0"]
 
-visible = false
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite2" type="Sprite" parent="Sprite5/Sprite4/Sprite3" index="0"]
 
-visible = false
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -98,7 +92,7 @@ position = Vector2( 0, 30.6935 )
 emitting = false
 amount = 256
 lifetime = 10.0
-one_shot = true
+one_shot = false
 preprocess = 0.0
 speed_scale = 4.0
 explosiveness = 0.0

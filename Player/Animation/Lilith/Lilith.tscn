@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_for_throw.tres" type="Animation" id=2]
@@ -8,21 +8,22 @@
 [ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch2.tres" type="Animation" id=6]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch3.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_lilith.tres" type="Animation" id=11]
-[ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=12]
-[ext_resource path="res://Player/Animation/Lilith/Images/Arm_l.png" type="Texture" id=13]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hand_l.png" type="Texture" id=14]
-[ext_resource path="res://Player/Animation/Lilith/Images/Arm_r.png" type="Texture" id=15]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hand_r.png" type="Texture" id=16]
-[ext_resource path="res://Player/Animation/Lilith/Images/Head.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hut.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Lilith/Images/Hut_b.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Lilith/Images/Bein_l.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Lilith/Images/Foot_L.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation/Lilith/Resource/Walk_lilith.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Lilith/Images/Arm_l.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hand_l.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Lilith/Images/Arm_r.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hand_r.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Lilith/Images/Head.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hut.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Lilith/Images/Hut_b.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Lilith/Images/Bein_l.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation/Lilith/Images/Foot_L.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=24]
 
 [sub_resource type="Animation" id=1]
 
@@ -341,16 +342,16 @@ data = {
 "position": Vector2( 5, 270 ),
 "type": "animation"
 }, {
-"id": "mix 2",
-"mix": 1.0,
-"position": Vector2( 114, 298 ),
-"type": "mix"
-}, {
 "animation": ExtResource( 8 ),
 "filter": [  ],
 "id": "Walk",
 "position": Vector2( 5, 157 ),
 "type": "animation"
+}, {
+"id": "mix 2",
+"mix": 1.0,
+"position": Vector2( 114, 298 ),
+"type": "mix"
 } ]
 }
 _sections_unfolded = [ "Pause", "Playback" ]
@@ -364,12 +365,13 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Hit = ExtResource( 4 )
 anims/Idle = ExtResource( 5 )
-anims/New_Hit_Ch2 = ExtResource( 9 )
-anims/Reset = ExtResource( 10 )
+anims/Indestructable = ExtResource( 9 )
+anims/New_Hit_Ch2 = ExtResource( 10 )
+anims/Reset = ExtResource( 11 )
 anims/Throw_Ch2 = ExtResource( 7 )
 "anims/Walk for throw" = SubResource( 1 )
 anims/Walk_Ch2 = ExtResource( 8 )
-anims/Walk_lilith = ExtResource( 11 )
+anims/Walk_lilith = ExtResource( 12 )
 anims/WinnJump_Ch2 = ExtResource( 6 )
 "anims/idle for throw" = ExtResource( 3 )
 blend_times = [  ]
@@ -382,9 +384,9 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, -1.32509 )
+position = Vector2( 0, -2.28829 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
@@ -393,34 +395,34 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 position = Vector2( 57.9063, -117.896 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 offset = Vector2( 36.764, 5.99338 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 91.1528, 17.1476 )
-rotation = -0.11584
+rotation = -0.275729
 z_index = -1
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 offset = Vector2( 233.807, 27.1501 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 position = Vector2( -87.3967, -91.7234 )
-rotation = 0.0446541
+rotation = 0.106288
 z_index = 4
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 offset = Vector2( -52.4912, 71.8683 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
 position = Vector2( -72.2002, 97.4703 )
-rotation = 0.0282484
+rotation = 0.0672383
 z_index = 1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 offset = Vector2( -161.694, 75.4783 )
 _sections_unfolded = [ "Z Index" ]
 
@@ -434,27 +436,27 @@ scale = Vector2( 1, -1 )
 
 editor/display_folded = true
 position = Vector2( -9.59668, -193.373 )
-rotation = 0.0274076
+rotation = 0.0652371
 z_index = 1
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 offset = Vector2( 12.8547, -108.81 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
 position = Vector2( -110, -201 )
-rotation = -0.0617872
+rotation = -0.147069
 z_index = 1
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -89.0399, 6.45297 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Hut_b" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="1"]
 
 position = Vector2( 132.001, -229.001 )
-rotation = -0.0696673
+rotation = -0.165826
 z_index = -2
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 offset = Vector2( 67.7378, 8.22672 )
 _sections_unfolded = [ "Z Index" ]
 
@@ -466,33 +468,33 @@ _sections_unfolded = [ "Transform" ]
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 64.529, 154.377 )
-rotation = -0.0462049
+rotation = 0.327482
 z_index = -1
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 offset = Vector2( 28.828, 77.913 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 61.3702, 128.155 )
-rotation = 0.462296
-texture = ExtResource( 21 )
+rotation = 0.513733
+texture = ExtResource( 22 )
 offset = Vector2( -27.3255, 55.9917 )
 
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -46.4789, 194.989 )
-rotation = 0.36214
+rotation = 0.0185733
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 offset = Vector2( 32.0744, 57.6429 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 63.1752, 147.108 )
-rotation = 0.040486
-texture = ExtResource( 23 )
+rotation = 0.289652
+texture = ExtResource( 24 )
 offset = Vector2( -41.0731, 95.577 )
 
 

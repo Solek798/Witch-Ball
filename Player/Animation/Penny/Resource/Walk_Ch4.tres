@@ -138,4 +138,28 @@ tracks/10/keys = {
 "update": 0,
 "values": [ Vector2( 0, -0.627251 ), Vector2( 0, -3.5533 ), Vector2( 0, -4.04098 ), Vector2( 0, -0.627251 ) ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Charakter/Torso:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -3.89077 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Charakter/Torso/Legs/Leg_l/Foot_l:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -35.7675, -27.234, -3.12796, 19.6183 ]
+}
 
