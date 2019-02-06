@@ -6,7 +6,7 @@
 [ext_resource path="res://Backstage/Backstage_Classic.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 
-[node name="Classic" type="Node"]
+[node name="Classic" type="Node" index="0"]
 
 script = ExtResource( 1 )
 arena_template = ExtResource( 2 )
