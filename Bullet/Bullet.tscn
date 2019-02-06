@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Bullet/normal.png" type="Texture" id=5]
 [ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=6]
 [ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=7]
+[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -51,7 +52,6 @@ shape = SubResource( 1 )
 [node name="GoldenerSchweif" parent="." index="1" instance=ExtResource( 3 )]
 
 visible = false
-scale = Vector2( 1, 1 )
 
 [node name="Rauch" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -82,5 +82,11 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="shadow_ball" type="Sprite" parent="." index="6"]
+
+position = Vector2( -0.706443, 66.8968 )
+scale = Vector2( 0.892745, 0.375277 )
+texture = ExtResource( 8 )
 
 
