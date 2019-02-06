@@ -4,7 +4,7 @@ var return_scene_template
 
 
 func _ready():
-	$Conent/Menu.grab_focus()
+	$Option_Back/Conent/Buttons/Menu.grab_focus()
 
 func _on_Menu_pressed():
 	if get_parent().has_method("switch_scene"):
