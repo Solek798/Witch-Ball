@@ -11,7 +11,7 @@
 [ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=10]
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 pickup_mana_template = ExtResource( 2 )
@@ -27,6 +27,7 @@ time_divider = 2
 
 position = Vector2( 962.859, 540.221 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Position" parent="." index="1" instance=ExtResource( 8 )]
 
