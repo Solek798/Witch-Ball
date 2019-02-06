@@ -15,7 +15,9 @@ func start_match(selection):
 	new_match.player_2_selection = selection[1]
 	
 	new_match.connect("match_finished", self, "_on_match_finished")
-	add_child(new_match)
+	new_match.connect("match_instanciated", $Menu, "tutorial")
+	$Menu.connect("tutorial_exited", new_match, "start")
+	add_child_below_node($Music, new_match)
 	
 	$Music.stop()
 
