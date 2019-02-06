@@ -173,6 +173,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_f
 
 [node name="Special" type="Node2D" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( -62, 25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -190,9 +191,9 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
