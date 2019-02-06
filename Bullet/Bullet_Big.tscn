@@ -17,7 +17,7 @@ radius = 39.5678
 custom_solver_bias = 0.0
 radius = 108.181
 
-[node name="Bullet_Big" type="RigidBody2D" groups=[
+[node name="Bullet_Big" type="RigidBody2D" index="0" groups=[
 "Bullet",
 ]]
 
@@ -51,7 +51,6 @@ shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -97,6 +96,9 @@ bus = "Master"
 area_mask = 1
 
 [node name="Node" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 0, -27.0133 )
+scale = Vector2( 1, 8.3261 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
