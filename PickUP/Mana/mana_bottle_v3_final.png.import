@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Icon_BigBall_V2_200.png-f0f08264affb5805b04b264915574ad9.stex"
+path="res://.import/mana_bottle_v3_final.png-ef2a954bc3b950a3a6b89a3d00008b6e.stex"
 
 [deps]
 
-source_file="res://PickUP/Icon_BigBall_V2_200.png"
-dest_files=[ "res://.import/Icon_BigBall_V2_200.png-f0f08264affb5805b04b264915574ad9.stex" ]
+source_file="res://PickUP/Mana/mana_bottle_v3_final.png"
+dest_files=[ "res://.import/mana_bottle_v3_final.png-ef2a954bc3b950a3a6b89a3d00008b6e.stex" ]
 
 [params]
 

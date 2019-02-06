@@ -1,15 +1,16 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://PickUP/PickUp_Fast.gd" type="Script" id=1]
+[ext_resource path="res://PickUP/Mana/PickUp_Mana.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PickUP/Icon_FastBall_V2_200.png" type="Texture" id=3]
+[ext_resource path="res://PickUP/Mana/mana_bottle_v3_final.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 84.0437
+extents = Vector2( 53.4665, 108.218 )
 
-[node name="PickUp_Fast" type="Area2D" groups=[
+[node name="PickUp_Mana" type="Area2D" groups=[
 "PickUp",
 ]]
 
@@ -21,17 +22,16 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+mana_increase = 15
 impulse_template = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 2.77902, -0.79364 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -42,7 +42,7 @@ wait_time = 5.0
 one_shot = false
 autostart = true
 
-[connection signal="body_entered" from="." to="." method="_on_PickUp_Fast_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_PickUp_Mana_body_entered"]
 
 [connection signal="timeout" from="DespawnTimer" to="." method="_on_DespawnTimer_timeout"]
 
