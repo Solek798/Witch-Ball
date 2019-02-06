@@ -6,11 +6,17 @@ onready var player_2 = false setget set_player_2
 
 func set_player_1(new_value):
 	player_1 = new_value
-	$Player_1.visible = new_value
+	if new_value:
+		$Player1.text = "P1"
+	else:
+		$Player1.text = ""
 
 func set_player_2(new_value):
 	player_2 = new_value
-	$Player_2.visible = new_value
+	if new_value:
+		$Player2.text = "P2"
+	else:
+		$Player2.text = ""
 
 func reset():
 	set_player_1(false)
