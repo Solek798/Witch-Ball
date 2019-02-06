@@ -405,6 +405,9 @@ autostart = false
 
 [node name="Snow" parent="." index="10" instance=ExtResource( 9 )]
 
+visible = false
+emitting = false
+
 [connection signal="body_entered" from="Leafs" to="." method="_on_Leafs_body_entered"]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
