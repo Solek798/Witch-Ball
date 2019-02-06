@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
+[ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/Fast/PickUp_Fast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Big/PickUp_Big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Arena/Animations/LeafEffect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Arena/Stone/Steinlvl_aktuell.jpg" type="Texture" id=7]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=10]
+
+[node name="Arena" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+pickup_mana_template = ExtResource( 2 )
+pickup_fast_template = ExtResource( 3 )
+pickup_big_template = ExtResource( 4 )
+stone_effect_template = ExtResource( 5 )
+leaf_effect_template = ExtResource( 6 )
+min_spawn_time = 6
+max_spawn_time = 10
+time_divider = 2
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 962.859, 540.221 )
+texture = ExtResource( 7 )
+
+[node name="Position" parent="." index="1" instance=ExtResource( 8 )]
+
+[node name="PickUp_Spawn" parent="." index="2" instance=ExtResource( 9 )]
+
+[node name="Boundary" parent="." index="3" instance=ExtResource( 10 )]
+
+[node name="SpawnTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="PickUpTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 60.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+
+[connection signal="timeout" from="PickUpTimer" to="." method="_on_PickUpTimer_timeout"]
+
+

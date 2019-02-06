@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Backstage/Backstage_Classic.gd" type="Script" id=1]
 [ext_resource path="res://Backstage/Background.wav" type="AudioStream" id=2]
-[ext_resource path="res://Arena/Classic/Round_won.wav" type="AudioStream" id=3]
+[ext_resource path="res://Arena/Round_won.wav" type="AudioStream" id=3]
+
 
 [node name="Backstage" type="Node"]
 

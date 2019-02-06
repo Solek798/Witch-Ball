@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
@@ -7,65 +7,12 @@
 [ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/Animations/LeafEffect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=7]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Arena/Animations/Snow.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Arena/Animations/Snow.tscn" type="PackedScene" id=11]
 
-
-
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 33.2111, 413.859 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 30.687, 453.89 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 693.774, 32.8335 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 457.284, 23.3026 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 1001.2, 26.6879 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 710.443, 34.175 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 1197.81, 22.7575 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-custom_solver_bias = 0.0
-extents = Vector2( 44.252, 713.883 )
-
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 1163.57, 26.179 )
-
-[sub_resource type="Curve2D" id=10]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
-}
-
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -86,95 +33,9 @@ z_index = -10
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Boundary" type="Node2D" parent="." index="1"]
+[node name="Boundary" parent="." index="1" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-
-[node name="Middle" type="StaticBody2D" parent="Boundary" index="0"]
-
-input_pickable = false
-collision_layer = 2
-collision_mask = 4
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="Center" type="CollisionShape2D" parent="Boundary/Middle" index="0"]
-
-position = Vector2( 960, 589.975 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Border" type="StaticBody2D" parent="Boundary" index="1"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="Left" type="CollisionShape2D" parent="Boundary/Border" index="0"]
-
-position = Vector2( 115.043, 547.785 )
-rotation = 0.349066
-shape = SubResource( 2 )
-
-[node name="Top" type="CollisionShape2D" parent="Boundary/Border" index="1"]
-
-position = Vector2( 948.908, 52.8061 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Right" type="CollisionShape2D" parent="Boundary/Border" index="2"]
-
-position = Vector2( 1799.44, 557.198 )
-rotation = 1.1856
-shape = SubResource( 4 )
-
-[node name="Bottom" type="CollisionShape2D" parent="Boundary/Border" index="3"]
-
-position = Vector2( 953.173, 978.37 )
-shape = SubResource( 5 )
-
-[node name="Bullet" type="StaticBody2D" parent="Boundary" index="2"]
-
-input_pickable = false
-collision_layer = 16
-collision_mask = 16
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="Left" type="CollisionShape2D" parent="Boundary/Bullet" index="0"]
-
-position = Vector2( -188.457, 529.301 )
-rotation = 1.5708
-shape = SubResource( 6 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Top" type="CollisionShape2D" parent="Boundary/Bullet" index="1"]
-
-position = Vector2( 972.133, -201.863 )
-shape = SubResource( 7 )
-
-[node name="Right" type="CollisionShape2D" parent="Boundary/Bullet" index="2"]
-
-position = Vector2( 2125.69, 533.74 )
-shape = SubResource( 8 )
-
-[node name="Bottom" type="CollisionShape2D" parent="Boundary/Bullet" index="3"]
-
-position = Vector2( 999.517, 1211.18 )
-shape = SubResource( 9 )
-
-[node name="Position" parent="." index="2" instance=ExtResource( 8 )]
+[node name="Position" parent="." index="2" instance=ExtResource( 9 )]
 
 [node name="Leafs" type="Area2D" parent="." index="3"]
 
@@ -360,24 +221,7 @@ polygon = PoolVector2Array( 1172.79, -893.155, 1340.64, -814.883, 1325.03, -1045
 build_mode = 0
 polygon = PoolVector2Array( -1727.46, -294.378, -1723.56, -396.131, -1914.83, -474.403 )
 
-[node name="PickUp_Spawn" type="Path2D" parent="." index="6"]
-
-editor/display_folded = true
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
-position = Vector2( 965.891, 205.723 )
-curve = SubResource( 10 )
-
-[node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]
-
-position = Vector2( 1.50659, 731.846 )
-rotation = -1.58092
-offset = 0.0
-h_offset = 0.0
-v_offset = 0.0
-rotate = true
-cubic_interp = true
-loop = true
-lookahead = 4.0
+[node name="PickUp_Spawn" parent="." index="6" instance=ExtResource( 10 )]
 
 [node name="SpawnTimer" type="Timer" parent="." index="7"]
 
@@ -386,27 +230,14 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="AreasArenaColision" type="Node2D" parent="." index="8"]
-
-editor/display_folded = true
-
-[node name="Leaf_Areas" type="Node2D" parent="AreasArenaColision" index="0"]
-
-[node name="Stone_Areas" type="Node2D" parent="AreasArenaColision" index="1"]
-
-[node name="Needel_Areas" type="Node2D" parent="AreasArenaColision" index="2"]
-
-position = Vector2( 963.434, 542.199 )
-scale = Vector2( 0.499053, 0.497761 )
-
-[node name="PickUpTimer" type="Timer" parent="." index="9"]
+[node name="PickUpTimer" type="Timer" parent="." index="8"]
 
 process_mode = 1
 wait_time = 60.0
 one_shot = true
 autostart = false
 
-[node name="Snow" parent="." index="10" instance=ExtResource( 9 )]
+[node name="Snow" parent="." index="9" instance=ExtResource( 11 )]
 
 visible = false
 emitting = false
