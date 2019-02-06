@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character Selection_Panel_Overpaint_Lillith_Ausgewählt.png-ef6e30b96d2e28cb3d138c1b1cf23f5f.stex"
+path="res://.import/Character_Selection_Panel_Overpaint_Scarlett_Ausgewaehlt.png-8b2afb57c5f4dd098f64d4052d3bbede.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Lillith_Ausgewählt.png"
-dest_files=[ "res://.import/Character Selection_Panel_Overpaint_Lillith_Ausgewählt.png-ef6e30b96d2e28cb3d138c1b1cf23f5f.stex" ]
+source_file="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Scarlett_Ausgewaehlt.png"
+dest_files=[ "res://.import/Character_Selection_Panel_Overpaint_Scarlett_Ausgewaehlt.png-8b2afb57c5f4dd098f64d4052d3bbede.stex" ]
 
 [params]
 

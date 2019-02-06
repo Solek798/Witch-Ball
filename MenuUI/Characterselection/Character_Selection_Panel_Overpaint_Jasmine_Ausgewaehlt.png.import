@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character Selection_Panel_Overpaint_Scarlett_Ausgewählt.png-9bfad7aba0421f36cb5df25da3d70c0e.stex"
+path="res://.import/Character_Selection_Panel_Overpaint_Jasmine_Ausgewaehlt.png-416f44a83fe724c74311905077faff0d.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett_Ausgewählt.png"
-dest_files=[ "res://.import/Character Selection_Panel_Overpaint_Scarlett_Ausgewählt.png-9bfad7aba0421f36cb5df25da3d70c0e.stex" ]
+source_file="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Jasmine_Ausgewaehlt.png"
+dest_files=[ "res://.import/Character_Selection_Panel_Overpaint_Jasmine_Ausgewaehlt.png-416f44a83fe724c74311905077faff0d.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character Selection_Panel_Overpaint_Jasmine_Ausgewählt.png-32d2e7c8181d987c905fe51cd209bf61.stex"
+path="res://.import/Character_Selection_Panel_Overpaint_Lillith_Ausgewaehlt.png-2218ec3d6d544e2ecc022231e1418631.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Jasmine_Ausgewählt.png"
-dest_files=[ "res://.import/Character Selection_Panel_Overpaint_Jasmine_Ausgewählt.png-32d2e7c8181d987c905fe51cd209bf61.stex" ]
+source_file="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Lillith_Ausgewaehlt.png"
+dest_files=[ "res://.import/Character_Selection_Panel_Overpaint_Lillith_Ausgewaehlt.png-2218ec3d6d544e2ecc022231e1418631.stex" ]
 
 [params]
 
