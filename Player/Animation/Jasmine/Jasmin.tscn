@@ -227,7 +227,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, 3.03787 )
+position = Vector2( 0, -2.79104 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
@@ -245,7 +245,7 @@ __meta__ = {
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
 position = Vector2( 17.7513, -41.9383 )
-rotation = 0.0240895
+rotation = 0.0684921
 z_index = -5
 texture = ExtResource( 12 )
 offset = Vector2( -17.7513, 41.9383 )
@@ -257,7 +257,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 169.429, -4.91098 )
-rotation = -0.0375376
+rotation = -0.106728
 z_index = 1
 texture = ExtResource( 13 )
 offset = Vector2( -187.18, 46.8493 )
@@ -269,7 +269,7 @@ __meta__ = {
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 position = Vector2( -114.023, -17.0859 )
-rotation = -0.0142624
+rotation = -0.0405514
 z_index = 2
 texture = ExtResource( 14 )
 offset = Vector2( 114.023, 17.0859 )
@@ -281,7 +281,7 @@ __meta__ = {
 [node name="Hand_r" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_r" index="0"]
 
 position = Vector2( -92.8417, 161.357 )
-rotation = 0.019155
+rotation = 0.0544622
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( 199.156, -105.902 )
@@ -295,7 +295,7 @@ rotation = -2.39889
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -27.0435, -111.468 )
-rotation = 0.0761371
+rotation = 0.0489847
 z_index = 1
 texture = ExtResource( 16 )
 offset = Vector2( 27.0435, 111.468 )
@@ -307,7 +307,7 @@ __meta__ = {
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
 position = Vector2( -99.0553, -228.967 )
-rotation = 0.0355355
+rotation = 0.101036
 z_index = 1
 texture = ExtResource( 17 )
 offset = Vector2( 131.851, 318.848 )
@@ -334,7 +334,7 @@ __meta__ = {
 [node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 24.9636, 233.633 )
-rotation = 1.04918
+rotation = 0.561985
 z_index = -4
 texture = ExtResource( 19 )
 offset = Vector2( -24.9636, -233.633 )
@@ -357,7 +357,7 @@ __meta__ = {
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -57.0587, 270.543 )
-rotation = -0.64495
+rotation = -0.197027
 z_index = -1
 texture = ExtResource( 21 )
 offset = Vector2( 57.0587, -270.543 )
@@ -369,7 +369,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 43.0608, 145.589 )
-rotation = -0.0512529
+rotation = -0.0329749
 z_index = -1
 texture = ExtResource( 22 )
 offset = Vector2( 13.9972, -416.131 )
