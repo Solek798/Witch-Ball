@@ -29,6 +29,9 @@ func confirm_selection(selection):
 	self.visible = false
 	get_parent().start_match(selection)
 
+func close():
+	self.visible = false
+
 func menu():
 	self.visible = true
 	add_child(main_scene_template.instance())
