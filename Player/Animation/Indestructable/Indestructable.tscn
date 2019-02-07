@@ -5,7 +5,7 @@
 render_priority = 0
 trail_divisor = 1
 emission_shape = 1
-emission_sphere_radius = 64.0
+emission_sphere_radius = 32.0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
@@ -20,14 +20,14 @@ orbit_velocity = 1.0
 orbit_velocity_random = 1.0
 linear_accel = 0.0
 linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
+radial_accel = 90.0
+radial_accel_random = 1.0
 tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 0.0
 damping_random = 0.0
-angle = 0.0
-angle_random = 0.0
+angle = 90.0
+angle_random = 1.0
 scale = 3.0
 scale_random = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -38,12 +38,12 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Scale" ]
 
 [node name="Indestructable" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
+modulate = Color( 1, 1, 1, 0.403333 )
 emitting = true
 amount = 32
 lifetime = 1.0
@@ -62,6 +62,6 @@ texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Visibility" ]
 
 

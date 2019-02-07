@@ -23,7 +23,7 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=21]
 [ext_resource path="res://Player/Animation/Indestructable/Indestructable.tscn" type="PackedScene" id=22]
 
-[node name="Scarlet" type="Sprite" index="0"]
+[node name="Scarlet" type="Sprite"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -214,7 +214,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 editor/display_folded = true
-position = Vector2( 0, 28.7396 )
+position = Vector2( 0, 35.3619 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -233,7 +233,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.0570888
+rotation = 0.062438
 z_index = 4
 texture = ExtResource( 11 )
 offset = Vector2( 17.0357, 118.566 )
@@ -246,7 +246,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0543619
+rotation = -0.0457534
 z_index = 1
 texture = ExtResource( 12 )
 offset = Vector2( 145.576, 357.073 )
@@ -268,7 +268,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.175864
+rotation = 0.148015
 z_index = -5
 texture = ExtResource( 14 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -280,7 +280,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.0916666
+rotation = -0.0771506
 texture = ExtResource( 15 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -292,7 +292,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.110883
+rotation = -0.093324
 z_index = 1
 texture = ExtResource( 16 )
 offset = Vector2( 115.846, 3.52861 )
@@ -305,7 +305,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = 0.063239
+rotation = 0.0532247
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 17 )
 offset = Vector2( 174.778, -24.6302 )
@@ -328,7 +328,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.0477218
+rotation = -0.231467
 z_index = -1
 texture = ExtResource( 18 )
 offset = Vector2( 39.0679, -290.996 )
@@ -340,7 +340,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = -0.559878
+rotation = -0.481698
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 9.48901, -415.964 )
@@ -353,7 +353,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 49.202, 250.398 )
-rotation = 0.446831
+rotation = 0.616779
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 20 )
@@ -366,7 +366,7 @@ __meta__ = {
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.147707
+rotation = -0.0765666
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 21 )
@@ -378,7 +378,7 @@ __meta__ = {
 
 [node name="Indestructable" parent="." index="2" instance=ExtResource( 22 )]
 
-visible = false
+modulate = Color( 1, 1, 1, 0.436471 )
 position = Vector2( 0, -51.6379 )
 
 
