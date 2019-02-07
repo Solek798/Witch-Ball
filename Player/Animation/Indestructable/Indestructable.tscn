@@ -12,7 +12,7 @@ flag_disable_z = true
 spread = 45.0
 flatness = 0.0
 gravity = Vector3( 0, 0, 0 )
-initial_velocity = 1.0
+initial_velocity = 0.0
 initial_velocity_random = 0.0
 angular_velocity = 0.0
 angular_velocity_random = 0.0
@@ -20,10 +20,10 @@ orbit_velocity = 1.0
 orbit_velocity_random = 1.0
 linear_accel = 0.0
 linear_accel_random = 0.0
-radial_accel = 90.0
+radial_accel = -100.0
 radial_accel_random = 1.0
-tangential_accel = 0.0
-tangential_accel_random = 0.0
+tangential_accel = 49.98
+tangential_accel_random = 1.0
 damping = 0.0
 damping_random = 0.0
 angle = 90.0
@@ -38,14 +38,15 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
+_sections_unfolded = [ "Orbit Velocity", "Radial Accel", "Scale", "Tangential Accel" ]
 
-[node name="Indestructable" type="Node2D"]
+[node name="Indestructable" type="Node2D" index="0"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
 modulate = Color( 1, 1, 1, 0.403333 )
 emitting = true
-amount = 32
+amount = 8
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -62,6 +63,6 @@ texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Visibility" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Visibility" ]
 
 
