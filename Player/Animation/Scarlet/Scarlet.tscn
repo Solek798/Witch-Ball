@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/WinnJump.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Indestructalbe.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/WinnJump.tres" type="Animation" id=3]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=4]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=5]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=10]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=11]
@@ -57,6 +57,18 @@ data = {
 "position": Vector2( 1092, 431 ),
 "type": "output"
 }, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "WinnJump",
+"position": Vector2( 894, 402 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Throw",
+"position": Vector2( 417, 214 ),
+"type": "animation"
+}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
@@ -95,7 +107,7 @@ data = {
 "scale": 1.0,
 "type": "timescale"
 }, {
-"animation": ExtResource( 3 ),
+"animation": ExtResource( 5 ),
 "filter": [  ],
 "id": "anim 2",
 "position": Vector2( 250, 385 ),
@@ -107,7 +119,7 @@ data = {
 "position": Vector2( 159, 43 ),
 "type": "blend2"
 }, {
-"animation": ExtResource( 4 ),
+"animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "Hit",
 "position": Vector2( 748, 416 ),
@@ -131,17 +143,6 @@ data = {
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_down",
-"mix": false,
-"position": Vector2( 510, 516 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
 "fade_in": 0.0,
 "fade_out": 0.0,
@@ -151,33 +152,32 @@ data = {
 "position": Vector2( 712, 517 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
-"type": "animation"
-}, {
 "id": "Mix_Trow",
 "mix": 1.0,
 "position": Vector2( 527, 235 ),
 "type": "mix"
 }, {
-"animation": ExtResource( 5 ),
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
 "filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
+"id": "oneshot_dodge_down",
+"mix": false,
+"position": Vector2( 510, 516 ),
+"type": "oneshot"
 }, {
-"animation": ExtResource( 6 ),
+"animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "Throw",
-"position": Vector2( 417, 214 ),
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 894, 402 ),
+"id": "Walk",
+"position": Vector2( 6, 146 ),
 "type": "animation"
 } ]
 }
@@ -189,14 +189,14 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 4 )
+anims/Hit = ExtResource( 6 )
 anims/Idle = ExtResource( 2 )
-anims/Idle_Throw = ExtResource( 3 )
+anims/Idle_Throw = ExtResource( 5 )
 anims/Indestructable = ExtResource( 8 )
 anims/Reset_Animation = ExtResource( 9 )
-anims/Throwing = ExtResource( 6 )
-anims/Walk_Ch1 = ExtResource( 5 )
-anims/WinnJump = ExtResource( 7 )
+anims/Throwing = ExtResource( 4 )
+anims/Walk_Ch1 = ExtResource( 7 )
+anims/WinnJump = ExtResource( 3 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -213,7 +213,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 editor/display_folded = true
-position = Vector2( 0, 36.071 )
+position = Vector2( 0, 27.265 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -232,7 +232,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -38.0608, -65.9989 )
-rotation = 0.0278572
+rotation = 0.0558977
 z_index = 4
 texture = ExtResource( 11 )
 offset = Vector2( 17.0357, 118.566 )
@@ -245,7 +245,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
-rotation = 0.0672007
+rotation = -0.0562788
 z_index = 1
 texture = ExtResource( 12 )
 offset = Vector2( 145.576, 357.073 )
@@ -267,7 +267,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.0455553
+rotation = 0.182065
 z_index = -5
 texture = ExtResource( 14 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -279,7 +279,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.0709867
+rotation = -0.0948988
 texture = ExtResource( 15 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -291,7 +291,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.0269715
+rotation = -0.114793
 z_index = 1
 texture = ExtResource( 16 )
 offset = Vector2( 115.846, 3.52861 )
@@ -304,7 +304,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = 0.0362238
+rotation = 0.0654689
 scale = Vector2( 0.999999, 0.999999 )
 texture = ExtResource( 17 )
 offset = Vector2( 174.778, -24.6302 )
@@ -327,7 +327,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
-rotation = 0.175927
+rotation = -0.00918744
 z_index = -1
 texture = ExtResource( 18 )
 offset = Vector2( 39.0679, -290.996 )
@@ -339,7 +339,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.686512
+rotation = -0.574496
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 9.48901, -415.964 )
@@ -352,7 +352,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 49.202, 250.398 )
-rotation = 0.262382
+rotation = 0.410943
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 20 )
@@ -365,7 +365,7 @@ __meta__ = {
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = -0.969118
+rotation = 0.197645
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 21 )
