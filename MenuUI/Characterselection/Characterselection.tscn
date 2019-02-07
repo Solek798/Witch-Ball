@@ -8,7 +8,7 @@
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=6]
 [ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett_Ausgewaehlt.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett_Ausgewalt.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=10]
 [ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=11]
 [ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Jasmine.png" type="Texture" id=12]
