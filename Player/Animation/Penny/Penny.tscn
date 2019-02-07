@@ -20,11 +20,11 @@
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0000s_0004_Hut_back.png" type="Texture" id=18]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0003_Leg_r.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0004_Foot_r.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0002_Schrit.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0001_Leg_l.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0005_Foot_l.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0001_Leg_l.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0005_Foot_l.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0002_Schrit.png" type="Texture" id=23]
 
-[node name="Penny" type="Sprite" index="0"]
+[node name="Penny" type="Sprite"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -36,9 +36,9 @@ __meta__ = {
 playback_process_mode = 1
 master_player = NodePath("")
 base_path = NodePath("")
-active = false
+active = true
 data = {
-"active": false,
+"active": true,
 "connections": [ "anim 2", "scale", 0, "anim 3", "mix", 0, "anim 7", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_idle_throw", "oneshot_hit", 0, "anim 5", "oneshot_hit", 1, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "mix", "scale 2", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_walk_throw", "oneshot_idle_throw", 0, "scale 3", "oneshot_idle_throw", 1, "anim 6", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim 4", "scale 3", 0 ],
 "master": NodePath(""),
 "nodes": [ {
@@ -48,7 +48,7 @@ data = {
 "type": "timescale"
 }, {
 "id": "mix",
-"mix": 6.42544e-022,
+"mix": 1.0,
 "position": Vector2( 121, 193 ),
 "type": "mix"
 }, {
@@ -65,7 +65,7 @@ data = {
 "animation": ExtResource( 3 ),
 "filter": [  ],
 "id": "anim 4",
-"position": Vector2( 312, 161 ),
+"position": Vector2( 219, 304 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 4 ),
@@ -77,13 +77,13 @@ data = {
 "animation": ExtResource( 5 ),
 "filter": [  ],
 "id": "anim 5",
-"position": Vector2( 415, 237 ),
+"position": Vector2( 490, 282 ),
 "type": "animation"
 }, {
 "animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "anim 6",
-"position": Vector2( 579, 172 ),
+"position": Vector2( 650, 375 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -131,7 +131,7 @@ data = {
 "type": "oneshot"
 }, {
 "id": "scale 4",
-"position": Vector2( 711, 135 ),
+"position": Vector2( 772, 299 ),
 "scale": 1.5,
 "type": "timescale"
 }, {
@@ -159,7 +159,7 @@ data = {
 "type": "oneshot"
 }, {
 "id": "scale 3",
-"position": Vector2( 422, 132 ),
+"position": Vector2( 430, 158 ),
 "scale": 3.0,
 "type": "timescale"
 } ]
@@ -185,18 +185,18 @@ blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
 
+modulate = Color( 1, 1, 1, 0.641243 )
 position = Vector2( -2, -45.5 )
 z_index = 8
 _sections_unfolded = [ "Material", "Visibility", "Z Index" ]
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-modulate = Color( 0.946733, 0.615564, 0.53914, 1 )
-position = Vector2( -2.828, 0.3481 )
-rotation = -0.0339534
+position = Vector2( 0, -1.81223 )
+rotation = -0.0445978
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
@@ -204,8 +204,9 @@ position = Vector2( -8.12253, -194.239 )
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
+editor/display_folded = true
 position = Vector2( -105.132, 81.3261 )
-rotation = 0.722163
+rotation = 0.0510059
 texture = ExtResource( 12 )
 offset = Vector2( -42.3756, 43.7408 )
 _sections_unfolded = [ "Visibility" ]
@@ -213,14 +214,15 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( -112.5, 142.5 )
-rotation = -0.237994
+rotation = -0.0794802
 texture = ExtResource( 13 )
 offset = Vector2( -138.765, 48.8858 )
 
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
+editor/display_folded = true
 position = Vector2( 17.3676, 57.5761 )
-rotation = 0.354979
+rotation = -0.0301986
 z_index = -1
 texture = ExtResource( 14 )
 offset = Vector2( 114.46, 1.21204 )
@@ -230,6 +232,7 @@ _sections_unfolded = [ "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 241.25, 3.74997 )
+rotation = 0.0405579
 z_index = 1
 texture = ExtResource( 15 )
 offset = Vector2( 154.016, 35.1938 )
@@ -242,15 +245,17 @@ rotation = -2.39889
 
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
+editor/display_folded = true
 position = Vector2( -21.3824, -28.4157 )
-rotation = 0.29526
+rotation = 0.0171672
 texture = ExtResource( 16 )
 offset = Vector2( 6.3654, -75.0323 )
 
 [node name="Hut" type="Sprite" parent="Charakter/Torso/Head_Arms/Head" index="0"]
 
+editor/display_folded = true
 position = Vector2( -37.5, -191.25 )
-rotation = 0.0841639
+rotation = 0.0752412
 z_index = 1
 texture = ExtResource( 17 )
 offset = Vector2( -170.424, -66.1346 )
@@ -270,7 +275,7 @@ position = Vector2( -8.12253, -194.239 )
 [node name="Leg_r" type="Sprite" parent="Charakter/Torso/Legs" index="0"]
 
 position = Vector2( 102.01, 382.747 )
-rotation = -0.098904
+rotation = -0.365938
 z_index = -1
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Z Index" ]
@@ -278,33 +283,34 @@ _sections_unfolded = [ "Z Index" ]
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 8.61253, 68.5789 )
-rotation = 0.0497945
+rotation = -0.110058
 z_index = -1
 texture = ExtResource( 20 )
 offset = Vector2( -30.108, 54.144 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Schritt" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
-
-position = Vector2( 1.03078, 348.38 )
-texture = ExtResource( 21 )
-
-[node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="2"]
+[node name="Leg_l" type="Sprite" parent="Charakter/Torso/Legs" index="1"]
 
 position = Vector2( -54.3775, 403.826 )
-rotation = -0.0880245
+rotation = 0.599051
+scale = Vector2( 1, 1 )
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 offset = Vector2( 0.335069, 56.713 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 20, 115 )
-rotation = 0.0492818
+rotation = -0.343423
 z_index = -1
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 offset = Vector2( -26.8976, 90.707 )
 _sections_unfolded = [ "Z Index" ]
+
+[node name="Schritt" type="Sprite" parent="Charakter/Torso/Legs" index="2"]
+
+position = Vector2( 1.03078, 348.38 )
+texture = ExtResource( 23 )
 
 

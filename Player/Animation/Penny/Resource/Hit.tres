@@ -150,4 +150,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.902344, 0.2952, 0.15509, 1 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/12/type = "method"
+tracks/12/path = NodePath("..")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_indestructable"
+} ]
+}
 
