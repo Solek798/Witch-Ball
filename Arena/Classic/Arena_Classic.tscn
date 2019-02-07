@@ -107,7 +107,6 @@ polygon = PoolVector2Array( 5.88626, 1022.93, 146.144, 1050.2, 161.728, 974.232,
 
 [node name="Stones" type="Area2D" parent="." index="4"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
