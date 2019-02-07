@@ -69,4 +69,5 @@ func create_player(id):
 
 func _on_player_won_match(player):
 	print("Spieler ", player.id, " kriegt einen Keks")
+	yield(backstage, "round_finished")
 	emit_signal("match_finished", self)
