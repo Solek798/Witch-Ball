@@ -97,6 +97,7 @@ margin_left = 26.0
 margin_top = -39.0
 margin_right = 66.0
 margin_bottom = 1.0
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Scarlett" index="1"]
 
