@@ -191,9 +191,9 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
