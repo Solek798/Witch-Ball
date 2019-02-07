@@ -4,20 +4,20 @@
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/Fluss effect.png" type="Texture" id=2]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/sfs.png" type="Texture" id=3]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.0486929, 0 ), 0.0, 7.93352, 0, 0, Vector2( 0.170451, 0.575195 ), 19.8403, 19.8403, 0, 0, Vector2( 0.423445, 0.822266 ), -54.0235, -54.0235, 0, 0, Vector2( 0.428549, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.484689, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=3]
+[sub_resource type="CurveTexture" id=2]
 
 flags = 4
 width = 2048
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -46,8 +46,8 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.05
 scale_random = 0.0
-scale_curve = SubResource( 3 )
-color = Color( 1, 1, 1, 0.55251 )
+scale_curve = SubResource( 2 )
+color = Color( 1, 1, 1, 0.33149 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -55,22 +55,22 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Animation", "Color", "Scale" ]
+_sections_unfolded = [ "Animation", "Color" ]
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=4]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.000572929, 1 ), 0.0, 9.66645, 0, 0, Vector2( 0.983387, 0.671875 ), -7.36685, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
+[sub_resource type="CurveTexture" id=5]
 
 flags = 4
 width = 2048
-curve = SubResource( 5 )
+curve = SubResource( 4 )
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=6]
 
 render_priority = 0
 trail_divisor = 1
@@ -100,7 +100,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.58
 scale_random = 0.0
-scale_curve = SubResource( 6 )
+scale_curve = SubResource( 5 )
 color = Color( 1, 1, 1, 0.149176 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -129,7 +129,7 @@ emitting = true
 amount = 50
 lifetime = 13.0
 one_shot = false
-preprocess = 0.0
+preprocess = 20.0
 speed_scale = 0.22
 explosiveness = 0.0
 randomness = 0.0
@@ -138,12 +138,12 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Z Index" ]
 
 [node name="Particles2D" type="Particles2D" parent="Particles2D" index="0"]
 
@@ -163,7 +163,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 7 )
+process_material = SubResource( 6 )
 texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
