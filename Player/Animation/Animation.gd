@@ -41,5 +41,5 @@ func play_indestructable():
 func stop_indestructabel():
 	$AnimationTreePlayer/AnimationPlayer.stop()
 	$Charakter.modulate.a = 1.0
-	$Indestructable.visible = 0
+	$Indestructable.visible = false
 
