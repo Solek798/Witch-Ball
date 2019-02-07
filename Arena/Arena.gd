@@ -107,7 +107,7 @@ func _on_Leafs_body_entered(body):
 		add_child(anim)
 
 func _on_Needles_body_entered(body):
-	pass # replace with function body
+	_on_Leafs_body_entered(body)
 
 func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)
@@ -116,3 +116,4 @@ func _on_PickUpTimer_timeout():
 	min_time /= time_divider
 	max_time /= time_divider
 	print("Changed: ", min_time, ", ", max_time)
+
