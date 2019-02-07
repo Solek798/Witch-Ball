@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 
 resource_name = "Menu_Particle"
 length = 5.0
@@ -143,7 +143,7 @@ autoplay = "Menu_Particle"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Menu_Particle = SubResource( 5 )
+anims/Menu_Particle = SubResource( 1 )
 blend_times = [  ]
 
 [node name="MenuParticleStart" type="Particles2D" parent="." index="1"]
@@ -152,7 +152,7 @@ position = Vector2( 107.188, 38.3479 )
 scale = Vector2( 1.16937, 0.321133 )
 z_index = 2
 emitting = true
-amount = 256
+amount = 70
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://MenuUI/Main/Main.gd" type="Script" id=1]
-[ext_resource path="res://MenuUI/Main/Title_Witchball_M03_400.png" type="Texture" id=2]
+[ext_resource path="res://MenuUI/Main/Title_Witchball_M04_bigball.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MenuUI/Main/Button_Menu_Rendered_Base.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/Main/Button_Menu_Rendered_Base_pressed.png" type="Texture" id=5]
@@ -12,7 +12,7 @@
 [ext_resource path="res://MenuUI/Options/OptionScene.tscn" type="PackedScene" id=10]
 [ext_resource path="res://MenuUI/Credits/Credits.tscn" type="PackedScene" id=11]
 
-[node name="Main" type="CenterContainer" index="0"]
+[node name="Main" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0

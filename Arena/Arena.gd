@@ -17,9 +17,6 @@ var max_time
 func _ready():
 	min_time = min_spawn_time
 	max_time = max_spawn_time
-	set_spawn_time()
-	$SpawnTimer.start()
-	$PickUpTimer.start()
 
 func _process(delta):
 	# TEMP!
@@ -60,6 +57,11 @@ func _on_player_created(player):
 
 func _on_player_reseted(player):
 	player.position = $Position.get_by_id(player.id)
+
+func _on_match_started(round_count):
+	set_spawn_time()
+	$SpawnTimer.start()
+	$PickUpTimer.start()
 
 func _on_SpawnTimer_timeout():
 	$PickUp_Spawn/Follow.unit_offset = randf()

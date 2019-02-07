@@ -27,6 +27,7 @@ time_divider = 2
 
 position = Vector2( 962.859, 540.221 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Position" parent="." index="1" instance=ExtResource( 8 )]
 

@@ -94,7 +94,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Resource" ]
 
-[node name="UI Particel" type="Node2D" index="0"]
+[node name="UI Particel" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -103,7 +103,7 @@ script = ExtResource( 1 )
 visible = false
 z_index = 2
 emitting = true
-amount = 128
+amount = 70
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -124,10 +124,11 @@ _sections_unfolded = [ "Process Material", "Transform" ]
 
 [node name="PauseParticle" type="Particles2D" parent="." index="1"]
 
+position = Vector2( 35, 45 )
 scale = Vector2( 0.75, 0.75 )
 z_index = 2
 emitting = true
-amount = 256
+amount = 70
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0

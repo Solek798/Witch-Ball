@@ -1,17 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://PickUP/Fast/PickUp_Fast.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PickUP/Fast/FastEffect.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PickUP/Fast/strafe_part.png" type="Texture" id=4]
-[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=5]
+[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 84.0437
 
-[node name="PickUp_Fast" type="Area2D" index="0" groups=[
+[node name="PickUp_Fast" type="Area2D" groups=[
 "PickUp",
 ]]
 
@@ -34,14 +33,12 @@ _sections_unfolded = [ "Transform" ]
 [node name="FastEffect" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( -33.4849, 33.4693 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
 position = Vector2( 2.77902, -0.79364 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="DespawnTimer" type="Timer" parent="." index="3"]
