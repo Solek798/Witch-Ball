@@ -2,6 +2,9 @@ extends Container
 
 export(PackedScene) var life_template
 
+func add_image(player_id, image):
+	get_node("Text%d/Sprite" % player_id).texture = image
+
 func add_life(player_id, ammount):
 	for i in ammount:
 		var new_life = life_template.instance()

@@ -7,6 +7,7 @@ signal player_won_match(player)
 
 func _on_player_created(player):
 	$Healthbar.add_life(player.id, player.health)
+	$Healthbar.add_image(player.id, player.body.image)
 
 func _on_player_damaged(player, ammount):
 	$Healthbar.remove_life(player.id, ammount)
