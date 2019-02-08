@@ -14,7 +14,7 @@
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_x_hover.png" type="Texture" id=12]
 [ext_resource path="res://MenuUI/UI Particel/UI_Particle_Pause.tscn" type="PackedScene" id=13]
 
-[node name="OptionScene" type="CenterContainer"]
+[node name="OptionScene" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -28,7 +28,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Margin" ]
+_sections_unfolded = [ "Anchor", "Focus", "Margin" ]
 
 [node name="Option_Back" type="TextureRect" parent="." index="0"]
 
@@ -134,6 +134,8 @@ margin_right = 147.0
 margin_bottom = 58.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../../Buttons/Menu")
+focus_neighbour_bottom = NodePath("../HSeparator2")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -150,7 +152,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Margin", "Visibility" ]
+_sections_unfolded = [ "Focus", "Margin", "Visibility" ]
 
 [node name="Sound" type="TextureRect" parent="Option_Back/Conent/Options/VBoxContainer2" index="2"]
 
@@ -183,6 +185,8 @@ margin_right = 147.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../HSeparator")
+focus_neighbour_bottom = NodePath("../Chechbox/TextureButton")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -199,7 +203,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Focus", "Visibility" ]
 
 [node name="Chechbox" type="HBoxContainer" parent="Option_Back/Conent/Options/VBoxContainer2" index="4"]
 
@@ -228,6 +232,8 @@ margin_right = 30.0
 margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../HSeparator2")
+focus_neighbour_bottom = NodePath("../../Chechbox2/TextureButton")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -243,7 +249,7 @@ shortcut = null
 group = null
 flat = false
 align = 0
-_sections_unfolded = [ "Textures", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
 
 [node name="TextureRect" type="TextureRect" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox" index="1"]
 
@@ -292,6 +298,8 @@ margin_right = 30.0
 margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../Chechbox/TextureButton")
+focus_neighbour_bottom = NodePath("../../../../Buttons/Menu")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -307,7 +315,7 @@ shortcut = null
 group = null
 flat = false
 align = 0
-_sections_unfolded = [ "Textures", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
 
 [node name="TextureRect" type="Label" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox2" index="1"]
 
@@ -356,8 +364,8 @@ _sections_unfolded = [ "Margin", "custom_constants" ]
 
 margin_right = 74.0
 margin_bottom = 71.0
-focus_neighbour_left = NodePath("../Resume")
-focus_neighbour_right = NodePath("../Resume")
+focus_neighbour_top = NodePath("../../Options/VBoxContainer2/Chechbox2/TextureButton")
+focus_neighbour_bottom = NodePath("../../Options/VBoxContainer2/HSeparator")
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
