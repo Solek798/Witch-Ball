@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
@@ -9,9 +9,48 @@
 [ext_resource path="res://Arena/Stone/Steinlvl_aktuell.jpg" type="Texture" id=7]
 [ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=10]
 
-[node name="Arena" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 743.427, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1020.83, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.1435, 509.717 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 426.479, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1096.18, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1089.33, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 757.697 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.5225, 654.954 )
+
+[node name="Arena" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 pickup_mana_template = ExtResource( 2 )
@@ -37,26 +76,23 @@ visible = false
 
 visible = false
 
-[node name="Boundary" parent="." index="3" instance=ExtResource( 10 )]
-
-visible = false
-
-[node name="SpawnTimer" type="Timer" parent="." index="4"]
+[node name="SpawnTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="PickUpTimer" type="Timer" parent="." index="5"]
+[node name="PickUpTimer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 60.0
 one_shot = true
 autostart = false
 
-[node name="Stones" type="Area2D" parent="." index="6"]
+[node name="Stones" type="Area2D" parent="." index="5"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -69,43 +105,44 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stones" index="0"]
 
+position = Vector2( 20.1401, -7.55258 )
 build_mode = 0
-polygon = PoolVector2Array( 1665.58, 280.013, 1769.13, 595.678, 1837.61, 712.59, 1889.39, 622.401, 1744.08, 246.609 )
+polygon = PoolVector2Array( 1707.73, 267.452, 1818.87, 585.278, 1861.34, 713.451, 1889.39, 622.401, 1744.08, 246.609 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Stones" index="1"]
 
-position = Vector2( 883.57, -31.5218 )
+position = Vector2( 906.228, -41.5919 )
 scale = Vector2( 0.442732, 0.481172 )
 build_mode = 0
-polygon = PoolVector2Array( 1665.58, 280.013, 1769.13, 595.678, 1837.61, 712.59, 1889.39, 622.401, 1744.08, 246.609 )
+polygon = PoolVector2Array( 1704.72, 268.244, 1827.29, 578.375, 1874.95, 709.946, 1889.39, 622.401, 1744.08, 246.609 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Stones" index="2"]
 
 position = Vector2( -1742.28, -51.7263 )
 scale = Vector2( 1.68377, 0.359868 )
 build_mode = 0
-polygon = PoolVector2Array( 1350.47, 479.6, 1413.13, 701.595, 1771.22, 668.087, 1848.21, 659.709, 1889.39, 622.401, 1833.88, 119.38, 1422.98, 148.701 )
+polygon = PoolVector2Array( 1341.52, 443.131, 1407.31, 436.135, 1767.64, 422.144, 1845.39, 422.144, 1899.22, 450.127, 1833.88, 119.38, 1422.98, 148.701 )
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Stones" index="3"]
 
 position = Vector2( -1706.89, 312.603 )
 scale = Vector2( 0.970544, 0.782034 )
 build_mode = 0
-polygon = PoolVector2Array( 1768.31, 389.677, 1756.6, 633.725, 1771.22, 668.087, 1848.21, 659.709, 1889.39, 622.401, 1948.57, 154.344, 1768.31, 17.7928 )
+polygon = PoolVector2Array( 1768.31, 389.677, 1756.6, 633.725, 1771.22, 668.087, 1848.21, 659.709, 1818.8, 620.105, 1932.94, 156.539, 1768.31, 17.7928 )
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Stones" index="4"]
 
 position = Vector2( -1643.28, 921.519 )
 scale = Vector2( 0.970544, 0.782034 )
 build_mode = 0
-polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2573.93, -29.9647, 2003.75, -13.3221, 1780.67, 12.4315 )
+polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2571.78, 32.1082, 1994.03, 29.7418, 1778.56, 27.3754 )
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Stones" index="5"]
 
 position = Vector2( -714.265, 936.324 )
 scale = Vector2( 0.970544, 0.782034 )
 build_mode = 0
-polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2523.96, 28.6289, 2013.33, 3.16528, 1860.79, -15.7661, 1780.67, 12.4315 )
+polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2523.96, 28.6289, 1997.84, 10.8104, 1862.45, 8.44397, 1780.67, 12.4315 )
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Stones" index="6"]
 
@@ -114,8 +151,9 @@ scale = Vector2( 0.297289, 1.82067 )
 build_mode = 0
 polygon = PoolVector2Array( 2011.89, 10.9316, 2043.92, 179.048, 2455.75, 217.154, 2638.76, 183.013, 2588.46, 47.5436, 2341.36, 1.96546 )
 
-[node name="Needles" type="Area2D" parent="." index="7"]
+[node name="Needles" type="Area2D" parent="." index="6"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -129,33 +167,106 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Needles" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1502.07, 158.633, 1440.55, 172.987, 1348.28, -3.36057, 1651.76, -1.31003, 1668.16, 45.8526, 1618.95, 117.622, 1637.4, 177.088 )
+polygon = PoolVector2Array( 1511.73, 111.982, 1428.66, 106.947, 1348.28, -3.36057, 1651.76, -1.31003, 1668.16, 45.8526, 1618.95, 117.622, 1574.67, 101.912 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Needles" index="1"]
 
 position = Vector2( -1226.23, 108.679 )
 build_mode = 0
-polygon = PoolVector2Array( 1497.97, 136.077, 1442.6, 150.43, 1340.08, -99.7363, 1871.17, -105.888, 1785.04, -23.8661, 1846.56, 88.914, 1715.33, 72.5097, 1571.79, 97.1163 )
+polygon = PoolVector2Array( 1448.99, 98.9691, 1442.6, 150.43, 1340.08, -99.7363, 1871.17, -105.888, 1785.04, -23.8661, 1824.1, -11.8024, 1690.67, -9.28484, 1464.09, -4.24977 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Needles" index="2"]
 
 position = Vector2( -1765.52, 922.747 )
 build_mode = 0
-polygon = PoolVector2Array( 1768.64, 88.914, 1760.44, 13.0438, 1758.39, -83.332, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
+polygon = PoolVector2Array( 1768.64, 88.914, 1760.44, 13.0438, 1758.39, -83.332, 1812.05, -120.961, 1771.77, 17.5031, 1874.99, 17.5031, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Needles" index="3"]
 
 position = Vector2( -926.879, 811.561 )
 scale = Vector2( 1.55113, 1.61538 )
 build_mode = 0
-polygon = PoolVector2Array( 1729.84, 97.214, 1744.38, 14.7038, 1758.39, -83.332, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
+polygon = PoolVector2Array( 1731.21, 85.8988, 1839.95, 78.1064, 1792.89, -102.677, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Needles" index="4"]
 
-position = Vector2( -766.975, 314.442 )
+position = Vector2( -794.668, 294.302 )
 scale = Vector2( 0.540127, 0.5625 )
 build_mode = 0
 polygon = PoolVector2Array( 1710.49, 87.5471, 1744.38, 14.7038, 1758.39, -83.332, 1801.61, -105.66, 1820.59, 18.2841, 1816.79, 113.065, 1816.79, 171.392, 1725.68, 164.101 )
+
+[node name="Border" type="Node2D" parent="." index="7"]
+
+[node name="Player" type="StaticBody2D" parent="Border" index="0"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Player" index="0"]
+
+position = Vector2( 928.117, 102.744 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border/Player" index="1"]
+
+position = Vector2( 948.666, 948.666 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border/Player" index="2"]
+
+position = Vector2( 109.593, 589.063 )
+rotation = 0.287405
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border/Player" index="3"]
+
+position = Vector2( 1794.59, 517.143 )
+rotation = 1.22434
+shape = SubResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/Player" index="4"]
+
+position = Vector2( 0, 3.4248 )
+build_mode = 0
+polygon = PoolVector2Array( 945.49, 190.969, 876.994, 913.599, 1065.36, 913.599, 986.587, 187.544 )
+
+[node name="Bullet" type="StaticBody2D" parent="Border" index="1"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 16
+collision_mask = 16
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bullet" index="0"]
+
+position = Vector2( 972.64, -78.77 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border/Bullet" index="1"]
+
+position = Vector2( 958.941, 1208.95 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border/Bullet" index="2"]
+
+position = Vector2( -95.8937, 609.612 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border/Bullet" index="3"]
+
+position = Vector2( 2044.6, 565.09 )
+shape = SubResource( 8 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 

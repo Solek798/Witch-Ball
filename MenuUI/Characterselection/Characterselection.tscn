@@ -7,17 +7,17 @@
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=6]
 [ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Scarlett_Ausgewalt.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Scarlet_.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Scarlet_2.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/Characterselection/Selection.tscn" type="PackedScene" id=10]
 [ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=11]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Jasmine.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Jasmine_Ausgewaehlt.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Jasmin_.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Jasmin_2.png" type="Texture" id=13]
 [ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=14]
-[ext_resource path="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Lillith.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/Characterselection/Character_Selection_Panel_Overpaint_Lillith_Ausgeweahlt.png" type="Texture" id=16]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Sunny_Ausgewaehlt.png" type="Texture" id=17]
-[ext_resource path="res://MenuUI/Characterselection/Character Selection_Panel_Overpaint_Sunnyt_hovert.png" type="Texture" id=18]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Lilith_.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Lilith_2.png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Penny_.png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/Characterselection/Tempalte/Character_Selection_Penny_2.png" type="Texture" id=18]
 [ext_resource path="res://MenuUI/Characterselection/Railing_350.png" type="Texture" id=19]
 [ext_resource path="res://MenuUI/Main/Button_Menu_Rendered_Base.png" type="Texture" id=20]
 [ext_resource path="res://MenuUI/Main/Button_Menu_Rendered_Base_pressed.png" type="Texture" id=21]
@@ -50,10 +50,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 584.0
-margin_top = 302.0
-margin_right = 1336.0
-margin_bottom = 778.0
+margin_left = 228.0
+margin_top = 123.0
+margin_right = 1692.0
+margin_bottom = 956.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -68,8 +68,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 752.0
-margin_bottom = 401.0
+margin_right = 1464.0
+margin_bottom = 758.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -82,9 +82,9 @@ _sections_unfolded = [ "custom_constants" ]
 
 [node name="Scarlett" parent="Content/Characters" index="0" instance=ExtResource( 7 )]
 
-margin_right = 200.0
-margin_bottom = 401.0
-focus_neighbour_left = NodePath("../Lilith")
+margin_right = 378.0
+margin_bottom = 758.0
+focus_neighbour_left = NodePath("../Penny")
 focus_neighbour_right = NodePath("../Jasmine")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
 texture_normal = ExtResource( 8 )
@@ -93,9 +93,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 10 )]
 
-margin_left = 26.0
+margin_left = 44.0
 margin_top = -39.0
-margin_right = 66.0
+margin_right = 84.0
 margin_bottom = 1.0
 _sections_unfolded = [ "Visibility" ]
 
@@ -110,9 +110,9 @@ bus = "Master"
 
 [node name="Jasmine" parent="Content/Characters" index="1" instance=ExtResource( 7 )]
 
-margin_left = 184.0
-margin_right = 384.0
-margin_bottom = 401.0
+margin_left = 362.0
+margin_right = 740.0
+margin_bottom = 758.0
 focus_neighbour_left = NodePath("../Scarlett")
 focus_neighbour_right = NodePath("../Lilith")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
@@ -122,9 +122,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Jasmine" index="0" instance=ExtResource( 10 )]
 
-margin_left = 25.0
+margin_left = 42.0
 margin_top = -38.0
-margin_right = 65.0
+margin_right = 82.0
 margin_bottom = 2.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Jasmine" index="1"]
@@ -138,11 +138,11 @@ bus = "Master"
 
 [node name="Lilith" parent="Content/Characters" index="2" instance=ExtResource( 7 )]
 
-margin_left = 368.0
-margin_right = 568.0
-margin_bottom = 401.0
+margin_left = 724.0
+margin_right = 1102.0
+margin_bottom = 758.0
 focus_neighbour_left = NodePath("../Jasmine")
-focus_neighbour_right = NodePath("../Scarlett")
+focus_neighbour_right = NodePath("../Penny")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
 texture_normal = ExtResource( 15 )
 texture_hover = ExtResource( 16 )
@@ -150,26 +150,47 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 10 )]
 
-margin_left = 25.0
+margin_left = 43.0
 margin_top = -38.0
-margin_right = 65.0
+margin_right = 83.0
 margin_bottom = 2.0
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Lilith" index="1"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [node name="Penny" parent="Content/Characters" index="3" instance=ExtResource( 7 )]
 
-margin_left = 552.0
-margin_right = 752.0
-margin_bottom = 401.0
+margin_left = 1086.0
+margin_right = 1464.0
+margin_bottom = 758.0
+focus_neighbour_left = NodePath("../Lilith")
+focus_neighbour_right = NodePath("../Scarlett")
+focus_neighbour_bottom = NodePath("../../Selection/Play")
 texture_normal = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Penny" index="0" instance=ExtResource( 10 )]
 
-margin_left = 24.0
+margin_left = 48.0
 margin_top = -38.0
-margin_right = 64.0
+margin_right = 88.0
 margin_bottom = 2.0
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Penny" index="1"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [node name="Selection" type="CenterContainer" parent="Content" index="1"]
 
@@ -178,9 +199,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 405.0
-margin_right = 752.0
-margin_bottom = 476.0
+margin_top = 762.0
+margin_right = 1464.0
+margin_bottom = 833.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -195,9 +216,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 201.0
+margin_left = 557.0
 margin_top = 7.0
-margin_right = 551.0
+margin_right = 907.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -210,8 +231,8 @@ stretch_mode = 0
 
 [node name="Play" parent="Content/Selection" index="1" instance=ExtResource( 7 )]
 
-margin_left = 276.0
-margin_right = 476.0
+margin_left = 632.0
+margin_right = 832.0
 margin_bottom = 71.0
 disabled = true
 texture_normal = ExtResource( 20 )

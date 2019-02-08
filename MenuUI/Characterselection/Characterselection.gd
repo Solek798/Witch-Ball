@@ -66,9 +66,7 @@ func _on_Lilith_pressed():
 			$Content/Characters/Lilith/Selection.player_2 = true
 			player_2_selection = lilith
 			end_selection()
-	# TODO
-	# Insert Sounds
-	#$CenterContainer/VBoxContainer/Characters/Lilith/Sound.play()
+	$Content/Characters/Lilith/Sound.play()
 
 func _on_Penny_pressed():
 	match current_mode:
@@ -80,9 +78,7 @@ func _on_Penny_pressed():
 			$Content/Characters/Penny/Selection.player_2 = true
 			player_2_selection = penny
 			end_selection()
-	# TODO
-	# Insert Sounds
-	#$CenterContainer/VBoxContainer/Characters/Penny/Sound.play()
+	$Content/Characters/Penny/Sound.play()
 	
 
 func _on_Play_pressed():

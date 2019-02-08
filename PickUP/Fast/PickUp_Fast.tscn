@@ -26,7 +26,8 @@ impulse_template = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-visible = false
+position = Vector2( -0.980667, 0.641348 )
+scale = Vector2( 1.27836, 0.762171 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -44,7 +45,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="DespawnTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 5.0
+wait_time = 3.0
 one_shot = false
 autostart = true
 

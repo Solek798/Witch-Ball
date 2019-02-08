@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=2]
@@ -9,44 +9,56 @@
 [ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/Particle/Player_Rauchwolke/SmokeWalk.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/shadow.png" type="Texture" id=9]
-[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=10]
-[ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=11]
+[ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=10]
+[ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=11]
+[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=12]
+[ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 18.7156, 57.1739 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxTexture" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
-bg_color = Color( 0.323415, 0.422362, 0.98649, 1 )
-draw_center = true
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.326985, 0.325502, 0.325502, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 160, 42 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
 expand_margin_left = 0.0
 expand_margin_right = 0.0
 expand_margin_top = 0.0
 expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width" ]
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Margin" ]
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 160, 42 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -150,8 +162,9 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -50.0
 margin_top = 15.0
-margin_right = 50.0
-margin_bottom = 35.0
+margin_right = 110.0
+margin_bottom = 57.0
+rect_scale = Vector2( 0.625, 0.625 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -159,6 +172,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 min_value = 0.0
@@ -169,7 +183,7 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Special" type="Node2D" parent="." index="11"]
 
@@ -181,14 +195,14 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 visible = false
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Big" type="Sprite" parent="Special" index="1"]
 
 visible = false
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
