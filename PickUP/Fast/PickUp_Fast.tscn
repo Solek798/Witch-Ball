@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 radius = 84.0437
 
-[node name="PickUp_Fast" type="Area2D" index="0" groups=[
+[node name="PickUp_Fast" type="Area2D" groups=[
 "PickUp",
 ]]
 

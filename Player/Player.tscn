@@ -102,7 +102,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" parent="Aim" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 406.378, 0 )
+position = Vector2( 267.713, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="DodgeTimer" type="Timer" parent="." index="2"]
@@ -203,9 +203,9 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 

@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 65.207
+radius = 78.5613
 
 [node name="PickUp_Big" type="Area2D" groups=[
 "PickUp",
@@ -28,8 +28,8 @@ impulse_template = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( -2.08408, 0.0249519 )
-scale = Vector2( 1.37963, 0.959938 )
+position = Vector2( -1.91042, -0.988319 )
+scale = Vector2( 1.51113, 0.972361 )
 shape = SubResource( 1 )
 
 [node name="shadow_ball" type="Sprite" parent="." index="1"]
