@@ -57,7 +57,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -94,7 +94,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Aim" index="0"]
 
-visible = false
 position = Vector2( 300, 0 )
 scale = Vector2( 0.1, -0.05 )
 texture = ExtResource( 5 )
@@ -102,6 +101,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" parent="Aim" index="1" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 267.713, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -203,9 +203,9 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
