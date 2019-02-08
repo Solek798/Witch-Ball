@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/Fluss.png" type="Texture" id=1]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -14,21 +16,21 @@ flatness = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 0.0
 initial_velocity_random = 0.0
-angular_velocity = 0.0
-angular_velocity_random = 0.0
-orbit_velocity = 1.0
-orbit_velocity_random = 1.0
+angular_velocity = 180.0
+angular_velocity_random = 1.0
+orbit_velocity = 2.0
+orbit_velocity_random = 0.0
 linear_accel = 0.0
 linear_accel_random = 0.0
 radial_accel = -100.0
 radial_accel_random = 1.0
-tangential_accel = 49.98
-tangential_accel_random = 1.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
 damping = 0.0
 damping_random = 0.0
-angle = 90.0
+angle = 360.0
 angle_random = 1.0
-scale = 3.0
+scale = 1.0
 scale_random = 1.0
 color = Color( 1, 1, 1, 1 )
 hue_variation = 0.0
@@ -38,15 +40,17 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Orbit Velocity", "Radial Accel", "Scale", "Tangential Accel" ]
+_sections_unfolded = [ "Angle", "Orbit Velocity", "Scale" ]
 
 [node name="Indestructable" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
-modulate = Color( 1, 1, 1, 0.767961 )
+modulate = Color( 1, 1, 1, 0.149176 )
+self_modulate = Color( 0.629497, 0.531219, 0.804688, 1 )
+scale = Vector2( 0.05, 0.05 )
 emitting = true
-amount = 8
+amount = 4
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -59,10 +63,10 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
 process_material = SubResource( 1 )
-texture = null
+texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Visibility" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
 
