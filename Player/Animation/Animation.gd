@@ -1,5 +1,7 @@
 extends Sprite
 
+export(Texture) var image
+
 func _ready():
 	#$AnimationTreePlayer/AnimationPlayer.play("Walk_Bein")
 	#$AnimationTreePlayer/AnimationPlayer.play("Walk_Arm")
