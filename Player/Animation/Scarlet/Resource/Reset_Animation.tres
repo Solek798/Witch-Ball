@@ -364,7 +364,7 @@ tracks/29/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -38.0608, -65.9989 ) ]
+"values": [ Vector2( -38.0608, -114.766 ) ]
 }
 tracks/30/type = "value"
 tracks/30/path = NodePath("../Charakter/Torso/Head_Arms/Head:scale")
