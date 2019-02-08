@@ -5,7 +5,7 @@
 [ext_resource path="res://PickUP/Fast/PickUp_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PickUP/Big/PickUp_Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Arena/Animations/LeafEffect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Arena/Animations/NeedelEffect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Arena/Stone/Steinlvl_aktuell.jpg" type="Texture" id=7]
 [ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
@@ -57,7 +57,7 @@ pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
 stone_effect_template = ExtResource( 5 )
-leaf_effect_template = ExtResource( 6 )
+needle_effect_template = ExtResource( 6 )
 min_spawn_time = 6
 max_spawn_time = 10
 time_divider = 2
@@ -98,7 +98,8 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision_mask = 9
+collision_layer = 16
+collision_mask = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
@@ -125,7 +126,7 @@ polygon = PoolVector2Array( 1341.52, 443.131, 1407.31, 436.135, 1767.64, 422.144
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Stones" index="3"]
 
-position = Vector2( -1706.89, 312.603 )
+position = Vector2( -1739.7, 287.996 )
 scale = Vector2( 0.970544, 0.782034 )
 build_mode = 0
 polygon = PoolVector2Array( 1768.31, 389.677, 1756.6, 633.725, 1771.22, 668.087, 1848.21, 659.709, 1818.8, 620.105, 1932.94, 156.539, 1768.31, 17.7928 )
@@ -146,20 +147,20 @@ polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Stones" index="6"]
 
-position = Vector2( -589.216, 3.18918 )
+position = Vector2( -622.025, -15.2657 )
 scale = Vector2( 0.297289, 1.82067 )
 build_mode = 0
 polygon = PoolVector2Array( 2011.89, 10.9316, 2043.92, 179.048, 2455.75, 217.154, 2638.76, 183.013, 2588.46, 47.5436, 2341.36, 1.96546 )
 
 [node name="Needles" type="Area2D" parent="." index="6"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision_mask = 9
+collision_layer = 16
+collision_mask = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
@@ -171,13 +172,13 @@ polygon = PoolVector2Array( 1511.73, 111.982, 1428.66, 106.947, 1348.28, -3.3605
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Needles" index="1"]
 
-position = Vector2( -1226.23, 108.679 )
+position = Vector2( -1246.74, 94.3252 )
 build_mode = 0
 polygon = PoolVector2Array( 1448.99, 98.9691, 1442.6, 150.43, 1340.08, -99.7363, 1871.17, -105.888, 1785.04, -23.8661, 1824.1, -11.8024, 1690.67, -9.28484, 1464.09, -4.24977 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Needles" index="2"]
 
-position = Vector2( -1765.52, 922.747 )
+position = Vector2( -1786.03, 922.747 )
 build_mode = 0
 polygon = PoolVector2Array( 1768.64, 88.914, 1760.44, 13.0438, 1758.39, -83.332, 1812.05, -120.961, 1771.77, 17.5031, 1874.99, 17.5031, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
 
@@ -190,7 +191,7 @@ polygon = PoolVector2Array( 1731.21, 85.8988, 1839.95, 78.1064, 1792.89, -102.67
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Needles" index="4"]
 
-position = Vector2( -794.668, 294.302 )
+position = Vector2( -815.173, 271.746 )
 scale = Vector2( 0.540127, 0.5625 )
 build_mode = 0
 polygon = PoolVector2Array( 1710.49, 87.5471, 1744.38, 14.7038, 1758.39, -83.332, 1801.61, -105.66, 1820.59, 18.2841, 1816.79, 113.065, 1816.79, 171.392, 1725.68, 164.101 )

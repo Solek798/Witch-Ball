@@ -4,7 +4,7 @@ export(PackedScene) var pickup_mana_template
 export(PackedScene) var pickup_fast_template
 export(PackedScene) var pickup_big_template
 export(PackedScene) var stone_effect_template
-export(PackedScene) var leaf_effect_template
+export(PackedScene) var needle_effect_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
 export(int) var time_divider
@@ -99,15 +99,12 @@ func _on_Stones_body_entered(body):
 		add_child(anim)
 		body.destroy()
 
-func _on_Leafs_body_entered(body):
+func _on_Needles_body_entered(body):
 	if body is RigidBody2D:
-		var anim = leaf_effect_template.instance()
+		var anim = needle_effect_template.instance()
 		anim.global_position = body.global_position
 		anim.emitting = true
 		add_child(anim)
-
-func _on_Needles_body_entered(body):
-	_on_Leafs_body_entered(body)
 
 func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)

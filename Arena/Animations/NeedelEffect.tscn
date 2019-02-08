@@ -45,7 +45,7 @@ _sections_unfolded = [ "Emission Shape", "Radial Accel", "Scale", "Spread" ]
 
 [node name="NeedelEffect" type="Particles2D" index="0"]
 
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.5, 0.5 )
 emitting = false
 amount = 7
 lifetime = 2.0
