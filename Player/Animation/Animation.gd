@@ -45,6 +45,5 @@ func stop_indestructabel():
 	$Charakter.modulate.a = 1
 	$Charakter.modulate.b = 1
 	$Charakter.modulate.r = 1
-
 	
 
