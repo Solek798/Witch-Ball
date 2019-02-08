@@ -93,9 +93,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 10 )]
 
-margin_left = 26.0
+margin_left = 44.0
 margin_top = -39.0
-margin_right = 66.0
+margin_right = 84.0
 margin_bottom = 1.0
 _sections_unfolded = [ "Visibility" ]
 
@@ -122,9 +122,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Jasmine" index="0" instance=ExtResource( 10 )]
 
-margin_left = 25.0
+margin_left = 42.0
 margin_top = -38.0
-margin_right = 65.0
+margin_right = 82.0
 margin_bottom = 2.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Jasmine" index="1"]
@@ -150,9 +150,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 10 )]
 
-margin_left = 25.0
+margin_left = 43.0
 margin_top = -38.0
-margin_right = 65.0
+margin_right = 83.0
 margin_bottom = 2.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Lilith" index="1"]
@@ -178,9 +178,9 @@ _sections_unfolded = [ "Focus", "Textures" ]
 
 [node name="Selection" parent="Content/Characters/Penny" index="0" instance=ExtResource( 10 )]
 
-margin_left = 24.0
+margin_left = 48.0
 margin_top = -38.0
-margin_right = 64.0
+margin_right = 88.0
 margin_bottom = 2.0
 
 [node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Penny" index="1"]
