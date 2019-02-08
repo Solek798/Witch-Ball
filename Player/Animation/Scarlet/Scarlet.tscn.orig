@@ -1,34 +1,15 @@
+<<<<<<< working copy
+[gd_scene load_steps=26 format=2]
+=======
 [gd_scene load_steps=24 format=2]
+>>>>>>> merge rev
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
-<<<<<<< working copy
 [ext_resource path="res://Player/Animation/Scarlet/Icon_Player_Scarlet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=3]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=4]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/WinnJump.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=11]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=12]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_f.png" type="Texture" id=13]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_b.png" type="Texture" id=14]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_l.png" type="Texture" id=15]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_l.png" type="Texture" id=16]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_r.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_rr.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_r.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructable.tscn" type="PackedScene" id=23]
-=======
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=2]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=3]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=4]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=5]
+<<<<<<< working copy
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=6]
 [ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=8]
@@ -44,11 +25,27 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=18]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructable.tscn" type="PackedScene" id=21]
->>>>>>> merge rev
-
-<<<<<<< working copy
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=21]
 =======
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=10]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=11]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_f.png" type="Texture" id=12]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_b.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_l.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_l.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_r.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_rr.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_r.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=21]
+>>>>>>> merge rev
+[ext_resource path="res://Player/Animation/Indestructable/Indestructable.tscn" type="PackedScene" id=22]
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "WinnJump_Ch4"
@@ -176,8 +173,91 @@ tracks/9/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
->>>>>>> merge rev
+<<<<<<< working copy
+[sub_resource type="ParticlesMaterial" id=2]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 64.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+linear_accel = 100.0
+linear_accel_random = 1.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 0.348039 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 10.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Scale", "Trail" ]
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 64.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+linear_accel = 100.0
+linear_accel_random = 1.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 0.348039 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 10.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Scale", "Trail" ]
+
 [node name="Scarlet" type="Sprite"]
+=======
+[node name="Scarlet" type="Sprite" index="0"]
+>>>>>>> merge rev
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -195,11 +275,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-<<<<<<< working copy
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Mix_Trow", "scale 3", 0, "anim 2", "scale 2", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_hit", "oneshot_WinnJump", 0, "WinnJump", "oneshot_WinnJump", 1 ],
-=======
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "anim 2", "scale 2", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "WinnJump", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "Mix_Trow", "scale 3", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1 ],
->>>>>>> merge rev
+"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "WinnJump", "scale 4", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "Mix_Trow", "scale 3", 0, "anim 2", "scale 2", 0 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -217,40 +293,6 @@ data = {
 "position": Vector2( 1092, 431 ),
 "type": "output"
 }, {
-<<<<<<< working copy
-=======
-"animation": SubResource( 1 ),
-"filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 884, 190 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "Throw",
-"position": Vector2( 417, 214 ),
-"type": "animation"
-}, {
->>>>>>> merge rev
-"animation": ExtResource( 4 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
-}, {
-<<<<<<< working copy
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 250, 385 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
-"type": "animation"
-}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 1.0,
@@ -262,33 +304,50 @@ data = {
 "position": Vector2( 510, 516 ),
 "type": "oneshot"
 }, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_dodge_up",
+"mix": false,
+"position": Vector2( 712, 517 ),
+"type": "oneshot"
+}, {
 "id": "Mix_Trow",
 "mix": 1.0,
 "position": Vector2( 527, 235 ),
 "type": "mix"
 }, {
-"animation": ExtResource( 7 ),
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
+"type": "animation"
+}, {
+"id": "scale 4",
+"position": Vector2( 929, 119 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "Hit",
+"position": Vector2( 749, 222 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "Throw",
 "position": Vector2( 417, 214 ),
 "type": "animation"
-=======
-"id": "scale 2",
-"position": Vector2( 296, 191 ),
-"scale": 1.0,
-"type": "timescale"
->>>>>>> merge rev
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
+"blend": 1.0,
 "filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 727, 8 ),
-"type": "oneshot"
+"id": "blend_walk",
+"position": Vector2( 159, 43 ),
+"type": "blend2"
 }, {
 "autorestart": false,
 "autorestart_delay": 0.0,
@@ -301,46 +360,33 @@ data = {
 "position": Vector2( 445, 28 ),
 "type": "oneshot"
 }, {
-<<<<<<< working copy
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 894, 402 ),
-"type": "animation"
-=======
-"id": "scale 4",
-"position": Vector2( 929, 119 ),
-"scale": 2.0,
-"type": "timescale"
->>>>>>> merge rev
-}, {
 "autorestart": false,
-<<<<<<< working copy
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_dodge_up",
+"id": "oneshot_hit",
 "mix": false,
-"position": Vector2( 712, 517 ),
+"position": Vector2( 902, 5 ),
 "type": "oneshot"
 }, {
-"id": "scale 3",
-"position": Vector2( 632, 137 ),
-"scale": 1.0,
-"type": "timescale"
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 1032, 5 ),
+"type": "oneshot"
 }, {
-"id": "scale 2",
-"position": Vector2( 296, 191 ),
-"scale": 1.0,
-"type": "timescale"
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 250, 385 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -353,105 +399,27 @@ data = {
 "position": Vector2( 727, 8 ),
 "type": "oneshot"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 902, 5 ),
-"type": "oneshot"
-}, {
-"blend": 1.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
-}, {
-"autorestart": false,
-=======
->>>>>>> merge rev
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 1032, 5 ),
-"type": "oneshot"
-<<<<<<< working copy
-=======
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 902, 5 ),
-"type": "oneshot"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "Hit",
-"position": Vector2( 749, 222 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 250, 385 ),
-"type": "animation"
-}, {
 "id": "scale 3",
 "position": Vector2( 632, 137 ),
 "scale": 1.0,
 "type": "timescale"
 }, {
-"blend": 1.0,
+"animation": SubResource( 1 ),
 "filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
+"id": "WinnJump",
+"position": Vector2( 884, 190 ),
+"type": "animation"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_up",
-"mix": false,
-"position": Vector2( 712, 517 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_down",
-"mix": false,
-"position": Vector2( 510, 516 ),
-"type": "oneshot"
+"id": "scale 2",
+"position": Vector2( 296, 191 ),
+"scale": 1.0,
+"type": "timescale"
 }, {
 "animation": ExtResource( 4 ),
 "filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
+"id": "Walk",
+"position": Vector2( 6, 146 ),
 "type": "animation"
-}, {
-"id": "Mix_Trow",
-"mix": 1.0,
-"position": Vector2( 527, 235 ),
-"type": "mix"
->>>>>>> merge rev
 } ]
 }
 
@@ -462,25 +430,14 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-<<<<<<< working copy
-anims/Hit = ExtResource( 4 )
-anims/Idle = ExtResource( 3 )
-anims/Idle_Throw = ExtResource( 5 )
-anims/Indestructable = ExtResource( 9 )
-anims/Reset_Animation = ExtResource( 10 )
-anims/Throwing = ExtResource( 7 )
-anims/Walk_Ch1 = ExtResource( 6 )
-anims/WinnJump = ExtResource( 8 )
-=======
 anims/Hit = ExtResource( 5 )
-anims/Idle = ExtResource( 2 )
-anims/Idle_Throw = ExtResource( 6 )
-anims/Indestructable = ExtResource( 7 )
-anims/Reset_Animation = ExtResource( 8 )
-anims/Throwing = ExtResource( 3 )
+anims/Idle = ExtResource( 3 )
+anims/Idle_Throw = ExtResource( 7 )
+anims/Indestructable = ExtResource( 8 )
+anims/Reset_Animation = ExtResource( 9 )
+anims/Throwing = ExtResource( 6 )
 anims/Walk_Ch1 = ExtResource( 4 )
 anims/WinnJump = SubResource( 1 )
->>>>>>> merge rev
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -496,12 +453,11 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 <<<<<<< working copy
-editor/display_folded = true
-position = Vector2( 0, 44.232 )
-texture = ExtResource( 11 )
-=======
-position = Vector2( 0, 18.6592 )
+position = Vector2( 0, 16.8546 )
 texture = ExtResource( 9 )
+=======
+position = Vector2( 0, 49.1779 )
+texture = ExtResource( 10 )
 >>>>>>> merge rev
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -510,6 +466,7 @@ __meta__ = {
 
 [node name="Head_Arms" type="Node2D" parent="Charakter/Torso" index="0"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -519,16 +476,12 @@ __meta__ = {
 
 position = Vector2( -38.0608, -65.9989 )
 <<<<<<< working copy
-rotation = 0.0212653
+rotation = 0.0474889
 =======
-rotation = 0.0489465
+rotation = 0.0172702
 >>>>>>> merge rev
 z_index = 4
-<<<<<<< working copy
-texture = ExtResource( 12 )
-=======
-texture = ExtResource( 10 )
->>>>>>> merge rev
+texture = ExtResource( 11 )
 offset = Vector2( 17.0357, 118.566 )
 _sections_unfolded = [ "Z Index" ]
 __meta__ = {
@@ -540,16 +493,12 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
 <<<<<<< working copy
-rotation = -0.034223
+rotation = -0.0698115
 =======
-rotation = -0.0674657
+rotation = 0.0416614
 >>>>>>> merge rev
 z_index = 1
-<<<<<<< working copy
-texture = ExtResource( 13 )
-=======
-texture = ExtResource( 11 )
->>>>>>> merge rev
+texture = ExtResource( 12 )
 offset = Vector2( 145.576, 357.073 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -562,27 +511,19 @@ position = Vector2( 145.136, 356.02 )
 rotation = 4.65661e-10
 scale = Vector2( 0.999999, 0.999999 )
 z_index = -5
-<<<<<<< working copy
-texture = ExtResource( 14 )
-=======
-texture = ExtResource( 12 )
->>>>>>> merge rev
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 position = Vector2( 21.0251, -52.5668 )
 <<<<<<< working copy
-rotation = 0.110713
+rotation = 0.225844
 =======
-rotation = 0.218256
+rotation = 0.0282422
 >>>>>>> merge rev
 z_index = -5
-<<<<<<< working copy
-texture = ExtResource( 15 )
-=======
-texture = ExtResource( 13 )
->>>>>>> merge rev
+texture = ExtResource( 14 )
 offset = Vector2( -23.4915, 54.9353 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -593,11 +534,11 @@ __meta__ = {
 
 position = Vector2( 160.468, 4.0683 )
 <<<<<<< working copy
-rotation = -0.0577077
-texture = ExtResource( 16 )
-=======
-rotation = -0.113763
+rotation = -0.117718
 texture = ExtResource( 14 )
+=======
+rotation = -0.0440086
+texture = ExtResource( 15 )
 >>>>>>> merge rev
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -609,14 +550,12 @@ __meta__ = {
 
 position = Vector2( -121.355, -14.2008 )
 <<<<<<< working copy
-rotation = -0.0698052
-z_index = 1
-texture = ExtResource( 17 )
+rotation = -0.142396
 =======
-rotation = -0.137611
-z_index = 4
-texture = ExtResource( 15 )
+rotation = -0.0167211
 >>>>>>> merge rev
+z_index = 4
+texture = ExtResource( 16 )
 offset = Vector2( 115.846, 3.52861 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
@@ -628,17 +567,13 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
 <<<<<<< working copy
-rotation = 0.0398114
+rotation = 0.0812114
 =======
-rotation = 0.0784826
+rotation = 0.0224571
 >>>>>>> merge rev
 scale = Vector2( 0.999999, 0.999999 )
-<<<<<<< working copy
-texture = ExtResource( 18 )
-=======
 z_index = 1
-texture = ExtResource( 16 )
->>>>>>> merge rev
+texture = ExtResource( 17 )
 offset = Vector2( 174.778, -24.6302 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
@@ -660,16 +595,12 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
 <<<<<<< working copy
-rotation = 0.513419
+rotation = 0.216152
 =======
-rotation = 0.184461
+rotation = 0.380966
 >>>>>>> merge rev
 z_index = -1
-<<<<<<< working copy
-texture = ExtResource( 19 )
-=======
-texture = ExtResource( 17 )
->>>>>>> merge rev
+texture = ExtResource( 18 )
 offset = Vector2( 39.0679, -290.996 )
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
@@ -680,16 +611,12 @@ __meta__ = {
 
 position = Vector2( 29.5789, 124.968 )
 <<<<<<< working copy
-rotation = -0.327318
+rotation = -0.636616
 =======
-rotation = -0.631837
+rotation = 0.382778
 >>>>>>> merge rev
 z_index = -1
-<<<<<<< working copy
-texture = ExtResource( 20 )
-=======
-texture = ExtResource( 18 )
->>>>>>> merge rev
+texture = ExtResource( 19 )
 offset = Vector2( 9.48901, -415.964 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -701,17 +628,13 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( 49.202, 250.398 )
 <<<<<<< working copy
-rotation = -0.167875
+rotation = 0.193921
 =======
-rotation = 0.22588
+rotation = -0.0015457
 >>>>>>> merge rev
 scale = Vector2( 1, 1.2 )
 z_index = -2
-<<<<<<< working copy
-texture = ExtResource( 21 )
-=======
-texture = ExtResource( 19 )
->>>>>>> merge rev
+texture = ExtResource( 20 )
 offset = Vector2( -49.202, -208.665 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -722,17 +645,13 @@ __meta__ = {
 
 position = Vector2( 63.0907, 79.5739 )
 <<<<<<< working copy
-rotation = -0.584189
+rotation = 0.550204
 =======
-rotation = 0.489091
+rotation = -0.885942
 >>>>>>> merge rev
 scale = Vector2( 1, 0.833333 )
 z_index = -2
-<<<<<<< working copy
-texture = ExtResource( 22 )
-=======
-texture = ExtResource( 20 )
->>>>>>> merge rev
+texture = ExtResource( 21 )
 offset = Vector2( -112.293, -345.887 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 __meta__ = {
@@ -740,10 +659,64 @@ __meta__ = {
 }
 
 <<<<<<< working copy
-[node name="Indestructable" parent="." index="2" instance=ExtResource( 23 )]
+[node name="FireHit2" type="Particles2D" parent="Charakter/Torso" index="2"]
+
+modulate = Color( 0, 0.226563, 1, 0.193373 )
+self_modulate = Color( 1, 1, 1, 0.569059 )
+position = Vector2( 4.41974, 104.585 )
+rotation = 0.0724376
+scale = Vector2( 7.5, 7.5 )
+z_index = 10
+emitting = true
+amount = 16
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+texture = ExtResource( 21 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Transform", "Visibility" ]
+
+[node name="FireHit" type="Particles2D" parent="Charakter/Torso" index="3"]
+
+modulate = Color( 0, 0.0859375, 1, 0.193373 )
+self_modulate = Color( 1, 1, 1, 0.569059 )
+position = Vector2( 4.41974, 104.585 )
+rotation = 0.0724376
+z_index = 10
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 3 )
+texture = ExtResource( 21 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Visibility" ]
+
 =======
-[node name="Indestructable" parent="." index="2" instance=ExtResource( 21 )]
 >>>>>>> merge rev
+[node name="Indestructable" parent="." index="2" instance=ExtResource( 22 )]
 
 visible = false
 modulate = Color( 1, 1, 1, 0.436471 )
