@@ -26,7 +26,7 @@ shader = SubResource( 1 )
 shader_param/amount = 2.5
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
