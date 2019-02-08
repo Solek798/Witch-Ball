@@ -2,7 +2,7 @@
 
 [resource]
 
-resource_name = "Walk_Ch2"
+resource_name = "Walk_Ch3"
 length = 1.0
 loop = true
 step = 0.05
@@ -163,24 +163,12 @@ tracks/12/keys = {
 "values": [ 0.0, 3.12002, -10.6597, 0.0 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../Charakter/Torso/Head_Arms/Arm_l/Hand_l:scale")
+tracks/13/path = NodePath("../Charakter/Torso:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("../Charakter/Torso:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
 "times": PoolRealArray( 0.25, 0.75 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
