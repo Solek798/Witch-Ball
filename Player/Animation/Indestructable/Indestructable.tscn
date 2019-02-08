@@ -40,11 +40,11 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Orbit Velocity", "Radial Accel", "Scale", "Tangential Accel" ]
 
-[node name="Indestructable" type="Node2D" index="0"]
+[node name="Indestructable" type="Node2D"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
-modulate = Color( 1, 1, 1, 0.403333 )
+modulate = Color( 1, 1, 1, 0.767961 )
 emitting = true
 amount = 8
 lifetime = 1.0

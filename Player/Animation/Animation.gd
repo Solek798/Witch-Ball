@@ -40,6 +40,13 @@ func play_indestructable():
 
 func stop_indestructabel():
 	$AnimationTreePlayer/AnimationPlayer.stop()
-	$Charakter.modulate.a = 1.0
+	$Charakter.modulate.a = 1
+	$Charakter.modulate.b = 1
+	$Charakter.modulate.r = 1
 	$Indestructable.visible = false
+	
+func play_throw_Emit():
+	print("Throw")
+	$AnimationTreePlayer/AnimationPlayer.play("Throw_Emit")
+	
 
