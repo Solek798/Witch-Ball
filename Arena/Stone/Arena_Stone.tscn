@@ -51,7 +51,7 @@ extents = Vector2( 10, 757.697 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.5225, 654.954 )
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 pickup_mana_template = ExtResource( 2 )
@@ -200,18 +200,17 @@ polygon = PoolVector2Array( 1710.49, 87.5471, 1744.38, 14.7038, 1758.39, -83.332
 
 [node name="Border" type="Node2D" parent="." index="7"]
 
-editor/display_folded = true
-
 [node name="Player" type="StaticBody2D" parent="Border" index="0"]
 
 editor/display_folded = true
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Player" index="0"]
 

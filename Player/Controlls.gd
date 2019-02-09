@@ -1,6 +1,7 @@
 extends Object
 
 enum modes {KEYBOARD, CONTROLLER}
+enum analog_stick {LEFT, RIGHT}
 
 const DEGREE_IN_RADIANT = PI / 180
 const FORMAT_STRINGS = [
@@ -71,18 +72,11 @@ func get_movement():
 	if locked_states.size() == keys.size():
 		return locked_states[Action.MOVE]
 	
-	var x = 0.0
-	var y = 0.0
-	
 	if mode == CONTROLLER:
-		x = Input.get_joy_axis(device, movement_x_axis)
-		y = Input.get_joy_axis(device, movement_y_axis)
-		
-		if x < movement_tolerance and x > -movement_tolerance:
-			x = 0
-		if y < movement_tolerance and y > -movement_tolerance:
-			y = 0
+		return get_joy_value(LEFT)
 	else:
+		var x = 0
+		var y = 0
 		if Input.is_action_pressed(keys[Action.UP]):
 			y -= 1.0
 		if Input.is_action_pressed(keys[Action.DOWN]):
@@ -91,8 +85,9 @@ func get_movement():
 			x -= 1.0
 		if Input.is_action_pressed(keys[Action.RIGHT]):
 			x += 1.0
+		return Vector2(x, y)
 	
-	return Vector2(x, y)
+	
 
 func get_aim():
 	if not active:
@@ -104,26 +99,49 @@ func get_aim():
 	var aim = Vector2(0, 0)
 	
 	if mode == CONTROLLER:
-		aim.x = Input.get_joy_axis(device, aim_x_axis)
-		# TEMP
-		if device == 1:
-			aim.x *= -1
-		aim.y = Input.get_joy_axis(device, aim_y_axis)
-		
-		if aim.length() < aim_tolerance:
-			aim.x = 0
-			aim.y = 0
+		return get_joy_value(RIGHT)
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):
 			aim.y -= DEGREE_IN_RADIANT
 		if Input.is_action_pressed(keys[Action.AIM_DOWN]):
 			aim.y += DEGREE_IN_RADIANT
+		return aim
 	
-	return aim
+	
+
+func get_joy_value(stick):
+	if not active:
+		return Vector2(0, 0)
+	# TODO
+	if locked_states.size() == keys.size():
+		return locked_states[Action.MOVE]
+	
+	var x_axis
+	var y_axis
+	
+	if stick == analog_stick.LEFT:
+		x_axis = 0
+		y_axis = 1
+	else:
+		x_axis = 2
+		y_axis = 3
+	
+	var x = 0.0
+	var y = 0.0
+	
+	x = Input.get_joy_axis(device, x_axis)
+	y = Input.get_joy_axis(device, y_axis)
+	
+	if x < movement_tolerance and x > -movement_tolerance:
+		x = 0
+	if y < movement_tolerance and y > -movement_tolerance:
+		y = 0
+	
+	return Vector2(x, y)
 
 # locks the player Input to current state
 func lock():
-	for a in Action.action.values():
+	for a in Action.input.values():
 		locked_states.append(state(a))
 
 # unlocks the Player Input
