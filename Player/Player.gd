@@ -41,6 +41,7 @@ func _ready():
 	$Mana.max_value = max_mana
 	$Mana.value = start_mana
 	next_bullet = bullet_template
+	$Aim/Point.global_position = self.global_position + Vector2(800, 0)
 	
 	if id % 2 == 0:
 		throw_vector = Vector2(-1, 0)
@@ -79,9 +80,11 @@ func _process(delta):
 	move_and_slide(movement * movement_speed * mult)
 	
 	# calculates the rotation in this frame and rotates the aim pointer
-	var direction = $Controlls.get_aim()
-	var aim = atan2(direction.y, direction.x)
-	$Aim.rotation = aim
+	$Aim/Point.move_and_slide($Controlls.get_aim() * 400)
+	$Direction.rotation = throw_vector.angle_to($Aim/Point.global_position - self.global_position)
+	#var direction = $Controlls.get_aim()
+	#var aim = atan2(direction.y, direction.x)
+	#$Aim.rotation = aim
 	
 	if $Controlls.state(Action.THROW):
 		throw(movement)
@@ -111,9 +114,9 @@ func throw(movement):
 	bullet.own_player = self
 	var impulse
 	if id % 2 == 0:
-		impulse = throw_vector.rotated(-$Aim.rotation) * bullet.speed
+		impulse = throw_vector.rotated(-$Direction.rotation) * bullet.speed
 	else:
-		impulse = throw_vector.rotated($Aim.rotation) * bullet.speed
+		impulse = throw_vector.rotated($Direction.rotation) * bullet.speed
 	
 	# throw the bullet
 	bullet.apply_impulse(throw_point_position, impulse)
