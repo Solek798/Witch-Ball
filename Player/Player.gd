@@ -23,6 +23,7 @@ signal player_reseted(player)
 var id
 var selection
 var body
+var controll
 var next_bullet
 onready var modifiers = []
 onready var health = max_health
@@ -37,7 +38,6 @@ var imp
 func _ready():
 	body = selection.instance()
 	add_child(body)
-	$Controlls.setup(id)
 	$Mana.max_value = max_mana
 	$Mana.value = start_mana
 	next_bullet = bullet_template
@@ -57,8 +57,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("cheat_big_bullet"):
 		self.big_shot = true
 	
-	var movement = $Controlls.get_movement()
-	
+	var movement = controll.get_movement()
+	print(movement)
 	if movement:
 		body.play_walk()
 		$Smoke.emitting = true
@@ -79,15 +79,15 @@ func _process(delta):
 	move_and_slide(movement * movement_speed * mult)
 	
 	# calculates the rotation in this frame and rotates the aim pointer
-	var direction = $Controlls.get_aim()
+	var direction = controll.get_aim()
 	var aim = atan2(direction.y, direction.x)
 	$Aim.rotation = aim
 	
-	if $Controlls.state(Action.THROW):
+	if controll.state(Action.THROW):
 		throw(movement)
-	if $Controlls.state(Action.DODGE):
+	if controll.state(Action.DODGE):
 		dodge(movement)
-	if $Controlls.state(Action.THROW_SPECIAL):
+	if controll.state(Action.THROW_SPECIAL):
 		if fast_shot:
 			next_bullet = bullet_fast_template
 			throw(movement)
@@ -136,7 +136,7 @@ func dodge(movement):
 	# if player is not allready dodging, he starts to dodge
 	if $DodgeTimer.is_stopped():
 		$Mana.value -= dodge_mana
-		$Controlls.lock()
+		controll.lock()
 		$DodgeTimer.start()
 		body.play_dodge_down()
 		$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
@@ -160,7 +160,7 @@ func reset():
 	health = max_health
 	$Mana.value = start_mana
 	$Aim.rotation = 0
-	$Controlls.active = true
+	controll.active = true
 	is_dead = false
 	emit_signal("player_reseted", self)
 

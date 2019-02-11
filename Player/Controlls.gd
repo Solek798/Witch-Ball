@@ -35,11 +35,11 @@ var device
 
 # sets up action Strings and decides by which Controll-Mode the Player is controlled
 func setup(id):
-	connect(id)
+	connect(id + 1)
 	
-	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
+	if prefere_controller_mode and Input.get_connected_joypads().size() >= id + 1:
 		mode = CONTROLLER
-		device = id - 1
+		device = id
 	else:
 		mode = KEYBOARD
 
@@ -69,6 +69,8 @@ func get_movement():
 	if not active:
 		return Vector2(0, 0)
 	# TODO
+	print(locked_states.size())
+	print(keys.size())
 	if locked_states.size() == keys.size():
 		return locked_states[Action.MOVE]
 	
