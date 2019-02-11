@@ -1,6 +1,7 @@
 extends Object
 
 enum modes {KEYBOARD, CONTROLLER}
+enum analog_stick {LEFT, RIGHT}
 
 const DEGREE_IN_RADIANT = PI / 180
 const FORMAT_STRINGS = [
@@ -71,28 +72,21 @@ func get_movement():
 	if locked_states.size() == keys.size():
 		return locked_states[Action.MOVE]
 	
-	var x = 0.0
-	var y = 0.0
+	var movement = Vector2(0, 0)
 	
 	if mode == CONTROLLER:
-		x = Input.get_joy_axis(device, movement_x_axis)
-		y = Input.get_joy_axis(device, movement_y_axis)
-		
-		if x < movement_tolerance and x > -movement_tolerance:
-			x = 0
-		if y < movement_tolerance and y > -movement_tolerance:
-			y = 0
+		movement = get_controller_input(LEFT)
 	else:
 		if Input.is_action_pressed(keys[Action.UP]):
-			y -= 1.0
+			movement.y -= 1.0
 		if Input.is_action_pressed(keys[Action.DOWN]):
-			y += 1.0
+			movement.y += 1.0
 		if Input.is_action_pressed(keys[Action.LEFT]):
-			x -= 1.0
+			movement.x -= 1.0
 		if Input.is_action_pressed(keys[Action.RIGHT]):
-			x += 1.0
+			movement.x += 1.0
 	
-	return Vector2(x, y)
+	return movement
 
 func get_aim():
 	if not active:
@@ -104,15 +98,10 @@ func get_aim():
 	var aim = Vector2(0, 0)
 	
 	if mode == CONTROLLER:
-		aim.x = Input.get_joy_axis(device, aim_x_axis)
+		aim = get_controller_input(RIGHT)
 		# TEMP
 		if device == 1:
 			aim.x *= -1
-		aim.y = Input.get_joy_axis(device, aim_y_axis)
-		
-		if aim.length() < aim_tolerance:
-			aim.x = 0
-			aim.y = 0
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):
 			aim.y -= DEGREE_IN_RADIANT
@@ -120,6 +109,27 @@ func get_aim():
 			aim.y += DEGREE_IN_RADIANT
 	
 	return aim
+
+func get_controller_input(stick):
+	var input = Vector2(0, 0)
+	var x_axis
+	var y_axis
+	
+	if stick == LEFT:
+		x_axis = 0
+		y_axis = 1
+	else:
+		x_axis = 2
+		y_axis = 3
+	
+	input.x = Input.get_joy_axis(device, x_axis)
+	input.y = Input.get_joy_axis(device, y_axis)
+	
+	if input.length() < aim_tolerance:
+		input.x = 0
+		input.y = 0
+	
+	return input
 
 # locks the player Input to current state
 func lock():

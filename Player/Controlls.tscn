@@ -10,7 +10,7 @@ movement_x_axis = 0
 movement_y_axis = 1
 aim_x_axis = 2
 aim_y_axis = 3
-movement_tolerance = 0.2
-aim_tolerance = 0.2
+movement_tolerance = 0.3
+aim_tolerance = 0.3
 
 
