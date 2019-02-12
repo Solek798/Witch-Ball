@@ -96,16 +96,15 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Aim" index="0"]
 
-position = Vector2( 300, 0 )
+modulate = Color( 1, 1, 1, 0.143647 )
+position = Vector2( 300.825, 0 )
 scale = Vector2( 0.1, -0.05 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Aim" parent="Aim" index="1" instance=ExtResource( 6 )]
 
-visible = false
-position = Vector2( 267.713, 0 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 280.362, 0.951286 )
 
 [node name="DodgeTimer" type="Timer" parent="." index="2"]
 
@@ -187,6 +186,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "
 
 [node name="Special" type="Node2D" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( -62, 25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -227,9 +227,9 @@ position = Vector2( 2.38202, 18.2539 )
 scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
-
 [connection signal="timeout" from="DodgeTimer" to="Controlls" method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
