@@ -8,7 +8,7 @@ export(PackedScene) var tutorial_template
 signal tutorial_exited
 
 onready var manage_input = true
-onready var current_controll = get_parent().get_node("Controll1")
+onready var current_controll = get_parent().get_node("Controlls1")
 
 
 func _ready():

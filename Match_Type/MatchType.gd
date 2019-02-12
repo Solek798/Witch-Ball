@@ -42,7 +42,6 @@ func _ready():
 	emit_signal("match_instanciated")
 
 func start(controlls):
-	print(controlls)
 	# creates the in player_count specified ammount of players
 	for i in player_count:
 		create_player(i + 1, controlls[i])

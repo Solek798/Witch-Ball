@@ -7,8 +7,8 @@ func _ready():
 	randomize()
 	$Music.play()
 	
-	$Controll1.setup(0)
-	$Controll2.setup(1)
+	$Controlls1.setup(0)
+	$Controlls2.setup(1)
 	
 	#$Characterselection.connect("match_instantiated", self, "_on_match_instantiated")
 
@@ -19,7 +19,7 @@ func start_match(selection):
 	
 	new_match.connect("match_finished", self, "_on_match_finished")
 	new_match.connect("match_instanciated", $Menu, "tutorial")
-	$Menu.connect("tutorial_exited", new_match, "start", [[$Controll1, $Controll2]])
+	$Menu.connect("tutorial_exited", new_match, "start", [[$Controlls1, $Controlls2]])
 	add_child_below_node($Music, new_match)
 	
 	$Music.stop()
