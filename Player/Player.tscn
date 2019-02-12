@@ -58,7 +58,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -184,6 +184,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "
 
 [node name="Special" type="Node2D" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( -62, 25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -224,10 +225,19 @@ position = Vector2( 2.38202, 18.2539 )
 scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
+[node name="Timer" type="Timer" parent="." index="11"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
 
 [connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 

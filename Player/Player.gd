@@ -58,7 +58,7 @@ func _process(delta):
 		self.big_shot = true
 	
 	var movement = controll.get_movement()
-	print(movement)
+	
 	if movement:
 		body.play_walk()
 		$Smoke.emitting = true
@@ -208,3 +208,9 @@ func _on_player_won_round():
 
 func _on_IndestructableTimer_timeout():
 	body.stop_indestructabel()
+
+
+func _on_Timer_timeout():
+	Input.action_press("player1_down")
+	yield(get_tree(), "idle_frame")
+	Input.action_release("player1_down")
