@@ -5,9 +5,9 @@ enum analog_stick {LEFT, RIGHT}
 
 const DEGREE_IN_RADIANT = PI / 180
 const FORMAT_STRINGS = [
-	"player%d_up", 
-	"player%d_down", 
-	"player%d_left", 
+	"player%d_up",
+	"player%d_down",
+	"player%d_left",
 	"player%d_right",
 	"player%d_aim_up",
 	"player%d_aim_down",
@@ -15,7 +15,11 @@ const FORMAT_STRINGS = [
 	"player%d_dodge",
 	"player%d_aim",
 	"player%d_move",
-	"player%d_throw_special"
+	"player%d_throw_special",
+	"player%d_menu_up",
+	"player%d_menu_down",
+	"player%d_menu_left",
+	"player%d_menu_right"
 ]
 
 export var prefere_controller_mode = true
@@ -35,11 +39,11 @@ var device
 
 # sets up action Strings and decides by which Controll-Mode the Player is controlled
 func setup(id):
-	connect(id)
+	connect(id + 1)
 	
-	if prefere_controller_mode and Input.get_connected_joypads().size() >= id:
+	if prefere_controller_mode and Input.get_connected_joypads().size() >= id + 1:
 		mode = CONTROLLER
-		device = id - 1
+		device = id
 	else:
 		mode = KEYBOARD
 
@@ -60,7 +64,7 @@ func state(action):
 			return get_movement()
 		Action.AIM:
 			return get_aim()
-		Action.THROW, Action.DODGE, Action.THROW_SPECIAL:
+		Action.THROW, Action.DODGE, Action.THROW_SPECIAL, Action.MENU_UP, Action.MENU_DOWN, Action.MENU_LEFT, Action.MENU_RIGHT:
 			return Input.is_action_just_pressed(keys[action])
 		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT, Action.AIM_UP, Action.AIM_DOWN:
 			return Input.is_action_pressed(keys[action])
@@ -68,7 +72,7 @@ func state(action):
 func get_movement():
 	if not active:
 		return Vector2(0, 0)
-	# TODO
+	# TODO 
 	if locked_states.size() == keys.size():
 		return locked_states[Action.MOVE]
 	
@@ -80,6 +84,7 @@ func get_movement():
 		if Input.is_action_pressed(keys[Action.UP]):
 			movement.y -= 1.0
 		if Input.is_action_pressed(keys[Action.DOWN]):
+			print("Test")
 			movement.y += 1.0
 		if Input.is_action_pressed(keys[Action.LEFT]):
 			movement.x -= 1.0

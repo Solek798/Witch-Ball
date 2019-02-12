@@ -7,7 +7,7 @@ onready var own_template = load(path_to_own_template)
 
 func _ready():
 	get_tree().paused = true
-	$Background/Content/Buttons/Options.grab_focus()
+	$Background/Content/Buttons/Resume.grab_focus()
 
 func _on_Options_pressed():
 	if get_parent().has_method("switch_scene"):

@@ -41,16 +41,17 @@ func _ready():
 	
 	emit_signal("match_instanciated")
 
-func start():
+func start(controlls):
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		create_player(i + 1)
+		create_player(i + 1, controlls[i])
 	emit_signal("match_started", round_count)
 
-func create_player(id):
+func create_player(id, controll):
 	#instanciates and sets th player to the specified position
 	var player = player_template.instance()
 	player.id = id
+	player.controll = controll
 	if id == 1:
 		player.selection = player_1_selection
 	if id == 2:
