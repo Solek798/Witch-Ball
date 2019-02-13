@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fluss effect.png-9d719f43b66cc40aa6dae3f3d3e8310f.stex"
+path="res://.import/Waves.png-ff32984f3185a8f0d192e0bf159d3900.stex"
 
 [deps]
 
-source_file="res://Bullet/Effekte_Mohammad_Update/River/Fluss effect.png"
-dest_files=[ "res://.import/Fluss effect.png-9d719f43b66cc40aa6dae3f3d3e8310f.stex" ]
+source_file="res://Bullet/Effekte_Mohammad_Update/River/Waves.png"
+dest_files=[ "res://.import/Waves.png-ff32984f3185a8f0d192e0bf159d3900.stex" ]
 
 [params]
 

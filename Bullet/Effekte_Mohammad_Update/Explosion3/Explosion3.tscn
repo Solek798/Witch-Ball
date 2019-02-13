@@ -43,8 +43,8 @@ angular_velocity = 1.0
 angular_velocity_random = 1.0
 linear_accel = 0.0
 linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
+radial_accel = 5.0
+radial_accel_random = 0.5
 tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 0.0
@@ -52,7 +52,7 @@ damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
 scale = 0.5
-scale_random = 0.0
+scale_random = 0.5
 scale_curve = SubResource( 4 )
 color_ramp = SubResource( 2 )
 hue_variation = 0.0
@@ -62,7 +62,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Color" ]
+_sections_unfolded = [ "Radial Accel" ]
 
 [sub_resource type="Environment" id=6]
 
@@ -127,11 +127,11 @@ glow_levels/1 = true
 glow_levels/2 = true
 glow_levels/3 = true
 glow_levels/4 = true
-glow_levels/5 = true
-glow_levels/6 = true
-glow_levels/7 = true
-glow_intensity = 0.78
-glow_strength = 1.77
+glow_levels/5 = false
+glow_levels/6 = false
+glow_levels/7 = false
+glow_intensity = 2.0
+glow_strength = 1.7
 glow_bloom = 0.0
 glow_blend_mode = 0
 glow_hdr_threshold = 1.0
@@ -141,11 +141,13 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+_sections_unfolded = [ "Glow", "Glow/levels" ]
 
 [node name="Node" type="Node" index="0"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
+rotation = -1.56316
 emitting = true
 amount = 8
 lifetime = 1.0
@@ -164,7 +166,7 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 

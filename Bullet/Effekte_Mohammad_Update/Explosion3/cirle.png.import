@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.png-6c23850af52eae328248d04d32b9206b.stex"
+path="res://.import/cirle.png-df1a7ab97f10f676dbd0b9c441ca7772.stex"
 
 [deps]
 
-source_file="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/kleine Bilder/1.png"
-dest_files=[ "res://.import/1.png-6c23850af52eae328248d04d32b9206b.stex" ]
+source_file="res://Bullet/Effekte_Mohammad_Update/Explosion3/cirle.png"
+dest_files=[ "res://.import/cirle.png-df1a7ab97f10f676dbd0b9c441ca7772.stex" ]
 
 [params]
 
