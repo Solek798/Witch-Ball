@@ -5,20 +5,20 @@
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/Waves.png" type="Texture" id=3]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/1.png" type="Texture" id=4]
 
-[sub_resource type="Curve" id=24]
+[sub_resource type="Curve" id=1]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.0348402, 0.0166016 ), 0.0, 4.77849, 0, 0, Vector2( 0.261587, 1 ), 11.8635, 11.8635, 0, 0, Vector2( 0.658942, 0.209961 ), -9.71083, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=25]
+[sub_resource type="CurveTexture" id=2]
 
 flags = 4
 width = 2048
-curve = SubResource( 24 )
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=26]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -48,7 +48,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 1.0
 scale_random = 0.0
-scale_curve = SubResource( 25 )
+scale_curve = SubResource( 2 )
 color = Color( 1, 1, 1, 0.215451 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -59,18 +59,18 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Scale" ]
 
-[sub_resource type="Gradient" id=27]
+[sub_resource type="Gradient" id=4]
 
 offsets = PoolRealArray( 0.757396, 1 )
 colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=28]
+[sub_resource type="GradientTexture" id=5]
 
 flags = 4
-gradient = SubResource( 27 )
+gradient = SubResource( 4 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=29]
+[sub_resource type="ParticlesMaterial" id=6]
 
 render_priority = 0
 trail_divisor = 1
@@ -100,7 +100,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.22
 scale_random = 0.0
-color_ramp = SubResource( 28 )
+color_ramp = SubResource( 5 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -110,20 +110,20 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Scale" ]
 
-[sub_resource type="Curve" id=30]
+[sub_resource type="Curve" id=7]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.0486929, 0 ), 0.0, 7.93352, 0, 0, Vector2( 0.170451, 0.575195 ), 4.91123, 4.91123, 0, 0, Vector2( 0.351995, 0.682617 ), -132.603, -132.603, 0, 0, Vector2( 0.35564, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.447506, 0.00585938 ), 0.701603, 0.701603, 0, 0, Vector2( 0.763202, 0 ), 1.0255, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=31]
+[sub_resource type="CurveTexture" id=8]
 
 flags = 4
 width = 2048
-curve = SubResource( 30 )
+curve = SubResource( 7 )
 
-[sub_resource type="ParticlesMaterial" id=32]
+[sub_resource type="ParticlesMaterial" id=9]
 
 render_priority = 0
 trail_divisor = 1
@@ -153,7 +153,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.05
 scale_random = 0.0
-scale_curve = SubResource( 31 )
+scale_curve = SubResource( 8 )
 color = Color( 1, 1, 1, 0.33149 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -164,31 +164,31 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Scale", "Spread" ]
 
-[sub_resource type="Gradient" id=22]
+[sub_resource type="Gradient" id=10]
 
 offsets = PoolRealArray( 0.923077, 1 )
 colors = PoolColorArray( 1, 1, 1, 0.353569, 0.953125, 0.930786, 0.930786, 0.154667 )
 
-[sub_resource type="GradientTexture" id=23]
+[sub_resource type="GradientTexture" id=11]
 
 flags = 4
-gradient = SubResource( 22 )
+gradient = SubResource( 10 )
 width = 2048
 
-[sub_resource type="Curve" id=10]
+[sub_resource type="Curve" id=12]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.0742111, 0.0273438 ), 0.0, 2.72681, 0, 0, Vector2( 0.507291, 0.908203 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), -5.09668, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=11]
+[sub_resource type="CurveTexture" id=13]
 
 flags = 4
 width = 2048
-curve = SubResource( 10 )
+curve = SubResource( 12 )
 
-[sub_resource type="ParticlesMaterial" id=33]
+[sub_resource type="ParticlesMaterial" id=14]
 
 render_priority = 0
 trail_divisor = 1
@@ -217,8 +217,8 @@ angle = 0.0
 angle_random = 0.0
 scale = 1.46
 scale_random = 0.5
-scale_curve = SubResource( 11 )
-color_ramp = SubResource( 23 )
+scale_curve = SubResource( 13 )
+color_ramp = SubResource( 11 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -234,6 +234,7 @@ position = Vector2( -40.8972, -4.54413 )
 
 [node name="Steinlvl_aktuell" type="Sprite" parent="." index="0"]
 
+visible = false
 position = Vector2( 943.208, 546.913 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -256,7 +257,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 26 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
@@ -282,7 +283,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 26 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
@@ -308,7 +309,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 26 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
@@ -334,7 +335,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 26 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
@@ -360,7 +361,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 26 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
@@ -386,7 +387,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 29 )
+process_material = SubResource( 6 )
 texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
@@ -411,7 +412,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 32 )
+process_material = SubResource( 9 )
 texture = ExtResource( 4 )
 normal_map = null
 h_frames = 1
@@ -437,7 +438,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 33 )
+process_material = SubResource( 14 )
 texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1

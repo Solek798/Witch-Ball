@@ -290,7 +290,7 @@ shape = SubResource( 8 )
 
 [node name="River" parent="." index="9" instance=ExtResource( 12 )]
 
-position = Vector2( 0, 0 )
+position = Vector2( 14.8893, -9.24396 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Butterflies" type="Node" parent="." index="10"]
