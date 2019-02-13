@@ -145,6 +145,10 @@ func lock():
 func unlock():
 	locked_states.clear()
 
+func vibrate(weak_strength, strong_strength, time):
+	if mode == CONTROLLER:
+		Input.start_joy_vibration(device, weak_strength, strong_strength, time)
+
 func _on_DodgeTimer_timeout():
 	unlock()
 
