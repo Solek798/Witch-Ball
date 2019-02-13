@@ -139,16 +139,16 @@ dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 1
 glow_enabled = true
-glow_levels/1 = false
+glow_levels/1 = true
 glow_levels/2 = false
 glow_levels/3 = true
-glow_levels/4 = false
-glow_levels/5 = true
+glow_levels/4 = true
+glow_levels/5 = false
 glow_levels/6 = false
 glow_levels/7 = false
-glow_intensity = 1.7
-glow_strength = 0.61
-glow_bloom = 0.9
+glow_intensity = 0.93
+glow_strength = 1.21
+glow_bloom = 0.0
 glow_blend_mode = 0
 glow_hdr_threshold = 1.0
 glow_hdr_scale = 2.0
@@ -159,7 +159,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background", "Glow" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 

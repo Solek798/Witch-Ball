@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3.png-349748878f31cc8573f42b784a33ccbf.stex"
+path="res://.import/Steinlvl_aktuell.jpg-c55f8f3812ab6847107eb98726d2ff55.stex"
 
 [deps]
 
-source_file="res://Bullet/Effekte_Mohammad_Update/2D explosion/Explsion Bilder/3.png"
-dest_files=[ "res://.import/3.png-349748878f31cc8573f42b784a33ccbf.stex" ]
+source_file="res://Bullet/Effekte_Mohammad_Update/Gewinn/Steinlvl_aktuell.jpg"
+dest_files=[ "res://.import/Steinlvl_aktuell.jpg-c55f8f3812ab6847107eb98726d2ff55.stex" ]
 
 [params]
 

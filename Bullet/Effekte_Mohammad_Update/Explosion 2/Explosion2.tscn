@@ -127,11 +127,11 @@ glow_levels/1 = true
 glow_levels/2 = true
 glow_levels/3 = true
 glow_levels/4 = true
-glow_levels/5 = true
-glow_levels/6 = true
-glow_levels/7 = true
-glow_intensity = 0.78
-glow_strength = 1.77
+glow_levels/5 = false
+glow_levels/6 = false
+glow_levels/7 = false
+glow_intensity = 2.0
+glow_strength = 1.7
 glow_bloom = 0.0
 glow_blend_mode = 0
 glow_hdr_threshold = 1.0
@@ -141,6 +141,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+_sections_unfolded = [ "Glow", "Glow/levels" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -164,7 +165,7 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 

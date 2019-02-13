@@ -72,7 +72,7 @@ _sections_unfolded = [ "Color" ]
 [sub_resource type="Animation" id=6]
 
 length = 1.0
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer/Rounds_V.2.2_won:position")
@@ -121,6 +121,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Particles2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
 }
 
 [sub_resource type="Environment" id=7]
@@ -183,14 +195,14 @@ dof_blur_near_amount = 0.1
 dof_blur_near_quality = 1
 glow_enabled = true
 glow_levels/1 = true
-glow_levels/2 = true
+glow_levels/2 = false
 glow_levels/3 = true
-glow_levels/4 = true
+glow_levels/4 = false
 glow_levels/5 = true
-glow_levels/6 = true
-glow_levels/7 = true
-glow_intensity = 0.8
-glow_strength = 1.16
+glow_levels/6 = false
+glow_levels/7 = false
+glow_intensity = 1.0
+glow_strength = 1.1
 glow_bloom = 0.0
 glow_blend_mode = 0
 glow_hdr_threshold = 1.0
@@ -200,17 +212,19 @@ adjustment_enabled = true
 adjustment_brightness = 1.0
 adjustment_contrast = 1.5
 adjustment_saturation = 1.5
+_sections_unfolded = [ "Glow" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Rounds_V.2.2_empty" type="Sprite" parent="." index="0"]
 
+position = Vector2( 1.61407, 1.242 )
 texture = ExtResource( 1 )
 
 [node name="Particles2D" type="Particles2D" parent="." index="1"]
 
-visible = false
-rotation = -1.40516
+position = Vector2( 0.0271606, -16.212 )
+rotation = 1.60363
 emitting = true
 amount = 100
 lifetime = 1.0
@@ -229,7 +243,7 @@ texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
@@ -243,7 +257,7 @@ blend_times = [  ]
 
 [node name="Rounds_V.2.2_won" type="Sprite" parent="AnimationPlayer" index="0"]
 
-scale = Vector2( 3.00947, 3.00947 )
+scale = Vector2( 0.976942, 0.976942 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
