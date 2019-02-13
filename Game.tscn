@@ -72,6 +72,8 @@ tutorial_template = ExtResource( 7 )
 
 [node name="Controlls2" parent="." index="3" instance=ExtResource( 8 )]
 
+_sections_unfolded = [ "Rect", "Transform" ]
+
 [connection signal="finished" from="Music" to="." method="_on_Music_finished"]
 
 

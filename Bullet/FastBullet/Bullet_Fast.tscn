@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/Feuer 7.1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Bullet/Fast2.png" type="Texture" id=4]
+[ext_resource path="res://Bullet/FastBullet/Fast2.png" type="Texture" id=4]
 [ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=5]
 [ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=6]
 [ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=7]
+[ext_resource path="res://Bullet/FastBullet/Bullet_Fast.tres" type="Animation" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -43,12 +44,16 @@ damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
+position = Vector2( 0, 2.66613 )
 shape = SubResource( 1 )
 
 [node name="Node2D" parent="." index="1" instance=ExtResource( 3 )]
 
+position = Vector2( 0, 2.66613 )
+
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
+position = Vector2( 0, 2.66613 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -82,5 +87,15 @@ position = Vector2( 0.189894, 55.8141 )
 scale = Vector2( 0.7592, 0.293347 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = "FastBulletAnimation"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FastBulletAnimation = ExtResource( 8 )
+blend_times = [  ]
 
 

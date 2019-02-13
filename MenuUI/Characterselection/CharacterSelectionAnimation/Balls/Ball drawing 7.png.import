@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Big.png-2b802eb1a06ba8ec907624f38d88de79.stex"
+path="res://.import/Ball drawing 7.png-bd5232867bb90cc68f5cc649db4b3c1c.stex"
 
 [deps]
 
-source_file="res://Bullet/Big.png"
-dest_files=[ "res://.import/Big.png-2b802eb1a06ba8ec907624f38d88de79.stex" ]
+source_file="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/Ball drawing 7.png"
+dest_files=[ "res://.import/Ball drawing 7.png-bd5232867bb90cc68f5cc649db4b3c1c.stex" ]
 
 [params]
 
