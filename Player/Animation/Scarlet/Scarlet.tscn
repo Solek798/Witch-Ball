@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Icon_Player_Scarlet.png" type="Texture" id=2]
@@ -22,7 +22,6 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=20]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=21]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructable.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Animation" id=1]
 
@@ -231,7 +230,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Scale", "Trail" ]
 
-[node name="Scarlet" type="Sprite" index="0"]
+[node name="Scarlet" type="Sprite"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -249,7 +248,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "anim 2", "scale 2", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "Mix_Trow", "scale 3", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "WinnJump", "scale 4", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1 ],
+"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "anim 2", "scale 2", 0, "oneshot_dodge_down", "oneshot_dodge_up", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "Mix_Trow", "scale 3", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "WinnJump", "scale 4", 0, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -273,76 +272,21 @@ data = {
 "position": Vector2( 6, 146 ),
 "type": "animation"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 902, 5 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 445, 28 ),
-"type": "oneshot"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 250, 385 ),
-"type": "animation"
+"id": "Mix_Trow",
+"mix": 1.0,
+"position": Vector2( 568, 246 ),
+"type": "mix"
 }, {
 "id": "scale 2",
 "position": Vector2( 296, 191 ),
 "scale": 2.0,
 "type": "timescale"
 }, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
+"animation": ExtResource( 5 ),
 "filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 1032, 5 ),
-"type": "oneshot"
-}, {
-"id": "scale 3",
-"position": Vector2( 658, 134 ),
-"scale": 2.0,
-"type": "timescale"
-}, {
-"blend": 1.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
-}, {
-"id": "scale 4",
-"position": Vector2( 929, 119 ),
-"scale": 2.0,
-"type": "timescale"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 727, 8 ),
-"type": "oneshot"
+"id": "anim 2",
+"position": Vector2( 250, 385 ),
+"type": "animation"
 }, {
 "animation": ExtResource( 6 ),
 "filter": [  ],
@@ -356,17 +300,28 @@ data = {
 "position": Vector2( 884, 190 ),
 "type": "animation"
 }, {
+"animation": ExtResource( 4 ),
+"filter": [  ],
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
+"type": "animation"
+}, {
 "animation": ExtResource( 7 ),
 "filter": [  ],
 "id": "Throw",
 "position": Vector2( 417, 214 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 4 ),
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
 "filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
-"type": "animation"
+"id": "oneshot_dodge_up",
+"mix": false,
+"position": Vector2( 712, 517 ),
+"type": "oneshot"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -381,19 +336,63 @@ data = {
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_throw",
+"mix": false,
+"position": Vector2( 727, 8 ),
+"type": "oneshot"
+}, {
+"id": "scale 3",
+"position": Vector2( 658, 134 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 1032, 5 ),
+"type": "oneshot"
+}, {
+"blend": 1.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 159, 43 ),
+"type": "blend2"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 445, 28 ),
+"type": "oneshot"
+}, {
+"id": "scale 4",
+"position": Vector2( 929, 119 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_dodge_up",
+"id": "oneshot_hit",
 "mix": false,
-"position": Vector2( 712, 517 ),
+"position": Vector2( 902, 5 ),
 "type": "oneshot"
-}, {
-"id": "Mix_Trow",
-"mix": 1.0,
-"position": Vector2( 568, 246 ),
-"type": "mix"
 } ]
 }
 
@@ -416,6 +415,7 @@ blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, -54.5534 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 8
@@ -426,7 +426,7 @@ __meta__ = {
 
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
-position = Vector2( 0, 17.5756 )
+position = Vector2( 0, 22.0989 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -443,7 +443,7 @@ __meta__ = {
 [node name="Head" type="Sprite" parent="Charakter/Torso/Head_Arms" index="0"]
 
 position = Vector2( -38.0608, -114.766 )
-rotation = 0.0480712
+rotation = 0.0517249
 z_index = 4
 texture = ExtResource( 11 )
 offset = Vector2( 17.0357, 118.566 )
@@ -456,7 +456,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0688743
+rotation = 0.0944256
 z_index = 1
 texture = ExtResource( 12 )
 offset = Vector2( 145.576, 357.073 )
@@ -468,7 +468,7 @@ __meta__ = {
 [node name="Hut2" type="Sprite" parent="Charakter/Torso/Head_Arms/Head/Hut" index="0"]
 
 position = Vector2( 145.136, 356.02 )
-rotation = 4.65661e-010
+rotation = 4.65661e-10
 scale = Vector2( 0.999999, 0.999999 )
 z_index = -5
 texture = ExtResource( 13 )
@@ -477,7 +477,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.222813
+rotation = 0.064011
 z_index = -5
 texture = ExtResource( 14 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -489,7 +489,7 @@ __meta__ = {
 [node name="Hand_l" type="Sprite" parent="Charakter/Torso/Head_Arms/Arm_l" index="0"]
 
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.116138
+rotation = -0.0997455
 texture = ExtResource( 15 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -500,7 +500,7 @@ __meta__ = {
 [node name="Arm_r" type="Sprite" parent="Charakter/Torso/Head_Arms" index="2"]
 
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.140484
+rotation = -0.0378984
 z_index = 4
 texture = ExtResource( 16 )
 offset = Vector2( 115.846, 3.52861 )
@@ -513,7 +513,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = 0.0801212
+rotation = 0.0508991
 scale = Vector2( 0.999999, 0.999999 )
 z_index = 1
 texture = ExtResource( 17 )
@@ -537,7 +537,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( -39.0679, 290.996 )
-rotation = 0.203934
+rotation = -0.34739
 z_index = -1
 texture = ExtResource( 18 )
 offset = Vector2( 39.0679, -290.996 )
@@ -549,7 +549,7 @@ __meta__ = {
 [node name="Foot_r" type="Sprite" parent="Charakter/Torso/Legs/Leg_r" index="0"]
 
 position = Vector2( 29.5789, 124.968 )
-rotation = -0.635049
+rotation = 0.861655
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 9.48901, -415.964 )
@@ -562,7 +562,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 49.202, 250.398 )
-rotation = 0.206351
+rotation = 0.784264
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 20 )
@@ -575,7 +575,7 @@ __meta__ = {
 [node name="Foot_l" type="Sprite" parent="Charakter/Torso/Legs/Leg_l" index="0"]
 
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.525788
+rotation = -1.12955
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 21 )
@@ -641,12 +641,5 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Visibility" ]
-
-[node name="Indestructable" parent="." index="2" instance=ExtResource( 23 )]
-
-visible = false
-modulate = Color( 1, 1, 1, 0.436471 )
-position = Vector2( 0, -51.6379 )
-_sections_unfolded = [ "Transform" ]
 
 

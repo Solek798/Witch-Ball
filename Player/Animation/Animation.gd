@@ -37,7 +37,6 @@ func play_WinnJump():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_WinnJump")
 
 func play_indestructable():
-	print("Los!")
 	$AnimationTreePlayer/AnimationPlayer.play("Indestructable")
 
 func stop_indestructabel():
