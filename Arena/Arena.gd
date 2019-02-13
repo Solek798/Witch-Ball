@@ -126,7 +126,7 @@ func _on_PickUpTimer_timeout():
 func _on_RandomEffectTimer_timeout():
 	var children
 	var effect
-	print("test")
+	
 	if randi() % 2:
 		children = $Eyes.get_children()
 		effect = eye_effect_template.instance()

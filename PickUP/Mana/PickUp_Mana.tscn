@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 53.4665, 108.218 )
 
-[node name="PickUp_Mana" type="Area2D" groups=[
+[node name="PickUp_Mana" type="Area2D" index="0" groups=[
 "PickUp",
 ]]
 

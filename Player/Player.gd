@@ -154,7 +154,7 @@ func take_damage(ammount):
 	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
-		$Controlls.active = false
+		controll.active = false
 		is_dead = true
 		emit_signal("player_died", self)
 

@@ -58,7 +58,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -136,6 +136,8 @@ playback/repeat = false
 playback/speed = 1.0
 
 [node name="Smoke" parent="." index="6" instance=ExtResource( 7 )]
+
+emitting = false
 
 [node name="ManaTimer" type="Timer" parent="." index="7"]
 

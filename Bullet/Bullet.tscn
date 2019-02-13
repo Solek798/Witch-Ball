@@ -1,20 +1,19 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/golderSchweif/golderSchweif.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/neuer Rauch/neuer Rauch.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Bullet/normal.png" type="Texture" id=5]
-[ext_resource path="res://Bullet/SFX_Shooting_Ball.wav" type="AudioStream" id=6]
-[ext_resource path="res://Bullet/SFX_Balls_Colide.wav" type="AudioStream" id=7]
-[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=8]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/neuer Rauch/neuer Rauch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bullet/normal.png" type="Texture" id=4]
+[ext_resource path="res://Bullet/SFX_Shooting_Ball.wav" type="AudioStream" id=5]
+[ext_resource path="res://Bullet/SFX_Balls_Colide.wav" type="AudioStream" id=6]
+[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 17.9689
 
-[node name="Bullet" type="RigidBody2D" groups=[
+[node name="Bullet" type="RigidBody2D" index="0" groups=[
 "Bullet",
 ]]
 
@@ -49,21 +48,17 @@ damage = 1
 
 shape = SubResource( 1 )
 
-[node name="GoldenerSchweif" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Rauch" parent="." index="1" instance=ExtResource( 3 )]
 
-visible = false
-
-[node name="Rauch" parent="." index="2" instance=ExtResource( 4 )]
-
-[node name="Texture" type="Sprite" parent="." index="3"]
+[node name="Texture" type="Sprite" parent="." index="2"]
 
 scale = Vector2( 0.09, 0.09 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Shot" type="AudioStreamPlayer2D" parent="." index="4"]
+[node name="Shot" type="AudioStreamPlayer2D" parent="." index="3"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 5 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
@@ -72,9 +67,9 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Collide" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="Collide" type="AudioStreamPlayer2D" parent="." index="4"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -83,10 +78,10 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="shadow_ball" type="Sprite" parent="." index="6"]
+[node name="shadow_ball" type="Sprite" parent="." index="5"]
 
 position = Vector2( -0.706443, 66.8968 )
 scale = Vector2( 0.892745, 0.375277 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 
