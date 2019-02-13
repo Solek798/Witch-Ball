@@ -51,9 +51,10 @@ extents = Vector2( 10, 757.697 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.5225, 654.954 )
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )

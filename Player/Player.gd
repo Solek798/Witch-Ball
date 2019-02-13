@@ -170,18 +170,18 @@ func increase_mana(ammount):
 func set_big_shot(new_value):
 	if new_value:
 		fast_shot = false
-		$Special/Fast.visible = false
+		$Aim/Special/Fast.visible = false
 	
 	big_shot = new_value
-	$Special/Big.visible = new_value
+	$Aim/Special/Big.visible = new_value
 
 func set_fast_shot(new_value):
 	if new_value:
 		big_shot = false
-		$Special/Big.visible = false
+		$Aim/Special/Big.visible = false
 	
 	fast_shot = new_value
-	$Special/Fast.visible = new_value
+	$Aim/Special/Fast.visible = new_value
 
 func _on_round_finished():
 	reset()
