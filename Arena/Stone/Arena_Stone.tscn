@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
@@ -6,10 +6,12 @@
 [ext_resource path="res://PickUP/Big/PickUp_Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/Animations/NeedelEffect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Arena/Stone/Steinlvl_aktuell.jpg" type="Texture" id=7]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Arena/Animations/EyesEffect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Arena/Animations/ButterflyEffect.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Arena/Stone/Steinlvl_aktuell.jpg" type="Texture" id=9]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -59,21 +61,25 @@ pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
 stone_effect_template = ExtResource( 5 )
 needle_effect_template = ExtResource( 6 )
+eye_effect_template = ExtResource( 7 )
+butterfly_effect_template = ExtResource( 8 )
 min_spawn_time = 6
 max_spawn_time = 10
+min_effect_time = 10
+max_effect_time = 15
 time_divider = 2
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
 position = Vector2( 962.859, 540.221 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Position" parent="." index="1" instance=ExtResource( 8 )]
+[node name="Position" parent="." index="1" instance=ExtResource( 10 )]
 
 visible = false
 
-[node name="PickUp_Spawn" parent="." index="2" instance=ExtResource( 9 )]
+[node name="PickUp_Spawn" parent="." index="2" instance=ExtResource( 11 )]
 
 visible = false
 
@@ -91,9 +97,17 @@ wait_time = 60.0
 one_shot = true
 autostart = false
 
-[node name="Stones" type="Area2D" parent="." index="5"]
+[node name="RandomEffectTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Stones" type="Area2D" parent="." index="6"]
 
 editor/display_folded = true
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -153,9 +167,10 @@ scale = Vector2( 0.297289, 1.82067 )
 build_mode = 0
 polygon = PoolVector2Array( 2011.89, 10.9316, 2043.92, 179.048, 2455.75, 217.154, 2638.76, 183.013, 2588.46, 47.5436, 2341.36, 1.96546 )
 
-[node name="Needles" type="Area2D" parent="." index="6"]
+[node name="Needles" type="Area2D" parent="." index="7"]
 
 editor/display_folded = true
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -198,7 +213,7 @@ scale = Vector2( 0.540127, 0.5625 )
 build_mode = 0
 polygon = PoolVector2Array( 1710.49, 87.5471, 1744.38, 14.7038, 1758.39, -83.332, 1801.61, -105.66, 1820.59, 18.2841, 1816.79, 113.065, 1816.79, 171.392, 1725.68, 164.101 )
 
-[node name="Border" type="Node2D" parent="." index="7"]
+[node name="Border" type="Node2D" parent="." index="8"]
 
 editor/display_folded = true
 
@@ -273,14 +288,42 @@ shape = SubResource( 7 )
 position = Vector2( 2044.6, 565.09 )
 shape = SubResource( 8 )
 
-[node name="River" parent="." index="8" instance=ExtResource( 10 )]
+[node name="River" parent="." index="9" instance=ExtResource( 12 )]
 
 position = Vector2( 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="Butterflies" type="Node" parent="." index="10"]
+
+editor/display_folded = true
+
+[node name="Position1" type="Position2D" parent="Butterflies" index="0"]
+
+position = Vector2( 175.717, 532.453 )
+
+[node name="Position2" type="Position2D" parent="Butterflies" index="1"]
+
+position = Vector2( 1762.72, 983.559 )
+
+[node name="Position3" type="Position2D" parent="Butterflies" index="2"]
+
+position = Vector2( 268.2, 138.66 )
+
+[node name="Eyes" type="Node" parent="." index="11"]
+
+[node name="Position1" type="Position2D" parent="Eyes" index="0"]
+
+position = Vector2( 409.26, 135.903 )
+
+[node name="Position2" type="Position2D" parent="Eyes" index="1"]
+
+position = Vector2( 1469.8, 129.108 )
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
 [connection signal="timeout" from="PickUpTimer" to="." method="_on_PickUpTimer_timeout"]
+
+[connection signal="timeout" from="RandomEffectTimer" to="." method="_on_RandomEffectTimer_timeout"]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 

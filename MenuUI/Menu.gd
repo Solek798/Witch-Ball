@@ -28,6 +28,10 @@ func close():
 	manage_input = false
 	self.visible = false
 
+func set_blur(amount, darknes):
+	self.material.set_shader_param("amount", amount)
+	self.material.set_shader_param("darknes", darknes)
+
 func switch_scene(next_scene_template, return_scene):
 	if not next_scene_template:
 		return
@@ -42,14 +46,17 @@ func confirm_selection(selection):
 
 func menu():
 	open()
+	set_blur(2.5, 0.0)
 	add_child(main_scene_template.instance())
 
 func pause():
 	open()
+	set_blur(2.5, 0.25)
 	add_child(pause_scene_template.instance())
 
 func tutorial():
 	open()
+	set_blur(2.5, 0.25)
 	var tutorial = tutorial_template.instance()
 	add_child(tutorial)
 	
