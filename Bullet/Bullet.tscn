@@ -5,8 +5,8 @@
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/golderSchweif/golderSchweif.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/neuer Rauch/neuer Rauch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Bullet/normal.png" type="Texture" id=5]
-[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=6]
-[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=7]
+[ext_resource path="res://Bullet/SFX_Shooting_Ball.wav" type="AudioStream" id=6]
+[ext_resource path="res://Bullet/SFX_Balls_Colide.wav" type="AudioStream" id=7]
 [ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -14,7 +14,7 @@
 custom_solver_bias = 0.0
 radius = 17.9689
 
-[node name="Bullet" type="RigidBody2D" index="0" groups=[
+[node name="Bullet" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 

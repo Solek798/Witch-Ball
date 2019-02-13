@@ -4,7 +4,7 @@
 [ext_resource path="res://GUI/Info/Classic/Info_Classic.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/Healthbar/Classic/Healthbar_Classic.tscn" type="PackedScene" id=3]
 
-[node name="GUI" type="Container"]
+[node name="GUI" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
