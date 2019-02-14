@@ -7,7 +7,6 @@ export(PackedScene) var impulse_template
 
 func _ready():
 	var impulse = impulse_template.instance()
-	$SpawnEffect.start()
 	emit_signal("pick_up_spawned", impulse, self.global_position)
 
 func _on_PickUp_Big_body_entered(body):

@@ -1,7 +1,8 @@
 [gd_scene format=2]
 
-[node name="IdleEffect" type="Particles2D"]
+[node name="IdleEffect" type="Particles2D" index="0"]
 
+position = Vector2( -8.40598, -3.88541 )
 emitting = true
 amount = 8
 lifetime = 1.0
