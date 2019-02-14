@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PickUP/Big/PickUp_Big.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=3]
+[ext_resource path="res://Player/shadow.png" type="Texture" id=3]
 [ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=4]
 [ext_resource path="res://Shockwafe.tscn" type="PackedScene" id=5]
 [ext_resource path="res://PickUP/Ani/Span.tres" type="Animation" id=6]
@@ -34,8 +34,8 @@ shape = SubResource( 1 )
 
 [node name="shadow_ball" type="Sprite" parent="." index="1"]
 
-position = Vector2( -1.67908, 66.1989 )
-scale = Vector2( 1.57495, 0.564989 )
+position = Vector2( 0.588192, 67.919 )
+scale = Vector2( 0.23145, 0.151671 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 

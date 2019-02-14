@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effects/Explosion/Explosion.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=3]
+[ext_resource path="res://Player/shadow.png" type="Texture" id=3]
 [ext_resource path="res://Bullet/Big_Bullet/Big.png" type="Texture" id=4]
 [ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=5]
 [ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=6]
@@ -19,7 +19,7 @@ radius = 39.5678
 custom_solver_bias = 0.0
 radius = 108.181
 
-[node name="Bullet_Big" type="RigidBody2D" index="0" groups=[
+[node name="Bullet_Big" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 
@@ -70,8 +70,8 @@ shape = SubResource( 2 )
 
 [node name="shadow_ball" type="Sprite" parent="." index="2"]
 
-position = Vector2( 0.55426, 84.0316 )
-scale = Vector2( 3.60489, 1 )
+position = Vector2( -0.77211, 75.5583 )
+scale = Vector2( 0.438978, 0.274157 )
 texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="." index="3"]

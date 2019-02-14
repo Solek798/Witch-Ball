@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PickUP/Mana/PickUp_Mana.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/shadow_ball.png" type="Texture" id=3]
+[ext_resource path="res://Player/shadow.png" type="Texture" id=3]
 [ext_resource path="res://PickUP/Mana/mana_bottle_v3_final.png" type="Texture" id=4]
 [ext_resource path="res://PickUP/Ani/Span.tres" type="Animation" id=5]
 
@@ -34,8 +34,8 @@ shape = SubResource( 1 )
 
 [node name="shadow_ball" type="Sprite" parent="." index="1"]
 
-position = Vector2( -4.92147, 60.7171 )
-scale = Vector2( 1.51051, 0.552103 )
+position = Vector2( -3.65131, 55.2741 )
+scale = Vector2( 0.0958708, 0.0974583 )
 texture = ExtResource( 3 )
 
 [node name="Png" type="Sprite" parent="." index="2"]

@@ -58,7 +58,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -192,8 +192,8 @@ autostart = true
 
 [node name="shadow" type="Sprite" parent="." index="8"]
 
-position = Vector2( -0.348047, 7.65879 )
-scale = Vector2( 0.70025, 0.70025 )
+position = Vector2( 0.67923, 5.22228 )
+scale = Vector2( 0.202378, 0.202378 )
 texture = ExtResource( 12 )
 
 [node name="Mana" type="ProgressBar" parent="." index="9"]
