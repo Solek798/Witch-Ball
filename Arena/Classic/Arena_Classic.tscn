@@ -1,16 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Arena/Arena.gd" type="Script" id=1]
 [ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PickUP/Fast/PickUp_Fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PickUP/Big/PickUp_Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/Animations/StoneEffect.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Arena/Animations/LeafEffect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=7]
-[ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Arena/Animations/Snow.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Arena/Classic/Environment_latest.png" type="Texture" id=6]
+[ext_resource path="res://Arena/Boundary.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Arena/PickUpSpawn/PickUp_Spawn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Arena/Animations/Snow.tscn" type="PackedScene" id=10]
 
 [node name="Arena" type="Node2D"]
 
@@ -20,9 +19,13 @@ pickup_mana_template = ExtResource( 2 )
 pickup_fast_template = ExtResource( 3 )
 pickup_big_template = ExtResource( 4 )
 stone_effect_template = ExtResource( 5 )
-leaf_effect_template = ExtResource( 6 )
+needle_effect_template = null
+eye_effect_template = null
+butterfly_effect_template = null
 min_spawn_time = 6
 max_spawn_time = 10
+min_effect_time = null
+max_effect_time = null
 time_divider = 2
 
 [node name="Background" type="Sprite" parent="." index="0"]
@@ -30,12 +33,12 @@ time_divider = 2
 position = Vector2( 963.434, 542.199 )
 scale = Vector2( 0.499053, 0.497761 )
 z_index = -10
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Boundary" parent="." index="1" instance=ExtResource( 8 )]
+[node name="Boundary" parent="." index="1" instance=ExtResource( 7 )]
 
-[node name="Position" parent="." index="2" instance=ExtResource( 9 )]
+[node name="Position" parent="." index="2" instance=ExtResource( 8 )]
 
 [node name="Leafs" type="Area2D" parent="." index="3"]
 
@@ -220,7 +223,7 @@ polygon = PoolVector2Array( 1172.79, -893.155, 1340.64, -814.883, 1325.03, -1045
 build_mode = 0
 polygon = PoolVector2Array( -1727.46, -294.378, -1723.56, -396.131, -1914.83, -474.403 )
 
-[node name="PickUp_Spawn" parent="." index="6" instance=ExtResource( 10 )]
+[node name="PickUp_Spawn" parent="." index="6" instance=ExtResource( 9 )]
 
 [node name="SpawnTimer" type="Timer" parent="." index="7"]
 
@@ -236,7 +239,7 @@ wait_time = 60.0
 one_shot = true
 autostart = false
 
-[node name="Snow" parent="." index="9" instance=ExtResource( 11 )]
+[node name="Snow" parent="." index="9" instance=ExtResource( 10 )]
 
 visible = false
 emitting = false

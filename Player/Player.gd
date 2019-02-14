@@ -98,6 +98,8 @@ func _process(delta):
 func throw(movement):
 	# Don't throw while ThrowTimer is running or while you have no mana
 	if $ThrowTimer.time_left > 0 or $Mana.value < throw_mana:
+		if $Mana.value < throw_mana:
+			controll.vibrate(0.7, 0.2, 0.3)
 		return
 	
 	# calculates throm impuls
@@ -148,10 +150,11 @@ func take_damage(ammount):
 	body.play_hit()
 	$IndestructableTimer.start()
 	health -= ammount
+	controll.vibrate(0.6, 0.6, 0.2)
 	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
-		$Controlls.active = false
+		controll.active = false
 		is_dead = true
 		emit_signal("player_died", self)
 
@@ -192,7 +195,7 @@ func _on_DodgeTimer_timeout():
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
 
-func _on_pick_up_spawned(impulse, position, effect):
+func _on_pick_up_spawned(impulse, position):
 	var length = (self.global_position - position).length()
 	var diff = impulse.distance - length
 	imp = self.global_position - position
@@ -201,6 +204,7 @@ func _on_pick_up_spawned(impulse, position, effect):
 	imp /= imp.length() * (impulse.distance / diff)
 	
 	impulse.apply_impulse()
+	controll.vibrate(0.9, 0.9, impulse.time / 2)
 	modifiers.append(impulse)
 
 func _on_player_won_round():

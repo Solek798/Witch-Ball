@@ -115,9 +115,8 @@ func _on_Needles_body_entered(body):
 		anim.emitting = true
 		add_child(anim)
 
-func _on_pick_up_spawned(impulse, position, effect):
+func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)
-	add_child(effect)
 
 func _on_PickUpTimer_timeout():
 	min_time /= time_divider
@@ -127,7 +126,7 @@ func _on_PickUpTimer_timeout():
 func _on_RandomEffectTimer_timeout():
 	var children
 	var effect
-	print("test")
+	
 	if randi() % 2:
 		children = $Eyes.get_children()
 		effect = eye_effect_template.instance()

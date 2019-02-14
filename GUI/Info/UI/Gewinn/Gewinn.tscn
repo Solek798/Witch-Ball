@@ -214,7 +214,7 @@ adjustment_contrast = 1.5
 adjustment_saturation = 1.5
 _sections_unfolded = [ "Glow" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Rounds_V.2.2_empty" type="Sprite" parent="." index="0"]
 

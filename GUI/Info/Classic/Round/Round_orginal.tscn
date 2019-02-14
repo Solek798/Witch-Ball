@@ -101,6 +101,12 @@ data = {
 "position": Vector2( 336, 42 ),
 "type": "output"
 }, {
+"animation": null,
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 16, 52 ),
+"type": "animation"
+}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 1.0,
@@ -111,12 +117,6 @@ data = {
 "mix": false,
 "position": Vector2( 188, 69 ),
 "type": "oneshot"
-}, {
-"animation": null,
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 16, 52 ),
-"type": "animation"
 } ]
 }
 
@@ -137,7 +137,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Rounds_V.2.2_won" type="Sprite" parent="Node2D" index="0"]
 
-scale = Vector2( 1e-05, 1e-05 )
+scale = Vector2( 1e-005, 1e-005 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
