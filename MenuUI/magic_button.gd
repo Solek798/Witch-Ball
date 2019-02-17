@@ -20,8 +20,6 @@ func _on_MagicButton_focus_entered():
 func _on_MagicButton_focus_exited():
 	if current_part:
 		current_part.queue_free()
-	if current_part:
-		current_part.queue_free()
 
 func _on_MagicButton_mouse_entered():
 	self.grab_focus()

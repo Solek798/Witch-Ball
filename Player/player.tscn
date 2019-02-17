@@ -8,11 +8,12 @@
 [ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=6]
 [ext_resource path="res://PickUP/Fast/FastEffect.tscn" type="PackedScene" id=7]
 [ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=8]
-[ext_resource path="res://Shockwafe.tscn" type="PackedScene" id=9]
+[ext_resource path="res://PickUP/Shockwafe.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/walk_smoke.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/shadow.png" type="Texture" id=11]
 [ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
+
 
 
 

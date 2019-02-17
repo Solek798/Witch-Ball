@@ -4,11 +4,6 @@
 [ext_resource path="res://VFX/Particles/waves.png" type="Texture" id=2]
 [ext_resource path="res://VFX/Particles/edge.png" type="Texture" id=3]
 
-
-
-
-
-
 [sub_resource type="Curve" id=1]
 
 min_value = 0.0
@@ -232,7 +227,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Scale" ]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( -40.8972, -4.54413 )
 

@@ -135,7 +135,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Glow" ]
 
-[node name="Sterne" type="Node2D" index="0"]
+[node name="Sterne" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

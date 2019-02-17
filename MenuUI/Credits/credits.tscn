@@ -9,13 +9,6 @@
 [ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=7]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=8]
 
-
-
-
-
-
-
-
 [node name="Credits" type="Control"]
 
 anchor_left = 0.0

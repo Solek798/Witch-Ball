@@ -12,18 +12,6 @@
 [ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=10]
 [ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=11]
 
-
-
-
-
-
-
-
-
-
-
-
-
 [node name="Main" type="CenterContainer"]
 
 anchor_left = 0.0
@@ -39,7 +27,7 @@ size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Transform" ]
-path_to_own_template = "res://MenuUI/Main/Main.tscn"
+path_to_own_template = "res://MenuUI/Main/main.tscn"
 
 [node name="Content" type="VBoxContainer" parent="." index="0"]
 

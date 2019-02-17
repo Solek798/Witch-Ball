@@ -3,9 +3,10 @@
 [ext_resource path="res://MenuUI/Tutorial/tutorial.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Tutorial/tutorial.png" type="Texture" id=2]
 [ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Risque-Regular.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://risque_regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://MenuUI/Tutorial/enter.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/Tutorial/a_button.png" type="Texture" id=6]
+
 
 
 
