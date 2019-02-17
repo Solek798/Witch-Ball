@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
+[ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Jasmine/Icon_Player_Jasmine.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Idle.tres" type="Animation" id=3]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Throw_Ch2.tres" type="Animation" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Hit.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/New_Hit_Ch2.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_for_throw.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Reset.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_T.png" type="Texture" id=12]
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_l.png" type="Texture" id=13]
@@ -24,6 +24,9 @@
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=22]
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=23]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=24]
+
+
+
 
 [sub_resource type="ParticlesMaterial" id=1]
 

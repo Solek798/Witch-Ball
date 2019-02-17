@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
+[ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Lilith/Icon_Player_Lilith.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_for_throw.tres" type="Animation" id=3]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Walk_Ch3.tres" type="Animation" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Player/Animation/Lilith/Resource/Throw_Ch3.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Lilith/Resource/WinnJump_Ch3.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Idle.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Lilith/Resource/New_Hit_Ch2.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation/Lilith/Resource/Reset.tres" type="Animation" id=12]
 [ext_resource path="res://Player/Animation/Lilith/Images/Torso.png" type="Texture" id=13]
@@ -25,6 +25,9 @@
 [ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=23]
 [ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=24]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=25]
+
+
+
 
 [sub_resource type="Animation" id=1]
 
