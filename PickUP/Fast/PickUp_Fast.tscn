@@ -1,11 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://PickUP/Fast/PickUp_Fast.gd" type="Script" id=1]
-[ext_resource path="res://PickUP/Impulse.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/impulse.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/shadow.png" type="Texture" id=3]
 [ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=4]
 [ext_resource path="res://PickUP/Fast/FastEffect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://PickUP/Ani/Span.tres" type="Animation" id=6]
+
 
 [sub_resource type="CircleShape2D" id=1]
 

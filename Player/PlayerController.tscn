@@ -1,7 +1,0 @@
-[gd_scene format=2]
-
-[node name="PlayerController" type="Node"]
-
-_sections_unfolded = [ "Pause" ]
-
-

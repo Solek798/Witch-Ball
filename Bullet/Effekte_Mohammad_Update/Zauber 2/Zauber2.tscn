@@ -1,7 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Zauber/hexe mit Leuchtung.png" type="Texture" id=1]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Zauber 2/Zauber2.png" type="Texture" id=2]
+[ext_resource path="res://VFX/Particles/zauber2.png" type="Texture" id=2]
+
+
 
 [sub_resource type="Curve" id=1]
 

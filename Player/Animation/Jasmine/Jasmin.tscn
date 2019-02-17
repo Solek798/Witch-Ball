@@ -23,7 +23,8 @@
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_l.png" type="Texture" id=21]
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=22]
 [ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=23]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=24]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=24]
+
 
 
 

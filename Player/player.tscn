@@ -1,0 +1,236 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Player/player.gd" type="Script" id=1]
+[ext_resource path="res://Bullet/bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bullet/Fast/bullet_fast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bullet/Big/bullet_big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/aim.png" type="Texture" id=5]
+[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=6]
+[ext_resource path="res://PickUP/Fast/FastEffect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=8]
+[ext_resource path="res://Shockwafe.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/walk_smoke.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Player/shadow.png" type="Texture" id=11]
+[ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
+[ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
+
+
+
+
+
+
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.7156, 57.1739 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 42 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 160, 42 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+scale = Vector2( 1.25, 1.25 )
+input_pickable = false
+collision_layer = 4
+collision_mask = 11
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+bullet_template = ExtResource( 2 )
+bullet_fast_template = ExtResource( 3 )
+bullet_big_template = ExtResource( 4 )
+movement_speed = 425
+aim_speed = 3.5
+max_health = 5
+dodge_multiplier = 3.5
+max_mana = 50
+start_mana = 25
+throw_mana = 5
+dodge_mana = 5
+mana_increase = 1
+dodge_up_time = 0.05
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 0, -46.7705 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Aim" type="Node2D" parent="." index="1"]
+
+position = Vector2( 0, -54.0832 )
+scale = Vector2( 0.75, 0.75 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Aim" index="0"]
+
+position = Vector2( 300.825, 0 )
+scale = Vector2( 1.25, 0.66 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Special" type="Node2D" parent="Aim" index="1"]
+
+editor/display_folded = true
+position = Vector2( 248.266, 1.43688 )
+scale = Vector2( 1.33333, 1.33333 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Fast" type="Sprite" parent="Aim/Special" index="0"]
+
+visible = false
+scale = Vector2( 0.1, 0.1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Png" type="Sprite" parent="Aim/Special/Fast" index="0"]
+
+editor/display_folded = true
+position = Vector2( 2.77902, -0.79364 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FastEffect" parent="Aim/Special/Fast/Png" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( -72.5278, 68.5259 )
+scale = Vector2( 2, 2 )
+
+[node name="Big" type="Sprite" parent="Aim/Special" index="1"]
+
+visible = false
+scale = Vector2( 0.1, 0.1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Png" type="Sprite" parent="Aim/Special/Big" index="0"]
+
+editor/display_folded = true
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shockwafe" parent="Aim/Special/Big/Png" index="0" instance=ExtResource( 9 )]
+
+modulate = Color( 0.403922, 0.243137, 0.815686, 1 )
+position = Vector2( 2.38202, 18.2539 )
+scale = Vector2( 3, 3 )
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+
+[node name="DodgeTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="ThrowTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.4
+one_shot = true
+autostart = false
+
+[node name="IndestructableTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="AinimationTween" type="Tween" parent="." index="5"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Smoke" parent="." index="6" instance=ExtResource( 10 )]
+
+[node name="ManaTimer" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[node name="shadow" type="Sprite" parent="." index="8"]
+
+position = Vector2( 0.67923, 5.22228 )
+scale = Vector2( 0.202378, 0.202378 )
+texture = ExtResource( 11 )
+
+[node name="Mana" type="ProgressBar" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = 15.0
+margin_right = 356.0
+margin_bottom = 57.0
+rect_scale = Vector2( 0.25, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="IndestructableTimer" to="." method="_on_IndestructableTimer_timeout"]
+
+[connection signal="timeout" from="ManaTimer" to="." method="_on_ManaTimer_timeout"]
+
+

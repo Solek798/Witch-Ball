@@ -21,7 +21,8 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=20]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=21]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=22]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=22]
+
 
 
 

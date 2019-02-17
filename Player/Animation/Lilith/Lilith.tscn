@@ -24,7 +24,8 @@
 [ext_resource path="res://Player/Animation/Lilith/Images/Foot_L.png" type="Texture" id=22]
 [ext_resource path="res://Player/Animation/Lilith/Images/Bein_r.png" type="Texture" id=23]
 [ext_resource path="res://Player/Animation/Lilith/Images/Foot_r.png" type="Texture" id=24]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=25]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=25]
+
 
 
 
