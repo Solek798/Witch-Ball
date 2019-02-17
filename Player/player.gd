@@ -69,14 +69,8 @@ func _process(delta):
 	for mod in modifiers:
 		movement += imp * mod.get_strength()
 	
-	# sets dodge-multiplier if player is dodging
-	# TEMP!
-	var mult = 1
-	if $DodgeTimer.time_left > 0:
-		mult = dodge_multiplier
-	
 	# moves player and scans for collisions
-	move_and_slide(movement * movement_speed * mult)
+	move_and_slide(movement * movement_speed)
 	
 	# calculates the rotation in this frame and rotates the aim pointer
 	var direction = controll.get_aim()
@@ -97,7 +91,7 @@ func _process(delta):
 
 func throw(movement):
 	# Don't throw while ThrowTimer is running or while you have no mana
-	if $ThrowTimer.time_left > 0 or $Mana.value < throw_mana:
+	if $Timer/Throw.time_left > 0 or $Mana.value < throw_mana:
 		if $Mana.value < throw_mana:
 			controll.vibrate(0.7, 0.2, 0.3)
 		return
@@ -127,7 +121,7 @@ func throw(movement):
 		set_big_shot(false)
 	
 	# start Timer for throw delay
-	$ThrowTimer.start()
+	$Timer/Throw.start()
 	body.play_throw(movement)
 	emit_signal("bullet_thrown", bullet)
 
@@ -139,16 +133,15 @@ func dodge(movement):
 	if $DodgeTimer.is_stopped():
 		$Mana.value -= dodge_mana
 		controll.lock()
-		$DodgeTimer.start()
 		body.play_dodge_down()
 		$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
 
 func take_damage(ammount):
-	if is_dead or $IndestructableTimer.time_left:
+	if is_dead or $Timer/Indestructable.time_left:
 		return
 	
 	body.play_hit()
-	$IndestructableTimer.start()
+	$Timer/Indestructable.start()
 	health -= ammount
 	controll.vibrate(0.6, 0.6, 0.2)
 	emit_signal("player_damaged", self, ammount)

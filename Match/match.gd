@@ -4,10 +4,9 @@ export(PackedScene) var arena_template
 export(PackedScene) var gui_template
 export(PackedScene) var backstage_template
 export(PackedScene) var tutorial_template
+export(PackedScene) var player_template
 export(int) var player_count
 export(int) var round_count
-# TEMP
-export(PackedScene) var player_template
 
 signal player_created(player)
 signal match_instanciated

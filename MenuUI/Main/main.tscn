@@ -135,10 +135,10 @@ custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "START"
 align = 1
 valign = 1
-percent_visible = 0.716
+percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_constants", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="Options" parent="Content/C1/Buttons" index="1" instance=ExtResource( 3 )]
 
@@ -241,8 +241,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
 margin_top = -13.5
-margin_right = 20.0
-margin_bottom = 6.5
+margin_right = 23.0
+margin_bottom = 13.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

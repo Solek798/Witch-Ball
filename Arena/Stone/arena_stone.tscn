@@ -12,8 +12,6 @@
 [ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=11]
 
-
-
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
@@ -61,7 +59,7 @@ extents = Vector2( 10, 757.697 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.5225, 654.954 )
 
-[node name="Arena" type="Node2D" index="0"]
+[node name="Arena" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
@@ -93,7 +91,6 @@ visible = false
 editor/display_folded = true
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 971.194, 182.193 )
-scale = Vector2( 1, 1 )
 curve = SubResource( 1 )
 
 [node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]
@@ -313,12 +310,7 @@ shape = SubResource( 8 )
 position = Vector2( 2044.6, 565.09 )
 shape = SubResource( 9 )
 
-[node name="River" parent="." index="9" instance=ExtResource( 11 )]
-
-position = Vector2( 14.8893, -9.24396 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Butterflies" type="Node" parent="." index="10"]
+[node name="Butterflies" type="Node" parent="." index="9"]
 
 editor/display_folded = true
 
@@ -333,6 +325,10 @@ position = Vector2( 1762.72, 983.559 )
 [node name="Position3" type="Position2D" parent="Butterflies" index="2"]
 
 position = Vector2( 268.2, 138.66 )
+
+[node name="Node2D" parent="." index="10" instance=ExtResource( 11 )]
+
+position = Vector2( 15.8751, -4.54413 )
 
 [node name="Eyes" type="Node" parent="." index="11"]
 
