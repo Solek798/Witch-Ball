@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Icon_BigBall_V2_200.png-51f0134288587313ab361f7f9a04b0a5.stex"
+path="res://.import/strafe_part.png-0896086a9d50eb6a9ecbf02d2f9a6307.stex"
 
 [deps]
 
-source_file="res://PickUP/Big/Icon_BigBall_V2_200.png"
-dest_files=[ "res://.import/Icon_BigBall_V2_200.png-51f0134288587313ab361f7f9a04b0a5.stex" ]
+source_file="res://VFX/Particles/strafe_part.png"
+dest_files=[ "res://.import/strafe_part.png-0896086a9d50eb6a9ecbf02d2f9a6307.stex" ]
 
 [params]
 

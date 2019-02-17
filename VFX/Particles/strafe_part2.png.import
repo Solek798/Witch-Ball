@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strafe_part2.png-9efe7bc2c83396d53d609f3a826416f0.stex"
+path="res://.import/strafe_part2.png-f10be17c55d84c6648e8f92910e9eecd.stex"
 
 [deps]
 
-source_file="res://PickUP/Fast/strafe_part2.png"
-dest_files=[ "res://.import/strafe_part2.png-9efe7bc2c83396d53d609f3a826416f0.stex" ]
+source_file="res://VFX/Particles/strafe_part2.png"
+dest_files=[ "res://.import/strafe_part2.png-f10be17c55d84c6648e8f92910e9eecd.stex" ]
 
 [params]
 

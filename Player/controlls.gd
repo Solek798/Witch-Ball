@@ -84,7 +84,6 @@ func get_movement():
 		if Input.is_action_pressed(keys[Action.UP]):
 			movement.y -= 1.0
 		if Input.is_action_pressed(keys[Action.DOWN]):
-			print("Test")
 			movement.y += 1.0
 		if Input.is_action_pressed(keys[Action.LEFT]):
 			movement.x -= 1.0

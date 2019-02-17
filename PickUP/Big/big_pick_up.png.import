@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strafe_part.png-43aebcbe5f33d345dc631885897c5b91.stex"
+path="res://.import/big_pick_up.png-99bf54fe685c38b70f0030007e32f789.stex"
 
 [deps]
 
-source_file="res://PickUP/Fast/strafe_part.png"
-dest_files=[ "res://.import/strafe_part.png-43aebcbe5f33d345dc631885897c5b91.stex" ]
+source_file="res://PickUP/Big/big_pick_up.png"
+dest_files=[ "res://.import/big_pick_up.png-99bf54fe685c38b70f0030007e32f789.stex" ]
 
 [params]
 

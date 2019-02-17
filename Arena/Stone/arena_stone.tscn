@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Arena/arena.gd" type="Script" id=1]
-[ext_resource path="res://PickUP/Mana/PickUp_Mana.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PickUP/Fast/PickUp_Fast.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PickUP/Big/PickUp_Big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PickUP/Mana/mana_pick_up.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/Fast/fast_pick_up.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Big/big_pick_up.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/stone_effect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/needel_effect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Arena/eyes_effect.tscn" type="PackedScene" id=7]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://PickUP/pick_up.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PickUP/Fast/fast_pick_up.gd" type="Script" id=2]
+[ext_resource path="res://PickUP/Fast/fast_effect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Fast/fast_pick_up.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 60.7955
+
+[node name="FastPickUp" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="FastEffect" parent="." index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -33.8168, 26.5107 )
+
+[node name="CollisionShape" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="Texture" parent="." index="3"]
+
+position = Vector2( 8.73416, -7.53963 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_FastPickUp_body_entered"]
+
+

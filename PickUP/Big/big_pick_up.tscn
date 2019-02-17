@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://PickUP/pick_up.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PickUP/Big/big_pick_up.gd" type="Script" id=2]
+[ext_resource path="res://PickUP/Shockwafe.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Big/big_pick_up.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 64.8612
+
+[node name="BigPickUp" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Shockwafe" parent="." index="0" instance=ExtResource( 3 )]
+
+modulate = Color( 0.392157, 0.227451, 0.811765, 1 )
+
+[node name="CollisionShape" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="Texture" parent="." index="3"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_BigPickUp_body_entered"]
+
+

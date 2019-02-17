@@ -5,14 +5,17 @@
 [ext_resource path="res://Bullet/Fast/bullet_fast.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bullet/Big/bullet_big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/aim.png" type="Texture" id=5]
-[ext_resource path="res://PickUP/Fast/Icon_FastBall_V2_200.png" type="Texture" id=6]
-[ext_resource path="res://PickUP/Fast/FastEffect.tscn" type="PackedScene" id=7]
-[ext_resource path="res://PickUP/Big/Icon_BigBall_V2_200.png" type="Texture" id=8]
+[ext_resource path="res://PickUP/Fast/fast_pick_up.png" type="Texture" id=6]
+[ext_resource path="res://PickUP/Fast/fast_effect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://PickUP/Big/big_pick_up.png" type="Texture" id=8]
 [ext_resource path="res://PickUP/Shockwafe.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/walk_smoke.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/shadow.png" type="Texture" id=11]
 [ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -57,7 +60,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -202,7 +205,7 @@ autostart = false
 [node name="Throw" type="Timer" parent="Timer" index="2"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.5
 one_shot = true
 autostart = false
 

@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://PickUP/Fast/strafe_part2.png" type="Texture" id=1]
+[ext_resource path="res://VFX/Particles/strafe_part2.png" type="Texture" id=1]
+
 
 [sub_resource type="Gradient" id=1]
 

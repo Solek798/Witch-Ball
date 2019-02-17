@@ -121,7 +121,6 @@ func _on_pick_up_spawned(impulse, position):
 func _on_PickUpTimer_timeout():
 	min_time /= time_divider
 	max_time /= time_divider
-	print("Changed: ", min_time, ", ", max_time)
 
 func _on_RandomEffectTimer_timeout():
 	var children
@@ -137,6 +136,6 @@ func _on_RandomEffectTimer_timeout():
 	effect.position = children[randi() % children.size()].position
 	#if effect.has_method("start"):
 	effect.start()
-	print(effect.global_position)
+	
 	add_child(effect)
 
