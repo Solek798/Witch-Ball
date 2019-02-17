@@ -10,13 +10,14 @@
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_options_normal.png" type="Texture" id=8]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_options_pressed.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_options_hover.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Options/OptionScene.tscn" type="PackedScene" id=11]
+[ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=11]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_restart_normal.png" type="Texture" id=12]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_restart_pressed.png" type="Texture" id=13]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_restart_hover.png" type="Texture" id=14]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_normal.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_dark.png" type="Texture" id=16]
 [ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_hover.png" type="Texture" id=17]
+
 
 [node name="PauseScreen" type="CenterContainer" index="0"]
 
