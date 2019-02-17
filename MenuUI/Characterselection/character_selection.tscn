@@ -1,13 +1,13 @@
 [gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/character_selection.gd" type="Script" id=1]
-[ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Match/match.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=6]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=7]
-[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MenuUI/Characterselection/scarlet.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/Characterselection/scarlet_hover.png" type="Texture" id=10]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_scarlet_selection.tscn" type="PackedScene" id=11]
@@ -28,6 +28,9 @@
 [ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=26]
 [ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=27]
 [ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=28]
+
+
+
 
 
 

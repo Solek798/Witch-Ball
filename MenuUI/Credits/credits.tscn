@@ -3,11 +3,16 @@
 [ext_resource path="res://MenuUI/Credits/credits.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=2]
 [ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=3]
-[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_normal.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_dark.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/PauseScreen/Button_Quadratisch_Overpaint_home_hover.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/UI Particel/UI_Particle_Pause.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=5]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=8]
+
+
+
+
+
 
 
 

@@ -2,15 +2,17 @@
 
 [ext_resource path="res://MenuUI/Main/main.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Main/Title.png" type="Texture" id=2]
-[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=6]
 [ext_resource path="res://MenuUI/Characterselection/character_selection.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/UI Particel/UI_Particle_Menu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=8]
 [ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=9]
 [ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=10]
 [ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=11]
+
+
 
 
 

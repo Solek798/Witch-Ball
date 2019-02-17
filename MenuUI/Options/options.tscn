@@ -8,11 +8,16 @@
 [ext_resource path="res://MenuUI/Options/checkbox_unchecked_10.png" type="Texture" id=6]
 [ext_resource path="res://MenuUI/Options/fullscreen_font_20.png" type="Texture" id=7]
 [ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=8]
-[ext_resource path="res://MenuUI/MagicButton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://MenuUI/Options/Button_Quadratisch_Overpaint_x_normal.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Options/Button_Quadratisch_Overpaint_x_pressed.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/Options/Button_Quadratisch_Overpaint_x_hover.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/UI Particel/UI_Particle_Pause.tscn" type="PackedScene" id=13]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=13]
+
+
+
+
+
 
 
 
