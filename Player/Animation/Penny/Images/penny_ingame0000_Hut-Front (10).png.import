@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/penny_ingame0000_Hut-Front (10).png-bda65f52d6c7cddca435a6afd3103bdb.stex"
+
+[deps]
+
+source_file="res://Player/Animation/Penny/Images/penny_ingame0000_Hut-Front (10).png"
+dest_files=[ "res://.import/penny_ingame0000_Hut-Front (10).png-bda65f52d6c7cddca435a6afd3103bdb.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
