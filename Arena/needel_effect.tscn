@@ -7,16 +7,16 @@
 render_priority = 0
 trail_divisor = 1
 emission_shape = 1
-emission_sphere_radius = 32.55
+emission_sphere_radius = 35.0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
-spread = 0.0
+spread = 2.0
 flatness = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 0.0
 initial_velocity_random = 0.0
-angular_velocity = -1.14794e-41
+angular_velocity = -1.14794e-041
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -59,13 +59,13 @@ func _on_End_timeout():
 
 scale = Vector2( 0.5, 0.5 )
 emitting = false
-amount = 7
+amount = 30
 lifetime = 2.0
 one_shot = true
 preprocess = 0.0
-speed_scale = 6.0
-explosiveness = 0.7
-randomness = 0.0
+speed_scale = 5.0
+explosiveness = 0.8
+randomness = 0.21
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
