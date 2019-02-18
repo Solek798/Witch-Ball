@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
+[ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Penny/Icon_Player_Penny.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Penny/Resource/Idle.tres" type="Animation" id=3]
 [ext_resource path="res://Player/Animation/Penny/Resource/Throw_Ch4.tres" type="Animation" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Player/Animation/Penny/Resource/Walk_Ch4.tres" type="Animation" id=6]
 [ext_resource path="res://Player/Animation/Penny/Resource/Hit.tres" type="Animation" id=7]
 [ext_resource path="res://Player/Animation/Penny/Resource/WinnJump_Ch4.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/Penny/Resource/New_Hit_Ch4.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Penny/Resource/Reset.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0000_Torso.png" type="Texture" id=12]
@@ -24,7 +24,11 @@
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0002_Schrit.png" type="Texture" id=22]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0001_Leg_l.png" type="Texture" id=23]
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame_0001s_0005_Foot_l.png" type="Texture" id=24]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=25]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=25]
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 

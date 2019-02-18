@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/round_won.wav-b624a2c97e367690e2d0a17914ca0bad.sample"
+
+[deps]
+
+source_file="res://Backstage/round_won.wav"
+dest_files=[ "res://.import/round_won.wav-b624a2c97e367690e2d0a17914ca0bad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

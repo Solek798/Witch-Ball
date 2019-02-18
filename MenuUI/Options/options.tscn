@@ -1,0 +1,377 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://MenuUI/Options/options.gd" type="Script" id=1]
+[ext_resource path="res://MenuUI/Options/options_hintergrund_400.png" type="Texture" id=2]
+[ext_resource path="res://MenuUI/Options/music_font_25.png" type="Texture" id=3]
+[ext_resource path="res://MenuUI/Options/sound_font_20.png" type="Texture" id=4]
+[ext_resource path="res://MenuUI/Options/checkbox_checked_15.png" type="Texture" id=5]
+[ext_resource path="res://MenuUI/Options/checkbox_unchecked_10.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Options/fullscreen_font_20.png" type="Texture" id=7]
+[ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=8]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=13]
+
+[node name="OptionScene" type="CenterContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Focus", "Margin" ]
+
+[node name="Option_Back" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 760.0
+margin_top = 285.0
+margin_right = 1160.0
+margin_bottom = 794.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Conent" type="VBoxContainer" parent="Option_Back" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -121.5
+margin_right = 73.0
+margin_bottom = 253.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 91
+alignment = 0
+_sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
+
+[node name="Options" type="CenterContainer" parent="Option_Back/Conent" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 147.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Margin" ]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Option_Back/Conent/Options" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 147.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 17
+alignment = 0
+_sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "custom_constants" ]
+
+[node name="Music" type="TextureRect" parent="Option_Back/Conent/Options/VBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 147.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="HSeparator" type="HSlider" parent="Option_Back/Conent/Options/VBoxContainer2" index="1"]
+
+modulate = Color( 0.329412, 0.870588, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 147.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../../../Buttons/Menu")
+focus_neighbour_bottom = NodePath("../HSeparator2")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.001
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Focus", "Margin", "Visibility" ]
+
+[node name="Sound" type="TextureRect" parent="Option_Back/Conent/Options/VBoxContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 75.0
+margin_right = 147.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="HSeparator2" type="HSlider" parent="Option_Back/Conent/Options/VBoxContainer2" index="3"]
+
+modulate = Color( 0.33783, 0.951637, 0.960938, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 117.0
+margin_right = 147.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../HSeparator")
+focus_neighbour_bottom = NodePath("../Chechbox/TextureButton")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Focus", "Visibility" ]
+
+[node name="Chechbox" type="HBoxContainer" parent="Option_Back/Conent/Options/VBoxContainer2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 150.0
+margin_right = 147.0
+margin_bottom = 173.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="TextureButton" type="CheckBox" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 30.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../../HSeparator2")
+focus_neighbour_bottom = NodePath("../../Chechbox2/TextureButton")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_icons/radio_checked = ExtResource( 5 )
+custom_icons/checked = ExtResource( 5 )
+custom_icons/radio_unchecked = ExtResource( 6 )
+custom_icons/unchecked = ExtResource( 6 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
+
+[node name="TextureRect" type="TextureRect" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 34.0
+margin_right = 147.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="Chechbox2" type="HBoxContainer" parent="Option_Back/Conent/Options/VBoxContainer2" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 190.0
+margin_right = 147.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 19
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin", "custom_constants" ]
+
+[node name="TextureButton" type="CheckBox" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 30.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../../Chechbox/TextureButton")
+focus_neighbour_bottom = NodePath("../../../../Buttons/Menu")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_icons/radio_checked = ExtResource( 5 )
+custom_icons/checked = ExtResource( 5 )
+custom_icons/radio_unchecked = ExtResource( 6 )
+custom_icons/unchecked = ExtResource( 6 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
+
+[node name="TextureRect" type="Label" parent="Option_Back/Conent/Options/VBoxContainer2/Chechbox2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 49.0
+margin_top = 3.0
+margin_right = 104.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
+text = "Tutorial"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Buttons" type="HBoxContainer" parent="Option_Back/Conent" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 304.0
+margin_right = 147.0
+margin_bottom = 375.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 5
+alignment = 0
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="Menu" parent="Option_Back/Conent/Buttons" index="0" instance=ExtResource( 9 )]
+
+margin_right = 74.0
+margin_bottom = 71.0
+focus_neighbour_top = NodePath("../../Options/VBoxContainer2/Chechbox2/TextureButton")
+focus_neighbour_bottom = NodePath("../../Options/VBoxContainer2/HSeparator")
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Margin", "Textures" ]
+particle_template = ExtResource( 13 )
+
+[connection signal="pressed" from="Option_Back/Conent/Buttons/Menu" to="." method="_on_Menu_pressed"]
+
+

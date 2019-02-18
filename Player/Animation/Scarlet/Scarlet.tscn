@@ -1,13 +1,13 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Player/Animation/Animation.gd" type="Script" id=1]
+[ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Icon_Player_Scarlet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=3]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=4]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=5]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=6]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Indestructable/Indestructalbe.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=10]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=11]
@@ -21,7 +21,11 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=19]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=20]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=21]
-[ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer/fire.png" type="Texture" id=22]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=22]
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 
