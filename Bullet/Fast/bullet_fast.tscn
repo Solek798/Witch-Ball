@@ -42,16 +42,16 @@ damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0, -1.5294 )
+position = Vector2( 0, 4.06505 )
 shape = SubResource( 1 )
 
 [node name="Node2D" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 0, -1.5294 )
+position = Vector2( 0, 4.06505 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
-position = Vector2( 0, -1.5294 )
+position = Vector2( 0, 4.06505 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
