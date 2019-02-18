@@ -16,11 +16,10 @@ func _on_Animation_animation_finished(anim_name):
 	self.queue_free()
 "
 
-[node name="ButterflyEffect" type="Sprite"]
+[node name="ButterflyEffect" type="Sprite" index="0"]
 
-position = Vector2( -1789.87, 216.3 )
 rotation = -0.521709
-scale = Vector2( 5.61534e-07, 0.470875 )
+scale = Vector2( 5.61534e-007, 0.470875 )
 texture = ExtResource( 1 )
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
