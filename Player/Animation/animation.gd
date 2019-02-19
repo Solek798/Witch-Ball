@@ -10,7 +10,7 @@ func _ready():
 	pass
 
 func get_throw_point():
-	return get_node("Charakter/Torso/Head_Arms/Arm_r/Hand_r/throw_point").global_position
+	return get_node("Charakter/throw_point").global_position
 
 func play_walk():
 	$AnimationTreePlayer.blend2_node_set_amount("blend_walk", 1.0)

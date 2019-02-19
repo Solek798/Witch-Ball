@@ -7,14 +7,12 @@
 [ext_resource path="res://Player/shadow.png" type="Texture" id=5]
 [ext_resource path="res://Bullet/Fast/bullet_fast.tres" type="Animation" id=6]
 
-
-
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 12.1109
 
-[node name="Bullet_Fast" type="RigidBody2D" index="0" groups=[
+[node name="Bullet_Fast" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 
@@ -44,16 +42,16 @@ damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0, 2.66613 )
+position = Vector2( 0, 4.06505 )
 shape = SubResource( 1 )
 
 [node name="Node2D" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 0, 2.66613 )
+position = Vector2( 0, 4.06505 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
-position = Vector2( 0, 2.66613 )
+position = Vector2( 0, 4.06505 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]

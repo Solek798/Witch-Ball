@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://Match_Type/Classic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MenuUI/Main/Main_Menu.wav" type="AudioStream" id=3]
+[ext_resource path="res://MenuUI/Menu.gd" type="Script" id=4]
+[ext_resource path="res://MenuUI/Main/Main.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MenuUI/PauseScreen/PauseScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Match_Type/Tutorial.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Controlls.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+uniform float amount : hint_range(0,5);
+
+void fragment() {
+
+	COLOR.rgb = textureLod(SCREEN_TEXTURE,SCREEN_UV,amount).rgb;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/amount = 2.5
+_sections_unfolded = [ "shader_param" ]
+
+[node name="Game" type="Node"]
+
+script = ExtResource( 1 )
+match_template = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="0"]
+
+stream = ExtResource( 3 )
+volume_db = -15.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Menu" type="ColorRect" parent="." index="1"]
+
+pause_mode = 2
+material = SubResource( 2 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Pause" ]
+main_scene_template = ExtResource( 5 )
+pause_scene_template = ExtResource( 6 )
+tutorial_template = ExtResource( 7 )
+
+[node name="Main" parent="Menu" index="0" instance=ExtResource( 5 )]
+
+<<<<<<< working copy
+_sections_unfolded = [ "Rect", "Transform" ]
+=======
+[node name="Controlls1" parent="." index="2" instance=ExtResource( 8 )]
+
+[node name="Controlls2" parent="." index="3" instance=ExtResource( 8 )]
+>>>>>>> merge rev
+
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
+
+

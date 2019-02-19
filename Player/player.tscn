@@ -14,9 +14,6 @@
 [ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
 
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -91,8 +88,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-position = Vector2( 0, -54.0832 )
+position = Vector2( 0, -55 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
 
@@ -187,6 +183,8 @@ percent_visible = false
 _sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Timer" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="Mana" type="Timer" parent="Timer" index="0"]
 
