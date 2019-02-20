@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet.png-661b8c265bf8c2e32d8718aef7609a30.stex"
+path="res://.import/bullet.png-b723e1bcfde6e590f2ccd1bb84504315.stex"
 
 [deps]
 
-source_file="res://Bullet/bullet.png"
-dest_files=[ "res://.import/bullet.png-661b8c265bf8c2e32d8718aef7609a30.stex" ]
+source_file="res://Bullet/normal/bullet.png"
+dest_files=[ "res://.import/bullet.png-b723e1bcfde6e590f2ccd1bb84504315.stex" ]
 
 [params]
 

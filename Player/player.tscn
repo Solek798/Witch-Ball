@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/player.gd" type="Script" id=1]
-[ext_resource path="res://Bullet/bullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/Fast/bullet_fast.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Bullet/Big/bullet_big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bullet/normal/normal_bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bullet/Fast/fast_bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bullet/Big/big_bullet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/aim.png" type="Texture" id=5]
 [ext_resource path="res://PickUP/Fast/fast_pick_up.png" type="Texture" id=6]
 [ext_resource path="res://PickUP/Fast/fast_effect.tscn" type="PackedScene" id=7]
@@ -57,7 +57,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
