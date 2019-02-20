@@ -18,7 +18,7 @@ func _on_Animation_animation_finished(anim_name):
 
 [node name="EyesEffect" type="Sprite"]
 
-scale = Vector2( 1, 1e-05 )
+scale = Vector2( 1, 1e-005 )
 texture = ExtResource( 1 )
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]

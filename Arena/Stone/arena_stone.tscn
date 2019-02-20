@@ -312,8 +312,6 @@ shape = SubResource( 9 )
 
 [node name="Butterflies" type="Node" parent="." index="9"]
 
-editor/display_folded = true
-
 [node name="Position1" type="Position2D" parent="Butterflies" index="0"]
 
 position = Vector2( 175.717, 532.453 )

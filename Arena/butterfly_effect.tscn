@@ -18,6 +18,7 @@ func _on_Animation_animation_finished(anim_name):
 
 [node name="ButterflyEffect" type="Sprite" index="0"]
 
+position = Vector2( -233.771, -145.38 )
 rotation = -0.521709
 scale = Vector2( 5.61534e-007, 0.470875 )
 texture = ExtResource( 1 )
