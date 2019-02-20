@@ -14,8 +14,15 @@ func remove_life(player_id, ammount):
 	for i in ammount:
 		var children = get_node("Text%d/Player%d" % [player_id, player_id]).get_children()
 		if children:
-			children.pop_back().queue_free()
+			children.pop_back().AnimationHeart()
+			
+			
+			#children.pop_back().queue_free()
 
 func refill_life(player_id, max_health):
 	var children = get_node("Text%d/Player%d" % [player_id, player_id]).get_children()
 	add_life(player_id, max_health - children.size())
+	
+	
+	
+	

@@ -68,6 +68,9 @@ tutorial_template = ExtResource( 7 )
 
 [node name="Main" parent="Menu" index="0" instance=ExtResource( 5 )]
 
+margin_top = 1.0
+margin_bottom = 1.0
+
 [node name="Controlls1" parent="." index="2" instance=ExtResource( 8 )]
 
 [node name="Controlls2" parent="." index="3" instance=ExtResource( 8 )]
