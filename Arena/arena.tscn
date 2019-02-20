@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Arena/arena.gd" type="Script" id=1]
+[ext_resource path="res://PickUP/Mana/mana_pick_up.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PickUP/Fast/fast_pick_up.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PickUP/Big/big_pick_up.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Arena/Position/Position_Classic.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
+}
+
+[node name="Arena" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+pickup_mana_template = ExtResource( 2 )
+pickup_fast_template = ExtResource( 3 )
+pickup_big_template = ExtResource( 4 )
+min_spawn_time = 6
+max_spawn_time = 10
+time_divider = 2
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 962.859, 540.221 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Position" parent="." index="1" instance=ExtResource( 5 )]
+
+[node name="PickUp_Spawn" type="Path2D" parent="." index="2"]
+
+editor/display_folded = true
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 971.194, 182.193 )
+scale = Vector2( 1, 1 )
+curve = SubResource( 1 )
+
+[node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]
+
+position = Vector2( 1.50659, 731.846 )
+rotation = -1.58092
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Timer" type="Node" parent="." index="3"]
+
+[node name="PickUpSpawnRate" type="Timer" parent="Timer" index="0"]
+
+process_mode = 1
+wait_time = 60.0
+one_shot = true
+autostart = false
+
+[node name="PickUpSpawner" type="Timer" parent="Timer" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer/PickUpSpawnRate" to="." method="_on_PickUpTimer_timeout"]
+
+[connection signal="timeout" from="Timer/PickUpSpawner" to="." method="_on_SpawnTimer_timeout"]
+
+
