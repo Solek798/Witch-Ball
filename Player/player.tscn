@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/normal/normal_bullet.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Player/shadow.png" type="Texture" id=11]
 [ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
+[ext_resource path="res://Player/ManaAnimation/EmptyMana.tres" type="Animation" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,6 +38,7 @@ expand_margin_top = 0.0
 expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
+_sections_unfolded = [ "Modulate" ]
 
 [sub_resource type="StyleBoxTexture" id=3]
 
@@ -57,7 +59,26 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="Animation" id=4]
+
+resource_name = "FillMana"
+length = 0.8
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mana/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.0859375, 0.723765 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.685059 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.696157 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -181,7 +202,15 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="Sprite" type="Sprite" parent="Mana" index="0"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 201.6, 20.8 )
+scale = Vector2( 2.5, 1 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Timer" type="Node" parent="." index="5"]
 
@@ -216,6 +245,17 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/EmptyMana = ExtResource( 14 )
+anims/FillMana = SubResource( 4 )
+blend_times = [  ]
 
 [connection signal="timeout" from="Timer/Mana" to="." method="_on_ManaTimer_timeout"]
 
