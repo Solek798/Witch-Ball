@@ -211,3 +211,13 @@ func _on_Timer_timeout():
 	Input.action_press("player1_down")
 	yield(get_tree(), "idle_frame")
 	Input.action_release("player1_down")
+	
+	
+func FillManaAnimation():
+	$AnimationPlayer.play("FillMana")
+	
+#func EmptyManaAnimationPlay():
+	#$AnimationPlayer.play("EmptyMana")
+	
+#func EmptyManaAnimationStop():
+	#$AnimationPlayer.stop("EmptyMana")
