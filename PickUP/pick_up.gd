@@ -13,6 +13,7 @@ func _on_DespawnTimer_timeout():
 	RemovePickUp()
 	
 func RemovePickUp():
+	self.queue_free()
 	$AnimationPlayer.play("RemovedPickUp")
 	
 	

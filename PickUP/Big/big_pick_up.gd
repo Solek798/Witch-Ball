@@ -9,7 +9,8 @@ func _on_BigPickUp_body_entered(body):
 		
 		
 func GetPickUp():
-	$Animationplayer.play("GetPickUp")
+	$AnimationPlayer.stop()
+	$AnimationPlayer.play("GetPickUp")
 	
 func FreePickUp():
 	self.queue_free()
