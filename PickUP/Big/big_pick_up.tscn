@@ -23,18 +23,16 @@ modulate = Color( 0.392157, 0.227451, 0.811765, 1 )
 
 [node name="CollisionShape" parent="." index="1"]
 
-position = Vector2( 7.34078, 0 )
-scale = Vector2( 1.76768, 1 )
 shape = SubResource( 1 )
 
 [node name="Shadow" parent="." index="2"]
 
-scale = Vector2( 0.483396, 0.483396 )
+scale = Vector2( 0.483194, 0.483194 )
 
 [node name="Texture" parent="." index="3"]
 
-modulate = Color( 1, 1, 1, 0.950461 )
-scale = Vector2( 0.483396, 0.483396 )
+modulate = Color( 1, 1, 1, 0.949859 )
+scale = Vector2( 0.483194, 0.483194 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 

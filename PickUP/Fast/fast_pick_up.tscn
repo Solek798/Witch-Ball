@@ -23,19 +23,16 @@ position = Vector2( -33.8168, 26.5107 )
 
 [node name="CollisionShape" parent="." index="1"]
 
-position = Vector2( 0.16386, 0 )
-scale = Vector2( 1.99283, 1 )
 shape = SubResource( 1 )
 
 [node name="Shadow" parent="." index="2"]
 
-scale = Vector2( 0.460029, 0.460029 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Texture" parent="." index="3"]
 
-modulate = Color( 1, 1, 1, 0.880745 )
 position = Vector2( 8.73416, -7.53963 )
-scale = Vector2( 0.460029, 0.460029 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" parent="." index="5"]

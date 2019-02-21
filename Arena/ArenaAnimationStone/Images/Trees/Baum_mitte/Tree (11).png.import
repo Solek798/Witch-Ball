@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree (7).png-d41152aa1da0dadff7d1f787afec4a6e.stex"
+path="res://.import/Tree (11).png-2d9e46f5200a580dee6440e595f73319.stex"
 
 [deps]
 
-source_file="res://Arena/ArenaAnimationStone/Images/Trees/Tree (7).png"
-dest_files=[ "res://.import/Tree (7).png-d41152aa1da0dadff7d1f787afec4a6e.stex" ]
+source_file="res://Arena/ArenaAnimationStone/Images/Trees/Baum_mitte/Tree (11).png"
+dest_files=[ "res://.import/Tree (11).png-2d9e46f5200a580dee6440e595f73319.stex" ]
 
 [params]
 
