@@ -12,6 +12,7 @@ func add_life(player_id, ammount):
 
 func remove_life(player_id, ammount):
 	var children = get_node("Player%d/Health" % player_id).get_children()
+	children.invert()
 	
 	for child in children:
 		if child.is_filled:
