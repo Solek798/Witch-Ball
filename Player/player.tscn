@@ -38,6 +38,7 @@ expand_margin_top = 0.0
 expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
+_sections_unfolded = [ "Modulate" ]
 
 [sub_resource type="StyleBoxTexture" id=3]
 
@@ -61,35 +62,23 @@ draw_center = true
 [sub_resource type="Animation" id=4]
 
 resource_name = "FillMana"
-length = 1.0
+length = 0.8
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mana:custom_styles/fg:modulate_color")
+tracks/0/path = NodePath("Mana/Sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.368286, 1, 0.296875, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Mana/Sprite:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.44749 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 0, 1, 0.0859375, 0.723765 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.685059 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.696157 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -213,7 +202,7 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "custom_styles" ]
 
 [node name="Sprite" type="Sprite" parent="Mana" index="0"]
 

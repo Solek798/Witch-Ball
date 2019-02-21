@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://PickUP/pick_up.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PickUP/Fast/fast_pick_up.gd" type="Script" id=2]
 [ext_resource path="res://PickUP/Fast/fast_effect.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PickUP/Fast/fast_pick_up.png" type="Texture" id=4]
-[ext_resource path="res://PickUP/Ani/Span.tres" type="Animation" id=5]
+[ext_resource path="res://PickUP/Ani/GetPickUp.tres" type="Animation" id=5]
+[ext_resource path="res://PickUP/Ani/RemovedPickUp.tres" type="Animation" id=6]
+[ext_resource path="res://PickUP/Ani/Span.tres" type="Animation" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 60.7955
+radius = 97.2272
 
 [node name="FastPickUp" instance=ExtResource( 1 )]
 
@@ -37,7 +39,9 @@ texture = ExtResource( 4 )
 [node name="AnimationPlayer" parent="." index="5"]
 
 autoplay = "Span"
-anims/Span = ExtResource( 5 )
+anims/GetPickUp = ExtResource( 5 )
+anims/RemovedPickUp = ExtResource( 6 )
+anims/Span = ExtResource( 7 )
 
 [connection signal="body_entered" from="." to="." method="_on_FastPickUp_body_entered"]
 

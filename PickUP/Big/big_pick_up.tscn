@@ -11,7 +11,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 64.8612
+radius = 96.7643
 
 [node name="BigPickUp" instance=ExtResource( 1 )]
 
