@@ -129,11 +129,11 @@ func dodge(movement):
 		return
 	
 	# if player is not allready dodging, he starts to dodge
-	if $DodgeTimer.is_stopped():
-		$Mana.value -= dodge_mana
-		controll.lock()
-		body.play_dodge_down()
-		$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
+	#if $TimerDodge.is_stopped():
+	#	$Mana.value -= dodge_mana
+	#	controll.lock()
+	#	body.play_dodge_down()
+	#	$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
 
 func take_damage(ammount):
 	if is_dead or $Timer/Indestructable.time_left:
@@ -208,3 +208,13 @@ func _on_Timer_timeout():
 	Input.action_press("player1_down")
 	yield(get_tree(), "idle_frame")
 	Input.action_release("player1_down")
+	
+	
+func FillManaAnimation():
+	$AnimationPlayer.play("FillMana")
+	
+#func EmptyManaAnimationPlay():
+	#$AnimationPlayer.play("EmptyMana")
+	
+#func EmptyManaAnimationStop():
+	#$AnimationPlayer.stop("EmptyMana")

@@ -36,7 +36,6 @@ _sections_unfolded = [ "Z Index" ]
 editor/display_folded = true
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 971.194, 182.193 )
-scale = Vector2( 1, 1 )
 curve = SubResource( 1 )
 
 [node name="Follow" type="PathFollow2D" parent="PickUp_Spawn" index="0"]

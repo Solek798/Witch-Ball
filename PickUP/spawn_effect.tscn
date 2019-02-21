@@ -2,7 +2,6 @@
 
 [ext_resource path="res://PickUP/spawn_effect.gd" type="Script" id=1]
 
-
 [node name="SpawnEffect" type="Sprite"]
 
 script = ExtResource( 1 )

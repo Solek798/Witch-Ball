@@ -255,6 +255,7 @@ stretch_mode = 0
 margin_left = 632.0
 margin_right = 832.0
 margin_bottom = 71.0
+focus_neighbour_top = NodePath("../../Characters/Scarlett")
 disabled = true
 texture_normal = ExtResource( 24 )
 texture_pressed = ExtResource( 25 )
