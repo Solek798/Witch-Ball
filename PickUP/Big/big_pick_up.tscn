@@ -21,6 +21,8 @@ modulate = Color( 0.392157, 0.227451, 0.811765, 1 )
 
 [node name="CollisionShape" parent="." index="1"]
 
+position = Vector2( 7.34078, 0 )
+scale = Vector2( 1.76768, 1 )
 shape = SubResource( 1 )
 
 [node name="Shadow" parent="." index="2"]

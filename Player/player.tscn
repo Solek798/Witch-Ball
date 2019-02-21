@@ -57,7 +57,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -88,22 +88,20 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 0, -55 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Direction" type="Sprite" parent="Aim" index="0"]
 
-position = Vector2( 300.825, 0 )
+position = Vector2( 233.139, 0 )
 scale = Vector2( 1.25, 0.66 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Special" type="Node2D" parent="Aim" index="1"]
 
-editor/display_folded = true
-position = Vector2( 248.266, 1.43688 )
+position = Vector2( 181.181, 0.127312 )
 scale = Vector2( 1.33333, 1.33333 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -185,8 +183,6 @@ _sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_colors", "
 
 [node name="Timer" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="Mana" type="Timer" parent="Timer" index="0"]
 
 process_mode = 1
@@ -206,6 +202,13 @@ autostart = false
 process_mode = 1
 wait_time = 0.5
 one_shot = true
+autostart = false
+
+[node name="Dodge" type="Timer" parent="Timer" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
 autostart = false
 
 [node name="AnimationTween" type="Tween" parent="." index="6"]
