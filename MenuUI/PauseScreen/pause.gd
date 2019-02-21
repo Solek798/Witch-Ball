@@ -26,3 +26,9 @@ func _on_Restart_pressed():
 		get_parent().close()
 	self.queue_free()
 	get_tree().paused = false
+
+func _on_Cancel_pressed():
+	if get_parent().has_method("request_stop"):
+		get_parent().request_stop()
+	self.queue_free()
+	get_tree().paused = false

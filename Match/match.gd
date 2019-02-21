@@ -50,17 +50,22 @@ func start(controlls):
 	emit_signal("match_started", round_count)
 
 func reset():
+	# get controlls
 	var controlls = []
 	for player in arena.players:
 		controlls.append(player.controll)
 	
+	# delete "old" match
 	arena.free()
 	backstage.free()
 	gui.free()
 	
-	
+	# re-initialized match
 	initialize()
 	start(controlls)
+
+func stop():
+	emit_signal("match_finished", self)
 
 func create_player(id, controll):
 	#instanciates and sets th player to the specified position
@@ -86,4 +91,4 @@ func create_player(id, controll):
 func _on_player_won_match(player):
 	print("Spieler ", player.id, " kriegt einen Keks")
 	yield(backstage, "round_finished")
-	emit_signal("match_finished", self)
+	stop()

@@ -19,6 +19,7 @@ func start_match(selection):
 	new_match.connect("match_finished", self, "_on_match_finished")
 	new_match.connect("match_instanciated", $Menu, "tutorial")
 	$Menu.connect("restart_requested", new_match, "reset")
+	$Menu.connect("stop_requested", new_match, "stop")
 	$Menu.connect("tutorial_exited", new_match, "start", [[$Controlls1, $Controlls2]])
 	add_child_below_node($Music, new_match)
 	
