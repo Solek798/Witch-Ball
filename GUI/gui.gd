@@ -19,6 +19,3 @@ func _on_player_won_round(player):
 	var won_match = $Top/Info.set_winner(player.id)
 	if won_match:
 		emit_signal("player_won_match", player)
-
-#func _on_match_started(round_count):
-#	$Top/Info.set_rounds(round_count)

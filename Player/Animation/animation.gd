@@ -2,12 +2,6 @@ extends Sprite
 
 export(Texture) var image
 
-func _ready():
-	#$AnimationTreePlayer/AnimationPlayer.play("Walk_Bein")
-	#$AnimationTreePlayer/AnimationPlayer.play("Walk_Arm")
-	#$AnimationTreePlayer/AnimationPlayer.play("Idle_Bein")
-	#$AnimationTreePlayer/AnimationPlayer.play("Idle_Arm")
-	pass
 
 func get_throw_point():
 	return get_node("Charakter/throw_point").global_position
@@ -23,12 +17,6 @@ func play_throw(moving):
 		$AnimationTreePlayer.oneshot_node_start("oneshot_walk_throw")
 	else:
 		$AnimationTreePlayer.oneshot_node_start("oneshot_idle_throw")
-
-func play_dodge_down():
-	pass
-
-func play_dodge_up():
-	pass
 
 func play_hit():
 	$AnimationTreePlayer.oneshot_node_start("oneshot_hit")

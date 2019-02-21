@@ -14,7 +14,15 @@ func _on_Options_pressed():
 		get_parent().switch_scene($Background/Content/Buttons/Options.next_scene, own_template)
 
 func _on_Resume_pressed():
-	self.queue_free()
 	if get_parent().has_method("close"):
 		get_parent().close()
+	self.queue_free()
+	get_tree().paused = false
+
+func _on_Restart_pressed():
+	if get_parent().has_method("request_restart"):
+		get_parent().request_restart()
+	if get_parent().has_method("close"):
+		get_parent().close()
+	self.queue_free()
 	get_tree().paused = false
