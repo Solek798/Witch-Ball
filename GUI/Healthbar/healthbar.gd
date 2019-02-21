@@ -3,19 +3,30 @@ extends Container
 export(PackedScene) var life_template
 
 func add_image(player_id, image):
-	get_node("Text%d/Sprite" % player_id).texture = image
+	get_node("Player%d/Image" % player_id).texture = image
 
 func add_life(player_id, ammount):
 	for i in ammount:
 		var new_life = life_template.instance()
-		get_node("Text%d/Player%d" % [player_id, player_id]).add_child(new_life)
+		get_node("Player%d/Health" % player_id).add_child(new_life)
 
 func remove_life(player_id, ammount):
-	for i in ammount:
-		var children = get_node("Text%d/Player%d" % [player_id, player_id]).get_children()
-		if children:
-			children.pop_back().queue_free()
+	var children = get_node("Player%d/Health" % player_id).get_children()
+	
+	for child in children:
+		if child.is_filled:
+			child.is_filled = false
+			ammount -= 1
+		
+		if ammount <= 0:
+			return
 
 func refill_life(player_id, max_health):
-	var children = get_node("Text%d/Player%d" % [player_id, player_id]).get_children()
-	add_life(player_id, max_health - children.size())
+	var children = get_node("Player%d/Health" % player_id).get_children()
+	
+	for child in children:
+		child.is_filled = true
+	
+	
+	
+	

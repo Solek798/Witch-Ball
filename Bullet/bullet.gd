@@ -34,10 +34,3 @@ func destroy():
 	vfx_effect.play()
 	emit_signal("bullet_destroyed", sound_effect, vfx_effect)
 	queue_free()
-
-func _on_Area2D_body_entered(body):
-	if body == self:
-		return
-	
-	if body.is_in_group("Bullet") and not body.name.matchn("*Bullet_Big*"):
-		body.queue_free()

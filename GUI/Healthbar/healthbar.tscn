@@ -4,11 +4,7 @@
 [ext_resource path="res://GUI/Healthbar/life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/Healthbar/panel.png" type="Texture" id=3]
 
-
-
-
-
-[node name="Healthbar" type="Container"]
+[node name="Healthbar" type="Container" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.0
@@ -28,7 +24,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
 life_template = ExtResource( 2 )
 
-[node name="Text1" type="TextureRect" parent="." index="0"]
+[node name="Player1" type="TextureRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -46,7 +42,7 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 
-[node name="Player1" type="HBoxContainer" parent="Text1" index="0"]
+[node name="Health" type="HBoxContainer" parent="Player1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -65,13 +61,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="Sprite" type="Sprite" parent="Text1" index="1"]
+[node name="Image" type="Sprite" parent="Player1" index="1"]
 
 position = Vector2( 56.5725, 48.4682 )
 scale = Vector2( 0.9, 0.9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Text2" type="TextureRect" parent="." index="1"]
+[node name="Player2" type="TextureRect" parent="." index="1"]
 
 anchor_left = 1.0
 anchor_top = 0.0
@@ -91,7 +87,7 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Player2" type="HBoxContainer" parent="Text2" index="0"]
+[node name="Health" type="HBoxContainer" parent="Player2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -110,7 +106,7 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin" ]
 
-[node name="Sprite" type="Sprite" parent="Text2" index="1"]
+[node name="Image" type="Sprite" parent="Player2" index="1"]
 
 position = Vector2( 55.8707, 49.8489 )
 rotation = -3.14159
