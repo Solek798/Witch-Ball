@@ -3,15 +3,9 @@ extends Node2D
 export(PackedScene) var pickup_mana_template
 export(PackedScene) var pickup_fast_template
 export(PackedScene) var pickup_big_template
-export(PackedScene) var stone_effect_template
-export(PackedScene) var needle_effect_template
-export(PackedScene) var eye_effect_template
-export(PackedScene) var butterfly_effect_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
-export(int) var min_effect_time
-export(int) var max_effect_time
-export(int) var time_divider
+export(int) var time_divider = 2
 
 onready var players = []
 
@@ -21,9 +15,6 @@ var max_time
 func _ready():
 	min_time = min_spawn_time
 	max_time = max_spawn_time
-	
-	set_effect_time()
-	$RandomEffectTimer.start()
 
 func _process(delta):
 	# TEMP!
@@ -39,10 +30,7 @@ func _process(delta):
 		spawn_pickup(pickup_big_template)
 
 func set_spawn_time():
-	$SpawnTimer.wait_time = (randi() % (max_time - min_time)) + min_time
-
-func set_effect_time():
-	$RandomEffectTimer.wait_time = (randi() % (max_effect_time - min_effect_time)) + min_effect_time
+	$Timer/PickUpSpawner.wait_time = (randi() % (max_time - min_time)) + min_time
 
 func spawn_pickup(template):
 	var pick_up = template.instance()
@@ -69,8 +57,8 @@ func _on_player_reseted(player):
 
 func _on_match_started(round_count):
 	set_spawn_time()
-	$SpawnTimer.start()
-	$PickUpTimer.start()
+	$Timer/PickUpSpawner.start()
+	$Timer/PickUpSpawnRate.start()
 
 func _on_SpawnTimer_timeout():
 	$PickUp_Spawn/Follow.unit_offset = randf()
@@ -94,26 +82,11 @@ func _on_round_finished():
 		if child.is_in_group("Bullet") or child.is_in_group("PickUp"):
 			child.queue_free()
 	
-	$SpawnTimer.stop()
+	$PickUpSpawner.stop()
 	min_time = min_spawn_time
 	max_time = max_spawn_time
 	set_spawn_time()
-	$SpawnTimer.start()
-
-func _on_Stones_body_entered(body):
-	if body is RigidBody2D:
-		var anim = stone_effect_template.instance()
-		anim.global_position = body.global_position
-		anim.emitting = true
-		add_child(anim)
-		body.destroy()
-
-func _on_Needles_body_entered(body):
-	if body is RigidBody2D:
-		var anim = needle_effect_template.instance()
-		anim.global_position = body.global_position
-		anim.emitting = true
-		add_child(anim)
+	$PickUpSpawner.start()
 
 func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)
@@ -121,21 +94,4 @@ func _on_pick_up_spawned(impulse, position):
 func _on_PickUpTimer_timeout():
 	min_time /= time_divider
 	max_time /= time_divider
-
-func _on_RandomEffectTimer_timeout():
-	var children
-	var effect
-	
-	if randi() % 2:
-		children = $Eyes.get_children()
-		effect = eye_effect_template.instance()
-	else:
-		children = $Butterflies.get_children()
-		effect = butterfly_effect_template.instance()
-	
-	effect.position = children[randi() % children.size()].position
-	#if effect.has_method("start"):
-	effect.start()
-	
-	add_child(effect)
 

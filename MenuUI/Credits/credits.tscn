@@ -2,7 +2,7 @@
 
 [ext_resource path="res://MenuUI/Credits/credits.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=2]
-[ext_resource path="res://dynamic_risque_smaller.tres" type="DynamicFont" id=3]
+[ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=3]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=4]
 [ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=6]
@@ -70,7 +70,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 191.0
-margin_bottom = 381.0
+margin_bottom = 651.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -119,9 +119,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 425.0
+margin_top = 695.0
 margin_right = 191.0
-margin_bottom = 429.0
+margin_bottom = 699.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -132,9 +132,9 @@ _sections_unfolded = [ "Anchor", "Visibility" ]
 
 [node name="Menu" parent="Background/Credits" index="2" instance=ExtResource( 4 )]
 
-margin_top = 473.0
+margin_top = 743.0
 margin_right = 191.0
-margin_bottom = 544.0
+margin_bottom = 814.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 7 )
