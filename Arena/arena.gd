@@ -82,11 +82,11 @@ func _on_round_finished():
 		if child.is_in_group("Bullet") or child.is_in_group("PickUp"):
 			child.queue_free()
 	
-	$PickUpSpawner.stop()
+	$Timer/PickUpSpawner.stop()
 	min_time = min_spawn_time
 	max_time = max_spawn_time
 	set_spawn_time()
-	$PickUpSpawner.start()
+	$Timer/PickUpSpawner.start()
 
 func _on_pick_up_spawned(impulse, position):
 	add_child(impulse)
