@@ -50,7 +50,7 @@ extents = Vector2( 10, 757.697 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.5225, 654.954 )
 
-[node name="StoneArena" index="0" instance=ExtResource( 1 )]
+[node name="StoneArena" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 stone_effect_template = ExtResource( 3 )
