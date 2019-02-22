@@ -97,7 +97,7 @@ dodge_multiplier = 3.5
 max_mana = 50
 start_mana = 25
 throw_mana = 5
-dodge_mana = 5
+dodge_mana = 2
 mana_increase = 1
 dodge_up_time = 0.05
 

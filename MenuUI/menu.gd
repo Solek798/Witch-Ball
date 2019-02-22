@@ -22,13 +22,13 @@ func _process(delta):
 	if manage_input:
 		manage_input()
 
-func open():
+func open(manage_input=true):
 	self.visible = true
-	manage_input = true
+	self.manage_input = manage_input
 
-func close():
+func close(manage_input=false):
 	manage_input = false
-	self.visible = false
+	self.visible = manage_input
 
 func set_blur(amount, darknes):
 	self.material.set_shader_param("amount", amount)
@@ -63,13 +63,15 @@ func pause():
 	add_child(pause_scene_template.instance())
 
 func tutorial():
-	open()
-	set_blur(2.5, 0.25)
-	var tutorial = tutorial_template.instance()
-	add_child(tutorial)
+	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
+		open(false)
+		set_blur(2.5, 0.25)
+		var tutorial = tutorial_template.instance()
+		add_child(tutorial)
+		
+		yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
+		close()
 	
-	yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
-	close()
 	emit_signal("tutorial_exited")
 
 func manage_input():
