@@ -46,8 +46,6 @@ func _ready():
 		throw_vector = Vector2(-1, 0)
 	else:
 		throw_vector = Vector2(1, 0)
-	
-	emit_signal("player_created", self)
 
 func _process(delta):
 	# TEMP!
@@ -56,6 +54,7 @@ func _process(delta):
 		self.fast_shot = true
 	if Input.is_action_just_pressed("cheat_big_bullet"):
 		self.big_shot = true
+	
 	
 	var movement = controll.get_movement()
 	
@@ -182,8 +181,6 @@ func set_fast_shot(new_value):
 func _on_round_finished():
 	reset()
 
-func _on_DodgeTimer_timeout():
-	body.play_dodge_up()
 
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)

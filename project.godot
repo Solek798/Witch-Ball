@@ -8,6 +8,10 @@
 
 config_version=3
 
+[Witch-Ball]
+
+Tutorial=true
+
 [application]
 
 config/name="Witch-Ball"

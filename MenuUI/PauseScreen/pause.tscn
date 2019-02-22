@@ -149,4 +149,8 @@ particle_template = ExtResource( 7 )
 
 [connection signal="pressed" from="Background/Content/Buttons/Options" to="." method="_on_Options_pressed"]
 
+[connection signal="pressed" from="Background/Content/Buttons/Restart" to="." method="_on_Restart_pressed"]
+
+[connection signal="pressed" from="Background/Content/Buttons/Cancel" to="." method="_on_Cancel_pressed"]
+
 

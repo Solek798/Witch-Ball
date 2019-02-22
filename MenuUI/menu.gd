@@ -6,6 +6,8 @@ export(PackedScene) var pause_scene_template
 export(PackedScene) var tutorial_template
 
 signal tutorial_exited
+signal restart_requested
+signal stop_requested
 
 onready var manage_input = true
 onready var current_controll = get_parent().get_node("Controlls1")
@@ -43,6 +45,12 @@ func switch_scene(next_scene_template, return_scene):
 func confirm_selection(selection):
 	close()
 	get_parent().start_match(selection)
+
+func request_restart():
+	emit_signal("restart_requested")
+
+func request_stop():
+	emit_signal("stop_requested")
 
 func menu():
 	open()

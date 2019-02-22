@@ -51,7 +51,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "Sound"
 area_mask = 1
 
 [node name="Collide" type="AudioStreamPlayer2D" parent="." index="3"]
@@ -62,7 +62,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "Sound"
 area_mask = 1
 
 [node name="shadow_ball" type="Sprite" parent="." index="4"]

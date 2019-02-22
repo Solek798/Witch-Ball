@@ -8,10 +8,10 @@ export(PackedScene) var player_template
 export(int) var player_count
 export(int) var round_count
 
-signal player_created(player)
 signal match_instanciated
 signal match_started(round_count)
 signal match_finished(finished_match)
+signal player_created(player)
 
 var arena
 var gui
@@ -21,6 +21,10 @@ var player_2_selection
 
 
 func _ready():
+	initialize()
+	emit_signal("match_instanciated")
+
+func initialize():
 	arena = arena_template.instance()
 	gui = gui_template.instance()
 	backstage = backstage_template.instance()
@@ -28,6 +32,7 @@ func _ready():
 	add_child(arena)
 	add_child(gui)
 	add_child(backstage)
+	
 	
 	self.connect("player_created", arena, "_on_player_created")
 	self.connect("player_created", gui, "_on_player_created")
@@ -37,14 +42,30 @@ func _ready():
 	backstage.connect("player_won_round", gui, "_on_player_won_round")
 	backstage.connect("round_finished", arena, "_on_round_finished")
 	gui.connect("player_won_match", self, "_on_player_won_match")
-	
-	emit_signal("match_instanciated")
 
 func start(controlls):
 	# creates the in player_count specified ammount of players
 	for i in player_count:
 		create_player(i + 1, controlls[i])
 	emit_signal("match_started", round_count)
+
+func reset():
+	# get controlls
+	var controlls = []
+	for player in arena.players:
+		controlls.append(player.controll)
+	
+	# delete "old" match
+	arena.free()
+	backstage.free()
+	gui.free()
+	
+	# re-initialized match
+	initialize()
+	start(controlls)
+
+func stop():
+	emit_signal("match_finished", self)
 
 func create_player(id, controll):
 	#instanciates and sets th player to the specified position
@@ -70,4 +91,4 @@ func create_player(id, controll):
 func _on_player_won_match(player):
 	print("Spieler ", player.id, " kriegt einen Keks")
 	yield(backstage, "round_finished")
-	emit_signal("match_finished", self)
+	stop()
