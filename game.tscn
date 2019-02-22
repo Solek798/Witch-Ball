@@ -43,7 +43,7 @@ volume_db = -15.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Music"
 
 [node name="Menu" type="ColorRect" parent="." index="1"]
 
@@ -78,6 +78,8 @@ margin_bottom = -3.0
 [node name="Controlls2" parent="." index="3" instance=ExtResource( 8 )]
 
 _sections_unfolded = [ "Rect", "Transform" ]
+
+[connection signal="tree_exiting" from="." to="." method="_on_Game_tree_exiting"]
 
 [connection signal="finished" from="Music" to="." method="_on_Music_finished"]
 

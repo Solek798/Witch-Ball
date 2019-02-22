@@ -33,3 +33,6 @@ func _on_match_finished(finished_match):
 func _on_Music_finished():
 	$Music.play()
 
+func _on_Game_tree_exiting():
+	ProjectSettings.save()
+
