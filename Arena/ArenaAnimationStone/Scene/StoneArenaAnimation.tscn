@@ -20,7 +20,7 @@ length = 3.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Stonefront/Stone/Voluten:modulate")
+tracks/0/path = NodePath("StoneFront/Stone/Voluten:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -43,20 +43,11 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.905579, 0.644531, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Gras:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 0.796875, 0, 0.160196 ), Color( 1, 1, 1, 0 ) ]
-}
 
-[node name="StoneArenaAnimation" type="Node2D" index="0"]
+[node name="StoneArenaAnimation" type="Node2D"]
+
+z_index = -17
+_sections_unfolded = [ "Z Index" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
@@ -75,7 +66,8 @@ blend_times = [  ]
 [node name="StoneBack" type="Node2D" parent="." index="3"]
 
 editor/display_folded = true
-_sections_unfolded = [ "Visibility" ]
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Stone" type="Sprite" parent="StoneBack" index="0"]
 
@@ -85,32 +77,35 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneBack/Stone" index="0"]
 
-modulate = Color( 0.957454, 0.839826, 1, 1 )
+modulate = Color( 0.966051, 0.87219, 1, 1 )
 position = Vector2( 0, 113.843 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Stonefront" type="Node2D" parent="." index="4"]
+[node name="StoneFront" type="Node2D" parent="." index="4"]
 
 editor/display_folded = true
-_sections_unfolded = [ "Visibility" ]
+z_index = 13
+_sections_unfolded = [ "Z Index" ]
 
-[node name="Stone" type="Sprite" parent="Stonefront" index="0"]
+[node name="Stone" type="Sprite" parent="StoneFront" index="0"]
 
 position = Vector2( -37.9478, 899.183 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Voluten" type="Sprite" parent="Stonefront/Stone" index="0"]
+[node name="Voluten" type="Sprite" parent="StoneFront/Stone" index="0"]
 
-modulate = Color( 0.957454, 0.839826, 1, 1 )
+modulate = Color( 0.966051, 0.87219, 1, 1 )
 position = Vector2( 67.9733, -684.118 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Gras" type="Node2D" parent="." index="5"]
 
-modulate = Color( 1, 0.908472, 0.5494, 0.0721844 )
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 0.7, 0, 1 )
 position = Vector2( -40.7902, 0 )
 scale = Vector2( 0.9975, 0.9975 )
 _sections_unfolded = [ "Transform", "Visibility" ]

@@ -5,7 +5,7 @@
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/River/Steinlvl_aktuell_cut_0002s_0000_Foggy.png" type="Texture" id=3]
 [ext_resource path="res://Arena/ArenaAnimationStone/Animationen/RiverBack.tres" type="Animation" id=4]
 
-[node name="River" type="Node2D" index="0"]
+[node name="River" type="Node2D"]
 
 _sections_unfolded = [ "Material", "Visibility" ]
 
