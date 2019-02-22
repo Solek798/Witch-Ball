@@ -6,11 +6,6 @@
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_2.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_4.png" type="Texture" id=5]
 
-
-
-
-
-
 [node name="Amimation_Character_Selection" type="Control"]
 
 modulate = Color( 0.811765, 0.517647, 0.517647, 1 )
