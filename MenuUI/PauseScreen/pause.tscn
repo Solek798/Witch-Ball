@@ -35,7 +35,7 @@ size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
-path_to_own_template = "res://MenuUI/PauseScreen/PauseScreen.tscn"
+path_to_own_template = "res://MenuUI/PauseScreen/pause.tscn"
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 

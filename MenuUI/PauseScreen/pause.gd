@@ -12,6 +12,7 @@ func _ready():
 func _on_Options_pressed():
 	if get_parent().has_method("switch_scene"):
 		get_parent().switch_scene($Background/Content/Buttons/Options.next_scene, own_template)
+		self.queue_free()
 
 func _on_Resume_pressed():
 	if get_parent().has_method("close"):

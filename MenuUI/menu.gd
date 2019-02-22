@@ -19,6 +19,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") and not self.visible:
 		pause()
+	
 	if manage_input:
 		manage_input()
 
@@ -27,8 +28,8 @@ func open(manage_input=true):
 	self.manage_input = manage_input
 
 func close(manage_input=false):
-	manage_input = false
-	self.visible = manage_input
+	self.manage_input = manage_input
+	self.visible = false
 
 func set_blur(amount, darknes):
 	self.material.set_shader_param("amount", amount)
@@ -75,14 +76,24 @@ func tutorial():
 	emit_signal("tutorial_exited")
 
 func manage_input():
-	var focus_owner = self.get_focus_owner()
+	var event
 	
 	if current_controll.state(Action.MENU_UP):
-		focus_owner.get_node(focus_owner.focus_neighbour_top).grab_focus()
+		event = "ui_up"
+		#focus_owner.get_node(focus_owner.focus_neighbour_top).grab_focus()
 	if current_controll.state(Action.MENU_DOWN):
-		focus_owner.get_node(focus_owner.focus_neighbour_bottom).grab_focus()
+		event = "ui_down"
+		#focus_owner.get_node(focus_owner.focus_neighbour_bottom).grab_focus()
 	if current_controll.state(Action.MENU_LEFT):
-		focus_owner.get_node(focus_owner.focus_neighbour_left).grab_focus()
+		event = "ui_left"
+		#focus_owner.get_node(focus_owner.focus_neighbour_left).grab_focus()
 	if current_controll.state(Action.MENU_RIGHT):
-		focus_owner.get_node(focus_owner.focus_neighbour_right).grab_focus()
+		event = "ui_right"
+		#focus_owner.get_node(focus_owner.focus_neighbour_right).grab_focus()
+	
+	if event != null:
+		var act = InputEventAction.new()
+		act.action = event
+		act.pressed = true
+		Input.parse_input_event(act)
 
