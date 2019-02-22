@@ -2,7 +2,6 @@
 
 [ext_resource path="res://GUI/round_start.gd" type="Script" id=1]
 
-
 [node name="RoundStart" type="Sprite"]
 
 position = Vector2( 924.825, 539.847 )

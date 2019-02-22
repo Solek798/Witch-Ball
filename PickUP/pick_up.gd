@@ -10,12 +10,11 @@ func _ready():
 	emit_signal("pick_up_spawned", impulse, self.global_position)
 
 func _on_DespawnTimer_timeout():
-	RemovePickUp()
+	destroy("Vanish")
+
+func destroy(destruction_animation):
+	$CollisionShape.shape = null
+	$Animation.play(destruction_animation)
+	yield($Animation, "animation_finished")
 	
-func RemovePickUp():
-	self.queue_free()
-	$AnimationPlayer.play("RemovedPickUp")
-	
-	
-func FreePickUp():
 	self.queue_free()
