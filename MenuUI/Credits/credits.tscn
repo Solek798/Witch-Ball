@@ -11,7 +11,7 @@
 [ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=10]
 
-[node name="Credits" type="Control" index="0"]
+[node name="Credits" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
