@@ -10,18 +10,24 @@
 custom_solver_bias = 0.0
 radius = 34.7709
 
-[node name="FastBullet" instance=ExtResource( 1 )]
+[node name="FastBullet" index="0" instance=ExtResource( 1 )]
 
 speed = 1500
 
 [node name="CollisionShape" parent="." index="0"]
 
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="FeuerSchweif" parent="." index="1" instance=ExtResource( 2 )]
 
+position = Vector2( 1.37481, 1.37481 )
+scale = Vector2( 0.2, 0.2 )
+
 [node name="Texture" parent="." index="2"]
 
+position = Vector2( -2.25039, 5 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 

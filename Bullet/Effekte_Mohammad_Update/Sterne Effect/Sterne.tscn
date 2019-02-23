@@ -19,8 +19,8 @@ curve = SubResource( 1 )
 
 render_priority = 0
 trail_divisor = 1
-emission_shape = 2
-emission_box_extents = Vector3( 20, 10, 0 )
+emission_shape = 1
+emission_sphere_radius = 30.0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
@@ -54,7 +54,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Scale" ]
+_sections_unfolded = [ "Emission Shape", "Scale" ]
 
 [sub_resource type="Environment" id=4]
 
@@ -141,7 +141,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
-scale = Vector2( 1, 0.356495 )
 emitting = true
 amount = 96
 lifetime = 0.5
