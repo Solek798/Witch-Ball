@@ -1,15 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://MenuUI/Credits/credits.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=2]
 [ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=3]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://font_theme.tres" type="Theme" id=4]
+[ext_resource path="res://MenuUI/Credits/S4G_logo.png" type="Texture" id=5]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=10]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -22,7 +24,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Margin" ]
+_sections_unfolded = [ "Anchor" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -30,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = -342.0
-margin_right = 200.0
-margin_bottom = 342.0
+margin_left = -287.5
+margin_top = -475.0
+margin_right = 287.5
+margin_bottom = 475.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -47,12 +49,12 @@ stretch_mode = 0
 
 anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -65.0
-margin_top = -216.0
-margin_right = 65.0
-margin_bottom = 249.0
+anchor_right = 0.54265
+anchor_bottom = 0.51956
+margin_left = -198.5
+margin_top = -289.0
+margin_right = 190.976
+margin_bottom = 447.418
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -60,24 +62,43 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 44
-alignment = 0
+alignment = 1
 _sections_unfolded = [ "Margin", "custom_constants" ]
 
-[node name="Label" type="Label" parent="Background/Credits" index="0"]
+[node name="HB1" type="HBoxContainer" parent="Background/Credits" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 191.0
-margin_bottom = 651.0
+margin_right = 388.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 31
+alignment = 1
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="Label" type="Label" parent="Background/Credits/HB1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 166.0
+margin_bottom = 339.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_horizontal = 3
+size_flags_vertical = 2
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.301961, 0.172549, 0.0941176, 1 )
 custom_constants/line_spacing = -3
 text = "Karim Steins
 Production
@@ -92,9 +113,33 @@ Jessy-Lee Mais
 Characterart
 
 Antonio Waletzki
-Animation/VFX
+Animation/VFX"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-Katharina Stadler
+[node name="Label2" type="Label" parent="Background/Credits/HB1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 197.0
+margin_right = 388.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.309804, 0.180392, 0.101961, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = -3
+text = "Katharina Stadler
 Environment Art
 
 Mohammad Malandi
@@ -105,41 +150,106 @@ Daniel Oppermann
 
 Ronja Brodocz
 UI
-"
+
+Jerry Froböse
+Sounddesign"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_constants", "custom_fonts" ]
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="HSeparator" type="HSeparator" parent="Background/Credits" index="1"]
+[node name="link" type="Label" parent="Background/Credits" index="1"]
 
-modulate = Color( 0.238281, 0.203842, 0.203842, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 695.0
-margin_right = 191.0
-margin_bottom = 699.0
+margin_top = 426.0
+margin_right = 414.0
+margin_bottom = 453.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 4 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.580118 )
+text = "www.witchball.school4games.net"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="HSeparator" type="HSeparator" parent="Background/Credits" index="2"]
+
+modulate = Color( 0.238281, 0.203842, 0.203842, 0.497255 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 497.0
+margin_right = 414.0
+margin_bottom = 501.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Visibility" ]
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Menu" parent="Background/Credits" index="2" instance=ExtResource( 4 )]
+[node name="CenterContainer" type="CenterContainer" parent="Background/Credits" index="3"]
 
-margin_top = 743.0
-margin_right = 191.0
-margin_bottom = 814.0
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
-_sections_unfolded = [ "Grow Direction", "Margin", "Textures" ]
-particle_template = ExtResource( 8 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 545.0
+margin_right = 414.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="TextureRect" type="TextureRect" parent="Background/Credits/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 107.0
+margin_right = 307.0
+margin_bottom = 95.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 5
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Menu" parent="Background/Credits" index="4" instance=ExtResource( 6 )]
+
+margin_left = 170.0
+margin_top = 684.0
+margin_right = 244.0
+margin_bottom = 755.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+_sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "Textures" ]
+particle_template = ExtResource( 10 )
 
 [connection signal="pressed" from="Background/Credits/Menu" to="." method="_on_Menu_pressed"]
 
