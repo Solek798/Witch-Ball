@@ -129,8 +129,9 @@ bus = "Master"
 
 editor/display_folded = true
 margin_left = 362.0
+margin_top = 1.0
 margin_right = 740.0
-margin_bottom = 758.0
+margin_bottom = 759.0
 focus_neighbour_left = NodePath("../Scarlett")
 focus_neighbour_right = NodePath("../Lilith")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
