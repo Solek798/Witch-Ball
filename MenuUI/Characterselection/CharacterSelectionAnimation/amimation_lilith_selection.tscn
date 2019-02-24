@@ -1,15 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=1]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/SelcktionBulletMoveCh1ToCh2.tres" type="Animation" id=1]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_7.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_8.png" type="Texture" id=3]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_2.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/Balls/ball_4.png" type="Texture" id=5]
-
-
-
-
-
 
 [node name="Amimation_Character_Selection" type="Control"]
 
@@ -46,7 +41,7 @@ margin_left = -4.0
 margin_top = 449.0
 margin_right = 36.0
 margin_bottom = 489.0
-rect_rotation = 340.769
+rect_rotation = 350.483
 rect_scale = Vector2( 0.35, 0.35 )
 rect_pivot_offset = Vector2( 194.5, 194.5 )
 rect_clip_content = false

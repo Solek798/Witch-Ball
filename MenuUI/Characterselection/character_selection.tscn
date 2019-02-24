@@ -5,7 +5,7 @@
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=5]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=6]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/SelcktionBulletMoveCh1ToCh2.tres" type="Animation" id=6]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MenuUI/Characterselection/scarlet.png" type="Texture" id=8]
 [ext_resource path="res://MenuUI/Characterselection/scarlet_hover.png" type="Texture" id=9]
@@ -105,7 +105,6 @@ focus_neighbour_right = NodePath("../Jasmine")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 9 )
-_sections_unfolded = [ "Textures" ]
 Amimation_Character_Selection_template = ExtResource( 10 )
 
 [node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 11 )]
@@ -129,9 +128,8 @@ bus = "Master"
 
 editor/display_folded = true
 margin_left = 362.0
-margin_top = 1.0
 margin_right = 740.0
-margin_bottom = 759.0
+margin_bottom = 758.0
 focus_neighbour_left = NodePath("../Scarlett")
 focus_neighbour_right = NodePath("../Lilith")
 focus_neighbour_bottom = NodePath("../../Selection/Play")

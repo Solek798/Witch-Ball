@@ -19,7 +19,6 @@ export(PackedScene) var lilith
 export(PackedScene) var penny
 
 func _ready():
-	#$Content/Characters/Scarlett.grab_focus()
 	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
 	current_mode = PLAYER_1
 	#$Content/Selection/Railing.modulate = player_1_color
@@ -87,6 +86,5 @@ func _on_Play_pressed():
 		get_parent().confirm_selection([player_1_selection, player_2_selection])
 	
 	self.queue_free()
-
 
 
