@@ -3,7 +3,7 @@
 [ext_resource path="res://MenuUI/Characterselection/selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=2]
 
-[node name="Selection" type="Control"]
+[node name="Selection" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -34,6 +34,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
+text = "P1"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -55,6 +56,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
+text = "P2"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

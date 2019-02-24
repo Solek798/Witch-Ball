@@ -19,10 +19,10 @@ export(PackedScene) var lilith
 export(PackedScene) var penny
 
 func _ready():
-	#$Content/Characters/Scarlett.grab_focus()
-	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
+	$Content/Characters/Scarlett.grab_focus()
+	#$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
 	current_mode = PLAYER_1
-	#$Content/Selection/Railing.modulate = player_1_color
+	$Content/Selection/Railing.modulate = player_1_color
 
 func switch_player():
 	current_mode = PLAYER_2
