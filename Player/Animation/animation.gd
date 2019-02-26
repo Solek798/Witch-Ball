@@ -3,6 +3,10 @@ extends Sprite
 export(Texture) var image
 
 
+func _ready():
+	# make sure player is in idle
+	stop_walk()
+
 func get_throw_point():
 	return get_node("Charakter/throw_point").global_position
 

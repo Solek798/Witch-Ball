@@ -60,13 +60,9 @@ func state(action):
 		return locked_states[action]
 	
 	match action:
-		Action.MOVE:
-			return get_movement()
-		Action.AIM:
-			return get_aim()
 		Action.THROW, Action.DODGE, Action.THROW_SPECIAL, Action.MENU_UP, Action.MENU_DOWN, Action.MENU_LEFT, Action.MENU_RIGHT:
 			return Input.is_action_just_pressed(keys[action])
-		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT, Action.AIM_UP, Action.AIM_DOWN:
+		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT, Action.AIM_UP, Action.AIM_DOWN, Action.MOVE, Action.AIM:
 			return Input.is_action_pressed(keys[action])
 
 func get_movement():

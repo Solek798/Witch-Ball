@@ -6,14 +6,12 @@ export(PackedScene) var bullet_big_template
 export(int) var movement_speed 
 export(float) var aim_speed
 export(int) var max_health
-export(float) var dodge_multiplier
+export(int) var dodge_distance
 export(int) var max_mana
 export(int) var start_mana
 export(int) var throw_mana
 export(int) var dodge_mana
 export(int) var mana_increase
-# TEMP
-export(float) var dodge_up_time
 
 signal bullet_thrown(bullet)
 signal player_damaged(player, ammount)
@@ -25,7 +23,8 @@ var selection
 var body
 var controll
 var next_bullet
-onready var modifiers = []
+onready var current_aim = 0.0
+onready var current_movement = Vector2(0, 0)
 onready var health = max_health
 onready var is_dead = false
 onready var fast_shot = false setget set_fast_shot
@@ -47,7 +46,9 @@ func _ready():
 	else:
 		throw_vector = Vector2(1, 0)
 
-func _process(delta):
+func _input(event):
+	if not controll.active:
+		return
 	# TEMP!
 	# Cheat-shortcuts are going to be removed in final Version
 	if Input.is_action_just_pressed("cheat_fast_bullet"):
@@ -55,38 +56,41 @@ func _process(delta):
 	if Input.is_action_just_pressed("cheat_big_bullet"):
 		self.big_shot = true
 	
+	current_movement = controll.get_movement() * movement_speed
 	
-	var movement = controll.get_movement()
-	
-	if movement:
+	if current_movement:
 		body.play_walk()
 		$Smoke.emitting = true
 	else:
 		body.stop_walk()
 		$Smoke.emitting = false
 	
-	for mod in modifiers:
-		movement += imp * mod.get_strength()
-	
-	# moves player and scans for collisions
-	move_and_slide(movement * movement_speed)
-	
-	# calculates the rotation in this frame and rotates the aim pointer
-	var direction = controll.get_aim()
-	var aim = atan2(direction.y, direction.x)
-	$Aim.rotation = aim
-	
 	if controll.state(Action.THROW):
-		throw(movement)
+		throw(current_movement)
 	if controll.state(Action.DODGE):
-		dodge(movement)
+		dodge()
 	if controll.state(Action.THROW_SPECIAL):
 		if fast_shot:
 			next_bullet = bullet_fast_template
-			throw(movement)
+			throw(current_movement)
 		if big_shot:
 			next_bullet = bullet_big_template
-			throw(movement)
+			throw(current_movement)
+
+func _physics_process(delta):
+	
+	for mod in $Modifiers.get_children():
+		if mod.has_method("get_strength"):
+			$Modifiers.movement = imp * mod.get_strength()
+	
+	# moves player and scans for collisions
+	move_and_slide(current_movement + $Modifiers.movement)
+	
+	# calculates the rotation in this frame and rotates the aim pointer
+	var direction = controll.get_aim()
+	current_aim = atan2(direction.y, direction.x)
+	$Aim.rotation = current_aim
+
 
 func throw(movement):
 	# Don't throw while ThrowTimer is running or while you have no mana
@@ -124,16 +128,19 @@ func throw(movement):
 	body.play_throw(movement)
 	emit_signal("bullet_thrown", bullet)
 
-func dodge(movement):
-	if movement == Vector2(0, 0) or $Mana.value < dodge_mana:
+func dodge():
+	if current_movement == Vector2(0, 0) or $Mana.value < dodge_mana:
 		return
 	
 	# if player is not allready dodging, he starts to dodge
-	#if $TimerDodge.is_stopped():
-	#	$Mana.value -= dodge_mana
-	#	controll.lock()
-	#	body.play_dodge_down()
-	#	$AinimationTween.interpolate_callback(body, dodge_up_time, "play_dodge_up")
+	if $Timer/Dodge.is_stopped():
+		$Mana.value -= dodge_mana
+		controll.active = false
+		$Timer/Dodge.start()
+		
+		var dodge_vector = throw_vector * dodge_distance
+		dodge_vector = dodge_vector.rotated(atan2(current_movement.y, current_movement.x))
+		current_movement = dodge_vector / $Timer/Dodge.wait_time
 
 func take_damage(ammount):
 	if is_dead or $Timer/Indestructable.time_left:
@@ -181,21 +188,19 @@ func set_fast_shot(new_value):
 func _on_round_finished():
 	reset()
 
-
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
 
-func _on_pick_up_spawned(impulse, position):
-	var length = (self.global_position - position).length()
-	var diff = impulse.distance - length
-	imp = self.global_position - position
+func _on_pick_up_spawned(impulse):
+	# test if impulse is in right distance
+	imp = self.global_position - impulse.position
 	if imp.length() >= impulse.distance:
-		return 
-	imp /= imp.length() * (impulse.distance / diff)
+		return
 	
+	# if is, set impulse for this player
 	impulse.apply_impulse()
 	controll.vibrate(0.9, 0.9, impulse.time / 2)
-	modifiers.append(impulse)
+	$Modifiers.add_child(impulse)
 
 func _on_player_won_round():
 	body.play_WinnJump()
@@ -203,13 +208,6 @@ func _on_player_won_round():
 func _on_IndestructableTimer_timeout():
 	body.stop_indestructabel()
 
-
-func _on_Timer_timeout():
-	Input.action_press("player1_down")
-	yield(get_tree(), "idle_frame")
-	Input.action_release("player1_down")
-	
-	
 func FillManaAnimation():
 	$AnimationPlayer.play("FillMana")
 	
@@ -218,3 +216,6 @@ func FillManaAnimation():
 	
 #func EmptyManaAnimationStop():
 	#$AnimationPlayer.stop("EmptyMana")
+
+func _on_Dodge_timeout():
+	controll.active = true
