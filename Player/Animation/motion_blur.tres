@@ -1,0 +1,31 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=4]
+
+code = "shader_type canvas_item;
+
+uniform vec2 linear_velocity; 
+uniform float intensity : hint_range(0.0, 0.1);
+uniform float iterations : hint_range(1.0, 50.0);
+
+void fragment() {
+	vec4 col = vec4(0.0);
+	float counter;
+	
+	for (counter = 0.0; counter < iterations; counter++)
+	{
+		vec2 offset = linear_velocity * (counter / iterations - 0.5) * intensity; 
+		col += textureLod(TEXTURE, UV + offset, 0.0);
+	}
+	COLOR = col / counter;
+}"
+
+[resource]
+
+render_priority = 0
+shader = SubResource( 4 )
+shader_param/linear_velocity = Vector2( 0, 0 )
+shader_param/intensity = 0.02
+shader_param/iterations = 20.0
+_sections_unfolded = [ "shader_param" ]
+
