@@ -1,6 +1,7 @@
 extends Sprite
 
 export(Texture) var image
+export(ShaderMaterial) var motion_blur
 
 
 func _ready():
@@ -36,5 +37,11 @@ func stop_indestructabel():
 	$Charakter.modulate.a = 1
 	$Charakter.modulate.b = 1
 	$Charakter.modulate.r = 1
-	
+
+func set_motion_blur(blur, linear_velocity):
+	if blur:
+		$Charakter.material = motion_blur
+		$Charakter.material.set_shader_param("linear_velocity", linear_velocity)
+	else:
+		$Charakter.material = null
 

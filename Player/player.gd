@@ -141,6 +141,9 @@ func dodge():
 		var dodge_vector = throw_vector * dodge_distance
 		dodge_vector = dodge_vector.rotated(atan2(current_movement.y, current_movement.x))
 		current_movement = dodge_vector / $Timer/Dodge.wait_time
+		get_process_delta_time()
+		
+		body.set_motion_blur(true, current_movement * get_process_delta_time())
 
 func take_damage(ammount):
 	if is_dead or $Timer/Indestructable.time_left:
@@ -219,3 +222,4 @@ func FillManaAnimation():
 
 func _on_Dodge_timeout():
 	controll.active = true
+	body.set_motion_blur(false, null)
