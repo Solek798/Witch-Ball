@@ -1,18 +1,22 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://MenuUI/Main/main.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Main/Title.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=4]
-[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/AntoniosCharacterselection.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=4]
+[ext_resource path="res://MenuUI/Characterselection/play_pressed.png" type="Texture" id=5]
+[ext_resource path="res://MenuUI/Characterselection/play_hover.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Characterselection/character_selection.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=8]
-[ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=9]
-[ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=10]
-[ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=11]
+[ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=9]
+[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=13]
+[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=14]
+[ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=15]
 
-[node name="Main" type="CenterContainer"]
+[node name="Main" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -35,10 +39,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 760.0
-margin_top = 236.0
-margin_right = 1160.0
-margin_bottom = 844.0
+margin_left = 710.0
+margin_top = 163.0
+margin_right = 1210.0
+margin_bottom = 916.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -54,8 +58,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 400.0
-margin_bottom = 329.0
+margin_right = 500.0
+margin_bottom = 411.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -71,9 +75,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 333.0
-margin_right = 400.0
-margin_bottom = 608.0
+margin_top = 415.0
+margin_right = 500.0
+margin_bottom = 753.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -89,8 +93,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 100.0
-margin_right = 300.0
-margin_bottom = 275.0
+margin_right = 400.0
+margin_bottom = 338.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -103,27 +107,28 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
 [node name="Start" parent="Content/C1/Buttons" index="0" instance=ExtResource( 3 )]
 
-margin_right = 200.0
-margin_bottom = 71.0
+margin_right = 300.0
+margin_bottom = 116.0
 focus_neighbour_top = NodePath("../Quit")
 focus_neighbour_bottom = NodePath("../Options")
+size_flags_horizontal = 4
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
+_sections_unfolded = [ "Focus", "Rect", "Size Flags", "Textures" ]
 next_scene = ExtResource( 7 )
 particle_template = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Start" index="0"]
 
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.4441
 anchor_right = 0.5
-anchor_bottom = 0.51
+anchor_bottom = 0.5
 margin_left = -100.0
-margin_top = -22.0
+margin_top = -18.5156
 margin_right = 100.0
-margin_bottom = 26.0
+margin_bottom = 29.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -142,16 +147,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_col
 
 [node name="Options" parent="Content/C1/Buttons" index="1" instance=ExtResource( 3 )]
 
-margin_top = 68.0
-margin_right = 200.0
-margin_bottom = 139.0
+margin_left = 50.0
+margin_top = 113.0
+margin_right = 250.0
+margin_bottom = 190.0
 focus_neighbour_top = NodePath("../Start")
 focus_neighbour_bottom = NodePath("../Credits")
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Focus", "Textures" ]
-next_scene = ExtResource( 10 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
+next_scene = ExtResource( 13 )
 particle_template = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Options" index="0"]
@@ -160,17 +167,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -39.0
-margin_top = -13.5
-margin_right = 39.0
-margin_bottom = 13.5
+margin_left = -87.0
+margin_top = -24.5
+margin_right = 87.0
+margin_bottom = 28.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 14 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Options"
 align = 1
@@ -182,16 +189,18 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Credits" parent="Content/C1/Buttons" index="2" instance=ExtResource( 3 )]
 
-margin_top = 136.0
-margin_right = 200.0
-margin_bottom = 207.0
+margin_left = 50.0
+margin_top = 187.0
+margin_right = 250.0
+margin_bottom = 264.0
 focus_neighbour_top = NodePath("../Options")
 focus_neighbour_bottom = NodePath("../Quit")
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Focus", "Textures" ]
-next_scene = ExtResource( 11 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
+next_scene = ExtResource( 15 )
 particle_template = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Credits" index="0"]
@@ -200,17 +209,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -38.0
-margin_top = -12.5
-margin_right = 33.0
-margin_bottom = 14.5
+margin_left = -80.0
+margin_top = -30.5
+margin_right = 79.0
+margin_bottom = 29.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 14 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Credits"
 align = 1
@@ -222,15 +231,17 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Quit" parent="Content/C1/Buttons" index="3" instance=ExtResource( 3 )]
 
-margin_top = 204.0
-margin_right = 200.0
-margin_bottom = 275.0
+margin_left = 50.0
+margin_top = 261.0
+margin_right = 250.0
+margin_bottom = 338.0
 focus_neighbour_top = NodePath("../Credits")
 focus_neighbour_bottom = NodePath("../Start")
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Focus", "Textures" ]
+size_flags_horizontal = 4
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
 particle_template = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Quit" index="0"]
@@ -239,17 +250,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -13.5
-margin_right = 23.0
-margin_bottom = 13.5
+margin_left = -48.0
+margin_top = -30.0
+margin_right = 48.0
+margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 14 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Quit"
 align = 1
