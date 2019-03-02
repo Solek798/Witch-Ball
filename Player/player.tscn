@@ -82,12 +82,13 @@ tracks/0/keys = {
 [node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
+z_index = 6
 input_pickable = false
 collision_layer = 4
 collision_mask = 11
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 bullet_template = ExtResource( 2 )
 bullet_fast_template = ExtResource( 3 )
 bullet_big_template = ExtResource( 4 )
@@ -181,9 +182,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -50.0
-margin_top = 15.0
+margin_top = 21.0
 margin_right = 356.0
-margin_bottom = 57.0
+margin_bottom = 63.0
 rect_scale = Vector2( 0.25, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -203,7 +204,6 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
-_sections_unfolded = [ "custom_styles" ]
 
 [node name="Sprite" type="Sprite" parent="Mana" index="0"]
 
