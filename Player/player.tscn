@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/normal/normal_bullet.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://GUI/Manabar/mana_bar_fill.png" type="Texture" id=12]
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
 [ext_resource path="res://Player/ManaAnimation/EmptyMana.tres" type="Animation" id=14]
+[ext_resource path="res://Player/modifiers.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -93,13 +94,12 @@ bullet_big_template = ExtResource( 4 )
 movement_speed = 425
 aim_speed = 3.5
 max_health = 5
-dodge_multiplier = 3.5
+dodge_distance = 300
 max_mana = 50
 start_mana = 25
 throw_mana = 5
 dodge_mana = 2
 mana_increase = 1
-dodge_up_time = 0.05
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." index="0"]
 
@@ -175,6 +175,7 @@ texture = ExtResource( 11 )
 
 [node name="Mana" type="ProgressBar" parent="." index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -237,16 +238,14 @@ wait_time = 0.5
 one_shot = true
 autostart = false
 
-[node name="AnimationTween" type="Tween" parent="." index="6"]
+[node name="Dodge" type="Timer" parent="Timer" index="3"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
+process_mode = 1
+wait_time = 0.15
+one_shot = true
+autostart = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -257,10 +256,25 @@ anims/EmptyMana = ExtResource( 14 )
 anims/FillMana = SubResource( 4 )
 blend_times = [  ]
 
+[node name="Tween" type="Tween" parent="." index="7"]
+
+repeat = false
+playback_process_mode = 0
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Modifiers" type="Node" parent="." index="8"]
+
+script = ExtResource( 15 )
+
 [connection signal="timeout" from="Timer/Mana" to="." method="_on_ManaTimer_timeout"]
 
 [connection signal="timeout" from="Timer/Indestructable" to="." method="_on_IndestructableTimer_timeout"]
 
 [connection signal="timeout" from="Timer/Throw" to="." method="_on_DodgeTimer_timeout"]
+
+[connection signal="timeout" from="Timer/Dodge" to="." method="_on_Dodge_timeout"]
 
 
