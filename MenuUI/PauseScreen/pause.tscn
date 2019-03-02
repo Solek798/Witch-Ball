@@ -43,10 +43,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 760.0
-margin_top = 466.0
-margin_right = 1160.0
-margin_bottom = 614.0
+margin_left = 735.0
+margin_top = 453.0
+margin_right = 1185.0
+margin_bottom = 626.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -59,14 +59,14 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="Content" type="CenterContainer" parent="Background" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 46.0
-margin_top = 70.0
-margin_right = 354.0
-margin_bottom = 140.0
+anchor_left = 0.5
+anchor_top = 0.30925
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = 30.4998
+margin_right = 173.0
+margin_bottom = 68.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -74,7 +74,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
-_sections_unfolded = [ "Anchor", "Margin" ]
+_sections_unfolded = [ "Margin" ]
 
 [node name="Buttons" type="HBoxContainer" parent="Background/Content" index="0"]
 
@@ -82,16 +82,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 308.0
+margin_right = 347.0
 margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Margin" ]
+size_flags_horizontal = 7
+size_flags_vertical = 5
+custom_constants/separation = 17
+alignment = 1
+_sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
 [node name="Resume" parent="Background/Content/Buttons" index="0" instance=ExtResource( 3 )]
 
@@ -107,8 +108,8 @@ particle_template = ExtResource( 7 )
 
 [node name="Options" parent="Background/Content/Buttons" index="1" instance=ExtResource( 3 )]
 
-margin_left = 78.0
-margin_right = 152.0
+margin_left = 91.0
+margin_right = 165.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Resume")
 focus_neighbour_right = NodePath("../Restart")
@@ -121,8 +122,8 @@ particle_template = ExtResource( 7 )
 
 [node name="Restart" parent="Background/Content/Buttons" index="2" instance=ExtResource( 3 )]
 
-margin_left = 156.0
-margin_right = 230.0
+margin_left = 182.0
+margin_right = 256.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Options")
 focus_neighbour_right = NodePath("../Cancel")
@@ -134,8 +135,8 @@ particle_template = ExtResource( 7 )
 
 [node name="Cancel" parent="Background/Content/Buttons" index="3" instance=ExtResource( 3 )]
 
-margin_left = 234.0
-margin_right = 308.0
+margin_left = 273.0
+margin_right = 347.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Restart")
 focus_neighbour_right = NodePath("../Resume")
