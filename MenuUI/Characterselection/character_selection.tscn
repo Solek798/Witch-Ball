@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/character_selection.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=5]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=6]
-[ext_resource path="res://dynamic_risque_headline.tres" type="DynamicFont" id=7]
+[ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=7]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MenuUI/Characterselection/scarlet.png" type="Texture" id=9]
 [ext_resource path="res://MenuUI/Characterselection/scarlet_hover.png" type="Texture" id=10]
@@ -24,14 +24,13 @@
 [ext_resource path="res://MenuUI/Characterselection/penny_hover.png" type="Texture" id=22]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_penny_selection.tscn" type="PackedScene" id=23]
 [ext_resource path="res://MenuUI/Characterselection/railing.png" type="Texture" id=24]
-[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=25]
-[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=26]
-[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=27]
+[ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=25]
+[ext_resource path="res://MenuUI/Characterselection/play_pressed.png" type="Texture" id=26]
+[ext_resource path="res://MenuUI/Characterselection/play_hover.png" type="Texture" id=27]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=28]
-[ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=29]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=30]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=31]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=32]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=29]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=30]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=31]
 
 [node name="Characterselection" type="CenterContainer"]
 
@@ -70,9 +69,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 228.0
-margin_top = 54.0
+margin_top = 35.0
 margin_right = 1692.0
-margin_bottom = 1026.0
+margin_bottom = 1045.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -88,7 +87,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1464.0
-margin_bottom = 60.0
+margin_bottom = 53.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -109,9 +108,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 64.0
+margin_top = 57.0
 margin_right = 1464.0
-margin_bottom = 822.0
+margin_bottom = 815.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -245,9 +244,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 826.0
+margin_top = 819.0
 margin_right = 1464.0
-margin_bottom = 897.0
+margin_bottom = 935.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -263,9 +262,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 557.0
-margin_top = 7.0
+margin_top = 29.0
 margin_right = 907.0
-margin_bottom = 64.0
+margin_bottom = 86.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -277,9 +276,9 @@ stretch_mode = 0
 
 [node name="Play" parent="Content/Selection" index="1" instance=ExtResource( 8 )]
 
-margin_left = 632.0
-margin_right = 832.0
-margin_bottom = 71.0
+margin_left = 582.0
+margin_right = 882.0
+margin_bottom = 116.0
 focus_neighbour_top = NodePath("../../Characters/Scarlett")
 disabled = true
 texture_normal = ExtResource( 25 )
@@ -295,17 +294,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -28.0
-margin_top = -13.5
-margin_right = 29.0
-margin_bottom = 16.5
+margin_left = -54.5
+margin_top = -30.0
+margin_right = 54.5
+margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 29 )
+custom_fonts/font = ExtResource( 7 )
 text = "Play!"
 align = 1
 valign = 1
@@ -320,9 +319,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 901.0
+margin_top = 939.0
 margin_right = 1464.0
-margin_bottom = 972.0
+margin_bottom = 1010.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -334,9 +333,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 30 )
-texture_pressed = ExtResource( 31 )
-texture_hover = ExtResource( 32 )
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
+texture_hover = ExtResource( 31 )
 _sections_unfolded = [ "Anchor" ]
 
 [connection signal="pressed" from="Content/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
