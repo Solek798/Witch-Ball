@@ -41,9 +41,9 @@ var device
 func setup(id):
 	connect(id + 1)
 	
+	device = id
 	if prefere_controller_mode and Input.get_connected_joypads().size() >= id + 1:
 		mode = CONTROLLER
-		device = id
 	else:
 		mode = KEYBOARD
 

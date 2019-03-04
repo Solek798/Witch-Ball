@@ -16,8 +16,7 @@ signal player_created(player)
 var arena
 var gui
 var backstage
-var player_1_selection
-var player_2_selection
+var player_identities
 
 
 func _ready():
@@ -46,7 +45,7 @@ func initialize():
 func start(controlls):
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		create_player(i + 1, controlls[i])
+		create_player(player_identities)
 	emit_signal("match_started", round_count)
 
 func reset():
@@ -67,15 +66,10 @@ func reset():
 func stop():
 	emit_signal("match_finished", self)
 
-func create_player(id, controll):
+func create_player(identity):
 	#instanciates and sets th player to the specified position
 	var player = player_template.instance()
-	player.id = id
-	player.controll = controll
-	if id == 1:
-		player.selection = player_1_selection
-	if id == 2:
-		player.selection = player_2_selection
+	player.identity = identity
 	# connects all player relevant signals
 	player.connect("bullet_thrown", arena, "_on_bullet_thrown")
 	player.connect("player_damaged", gui, "_on_player_damaged")

@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ) ]
 }
 
-[node name="RoundStart" type="Sprite" index="0"]
+[node name="RoundStart" type="Sprite"]
 
 position = Vector2( 960, 540 )
 scale = Vector2( 0.75, 0.75 )

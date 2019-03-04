@@ -18,11 +18,13 @@ signal player_damaged(player, ammount)
 signal player_died(player)
 signal player_reseted(player)
 
+
 var id
 var selection
 var body
 var controll
 var next_bullet
+var identity
 onready var current_aim = 0.0
 onready var current_movement = Vector2(0, 0)
 onready var health = max_health
@@ -35,6 +37,11 @@ var throw_vector
 var imp
 
 func _ready():
+	self.id = identity.id
+	self.controll = identity.controll
+	self.selection = identity.selection
+	self.throw_vector = identity.side
+	
 	body = selection.instance()
 	add_child(body)
 	$Mana.max_value = max_mana

@@ -56,8 +56,8 @@ func _on_player_reseted(player):
 
 func _on_match_started(round_count):
 	set_spawn_time()
-	#$Timer/PickUpSpawner.start()
-	#$Timer/PickUpSpawnRate.start()
+	$Timer/PickUpSpawner.start()
+	$Timer/PickUpSpawnRate.start()
 
 func _on_SpawnTimer_timeout():
 	$PickUp_Spawn/Follow.unit_offset = randf()
