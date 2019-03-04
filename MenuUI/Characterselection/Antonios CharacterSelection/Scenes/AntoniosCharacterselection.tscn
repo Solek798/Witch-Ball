@@ -21,10 +21,10 @@
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Schadow.png" type="Texture" id=19]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/CirclesBorow (2).png" type="Texture" id=20]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BackCircles (1).png" type="Texture" id=21]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (2).png" type="Texture" id=22]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball2 (2).png" type="Texture" id=22]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/AntoniosCharacterselection.tres" type="Animation" id=23]
-[ext_resource path="res://MenuUI/Characterselection/selection.tscn" type="PackedScene" id=24]
-[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=25]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=24]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/selection.tscn" type="PackedScene" id=25]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (3).png" type="Texture" id=26]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (4).png" type="Texture" id=27]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (1).png" type="Texture" id=28]
@@ -34,7 +34,7 @@
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=32]
 [ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=33]
 
-[node name="AntoniosCharacterselection" type="CenterContainer"]
+[node name="AntoniosCharacterselection" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -82,6 +82,7 @@ stretch_mode = 0
 
 [node name="BAckground" type="TextureRect" parent="." index="1"]
 
+visible = false
 modulate = Color( 0.48621, 0.365829, 0.535156, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -245,83 +246,16 @@ size_flags_vertical = 1
 use_top_left = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VStucktur/HStrucktur/Header" index="0"]
+[node name="Header" type="Label" parent="VStucktur/HStrucktur/Header" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 316.0
+margin_left = 500.0
 margin_top = 2.0
-margin_right = 1283.0
+margin_right = 1100.0
 margin_bottom = 83.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="player1" type="Label" parent="VStucktur/HStrucktur/Header/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 363.0
-margin_bottom = 81.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Player One  "
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="player2" type="Label" parent="VStucktur/HStrucktur/Header/HBoxContainer" index="1"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 367.0
-margin_right = 733.0
-margin_bottom = 81.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Player Two  "
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Header" type="Label" parent="VStucktur/HStrucktur/Header/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 367.0
-margin_right = 967.0
-margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -378,7 +312,6 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
 [node name="Scarlett" parent="VStucktur/HStrucktur/Content/Pannels" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 margin_right = 400.0
 margin_bottom = 800.0
 rect_min_size = Vector2( 400, 800 )
@@ -389,16 +322,17 @@ Amimation_Character_Selection_template = ExtResource( 14 )
 
 [node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="0"]
 
-editor/display_folded = true
-position = Vector2( 197, 404.643 )
+position = Vector2( 200, 404.643 )
 scale = Vector2( 0.4, 0.4 )
+z_index = 1
 script = ExtResource( 15 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="0"]
 
+scale = Vector2( -1, 1 )
 texture = ExtResource( 16 )
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "Transform" ]
 
 [node name="Green" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="1"]
 
@@ -407,7 +341,7 @@ texture = ExtResource( 17 )
 
 [node name="Character2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="2"]
 
-position = Vector2( 14.8539, -75.0697 )
+position = Vector2( 14.8539, -71.744 )
 texture = ExtResource( 18 )
 
 [node name="Shadow" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="3"]
@@ -433,15 +367,14 @@ texture = ExtResource( 20 )
 position = Vector2( 8.53653, 753.395 )
 scale = Vector2( 0.95, 0.95 )
 texture = ExtResource( 21 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="7"]
 
-self_modulate = Color( 0.172549, 0.196078, 0.270588, 1 )
-position = Vector2( 18.5425, 755.011 )
-scale = Vector2( 0.999999, 0.999999 )
+self_modulate = Color( 0.199814, 0.240389, 0.378906, 1 )
+position = Vector2( 23.577, 755.011 )
 texture = ExtResource( 22 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="8"]
 
@@ -453,21 +386,47 @@ playback_speed = 1.0
 anims/AntoniosCharacterselection = ExtResource( 23 )
 blend_times = [  ]
 
-[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="1" instance=ExtResource( 24 )]
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="1"]
 
-margin_left = 59.0
-margin_top = 553.0
-margin_right = 99.0
-margin_bottom = 593.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="2"]
-
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="2" instance=ExtResource( 25 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="3"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 332.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 13 )
+text = "Scarlet "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="Jasmine" parent="VStucktur/HStrucktur/Content/Pannels" index="1" instance=ExtResource( 8 )]
 
@@ -483,10 +442,12 @@ Amimation_Character_Selection_template = ExtResource( 14 )
 
 [node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="0"]
 
+editor/display_folded = true
 position = Vector2( 197, 404.643 )
 scale = Vector2( 0.4, 0.4 )
+z_index = 1
 script = ExtResource( 15 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="0"]
 
@@ -530,10 +491,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="7"]
 
-self_modulate = Color( 0.839216, 0.521569, 0.47451, 1 )
+self_modulate = Color( 1, 0.386719, 0.386719, 1 )
 position = Vector2( 23.577, 755.011 )
 texture = ExtResource( 22 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="8"]
 
@@ -545,25 +506,51 @@ playback_speed = 1.0
 anims/AntoniosCharacterselection = ExtResource( 23 )
 blend_times = [  ]
 
-[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="1" instance=ExtResource( 24 )]
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="1"]
 
-margin_left = 60.0
-margin_top = 557.0
-margin_right = 100.0
-margin_bottom = 597.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="2"]
-
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Lilith" parent="VStucktur/HStrucktur/Content/Pannels" index="2" instance=ExtResource( 8 )]
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="2" instance=ExtResource( 25 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="3"]
 
 editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 307.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 13 )
+text = "Jasmin"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Lilith" parent="VStucktur/HStrucktur/Content/Pannels" index="2" instance=ExtResource( 8 )]
+
 margin_left = 794.0
 margin_right = 1194.0
 margin_bottom = 800.0
@@ -579,8 +566,9 @@ Amimation_Character_Selection_template = ExtResource( 14 )
 editor/display_folded = true
 position = Vector2( 197, 404.643 )
 scale = Vector2( 0.4, 0.4 )
+z_index = 1
 script = ExtResource( 15 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="0"]
 
@@ -640,25 +628,51 @@ playback_speed = 1.0
 anims/AntoniosCharacterselection = ExtResource( 23 )
 blend_times = [  ]
 
-[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="1" instance=ExtResource( 24 )]
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="1"]
 
-margin_left = 60.0
-margin_top = 558.0
-margin_right = 100.0
-margin_bottom = 598.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="2"]
-
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Penny" parent="VStucktur/HStrucktur/Content/Pannels" index="3" instance=ExtResource( 8 )]
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="2" instance=ExtResource( 25 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="3"]
 
 editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 251.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 13 )
+text = "Lilith"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Penny" parent="VStucktur/HStrucktur/Content/Pannels" index="3" instance=ExtResource( 8 )]
+
 margin_left = 1191.0
 margin_right = 1591.0
 margin_bottom = 800.0
@@ -674,8 +688,9 @@ Amimation_Character_Selection_template = ExtResource( 14 )
 editor/display_folded = true
 position = Vector2( 197, 404.643 )
 scale = Vector2( 0.4, 0.4 )
+z_index = 1
 script = ExtResource( 15 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="0"]
 
@@ -721,7 +736,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="7"]
 
-self_modulate = Color( 0.835294, 0.384314, 0.0941176, 1 )
+self_modulate = Color( 1, 0.5625, 0, 1 )
 position = Vector2( 23.833, 756.231 )
 texture = ExtResource( 22 )
 _sections_unfolded = [ "Visibility" ]
@@ -736,25 +751,48 @@ playback_speed = 1.0
 anims/AntoniosCharacterselection = ExtResource( 23 )
 blend_times = [  ]
 
-[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="1" instance=ExtResource( 24 )]
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="1"]
 
-margin_left = 60.0
-margin_top = 561.0
-margin_right = 100.0
-margin_bottom = 601.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="2"]
-
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="2" instance=ExtResource( 25 )]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="3"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Penny/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 284.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 13 )
+text = "Penny"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
 [node name="Footer" type="CenterContainer" parent="VStucktur/HStrucktur" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -774,6 +812,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Play" parent="VStucktur/HStrucktur/Footer" index="0" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 margin_left = 700.0
 margin_top = 11.0
 margin_right = 900.0
