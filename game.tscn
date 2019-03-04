@@ -39,7 +39,7 @@ match_template = ExtResource( 2 )
 [node name="Music" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 3 )
-volume_db = -15.0
+volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
