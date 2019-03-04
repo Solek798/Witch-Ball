@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Penny.png-8c00a2d9902f08a3d9510f20258185fb.stex"
+path="res://.import/characterselection_lilith.png-e328251aac1dd6f52554f4238eb0a302.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Penny.png"
-dest_files=[ "res://.import/Penny.png-8c00a2d9902f08a3d9510f20258185fb.stex" ]
+source_file="res://MenuUI/Characterselection/Character/characterselection_lilith.png"
+dest_files=[ "res://.import/characterselection_lilith.png-e328251aac1dd6f52554f4238eb0a302.stex" ]
 
 [params]
 
