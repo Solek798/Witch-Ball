@@ -21,15 +21,10 @@ export(PackedScene) var penny
 func _ready():
 	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
 	current_mode = PLAYER_1
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.visible = true
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.modulate = player_1_color
 	
 
 func switch_player():
 	current_mode = PLAYER_2
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.visible = false
-	$VStucktur/HStrucktur/Header/HBoxContainer/player2.visible = true
-	$VStucktur/HStrucktur/Header/HBoxContainer/player2.modulate = player_2_color
 
 func end_selection():
 	current_mode = null
@@ -75,7 +70,7 @@ func _on_Lilith_pressed():
 func _on_Penny_pressed():
 	match current_mode:
 		PLAYER_1:
-			$VStucktur/HStrucktur/Content/Pannels/Penny/Selection3.player_1 = true
+			$VStucktur/HStrucktur/Content/Pannels/Penny/Selection.player_1 = true
 			player_1_selection = penny
 			switch_player()
 		PLAYER_2:

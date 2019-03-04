@@ -108,6 +108,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
 [node name="Start" parent="Content/C1/Buttons" index="0" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_right = 300.0
 margin_bottom = 116.0
 focus_neighbour_top = NodePath("../Quit")
@@ -148,6 +149,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_col
 
 [node name="Options" parent="Content/C1/Buttons" index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 113.0
 margin_right = 250.0
@@ -190,6 +192,7 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Credits" parent="Content/C1/Buttons" index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 187.0
 margin_right = 250.0
@@ -232,6 +235,7 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Quit" parent="Content/C1/Buttons" index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 261.0
 margin_right = 250.0
