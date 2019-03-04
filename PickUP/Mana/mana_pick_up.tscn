@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 96.0592
 
-[node name="ManaPickUp" instance=ExtResource( 1 )]
+[node name="ManaPickUp" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 mana_gain = 5
