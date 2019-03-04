@@ -70,7 +70,7 @@ func _on_Lilith_pressed():
 func _on_Penny_pressed():
 	match current_mode:
 		PLAYER_1:
-			$VStucktur/HStrucktur/Content/Pannels/Penny/Selection3.player_1 = true
+			$VStucktur/HStrucktur/Content/Pannels/Penny/Selection.player_1 = true
 			player_1_selection = penny
 			switch_player()
 		PLAYER_2:
