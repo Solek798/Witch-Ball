@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://dynamic_risque_small.tres" type="DynamicFont" id=1]
+
+[node name="Characterselection" type="Label"]
+
+anchor_left = 0.5
+anchor_top = 0.98704
+anchor_right = 0.50207
+anchor_bottom = 1.0
+margin_left = -58.0
+margin_top = -0.00317383
+margin_right = 54.0256
+margin_bottom = 3.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Rematch"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_styles" ]
+
+
