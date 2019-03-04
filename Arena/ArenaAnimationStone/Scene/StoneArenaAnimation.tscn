@@ -16,9 +16,9 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "BodenBackgroung"
-length = 3.0
+length = 5.0
 loop = true
-step = 0.1
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("StoneFront/Stone/Voluten:modulate")
 tracks/0/interp = 1
@@ -26,10 +26,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5, 3 ),
+"times": PoolRealArray( 0, 2.5, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.905579, 0.644531, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.964706, 0.972549, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("StoneBack/Stone/Voluten:modulate")
@@ -38,10 +38,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5, 3 ),
+"times": PoolRealArray( 0, 2.5, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.905579, 0.644531, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.956863, 0.968627, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="StoneArenaAnimation" type="Node2D" index="0"]
@@ -67,7 +67,6 @@ _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="StoneBack" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 z_index = -21
 _sections_unfolded = [ "Z Index" ]
 
@@ -79,13 +78,13 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneBack/Stone" index="0"]
 
+modulate = Color( 0.687844, 0.983332, 0.987877, 1 )
 position = Vector2( 0, 113.843 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="StoneFront" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 z_index = -2
 _sections_unfolded = [ "Z Index" ]
 
@@ -97,6 +96,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneFront/Stone" index="0"]
 
+modulate = Color( 0.687844, 0.986362, 0.989393, 1 )
 position = Vector2( 67.9733, -684.118 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]

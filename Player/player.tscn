@@ -158,8 +158,9 @@ _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Trans
 
 [node name="Smoke" parent="." index="2" instance=ExtResource( 10 )]
 
+position = Vector2( 0, 5.37258 )
 z_index = -18
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
 
 [node name="Shadow" type="Sprite" parent="." index="3"]
 
