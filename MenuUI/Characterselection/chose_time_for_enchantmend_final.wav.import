@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/chose_time_for_enchantmend_final.wav-6586c3a9fa2e0f1ebcb9e314c56daebe.sample"
+
+[deps]
+
+source_file="res://MenuUI/Characterselection/chose_time_for_enchantmend_final.wav"
+dest_files=[ "res://.import/chose_time_for_enchantmend_final.wav-6586c3a9fa2e0f1ebcb9e314c56daebe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
