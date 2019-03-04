@@ -1,6 +1,6 @@
 [gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/AntoniosCharacterselection.gd" type="Script" id=1]
+[ext_resource path="res://MenuUI/Characterselection/character_selection.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=4]
@@ -34,7 +34,7 @@
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=32]
 [ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=33]
 
-[node name="AntoniosCharacterselection" type="CenterContainer" index="0"]
+[node name="AntoniosCharacterselection" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -141,7 +141,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="VStucktur/Back" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -176,7 +175,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="CenterContainer2" type="CenterContainer" parent="VStucktur/Back/HBoxContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -312,6 +310,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
 [node name="Scarlett" parent="VStucktur/HStrucktur/Content/Pannels" index="0" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 margin_right = 400.0
 margin_bottom = 800.0
 rect_min_size = Vector2( 400, 800 )
@@ -430,6 +429,7 @@ _sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="Jasmine" parent="VStucktur/HStrucktur/Content/Pannels" index="1" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 margin_left = 397.0
 margin_right = 797.0
 margin_bottom = 800.0
@@ -551,6 +551,7 @@ _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 [node name="Lilith" parent="VStucktur/HStrucktur/Content/Pannels" index="2" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 margin_left = 794.0
 margin_right = 1194.0
 margin_bottom = 800.0
@@ -673,6 +674,7 @@ _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 [node name="Penny" parent="VStucktur/HStrucktur/Content/Pannels" index="3" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 margin_left = 1191.0
 margin_right = 1591.0
 margin_bottom = 800.0

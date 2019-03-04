@@ -41,9 +41,9 @@ var device
 func setup(id):
 	connect(id + 1)
 	
+	device = id
 	if prefere_controller_mode and Input.get_connected_joypads().size() >= id + 1:
 		mode = CONTROLLER
-		device = id
 	else:
 		mode = KEYBOARD
 
@@ -101,6 +101,7 @@ func get_aim():
 		aim = get_controller_input(RIGHT)
 		# TEMP
 		if device == 1:
+			print("Device")
 			aim.x *= -1
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):

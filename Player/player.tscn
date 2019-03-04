@@ -79,7 +79,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 1, 0.0859375, 0.723765 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.685059 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.696157 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -252,16 +252,7 @@ anims/EmptyMana = ExtResource( 14 )
 anims/FillMana = SubResource( 4 )
 blend_times = [  ]
 
-[node name="Tween" type="Tween" parent="." index="7"]
-
-repeat = false
-playback_process_mode = 0
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="Modifiers" type="Node" parent="." index="8"]
+[node name="Modifiers" type="Node" parent="." index="7"]
 
 script = ExtResource( 15 )
 

@@ -44,20 +44,19 @@ func _on_bullet_thrown(bullet):
 	add_child(bullet)
 
 func _on_player_created(player):
-	player.position = $Position.get_by_id(player.id)
-	# TEMP
-	if player.id == 2:
-		player.scale.x *= -1
+	player.position = $Position.get_by_id(player.identity.id)
+	
+	player.scale *= player.identity.side
 	add_child(player)
 	players.append(player)
 
 func _on_player_reseted(player):
-	player.position = $Position.get_by_id(player.id)
+	player.position = $Position.get_by_id(player.identity.id)
 
 func _on_match_started(round_count):
 	set_spawn_time()
-	#$Timer/PickUpSpawner.start()
-	#$Timer/PickUpSpawnRate.start()
+	$Timer/PickUpSpawner.start()
+	$Timer/PickUpSpawnRate.start()
 
 func _on_SpawnTimer_timeout():
 	$PickUp_Spawn/Follow.unit_offset = randf()

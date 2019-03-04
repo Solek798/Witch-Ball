@@ -10,11 +10,9 @@ signal restart_requested
 signal stop_requested
 
 onready var manage_input = true
-onready var current_controll = get_parent().get_node("Controlls1")
+var controlls
+var current_controll
 
-
-func _ready():
-	pass
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") and not self.visible:
@@ -35,6 +33,13 @@ func set_blur(amount, darknes):
 	self.material.set_shader_param("amount", amount)
 	self.material.set_shader_param("darknes", darknes)
 
+func switch_controlls(id):
+	if id < controlls.size():
+		current_controll = controlls[id]
+		return current_controll
+	else:
+		return null
+
 func switch_scene(next_scene_template, return_scene):
 	if not next_scene_template:
 		return
@@ -43,9 +48,9 @@ func switch_scene(next_scene_template, return_scene):
 		new_scene.return_scene_template = return_scene
 	add_child(new_scene)
 
-func confirm_selection(selection):
+func confirm_selection(identities):
 	close()
-	get_parent().start_match(selection)
+	get_parent().start_match(identities)
 
 func request_restart():
 	emit_signal("restart_requested")
@@ -76,7 +81,7 @@ func tutorial():
 		
 		yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
 		close()
-	
+	print("tutorial_exited")
 	emit_signal("tutorial_exited")
 
 func manage_input():
