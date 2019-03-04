@@ -123,7 +123,6 @@ _sections_unfolded = [ "custom_constants" ]
 
 [node name="Scarlett" parent="Content/Characters" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 margin_right = 378.0
 margin_bottom = 758.0
 focus_neighbour_left = NodePath("../Penny")
@@ -149,7 +148,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Voicelines"
 
 [node name="Jasmine" parent="Content/Characters" index="1" instance=ExtResource( 8 )]
 
@@ -178,7 +177,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Voicelines"
 
 [node name="Lilith" parent="Content/Characters" index="2" instance=ExtResource( 8 )]
 
@@ -207,11 +206,10 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Voicelines"
 
 [node name="Penny" parent="Content/Characters" index="3" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 margin_left = 1086.0
 margin_right = 1464.0
 margin_bottom = 758.0
@@ -237,7 +235,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Voicelines"
 
 [node name="Selection" type="CenterContainer" parent="Content" index="2"]
 
