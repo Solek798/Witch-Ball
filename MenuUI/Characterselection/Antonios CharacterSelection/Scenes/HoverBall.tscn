@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/SelcktionBulletMoveCh1ToCh2.tres" type="Animation" id=1]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (2).png" type="Texture" id=2]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/RedSelect.png" type="Texture" id=2]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BlueSelect.png" type="Texture" id=3]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (2).png" type="Texture" id=4]
 
 [node name="HoverBall" type="Control"]
 
@@ -27,16 +29,36 @@ playback_speed = 1.0
 anims/SelcktionBulletMoveCh1ToCh2 = ExtResource( 1 )
 blend_times = [  ]
 
-[node name="HoverBall" type="Node2D" parent="." index="1"]
+[node name="Player2" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( 200, 400 )
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Player1" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 200, 400 )
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="HoverBall" type="Node2D" parent="." index="3"]
 
 editor/display_folded = true
 position = Vector2( 199.867, 708.159 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Control" type="Sprite" parent="HoverBall" index="0"]
 
 modulate = Color( 1, 1, 1, 0.292824 )
 scale = Vector2( 0.4, -0.4 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Rect", "Transform", "Visibility" ]
 
 [node name="Control2" type="Sprite" parent="HoverBall" index="1"]
@@ -44,7 +66,7 @@ _sections_unfolded = [ "Rect", "Transform", "Visibility" ]
 modulate = Color( 1, 1, 1, 0.292824 )
 position = Vector2( 6.0293, 0 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Rect", "Transform", "Visibility" ]
 
 

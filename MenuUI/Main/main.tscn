@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MenuUI/Main/main.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Main/Title.png" type="Texture" id=2]
@@ -6,15 +6,16 @@
 [ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/Characterselection/play_pressed.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/Characterselection/play_hover.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/Characterselection/character_selection.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/AntoniosCharacterselection.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_Big.tscn" type="PackedScene" id=8]
 [ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=9]
 [ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=10]
 [ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=11]
 [ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=12]
 [ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=13]
-[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=14]
-[ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=15]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=14]
+[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=15]
+[ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=16]
 
 [node name="Main" type="CenterContainer" index="0"]
 
@@ -147,6 +148,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_col
 
 [node name="Options" parent="Content/C1/Buttons" index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 113.0
 margin_right = 250.0
@@ -159,7 +161,7 @@ texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 _sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
 next_scene = ExtResource( 13 )
-particle_template = ExtResource( 8 )
+particle_template = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Options" index="0"]
 
@@ -177,7 +179,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 14 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Options"
 align = 1
@@ -189,6 +191,7 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Credits" parent="Content/C1/Buttons" index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 187.0
 margin_right = 250.0
@@ -200,8 +203,8 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 _sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
-next_scene = ExtResource( 15 )
-particle_template = ExtResource( 8 )
+next_scene = ExtResource( 16 )
+particle_template = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Credits" index="0"]
 
@@ -219,7 +222,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 14 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Credits"
 align = 1
@@ -231,6 +234,7 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Quit" parent="Content/C1/Buttons" index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 50.0
 margin_top = 261.0
 margin_right = 250.0
@@ -242,7 +246,7 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 _sections_unfolded = [ "Focus", "Size Flags", "Textures" ]
-particle_template = ExtResource( 8 )
+particle_template = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Content/C1/Buttons/Quit" index="0"]
 
@@ -260,7 +264,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 14 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "Quit"
 align = 1
