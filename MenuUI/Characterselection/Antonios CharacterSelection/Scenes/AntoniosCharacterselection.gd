@@ -21,15 +21,10 @@ export(PackedScene) var penny
 func _ready():
 	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
 	current_mode = PLAYER_1
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.visible = true
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.modulate = player_1_color
 	
 
 func switch_player():
 	current_mode = PLAYER_2
-	$VStucktur/HStrucktur/Header/HBoxContainer/player1.visible = false
-	$VStucktur/HStrucktur/Header/HBoxContainer/player2.visible = true
-	$VStucktur/HStrucktur/Header/HBoxContainer/player2.modulate = player_2_color
 
 func end_selection():
 	current_mode = null
