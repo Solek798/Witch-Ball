@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GUI/round_start.gd" type="Script" id=1]
-[ext_resource path="res://GUI/RoundStart/countdown_1.png" type="Texture" id=2]
+[ext_resource path="res://GUI/RoundStart/contdown_3.png" type="Texture" id=2]
 [ext_resource path="res://GUI/RoundStart/countdown_2.png" type="Texture" id=3]
-[ext_resource path="res://GUI/RoundStart/contdown_3.png" type="Texture" id=4]
+[ext_resource path="res://GUI/RoundStart/countdown_1.png" type="Texture" id=4]
 [ext_resource path="res://GUI/RoundStart/countdown_go.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ), Vector2( 0.4, 0.4 ), Vector2( 0.75, 0.75 ) ]
 }
 
-[node name="RoundStart" type="Sprite" index="0"]
+[node name="RoundStart" type="Sprite"]
 
 position = Vector2( 960, 540 )
 scale = Vector2( 0.75, 0.75 )

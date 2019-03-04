@@ -79,7 +79,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 1, 0.0859375, 0.723765 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.685059 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.696157 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 z_index = 6
@@ -95,11 +95,11 @@ bullet_big_template = ExtResource( 4 )
 movement_speed = 425
 aim_speed = 3.5
 max_health = 5
-dodge_distance = 300
+dodge_distance = 250
 max_mana = 50
 start_mana = 25
 throw_mana = 5
-dodge_mana = 2
+dodge_mana = 3
 mana_increase = 1
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." index="0"]
@@ -215,8 +215,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Timer" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="Mana" type="Timer" parent="Timer" index="0"]
 
 process_mode = 1
@@ -227,7 +225,7 @@ autostart = true
 [node name="Indestructable" type="Timer" parent="Timer" index="1"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 1.3
 one_shot = true
 autostart = false
 
