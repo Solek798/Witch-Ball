@@ -28,7 +28,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="Texture" parent="." index="3"]
 
-position = Vector2( 8.73416, -7.53963 )
+position = Vector2( 0.392662, 0.00744247 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 
