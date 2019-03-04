@@ -79,7 +79,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 1, 0.0859375, 0.723765 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.685059 ), Color( 1, 1, 1, 0 ), Color( 0, 1, 0.0859375, 0.696157 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.25, 1.25 )
 z_index = 6
@@ -95,7 +95,7 @@ bullet_big_template = ExtResource( 4 )
 movement_speed = 425
 aim_speed = 3.5
 max_health = 5
-dodge_distance = 225
+dodge_distance = 250
 max_mana = 50
 start_mana = 25
 throw_mana = 5
@@ -131,38 +131,29 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Fast" type="Sprite" parent="Aim/Special" index="0"]
 
+editor/display_folded = true
 visible = false
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Png" type="Sprite" parent="Aim/Special/Fast" index="0"]
+[node name="FastEffect" parent="Aim/Special/Fast" index="0" instance=ExtResource( 7 )]
 
-editor/display_folded = true
-position = Vector2( 2.77902, -0.79364 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="FastEffect" parent="Aim/Special/Fast/Png" index="0" instance=ExtResource( 7 )]
-
-position = Vector2( -72.5278, 68.5259 )
+position = Vector2( -69.7487, 67.7322 )
 scale = Vector2( 2, 2 )
 
 [node name="Big" type="Sprite" parent="Aim/Special" index="1"]
 
+editor/display_folded = true
 visible = false
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Png" type="Sprite" parent="Aim/Special/Big" index="0"]
-
-editor/display_folded = true
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Shockwafe" parent="Aim/Special/Big/Png" index="0" instance=ExtResource( 9 )]
+[node name="Shockwafe" parent="Aim/Special/Big" index="0" instance=ExtResource( 9 )]
 
 modulate = Color( 0.403922, 0.243137, 0.815686, 1 )
-position = Vector2( 2.38202, 18.2539 )
+position = Vector2( 2.38196, 18.2539 )
 scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
