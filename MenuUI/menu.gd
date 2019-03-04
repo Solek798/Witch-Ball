@@ -54,6 +54,7 @@ func request_stop():
 	emit_signal("stop_requested")
 
 func menu():
+	$Background.visible = true
 	open()
 	set_blur(2.5, 0.0)
 	add_child(main_scene_template.instance())
@@ -65,6 +66,7 @@ func pause():
 	add_child(pause_scene_template.instance())
 
 func tutorial():
+	$Background.visible = false
 	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
 		open(false)
 		set_blur(2.5, 0.25)

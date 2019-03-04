@@ -11,7 +11,6 @@ func _ready():
 func _on_Start_pressed():
 	if get_parent().has_method("switch_scene"):
 		get_parent().switch_scene($Content/C1/Buttons/Start.next_scene, own_template)
-		$Background
 		self.queue_free()
 
 func _on_Options_pressed():
