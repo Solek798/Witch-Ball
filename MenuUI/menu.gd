@@ -57,6 +57,7 @@ func menu():
 	open()
 	set_blur(2.5, 0.0)
 	add_child(main_scene_template.instance())
+	get_parent()
 
 func pause():
 	open()
