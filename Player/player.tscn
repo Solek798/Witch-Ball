@@ -110,6 +110,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Aim" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, -55 )
 scale = Vector2( 0.75, 0.75 )
 _sections_unfolded = [ "Transform" ]
@@ -123,12 +124,14 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Special" type="Node2D" parent="Aim" index="1"]
 
+editor/display_folded = true
 position = Vector2( 248.266, 1.43688 )
 scale = Vector2( 1.33333, 1.33333 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Fast" type="Sprite" parent="Aim/Special" index="0"]
 
+editor/display_folded = true
 visible = false
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 6 )
@@ -141,6 +144,8 @@ scale = Vector2( 2, 2 )
 
 [node name="Big" type="Sprite" parent="Aim/Special" index="1"]
 
+editor/display_folded = true
+visible = false
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z Index" ]
