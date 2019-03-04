@@ -11,15 +11,10 @@ func _ready():
 	$Music.play()
 	
 	for id in controll_count:
-		
 		var controll = controll_template.instance()
 		$Controlls.add_child(controll)
 		controll.setup(id)
-		print(controll)
-	print("Controlls:")
-	for con in $Controlls.get_children():
-		print("Device: ", con.device)
-	print()
+	
 	$Menu.controlls = $Controlls.get_children()
 	$Menu.switch_controlls(0)
 
@@ -32,7 +27,7 @@ func start_match(identities):
 	new_match.connect("match_instanciated", $Menu, "tutorial")
 	$Menu.connect("restart_requested", new_match, "reset")
 	$Menu.connect("stop_requested", new_match, "stop")
-	$Menu.connect("tutorial_exited", new_match, "start", $Controlls.get_children())
+	$Menu.connect("tutorial_exited", new_match, "start")
 	add_child_below_node($Music, new_match)
 	
 	$Music.stop()

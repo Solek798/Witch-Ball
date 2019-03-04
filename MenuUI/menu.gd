@@ -34,7 +34,6 @@ func set_blur(amount, darknes):
 	self.material.set_shader_param("darknes", darknes)
 
 func switch_controlls(id):
-	print("ID: ", id)
 	if id < controlls.size():
 		current_controll = controlls[id]
 		return current_controll
@@ -78,7 +77,7 @@ func tutorial():
 		
 		yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
 		close()
-	
+	print("tutorial_exited")
 	emit_signal("tutorial_exited")
 
 func manage_input():

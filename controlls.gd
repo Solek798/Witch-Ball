@@ -101,6 +101,7 @@ func get_aim():
 		aim = get_controller_input(RIGHT)
 		# TEMP
 		if device == 1:
+			print("Device")
 			aim.x *= -1
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):

@@ -2,8 +2,10 @@ extends Container
 
 export(PackedScene) var life_template
 
-func add_image(player_id, image):
-	get_node("Player%d/Image" % player_id).texture = image
+func add_image(player_identity, image):
+	var sprite = get_node("Player%d/Image" % player_identity.id)
+	sprite.texture = image
+	sprite.scale *= player_identity.side
 
 func add_life(player_id, ammount):
 	for i in ammount:

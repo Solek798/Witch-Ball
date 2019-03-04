@@ -22,13 +22,12 @@ func _ready():
 	
 	#if get_parent().has_method("get_current_controll"):
 	choosing_player = get_parent().current_controll
-	print(choosing_player)
 
 func switch_player():
 	if get_parent().has_method("switch_controlls"):
 		
 		var next_player = get_parent().switch_controlls(choosing_player.device + 1)
-		print(next_player)
+		
 		if not next_player:
 			end_selection()
 			get_parent().switch_controlls(0)
@@ -36,7 +35,6 @@ func switch_player():
 			choosing_player = next_player
 
 func end_selection():
-	print("Ende")
 	#$Content/Selection/Railing.modulate = Color("ffffff")
 	$Content/Selection/Play.disabled = false
 

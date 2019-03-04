@@ -42,10 +42,11 @@ func initialize():
 	backstage.connect("round_finished", arena, "_on_round_finished")
 	gui.connect("player_won_match", self, "_on_player_won_match")
 
-func start(controlls):
+func start():
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		create_player(player_identities)
+		print(i)
+		create_player(player_identities[i])
 	emit_signal("match_started", round_count)
 
 func reset():
