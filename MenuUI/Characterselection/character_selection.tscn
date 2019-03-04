@@ -8,20 +8,20 @@
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=6]
 [ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=7]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=8]
-[ext_resource path="res://MenuUI/Characterselection/scarlet.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/Characterselection/scarlet_hover.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_scarlet.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_scarlet_selected.png" type="Texture" id=10]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_scarlet_selection.tscn" type="PackedScene" id=11]
 [ext_resource path="res://MenuUI/Characterselection/selection.tscn" type="PackedScene" id=12]
 [ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=13]
-[ext_resource path="res://MenuUI/Characterselection/jasmine.png" type="Texture" id=14]
-[ext_resource path="res://MenuUI/Characterselection/jasmine_hover.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_jasmin.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_jasmin_selected.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_jasmine_selection.tscn" type="PackedScene" id=16]
 [ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=17]
-[ext_resource path="res://MenuUI/Characterselection/lilith.png" type="Texture" id=18]
-[ext_resource path="res://MenuUI/Characterselection/lilith_hover.png" type="Texture" id=19]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_lilith.png" type="Texture" id=18]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_lilith_selected.png" type="Texture" id=19]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_lilith_selection.tscn" type="PackedScene" id=20]
-[ext_resource path="res://MenuUI/Characterselection/penny.png" type="Texture" id=21]
-[ext_resource path="res://MenuUI/Characterselection/penny_hover.png" type="Texture" id=22]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_penny.png" type="Texture" id=21]
+[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_penny_selected.png" type="Texture" id=22]
 [ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_penny_selection.tscn" type="PackedScene" id=23]
 [ext_resource path="res://MenuUI/Characterselection/railing.png" type="Texture" id=24]
 [ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=25]
@@ -32,7 +32,7 @@
 [ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=30]
 [ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=31]
 
-[node name="Characterselection" type="CenterContainer"]
+[node name="Characterselection" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -190,6 +190,7 @@ focus_neighbour_right = NodePath("../Penny")
 focus_neighbour_bottom = NodePath("../../Selection/Play")
 texture_normal = ExtResource( 18 )
 texture_hover = ExtResource( 19 )
+_sections_unfolded = [ "Textures" ]
 Amimation_Character_Selection_template = ExtResource( 20 )
 
 [node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 12 )]
