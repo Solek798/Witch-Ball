@@ -1,14 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://Match/match.tscn" type="PackedScene" id=2]
 [ext_resource path="res://menu_music.wav" type="AudioStream" id=3]
-[ext_resource path="res://Background.png" type="Texture" id=4]
-[ext_resource path="res://MenuUI/menu.gd" type="Script" id=5]
-[ext_resource path="res://MenuUI/Main/main.tscn" type="PackedScene" id=6]
-[ext_resource path="res://MenuUI/PauseScreen/pause.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/Tutorial/tutorial.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Player/controlls.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/menu.gd" type="Script" id=4]
+[ext_resource path="res://MenuUI/Main/main.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MenuUI/PauseScreen/pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MenuUI/Tutorial/tutorial.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/controlls.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Shader" id=1]
 
@@ -32,7 +31,7 @@ shader_param/amount = 2.5
 shader_param/darknes = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
@@ -46,12 +45,7 @@ autoplay = false
 mix_target = 0
 bus = "Music"
 
-[node name="Background" type="Sprite" parent="." index="1"]
-
-position = Vector2( 962.881, 537.485 )
-texture = ExtResource( 4 )
-
-[node name="Menu" type="ColorRect" parent="." index="2"]
+[node name="Menu" type="ColorRect" parent="." index="1"]
 
 pause_mode = 2
 material = SubResource( 2 )
@@ -66,21 +60,21 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 5 )
-main_scene_template = ExtResource( 6 )
-pause_scene_template = ExtResource( 7 )
-tutorial_template = ExtResource( 8 )
+script = ExtResource( 4 )
+main_scene_template = ExtResource( 5 )
+pause_scene_template = ExtResource( 6 )
+tutorial_template = ExtResource( 7 )
 
-[node name="Main" parent="Menu" index="0" instance=ExtResource( 6 )]
+[node name="Main" parent="Menu" index="0" instance=ExtResource( 5 )]
 
 margin_left = 1.0
 margin_top = -3.0
 margin_right = 1.0
 margin_bottom = -3.0
 
-[node name="Controlls1" parent="." index="3" instance=ExtResource( 9 )]
+[node name="Controlls1" parent="." index="2" instance=ExtResource( 8 )]
 
-[node name="Controlls2" parent="." index="4" instance=ExtResource( 9 )]
+[node name="Controlls2" parent="." index="3" instance=ExtResource( 8 )]
 
 _sections_unfolded = [ "Rect", "Transform" ]
 
