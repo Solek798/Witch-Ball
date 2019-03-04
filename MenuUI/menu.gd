@@ -68,6 +68,7 @@ func pause():
 func tutorial():
 	#$Background.visible = false
 	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
+		$Background.visible = false
 		open(false)
 		set_blur(2.5, 0.25)
 		var tutorial = tutorial_template.instance()
