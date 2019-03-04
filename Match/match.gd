@@ -53,7 +53,7 @@ func reset():
 	# get controlls
 	var controlls = []
 	for player in arena.players:
-		controlls.append(player.controll)
+		controlls.append(player.identity.controll)
 	
 	# delete "old" match
 	arena.free()
@@ -84,6 +84,6 @@ func create_player(identity):
 	emit_signal("player_created", player)
 
 func _on_player_won_match(player):
-	print("Spieler ", player.id, " kriegt einen Keks")
+	print("Spieler ", player.identity.id, " kriegt einen Keks")
 	yield(backstage, "round_finished")
 	stop()

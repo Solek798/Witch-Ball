@@ -19,6 +19,7 @@ func _ready():
 	$Menu.switch_controlls(0)
 
 func start_match(identities):
+	print(identities)
 	var new_match = match_template.instance()
 	new_match.player_identities = identities
 	
