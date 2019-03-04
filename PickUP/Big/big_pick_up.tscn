@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 96.7643
 
-[node name="BigPickUp" index="0" instance=ExtResource( 1 )]
+[node name="BigPickUp" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -29,7 +29,6 @@ scale = Vector2( 0.483194, 0.483194 )
 [node name="Texture" parent="." index="3"]
 
 modulate = Color( 1, 1, 1, 0.949859 )
-scale = Vector2( 0.483194, 0.483194 )
 texture = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_BigPickUp_body_entered"]
