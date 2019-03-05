@@ -1,19 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BlueSelect.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/RedSelect.png" type="Texture" id=3]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/5Panel (5).png" type="Texture" id=4]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Greenpanel (1).png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (2).png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Schadow.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/CirclesBorow (2).png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BackCircles (1).png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (2).png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/AntoniosCharacterselection.tres" type="Animation" id=11]
-[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=12]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=4]
 
-[node name="Selection" type="Control"]
+[node name="Selection" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -45,73 +37,7 @@ scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PanelAnimations" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( 200, 404.643 )
-scale = Vector2( 0.4, 0.4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Panel" type="Sprite" parent="PanelAnimations" index="0"]
-
-scale = Vector2( -1, 1 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Rect", "Transform" ]
-
-[node name="Green" type="Sprite" parent="PanelAnimations" index="1"]
-
-position = Vector2( 14.854, -155.402 )
-texture = ExtResource( 5 )
-
-[node name="Character2" type="Sprite" parent="PanelAnimations" index="2"]
-
-position = Vector2( 14.8539, -71.744 )
-texture = ExtResource( 6 )
-
-[node name="Shadow" type="Sprite" parent="PanelAnimations" index="3"]
-
-position = Vector2( 14.854, -155.402 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Shadow2" type="Sprite" parent="PanelAnimations" index="4"]
-
-position = Vector2( 14.854, -155.402 )
-scale = Vector2( 1, -1 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Ring" type="Sprite" parent="PanelAnimations" index="5"]
-
-position = Vector2( 8.53653, 676.682 )
-texture = ExtResource( 8 )
-
-[node name="Point" type="Sprite" parent="PanelAnimations" index="6"]
-
-position = Vector2( 8.53653, 753.395 )
-scale = Vector2( 0.95, 0.95 )
-texture = ExtResource( 9 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="Bullet" type="Sprite" parent="PanelAnimations" index="7"]
-
-self_modulate = Color( 0.199814, 0.240389, 0.378906, 1 )
-position = Vector2( 23.577, 755.011 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelAnimations" index="8"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/AntoniosCharacterselection = ExtResource( 11 )
-blend_times = [  ]
-
-[node name="Node2D" type="Node2D" parent="." index="3"]
+[node name="Node2D" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
 z_index = 2
@@ -133,7 +59,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -155,7 +81,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
