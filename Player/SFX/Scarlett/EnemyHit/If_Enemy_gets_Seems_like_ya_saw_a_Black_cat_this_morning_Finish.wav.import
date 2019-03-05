@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_Seems_like_ya_saw_a_Black_cat_this_morning_Finish.wav-7a1d2677917d9123599b7bde57489cce.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Seems_like_ya_saw_a_Black_cat_this_morning_Finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_Seems_like_ya_saw_a_Black_cat_this_morning_Finish.wav-7a1d2677917d9123599b7bde57489cce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

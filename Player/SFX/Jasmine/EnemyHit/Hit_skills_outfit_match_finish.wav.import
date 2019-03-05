@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_skills_outfit_match_finish.wav-8d83e5301739ed747c84d8dfb8061e1d.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/EnemyHit/Hit_skills_outfit_match_finish.wav"
+dest_files=[ "res://.import/Hit_skills_outfit_match_finish.wav-8d83e5301739ed747c84d8dfb8061e1d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

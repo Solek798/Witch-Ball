@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Game_won_Cheer_up!_There_can_only be_one_winner_3_finish.wav-308e7f73191f9c000b077f2a7c5c681f.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/MatchWon/If_Game_won_Cheer_up!_There_can_only be_one_winner_3_finish.wav"
+dest_files=[ "res://.import/If_Game_won_Cheer_up!_There_can_only be_one_winner_3_finish.wav-308e7f73191f9c000b077f2a7c5c681f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

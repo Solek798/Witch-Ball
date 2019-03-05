@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_You_should_be_lucky_that_this_wasn_t_a_curse_finish.wav-2495ddde662052dbe250dc68539d5365.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_You_should_be_lucky_that_this_wasn_t_a_curse_finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_You_should_be_lucky_that_this_wasn_t_a_curse_finish.wav-2495ddde662052dbe250dc68539d5365.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

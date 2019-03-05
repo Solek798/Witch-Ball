@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_curse_finish.wav-af12afd999f072f14e692146dd24bbc8.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Lilith/EnemyHit/Hit_curse_finish.wav"
+dest_files=[ "res://.import/Hit_curse_finish.wav-af12afd999f072f14e692146dd24bbc8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

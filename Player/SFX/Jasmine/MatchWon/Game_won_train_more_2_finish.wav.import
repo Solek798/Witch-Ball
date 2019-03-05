@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Game_won_train_more_2_finish.wav-7008dc01ff706f1b977d9e28f60ac130.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/MatchWon/Game_won_train_more_2_finish.wav"
+dest_files=[ "res://.import/Game_won_train_more_2_finish.wav-7008dc01ff706f1b977d9e28f60ac130.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Throw_7.wav-03c5d3bedf0a3b76a227ffe338311ffb.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Lilith/Throw/Throw_7.wav"
+dest_files=[ "res://.import/Throw_7.wav-03c5d3bedf0a3b76a227ffe338311ffb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

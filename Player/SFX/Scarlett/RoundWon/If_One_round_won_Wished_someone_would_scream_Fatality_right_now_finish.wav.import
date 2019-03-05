@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_One_round_won_Wished_someone_would_scream_Fatality_right_now_finish.wav-261c2ad16438e93429c669448d1e70ac.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Wished_someone_would_scream_Fatality_right_now_finish.wav"
+dest_files=[ "res://.import/If_One_round_won_Wished_someone_would_scream_Fatality_right_now_finish.wav-261c2ad16438e93429c669448d1e70ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

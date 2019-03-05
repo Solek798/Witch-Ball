@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Throw_1.wav-c800a76c84a5d9a53a9139c3c4aa13f4.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/Throw/Throw_1.wav"
+dest_files=[ "res://.import/Throw_1.wav-c800a76c84a5d9a53a9139c3c4aa13f4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

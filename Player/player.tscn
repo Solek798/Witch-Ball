@@ -211,8 +211,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Timer" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="Mana" type="Timer" parent="Timer" index="0"]
 
 process_mode = 1

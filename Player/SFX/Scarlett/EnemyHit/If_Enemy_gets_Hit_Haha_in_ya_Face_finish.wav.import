@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_Hit_Haha_in_ya_Face_finish.wav-85cac84509a4709216c6760bd01e95cc.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Haha_in_ya_Face_finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_Hit_Haha_in_ya_Face_finish.wav-85cac84509a4709216c6760bd01e95cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

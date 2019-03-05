@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Strong_Throw_2.wav-b28c25dd838deb93103c6b3222b45642.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Lilith/Throw/Strong_Throw_2.wav"
+dest_files=[ "res://.import/Strong_Throw_2.wav-b28c25dd838deb93103c6b3222b45642.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

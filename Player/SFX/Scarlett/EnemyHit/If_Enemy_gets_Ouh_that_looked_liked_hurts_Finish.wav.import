@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_Ouh_that_looked_liked_hurts_Finish.wav-f66f1b94bdfd46a4ccdb6e00775f3b80.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Ouh_that_looked_liked_hurts_Finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_Ouh_that_looked_liked_hurts_Finish.wav-f66f1b94bdfd46a4ccdb6e00775f3b80.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
