@@ -32,7 +32,7 @@ shader_param/amount = 2.5
 shader_param/darknes = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
@@ -71,6 +71,7 @@ tutorial_template = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="Menu" index="0"]
 
+visible = false
 position = Vector2( 960.588, 539.699 )
 z_index = -1
 texture = ExtResource( 9 )
@@ -78,6 +79,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Main" parent="Menu" index="1" instance=ExtResource( 6 )]
 
+visible = false
 margin_left = 1.0
 margin_top = -3.0
 margin_right = 1.0
