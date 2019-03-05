@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ball2 (2).png-afa550c8c91dfe620bf544628da2bb14.stex"
+path="res://.import/Grass_lvl_aktuell.png-0536e8a4ef955b0b078a2541e3b3fdcf.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball2 (2).png"
-dest_files=[ "res://.import/Ball2 (2).png-afa550c8c91dfe620bf544628da2bb14.stex" ]
+source_file="res://Arena/Grass/Images/Grass_lvl_aktuell.png"
+dest_files=[ "res://.import/Grass_lvl_aktuell.png-0536e8a4ef955b0b078a2541e3b3fdcf.stex" ]
 
 [params]
 

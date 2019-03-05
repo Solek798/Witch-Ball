@@ -72,7 +72,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color" ]
 
-[node name="Round" type="Sprite" index="0"]
+[node name="Round" type="Sprite"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )

@@ -5,7 +5,7 @@
 resource_name = "CharacterselecktionScarlet"
 length = 2.0
 loop = true
-step = 0.01
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("HoverBall/Control:rotation_degrees")
 tracks/0/interp = 1

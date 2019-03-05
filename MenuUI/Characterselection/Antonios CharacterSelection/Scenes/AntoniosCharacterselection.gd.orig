@@ -16,15 +16,33 @@ export(PackedScene) var scarlett
 export(PackedScene) var jasmine
 export(PackedScene) var lilith
 export(PackedScene) var penny
+export(Resource) var BlueSelect
+export(Resource) var RedSelect
 
 func _ready():
 	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
+<<<<<<< working copy
+	current_mode = PLAYER_1
+	$VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+=======
 		
 	#if get_parent().has_method("get_current_controll"):
 	choosing_player = get_parent().current_controll
 	
+>>>>>>> merge rev
 
 func switch_player():
+<<<<<<< working copy
+	current_mode = PLAYER_2
+	$VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations/PlayerOneselecting.texture = RedSelect
+
+=======
 	if get_parent().has_method("switch_controlls"):
 		
 		var next_player = get_parent().switch_controlls(choosing_player.device + 1)
@@ -34,6 +52,7 @@ func switch_player():
 			get_parent().switch_controlls(0)
 		else:
 			choosing_player = next_player
+>>>>>>> merge rev
 
 func end_selection():
 	$VStucktur/HStrucktur/Footer/Play.disabled = false

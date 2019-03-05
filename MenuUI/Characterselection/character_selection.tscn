@@ -1,38 +1,42 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/character_selection.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Scarlet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Animation/Jasmine/Jasmin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Animation/Lilith/Lilith.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Animation/Penny/Penny.tscn" type="PackedScene" id=5]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=6]
-[ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=7]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Characterselection_mockUp_schmal_waRailing2.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Characterselection/railing.png" type="Texture" id=7]
 [ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=8]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_scarlet.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_scarlet_selected.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_scarlet_selection.tscn" type="PackedScene" id=11]
-[ext_resource path="res://MenuUI/Characterselection/selection.tscn" type="PackedScene" id=12]
-[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=13]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_jasmin.png" type="Texture" id=14]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_jasmin_selected.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_jasmine_selection.tscn" type="PackedScene" id=16]
-[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=17]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_lilith.png" type="Texture" id=18]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_lilith_selected.png" type="Texture" id=19]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_lilith_selection.tscn" type="PackedScene" id=20]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_penny.png" type="Texture" id=21]
-[ext_resource path="res://MenuUI/Characterselection/Character/characterselection_penny_selected.png" type="Texture" id=22]
-[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/amimation_penny_selection.tscn" type="PackedScene" id=23]
-[ext_resource path="res://MenuUI/Characterselection/railing.png" type="Texture" id=24]
-[ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=25]
-[ext_resource path="res://MenuUI/Characterselection/play_pressed.png" type="Texture" id=26]
-[ext_resource path="res://MenuUI/Characterselection/play_hover.png" type="Texture" id=27]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=28]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=29]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=30]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=31]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://MenuUI/Characterselection/play.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Characterselection/play_pressed.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/play_hover.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_Big.tscn" type="PackedScene" id=16]
+[ext_resource path="res://dynamic_risque_start.tres" type="DynamicFont" id=17]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=18]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/HoverBall.tscn" type="PackedScene" id=19]
+[ext_resource path="res://MenuUI/Characterselection/selection.tscn" type="PackedScene" id=20]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=21]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/PanelAnimations.gd" type="Script" id=22]
+[ext_resource path="res://MenuUI/Characterselection/frame_35%.png" type="Texture" id=23]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Greenpanel (1).png" type="Texture" id=24]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (2).png" type="Texture" id=25]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Schadow.png" type="Texture" id=26]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/CirclesBorow (2).png" type="Texture" id=27]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BackCircles (1).png" type="Texture" id=28]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (3).png" type="Texture" id=29]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/AntoniosCharacterselection.tres" type="Animation" id=30]
+[ext_resource path="res://MenuUI/Characterselection/tiemforsomeentchantment_choosen.wav" type="AudioStream" id=31]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (3).png" type="Texture" id=32]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (4).png" type="Texture" id=33]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (1).png" type="Texture" id=34]
+[ext_resource path="res://MenuUI/Characterselection/CharacterSelectionAnimation/characterselection.tres" type="Animation" id=35]
 
-[node name="Characterselection" type="CenterContainer"]
+[node name="Characterselection" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -46,206 +50,30 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
 match_template = null
 scarlett = ExtResource( 2 )
 jasmine = ExtResource( 3 )
 lilith = ExtResource( 4 )
 penny = ExtResource( 5 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+[node name="TextureRect" type="Sprite" parent="." index="0"]
 
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/CharacterselecktionScarlet = ExtResource( 6 )
-blend_times = [  ]
+visible = false
+position = Vector2( 960, 543.594 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Rect" ]
 
-[node name="Content" type="VBoxContainer" parent="." index="1"]
+[node name="Selection" type="CenterContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 228.0
-margin_top = 35.0
-margin_right = 1692.0
-margin_bottom = 1045.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="Label" type="Label" parent="Content" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1464.0
-margin_bottom = 53.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 7 )
-text = "Choose your character!"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Characters" type="HBoxContainer" parent="Content" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 1464.0
-margin_bottom = 815.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/separation = -16
-alignment = 0
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="Scarlett" parent="Content/Characters" index="0" instance=ExtResource( 8 )]
-
-margin_right = 378.0
-margin_bottom = 758.0
-focus_neighbour_left = NodePath("../Penny")
-focus_neighbour_right = NodePath("../Jasmine")
-focus_neighbour_bottom = NodePath("../../Selection/Play")
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
-_sections_unfolded = [ "Textures" ]
-Amimation_Character_Selection_template = ExtResource( 11 )
-
-[node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 12 )]
-
-margin_left = 44.0
-margin_top = -39.0
-margin_right = 84.0
-margin_bottom = 1.0
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Scarlett" index="1"]
-
-stream = ExtResource( 13 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Voicelines"
-
-[node name="Jasmine" parent="Content/Characters" index="1" instance=ExtResource( 8 )]
-
-margin_left = 362.0
-margin_right = 740.0
-margin_bottom = 758.0
-focus_neighbour_left = NodePath("../Scarlett")
-focus_neighbour_right = NodePath("../Lilith")
-focus_neighbour_bottom = NodePath("../../Selection/Play")
-texture_normal = ExtResource( 14 )
-texture_hover = ExtResource( 15 )
-_sections_unfolded = [ "Focus", "Textures" ]
-Amimation_Character_Selection_template = ExtResource( 16 )
-
-[node name="Selection" parent="Content/Characters/Jasmine" index="0" instance=ExtResource( 12 )]
-
-margin_left = 42.0
-margin_top = -38.0
-margin_right = 82.0
-margin_bottom = 2.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Jasmine" index="1"]
-
-stream = ExtResource( 17 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Voicelines"
-
-[node name="Lilith" parent="Content/Characters" index="2" instance=ExtResource( 8 )]
-
-margin_left = 724.0
-margin_right = 1102.0
-margin_bottom = 758.0
-focus_neighbour_left = NodePath("../Jasmine")
-focus_neighbour_right = NodePath("../Penny")
-focus_neighbour_bottom = NodePath("../../Selection/Play")
-texture_normal = ExtResource( 18 )
-texture_hover = ExtResource( 19 )
-_sections_unfolded = [ "Textures" ]
-Amimation_Character_Selection_template = ExtResource( 20 )
-
-[node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 12 )]
-
-margin_left = 43.0
-margin_top = -38.0
-margin_right = 83.0
-margin_bottom = 2.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Lilith" index="1"]
-
-stream = ExtResource( 13 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Voicelines"
-
-[node name="Penny" parent="Content/Characters" index="3" instance=ExtResource( 8 )]
-
-margin_left = 1086.0
-margin_right = 1464.0
-margin_bottom = 758.0
-focus_neighbour_left = NodePath("../Lilith")
-focus_neighbour_right = NodePath("../Scarlett")
-focus_neighbour_bottom = NodePath("../../Selection/Play")
-texture_normal = ExtResource( 21 )
-texture_hover = ExtResource( 22 )
-_sections_unfolded = [ "Focus", "Textures" ]
-Amimation_Character_Selection_template = ExtResource( 23 )
-
-[node name="Selection" parent="Content/Characters/Penny" index="0" instance=ExtResource( 12 )]
-
-margin_left = 48.0
-margin_top = -38.0
-margin_right = 88.0
-margin_bottom = 2.0
-
-[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Penny" index="1"]
-
-stream = ExtResource( 13 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Voicelines"
-
-[node name="Selection" type="CenterContainer" parent="Content" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 819.0
-margin_right = 1464.0
-margin_bottom = 935.0
+margin_top = 30.0
+margin_right = 1920.0
+margin_bottom = 1050.0
+rect_min_size = Vector2( 1920, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -253,41 +81,146 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Railing" type="TextureRect" parent="Content/Selection" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Selection" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 557.0
-margin_top = 29.0
-margin_right = 907.0
-margin_bottom = 86.0
+margin_right = 1920.0
+margin_bottom = 1020.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 24 )
+alignment = 0
+
+[node name="Container" type="Container" parent="Selection/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 900.0
+rect_min_size = Vector2( 0, 900 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Selection/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 904.0
+margin_right = 1920.0
+margin_bottom = 1020.0
+rect_min_size = Vector2( 1920, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Railing" type="TextureRect" parent="Selection/VBoxContainer/HBoxContainer" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -175.0
+margin_top = -933.0
+margin_right = 175.0
+margin_bottom = -876.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
 stretch_mode = 0
 
-[node name="Play" parent="Content/Selection" index="1" instance=ExtResource( 8 )]
+[node name="Container" type="Container" parent="Selection/VBoxContainer/HBoxContainer" index="1"]
 
-margin_left = 582.0
-margin_right = 882.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 75.0
 margin_bottom = 116.0
-focus_neighbour_top = NodePath("../../Characters/Scarlett")
-disabled = true
-texture_normal = ExtResource( 25 )
-texture_pressed = ExtResource( 26 )
-texture_hover = ExtResource( 27 )
-texture_disabled = ExtResource( 26 )
-_sections_unfolded = [ "Focus", "Textures" ]
-particle_template = ExtResource( 28 )
+rect_min_size = Vector2( 75, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
-[node name="Label" type="Label" parent="Content/Selection/Play" index="0"]
+[node name="Menu" parent="Selection/VBoxContainer/HBoxContainer" index="2" instance=ExtResource( 8 )]
+
+margin_left = 79.0
+margin_top = 22.0
+margin_right = 153.0
+margin_bottom = 93.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+_sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "Textures" ]
+particle_template = ExtResource( 12 )
+
+[node name="Container2" type="Container" parent="Selection/VBoxContainer/HBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 157.0
+margin_right = 807.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 650, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Play" parent="Selection/VBoxContainer/HBoxContainer" index="4" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+margin_left = 811.0
+margin_right = 1111.0
+margin_bottom = 116.0
+focus_neighbour_left = NodePath("../Menu")
+focus_neighbour_top = NodePath("../../../../Content/Characters/Lilith")
+disabled = true
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
+texture_disabled = ExtResource( 14 )
+_sections_unfolded = [ "Focus", "Textures" ]
+particle_template = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="Selection/VBoxContainer/HBoxContainer/Play" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -303,7 +236,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 17 )
 text = "Play!"
 align = 1
 valign = 1
@@ -312,39 +245,627 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_fonts" ]
 
-[node name="TextureButton" type="TextureButton" parent="Content" index="3"]
+[node name="Content" type="VBoxContainer" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 939.0
-margin_right = 1464.0
-margin_bottom = 1010.0
+margin_left = 184.0
+margin_top = 26.0
+margin_right = 1736.0
+margin_bottom = 1054.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Content" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1552.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 30 )
-texture_hover = ExtResource( 31 )
-_sections_unfolded = [ "Anchor" ]
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="Content/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 429.0
+margin_top = 9.0
+margin_right = 1123.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+text = "Choose your character!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Characters" type="HBoxContainer" parent="Content" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 104.0
+margin_right = 1552.0
+margin_bottom = 904.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -16
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+
+[node name="Scarlett" parent="Content/Characters" index="0" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+margin_right = 400.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Penny")
+focus_neighbour_right = NodePath("../Jasmine")
+focus_neighbour_bottom = NodePath("../../../Selection/VBoxContainer/HBoxContainer/Play")
+_sections_unfolded = [ "Rect", "Textures" ]
+Amimation_Character_Selection_template = ExtResource( 19 )
+
+[node name="Selection" parent="Content/Characters/Scarlett" index="0" instance=ExtResource( 20 )]
+
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Scarlett" index="1"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Voicelines"
+
+[node name="PanelAnimations" type="Node2D" parent="Content/Characters/Scarlett" index="2"]
+
+position = Vector2( 200, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 22 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="0"]
+
+position = Vector2( 15.0735, -8.90003 )
+scale = Vector2( -2.9, 2.88386 )
+texture = ExtResource( 23 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 24 )
+
+[node name="Character2" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="2"]
+
+position = Vector2( 14.8539, -71.744 )
+texture = ExtResource( 25 )
+
+[node name="Shadow" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow2" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 27 )
+
+[node name="Point" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 28 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Bullet" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="7"]
+
+self_modulate = Color( 0.199814, 0.240389, 0.378906, 1 )
+position = Vector2( 23.577, 755.011 )
+texture = ExtResource( 29 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Content/Characters/Scarlett/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 30 )
+blend_times = [  ]
+
+[node name="Name" type="Node2D" parent="Content/Characters/Scarlett" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="Content/Characters/Scarlett/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 314.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+text = "Scarlet"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Jasmine" parent="Content/Characters" index="1" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+margin_left = 384.0
+margin_right = 784.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Scarlett")
+focus_neighbour_right = NodePath("../Lilith")
+focus_neighbour_bottom = NodePath("../../../Selection/VBoxContainer/HBoxContainer/Play")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
+Amimation_Character_Selection_template = ExtResource( 19 )
+
+[node name="Selection" parent="Content/Characters/Jasmine" index="0" instance=ExtResource( 20 )]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Jasmine" index="1"]
+
+stream = ExtResource( 31 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Voicelines"
+
+[node name="PanelAnimations" type="Node2D" parent="Content/Characters/Jasmine" index="2"]
+
+editor/display_folded = true
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 22 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="0"]
+
+position = Vector2( 12.9427, -8.90002 )
+rotation = -3.14159
+scale = Vector2( -2.9, -2.88386 )
+texture = ExtResource( 23 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 24 )
+
+[node name="Character2" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="2"]
+
+position = Vector2( 14.8539, -52.9022 )
+texture = ExtResource( 32 )
+
+[node name="Shadow" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 26 )
+
+[node name="Shadow2" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 27 )
+
+[node name="Point" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 28 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="Content/Characters/Jasmine/PanelAnimations" index="7"]
+
+self_modulate = Color( 1, 0.386719, 0.386719, 1 )
+position = Vector2( 23.577, 755.011 )
+texture = ExtResource( 29 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Content/Characters/Jasmine/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 30 )
+blend_times = [  ]
+
+[node name="Name" type="Node2D" parent="Content/Characters/Jasmine" index="3"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="Content/Characters/Jasmine/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 81.0
+margin_top = 450.0
+margin_right = 321.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+text = "Jasmine"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Lilith" parent="Content/Characters" index="2" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+margin_left = 768.0
+margin_right = 1168.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Jasmine")
+focus_neighbour_right = NodePath("../Penny")
+focus_neighbour_bottom = NodePath("../../../Selection/VBoxContainer/HBoxContainer/Play")
+_sections_unfolded = [ "Rect", "Textures" ]
+Amimation_Character_Selection_template = ExtResource( 19 )
+
+[node name="Selection" parent="Content/Characters/Lilith" index="0" instance=ExtResource( 20 )]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Lilith" index="1"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Voicelines"
+
+[node name="PanelAnimations" type="Node2D" parent="Content/Characters/Lilith" index="2"]
+
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 22 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="0"]
+
+position = Vector2( 16.7002, -8.90002 )
+rotation = 1.50996e-007
+scale = Vector2( -2.9, 2.88386 )
+texture = ExtResource( 23 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 24 )
+
+[node name="Character2" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="2"]
+
+position = Vector2( 14.854, -115.402 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 33 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 26 )
+
+[node name="Shadow2" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 27 )
+
+[node name="Point" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 28 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="7"]
+
+self_modulate = Color( 0.290196, 0.219608, 0.564706, 1 )
+position = Vector2( 16.3347, 755.011 )
+texture = ExtResource( 29 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Content/Characters/Lilith/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 30 )
+blend_times = [  ]
+
+[node name="Name" type="Node2D" parent="Content/Characters/Lilith" index="3"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="Content/Characters/Lilith/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_top = 450.0
+margin_right = 304.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+text = "Lilith"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Penny" parent="Content/Characters" index="3" instance=ExtResource( 8 )]
+
+margin_left = 1152.0
+margin_right = 1552.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Lilith")
+focus_neighbour_right = NodePath("../Scarlett")
+focus_neighbour_bottom = NodePath("../../../Selection/VBoxContainer/HBoxContainer/Play")
+_sections_unfolded = [ "Rect", "Textures" ]
+Amimation_Character_Selection_template = ExtResource( 19 )
+
+[node name="Selection" parent="Content/Characters/Penny" index="0" instance=ExtResource( 20 )]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Content/Characters/Penny" index="1"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Voicelines"
+
+[node name="PanelAnimations" type="Node2D" parent="Content/Characters/Penny" index="2"]
+
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 22 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="0"]
+
+position = Vector2( 15.3311, -8.90002 )
+rotation = 3.14159
+scale = Vector2( -2.9, -2.88386 )
+texture = ExtResource( 23 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 24 )
+
+[node name="Character2" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="2"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 34 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 26 )
+
+[node name="Shadow2" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 27 )
+
+[node name="Point" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 28 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="Content/Characters/Penny/PanelAnimations" index="7"]
+
+self_modulate = Color( 1, 0.5625, 0, 1 )
+position = Vector2( 23.833, 756.231 )
+texture = ExtResource( 29 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Content/Characters/Penny/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 30 )
+blend_times = [  ]
+
+[node name="Name" type="Node2D" parent="Content/Characters/Penny" index="3"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="Content/Characters/Penny/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 284.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+text = "Penny"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Container" type="Container" parent="Content" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 908.0
+margin_right = 1552.0
+margin_bottom = 1028.0
+rect_min_size = Vector2( 100, 120 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/CharacterselecktionScarlet = ExtResource( 35 )
+blend_times = [  ]
+
+[connection signal="pressed" from="Selection/VBoxContainer/HBoxContainer/Menu" to="." method="_on_Menu_pressed"]
+
+[connection signal="pressed" from="Selection/VBoxContainer/HBoxContainer/Play" to="." method="_on_Play_pressed"]
+
+[connection signal="focus_entered" from="Content/Characters/Scarlett" to="Content/Characters/Scarlett/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="Content/Characters/Scarlett" to="Content/Characters/Scarlett/PanelAnimations" method="_on_Panel_focus_exited"]
 
 [connection signal="pressed" from="Content/Characters/Scarlett" to="." method="_on_Scarlett_pressed"]
 
+[connection signal="focus_entered" from="Content/Characters/Jasmine" to="Content/Characters/Jasmine/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="Content/Characters/Jasmine" to="Content/Characters/Jasmine/PanelAnimations" method="_on_Panel_focus_exited"]
+
 [connection signal="pressed" from="Content/Characters/Jasmine" to="." method="_on_Jasmine_pressed"]
+
+[connection signal="focus_entered" from="Content/Characters/Lilith" to="Content/Characters/Lilith/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="Content/Characters/Lilith" to="Content/Characters/Lilith/PanelAnimations" method="_on_Panel_focus_exited"]
 
 [connection signal="pressed" from="Content/Characters/Lilith" to="." method="_on_Lilith_pressed"]
 
-[connection signal="pressed" from="Content/Characters/Penny" to="." method="_on_Penny_pressed"]
+[connection signal="focus_entered" from="Content/Characters/Penny" to="Content/Characters/Penny/PanelAnimations" method="_on_Panel_focus_entered"]
 
-[connection signal="pressed" from="Content/Selection/Play" to="." method="_on_Play_pressed"]
+[connection signal="focus_exited" from="Content/Characters/Penny" to="Content/Characters/Penny/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="pressed" from="Content/Characters/Penny" to="." method="_on_Penny_pressed"]
 
 

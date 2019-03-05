@@ -18,7 +18,7 @@ config/name="Witch-Ball"
 run/main_scene="res://game.tscn"
 boot_splash/image="res://loading.png"
 boot_splash/fullsize=false
-config/icon="res://Player/Animation/Lilith/Icon_Player_Lilith.png"
+config/icon="res://Icon2.png"
 
 [autoload]
 
