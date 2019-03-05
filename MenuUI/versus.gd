@@ -5,7 +5,6 @@ func _ready():
 	$Animation.play("VS_Ani")
 	pass
 
-func VS_End():
-	print("test")
-	queue_free()
-	
+
+func _on_Animation_animation_finished(anim_name):
+	self.queue_free()

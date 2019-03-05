@@ -42,7 +42,7 @@ blend_times = [  ]
 
 [node name="UI" type="Node2D" parent="." index="2"]
 
-modulate = Color( 1, 1, 1, 0.246421 )
+modulate = Color( 1, 1, 1, 0 )
 z_index = 5
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
@@ -50,7 +50,6 @@ _sections_unfolded = [ "Visibility", "Z Index" ]
 
 modulate = Color( 0.0231628, 1, 1, 1 )
 position = Vector2( 1033.62, 590.086 )
-scale = Vector2( 1.14113, 1.14113 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -58,7 +57,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 modulate = Color( 0.136719, 1, 1, 1 )
 position = Vector2( 859.922, 487.418 )
-scale = Vector2( 1.14113, 1.14113 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -76,7 +74,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="player" type="Node2D" parent="." index="3"]
 
-modulate = Color( 1, 1, 1, 0.0749978 )
+modulate = Color( 1, 1, 1, 0 )
 z_index = 5
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
@@ -94,5 +92,7 @@ scale = Vector2( -1, 1 )
 z_index = 1
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
 
 
