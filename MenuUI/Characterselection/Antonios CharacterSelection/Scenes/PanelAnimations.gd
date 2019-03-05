@@ -8,4 +8,4 @@ func _on_Panel_focus_entered():
 
 func _on_Panel_focus_exited():
 	$AnimationPlayer.play_backwards("AntoniosCharacterselection")
-	
+
