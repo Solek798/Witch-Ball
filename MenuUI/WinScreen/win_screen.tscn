@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MenuUI/WinScreen/scarlet_win.png" type="Texture" id=1]
 [ext_resource path="res://MenuUI/WinScreen/win_screen.png" type="Texture" id=2]
@@ -8,12 +8,15 @@
 [ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=6]
 [ext_resource path="res://MenuUI/magic_button.gd" type="Script" id=7]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_normal.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_pressed.png" type="Texture" id=13]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_hover.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/WinScreen/hometext.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/WinScreen/rematchtext.tscn" type="PackedScene" id=13]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_normal.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_pressed.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_hover.png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/WinScreen/Characterselectiontext.tscn" type="PackedScene" id=17]
 
 [node name="WinScreen" type="Control"]
 
@@ -186,6 +189,7 @@ script = ExtResource( 7 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 8 )
+text_template = ExtResource( 9 )
 Amimation_Character_Selection_template = null
 
 [node name="rematch" type="TextureButton" parent="TextureRect/HBoxContainer" index="1"]
@@ -210,13 +214,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
 script = ExtResource( 7 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 8 )
+text_template = ExtResource( 13 )
 Amimation_Character_Selection_template = null
 
 [node name="characterselection" type="TextureButton" parent="TextureRect/HBoxContainer" index="2"]
@@ -241,13 +246,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 16 )
 script = ExtResource( 7 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 8 )
+text_template = ExtResource( 17 )
 Amimation_Character_Selection_template = null
 
 [connection signal="focus_entered" from="TextureRect/HBoxContainer/home" to="TextureRect/HBoxContainer/home" method="_on_MagicButton_focus_entered"]
