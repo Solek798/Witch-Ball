@@ -73,7 +73,6 @@ tutorial_template = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="Menu" index="0"]
 
-visible = false
 position = Vector2( 960.588, 539.699 )
 z_index = -1
 texture = ExtResource( 9 )
