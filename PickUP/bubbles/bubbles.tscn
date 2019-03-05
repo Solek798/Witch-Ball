@@ -19,15 +19,15 @@ curve = SubResource( 1 )
 
 render_priority = 0
 trail_divisor = 1
-emission_shape = 3
-emission_point_count = 1
+emission_shape = 2
+emission_box_extents = Vector3( 1, 60, 1 )
 flag_align_y = false
 flag_rotate_y = true
 flag_disable_z = true
 spread = 20.0
 flatness = 0.0
 gravity = Vector3( 50, 0, 0 )
-initial_velocity = 100.0
+initial_velocity = 10.0
 initial_velocity_random = 0.5
 angular_velocity = 200.0
 angular_velocity_random = 1.0
@@ -43,7 +43,7 @@ damping = 0.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 0.03
+scale = 0.3
 scale_random = 0.0
 scale_curve = SubResource( 2 )
 color = Color( 1, 1, 1, 0.635373 )
@@ -54,18 +54,17 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Scale", "Spread" ]
+_sections_unfolded = [ "Emission Shape", "Gravity", "Initial Velocity", "Scale", "Spread" ]
 
-[node name="Wasserfall dunst" type="Particles2D" index="0"]
+[node name="Bubbles" type="Particles2D"]
 
-rotation = -1.71588
-scale = Vector2( 3.52855, 3.60364 )
+rotation = -1.5708
 emitting = true
 amount = 30
-lifetime = 0.3
+lifetime = 4.0
 one_shot = false
 preprocess = 0.0
-speed_scale = 0.1
+speed_scale = 1.0
 explosiveness = 0.01
 randomness = 0.1
 fixed_fps = 0
