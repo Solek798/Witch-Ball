@@ -56,12 +56,12 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Gravity", "Initial Velocity", "Scale", "Spread" ]
 
-[node name="Bubbles" type="Particles2D"]
+[node name="Bubbles" type="Particles2D" index="0"]
 
 rotation = -1.5708
 emitting = true
 amount = 30
-lifetime = 4.0
+lifetime = 2.5
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -77,6 +77,6 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Time", "Transform", "Visibility" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
 
