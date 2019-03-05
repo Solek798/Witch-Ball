@@ -79,7 +79,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Angular Velocity", "Color", "Gravity" ]
+_sections_unfolded = [ "Angular Velocity", "Color", "Gravity", "Scale" ]
 
 [node name="Rauch" type="Node2D" index="0"]
 
@@ -87,7 +87,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="0"]
 
-position = Vector2( 2.04124, -0.0972252 )
 rotation = 1.57694
 emitting = true
 amount = 20
@@ -107,6 +106,6 @@ texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
 
