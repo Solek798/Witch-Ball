@@ -1,19 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://MenuUI/Tutorial/tutorial.gd" type="Script" id=1]
-[ext_resource path="res://MenuUI/Tutorial/tutorial.png" type="Texture" id=2]
-[ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=3]
-[ext_resource path="res://risque_regular.otf" type="DynamicFontData" id=4]
-[ext_resource path="res://MenuUI/Tutorial/enter.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/Tutorial/a_button.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=7]
+[ext_resource path="res://MenuUI/Tutorial/Schild.png" type="Texture" id=2]
+[ext_resource path="res://MenuUI/Tutorial/ControllerohneSchild.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=4]
+[ext_resource path="res://risque_regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://MenuUI/Tutorial/enter.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Tutorial/a_button.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 60
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Tutorial" type="Node2D" index="0"]
@@ -23,21 +24,27 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 949.554, 391.472 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 949.554, 530.675 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ConfirmPanel" type="CenterContainer" parent="." index="1"]
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 949.554, 477.178 )
+scale = Vector2( 0.8, 0.78 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ConfirmPanel" type="CenterContainer" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 2.0
-margin_top = 778.0
+margin_top = 816.0
 margin_right = 1910.0
-margin_bottom = 963.0
+margin_bottom = 1001.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -64,7 +71,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
 
-[node name="Player1" parent="ConfirmPanel/HB1" index="0" instance=ExtResource( 3 )]
+[node name="Player1" parent="ConfirmPanel/HB1" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( -85.4854, 48.9815 )
 scale = Vector2( 2, 2 )
@@ -106,7 +113,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 stretch_mode = 0
 
 [node name="Label2" type="Label" parent="ConfirmPanel/HB1" index="3"]
@@ -147,7 +154,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 stretch_mode = 0
 
 [node name="Label3" type="Label" parent="ConfirmPanel/HB1" index="5"]
@@ -173,26 +180,26 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Player2" parent="ConfirmPanel/HB1" index="6" instance=ExtResource( 3 )]
+[node name="Player2" parent="ConfirmPanel/HB1" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 837.63, 47.9071 )
 scale = Vector2( 2, 2 )
 
-[node name="TimeBeforeTransition" type="Timer" parent="." index="2"]
+[node name="TimeBeforeTransition" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="Animation" type="AnimationPlayer" parent="." index="3"]
+[node name="Animation" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/FadeOut = ExtResource( 7 )
+anims/FadeOut = ExtResource( 8 )
 blend_times = [  ]
 
 
