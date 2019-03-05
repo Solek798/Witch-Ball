@@ -61,7 +61,6 @@ func request_stop():
 func menu():
 	$Background.visible = true
 	open()
-	set_blur(2.5, 0.0)
 	add_child(main_scene_template.instance())
 	get_parent()
 
