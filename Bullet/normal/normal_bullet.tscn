@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 radius = 21.3243
 
-[node name="NormalBullet" index="0" instance=ExtResource( 1 )]
+[node name="NormalBullet" instance=ExtResource( 1 )]
 
 z_index = -6
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]

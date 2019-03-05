@@ -22,10 +22,15 @@ func _process(delta):
 		manage_input()
 
 func open(manage_input=true):
+	print("open")
 	self.visible = true
 	self.manage_input = manage_input
+	$Animation.play("FadeIn")
 
 func close(manage_input=false):
+	print("close")
+	$Animation.play("FadeOut")
+	yield($Animation, "animation_finished")
 	self.manage_input = manage_input
 	self.visible = false
 
@@ -49,16 +54,21 @@ func switch_scene(next_scene_template, return_scene):
 	add_child(new_scene)
 
 func confirm_selection(identities):
-	close()
+	#close()
 	get_parent().start_match(identities)
 
 func request_restart():
+	Transition.on()
+	yield(Transition, "done_on")
 	emit_signal("restart_requested")
 
 func request_stop():
+	Transition.on()
+	yield(Transition, "done_on")
 	emit_signal("stop_requested")
 
 func menu():
+	set_blur(2.5, 0.0)
 	$Background.visible = true
 	open()
 	add_child(main_scene_template.instance())
@@ -73,12 +83,13 @@ func tutorial():
 	#$Background.visible = false
 	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
 		$Background.visible = false
-		open(false)
+		self.manage_input = false
+		#open(false)
 		set_blur(2.5, 0.25)
 		var tutorial = tutorial_template.instance()
 		add_child(tutorial)
 		
-		yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
+		yield(tutorial, "tree_exited")
 		close()
 	print("tutorial_exited")
 	emit_signal("tutorial_exited")

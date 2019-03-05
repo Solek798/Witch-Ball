@@ -1,6 +1,9 @@
 extends Node2D
 
 
+func _ready():
+	print(self.modulate)
+
 func _process(delta):
 	if Input.is_joy_button_pressed(0, JOY_XBOX_A):
 		$ConfirmPanel/HB1/Player1.is_filled = true
@@ -17,4 +20,6 @@ func validate():
 	if $ConfirmPanel/HB1/Player1.is_filled and $ConfirmPanel/HB1/Player2.is_filled:
 		$TimeBeforeTransition.start()
 		yield($TimeBeforeTransition, "timeout")
+		
+		$Animation.play("FadeOut")
 		self.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://Match/match.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://MenuUI/PauseScreen/pause.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MenuUI/Tutorial/tutorial.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Background.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=10]
+[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=11]
 
 [sub_resource type="Shader" id=1]
 
@@ -76,7 +78,18 @@ z_index = -1
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Main" parent="Menu" index="1" instance=ExtResource( 6 )]
+[node name="Animation" type="AnimationPlayer" parent="Menu" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = ExtResource( 10 )
+anims/FadeOut = ExtResource( 11 )
+blend_times = [  ]
+
+[node name="Main" parent="Menu" index="2" instance=ExtResource( 6 )]
 
 margin_left = 1.0
 margin_top = -3.0

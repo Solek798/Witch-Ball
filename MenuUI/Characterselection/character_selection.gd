@@ -22,6 +22,7 @@ func _ready():
 	
 	#if get_parent().has_method("get_current_controll"):
 	choosing_player = get_parent().current_controll
+	$AnimationPlayer.play("FadeIn")
 
 func switch_player():
 	if get_parent().has_method("switch_controlls"):
@@ -80,6 +81,7 @@ func _on_Play_pressed():
 func _on_Menu_pressed():
 	if get_parent().has_method("switch_scene"):
 		get_parent().switch_scene(return_scene_template, null)
+		$AnimationPlayer.play("FadeOut")
 	self.queue_free()
 
 
