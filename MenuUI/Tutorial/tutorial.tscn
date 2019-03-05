@@ -16,7 +16,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Tutorial" type="Node2D"]
+[node name="Tutorial" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -181,7 +181,7 @@ scale = Vector2( 2, 2 )
 [node name="TimeBeforeTransition" type="Timer" parent="." index="2"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 1.0
 one_shot = false
 autostart = false
 

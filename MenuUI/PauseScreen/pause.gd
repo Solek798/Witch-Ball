@@ -19,15 +19,19 @@ func _on_Options_pressed():
 func _on_Resume_pressed():
 	if get_parent().has_method("close"):
 		get_parent().close()
+		$Animation.play("FadeOut")
 	self.queue_free()
 	get_tree().paused = false
 
 func _on_Restart_pressed():
 	if get_parent().has_method("request_restart"):
 		get_parent().request_restart()
+		$Animation.play("FadeOut")
 	
 	if get_parent().has_method("close"):
 		get_parent().close()
+	
+	
 	self.queue_free()
 	get_tree().paused = false
 
