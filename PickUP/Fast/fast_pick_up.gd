@@ -7,3 +7,7 @@ func _on_FastPickUp_body_entered(body):
 		.destroy("Consume")
 
 
+func _on_Animation_animation_finished(anim_name):
+	if anim_name == "Spawn":
+		$Animation.play("Idle1")
+		$FastEffect.emitting = true
