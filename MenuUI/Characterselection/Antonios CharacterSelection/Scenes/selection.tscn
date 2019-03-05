@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://MenuUI/Characterselection/selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BlueSelect.png" type="Texture" id=2]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/RedSelect.png" type="Texture" id=3]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=4]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MenuUI/magic_button.gd" type="Script" id=6]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/HoverBall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MenuUI/Characterselection/selection.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/PanelAnimations.gd" type="Script" id=10]
+[ext_resource path="res://MenuUI/Characterselection/frame_35%.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Greenpanel (1).png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (2).png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Schadow.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/CirclesBorow (2).png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BackCircles (1).png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (3).png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/AntoniosCharacterselection.tres" type="Animation" id=18]
 
 [node name="Selection" type="Control" index="0"]
 
@@ -31,8 +45,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player2Selected" type="Sprite" parent="." index="1"]
 
-visible = false
-position = Vector2( 200, 400 )
+position = Vector2( 215.073, 400 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -86,5 +99,168 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="Scarlett" type="TextureButton" parent="." index="3" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 400.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_left = NodePath("../Penny")
+focus_neighbour_right = NodePath("../Jasmine")
+focus_neighbour_bottom = NodePath("../../../Selection/VBoxContainer/HBoxContainer/Play")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+next_scene = null
+particle_template = null
+Amimation_Character_Selection_template = ExtResource( 7 )
+
+[node name="Selection" type="Control" parent="Scarlett" index="0" instance=ExtResource( 8 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Scarlett" index="1"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Voicelines"
+
+[node name="PanelAnimations" type="Node2D" parent="Scarlett" index="2"]
+
+position = Vector2( 200, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 10 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="Scarlett/PanelAnimations" index="0"]
+
+position = Vector2( 15.0735, -8.90003 )
+scale = Vector2( -2.9, 2.88386 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="Scarlett/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 12 )
+
+[node name="Character2" type="Sprite" parent="Scarlett/PanelAnimations" index="2"]
+
+position = Vector2( 14.8539, -71.744 )
+texture = ExtResource( 13 )
+
+[node name="Shadow" type="Sprite" parent="Scarlett/PanelAnimations" index="3"]
+
+position = Vector2( 14.8539, 658.655 )
+scale = Vector2( 1, 1e-005 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow2" type="Sprite" parent="Scarlett/PanelAnimations" index="4"]
+
+position = Vector2( 14.8539, -969.366 )
+scale = Vector2( 1, 1e-005 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="Scarlett/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 15 )
+
+[node name="Point" type="Sprite" parent="Scarlett/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Bullet" type="Sprite" parent="Scarlett/PanelAnimations" index="7"]
+
+self_modulate = Color( 0.238281, 0.410856, 1, 1 )
+position = Vector2( 23.577, 755.011 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scarlett/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 18 )
+blend_times = [  ]
+
+[node name="Name" type="Node2D" parent="Scarlett" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="Scarlett/Name" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 314.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Scarlet"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[connection signal="focus_entered" from="Scarlett" to="Scarlett/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_entered" from="Scarlett" to="Scarlett" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="Scarlett" to="Scarlett/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="focus_exited" from="Scarlett" to="Scarlett" method="_on_MagicButton_focus_exited"]
+
+[connection signal="mouse_entered" from="Scarlett" to="Scarlett" method="_on_MagicButton_mouse_entered"]
 
 
