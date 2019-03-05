@@ -372,15 +372,14 @@ texture = ExtResource( 24 )
 
 [node name="Shadow" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="3"]
 
-position = Vector2( 14.8539, 658.655 )
-scale = Vector2( 1, 1e-005 )
+position = Vector2( 14.854, -155.402 )
 texture = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Shadow2" type="Sprite" parent="Content/Characters/Scarlett/PanelAnimations" index="4"]
 
-position = Vector2( 14.8539, -969.366 )
-scale = Vector2( 1, 1e-005 )
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 
@@ -421,6 +420,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="ChName" type="Label" parent="Content/Characters/Scarlett/Name" index="0"]
 
+modulate = Color( 0, 0, 0, 0.588235 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
