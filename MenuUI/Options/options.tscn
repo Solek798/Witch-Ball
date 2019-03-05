@@ -14,7 +14,7 @@
 [ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=12]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=13]
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -43,7 +43,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Shadow" ]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -71,7 +71,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="StyleBoxLine" id=6]
+[sub_resource type="StyleBoxLine" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -82,7 +82,7 @@ grow = 1.0
 thickness = 1
 vertical = false
 
-[node name="OptionScene" type="CenterContainer" index="0"]
+[node name="OptionScene" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -160,6 +160,7 @@ _sections_unfolded = [ "Margin", "Size Flags" ]
 
 [node name="VB1" type="VBoxContainer" parent="Panel/Conent/Options" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -225,7 +226,7 @@ custom_icons/grabber_highlight = ExtResource( 4 )
 custom_icons/grabber = ExtResource( 4 )
 custom_styles/slider = ExtResource( 5 )
 custom_styles/grabber_area = ExtResource( 6 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 1 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -289,7 +290,7 @@ custom_icons/grabber_highlight = ExtResource( 4 )
 custom_icons/grabber = ExtResource( 4 )
 custom_styles/slider = ExtResource( 5 )
 custom_styles/grabber_area = ExtResource( 6 )
-custom_styles/focus = SubResource( 5 )
+custom_styles/focus = SubResource( 2 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -319,7 +320,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_styles/separator = SubResource( 6 )
+custom_styles/separator = SubResource( 3 )
 _sections_unfolded = [ "custom_styles" ]
 
 [node name="HB1" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="5"]
@@ -347,7 +348,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 211.0
+margin_right = 220.0
 margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -426,7 +427,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 152.0
+margin_right = 183.0
 margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -482,7 +483,6 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Buttons" type="HBoxContainer" parent="Panel/Conent" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

@@ -36,7 +36,7 @@ func switch_player():
 
 func end_selection():
 	#$Content/Selection/Railing.modulate = Color("ffffff")
-	$Content/Selection/Play.disabled = false
+	$Selection/VBoxContainer/HBoxContainer/Play.disabled = false
 
 func _on_Scarlett_pressed():
 	select($Content/Characters/Scarlett/Selection, scarlett, $Content/Characters/Scarlett/Sound)
@@ -75,6 +75,11 @@ func _on_Play_pressed():
 		
 		get_parent().confirm_selection(player_identities)
 	
+	self.queue_free()
+	
+func _on_Menu_pressed():
+	if get_parent().has_method("switch_scene"):
+		get_parent().switch_scene(return_scene_template, null)
 	self.queue_free()
 
 
