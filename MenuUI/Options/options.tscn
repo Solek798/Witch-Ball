@@ -1,22 +1,96 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MenuUI/Options/options.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Options/options_panel.png" type="Texture" id=2]
-[ext_resource path="res://MenuUI/Options/music_font_25.png" type="Texture" id=3]
-[ext_resource path="res://MenuUI/Options/sound_font_20.png" type="Texture" id=4]
-[ext_resource path="res://dynamic_risque_headline.tres" type="DynamicFont" id=5]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=6]
-[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://dynamic_risque_options.tres" type="DynamicFont" id=3]
+[ext_resource path="res://MenuUI/Options/ticker.png" type="Texture" id=4]
+[ext_resource path="res://slidertest.tres" type="StyleBox" id=5]
+[ext_resource path="res://slidertest_fill.tres" type="StyleBox" id=6]
+[ext_resource path="res://MenuUI/Options/checkedfull.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/Options/checked.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=13]
 
-[node name="OptionScene" type="CenterContainer"]
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.5, 0.40625, 0.40625, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Shadow" ]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.269531, 0.269531, 0.269531, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxLine" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0, 0, 0, 0 )
+grow = 1.0
+thickness = 1
+vertical = false
+
+[node name="OptionScene" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -25,7 +99,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Focus", "Margin" ]
+_sections_unfolded = [ "Anchor" ]
 
 [node name="Panel" type="TextureRect" parent="." index="0"]
 
@@ -34,9 +108,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 710.0
-margin_top = 222.0
+margin_top = 221.0
 margin_right = 1210.0
-margin_bottom = 858.0
+margin_bottom = 857.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -53,17 +127,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -74.0
-margin_top = -122.0
-margin_right = -104.04
-margin_bottom = 291.0
+margin_left = -133.0
+margin_top = -161.0
+margin_right = 133.0
+margin_bottom = 239.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 91
+custom_constants/separation = 66
 alignment = 0
 _sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
@@ -73,8 +147,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 266.0
-margin_bottom = 317.0
+margin_right = 286.0
+margin_bottom = 348.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -90,45 +164,52 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 266.0
-margin_bottom = 317.0
+margin_right = 286.0
+margin_bottom = 348.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/separation = 23
+custom_constants/separation = 11
 alignment = 0
 _sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "custom_constants" ]
 
-[node name="Text1" type="TextureRect" parent="Panel/Conent/Options/VB1" index="0"]
+[node name="Text1" type="Label" parent="Panel/Conent/Options/VB1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 266.0
-margin_bottom = 25.0
+margin_left = 96.0
+margin_right = 190.0
+margin_bottom = 42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 1
+mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
+custom_constants/line_spacing = -46
+text = "Music
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "Size Flags", "custom_colors", "custom_constants" ]
 
 [node name="Music" type="HSlider" parent="Panel/Conent/Options/VB1" index="1"]
 
-modulate = Color( 0.179321, 0.873306, 0.882813, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 48.0
-margin_right = 266.0
-margin_bottom = 64.0
+margin_top = 53.0
+margin_right = 286.0
+margin_bottom = 78.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../../../Buttons/Menu")
@@ -136,8 +217,15 @@ focus_neighbour_bottom = NodePath("../Sound")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_icons/tick = ExtResource( 4 )
+custom_icons/grabber_disabled = ExtResource( 4 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
+custom_styles/focus = SubResource( 3 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -149,37 +237,43 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Material", "Size Flags", "Visibility", "custom_styles" ]
+_sections_unfolded = [ "Margin" ]
 
-[node name="Text2" type="TextureRect" parent="Panel/Conent/Options/VB1" index="2"]
+[node name="Text2" type="Label" parent="Panel/Conent/Options/VB1" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 87.0
-margin_right = 266.0
-margin_bottom = 112.0
+margin_left = 92.0
+margin_top = 89.0
+margin_right = 193.0
+margin_bottom = 135.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 1
+mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-_sections_unfolded = [ "Margin" ]
+size_flags_horizontal = 4
+size_flags_vertical = 2
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
+custom_constants/line_spacing = -42
+text = "Sound
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="Sound" type="HSlider" parent="Panel/Conent/Options/VB1" index="3"]
 
-modulate = Color( 0.33783, 0.951637, 0.960938, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 135.0
-margin_right = 266.0
-margin_bottom = 151.0
+margin_top = 146.0
+margin_right = 286.0
+margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../Music")
@@ -187,8 +281,15 @@ focus_neighbour_bottom = NodePath("../HB1/FullScreen")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_icons/tick = ExtResource( 4 )
+custom_icons/grabber_disabled = ExtResource( 4 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
+custom_styles/focus = SubResource( 5 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -200,18 +301,36 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Focus", "Visibility" ]
+_sections_unfolded = [ "Focus", "Margin", "Size Flags", "Visibility", "custom_icons", "custom_styles" ]
 
-[node name="HB1" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="4"]
+[node name="HSeparator" type="HSeparator" parent="Panel/Conent/Options/VB1" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 174.0
-margin_right = 266.0
-margin_bottom = 234.0
+margin_top = 182.0
+margin_right = 286.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 40, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_styles/separator = SubResource( 6 )
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="HB1" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 233.0
+margin_right = 286.0
+margin_bottom = 285.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -220,7 +339,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 19
 alignment = 0
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Margin", "custom_constants" ]
 
 [node name="FullScreen" type="CheckBox" parent="Panel/Conent/Options/VB1/HB1" index="0"]
 
@@ -228,8 +347,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 24.0
-margin_bottom = 60.0
+margin_right = 211.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../../Sound")
@@ -239,30 +358,42 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_icons/radio_checked = ExtResource( 7 )
+custom_icons/checked = ExtResource( 7 )
+custom_icons/radio_unchecked = ExtResource( 8 )
+custom_icons/unchecked = ExtResource( 8 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0.396078, 0.247059, 0.109804, 1 )
+custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
+custom_colors/font_color_hover = Color( 0.560784, 0.827451, 0.847059, 1 )
+custom_colors/font_color_pressed = Color( 0.0980392, 0.298039, 0.345098, 1 )
+custom_constants/hseparation = 23
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
+text = "Fullscreen"
 flat = false
 align = 0
-_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Focus", "Rect", "Textures", "custom_colors", "custom_constants", "custom_fonts", "custom_icons", "custom_styles" ]
 
 [node name="TextureRect" type="Label" parent="Panel/Conent/Options/VB1/HB1" index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 43.0
-margin_right = 266.0
-margin_bottom = 60.0
+margin_left = 113.0
+margin_right = 277.0
+margin_bottom = 44.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 text = "Fullscreen"
 percent_visible = 1.0
@@ -270,16 +401,15 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Focus", "custom_colors", "custom_fonts" ]
 
-[node name="HB2" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="5"]
+[node name="HB2" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="6"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 257.0
-margin_right = 266.0
-margin_bottom = 317.0
+margin_top = 296.0
+margin_right = 286.0
+margin_bottom = 348.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -296,8 +426,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 24.0
-margin_bottom = 60.0
+margin_right = 152.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../../HB1/FullScreen")
@@ -307,30 +437,42 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_icons/radio_checked = ExtResource( 7 )
+custom_icons/checked = ExtResource( 7 )
+custom_icons/radio_unchecked = ExtResource( 8 )
+custom_icons/unchecked = ExtResource( 8 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.517647, 0.364706, 0.196078, 1 )
+custom_colors/font_color_hover = Color( 0.552941, 0.819608, 0.839216, 1 )
+custom_colors/font_color_pressed = Color( 0.0980392, 0.298039, 0.345098, 1 )
+custom_constants/check_vadjust = 0
+custom_constants/hseparation = 22
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
+text = "Tutorial"
 flat = false
 align = 0
-_sections_unfolded = [ "Focus", "Textures", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Mouse", "Rect", "Size Flags", "Textures", "custom_colors", "custom_constants", "custom_fonts", "custom_icons", "custom_styles" ]
 
 [node name="TextureRect" type="Label" parent="Panel/Conent/Options/VB1/HB2" index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 43.0
+margin_left = 91.0
 margin_right = 219.0
-margin_bottom = 60.0
+margin_bottom = 44.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 text = "Tutorial"
 percent_visible = 1.0
@@ -340,25 +482,26 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Buttons" type="HBoxContainer" parent="Panel/Conent" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 96.0
-margin_top = 408.0
-margin_right = 170.0
-margin_bottom = 479.0
+margin_left = 106.0
+margin_top = 414.0
+margin_right = 180.0
+margin_bottom = 485.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
-size_flags_vertical = 1
+size_flags_vertical = 4
 custom_constants/separation = 5
 alignment = 0
 _sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
-[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 6 )]
+[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 9 )]
 
 margin_right = 74.0
 margin_bottom = 71.0
@@ -366,11 +509,11 @@ focus_neighbour_top = NodePath("../../Options/VB1/HB2/Tutorial")
 focus_neighbour_bottom = NodePath("../../Options/VB1/Music")
 size_flags_horizontal = 5
 size_flags_vertical = 4
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
 _sections_unfolded = [ "Focus", "Margin", "Size Flags", "Textures" ]
-particle_template = ExtResource( 10 )
+particle_template = ExtResource( 13 )
 
 [connection signal="value_changed" from="Panel/Conent/Options/VB1/Music" to="." method="_on_Music_value_changed"]
 

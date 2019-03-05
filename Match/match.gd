@@ -16,8 +16,7 @@ signal player_created(player)
 var arena
 var gui
 var backstage
-var player_1_selection
-var player_2_selection
+var player_identities
 
 
 func _ready():
@@ -43,17 +42,18 @@ func initialize():
 	backstage.connect("round_finished", arena, "_on_round_finished")
 	gui.connect("player_won_match", self, "_on_player_won_match")
 
-func start(controlls):
+func start():
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		create_player(i + 1, controlls[i])
+		print(i)
+		create_player(player_identities[i])
 	emit_signal("match_started", round_count)
 
 func reset():
 	# get controlls
 	var controlls = []
 	for player in arena.players:
-		controlls.append(player.controll)
+		controlls.append(player.identity.controll)
 	
 	# delete "old" match
 	arena.free()
@@ -67,15 +67,10 @@ func reset():
 func stop():
 	emit_signal("match_finished", self)
 
-func create_player(id, controll):
+func create_player(identity):
 	#instanciates and sets th player to the specified position
 	var player = player_template.instance()
-	player.id = id
-	player.controll = controll
-	if id == 1:
-		player.selection = player_1_selection
-	if id == 2:
-		player.selection = player_2_selection
+	player.identity = identity
 	# connects all player relevant signals
 	player.connect("bullet_thrown", arena, "_on_bullet_thrown")
 	player.connect("player_damaged", gui, "_on_player_damaged")
@@ -89,6 +84,6 @@ func create_player(id, controll):
 	emit_signal("player_created", player)
 
 func _on_player_won_match(player):
-	print("Spieler ", player.id, " kriegt einen Keks")
+	print("Spieler ", player.identity.id, " kriegt einen Keks")
 	yield(backstage, "round_finished")
 	stop()

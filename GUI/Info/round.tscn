@@ -116,7 +116,7 @@ _sections_unfolded = [ "Process Material", "Time", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
-modulate = Color( 0, 1, 0.0625, 0 )
+modulate = Color( 0, 1, 0.601563, 0 )
 scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]

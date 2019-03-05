@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MenuUI/WinScreen/scarlet_win.png" type="Texture" id=1]
 [ext_resource path="res://MenuUI/WinScreen/win_screen.png" type="Texture" id=2]
@@ -6,12 +6,16 @@
 [ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=4]
 [ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=5]
 [ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_normal.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_pressed.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_hover.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/magic_button.gd" type="Script" id=7]
+[ext_resource path="res://MenuUI/WinScreen/hometext.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/WinScreen/rematchtext.tscn" type="PackedScene" id=12]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_normal.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_pressed.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/WinScreen/characterselection_hover.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/WinScreen/Characterselectiontext.tscn" type="PackedScene" id=16]
 
 [node name="WinScreen" type="Control" index="0"]
 
@@ -51,16 +55,34 @@ texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="Label" type="Label" parent="TextureRect" index="0"]
+[node name="font" type="HBoxContainer" parent="TextureRect" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.5
-anchor_top = 0.7807
+anchor_top = 0.53
 anchor_right = 0.5
-anchor_bottom = 0.7807
-margin_left = -147.0
-margin_top = -165.807
-margin_right = 147.0
-margin_bottom = -105.807
+anchor_bottom = 0.53
+margin_left = -142.5
+margin_top = -105.0
+margin_right = 142.5
+margin_bottom = -47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="player1" type="Label" parent="TextureRect/font" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 157.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -68,7 +90,51 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
-text = "Player 1 wins!"
+text = "Player1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="player2" type="Label" parent="TextureRect/font" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 169.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "Player2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="win!" type="Label" parent="TextureRect/font" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 161.0
+margin_right = 285.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = " wins!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -88,13 +154,13 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
 custom_constants/separation = 17
 alignment = 0
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="TextureButton3" type="TextureButton" parent="TextureRect/HBoxContainer" index="0"]
+[node name="home" type="TextureButton" parent="TextureRect/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -104,6 +170,8 @@ margin_right = 74.0
 margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../characterselection")
+focus_neighbour_right = NodePath("../rematch")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -116,9 +184,13 @@ group = null
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Textures" ]
+script = ExtResource( 7 )
+_sections_unfolded = [ "Focus", "Textures" ]
+next_scene = null
+particle_template = ExtResource( 8 )
+Amimation_Character_Selection_template = null
 
-[node name="TextureButton" type="TextureButton" parent="TextureRect/HBoxContainer" index="1"]
+[node name="rematch" type="TextureButton" parent="TextureRect/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -129,6 +201,8 @@ margin_right = 165.0
 margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../home")
+focus_neighbour_right = NodePath("../characterselection")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -138,12 +212,16 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
-_sections_unfolded = [ "Textures" ]
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+script = ExtResource( 7 )
+_sections_unfolded = [ "Focus", "Textures" ]
+next_scene = null
+particle_template = ExtResource( 12 )
+Amimation_Character_Selection_template = null
 
-[node name="TextureButton2" type="TextureButton" parent="TextureRect/HBoxContainer" index="2"]
+[node name="characterselection" type="TextureButton" parent="TextureRect/HBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -154,6 +232,8 @@ margin_right = 256.0
 margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../rematch")
+focus_neighbour_right = NodePath("../home")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -163,9 +243,31 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
-_sections_unfolded = [ "Textures" ]
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
+script = ExtResource( 7 )
+_sections_unfolded = [ "Focus", "Textures" ]
+next_scene = null
+particle_template = ExtResource( 16 )
+Amimation_Character_Selection_template = null
+
+[connection signal="focus_entered" from="TextureRect/HBoxContainer/home" to="TextureRect/HBoxContainer/home" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="TextureRect/HBoxContainer/home" to="TextureRect/HBoxContainer/home" method="_on_MagicButton_focus_exited"]
+
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/home" to="TextureRect/HBoxContainer/home" method="_on_MagicButton_mouse_entered"]
+
+[connection signal="focus_entered" from="TextureRect/HBoxContainer/rematch" to="TextureRect/HBoxContainer/rematch" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="TextureRect/HBoxContainer/rematch" to="TextureRect/HBoxContainer/rematch" method="_on_MagicButton_focus_exited"]
+
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/rematch" to="TextureRect/HBoxContainer/rematch" method="_on_MagicButton_mouse_entered"]
+
+[connection signal="focus_entered" from="TextureRect/HBoxContainer/characterselection" to="TextureRect/HBoxContainer/characterselection" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="TextureRect/HBoxContainer/characterselection" to="TextureRect/HBoxContainer/characterselection" method="_on_MagicButton_focus_exited"]
+
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/characterselection" to="TextureRect/HBoxContainer/characterselection" method="_on_MagicButton_mouse_entered"]
 
 

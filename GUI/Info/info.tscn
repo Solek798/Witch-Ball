@@ -4,11 +4,6 @@
 [ext_resource path="res://GUI/Info/railing.png" type="Texture" id=2]
 [ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=3]
 
-
-
-
-
-
 [node name="Info" type="HBoxContainer"]
 
 anchor_left = 0.0
