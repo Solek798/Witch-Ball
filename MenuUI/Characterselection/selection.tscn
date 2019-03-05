@@ -3,7 +3,7 @@
 [ext_resource path="res://MenuUI/Characterselection/selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=2]
 
-[node name="Selection" type="Control" index="0"]
+[node name="Selection" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
