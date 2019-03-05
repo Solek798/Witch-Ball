@@ -3,6 +3,10 @@ extends Node2D
 export(PackedScene) var pickup_mana_template
 export(PackedScene) var pickup_fast_template
 export(PackedScene) var pickup_big_template
+export(PackedScene) var stone_effect_template
+export(PackedScene) var needle_effect_template
+export(PackedScene) var eye_effect_template
+export(PackedScene) var butterfly_effect_template
 export(int) var min_spawn_time
 export(int) var max_spawn_time
 export(int) var time_divider = 2
