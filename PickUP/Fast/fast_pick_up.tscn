@@ -11,13 +11,14 @@
 custom_solver_bias = 0.0
 radius = 97.2272
 
-[node name="FastPickUp" index="0" instance=ExtResource( 1 )]
+[node name="FastPickUp" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
 [node name="FastEffect" parent="." index="0" instance=ExtResource( 3 )]
 
 position = Vector2( -33.8168, 26.5107 )
+emitting = false
 
 [node name="CollisionShape" parent="." index="1"]
 
@@ -29,15 +30,15 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="Texture" parent="." index="3"]
 
-rotation = -0.139926
 scale = Vector2( 0.929843, 0.929843 )
 texture = ExtResource( 4 )
 
 [node name="Animation" parent="." index="5"]
 
-autoplay = "Idle1"
 anims/Idle1 = ExtResource( 5 )
 
 [connection signal="body_entered" from="." to="." method="_on_FastPickUp_body_entered"]
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
 
 
