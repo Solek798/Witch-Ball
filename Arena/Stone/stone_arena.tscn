@@ -53,6 +53,15 @@ extents = Vector2( 10.5225, 654.954 )
 [node name="StoneArena" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+pickup_mana_template = null
+pickup_fast_template = null
+pickup_big_template = null
+stone_effect_template = ExtResource( 3 )
+needle_effect_template = ExtResource( 4 )
+eye_effect_template = ExtResource( 5 )
+butterfly_effect_template = ExtResource( 6 )
+min_spawn_time = null
+max_spawn_time = null
 stone_effect_template = ExtResource( 3 )
 needle_effect_template = ExtResource( 4 )
 eye_effect_template = ExtResource( 5 )
