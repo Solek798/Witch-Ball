@@ -17,14 +17,24 @@ export(PackedScene) var scarlett
 export(PackedScene) var jasmine
 export(PackedScene) var lilith
 export(PackedScene) var penny
+export(Resource) var BlueSelect
+export(Resource) var RedSelect
 
 func _ready():
 	$VStucktur/HStrucktur/Content/Pannels/Scarlett.grab_focus()
 	current_mode = PLAYER_1
-	
+	$VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations/PlayerOneselecting.texture = BlueSelect
+	$VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations/PlayerOneselecting.texture = BlueSelect
 
 func switch_player():
 	current_mode = PLAYER_2
+	$VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations/PlayerOneselecting.texture = RedSelect
+	$VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations/PlayerOneselecting.texture = RedSelect
+
 
 func end_selection():
 	current_mode = null
