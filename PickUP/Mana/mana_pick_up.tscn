@@ -26,7 +26,6 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="Texture" parent="." index="2"]
 
-rotation = -0.255292
 texture = ExtResource( 3 )
 
 [node name="IdleEffect" parent="." index="3" instance=ExtResource( 4 )]
@@ -36,9 +35,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Animation" parent="." index="5"]
 
-autoplay = "Idle"
 anims/Idle = ExtResource( 5 )
 
 [connection signal="body_entered" from="." to="." method="_on_ManaPickUp_body_entered"]
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
 
 
