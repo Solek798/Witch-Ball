@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ball2 (2).png-afa550c8c91dfe620bf544628da2bb14.stex"
+path="res://.import/Ball (3).png-ad515f23f824d5ae26a543f0886d0e8e.stex"
 
 [deps]
 
-source_file="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball2 (2).png"
-dest_files=[ "res://.import/Ball2 (2).png-afa550c8c91dfe620bf544628da2bb14.stex" ]
+source_file="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball (3).png"
+dest_files=[ "res://.import/Ball (3).png-ad515f23f824d5ae26a543f0886d0e8e.stex" ]
 
 [params]
 
