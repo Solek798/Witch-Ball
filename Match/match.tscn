@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Match/match.gd" type="Script" id=1]
-[ext_resource path="res://Arena/Stone/stone_arena.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Arena/Grass/grass_arena.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/gui.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backstage/backstage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://MenuUI/Tutorial/tutorial.tscn" type="PackedScene" id=5]

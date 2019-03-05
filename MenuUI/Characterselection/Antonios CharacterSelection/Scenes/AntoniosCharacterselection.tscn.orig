@@ -1,0 +1,983 @@
+<<<<<<< working copy
+[gd_scene load_steps=37 format=2]
+=======
+[gd_scene load_steps=30 format=2]
+>>>>>>> merge rev
+
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/AntoniosCharacterselection.gd" type="Script" id=1]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Characterselection_mockUp_schmal_waRailing2.png" type="Texture" id=2]
+[ext_resource path="res://Arena/Stone/stone_recent.jpg" type="Texture" id=3]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=5]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/dynamic_risque_CharacterselectionHeader.tres" type="DynamicFont" id=9]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/HoverBall.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/PanelAnimations.gd" type="Script" id=11]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/5Panel (5).png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Greenpanel (1).png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (2).png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Schadow.png" type="Texture" id=15]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/CirclesBorow (2).png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/BackCircles (1).png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Ball2 (2).png" type="Texture" id=18]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Animation/AntoniosCharacterselection.tres" type="Animation" id=19]
+[ext_resource path="res://MenuUI/Characterselection/this_will_be_a_wicked_game_Choosen.wav" type="AudioStream" id=20]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/Scenes/selection.tscn" type="PackedScene" id=21]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (3).png" type="Texture" id=22]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (4).png" type="Texture" id=23]
+[ext_resource path="res://MenuUI/Characterselection/Antonios CharacterSelection/images/Caracter (1).png" type="Texture" id=24]
+[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=25]
+[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=26]
+[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=27]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=28]
+[ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=29]
+
+<<<<<<< working copy
+[sub_resource type="StreamTexture" id=2]
+
+flags = 4
+load_path = "res://.import/BlueSelect.png-53d1090784d35f785166a6e99b3d76be.stex"
+
+[sub_resource type="StreamTexture" id=3]
+
+flags = 4
+load_path = "res://.import/RedSelect.png-088c84e203fca346e60636c9d6540a4d.stex"
+
+[sub_resource type="StreamTexture" id=1]
+
+flags = 4
+load_path = "res://.import/BlueSelect.png-4a88244a83ec9112d312b47bf43ea4a0.stex"
+
+[node name="AntoniosCharacterselection" type="CenterContainer" index="0"]
+=======
+[node name="AntoniosCharacterselection" type="CenterContainer"]
+>>>>>>> merge rev
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1900, 1000 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1026.0 ],
+"_edit_vertical_guides_": [ 50.0 ]
+}
+match_template = null
+<<<<<<< working copy
+scarlett = ExtResource( 2 )
+jasmine = ExtResource( 3 )
+lilith = ExtResource( 4 )
+penny = ExtResource( 5 )
+BlueSelect = SubResource( 2 )
+RedSelect = SubResource( 3 )
+=======
+scarlett = null
+jasmine = null
+lilith = null
+penny = null
+>>>>>>> merge rev
+
+[node name="Ref" type="TextureRect" parent="." index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="BAckground" type="TextureRect" parent="." index="1"]
+
+visible = false
+modulate = Color( 0.48621, 0.365829, 0.535156, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="VStucktur" type="HBoxContainer" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = 13.0
+margin_right = 1914.0
+margin_bottom = 1067.0
+rect_min_size = Vector2( 1900, 1000 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Back" type="CenterContainer" parent="VStucktur" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 150.0
+margin_bottom = 1054.0
+rect_min_size = Vector2( 150, 1000 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VStucktur/Back" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 150.0
+margin_bottom = 1054.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="VStucktur/Back/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 150.0
+margin_bottom = 900.0
+rect_min_size = Vector2( 150, 900 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="VStucktur/Back/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 904.0
+margin_right = 150.0
+margin_bottom = 1054.0
+rect_min_size = Vector2( 150, 150 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="BackToMenu" parent="VStucktur/Back/HBoxContainer/CenterContainer2" index="0" instance=ExtResource( 4 )]
+
+margin_left = 38.0
+margin_top = 39.0
+margin_right = 112.0
+margin_bottom = 110.0
+focus_neighbour_right = NodePath("../../../../HStrucktur/Footer/Play")
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+_sections_unfolded = [ "Focus", "Textures" ]
+Amimation_Character_Selection_template = ExtResource( 8 )
+
+[node name="HStrucktur" type="VBoxContainer" parent="VStucktur" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 154.0
+margin_right = 1754.0
+margin_bottom = 1054.0
+rect_min_size = Vector2( 1600, 1040 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Header" type="CenterContainer" parent="VStucktur/HStrucktur" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 1600.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 0, 85 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="Header" type="Label" parent="VStucktur/HStrucktur/Header" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 500.0
+margin_top = 2.0
+margin_right = 1100.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Choose a Character!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Content" type="CenterContainer" parent="VStucktur/HStrucktur" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 119.0
+margin_right = 1600.0
+margin_bottom = 919.0
+rect_min_size = Vector2( 1600, 800 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="Pannels" type="HBoxContainer" parent="VStucktur/HStrucktur/Content" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_right = 1595.0
+margin_bottom = 800.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -3
+alignment = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
+
+[node name="Scarlett" parent="VStucktur/HStrucktur/Content/Pannels" index="0" instance=ExtResource( 4 )]
+
+margin_right = 400.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Penny")
+focus_neighbour_right = NodePath("../Jasmine")
+focus_neighbour_bottom = NodePath("../../../Footer/Play")
+Amimation_Character_Selection_template = ExtResource( 10 )
+
+[node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="0"]
+
+position = Vector2( 200, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="0"]
+
+scale = Vector2( -1, 1 )
+<<<<<<< working copy
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Hover" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="1"]
+=======
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Rect", "Transform" ]
+>>>>>>> merge rev
+
+scale = Vector2( -1, 1 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Green" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="2"]
+
+position = Vector2( 14.854, -155.402 )
+<<<<<<< working copy
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Visibility" ]
+=======
+texture = ExtResource( 13 )
+>>>>>>> merge rev
+
+[node name="Character2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="3"]
+
+position = Vector2( 14.8539, -71.744 )
+texture = ExtResource( 14 )
+
+[node name="Shadow" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="5"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 676.682 )
+<<<<<<< working copy
+texture = ExtResource( 20 )
+_sections_unfolded = [ "Z Index" ]
+=======
+texture = ExtResource( 16 )
+>>>>>>> merge rev
+
+[node name="Point" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="7"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="8"]
+
+self_modulate = Color( 0.199814, 0.240389, 0.378906, 1 )
+position = Vector2( 23.577, 755.011 )
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="9"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 19 )
+blend_times = [  ]
+
+[node name="PlayerOneselecting" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" index="10"]
+
+visible = false
+texture = SubResource( 1 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="1"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="2" instance=ExtResource( 21 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Scarlett/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 332.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 9 )
+text = "Scarlet "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="Jasmine" parent="VStucktur/HStrucktur/Content/Pannels" index="1" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = 397.0
+margin_right = 797.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Scarlett")
+focus_neighbour_right = NodePath("../Lilith")
+focus_neighbour_bottom = NodePath("../../../Footer/Play")
+_sections_unfolded = [ "Focus", "Rect" ]
+Amimation_Character_Selection_template = ExtResource( 10 )
+
+[node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="0"]
+
+editor/display_folded = true
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="0"]
+
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 13 )
+
+[node name="Character2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="2"]
+
+position = Vector2( 14.8539, -52.9022 )
+texture = ExtResource( 22 )
+
+[node name="Shadow" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 15 )
+
+[node name="Shadow2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 16 )
+
+[node name="Point" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="7"]
+
+self_modulate = Color( 1, 0.386719, 0.386719, 1 )
+position = Vector2( 23.577, 755.011 )
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 19 )
+blend_times = [  ]
+
+[node name="PlayerOneselecting" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" index="9"]
+
+visible = false
+scale = Vector2( 1, 1 )
+texture = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="1"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="2" instance=ExtResource( 21 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Jasmine/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 307.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+<<<<<<< working copy
+custom_fonts/font = ExtResource( 13 )
+text = "Jasmine"
+=======
+custom_fonts/font = ExtResource( 9 )
+text = "Jasmin"
+>>>>>>> merge rev
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Lilith" parent="VStucktur/HStrucktur/Content/Pannels" index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = 794.0
+margin_right = 1194.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Jasmine")
+focus_neighbour_right = NodePath("../Penny")
+focus_neighbour_bottom = NodePath("../../../Footer/Play")
+_sections_unfolded = [ "Focus", "Rect" ]
+Amimation_Character_Selection_template = ExtResource( 10 )
+
+[node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="0"]
+
+editor/display_folded = true
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="0"]
+
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Green" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 13 )
+
+[node name="Character2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="2"]
+
+position = Vector2( 14.854, -115.402 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 23 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 15 )
+
+[node name="Shadow2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 16 )
+
+[node name="Point" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="7"]
+
+self_modulate = Color( 0.290196, 0.219608, 0.564706, 1 )
+position = Vector2( 16.3347, 755.011 )
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 19 )
+blend_times = [  ]
+
+[node name="PlayerOneselecting" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" index="9"]
+
+visible = false
+scale = Vector2( 1, 1 )
+texture = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="1"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="2" instance=ExtResource( 21 )]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Lilith" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Lilith/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 251.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 9 )
+text = "Lilith"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Penny" parent="VStucktur/HStrucktur/Content/Pannels" index="3" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = 1191.0
+margin_right = 1591.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 400, 800 )
+focus_neighbour_left = NodePath("../Lilith")
+focus_neighbour_right = NodePath("../Scarlett")
+focus_neighbour_bottom = NodePath("../../../Footer/Play")
+_sections_unfolded = [ "Focus", "Rect" ]
+Amimation_Character_Selection_template = ExtResource( 10 )
+
+[node name="PanelAnimations" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="0"]
+
+editor/display_folded = true
+position = Vector2( 197, 404.643 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Panel" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="0"]
+
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Green" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="1"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 13 )
+
+[node name="Character2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="2"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 24 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shadow" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="3"]
+
+position = Vector2( 14.854, -155.402 )
+texture = ExtResource( 15 )
+
+[node name="Shadow2" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="4"]
+
+position = Vector2( 14.854, -155.402 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ring" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="5"]
+
+position = Vector2( 8.53653, 676.682 )
+texture = ExtResource( 16 )
+
+[node name="Point" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="6"]
+
+position = Vector2( 8.53653, 753.395 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bullet" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="7"]
+
+self_modulate = Color( 1, 0.5625, 0, 1 )
+position = Vector2( 23.833, 756.231 )
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/AntoniosCharacterselection = ExtResource( 19 )
+blend_times = [  ]
+
+[node name="PlayerOneselecting" type="Sprite" parent="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" index="9"]
+
+visible = false
+scale = Vector2( 1, 1 )
+texture = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="1"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Selection" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="2" instance=ExtResource( 21 )]
+
+[node name="Name" type="Node2D" parent="VStucktur/HStrucktur/Content/Pannels/Penny" index="3"]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ChName" type="Label" parent="VStucktur/HStrucktur/Content/Pannels/Penny/Name" index="0"]
+
+modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_top = 450.0
+margin_right = 284.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 9 )
+text = "Penny"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+
+[node name="Footer" type="CenterContainer" parent="VStucktur/HStrucktur" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 923.0
+margin_right = 1600.0
+margin_bottom = 1023.0
+rect_min_size = Vector2( 1600, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="Play" parent="VStucktur/HStrucktur/Footer" index="0" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = 700.0
+margin_top = 11.0
+margin_right = 900.0
+margin_bottom = 88.0
+focus_neighbour_left = NodePath("../../../Back/HBoxContainer/CenterContainer2/BackToMenu")
+focus_neighbour_top = NodePath("../../Content/Pannels/Jasmine")
+disabled = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+texture_hover = ExtResource( 27 )
+texture_disabled = ExtResource( 26 )
+_sections_unfolded = [ "Focus", "Textures" ]
+particle_template = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="VStucktur/HStrucktur/Footer/Play" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.51
+margin_left = -100.0
+margin_top = -23.0
+margin_right = 100.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 29 )
+custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
+text = "PLAY"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="LinkerRamen" type="CenterContainer" parent="VStucktur" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1758.0
+margin_right = 1908.0
+margin_bottom = 1054.0
+rect_min_size = Vector2( 150, 1000 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect" ]
+
+[connection signal="focus_entered" from="VStucktur/HStrucktur/Content/Pannels/Scarlett" to="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="VStucktur/HStrucktur/Content/Pannels/Scarlett" to="VStucktur/HStrucktur/Content/Pannels/Scarlett/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="pressed" from="VStucktur/HStrucktur/Content/Pannels/Scarlett" to="." method="_on_Scarlett_pressed"]
+
+[connection signal="focus_entered" from="VStucktur/HStrucktur/Content/Pannels/Jasmine" to="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="VStucktur/HStrucktur/Content/Pannels/Jasmine" to="VStucktur/HStrucktur/Content/Pannels/Jasmine/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="pressed" from="VStucktur/HStrucktur/Content/Pannels/Jasmine" to="." method="_on_Jasmine_pressed"]
+
+[connection signal="focus_entered" from="VStucktur/HStrucktur/Content/Pannels/Lilith" to="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="VStucktur/HStrucktur/Content/Pannels/Lilith" to="VStucktur/HStrucktur/Content/Pannels/Lilith/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="pressed" from="VStucktur/HStrucktur/Content/Pannels/Lilith" to="." method="_on_Lilith_pressed"]
+
+[connection signal="focus_entered" from="VStucktur/HStrucktur/Content/Pannels/Penny" to="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" method="_on_Panel_focus_entered"]
+
+[connection signal="focus_exited" from="VStucktur/HStrucktur/Content/Pannels/Penny" to="VStucktur/HStrucktur/Content/Pannels/Penny/PanelAnimations" method="_on_Panel_focus_exited"]
+
+[connection signal="pressed" from="VStucktur/HStrucktur/Content/Pannels/Penny" to="." method="_on_Penny_pressed"]
+
+[connection signal="pressed" from="VStucktur/HStrucktur/Footer/Play" to="." method="_on_Play_pressed"]
+
+
