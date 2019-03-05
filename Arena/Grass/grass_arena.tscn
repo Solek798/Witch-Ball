@@ -59,6 +59,9 @@ butterfly_effect_template = ExtResource( 6 )
 
 [node name="River" parent="." index="0" instance=ExtResource( 7 )]
 
+position = Vector2( 16.7372, -125.868 )
+scale = Vector2( 1, 1.61269 )
+
 [node name="Background" parent="." index="1"]
 
 z_index = -21
