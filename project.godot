@@ -23,6 +23,7 @@ config/icon="res://Icon2.png"
 [autoload]
 
 Action="*res://Action.gd"
+Transition="*res://Transition.tscn"
 
 [display]
 

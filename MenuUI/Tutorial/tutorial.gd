@@ -15,6 +15,6 @@ func _process(delta):
 
 func validate():
 	if $ConfirmPanel/HB1/Player1.is_filled and $ConfirmPanel/HB1/Player2.is_filled:
-		$TimeBeforeTransition.start()
-		yield($TimeBeforeTransition, "timeout")
+		$Animation.play("FadeOut")
+		yield($Animation, "animation_finished")
 		self.queue_free()

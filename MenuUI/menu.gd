@@ -24,10 +24,12 @@ func _process(delta):
 func open(manage_input=true):
 	self.visible = true
 	self.manage_input = manage_input
+	$Animation.play("FadeIn")
 
 func close(manage_input=false):
 	self.manage_input = manage_input
 	self.visible = false
+	$Animation.play("FadeOut")
 
 func set_blur(amount, darknes):
 	self.material.set_shader_param("amount", amount)
@@ -53,12 +55,17 @@ func confirm_selection(identities):
 	get_parent().start_match(identities)
 
 func request_restart():
+	Transition.on()
+	yield(Transition, "done_on")
 	emit_signal("restart_requested")
 
 func request_stop():
+	Transition.on()
+	yield(Transition, "done_on")
 	emit_signal("stop_requested")
 
 func menu():
+	set_blur(2.5, 0.0)
 	$Background.visible = true
 	open()
 	add_child(main_scene_template.instance())
@@ -78,9 +85,9 @@ func tutorial():
 		var tutorial = tutorial_template.instance()
 		add_child(tutorial)
 		
-		yield(tutorial.get_node("TimeBeforeTransition"), "timeout")
+		yield(tutorial, "tree_exited")
 		close()
-	print("tutorial_exited")
+	
 	emit_signal("tutorial_exited")
 
 func manage_input():

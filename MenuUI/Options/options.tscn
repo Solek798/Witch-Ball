@@ -1,20 +1,22 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://MenuUI/Options/options.gd" type="Script" id=1]
-[ext_resource path="res://MenuUI/Options/options_panel.png" type="Texture" id=2]
-[ext_resource path="res://dynamic_risque_options.tres" type="DynamicFont" id=3]
-[ext_resource path="res://MenuUI/Options/ticker.png" type="Texture" id=4]
-[ext_resource path="res://slidertest.tres" type="StyleBox" id=5]
-[ext_resource path="res://slidertest_fill.tres" type="StyleBox" id=6]
-[ext_resource path="res://MenuUI/Options/checkedfull.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/Options/checked.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=9]
-[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=2]
+[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=3]
+[ext_resource path="res://MenuUI/Options/options_panel.png" type="Texture" id=4]
+[ext_resource path="res://dynamic_risque_options.tres" type="DynamicFont" id=5]
+[ext_resource path="res://MenuUI/Options/ticker.png" type="Texture" id=6]
+[ext_resource path="res://slidertest.tres" type="StyleBox" id=7]
+[ext_resource path="res://slidertest_fill.tres" type="StyleBox" id=8]
+[ext_resource path="res://MenuUI/Options/checkedfull.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/Options/checked.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=11]
+[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=14]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=15]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -43,7 +45,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Shadow" ]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -71,7 +73,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="StyleBoxLine" id=3]
+[sub_resource type="StyleBoxLine" id=4]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -99,9 +101,20 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor" ]
+_sections_unfolded = [ "Anchor", "Visibility" ]
 
-[node name="Panel" type="TextureRect" parent="." index="0"]
+[node name="Animation" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = ExtResource( 2 )
+anims/FadeOut = ExtResource( 3 )
+blend_times = [  ]
+
+[node name="Panel" type="TextureRect" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -117,7 +130,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
@@ -192,7 +205,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 custom_constants/line_spacing = -46
 text = "Music
@@ -220,13 +233,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_icons/tick = ExtResource( 4 )
-custom_icons/grabber_disabled = ExtResource( 4 )
-custom_icons/grabber_highlight = ExtResource( 4 )
-custom_icons/grabber = ExtResource( 4 )
-custom_styles/slider = ExtResource( 5 )
-custom_styles/grabber_area = ExtResource( 6 )
-custom_styles/focus = SubResource( 1 )
+custom_icons/tick = ExtResource( 6 )
+custom_icons/grabber_disabled = ExtResource( 6 )
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = ExtResource( 7 )
+custom_styles/grabber_area = ExtResource( 8 )
+custom_styles/focus = SubResource( 2 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -256,7 +269,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 custom_constants/line_spacing = -42
 text = "Sound
@@ -284,13 +297,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 7
 size_flags_vertical = 7
-custom_icons/tick = ExtResource( 4 )
-custom_icons/grabber_disabled = ExtResource( 4 )
-custom_icons/grabber_highlight = ExtResource( 4 )
-custom_icons/grabber = ExtResource( 4 )
-custom_styles/slider = ExtResource( 5 )
-custom_styles/grabber_area = ExtResource( 6 )
-custom_styles/focus = SubResource( 2 )
+custom_icons/tick = ExtResource( 6 )
+custom_icons/grabber_disabled = ExtResource( 6 )
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = ExtResource( 7 )
+custom_styles/grabber_area = ExtResource( 8 )
+custom_styles/focus = SubResource( 3 )
 min_value = -80.0
 max_value = 24.0
 step = 1.0
@@ -320,7 +333,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_styles/separator = SubResource( 3 )
+custom_styles/separator = SubResource( 4 )
 _sections_unfolded = [ "custom_styles" ]
 
 [node name="HB1" type="HBoxContainer" parent="Panel/Conent/Options/VB1" index="5"]
@@ -359,11 +372,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_icons/radio_checked = ExtResource( 7 )
-custom_icons/checked = ExtResource( 7 )
-custom_icons/radio_unchecked = ExtResource( 8 )
-custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = ExtResource( 3 )
+custom_icons/radio_checked = ExtResource( 9 )
+custom_icons/checked = ExtResource( 9 )
+custom_icons/radio_unchecked = ExtResource( 10 )
+custom_icons/unchecked = ExtResource( 10 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color_disabled = Color( 0.396078, 0.247059, 0.109804, 1 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 custom_colors/font_color_hover = Color( 0.560784, 0.827451, 0.847059, 1 )
@@ -394,7 +407,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 text = "Fullscreen"
 percent_visible = 1.0
@@ -438,11 +451,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_icons/radio_checked = ExtResource( 7 )
-custom_icons/checked = ExtResource( 7 )
-custom_icons/radio_unchecked = ExtResource( 8 )
-custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = ExtResource( 3 )
+custom_icons/radio_checked = ExtResource( 9 )
+custom_icons/checked = ExtResource( 9 )
+custom_icons/radio_unchecked = ExtResource( 10 )
+custom_icons/unchecked = ExtResource( 10 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.517647, 0.364706, 0.196078, 1 )
 custom_colors/font_color_hover = Color( 0.552941, 0.819608, 0.839216, 1 )
 custom_colors/font_color_pressed = Color( 0.0980392, 0.298039, 0.345098, 1 )
@@ -473,7 +486,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.505882, 0.356863, 0.188235, 1 )
 text = "Tutorial"
 percent_visible = 1.0
@@ -501,7 +514,7 @@ custom_constants/separation = 5
 alignment = 0
 _sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
-[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 9 )]
+[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 11 )]
 
 margin_right = 74.0
 margin_bottom = 71.0
@@ -509,11 +522,11 @@ focus_neighbour_top = NodePath("../../Options/VB1/HB2/Tutorial")
 focus_neighbour_bottom = NodePath("../../Options/VB1/Music")
 size_flags_horizontal = 5
 size_flags_vertical = 4
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
 _sections_unfolded = [ "Focus", "Margin", "Size Flags", "Textures" ]
-particle_template = ExtResource( 13 )
+particle_template = ExtResource( 15 )
 
 [connection signal="value_changed" from="Panel/Conent/Options/VB1/Music" to="." method="_on_Music_value_changed"]
 

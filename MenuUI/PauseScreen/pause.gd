@@ -8,10 +8,12 @@ onready var own_template = load(path_to_own_template)
 func _ready():
 	get_tree().paused = true
 	$Background/Content/Buttons/Resume.grab_focus()
+	$Animation.play("FadeIn")
 
 func _on_Options_pressed():
 	if get_parent().has_method("switch_scene"):
 		get_parent().switch_scene($Background/Content/Buttons/Options.next_scene, own_template)
+		$Animation.play("FadeOut")
 		self.queue_free()
 
 func _on_Resume_pressed():
@@ -23,6 +25,7 @@ func _on_Resume_pressed():
 func _on_Restart_pressed():
 	if get_parent().has_method("request_restart"):
 		get_parent().request_restart()
+	
 	if get_parent().has_method("close"):
 		get_parent().close()
 	self.queue_free()

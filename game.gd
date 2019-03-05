@@ -19,21 +19,26 @@ func _ready():
 	$Menu.switch_controlls(0)
 
 func start_match(identities):
-	print(identities)
+	Transition.on()
+	yield(Transition, "done_on")
+	
 	var new_match = match_template.instance()
 	new_match.player_identities = identities
 	
 	
 	new_match.connect("match_finished", self, "_on_match_finished")
 	new_match.connect("match_instanciated", $Menu, "tutorial")
+	new_match.connect("match_reseted", Transition, "off")
 	$Menu.connect("restart_requested", new_match, "reset")
 	$Menu.connect("stop_requested", new_match, "stop")
 	$Menu.connect("tutorial_exited", new_match, "start")
 	add_child_below_node($Music, new_match)
 	
 	$Music.stop()
+	Transition.off()
 
 func _on_match_finished(finished_match):
+	Transition.off()
 	finished_match.queue_free()
 	$Music.play()
 	$Menu.menu()

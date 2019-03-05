@@ -11,6 +11,7 @@ export(int) var round_count
 signal match_instanciated
 signal match_started(round_count)
 signal match_finished(finished_match)
+signal match_reseted
 signal player_created(player)
 
 var arena
@@ -50,10 +51,6 @@ func start():
 	emit_signal("match_started", round_count)
 
 func reset():
-	# get controlls
-	var controlls = []
-	for player in arena.players:
-		controlls.append(player.identity.controll)
 	
 	# delete "old" match
 	arena.free()
@@ -62,7 +59,9 @@ func reset():
 	
 	# re-initialized match
 	initialize()
-	start(controlls)
+	start()
+	
+	emit_signal("match_reseted")
 
 func stop():
 	emit_signal("match_finished", self)
