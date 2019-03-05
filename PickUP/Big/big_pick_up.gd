@@ -7,3 +7,7 @@ func _on_BigPickUp_body_entered(body):
 		body.big_shot = true
 		.destroy("Consume")
 
+func _on_Animation_animation_finished(anim_name):
+	if anim_name == "Spawn":
+		$Animation.play("Idle")
+		$Shockwafe.emitting = true

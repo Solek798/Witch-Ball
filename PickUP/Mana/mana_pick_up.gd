@@ -8,3 +8,8 @@ func _on_ManaPickUp_body_entered(body):
 		body.increase_mana(mana_gain)
 		body.FillManaAnimation()
 		.destroy("Consume")
+
+
+func _on_Animation_animation_finished(anim_name):
+	if anim_name == "Spawn":
+		$Animation.play("Idle")

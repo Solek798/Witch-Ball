@@ -1,22 +1,26 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://MenuUI/Credits/credits.gd" type="Script" id=1]
-[ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=2]
-[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font_theme.tres" type="Theme" id=4]
-[ext_resource path="res://MenuUI/Credits/S4G_logo.png" type="Texture" id=5]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=6]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=2]
+[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=3]
+[ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=4]
+[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=5]
+[ext_resource path="res://MenuUI/Credits/S4G_logo.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=10]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -24,9 +28,20 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor" ]
+_sections_unfolded = [ "Anchor", "Focus", "Mouse", "Rect", "Size Flags" ]
 
-[node name="Background" type="TextureRect" parent="." index="0"]
+[node name="Animation" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = ExtResource( 2 )
+anims/FadeOut = ExtResource( 3 )
+blend_times = [  ]
+
+[node name="Background" type="TextureRect" parent="." index="1"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -42,26 +57,26 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="Credits" type="VBoxContainer" parent="Background" index="0"]
 
-anchor_left = 0.53566
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.54532
-margin_left = -244.004
-margin_top = -296.0
-margin_right = -50.0
-margin_bottom = 448.946
+anchor_left = 0.46531
+anchor_top = 0.37884
+anchor_right = 0.5
+anchor_bottom = 0.40873
+margin_left = -191.553
+margin_top = -151.898
+margin_right = 235.5
+margin_bottom = 544.707
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/separation = 37
+custom_constants/separation = 52
 alignment = 1
 _sections_unfolded = [ "custom_constants" ]
 
@@ -71,9 +86,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 29.0
-margin_right = 460.0
-margin_bottom = 410.0
+margin_top = 3.0
+margin_right = 446.0
+margin_bottom = 370.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -89,8 +104,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 430.0
-margin_bottom = 381.0
+margin_right = 413.0
+margin_bottom = 367.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -107,15 +122,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 180.0
-margin_bottom = 381.0
+margin_right = 174.0
+margin_bottom = 367.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.301961, 0.172549, 0.0941176, 1 )
 custom_constants/line_spacing = -3
 text = "Karim Steins
@@ -144,16 +159,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 212.0
-margin_right = 422.0
-margin_bottom = 381.0
+margin_left = 206.0
+margin_right = 405.0
+margin_bottom = 367.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.309804, 0.180392, 0.101961, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/line_spacing = -3
@@ -183,17 +198,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 447.0
-margin_right = 460.0
-margin_bottom = 477.0
+margin_top = 422.0
+margin_right = 446.0
+margin_bottom = 451.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 4 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.580118 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "www.witchball.school4games.net"
 align = 1
 percent_visible = 1.0
@@ -203,21 +218,22 @@ _sections_unfolded = [ "Margin", "Theme", "custom_colors", "custom_constants", "
 
 [node name="HSeparator" type="HSeparator" parent="Background/Credits" index="2"]
 
-modulate = Color( 0.238281, 0.203842, 0.203842, 0.497255 )
+visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 514.0
-margin_right = 460.0
-margin_bottom = 518.0
+margin_top = 491.0
+margin_right = 438.0
+margin_bottom = 496.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility" ]
+size_flags_horizontal = 3
+size_flags_vertical = 4
+_sections_unfolded = [ "Margin", "Size Flags", "Visibility" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="Background/Credits" index="3"]
 
@@ -226,9 +242,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 555.0
-margin_right = 460.0
-margin_bottom = 650.0
+margin_top = 503.0
+margin_right = 446.0
+margin_bottom = 598.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -236,6 +252,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
+_sections_unfolded = [ "Margin" ]
 
 [node name="TextureRect" type="TextureRect" parent="Background/Credits/CenterContainer" index="0"]
 
@@ -243,8 +260,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 130.0
-margin_right = 330.0
+margin_left = 123.0
+margin_right = 323.0
 margin_bottom = 95.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -252,23 +269,22 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 5
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 stretch_mode = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Menu" parent="Background/Credits" index="4" instance=ExtResource( 6 )]
+[node name="Menu" parent="Background/Credits" index="4" instance=ExtResource( 7 )]
 
-margin_left = 193.0
-margin_top = 687.0
-margin_right = 267.0
-margin_bottom = 758.0
+margin_left = 186.0
+margin_top = 650.0
+margin_right = 260.0
+margin_bottom = 721.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 _sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "Textures" ]
-particle_template = ExtResource( 10 )
 
 [connection signal="pressed" from="Background/Credits/Menu" to="." method="_on_Menu_pressed"]
 

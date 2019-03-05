@@ -17,13 +17,26 @@ export(PackedScene) var jasmine
 export(PackedScene) var lilith
 export(PackedScene) var penny
 
+export(Resource) var red
+export(Resource) var blue
+export(Resource) var empty
+
 func _ready():
 	$Content/Characters/Scarlett.grab_focus()
 	
 	#if get_parent().has_method("get_current_controll"):
 	choosing_player = get_parent().current_controll
+	$AnimationPlayer.play("FadeIn")
+	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = blue
+	$Content/Characters/Jasmine/PanelAnimations/Selections.texture = blue
+	$Content/Characters/Lilith/PanelAnimations/Selections.texture = blue
+	$Content/Characters/Penny/PanelAnimations/Selections.texture = blue
 
 func switch_player():
+	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = red
+	$Content/Characters/Jasmine/PanelAnimations/Selections.texture = red
+	$Content/Characters/Lilith/PanelAnimations/Selections.texture = red
+	$Content/Characters/Penny/PanelAnimations/Selections.texture = red
 	if get_parent().has_method("switch_controlls"):
 		
 		var next_player = get_parent().switch_controlls(choosing_player.device + 1)
@@ -36,6 +49,10 @@ func switch_player():
 
 func end_selection():
 	#$Content/Selection/Railing.modulate = Color("ffffff")
+	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = empty
+	$Content/Characters/Jasmine/PanelAnimations/Selections.texture = empty
+	$Content/Characters/Lilith/PanelAnimations/Selections.texture = empty
+	$Content/Characters/Penny/PanelAnimations/Selections.texture = empty
 	$Selection/VBoxContainer/HBoxContainer/Play.disabled = false
 
 func _on_Scarlett_pressed():
@@ -80,6 +97,7 @@ func _on_Play_pressed():
 func _on_Menu_pressed():
 	if get_parent().has_method("switch_scene"):
 		get_parent().switch_scene(return_scene_template, null)
+		$AnimationPlayer.play("FadeOut")
 	self.queue_free()
 
 

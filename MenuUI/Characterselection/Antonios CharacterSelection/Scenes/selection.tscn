@@ -20,10 +20,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
 
 [node name="Player1Selected" type="Sprite" parent="." index="0"]
 
-visible = false
 position = Vector2( 200, 400 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 2 )
@@ -31,7 +31,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player2Selected" type="Sprite" parent="." index="1"]
 
-visible = false
 position = Vector2( 200, 400 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 3 )
@@ -39,7 +38,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Node2D" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 z_index = 2
 _sections_unfolded = [ "Z Index" ]
 

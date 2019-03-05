@@ -1,0 +1,296 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Arena/arena.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Arena/Grass/grass_arena.gd" type="Script" id=2]
+[ext_resource path="res://Arena/Animation/stone_effect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Arena/Animation/needel_effect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Arena/Animation/eyes_effect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Arena/Animation/butterfly_effect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Arena/Grass/Grass_lvl_aktuell.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 743.427, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1020.83, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.1435, 509.717 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 426.479, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1096.18, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1089.33, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 653.421 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.5225, 654.954 )
+
+[node name="grass_arena" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+stone_effect_template = ExtResource( 3 )
+needle_effect_template = ExtResource( 4 )
+eye_effect_template = ExtResource( 5 )
+butterfly_effect_template = ExtResource( 6 )
+
+[node name="River" parent="." index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 16.7372, -125.868 )
+scale = Vector2( 1, 1.61269 )
+
+[node name="Background" parent="." index="1"]
+
+z_index = -21
+texture = ExtResource( 8 )
+
+[node name="PickUp_Spawn" parent="." index="3"]
+
+editor/display_folded = false
+
+[node name="Stones" type="Area2D" parent="." index="5"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Stones" index="0"]
+
+position = Vector2( 941.302, 60.2894 )
+scale = Vector2( 0.442732, 0.481172 )
+build_mode = 0
+polygon = PoolVector2Array( 1740.04, 326.634, 1770.22, 472.419, 1856.99, 423.824, 1849.44, 326.634, 1770.22, 295.394 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Stones" index="1"]
+
+position = Vector2( -228.753, -66.8315 )
+scale = Vector2( 0.609197, 0.359868 )
+build_mode = 0
+polygon = PoolVector2Array( 1341.52, 443.131, 1407.31, 436.135, 1767.64, 422.144, 1845.39, 422.144, 1899.22, 450.127, 1833.88, 119.38, 1422.98, 148.701 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Stones" index="2"]
+
+position = Vector2( -1757.94, 364.525 )
+scale = Vector2( 0.970544, 0.782034 )
+build_mode = 0
+polygon = PoolVector2Array( 1768.31, 389.677, 1783.93, 435.231, 1812.02, 461.379, 1854.16, 484.622, 1915.03, 214.425, 1809.68, 167.939 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Stones" index="3"]
+
+position = Vector2( 598.692, -20.56 )
+scale = Vector2( 0.303644, 0.594357 )
+build_mode = 0
+polygon = PoolVector2Array( 1798.95, 207.06, 1926.89, 183.229, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2571.78, 32.1082, 1994.03, 29.7418, 1778.56, 27.3754 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Stones" index="4"]
+
+position = Vector2( -712.414, 923.37 )
+scale = Vector2( 0.970544, 0.782034 )
+build_mode = 0
+polygon = PoolVector2Array( 2240.19, 137.967, 2154.38, 182.929, 2190.91, 207.06, 2520.53, 216.143, 2638.76, 183.013, 2552.9, 52.7761, 2402.26, 55.1425 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Stones" index="5"]
+
+position = Vector2( -786.312, 770.193 )
+scale = Vector2( 0.358055, 1.82067 )
+build_mode = 0
+polygon = PoolVector2Array( 2247.65, 55.9782, 2043.92, 179.048, 2592.3, 176.192, 2540.54, 114.631, 2306.02, 96.611 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Needles" type="Area2D" parent="." index="6"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Needles" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1511.73, 111.982, 1428.66, 106.947, 1348.28, -3.36057, 1651.76, -1.31003, 1668.16, 45.8526, 1618.95, 117.622, 1574.67, 101.912 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Needles" index="1"]
+
+position = Vector2( -1246.74, 94.3252 )
+build_mode = 0
+polygon = PoolVector2Array( 1460.26, 59.6643, 1430.19, 151.524, 1340.08, -99.7363, 1871.17, -105.888, 1823.76, -11.4313, 1824.1, -11.8024, 1690.67, -9.28484, 1475.29, 7.8885 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Needles" index="2"]
+
+position = Vector2( -88.3457, -6.9754 )
+build_mode = 0
+polygon = PoolVector2Array( 1768.64, 88.914, 1758.64, 6.31164, 1874.99, 17.5031, 1885.77, 96.5358, 1856.81, 160.683, 1782.99, 158.633 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Needles" index="3"]
+
+position = Vector2( -926.879, 811.561 )
+scale = Vector2( 1.55113, 1.61538 )
+build_mode = 0
+polygon = PoolVector2Array( 1731.21, 85.8988, 1839.95, 78.1064, 1792.89, -102.677, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1856.81, 160.683, 1782.99, 158.633 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Needles" index="4"]
+
+position = Vector2( -957.09, 197.282 )
+scale = Vector2( 1.55113, 1.61538 )
+build_mode = 0
+polygon = PoolVector2Array( 1731.21, 85.8988, 1776.2, 25.8138, 1792.43, -123.8, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1857.35, 180.103, 1782.69, 183.22 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Needles" index="5"]
+
+position = Vector2( 2998.54, 187.212 )
+scale = Vector2( -1.62577, 1.61538 )
+build_mode = 0
+polygon = PoolVector2Array( 1731.21, 85.8988, 1776.2, 25.8138, 1792.43, -123.8, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1857.35, 180.103, 1782.69, 183.22 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Needles" index="6"]
+
+position = Vector2( 3939.48, 12.8548 )
+scale = Vector2( -1.62577, 0.402176 )
+build_mode = 0
+polygon = PoolVector2Array( 1721.66, 149.817, 1776.2, 25.8138, 1792.43, -123.8, 1871.17, -105.888, 1858.86, 6.89215, 1850.66, 105.318, 1857.35, 180.103, 1782.69, 183.22 )
+
+[node name="Border" type="Node2D" parent="." index="7"]
+
+[node name="Player" type="StaticBody2D" parent="Border" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Player" index="0"]
+
+position = Vector2( 928.117, 102.744 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border/Player" index="1"]
+
+position = Vector2( 948.666, 948.666 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border/Player" index="2"]
+
+position = Vector2( 123.519, 541.95 )
+rotation = 0.287405
+scale = Vector2( 1, 0.90418 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border/Player" index="3"]
+
+position = Vector2( 1794.59, 517.143 )
+rotation = 1.22434
+shape = SubResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/Player" index="4"]
+
+position = Vector2( 0, 3.4248 )
+build_mode = 0
+polygon = PoolVector2Array( 945.49, 190.969, 876.994, 913.599, 1065.36, 913.599, 986.587, 187.544 )
+
+[node name="Bullet" type="StaticBody2D" parent="Border" index="1"]
+
+input_pickable = false
+collision_layer = 16
+collision_mask = 16
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bullet" index="0"]
+
+position = Vector2( 972.64, -78.77 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border/Bullet" index="1"]
+
+position = Vector2( 958.941, 1208.95 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border/Bullet" index="2"]
+
+position = Vector2( -102.71, 568.715 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border/Bullet" index="3"]
+
+position = Vector2( 2044.6, 565.09 )
+shape = SubResource( 8 )
+
+[node name="Butterflies" type="Node" parent="." index="8"]
+
+editor/display_folded = true
+
+[node name="Position1" type="Position2D" parent="Butterflies" index="0"]
+
+position = Vector2( 175.717, 532.453 )
+
+[node name="Position2" type="Position2D" parent="Butterflies" index="1"]
+
+position = Vector2( 1762.72, 983.559 )
+
+[node name="Position3" type="Position2D" parent="Butterflies" index="2"]
+
+position = Vector2( 268.2, 138.66 )
+
+[node name="Eyes" type="Node" parent="." index="9"]
+
+editor/display_folded = true
+
+[node name="Position1" type="Position2D" parent="Eyes" index="0"]
+
+position = Vector2( 409.26, 135.903 )
+
+[node name="Position2" type="Position2D" parent="Eyes" index="1"]
+
+position = Vector2( 1469.8, 129.108 )
+
+[connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
+
+[connection signal="body_entered" from="Needles" to="." method="_on_Needles_body_entered"]
+
+
