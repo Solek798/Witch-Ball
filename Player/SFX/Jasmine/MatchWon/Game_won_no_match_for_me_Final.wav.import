@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Game_won_no_match_for_me_Final.wav-04623d6d3b992fc5d84b6bde9a482519.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/MatchWon/Game_won_no_match_for_me_Final.wav"
+dest_files=[ "res://.import/Game_won_no_match_for_me_Final.wav-04623d6d3b992fc5d84b6bde9a482519.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

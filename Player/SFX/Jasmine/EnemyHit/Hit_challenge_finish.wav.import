@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_challenge_finish.wav-40d3414a4836a9f9d2a5b3b5234179cd.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/EnemyHit/Hit_challenge_finish.wav"
+dest_files=[ "res://.import/Hit_challenge_finish.wav-40d3414a4836a9f9d2a5b3b5234179cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

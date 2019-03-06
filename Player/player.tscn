@@ -93,6 +93,7 @@ bullet_fast_template = ExtResource( 3 )
 bullet_big_template = ExtResource( 4 )
 movement_speed = 425
 aim_speed = 3.5
+chance_to_say_something_stupid = 0.25
 max_health = 5
 dodge_distance = 250
 max_mana = 50
@@ -211,8 +212,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Timer" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="Mana" type="Timer" parent="Timer" index="0"]
 
 process_mode = 1
@@ -259,8 +258,6 @@ script = ExtResource( 15 )
 [connection signal="timeout" from="Timer/Mana" to="." method="_on_ManaTimer_timeout"]
 
 [connection signal="timeout" from="Timer/Indestructable" to="." method="_on_IndestructableTimer_timeout"]
-
-[connection signal="timeout" from="Timer/Throw" to="." method="_on_DodgeTimer_timeout"]
 
 [connection signal="timeout" from="Timer/Dodge" to="." method="_on_Dodge_timeout"]
 

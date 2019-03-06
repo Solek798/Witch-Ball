@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_hit_you_finish.wav-8205a93a0f08b141bcb7aea862fb4290.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Penny/EnemyHit/Hit_hit_you_finish.wav"
+dest_files=[ "res://.import/Hit_hit_you_finish.wav-8205a93a0f08b141bcb7aea862fb4290.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

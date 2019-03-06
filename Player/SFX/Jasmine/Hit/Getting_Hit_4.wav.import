@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Getting_Hit_4.wav-878af962361166ebbe7ed144d400b544.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/Hit/Getting_Hit_4.wav"
+dest_files=[ "res://.import/Getting_Hit_4.wav-878af962361166ebbe7ed144d400b544.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

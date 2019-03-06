@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_One_round_won_Cmon_make_it_bit_harder_for_me_finish.wav-0ae349a6f30e36c7d59a13c782670442.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Cmon_make_it_bit_harder_for_me_finish.wav"
+dest_files=[ "res://.import/If_One_round_won_Cmon_make_it_bit_harder_for_me_finish.wav-0ae349a6f30e36c7d59a13c782670442.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

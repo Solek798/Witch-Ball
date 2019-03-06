@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_Whoops_was_that_my_fault_finish.wav-6882f4f249e543c2ca08bcf705ba5d63.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Whoops_was_that_my_fault_finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_Whoops_was_that_my_fault_finish.wav-6882f4f249e543c2ca08bcf705ba5d63.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

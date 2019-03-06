@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_Tear_on_your_face_finish.wav-e3a4862d3b928d2e0bab7b7c37890d3b.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/EnemyHit/Hit_Tear_on_your_face_finish.wav"
+dest_files=[ "res://.import/Hit_Tear_on_your_face_finish.wav-e3a4862d3b928d2e0bab7b7c37890d3b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

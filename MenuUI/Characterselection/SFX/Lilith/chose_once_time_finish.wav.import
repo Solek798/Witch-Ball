@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/chose_once_time_finish.wav-a1b7aa7d4501663e75c42225e172c8fa.sample"
+
+[deps]
+
+source_file="res://MenuUI/Characterselection/SFX/Lilith/chose_once_time_finish.wav"
+dest_files=[ "res://.import/chose_once_time_finish.wav-a1b7aa7d4501663e75c42225e172c8fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

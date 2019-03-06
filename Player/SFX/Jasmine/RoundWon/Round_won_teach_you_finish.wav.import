@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Round_won_teach_you_finish.wav-a817173d9f825613e528e80faa7bc532.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/RoundWon/Round_won_teach_you_finish.wav"
+dest_files=[ "res://.import/Round_won_teach_you_finish.wav-a817173d9f825613e528e80faa7bc532.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

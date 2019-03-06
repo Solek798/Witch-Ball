@@ -79,6 +79,7 @@ func create_player(identity):
 	player.connect("player_reseted", backstage, "_on_player_reseted")
 	backstage.connect("round_finished", player, "_on_round_finished")
 	backstage.connect("player_won_round", player, "_on_player_won_round" )
+	gui.connect("player_won_match", player, "_on_player_won_match")
 	
 	emit_signal("player_created", player)
 

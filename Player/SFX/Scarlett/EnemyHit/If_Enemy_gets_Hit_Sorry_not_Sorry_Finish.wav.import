@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_Enemy_gets_Hit_Sorry_not_Sorry_Finish.wav-966070ecc1a0e544baa4cb96fc4a891a.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Sorry_not_Sorry_Finish.wav"
+dest_files=[ "res://.import/If_Enemy_gets_Hit_Sorry_not_Sorry_Finish.wav-966070ecc1a0e544baa4cb96fc4a891a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

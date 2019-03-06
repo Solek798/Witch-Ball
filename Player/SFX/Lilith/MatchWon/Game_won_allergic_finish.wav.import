@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Game_won_allergic_finish.wav-685c304eb4eb7839086312efe409a29a.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Lilith/MatchWon/Game_won_allergic_finish.wav"
+dest_files=[ "res://.import/Game_won_allergic_finish.wav-685c304eb4eb7839086312efe409a29a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

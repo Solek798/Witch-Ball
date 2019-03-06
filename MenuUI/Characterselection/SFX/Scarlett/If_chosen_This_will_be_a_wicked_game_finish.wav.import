@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/If_chosen_This_will_be_a_wicked_game_finish.wav-2f8bf6d34c44ac7786729836c490b6d0.sample"
+
+[deps]
+
+source_file="res://MenuUI/Characterselection/SFX/Scarlett/If_chosen_This_will_be_a_wicked_game_finish.wav"
+dest_files=[ "res://.import/If_chosen_This_will_be_a_wicked_game_finish.wav-2f8bf6d34c44ac7786729836c490b6d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

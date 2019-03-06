@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_no_Suprise_finish.wav-422d6f3e1d4ceefa6434eab6fb7480a2.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/EnemyHit/Hit_no_Suprise_finish.wav"
+dest_files=[ "res://.import/Hit_no_Suprise_finish.wav-422d6f3e1d4ceefa6434eab6fb7480a2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

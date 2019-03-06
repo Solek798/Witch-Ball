@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_dodging_2_finish.wav-1247cc9440e7290f20a30aa60babd8c7.sample"
+
+[deps]
+
+source_file="res://Player/SFX/Jasmine/EnemyHit/Hit_dodging_2_finish.wav"
+dest_files=[ "res://.import/Hit_dodging_2_finish.wav-1247cc9440e7290f20a30aa60babd8c7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
