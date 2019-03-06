@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Front/Tree1/Stumpf/Unten/Middel:rotation_degrees")
+tracks/1/path = NodePath("Front/Tree1/Middel:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 0.0, 3.70369, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Front/Tree1/Stumpf/Unten:rotation_degrees")
+tracks/2/path = NodePath("Front/Tree1/Unten:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0.0, -6.64077, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Front/Tree1/Stumpf/Unten/Middel/Spitze:rotation_degrees")
+tracks/3/path = NodePath("Front/Tree1/Spitze:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -67,7 +67,7 @@ tracks/4/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Back/Tree2/Stumpf/Unten:rotation_degrees")
+tracks/5/path = NodePath("Back/Tree2/Unten:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -91,7 +91,7 @@ tracks/6/keys = {
 "values": [ 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Back/Tree2/Stumpf/Unten/Middel/Spitze:rotation_degrees")
+tracks/7/path = NodePath("Back/Tree2/Spitze:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ 0.0, -1.4659 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Back/Tree2/Stumpf/Unten/Middel:rotation_degrees")
+tracks/8/path = NodePath("Back/Tree2/Middel:rotation_degrees")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -139,7 +139,7 @@ tracks/10/keys = {
 "values": [ 0.0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Front/Tree3/Stumpf/Unten/Middel:rotation_degrees")
+tracks/11/path = NodePath("Front/Tree3/Middel:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -151,7 +151,7 @@ tracks/11/keys = {
 "values": [ 0.0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Front/Tree3/Stumpf/Unten:rotation_degrees")
+tracks/12/path = NodePath("Front/Tree3/Unten:rotation_degrees")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -163,7 +163,7 @@ tracks/12/keys = {
 "values": [ 0.0, -2.43237 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Front/Tree3/Stumpf/Unten/Middel/Spitze:rotation_degrees")
+tracks/13/path = NodePath("Front/Tree3/Spitze:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -199,7 +199,7 @@ tracks/15/keys = {
 "values": [ 0.0 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Back/Tree5/Stumpf/Unten:rotation_degrees")
+tracks/16/path = NodePath("Back/Tree5/Unten:rotation_degrees")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -211,7 +211,7 @@ tracks/16/keys = {
 "values": [ 0.0, 1.22524 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Back/Tree5/Stumpf/Unten/Middel:rotation_degrees")
+tracks/17/path = NodePath("Back/Tree5/Middel:rotation_degrees")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -283,7 +283,7 @@ tracks/22/keys = {
 "values": [ 0.0 ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("Front/Tree7/Stumpf/Unten/Middel:rotation_degrees")
+tracks/23/path = NodePath("Front/Tree7/Middel:rotation_degrees")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -295,7 +295,7 @@ tracks/23/keys = {
 "values": [ 0.0, 1.01511 ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("Front/Tree7/Stumpf/Unten/Middel/Spitze:rotation_degrees")
+tracks/24/path = NodePath("Front/Tree7/Spitze:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
@@ -319,7 +319,7 @@ tracks/25/keys = {
 "values": [ 0.0, 0.771644 ]
 }
 tracks/26/type = "value"
-tracks/26/path = NodePath("Front/Tree7/Stumpf/Unten:rotation_degrees")
+tracks/26/path = NodePath("Front/Tree7/Unten:rotation_degrees")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/imported = false
