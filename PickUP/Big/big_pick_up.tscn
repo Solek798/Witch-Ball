@@ -13,7 +13,6 @@ radius = 96.7643
 
 [node name="BigPickUp" index="0" instance=ExtResource( 1 )]
 
-monitoring = true
 script = ExtResource( 2 )
 
 [node name="CollisionShape" parent="." index="0"]
@@ -22,13 +21,12 @@ shape = SubResource( 1 )
 
 [node name="Shadow" parent="." index="1"]
 
-modulate = Color( 1, 1, 1, 1 )
-scale = Vector2( 0.4, 0.4 )
+modulate = Color( 1, 1, 1, 0 )
 
 [node name="Texture" parent="." index="2"]
 
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( 0, 0 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 100 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
@@ -36,10 +34,6 @@ texture = ExtResource( 3 )
 [node name="Animation" parent="." index="4"]
 
 anims/Idle = ExtResource( 4 )
-
-[node name="Bubbles" parent="." index="5"]
-
-emitting = false
 
 [node name="Shockwafe" parent="Particles" index="0" instance=ExtResource( 5 )]
 
