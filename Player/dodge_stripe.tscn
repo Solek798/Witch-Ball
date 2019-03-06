@@ -1,35 +1,22 @@
 [gd_scene load_steps=8 format=2]
 
-[sub_resource type="Gradient" id=6]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.568047 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.657451 )
 
-[sub_resource type="GradientTexture" id=7]
+[sub_resource type="GradientTexture" id=2]
 
 flags = 4
-gradient = SubResource( 6 )
+gradient = SubResource( 1 )
 width = 2048
 
-[sub_resource type="Curve" id=1]
+[sub_resource type="Curve" id=3]
 
 min_value = -1.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=2]
-
-flags = 4
-width = 2048
-curve = SubResource( 1 )
-
-[sub_resource type="Curve" id=3]
-
-min_value = 0.0
-max_value = 1.0
-bake_resolution = 100
-_data = [ Vector2( 0.0953547, 0.811523 ), 0.0, -0.342644, 0, 0, Vector2( 1, 0 ), -0.201996, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=4]
 
@@ -37,7 +24,20 @@ flags = 4
 width = 2048
 curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="Curve" id=5]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.0953547, 0.811523 ), 0.0, -0.342644, 0, 0, Vector2( 1, 0 ), -0.201996, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+
+flags = 4
+width = 2048
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=7]
 
 render_priority = 0
 trail_divisor = 1
@@ -67,11 +67,11 @@ angle = 0.0
 angle_random = 0.0
 scale = 5.0
 scale_random = 0.0
-scale_curve = SubResource( 4 )
-color_ramp = SubResource( 7 )
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
-hue_variation_curve = SubResource( 2 )
+hue_variation_curve = SubResource( 4 )
 anim_speed = 0.0
 anim_speed_random = 0.0
 anim_offset = 0.0
@@ -79,7 +79,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Scale", "Trail" ]
 
-[node name="DodgeStripe" type="Node2D" index="0"]
+[node name="DodgeStripe" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -100,7 +100,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 5 )
+process_material = SubResource( 7 )
 texture = null
 normal_map = null
 h_frames = 1

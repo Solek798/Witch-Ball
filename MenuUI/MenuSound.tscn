@@ -2,7 +2,7 @@
 
 [ext_resource path="res://MenuUI/SFX_Pickup_Spawn.wav" type="AudioStream" id=1]
 
-[node name="MenuSound" type="AudioStreamPlayer" index="0"]
+[node name="MenuSound" type="AudioStreamPlayer"]
 
 stream = ExtResource( 1 )
 volume_db = -20.0
