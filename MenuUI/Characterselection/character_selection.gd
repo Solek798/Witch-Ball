@@ -22,7 +22,6 @@ export(Resource) var empty
 
 func _ready():
 	$Content/Characters/Scarlett.grab_focus()
-	Path
 	choosing_player = get_parent().current_controll
 	$AnimationPlayer.play("FadeIn")
 	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = blue

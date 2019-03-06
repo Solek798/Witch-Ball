@@ -8,7 +8,7 @@ export(PackedScene) var player_template
 export(int) var player_count
 export(int) var round_count
 
-signal match_instanciated
+signal match_instanciated()
 signal match_started(round_count)
 signal match_finished(finished_match)
 signal match_reseted
@@ -22,6 +22,7 @@ var player_identities
 
 func _ready():
 	initialize()
+	print("match_instanciated")
 	emit_signal("match_instanciated")
 
 func initialize():
