@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MenuUI/Credits/credits.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=2]
 [ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=3]
 [ext_resource path="res://MenuUI/Credits/credits.png" type="Texture" id=4]
 [ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=5]
-[ext_resource path="res://MenuUI/Credits/S4G_logo.png" type="Texture" id=6]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=8]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=9]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=10]
+[ext_resource path="res://dynamic_risque_credits_sub.tres" type="DynamicFont" id=6]
+[ext_resource path="res://MenuUI/Credits/S4G_logo.png" type="Texture" id=7]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=9]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=12]
 
 [node name="Credits" type="Control" index="0"]
 
@@ -17,9 +19,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.0
+margin_left = -2.0
 margin_top = 1.0
-margin_right = -1.0
+margin_right = -2.0
 margin_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -62,14 +64,14 @@ stretch_mode = 0
 
 [node name="Credits" type="VBoxContainer" parent="Background" index="0"]
 
-anchor_left = 0.46531
+anchor_left = 0.45643
 anchor_top = 0.37884
-anchor_right = 0.5
-anchor_bottom = 0.40873
-margin_left = -191.553
+anchor_right = 0.45643
+anchor_bottom = 0.41928
+margin_left = -181.447
 margin_top = -151.898
-margin_right = 235.5
-margin_bottom = 544.707
+margin_right = 285.0
+margin_bottom = 527.684
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -78,7 +80,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 52
 alignment = 1
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Margin", "custom_constants" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="Background/Credits" index="0"]
 
@@ -86,9 +88,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 3.0
-margin_right = 446.0
-margin_bottom = 370.0
+margin_top = 1.0
+margin_right = 466.0
+margin_bottom = 368.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -99,12 +101,13 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="HB1" type="HBoxContainer" parent="Background/Credits/MarginContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 413.0
+margin_right = 408.0
 margin_bottom = 367.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -112,7 +115,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_constants/separation = 32
+custom_constants/separation = 27
 alignment = 1
 _sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
@@ -134,19 +137,19 @@ custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.301961, 0.172549, 0.0941176, 1 )
 custom_constants/line_spacing = -3
 text = "Karim Steins
-Production
+
 
 Paulina Pabst
-Game Design
+
 
 Felix Konprecht
-Programming
+
 
 Jessy-Lee Mais
-Characterart
+
 
 Antonio Waletzki
-Animation/VFX"
+"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -159,8 +162,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 206.0
-margin_right = 405.0
+margin_left = 201.0
+margin_right = 400.0
 margin_bottom = 367.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -173,24 +176,118 @@ custom_colors/font_color = Color( 0.309804, 0.180392, 0.101961, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/line_spacing = -3
 text = "Katharina Stadler
-Environment Art
+
 
 Mohammad Malandi
-VFX
+
 
 Daniel Oppermann
-2D Art / VFX
+
 
 Ronja Brodocz
-UI
+
 
 Jerry Froböse
-Sounddesign"
+"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="HB2" type="HBoxContainer" parent="Background/Credits/MarginContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 390.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 81
+alignment = 1
+_sections_unfolded = [ "Margin", "Size Flags", "Theme", "custom_constants" ]
+
+[node name="Label3" type="Label" parent="Background/Credits/MarginContainer/HB2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 142.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.301961, 0.172549, 0.0941176, 0.618784 )
+custom_constants/line_spacing = 0
+text = "
+   Production
+
+
+  Game Design
+
+
+  Programming
+
+
+   Characterart
+
+
+   Animation"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Focus", "Hint", "Margin", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Label4" type="Label" parent="Background/Credits/MarginContainer/HB2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 223.0
+margin_right = 382.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.301961, 0.172549, 0.0941176, 0.66851 )
+custom_constants/line_spacing = 0
+text = "
+Environment Art
+
+
+VFX 
+
+
+VFX/2D Art
+
+
+UI
+
+
+Sounddesign"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Focus", "Hint", "Margin", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="link" type="Label" parent="Background/Credits" index="1"]
 
@@ -198,16 +295,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 422.0
-margin_right = 446.0
-margin_bottom = 451.0
+margin_top = 420.0
+margin_right = 466.0
+margin_bottom = 446.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
 text = "www.witchball.school4games.net"
 align = 1
@@ -242,9 +339,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 503.0
-margin_right = 446.0
-margin_bottom = 598.0
+margin_top = 498.0
+margin_right = 466.0
+margin_bottom = 593.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -260,8 +357,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 123.0
-margin_right = 323.0
+margin_left = 133.0
+margin_right = 333.0
 margin_bottom = 95.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -269,22 +366,23 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 5
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 stretch_mode = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Menu" parent="Background/Credits" index="4" instance=ExtResource( 7 )]
+[node name="Menu" parent="Background/Credits" index="4" instance=ExtResource( 8 )]
 
-margin_left = 186.0
-margin_top = 650.0
-margin_right = 260.0
-margin_bottom = 721.0
+margin_left = 196.0
+margin_top = 645.0
+margin_right = 270.0
+margin_bottom = 716.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Grow Direction", "Margin", "Size Flags", "Textures" ]
+particle_template = ExtResource( 12 )
 
 [connection signal="pressed" from="Background/Credits/Menu" to="." method="_on_Menu_pressed"]
 

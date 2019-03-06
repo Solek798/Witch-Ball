@@ -1,6 +1,5 @@
 extends ColorRect
 
-# TEMP
 export(PackedScene) var main_scene_template
 export(PackedScene) var pause_scene_template
 export(PackedScene) var tutorial_template
@@ -22,13 +21,11 @@ func _process(delta):
 		manage_input()
 
 func open(manage_input=true):
-	print("open")
 	self.visible = true
 	self.manage_input = manage_input
 	$Animation.play("FadeIn")
 
 func close(manage_input=false):
-	print("close")
 	$Animation.play("FadeOut")
 	yield($Animation, "animation_finished")
 	self.manage_input = manage_input
@@ -39,8 +36,12 @@ func set_blur(amount, darknes):
 	self.material.set_shader_param("darknes", darknes)
 
 func switch_controlls(id):
+	print(current_controll)
 	if id < controlls.size():
+		if current_controll != null:
+			current_controll.active = false
 		current_controll = controlls[id]
+		current_controll.active = true
 		return current_controll
 	else:
 		return null
@@ -54,7 +55,6 @@ func switch_scene(next_scene_template, return_scene):
 	add_child(new_scene)
 
 func confirm_selection(identities):
-	#close()
 	get_parent().start_match(identities)
 
 func request_restart():
@@ -80,18 +80,16 @@ func pause():
 	add_child(pause_scene_template.instance())
 
 func tutorial():
-	#$Background.visible = false
 	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
 		$Background.visible = false
 		self.manage_input = false
-		#open(false)
 		set_blur(2.5, 0.25)
 		var tutorial = tutorial_template.instance()
 		add_child(tutorial)
 		
 		yield(tutorial, "tree_exited")
 		close()
-	print("tutorial_exited")
+	
 	emit_signal("tutorial_exited")
 
 func manage_input():
@@ -99,16 +97,16 @@ func manage_input():
 	
 	if current_controll.state(Action.MENU_UP):
 		event = "ui_up"
-		#focus_owner.get_node(focus_owner.focus_neighbour_top).grab_focus()
 	if current_controll.state(Action.MENU_DOWN):
 		event = "ui_down"
-		#focus_owner.get_node(focus_owner.focus_neighbour_bottom).grab_focus()
 	if current_controll.state(Action.MENU_LEFT):
 		event = "ui_left"
-		#focus_owner.get_node(focus_owner.focus_neighbour_left).grab_focus()
 	if current_controll.state(Action.MENU_RIGHT):
 		event = "ui_right"
-		#focus_owner.get_node(focus_owner.focus_neighbour_right).grab_focus()
+	if current_controll.state(Action.MENU_SELECT):
+		event = "ui_accept"
+	if current_controll.state(Action.MENU_PAUSE):
+		event = "ui_cancel"
 	
 	if event != null:
 		var act = InputEventAction.new()

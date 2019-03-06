@@ -1,45 +1,112 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuer Explsion/1.png" type="Texture" id=1]
 
-[sub_resource type="Gradient" id=7]
+[sub_resource type="Curve" id=3]
 
-offsets = PoolRealArray( 0, 0.213018, 0.621302, 0.804734, 1 )
-colors = PoolColorArray( 0.887952, 0.894531, 0.0524139, 1, 0.874603, 0.729019, 0.0643966, 1, 0.820313, 0.325692, 0.108948, 1, 0.886719, 0.185939, 0.0623474, 1, 0.191406, 0.178696, 0.178696, 1 )
-
-[sub_resource type="GradientTexture" id=8]
-
-flags = 4
-gradient = SubResource( 7 )
-width = 2048
-
-[sub_resource type="Curve" id=9]
-
-min_value = -400.0
-max_value = 400.0
+min_value = 0.0
+max_value = 1.0
 bake_resolution = 100
-_data = [ Vector2( 0.00130202, 400 ), 0.0, 267.885, 0, 0, Vector2( 0.504375, -400 ), 6633.34, 0.0, 0, 0 ]
+_data = [ Vector2( 0.0130267, 0.263672 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=10]
+[sub_resource type="CurveTexture" id=4]
 
 flags = 4
 width = 2048
-curve = SubResource( 9 )
+curve = SubResource( 3 )
+
+[sub_resource type="Gradient" id=13]
+
+offsets = PoolRealArray( 0.597633, 1 )
+colors = PoolColorArray( 0.925781, 0.8254, 0.169968, 1, 0.929688, 0.0254211, 0.0254211, 1 )
+
+[sub_resource type="GradientTexture" id=14]
+
+flags = 4
+gradient = SubResource( 13 )
+width = 2048
 
 [sub_resource type="Curve" id=5]
 
 min_value = 0.0
-max_value = 2.5
+max_value = 1.0
 bake_resolution = 100
-_data = [ Vector2( 0, 2.5 ), 0.0, -1.05838, 0, 0, Vector2( 0.469976, 0.847168 ), 1.11131, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 0.476167 ), 0.0, -0.895873, 0, 0, Vector2( 1, 0.152037 ), -0.482224, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=6]
 
 flags = 4
 width = 2048
 curve = SubResource( 5 )
+_sections_unfolded = [ "Resource" ]
 
-[sub_resource type="ParticlesMaterial" id=11]
+[sub_resource type="ParticlesMaterial" id=7]
+
+render_priority = 0
+trail_divisor = 1000
+trail_size_modifier = SubResource( 6 )
+trail_color_modifier = SubResource( 14 )
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 4.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1000.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale = 0.5
+scale_random = 0.0
+scale_curve = SubResource( 4 )
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Trail" ]
+
+[sub_resource type="Gradient" id=11]
+
+offsets = PoolRealArray( 0, 0.656805, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.972656, 0.963751, 0.40274, 1, 1, 0.0664063, 0.0664063, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+
+flags = 4
+gradient = SubResource( 11 )
+width = 2048
+
+[sub_resource type="Curve" id=8]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 1 ), 0.0, -1.31769, 0, 0, Vector2( 0.221487, 0.295036 ), -1.7434, -1.7434, 0, 0, Vector2( 1, 0 ), -0.201157, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+
+flags = 4
+width = 2048
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
 
 render_priority = 0
 trail_divisor = 1
@@ -49,29 +116,28 @@ flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
 spread = 180.0
-flatness = 1.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 360.0
-initial_velocity_random = 0.8
-angular_velocity = 0.0
-angular_velocity_random = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 100, 0 )
+initial_velocity = 150.0
+initial_velocity_random = 0.5
+angular_velocity = 360.0
+angular_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 linear_accel = 0.0
 linear_accel_random = 0.0
-linear_accel_curve = SubResource( 10 )
-radial_accel = 0.0
-radial_accel_random = 0.0
+radial_accel = -100.0
+radial_accel_random = 1.0
 tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 0.0
 damping_random = 0.0
 angle = 0.0
-angle_random = 0.0
-scale = 0.1
-scale_random = 0.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 8 )
+angle_random = 1.0
+scale = 0.5
+scale_random = 0.2
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 12 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -79,112 +145,184 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Angle", "Damping" ]
 
-[sub_resource type="Environment" id=12]
+[node name="Node2D" type="Node2D" index="0"]
 
-background_mode = 4
-background_sky_custom_fov = 0.0
-background_color = Color( 0, 0, 0, 1 )
-background_energy = 1.0
-background_canvas_max_layer = 0
-ambient_light_color = Color( 0, 0, 0, 1 )
-ambient_light_energy = 1.0
-ambient_light_sky_contribution = 1.0
-fog_enabled = false
-fog_color = Color( 0.5, 0.6, 0.7, 1 )
-fog_sun_color = Color( 1, 0.9, 0.7, 1 )
-fog_sun_amount = 0.0
-fog_depth_enabled = true
-fog_depth_begin = 10.0
-fog_depth_curve = 1.0
-fog_transmit_enabled = false
-fog_transmit_curve = 1.0
-fog_height_enabled = false
-fog_height_min = 0.0
-fog_height_max = 100.0
-fog_height_curve = 1.0
-tonemap_mode = 0
-tonemap_exposure = 1.0
-tonemap_white = 1.0
-auto_exposure_enabled = false
-auto_exposure_scale = 0.4
-auto_exposure_min_luma = 0.05
-auto_exposure_max_luma = 8.0
-auto_exposure_speed = 0.5
-ss_reflections_enabled = false
-ss_reflections_max_steps = 64
-ss_reflections_fade_in = 0.15
-ss_reflections_fade_out = 2.0
-ss_reflections_depth_tolerance = 0.2
-ss_reflections_roughness = true
-ssao_enabled = false
-ssao_radius = 1.0
-ssao_intensity = 1.0
-ssao_radius2 = 0.0
-ssao_intensity2 = 1.0
-ssao_bias = 0.01
-ssao_light_affect = 0.0
-ssao_color = Color( 0, 0, 0, 1 )
-ssao_quality = 0
-ssao_blur = 3
-ssao_edge_sharpness = 4.0
-dof_blur_far_enabled = false
-dof_blur_far_distance = 10.0
-dof_blur_far_transition = 5.0
-dof_blur_far_amount = 0.1
-dof_blur_far_quality = 1
-dof_blur_near_enabled = false
-dof_blur_near_distance = 2.0
-dof_blur_near_transition = 1.0
-dof_blur_near_amount = 0.1
-dof_blur_near_quality = 1
-glow_enabled = true
-glow_levels/1 = false
-glow_levels/2 = false
-glow_levels/3 = true
-glow_levels/4 = false
-glow_levels/5 = true
-glow_levels/6 = false
-glow_levels/7 = false
-glow_intensity = 1.7
-glow_strength = 0.61
-glow_bloom = 0.9
-glow_blend_mode = 0
-glow_hdr_threshold = 1.0
-glow_hdr_scale = 2.0
-glow_bicubic_upscale = false
-adjustment_enabled = false
-adjustment_brightness = 1.0
-adjustment_contrast = 1.0
-adjustment_saturation = 1.0
+rotation = -0.00461822
 
-[node name="Node" type="Node" index="0"]
+[node name="fireLine" type="Particles2D" parent="." index="0"]
 
-[node name="Particles2D" type="Particles2D" parent="." index="0"]
-
+position = Vector2( 1301.58, 921.883 )
+rotation = -1.66148
+scale = Vector2( 0.895419, 0.763469 )
 emitting = true
-amount = 200
-lifetime = 0.5
+amount = 1000
+lifetime = 0.4
 one_shot = false
 preprocess = 0.0
-speed_scale = 0.5
-explosiveness = 0.8
+speed_scale = 0.55
+explosiveness = 0.4
 randomness = 0.0
 fixed_fps = 0
-fract_delta = true
+fract_delta = false
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 11 )
+process_material = SubResource( 7 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Process Material", "Textures", "Time" ]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+[node name="FireExplosion" type="Particles2D" parent="fireLine" index="0"]
 
-environment = SubResource( 12 )
+position = Vector2( 439.528, -14.9866 )
+rotation = 1.63279
+scale = Vector2( 1.30887, 1.1179 )
+emitting = true
+amount = 70
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = ExtResource( 1 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="Light2D" type="Light2D" parent="fireLine/FireExplosion" index="0"]
+
+position = Vector2( -8.72363, 10.8311 )
+enabled = true
+editor_only = false
+texture = ExtResource( 1 )
+offset = Vector2( 0, 0 )
+texture_scale = 2.52
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="FireExplosion2" type="Particles2D" parent="fireLine" index="1"]
+
+position = Vector2( 425.608, 20.6077 )
+rotation = 1.63279
+scale = Vector2( 1.30887, 1.1179 )
+emitting = true
+amount = 70
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = ExtResource( 1 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="Light2D" type="Light2D" parent="fireLine/FireExplosion2" index="0"]
+
+position = Vector2( -8.72363, 10.8311 )
+enabled = true
+editor_only = false
+texture = ExtResource( 1 )
+offset = Vector2( 0, 0 )
+texture_scale = 2.52
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="FireExplosion3" type="Particles2D" parent="fireLine" index="2"]
+
+position = Vector2( 534.335, -19.5482 )
+rotation = 1.63279
+scale = Vector2( 2.49343, 2.12963 )
+emitting = true
+amount = 70
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = ExtResource( 1 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="Light2D" type="Light2D" parent="fireLine/FireExplosion3" index="0"]
+
+position = Vector2( -8.72363, 10.8311 )
+enabled = true
+editor_only = false
+texture = ExtResource( 1 )
+offset = Vector2( 0, 0 )
+texture_scale = 2.52
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
 
 

@@ -222,7 +222,7 @@ emitting = false
 [node name="Collect" type="AudioStreamPlayer2D" parent="." index="6"]
 
 stream = ExtResource( 5 )
-volume_db = -18.0
+volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0

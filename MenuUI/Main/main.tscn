@@ -16,7 +16,7 @@
 [ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=14]
 [ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=15]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=16]
-[ext_resource path="res://dynamic_risque_credits.tres" type="DynamicFont" id=17]
+[ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=17]
 [ext_resource path="res://MenuUI/Credits/credits.tscn" type="PackedScene" id=18]
 
 [node name="Main" type="CenterContainer"]
@@ -163,7 +163,6 @@ _sections_unfolded = [ "Anchor", "Margin", "Material", "Visibility", "custom_col
 
 [node name="Options" parent="Content/C1/Buttons" index="1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 margin_left = 50.0
 margin_top = 113.0
 margin_right = 250.0
@@ -185,9 +184,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -87.0
-margin_top = -24.5
+margin_top = -25.0
 margin_right = 87.0
-margin_bottom = 28.5
+margin_bottom = 27.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -206,7 +205,6 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Credits" parent="Content/C1/Buttons" index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 margin_left = 50.0
 margin_top = 187.0
 margin_right = 250.0
@@ -228,9 +226,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -80.0
-margin_top = -30.5
+margin_top = -25.5
 margin_right = 79.0
-margin_bottom = 29.5
+margin_bottom = 28.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -249,7 +247,6 @@ _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="Quit" parent="Content/C1/Buttons" index="3" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 margin_left = 50.0
 margin_top = 261.0
 margin_right = 250.0
@@ -270,9 +267,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -48.0
-margin_top = -30.0
+margin_top = -25.5
 margin_right = 48.0
-margin_bottom = 30.0
+margin_bottom = 28.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

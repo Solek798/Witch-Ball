@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://MenuUI/PauseScreen/pause.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=2]
@@ -9,18 +9,22 @@
 [ext_resource path="res://MenuUI/PauseScreen/resume_pressed.png" type="Texture" id=7]
 [ext_resource path="res://MenuUI/PauseScreen/resume_hover.png" type="Texture" id=8]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://MenuUI/PauseScreen/options.png" type="Texture" id=10]
-[ext_resource path="res://MenuUI/PauseScreen/options_pressed.png" type="Texture" id=11]
-[ext_resource path="res://MenuUI/PauseScreen/options_hover.png" type="Texture" id=12]
-[ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=13]
-[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=14]
-[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=16]
-[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=17]
-[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=18]
-[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=19]
+[ext_resource path="res://MenuUI/WinScreen/continuetext.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MenuUI/PauseScreen/options.png" type="Texture" id=11]
+[ext_resource path="res://MenuUI/PauseScreen/options_pressed.png" type="Texture" id=12]
+[ext_resource path="res://MenuUI/PauseScreen/options_hover.png" type="Texture" id=13]
+[ext_resource path="res://MenuUI/Options/options.tscn" type="PackedScene" id=14]
+[ext_resource path="res://MenuUI/WinScreen/optionstext.tscn" type="PackedScene" id=15]
+[ext_resource path="res://MenuUI/PauseScreen/restart.png" type="Texture" id=16]
+[ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=18]
+[ext_resource path="res://MenuUI/WinScreen/rematchtext.tscn" type="PackedScene" id=19]
+[ext_resource path="res://MenuUI/PauseScreen/home.png" type="Texture" id=20]
+[ext_resource path="res://MenuUI/PauseScreen/home_pressed.png" type="Texture" id=21]
+[ext_resource path="res://MenuUI/PauseScreen/home_hover.png" type="Texture" id=22]
+[ext_resource path="res://MenuUI/WinScreen/hometext.tscn" type="PackedScene" id=23]
 
-[node name="PauseScreen" type="CenterContainer"]
+[node name="PauseScreen" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -118,6 +122,7 @@ texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 _sections_unfolded = [ "Anchor", "Focus", "Textures" ]
 particle_template = ExtResource( 9 )
+text_template = ExtResource( 10 )
 
 [node name="Options" parent="Background/Content/Buttons" index="1" instance=ExtResource( 5 )]
 
@@ -126,12 +131,13 @@ margin_right = 165.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Resume")
 focus_neighbour_right = NodePath("../Restart")
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
 _sections_unfolded = [ "Focus", "Textures" ]
-next_scene = ExtResource( 13 )
+next_scene = ExtResource( 14 )
 particle_template = ExtResource( 9 )
+text_template = ExtResource( 15 )
 
 [node name="Restart" parent="Background/Content/Buttons" index="2" instance=ExtResource( 5 )]
 
@@ -140,11 +146,12 @@ margin_right = 256.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Options")
 focus_neighbour_right = NodePath("../Cancel")
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 15 )
-texture_hover = ExtResource( 16 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
 _sections_unfolded = [ "Focus", "Textures" ]
 particle_template = ExtResource( 9 )
+text_template = ExtResource( 19 )
 
 [node name="Cancel" parent="Background/Content/Buttons" index="3" instance=ExtResource( 5 )]
 
@@ -153,11 +160,12 @@ margin_right = 347.0
 margin_bottom = 71.0
 focus_neighbour_left = NodePath("../Restart")
 focus_neighbour_right = NodePath("../Resume")
-texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 18 )
-texture_hover = ExtResource( 19 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
 _sections_unfolded = [ "Focus", "Grow Direction", "Textures" ]
 particle_template = ExtResource( 9 )
+text_template = ExtResource( 23 )
 
 [connection signal="pressed" from="Background/Content/Buttons/Resume" to="." method="_on_Resume_pressed"]
 

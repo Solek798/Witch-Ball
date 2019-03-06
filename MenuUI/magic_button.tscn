@@ -24,6 +24,7 @@ group = null
 script = ExtResource( 1 )
 next_scene = null
 particle_template = null
+text_template = null
 Amimation_Character_Selection_template = null
 
 [connection signal="focus_entered" from="." to="." method="_on_MagicButton_focus_entered"]
