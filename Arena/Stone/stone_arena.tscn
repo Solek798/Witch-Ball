@@ -70,7 +70,7 @@ tracks/0/keys = {
 "values": [ 0.01, 1.4, 0.01 ]
 }
 
-[node name="StoneArena" index="0" instance=ExtResource( 1 )]
+[node name="StoneArena" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -92,8 +92,6 @@ max_effect_time = 10
 
 [node name="StoneArenaAnimation" parent="." index="0" instance=ExtResource( 7 )]
 
-position = Vector2( 960, 540 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Background" parent="." index="1"]
