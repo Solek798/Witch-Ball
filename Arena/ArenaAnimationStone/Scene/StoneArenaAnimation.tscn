@@ -44,7 +44,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.956863, 0.968627, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="StoneArenaAnimation" type="Node2D" index="0"]
+[node name="StoneArenaAnimation" type="Node2D"]
 
 _sections_unfolded = [ "Z Index" ]
 
@@ -65,6 +65,8 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Trees" parent="." index="2" instance=ExtResource( 2 )]
 
+_sections_unfolded = [ "Z Index" ]
+
 [node name="StoneBack" type="Node2D" parent="." index="3"]
 
 editor/display_folded = true
@@ -80,7 +82,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneBack/Stone" index="0"]
 
-modulate = Color( 0.687844, 0.983332, 0.987877, 1 )
+modulate = Color( 0.211537, 0.957898, 0.96938, 1 )
 position = Vector2( 0, 16.1143 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -99,7 +101,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneFront/Stone" index="0"]
 
-modulate = Color( 0.687844, 0.986362, 0.989393, 1 )
+modulate = Color( 0.211537, 0.965553, 0.973208, 1 )
 position = Vector2( 16.7238, -15.2051 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]

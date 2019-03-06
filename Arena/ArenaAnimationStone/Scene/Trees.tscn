@@ -25,14 +25,14 @@
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/T5 (2).png" type="Texture" id=23]
 [ext_resource path="res://Arena/ArenaAnimationStone/Animationen/Trees.tres" type="Animation" id=24]
 
-[node name="Trees" type="Node2D" index="0"]
+[node name="Trees" type="Node2D"]
 
 position = Vector2( 960, 540 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Front" type="Node2D" parent="." index="0"]
 
-z_index = 14
+z_index = -1
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Steinlvl_aktuell_cut" type="Sprite" parent="Front" index="0"]
@@ -49,30 +49,27 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Stumpf" type="Sprite" parent="Front/Tree7" index="0"]
 
-position = Vector2( -13.7173, -28.2987 )
-rotation = 0.000830045
+position = Vector2( -13.7173, -28.2986 )
+rotation = 0.0125224
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
-[node name="Unten" type="Sprite" parent="Front/Tree7" index="1"]
+[node name="Unten" type="Sprite" parent="Front/Tree7/Stumpf" index="0"]
 
-position = Vector2( -3.99623, -89.4562 )
-rotation = -0.000777489
-scale = Vector2( 2, 2 )
+position = Vector2( 4.86053, -30.5789 )
+rotation = -0.0117295
 texture = ExtResource( 3 )
 
-[node name="Middel" type="Sprite" parent="Front/Tree7" index="2"]
+[node name="Middel" type="Sprite" parent="Front/Tree7/Stumpf/Unten" index="0"]
 
-position = Vector2( -18.7588, -239.054 )
-rotation = 0.00109194
-scale = Vector2( 2, 2 )
+position = Vector2( -7.38129, -74.7988 )
+rotation = 0.0164734
 texture = ExtResource( 4 )
 
-[node name="Spitze" type="Sprite" parent="Front/Tree7" index="3"]
+[node name="Spitze" type="Sprite" parent="Front/Tree7/Stumpf/Unten/Middel" index="0"]
 
-position = Vector2( -32.5757, -409.483 )
-rotation = -0.0016099
-scale = Vector2( 2, 2 )
+position = Vector2( -6.90845, -85.2145 )
+rotation = -0.0242876
 texture = ExtResource( 5 )
 
 [node name="Tree3" type="Node2D" parent="Front" index="2"]
@@ -87,26 +84,23 @@ position = Vector2( -7.98315, -25.27 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 
-[node name="Unten" type="Sprite" parent="Front/Tree3" index="1"]
+[node name="Unten" type="Sprite" parent="Front/Tree3/Stumpf" index="0"]
 
-position = Vector2( 255.43, -187.242 )
-rotation = -0.00261646
-scale = Vector2( 2, 2 )
+position = Vector2( 131.707, -80.986 )
+rotation = -0.039473
 texture = ExtResource( 7 )
 offset = Vector2( -186.158, -8.6402 )
 
-[node name="Middel" type="Sprite" parent="Front/Tree3" index="2"]
+[node name="Middel" type="Sprite" parent="Front/Tree3/Stumpf/Unten" index="0"]
 
-position = Vector2( 319.791, -442.626 )
-scale = Vector2( 2, 2 )
+position = Vector2( 32.1805, -127.692 )
 texture = ExtResource( 8 )
 offset = Vector2( -214.987, 0.397156 )
 
-[node name="Spitze" type="Sprite" parent="Front/Tree3" index="3"]
+[node name="Spitze" type="Sprite" parent="Front/Tree3/Stumpf/Unten/Middel" index="0"]
 
-position = Vector2( 106.551, -591.774 )
-rotation = 0.0050546
-scale = Vector2( 2, 2 )
+position = Vector2( -106.62, -74.574 )
+rotation = 0.0762557
 texture = ExtResource( 9 )
 offset = Vector2( -86.9318, -36.9003 )
 
@@ -121,61 +115,60 @@ position = Vector2( -6.31299, -23.6001 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
 
-[node name="Unten" type="Sprite" parent="Front/Tree1" index="1"]
+[node name="Unten" type="Sprite" parent="Front/Tree1/Stumpf" index="0"]
 
-position = Vector2( -26.0945, -89.2346 )
-rotation = -0.00714337
-scale = Vector2( 2, 2 )
+position = Vector2( -9.89075, -32.8173 )
+rotation = -0.107768
 texture = ExtResource( 11 )
 
-[node name="Middel" type="Sprite" parent="Front/Tree1" index="2"]
+[node name="Middel" type="Sprite" parent="Front/Tree1/Stumpf/Unten" index="0"]
 
-position = Vector2( -54.251, -183.384 )
-rotation = 0.003984
-scale = Vector2( 2, 2 )
+position = Vector2( -14.0782, -47.0747 )
+rotation = 0.0601043
 texture = ExtResource( 12 )
 
-[node name="Spitze" type="Sprite" parent="Front/Tree1" index="3"]
+[node name="Spitze" type="Sprite" parent="Front/Tree1/Stumpf/Unten/Middel" index="0"]
 
-position = Vector2( -58.5857, -274.767 )
-rotation = -0.00858583
-scale = Vector2( 2, 2 )
+position = Vector2( -2.16736, -45.6915 )
+rotation = -0.129529
 texture = ExtResource( 13 )
 
-[node name="Tree6" type="Node2D" parent="Front" index="4"]
+[node name="Back" type="Node2D" parent="." index="1"]
+
+z_index = -20
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Tree6" type="Node2D" parent="Back" index="0"]
 
 editor/display_folded = true
 position = Vector2( 1165.86, -735.187 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Stumpf" type="Sprite" parent="Front/Tree6" index="0"]
+[node name="Stumpf" type="Sprite" parent="Back/Tree6" index="0"]
 
 position = Vector2( -3.46118, -84.0564 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 14 )
 
-[node name="Unten" type="Sprite" parent="Front/Tree6" index="1"]
+[node name="Unten" type="Sprite" parent="Back/Tree6/Stumpf" index="0"]
 
-position = Vector2( -40.6772, -233.206 )
-rotation = -0.0147546
-scale = Vector2( 2, 2 )
+position = Vector2( -18.608, -74.5748 )
+rotation = -0.0137189
 texture = ExtResource( 15 )
 
-[node name="Middel" type="Sprite" parent="Front/Tree6" index="2"]
+[node name="Middel" type="Sprite" parent="Back/Tree6/Stumpf/Unten" index="0"]
 
-position = Vector2( -40.7793, -325.826 )
-rotation = 0.0054034
-scale = Vector2( 2, 2 )
+position = Vector2( 0.632446, -46.3057 )
+rotation = 0.0187431
+scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
-[node name="Back" type="Node2D" parent="." index="1"]
-
-_sections_unfolded = [ "Z Index" ]
-
-[node name="Tree2" type="Node2D" parent="Back" index="0"]
+[node name="Tree2" type="Node2D" parent="Back" index="1"]
 
 editor/display_folded = true
 position = Vector2( -1452.23, -614.068 )
+z_index = -1
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Stumpf" type="Sprite" parent="Back/Tree2" index="0"]
 
@@ -183,31 +176,30 @@ position = Vector2( -6.31299, -23.6 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 17 )
 
-[node name="Unten" type="Sprite" parent="Back/Tree2" index="1"]
+[node name="Unten" type="Sprite" parent="Back/Tree2/Stumpf" index="0"]
 
-position = Vector2( -51.3898, -200.847 )
-rotation = -0.0010231
-scale = Vector2( 2, 2 )
+position = Vector2( -22.5384, -88.6235 )
+rotation = -0.0154349
 texture = ExtResource( 18 )
 
-[node name="Middel" type="Sprite" parent="Back/Tree2" index="2"]
+[node name="Middel" type="Sprite" parent="Back/Tree2/Stumpf/Unten" index="0"]
 
-position = Vector2( -33.3351, -350.922 )
-rotation = 0.00162176
-scale = Vector2( 2, 2 )
+position = Vector2( 9.02736, -75.0375 )
+rotation = 0.0244665
 texture = ExtResource( 19 )
 
-[node name="Spitze" type="Sprite" parent="Back/Tree2" index="3"]
+[node name="Spitze" type="Sprite" parent="Back/Tree2/Stumpf/Unten/Middel" index="0"]
 
-position = Vector2( -64.1356, -437.305 )
-rotation = -0.00157685
-scale = Vector2( 2, 2 )
+position = Vector2( -15.4003, -43.1915 )
+rotation = -0.0237889
 texture = ExtResource( 20 )
 
-[node name="Tree5" type="Node2D" parent="Back" index="1"]
+[node name="Tree5" type="Node2D" parent="Back" index="2"]
 
 editor/display_folded = true
 position = Vector2( -913.786, -752.595 )
+z_index = -2
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Stumpf" type="Sprite" parent="Back/Tree5" index="0"]
 
@@ -215,18 +207,16 @@ position = Vector2( -5.71112, -86.6161 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 21 )
 
-[node name="Unten" type="Sprite" parent="Back/Tree5" index="1"]
+[node name="Unten" type="Sprite" parent="Back/Tree5/Stumpf" index="0"]
 
-position = Vector2( -32.3524, -216.5 )
-rotation = 0.00131797
-scale = Vector2( 2, 2 )
+position = Vector2( -13.3206, -64.942 )
+rotation = 0.0198835
 texture = ExtResource( 22 )
 
-[node name="Middel" type="Sprite" parent="Back/Tree5" index="2"]
+[node name="Middel" type="Sprite" parent="Back/Tree5/Stumpf/Unten" index="0"]
 
-position = Vector2( -29, -311.2 )
-rotation = -0.000730751
-scale = Vector2( 2, 2 )
+position = Vector2( 1.67621, -47.35 )
+rotation = -0.0110244
 texture = ExtResource( 23 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]

@@ -99,7 +99,6 @@ texture = ExtResource( 7 )
 [node name="Stones" type="Area2D" parent="." index="4"]
 
 editor/display_folded = true
-visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -157,7 +156,6 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Needles" type="Area2D" parent="." index="5"]
 
 editor/display_folded = true
-visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -217,7 +215,6 @@ polygon = PoolVector2Array( 1721.66, 149.817, 1776.2, 25.8138, 1792.43, -123.8, 
 [node name="Border" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
-visible = false
 
 [node name="Player" type="StaticBody2D" parent="Border" index="0"]
 

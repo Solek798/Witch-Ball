@@ -4,7 +4,7 @@
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/River/Steinlvl_aktuell_fertig_0000s_0007s_0000_Foggy.png" type="Texture" id=2]
 [ext_resource path="res://Arena/ArenaAnimationStone/Animationen/RiverBack.tres" type="Animation" id=3]
 
-[node name="River" type="Node2D" index="0"]
+[node name="River" type="Node2D"]
 
 _sections_unfolded = [ "Material", "Visibility" ]
 
@@ -23,7 +23,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Dunst2" type="Sprite" parent="." index="2"]
 
 position = Vector2( 4, 59.2126 )
-scale = Vector2( 0.816411, 1 )
+scale = Vector2( 0.832432, 1 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 

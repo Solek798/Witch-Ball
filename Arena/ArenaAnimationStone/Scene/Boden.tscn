@@ -3,7 +3,7 @@
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Boden/Steinlvl_aktuell_fertig_0002_BackBlack.png" type="Texture" id=1]
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Boden/Steinlvl_aktuell_fertig_0001_Grass_Overpaint.png" type="Texture" id=2]
 
-[node name="Boden" type="Node2D" index="0"]
+[node name="Boden" type="Node2D"]
 
 position = Vector2( 960, 540 )
 _sections_unfolded = [ "Transform", "Visibility" ]
