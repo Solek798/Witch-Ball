@@ -4,8 +4,9 @@ export(Array, String, FILE, "*.wav") var files
 
 
 func play_random():
-	self.stream = load(files[randi() % files.size()])
-	self.play()
+	if files != null: 
+		self.stream = load(files[randi() % files.size()])
+		self.play()
 
 func play_defined_order(define_order = false):
 	if define_order:
