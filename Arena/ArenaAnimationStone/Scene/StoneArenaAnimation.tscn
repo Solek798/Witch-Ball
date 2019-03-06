@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Arena/ArenaAnimationStone/Scene/Boden.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Arena/ArenaAnimationStone/Scene/Trees.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Steinlvl_aktuell_cut_0001s_0003_StoneBack.png" type="Texture" id=3]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Voluten.png_0001_Voluten-Back.png" type="Texture" id=4]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Steinlvl_aktuell_cut_0001s_0002_StoneFront.png" type="Texture" id=5]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Voluten.png_0000_Voluten-front.png" type="Texture" id=6]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/S1 (1).png" type="Texture" id=3]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/V1 (1).png" type="Texture" id=4]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/S1 (2).png" type="Texture" id=5]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/V1 (2).png" type="Texture" id=6]
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (3).png" type="Texture" id=7]
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (2).png" type="Texture" id=8]
 [ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (1).png" type="Texture" id=9]
@@ -44,7 +44,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.956863, 0.968627, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="StoneArenaAnimation" type="Node2D"]
+[node name="StoneArenaAnimation" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Z Index" ]
 
@@ -61,28 +61,29 @@ blend_times = [  ]
 [node name="Boden" parent="." index="1" instance=ExtResource( 1 )]
 
 z_index = -22
-_sections_unfolded = [ "Visibility", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Trees" parent="." index="2" instance=ExtResource( 2 )]
 
 [node name="StoneBack" type="Node2D" parent="." index="3"]
 
 editor/display_folded = true
+position = Vector2( 960, 655.547 )
 z_index = -21
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Stone" type="Sprite" parent="StoneBack" index="0"]
 
-position = Vector2( 0, -220.097 )
+position = Vector2( 0, -222.298 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneBack/Stone" index="0"]
 
 modulate = Color( 0.687844, 0.983332, 0.987877, 1 )
-position = Vector2( 0, 113.843 )
+position = Vector2( 0, 16.1143 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="StoneFront" type="Node2D" parent="." index="4"]
 
@@ -92,22 +93,22 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Stone" type="Sprite" parent="StoneFront" index="0"]
 
-position = Vector2( -37.9478, 899.183 )
+position = Vector2( 932.25, 988.998 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Voluten" type="Sprite" parent="StoneFront/Stone" index="0"]
 
 modulate = Color( 0.687844, 0.986362, 0.989393, 1 )
-position = Vector2( 67.9733, -684.118 )
+position = Vector2( 16.7238, -15.2051 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Gras" type="Node2D" parent="." index="5"]
 
 editor/display_folded = true
-position = Vector2( -40.7902, 0 )
-scale = Vector2( 0.9975, 0.9975 )
+position = Vector2( 938.261, 532.676 )
+scale = Vector2( 0.5, 0.5 )
 z_index = -21
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -127,6 +128,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="River" parent="." index="6" instance=ExtResource( 10 )]
 
+position = Vector2( 955.409, 543.378 )
 z_index = -21
 _sections_unfolded = [ "Material", "Visibility", "Z Index" ]
 
