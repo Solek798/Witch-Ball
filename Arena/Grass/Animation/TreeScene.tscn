@@ -48,6 +48,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="T1" type="Sprite" parent="Trees" index="0"]
 
+editor/display_folded = true
 position = Vector2( 950.246, 0 )
 texture = ExtResource( 1 )
 
@@ -101,13 +102,12 @@ texture = ExtResource( 9 )
 
 [node name="T4" type="Sprite" parent="Trees" index="2"]
 
-editor/display_folded = true
 position = Vector2( -948.981, -89.0191 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Trees/T4" index="0"]
 
-position = Vector2( 90.9064, -96.3892 )
+position = Vector2( 86.4958, -99.3451 )
 rotation = 0.0349316
 texture = ExtResource( 11 )
 

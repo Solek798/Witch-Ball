@@ -1,32 +1,28 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/Tree7 (2).png" type="Texture" id=1]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/Tree7 (1).png" type="Texture" id=2]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/Tree7 (5).png" type="Texture" id=3]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/Tree7 (4).png" type="Texture" id=4]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/Tree3 (4).png" type="Texture" id=5]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/Tree3 (3).png" type="Texture" id=6]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/Tree3 (2).png" type="Texture" id=7]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/Tree3 (1).png" type="Texture" id=8]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/Tree1 (3).png" type="Texture" id=9]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/Tree1 (2).png" type="Texture" id=10]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/Tree1 (1).png" type="Texture" id=11]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/Tree1 (4).png" type="Texture" id=12]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/Tree6 (3).png" type="Texture" id=13]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/Tree6 (2).png" type="Texture" id=14]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/Tree6 (1).png" type="Texture" id=15]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/Tree2 (5).png" type="Texture" id=16]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/Tree2 (4).png" type="Texture" id=17]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/Tree2 (3).png" type="Texture" id=18]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/Tree2 (2).png" type="Texture" id=19]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree4/Tree4 (2).png" type="Texture" id=20]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree4/Tree4 (1).png" type="Texture" id=21]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree4/Tree4 (5).png" type="Texture" id=22]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree4/Tree4 (4).png" type="Texture" id=23]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/Tree5 (2).png" type="Texture" id=24]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/Tree5 (1).png" type="Texture" id=25]
-[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/Tree5 (4).png" type="Texture" id=26]
-[ext_resource path="res://Arena/ArenaAnimationStone/Animationen/Trees.tres" type="Animation" id=27]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/T7 (4).png" type="Texture" id=1]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/T7 (3).png" type="Texture" id=2]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/T7 (2).png" type="Texture" id=3]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree7/T7 (1).png" type="Texture" id=4]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/t3 (3).png" type="Texture" id=5]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/t3 (2).png" type="Texture" id=6]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/t3 (1).png" type="Texture" id=7]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree3/t3 (4).png" type="Texture" id=8]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/T1 (1).png" type="Texture" id=9]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/T1 (4).png" type="Texture" id=10]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/T1 (3).png" type="Texture" id=11]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree1/T1 (2).png" type="Texture" id=12]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/T6 (2).png" type="Texture" id=13]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/T6 (1).png" type="Texture" id=14]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree6/T6 (3).png" type="Texture" id=15]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/T2 (2).png" type="Texture" id=16]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/T2 (1).png" type="Texture" id=17]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/T2 (4).png" type="Texture" id=18]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree2/T2 (3).png" type="Texture" id=19]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/T5 (1).png" type="Texture" id=20]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/T5 (3).png" type="Texture" id=21]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Tree/Tree5/T5 (2).png" type="Texture" id=22]
+[ext_resource path="res://Arena/ArenaAnimationStone/Animationen/Trees.tres" type="Animation" id=23]
 
 [node name="Trees" type="Node2D" index="0"]
 
@@ -45,25 +41,21 @@ position = Vector2( -1820.93, 1072.8 )
 [node name="Stumpf" type="Sprite" parent="Front/Tree7" index="0"]
 
 position = Vector2( -13.7173, -28.2987 )
-rotation = 0.0134677
 texture = ExtResource( 1 )
 
 [node name="Unten" type="Sprite" parent="Front/Tree7/Stumpf" index="0"]
 
 position = Vector2( 9.72107, -61.1575 )
-rotation = 0.0310041
 texture = ExtResource( 2 )
 
 [node name="Middel" type="Sprite" parent="Front/Tree7/Stumpf/Unten" index="0"]
 
 position = Vector2( -14.7626, -149.598 )
-rotation = -0.0376605
 texture = ExtResource( 3 )
 
 [node name="Spitze" type="Sprite" parent="Front/Tree7/Stumpf/Unten/Middel" index="0"]
 
 position = Vector2( -13.8169, -170.429 )
-rotation = 0.0452665
 texture = ExtResource( 4 )
 
 [node name="Tree3" type="Node2D" parent="Front" index="1"]
@@ -73,33 +65,30 @@ position = Vector2( 1870.12, 1005.98 )
 
 [node name="Stumpf" type="Sprite" parent="Front/Tree3" index="0"]
 
-editor/display_folded = true
 position = Vector2( -7.98315, -25.2701 )
 texture = ExtResource( 5 )
 
 [node name="Unten" type="Sprite" parent="Front/Tree3/Stumpf" index="0"]
 
 position = Vector2( 71.413, -171.972 )
-rotation = -0.00669614
 texture = ExtResource( 6 )
 offset = Vector2( -186.158, -8.6402 )
 
 [node name="Middel" type="Sprite" parent="Front/Tree3/Stumpf/Unten" index="0"]
 
 position = Vector2( 42.3608, -245.384 )
-rotation = -0.0513558
 texture = ExtResource( 7 )
 offset = Vector2( -214.987, 0.397156 )
 
 [node name="Spitze" type="Sprite" parent="Front/Tree3/Stumpf/Unten/Middel" index="0"]
 
 position = Vector2( -85.2399, -185.148 )
-rotation = 0.0255916
 texture = ExtResource( 8 )
 offset = Vector2( -86.9318, -36.9003 )
 
 [node name="Tree1" type="Node2D" parent="Front" index="2"]
 
+editor/display_folded = true
 position = Vector2( 1805.51, 1068.26 )
 
 [node name="Stumpf" type="Sprite" parent="Front/Tree1" index="0"]
@@ -110,19 +99,16 @@ texture = ExtResource( 9 )
 [node name="Unten" type="Sprite" parent="Front/Tree1/Stumpf" index="0"]
 
 position = Vector2( -19.7815, -65.6346 )
-rotation = -0.0557269
 texture = ExtResource( 10 )
 
 [node name="Middel" type="Sprite" parent="Front/Tree1/Stumpf/Unten" index="0"]
 
 position = Vector2( -28.1566, -94.1498 )
-rotation = 0.0240328
 texture = ExtResource( 11 )
 
 [node name="Spitze" type="Sprite" parent="Front/Tree1/Stumpf/Unten/Middel" index="0"]
 
 position = Vector2( -4.33472, -91.3828 )
-rotation = -0.0958307
 texture = ExtResource( 12 )
 
 [node name="Tree6" type="Node2D" parent="Front" index="3"]
@@ -165,51 +151,19 @@ texture = ExtResource( 16 )
 [node name="Unten" type="Sprite" parent="Back/Tree2/Stumpf" index="0"]
 
 position = Vector2( -45.0768, -177.247 )
-rotation = -0.0166001
 texture = ExtResource( 17 )
 
 [node name="Middel" type="Sprite" parent="Back/Tree2/Stumpf/Unten" index="0"]
 
 position = Vector2( 18.0547, -150.075 )
-rotation = 0.0263135
 texture = ExtResource( 18 )
 
 [node name="Spitze" type="Sprite" parent="Back/Tree2/Stumpf/Unten/Middel" index="0"]
 
 position = Vector2( -30.8005, -86.3828 )
-rotation = -0.0255848
 texture = ExtResource( 19 )
 
-[node name="Tree4" type="Node2D" parent="Back" index="1"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( -1504.62, -186.501 )
-
-[node name="Stumpf" type="Sprite" parent="Back/Tree4" index="0"]
-
-position = Vector2( -7.98315, -25.2701 )
-texture = ExtResource( 20 )
-
-[node name="Unten" type="Sprite" parent="Back/Tree4/Stumpf" index="0"]
-
-position = Vector2( 11.7119, -88.5313 )
-rotation = 0.0323526
-texture = ExtResource( 21 )
-
-[node name="Middel" type="Sprite" parent="Back/Tree4/Stumpf/Unten" index="0"]
-
-position = Vector2( 19.3524, -110.7 )
-rotation = 0.0277818
-texture = ExtResource( 22 )
-
-[node name="Spitze" type="Sprite" parent="Back/Tree4/Stumpf/Unten/Middel" index="0"]
-
-position = Vector2( -8.50964, -104.751 )
-rotation = 0.0354513
-texture = ExtResource( 23 )
-
-[node name="Tree5" type="Node2D" parent="Back" index="2"]
+[node name="Tree5" type="Node2D" parent="Back" index="1"]
 
 editor/display_folded = true
 position = Vector2( -913.786, -752.595 )
@@ -217,19 +171,17 @@ position = Vector2( -913.786, -752.595 )
 [node name="Stumpf" type="Sprite" parent="Back/Tree5" index="0"]
 
 position = Vector2( -5.71112, -86.6161 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="Unten" type="Sprite" parent="Back/Tree5/Stumpf" index="0"]
 
 position = Vector2( -26.6413, -129.884 )
-rotation = 0.0213845
-texture = ExtResource( 25 )
+texture = ExtResource( 21 )
 
 [node name="Middel" type="Sprite" parent="Back/Tree5/Stumpf/Unten" index="0"]
 
 position = Vector2( 3.35242, -94.6995 )
-rotation = -0.0118567
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
@@ -238,7 +190,7 @@ autoplay = "AnimationBaum"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/AnimationBaum = ExtResource( 27 )
+anims/AnimationBaum = ExtResource( 23 )
 blend_times = [  ]
 
 
