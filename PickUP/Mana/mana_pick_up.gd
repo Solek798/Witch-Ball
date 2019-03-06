@@ -7,6 +7,7 @@ func _on_ManaPickUp_body_entered(body):
 	if body.has_method("increase_mana"):
 		body.increase_mana(mana_gain)
 		body.FillManaAnimation()
+		$Collect.play()
 		.destroy("Consume")
 
 

@@ -1,13 +1,13 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Icon_Player_Scarlet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/motion_blur.tres" type="Material" id=3]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=4]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=8]
 [ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=11]
@@ -24,7 +24,6 @@
 [ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=22]
 [ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=23]
 [ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Player/SFX/Sound.gd" type="Script" id=25]
 
 [sub_resource type="Animation" id=1]
 
@@ -233,7 +232,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Scale", "Trail" ]
 
-[node name="Scarlet" type="Sprite"]
+[node name="Scarlet" type="Sprite" index="0"]
 
 z_index = -15
 script = ExtResource( 1 )
@@ -254,7 +253,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "WinnJump", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim 2", "scale 2", 0, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "Mix_Trow", "scale 3", 0 ],
+"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "WinnJump", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "Mix_Trow", "scale 3", 0, "oneshot_dodge_down", "oneshot_dodge_up", 0, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "anim 2", "scale 2", 0 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -280,19 +279,37 @@ data = {
 }, {
 "animation": ExtResource( 6 ),
 "filter": [  ],
-"id": "anim 2",
-"position": Vector2( 250, 385 ),
+"id": "Hit",
+"position": Vector2( 749, 222 ),
 "type": "animation"
 }, {
-"id": "Mix_Trow",
-"mix": 1.0,
-"position": Vector2( 568, 246 ),
-"type": "mix"
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_hit",
+"mix": false,
+"position": Vector2( 902, 5 ),
+"type": "oneshot"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 159, 43 ),
+"type": "blend2"
+}, {
+"animation": SubResource( 1 ),
+"filter": [  ],
+"id": "WinnJump",
+"position": Vector2( 884, 190 ),
+"type": "animation"
 }, {
 "animation": ExtResource( 7 ),
 "filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
+"id": "anim 2",
+"position": Vector2( 250, 385 ),
 "type": "animation"
 }, {
 "id": "scale 4",
@@ -311,38 +328,33 @@ data = {
 "position": Vector2( 1032, 5 ),
 "type": "oneshot"
 }, {
-"animation": SubResource( 1 ),
-"filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 884, 190 ),
-"type": "animation"
-}, {
-"id": "scale 2",
-"position": Vector2( 296, 191 ),
-"scale": 2.0,
-"type": "timescale"
-}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
+"autorestart_random_delay": 1.0,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_hit",
+"id": "oneshot_dodge_down",
 "mix": false,
-"position": Vector2( 902, 5 ),
+"position": Vector2( 510, 516 ),
 "type": "oneshot"
 }, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
+"animation": ExtResource( 8 ),
 "filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 445, 28 ),
-"type": "oneshot"
+"id": "Walk",
+"position": Vector2( 6, 146 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
+"type": "animation"
+}, {
+"id": "scale 3",
+"position": Vector2( 658, 134 ),
+"scale": 2.0,
+"type": "timescale"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -356,6 +368,22 @@ data = {
 "type": "oneshot"
 }, {
 "autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 445, 28 ),
+"type": "oneshot"
+}, {
+"id": "Mix_Trow",
+"mix": 1.0,
+"position": Vector2( 568, 246 ),
+"type": "mix"
+}, {
+"autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 1.0,
 "fade_in": 0.0,
@@ -366,39 +394,10 @@ data = {
 "position": Vector2( 727, 8 ),
 "type": "oneshot"
 }, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_dodge_down",
-"mix": false,
-"position": Vector2( 510, 516 ),
-"type": "oneshot"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
-}, {
-"id": "scale 3",
-"position": Vector2( 658, 134 ),
+"id": "scale 2",
+"position": Vector2( 296, 191 ),
 "scale": 2.0,
 "type": "timescale"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "Hit",
-"position": Vector2( 749, 222 ),
-"type": "animation"
 } ]
 }
 
@@ -409,13 +408,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 8 )
+anims/Hit = ExtResource( 6 )
 anims/Idle = ExtResource( 4 )
-anims/Idle_Throw = ExtResource( 6 )
+anims/Idle_Throw = ExtResource( 7 )
 anims/Indestructable = ExtResource( 9 )
 anims/Reset_Animation = ExtResource( 10 )
 anims/Throwing = ExtResource( 5 )
-anims/Walk_Ch1 = ExtResource( 7 )
+anims/Walk_Ch1 = ExtResource( 8 )
 anims/WinnJump = SubResource( 1 )
 blend_times = [  ]
 
@@ -433,7 +432,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 use_parent_material = true
-position = Vector2( -3.83154, 2.62268 )
+position = Vector2( -1.96525, 1.51476 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
 __meta__ = {
@@ -453,7 +452,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -38.0608, -114.766 )
-rotation = 0.0751299
+rotation = 0.0660414
 z_index = 4
 texture = ExtResource( 12 )
 offset = Vector2( 17.0357, 118.566 )
@@ -466,7 +465,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0648451
+rotation = -0.0602232
 z_index = 1
 texture = ExtResource( 13 )
 offset = Vector2( 145.576, 357.073 )
@@ -479,7 +478,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 145.136, 356.02 )
-rotation = 4.65661e-10
+rotation = 4.65661e-010
 scale = Vector2( 0.999999, 0.999999 )
 z_index = -5
 texture = ExtResource( 14 )
@@ -489,7 +488,7 @@ _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.211495
+rotation = 0.190165
 z_index = -5
 texture = ExtResource( 15 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -502,7 +501,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.132337
+rotation = -0.106677
 texture = ExtResource( 16 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
@@ -514,7 +513,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.0480498
+rotation = -0.0942539
 z_index = 4
 texture = ExtResource( 17 )
 offset = Vector2( 115.846, 3.52861 )
@@ -527,7 +526,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.015929
+rotation = 0.0436033
 scale = Vector2( 0.999999, 0.999999 )
 z_index = 1
 texture = ExtResource( 18 )
@@ -547,7 +546,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.0343185
+rotation = -0.0176025
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 39.0679, -290.996 )
@@ -560,7 +559,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.0345478
+rotation = 0.0177201
 z_index = -1
 texture = ExtResource( 20 )
 offset = Vector2( 9.48901, -415.964 )
@@ -573,7 +572,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 49.202, 250.398 )
-rotation = -0.0290659
+rotation = -0.0149083
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 21 )
@@ -587,7 +586,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.0177211
+rotation = 0.00908941
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 22 )
@@ -660,99 +659,40 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Voice" type="Node2D" parent="." index="2"]
 
-[node name="RoundWon" type="AudioStreamPlayer2D" parent="Voice" index="0" instance=ExtResource( 24 )]
+[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
+volume_db = -10.0
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Cmon_make_it_bit_harder_for_me_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_It_s_some_kind_of_magic_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_To_easy_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Wished_someone_would_scream_Fatality_right_now_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_You_should_see_that_look_on_ya_face_finish.wav" ]
 
-[node name="MatchWon" type="AudioStreamPlayer2D" parent="Voice" index="1" instance=ExtResource( 24 )]
+[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/MatchWon/If_Game_won_Better_luck_next_time_finish.wav", "res://Player/SFX/Scarlett/MatchWon/If_Game_won_Cheer_up!_There_can_only be_one_winner_3_finish.wav", "res://Player/SFX/Scarlett/MatchWon/If_Game_won_I_always_loooved_this_game_finish.wav" ]
 
-[node name="Start" type="AudioStreamPlayer2D" parent="Voice" index="2" instance=ExtResource( 24 )]
+[node name="Start" parent="Voice" index="2" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Start/If_One_round_won_sums_the_starting_music_finish.wav" ]
 
-[node name="Throw" type="AudioStreamPlayer2D" parent="Voice" index="3" instance=ExtResource( 24 )]
+[node name="Throw" parent="Voice" index="3" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_1.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_2.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_3.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_4.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_5.wav" ]
 
-[node name="Hit" type="AudioStreamPlayer2D" parent="Voice" index="4" instance=ExtResource( 24 )]
+[node name="Hit" parent="Voice" index="4" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_1.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_2.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_3.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_1.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_2.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_3.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_4.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_5.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_6.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_7.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_8.wav" ]
 
-[node name="EnemyHit" type="AudioStreamPlayer2D" parent="Voice" index="5" instance=ExtResource( 24 )]
+[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Haha_in_ya_Face_finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Sorry_not_Sorry_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Ouh_that_looked_liked_hurts_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Seems_like_ya_saw_a_Black_cat_this_morning_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Whoops_was_that_my_fault_finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_You_should_be_lucky_that_this_wasn_t_a_curse_finish.wav" ]
 
