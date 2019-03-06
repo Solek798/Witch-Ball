@@ -141,6 +141,7 @@ func dodge():
 		current_movement = dodge_vector / $Timer/Dodge.wait_time
 		
 		body.set_motion_blur(true, current_movement * get_process_delta_time())
+		$Dodge.play()
 
 func take_damage(ammount):
 	if is_dead or $Timer/Indestructable.time_left:

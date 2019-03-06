@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/normal/normal_bullet.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://GUI/Manabar/mana_bar_empty.png" type="Texture" id=13]
 [ext_resource path="res://Player/ManaAnimation/EmptyMana.tres" type="Animation" id=14]
 [ext_resource path="res://Player/modifiers.gd" type="Script" id=15]
+[ext_resource path="res://Player/SFX_Dodge.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -254,6 +255,17 @@ blend_times = [  ]
 [node name="Modifiers" type="Node" parent="." index="7"]
 
 script = ExtResource( 15 )
+
+[node name="Dodge" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = ExtResource( 16 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="timeout" from="Timer/Mana" to="." method="_on_ManaTimer_timeout"]
 

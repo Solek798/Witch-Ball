@@ -46,6 +46,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.956863, 0.968627, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
+<<<<<<< working copy
 [sub_resource type="Animation" id=2]
 
 resource_name = "LightAnimation"
@@ -78,7 +79,9 @@ tracks/1/keys = {
 }
 
 [node name="StoneArenaAnimation" type="Node2D" index="0"]
-[node name="StoneArenaAnimation" type="Node2D" index="0"]
+=======
+[node name="StoneArenaAnimation" type="Node2D"]
+>>>>>>> merge rev
 
 _sections_unfolded = [ "Z Index" ]
 
@@ -101,6 +104,7 @@ _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="StoneBack" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 z_index = -21
 _sections_unfolded = [ "Z Index" ]
 
@@ -119,6 +123,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="StoneFront" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 z_index = -2
 _sections_unfolded = [ "Z Index" ]
 

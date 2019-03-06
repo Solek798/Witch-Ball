@@ -1,14 +1,14 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Penny/Icon_Player_Penny.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/motion_blur.tres" type="Material" id=3]
 [ext_resource path="res://Player/Animation/Penny/Resource/Idle.tres" type="Animation" id=4]
 [ext_resource path="res://Player/Animation/Penny/Resource/Walk_Ch4.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Penny/Resource/Throw_Ch4.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Penny/Resource/WinnJump_Ch4.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Penny/Resource/Hit.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Penny/Resource/Walk_for_throw.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Penny/Resource/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Penny/Resource/Walk_for_throw.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Penny/Resource/Throw_Ch4.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Penny/Resource/WinnJump_Ch4.tres" type="Animation" id=9]
 [ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Penny/Resource/New_Hit_Ch4.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation/Penny/Resource/Reset.tres" type="Animation" id=12]
@@ -27,7 +27,6 @@
 [ext_resource path="res://Player/Animation/Penny/Images/penny_ingame0000_Hut-Front (9).png" type="Texture" id=25]
 [ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=26]
 [ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Player/SFX/Sound.gd" type="Script" id=28]
 
 [sub_resource type="Animation" id=1]
 
@@ -236,7 +235,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Scale", "Trail" ]
 
-[node name="Penny" type="Sprite"]
+[node name="Penny" type="Sprite" index="0"]
 
 z_index = -15
 script = ExtResource( 1 )
@@ -256,7 +255,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 2", "scale", 0, "anim 3", "mix", 0, "anim 7", "mix", 1, "oneshot_WinnJump", "out", 0, "scale 3", "mix 2", 0, "anim 8", "mix 2", 1, "anim 6", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "mix", "scale 2", 0, "oneshot_idle_throw", "oneshot_hit", 0, "anim 5", "oneshot_hit", 1, "oneshot_walk_throw", "oneshot_idle_throw", 0, "mix 2", "oneshot_idle_throw", 1, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "anim 4", "scale 3", 0 ],
+"connections": [ "anim 2", "scale", 0, "anim 3", "mix", 0, "anim 7", "mix", 1, "oneshot_WinnJump", "out", 0, "oneshot_idle_throw", "oneshot_hit", 0, "anim 5", "oneshot_hit", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "anim 6", "scale 4", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim 4", "scale 3", 0, "oneshot_walk_throw", "oneshot_idle_throw", 0, "mix 2", "oneshot_idle_throw", 1, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "mix", "scale 2", 0, "scale 3", "mix 2", 0, "anim 8", "mix 2", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -279,10 +278,22 @@ data = {
 "position": Vector2( 978, 5 ),
 "type": "output"
 }, {
-"id": "mix 2",
-"mix": 1.0,
-"position": Vector2( 459, 151 ),
-"type": "mix"
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.807843,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_hit",
+"mix": false,
+"position": Vector2( 705, 5 ),
+"type": "oneshot"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 237, 5 ),
+"type": "blend2"
 }, {
 "animation": ExtResource( 5 ),
 "filter": [  ],
@@ -306,21 +317,10 @@ data = {
 "position": Vector2( 838, 5 ),
 "type": "oneshot"
 }, {
-"id": "scale 2",
-"position": Vector2( 183, 193 ),
+"id": "scale 3",
+"position": Vector2( 286, 290 ),
 "scale": 3.0,
 "type": "timescale"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_hit",
-"mix": false,
-"position": Vector2( 705, 5 ),
-"type": "oneshot"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -344,30 +344,41 @@ data = {
 "position": Vector2( 352, 5 ),
 "type": "oneshot"
 }, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 237, 5 ),
-"type": "blend2"
-}, {
-"id": "scale 3",
-"position": Vector2( 286, 290 ),
+"id": "scale 2",
+"position": Vector2( 183, 193 ),
 "scale": 3.0,
 "type": "timescale"
 }, {
+"id": "mix 2",
+"mix": 1.0,
+"position": Vector2( 459, 151 ),
+"type": "mix"
+}, {
 "animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "anim 5",
+"position": Vector2( 570, 304 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 8",
+"position": Vector2( 304, 142 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 7",
+"position": Vector2( 5, 325 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 8 ),
 "filter": [  ],
 "id": "anim 3",
 "position": Vector2( 5, 222 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "anim 4",
-"position": Vector2( 149, 340 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 7 ),
+"animation": ExtResource( 9 ),
 "filter": [  ],
 "id": "anim 6",
 "position": Vector2( 579, 172 ),
@@ -375,20 +386,8 @@ data = {
 }, {
 "animation": ExtResource( 8 ),
 "filter": [  ],
-"id": "anim 5",
-"position": Vector2( 570, 304 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 9 ),
-"filter": [  ],
-"id": "anim 7",
-"position": Vector2( 5, 325 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 9 ),
-"filter": [  ],
-"id": "anim 8",
-"position": Vector2( 304, 142 ),
+"id": "anim 4",
+"position": Vector2( 149, 340 ),
 "type": "animation"
 } ]
 }
@@ -400,14 +399,14 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 8 )
+anims/Hit = ExtResource( 6 )
 anims/Idle = ExtResource( 4 )
 anims/Indestructable = ExtResource( 10 )
 anims/New_Hit_Ch4 = ExtResource( 11 )
 anims/Reset = ExtResource( 12 )
-anims/Throw_Ch4 = ExtResource( 6 )
+anims/Throw_Ch4 = ExtResource( 8 )
 anims/Walk_Ch4 = ExtResource( 5 )
-anims/Walk_for_throw = ExtResource( 9 )
+anims/Walk_for_throw = ExtResource( 7 )
 anims/WinnJump_Ch4 = SubResource( 1 )
 blend_times = [  ]
 
@@ -426,8 +425,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="Torso" type="Sprite" parent="Charakter" index="1"]
 
 use_parent_material = true
-position = Vector2( -0.166602, 1.1014 )
-rotation = 0.0177493
+position = Vector2( -1.00231, 4.88012 )
+rotation = 0.106783
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Material", "Transform", "Z Index" ]
@@ -443,7 +442,7 @@ _sections_unfolded = [ "Material", "Transform" ]
 
 use_parent_material = true
 position = Vector2( -30.2774, 5.32574 )
-rotation = 0.385156
+rotation = 0.449253
 texture = ExtResource( 14 )
 offset = Vector2( -16.2749, 17.4878 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
@@ -452,7 +451,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 use_parent_material = true
 position = Vector2( -27.5349, 36.2761 )
-rotation = 0.047578
+rotation = 0.286239
 texture = ExtResource( 15 )
 offset = Vector2( -33.7573, 12.6801 )
 _sections_unfolded = [ "Material", "Transform" ]
@@ -461,7 +460,7 @@ _sections_unfolded = [ "Material", "Transform" ]
 
 use_parent_material = true
 position = Vector2( -3.70958, 2.15141 )
-rotation = 0.0830797
+rotation = 0.136463
 z_index = -1
 texture = ExtResource( 16 )
 offset = Vector2( 29.9529, 2.43958 )
@@ -471,7 +470,7 @@ _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( 65.4469, -1.81029 )
-rotation = -0.0055538
+rotation = -0.0334127
 z_index = 1
 texture = ExtResource( 17 )
 offset = Vector2( 28.4625, 10.166 )
@@ -481,7 +480,7 @@ _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( -10.4201, -14.6715 )
-rotation = 0.00147652
+rotation = 0.00888306
 texture = ExtResource( 18 )
 offset = Vector2( -0.456828, -6.1355 )
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
@@ -490,7 +489,7 @@ _sections_unfolded = [ "Material", "Offset", "Transform" ]
 
 use_parent_material = true
 position = Vector2( -10.5979, -44.3585 )
-rotation = -0.00330237
+rotation = -0.0198677
 z_index = 1
 texture = ExtResource( 19 )
 offset = Vector2( -38.7061, -6.16453 )
@@ -515,7 +514,7 @@ _sections_unfolded = [ "Material" ]
 
 use_parent_material = true
 position = Vector2( 13.9338, 223.947 )
-rotation = -0.0801271
+rotation = -0.482061
 z_index = -1
 texture = ExtResource( 21 )
 offset = Vector2( 12.0458, 17.254 )
@@ -525,7 +524,7 @@ _sections_unfolded = [ "Material", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( 12.1188, 30.3932 )
-rotation = 0.0897721
+rotation = 0.540087
 z_index = -1
 texture = ExtResource( 22 )
 offset = Vector2( -8.96789, 25.4605 )
@@ -535,7 +534,7 @@ _sections_unfolded = [ "Material", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( -10.5031, 229.001 )
-rotation = -0.0716232
+rotation = -0.4309
 z_index = -1
 texture = ExtResource( 23 )
 offset = Vector2( -3.6166, 26.5477 )
@@ -545,7 +544,7 @@ _sections_unfolded = [ "Material", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( 0.779142, 41.8831 )
-rotation = 0.0715568
+rotation = 0.4305
 z_index = -1
 texture = ExtResource( 24 )
 offset = Vector2( -6.07292, 32.9682 )
@@ -618,101 +617,39 @@ _sections_unfolded = [ "Drawing", "Process Material", "Visibility" ]
 
 [node name="Voice" type="Node2D" parent="." index="2"]
 
-[node name="RoundWon" type="AudioStreamPlayer2D" parent="Voice" index="0" instance=ExtResource( 27 )]
+[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 27 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
-files = null
+files = [ "res://Player/SFX/Penny/RoundWon/combination_of_finish.wav", "res://Player/SFX/Penny/RoundWon/Round_won_harvest_later_finish.wav", "res://Player/SFX/Penny/RoundWon/Round_won_hoe_finish.wav", "res://Player/SFX/Penny/RoundWon/Round_won_like_gardening_finish.wav", "res://Player/SFX/Penny/RoundWon/Round_won_plant_flowers_finish.wav" ]
 
-[node name="MatchWon" type="AudioStreamPlayer2D" parent="Voice" index="1" instance=ExtResource( 27 )]
+[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 27 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
-files = null
+files = [ "res://Player/SFX/Penny/MatchWon/dress_like_me_finish.wav", "res://Player/SFX/Penny/MatchWon/end_dirty_finsih.wav", "res://Player/SFX/Penny/MatchWon/Game_won_back_farm_finish.wav" ]
 
-[node name="Start" type="AudioStreamPlayer2D" parent="Voice" index="2" instance=ExtResource( 27 )]
+[node name="Start" parent="Voice" index="2" instance=ExtResource( 27 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
-files = null
+files = [ "res://Player/SFX/Penny/Start/Round_won_climb_saddle_finish.wav" ]
 
-[node name="Throw" type="AudioStreamPlayer2D" parent="Voice" index="3" instance=ExtResource( 27 )]
+[node name="Throw" parent="Voice" index="3" instance=ExtResource( 27 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
-files = null
+files = [ "res://Player/SFX/Penny/Throw/Throw_1.wav", "res://Player/SFX/Penny/Throw/Throw_2.wav" ]
 
-[node name="Hit" type="AudioStreamPlayer2D" parent="Voice" index="4" instance=ExtResource( 27 )]
+[node name="Hit" parent="Voice" index="4" instance=ExtResource( 27 )]
+
+files = [ "res://Player/SFX/Penny/Throw/Throw_3.wav", "res://Player/SFX/Penny/Throw/Throw_4.wav" ]
+
+[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 27 )]
 
 position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
-files = null
-
-[node name="EnemyHit" type="AudioStreamPlayer2D" parent="Voice" index="5" instance=ExtResource( 27 )]
-
-position = Vector2( 0, -100 )
-scale = Vector2( 1, 1 )
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Voicelines"
-area_mask = 1
-script = ExtResource( 28 )
-_sections_unfolded = [ "Transform" ]
-files = null
+files = [ "res://Player/SFX/Penny/EnemyHit/Hit_flowers_hurt_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_hit_you_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_hurt_you_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_mad_now_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_more_fun_farming_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_No_flower_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_oh_yeah_finish.wav", "res://Player/SFX/Penny/EnemyHit/hit_Taste_corn_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_used_to_finish.wav", "res://Player/SFX/Penny/EnemyHit/Hit_use_Trhophy_finish.wav" ]
 
 [connection signal="finished" from="Voice/Start" to="." method="_on_voice_finished"]
 
