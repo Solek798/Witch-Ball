@@ -1,0 +1,251 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Arena/ArenaAnimationStone/Scene/Boden.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Arena/ArenaAnimationStone/Scene/Trees.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Steinlvl_aktuell_cut_0001s_0003_StoneBack.png" type="Texture" id=3]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Voluten.png_0001_Voluten-Back.png" type="Texture" id=4]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Steinlvl_aktuell_cut_0001s_0002_StoneFront.png" type="Texture" id=5]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/Stone/Voluten.png_0000_Voluten-front.png" type="Texture" id=6]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (3).png" type="Texture" id=7]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (2).png" type="Texture" id=8]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Grass (1).png" type="Texture" id=9]
+[ext_resource path="res://Arena/ArenaAnimationStone/Scene/River.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/ImportetBilder/NotTuUse/Characterref.png" type="Texture" id=11]
+[ext_resource path="res://Arena/ArenaAnimationStone/Images/Steinlvl_aktuell_cut.png" type="Texture" id=12]
+[ext_resource path="res://Arena/licht5.png" type="Texture" id=13]
+[ext_resource path="res://Arena/licht3.png" type="Texture" id=14]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "BodenBackgroung"
+length = 5.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("StoneFront/Stone/Voluten:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.964706, 0.972549, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StoneBack/Stone/Voluten:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.192157, 0.956863, 0.968627, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+<<<<<<< working copy
+[sub_resource type="Animation" id=2]
+
+resource_name = "LightAnimation"
+length = 60.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationLight/Light2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 19.7, 60 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 2.3, 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationLight/Light2D2:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 40.2, 59.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 2.0, 0.01 ]
+}
+
+[node name="StoneArenaAnimation" type="Node2D" index="0"]
+=======
+[node name="StoneArenaAnimation" type="Node2D"]
+>>>>>>> merge rev
+
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = "ArenaStoneBodenAnimations"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/ArenaStoneBodenAnimations = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Boden" parent="." index="1" instance=ExtResource( 1 )]
+
+z_index = -22
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="Trees" parent="." index="2" instance=ExtResource( 2 )]
+
+[node name="StoneBack" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+z_index = -21
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Stone" type="Sprite" parent="StoneBack" index="0"]
+
+position = Vector2( 0, -220.097 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Voluten" type="Sprite" parent="StoneBack/Stone" index="0"]
+
+modulate = Color( 0.687844, 0.983332, 0.987877, 1 )
+position = Vector2( 0, 113.843 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="StoneFront" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+z_index = -2
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Stone" type="Sprite" parent="StoneFront" index="0"]
+
+position = Vector2( -37.9478, 899.183 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Voluten" type="Sprite" parent="StoneFront/Stone" index="0"]
+
+modulate = Color( 0.687844, 0.986362, 0.989393, 1 )
+position = Vector2( 67.9733, -684.118 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Gras" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( -40.7902, 0 )
+scale = Vector2( 0.9975, 0.9975 )
+z_index = -21
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Gras3" type="Sprite" parent="Gras" index="0"]
+
+texture = ExtResource( 7 )
+
+[node name="Gras2" type="Sprite" parent="Gras" index="1"]
+
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Gras" type="Sprite" parent="Gras" index="2"]
+
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="River" parent="." index="6" instance=ExtResource( 10 )]
+
+z_index = -21
+_sections_unfolded = [ "Material", "Visibility", "Z Index" ]
+
+[node name="Ref2" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( 7.02246, -2141.92 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Ref" type="Sprite" parent="." index="8"]
+
+visible = false
+position = Vector2( -12.8715, -2188 )
+z_index = -10
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="AnimationLight" type="AnimationPlayer" parent="." index="9"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/LightAnimation = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Light2D" type="Light2D" parent="AnimationLight" index="0"]
+
+position = Vector2( -992.169, -775.808 )
+scale = Vector2( 1.5, 1.5 )
+enabled = true
+editor_only = false
+texture = ExtResource( 13 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 0.976563, 0.928938, 0.846863, 1 )
+energy = 0.01
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Light2D2" type="Light2D" parent="AnimationLight" index="1"]
+
+position = Vector2( -432.722, -2064.7 )
+rotation = -0.244346
+scale = Vector2( 8, 8 )
+enabled = true
+editor_only = false
+texture = ExtResource( 14 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 0.976471, 0.92549, 0.843137, 1 )
+energy = 0.01
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+
