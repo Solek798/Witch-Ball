@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://Match/match.tscn" type="PackedScene" id=2]
@@ -34,7 +34,26 @@ shader_param/amount = 2.5
 shader_param/darknes = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Game" type="Node"]
+[sub_resource type="Animation" id=3]
+
+resource_name = "Neue Animation"
+length = 40.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20.1, 40 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1014.59, 539.699 ), Vector2( 911.588, 539.699 ), Vector2( 1014.59, 539.699 ) ]
+}
+
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
@@ -73,10 +92,21 @@ tutorial_template = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="Menu" index="0"]
 
-position = Vector2( 960.588, 539.699 )
+position = Vector2( 911.588, 539.699 )
+scale = Vector2( 1.05522, 1.05522 )
 z_index = -1
 texture = ExtResource( 9 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Background" index="0"]
+
+root_node = NodePath("..")
+autoplay = "Neue Animation"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+"anims/Neue Animation" = SubResource( 3 )
+blend_times = [  ]
 
 [node name="Animation" type="AnimationPlayer" parent="Menu" index="1"]
 
