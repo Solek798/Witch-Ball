@@ -126,13 +126,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Waves2" type="Particles2D" parent="." index="0"]
 
-modulate = Color( 1, 1, 1, 0.150386 )
-position = Vector2( 926.786, 192.221 )
+modulate = Color( 1, 1, 1, 0.163495 )
+position = Vector2( 948.958, 192.221 )
 rotation = 0.00610916
 scale = Vector2( 1, 0.5 )
 emitting = true
 amount = 15
-lifetime = 10.0
+lifetime = 12.0
 one_shot = false
 preprocess = 100.0
 speed_scale = 0.1
@@ -158,7 +158,7 @@ rotation = 0.00610916
 scale = Vector2( 1, 0.5 )
 emitting = true
 amount = 15
-lifetime = 10.0
+lifetime = 12.0
 one_shot = false
 preprocess = 100.0
 speed_scale = 0.1

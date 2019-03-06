@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/R11.png-380ca92b918f26022ba05ad7fcc21f96.stex"
+path="res://.import/Grass_lvl_fertig2_0003_Grass.png-9b7c0ba26583a01e181034c4c8bf96cb.stex"
 
 [deps]
 
-source_file="res://Arena/Grass/Animation/Images/R11.png"
-dest_files=[ "res://.import/R11.png-380ca92b918f26022ba05ad7fcc21f96.stex" ]
+source_file="res://Arena/Grass/Animation/png Final/Grass_lvl_fertig2_0003_Grass.png"
+dest_files=[ "res://.import/Grass_lvl_fertig2_0003_Grass.png-9b7c0ba26583a01e181034c4c8bf96cb.stex" ]
 
 [params]
 
