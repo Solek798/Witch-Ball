@@ -32,4 +32,6 @@ Amimation_Character_Selection_template = null
 
 [connection signal="mouse_entered" from="." to="." method="_on_MagicButton_mouse_entered"]
 
+[connection signal="pressed" from="." to="." method="_on_MagicButton_pressed"]
+
 
