@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 14.854, -155.402 ), Vector2( 14.8539, -969.366 ) ]
+"values": [ Vector2( 14.854, -561.878 ), Vector2( 14.8539, -969.366 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Shadow2:scale")
@@ -28,7 +28,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, -1 ), Vector2( 1, 1e-005 ) ]
+"values": [ Vector2( 1, -0.5 ), Vector2( 1, 1e-005 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Shadow:position")
@@ -40,7 +40,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 14.854, -155.402 ), Vector2( 14.8539, 658.655 ) ]
+"values": [ Vector2( 14.854, 257.968 ), Vector2( 14.8539, 658.655 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Shadow:scale")
@@ -52,7 +52,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1e-005 ) ]
+"values": [ Vector2( 1, 0.5 ), Vector2( 1, 1e-005 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("../Name/ChName:modulate")
