@@ -24,3 +24,5 @@ func _on_MagicButton_focus_exited():
 func _on_MagicButton_mouse_entered():
 	self.grab_focus()
 
+func _on_MagicButton_pressed():
+	MenuSound.play()

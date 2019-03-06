@@ -100,6 +100,4 @@ margin_bottom = -3.0
 
 [connection signal="tree_exiting" from="." to="." method="_on_Game_tree_exiting"]
 
-[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
-
 
