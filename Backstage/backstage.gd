@@ -24,6 +24,7 @@ func _on_player_reseted(player):
 func update_round_state():
 	if players.size() == 1:
 		players.back().won_rounds += 1
+		print("In Backstage")
 		emit_signal("player_won_round", players.back())
 		# startes and waits for the EndRoundTimer (EndScreenTimer) to finish
 		$RoundWon.play()

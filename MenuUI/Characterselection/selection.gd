@@ -4,6 +4,8 @@ onready var player_1 = false setget set_player_1
 onready var player_2 = false setget set_player_2
 
 
+
+
 func set_player_1(new_value):
 	player_1 = new_value
 	if new_value:

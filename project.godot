@@ -24,6 +24,7 @@ config/icon="res://Icon2.png"
 
 Action="*res://Action.gd"
 Transition="*res://Transition.tscn"
+VoiceChannel="*res://Player/SFX/VoiceChannel.gd"
 
 [display]
 

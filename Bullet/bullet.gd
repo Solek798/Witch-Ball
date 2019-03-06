@@ -20,6 +20,7 @@ func _physics_process(delta):
 		# if the collider is a player, he takes the specified ammount of damage
 		if collision.front().has_method("take_damage"):
 			collision.front().take_damage(damage)
+			own_player._on_enemy_hit()
 		
 		destroy()
 

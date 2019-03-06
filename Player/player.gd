@@ -5,6 +5,7 @@ export(PackedScene) var bullet_fast_template
 export(PackedScene) var bullet_big_template
 export(int) var movement_speed 
 export(float) var aim_speed
+export(float) var chance_to_say_something_stupid = 0.25
 export(int) var max_health
 export(int) var dodge_distance
 export(int) var max_mana
@@ -33,6 +34,7 @@ onready var won_rounds = 0
 var imp
 
 func _ready():
+	randomize()
 	
 	body = identity.selection.instance()
 	add_child(body)
@@ -120,6 +122,9 @@ func throw(movement):
 	$Timer/Throw.start()
 	body.play_throw(movement)
 	emit_signal("bullet_thrown", bullet)
+	
+	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
+		body.play_voice(VoiceChannel.THROW)
 
 func dodge():
 	if current_movement == Vector2(0, 0) or $Mana.value < dodge_mana:
@@ -142,6 +147,8 @@ func take_damage(ammount):
 		return
 	
 	body.play_hit()
+	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
+		body.play_voice(VoiceChannel.HIT)
 	$Timer/Indestructable.start()
 	health -= ammount
 	identity.controll.vibrate(0.6, 0.6, 0.2)
@@ -159,6 +166,7 @@ func reset():
 	$Aim.rotation = 0
 	identity.controll.active = true
 	is_dead = false
+	VoiceChannel.blocked = false
 	emit_signal("player_reseted", self)
 
 func increase_mana(ammount):
@@ -180,6 +188,10 @@ func set_fast_shot(new_value):
 	fast_shot = new_value
 	$Aim/Special/Fast.visible = new_value
 
+func _on_enemy_hit():
+	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
+		body.play_voice(VoiceChannel.ENEMY_HIT)
+
 func _on_round_finished():
 	reset()
 
@@ -197,8 +209,10 @@ func _on_pick_up_spawned(impulse):
 	identity.controll.vibrate(0.9, 0.9, impulse.time / 2)
 	$Modifiers.add_child(impulse)
 
-func _on_player_won_round():
-	body.play_WinnJump()
+func _on_player_won_round(player):
+	if player == self:
+		body.play_WinnJump()
+		body.play_voice(VoiceChannel.ROUND_WON)
 
 func _on_IndestructableTimer_timeout():
 	body.stop_indestructabel()
@@ -215,3 +229,8 @@ func FillManaAnimation():
 func _on_Dodge_timeout():
 	identity.controll.active = true
 	body.set_motion_blur(false, null)
+
+func _on_player_won_match(player):
+	if player == self:
+		body.play_voice(VoiceChannel.MATCH_WON)
+

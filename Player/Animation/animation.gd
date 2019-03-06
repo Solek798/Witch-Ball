@@ -45,3 +45,9 @@ func set_motion_blur(blur, linear_velocity):
 	else:
 		$Charakter.material = null
 
+func play_voice(voice_type):
+	$Voice.get_children()[voice_type].play_random()
+	VoiceChannel.blocked = true
+
+func _on_voice_finished():
+	VoiceChannel.blocked = false

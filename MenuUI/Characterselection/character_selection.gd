@@ -1,6 +1,6 @@
 extends Control
 
-const player_1_color = Color("0900ff")
+const player_1_color = Color("0000ff")
 const player_2_color = Color("ff0000")
 
 var PlayerIdentity = preload("res://Player/PlayerIdentity.gd")
@@ -10,8 +10,6 @@ onready var player_identities = []
 
 signal match_instantiated(new_match)
 
-# TEMP
-export(PackedScene) var match_template
 export(PackedScene) var scarlett
 export(PackedScene) var jasmine
 export(PackedScene) var lilith
@@ -21,16 +19,21 @@ export(Resource) var red
 export(Resource) var blue
 export(Resource) var empty
 
+
 func _ready():
 	$Content/Characters/Scarlett.grab_focus()
-	
-	#if get_parent().has_method("get_current_controll"):
+	Path
 	choosing_player = get_parent().current_controll
 	$AnimationPlayer.play("FadeIn")
 	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = blue
 	$Content/Characters/Jasmine/PanelAnimations/Selections.texture = blue
 	$Content/Characters/Lilith/PanelAnimations/Selections.texture = blue
 	$Content/Characters/Penny/PanelAnimations/Selections.texture = blue
+	
+	#$Content/Characters/Scarlett/Sound.play_defined_order(true)
+	#$Content/Characters/Jasmine/Sound.play_defined_order(true)
+	#$Content/Characters/Lilith/Sound.play_defined_order(true)
+	#$Content/Characters/Penny/Sound.play_defined_order(true)
 
 func switch_player():
 	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = red
@@ -48,24 +51,33 @@ func switch_player():
 			choosing_player = next_player
 
 func end_selection():
-	#$Content/Selection/Railing.modulate = Color("ffffff")
 	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = empty
 	$Content/Characters/Jasmine/PanelAnimations/Selections.texture = empty
 	$Content/Characters/Lilith/PanelAnimations/Selections.texture = empty
 	$Content/Characters/Penny/PanelAnimations/Selections.texture = empty
+	
+	$Content/Characters/Scarlett.disabled = true
+	$Content/Characters/Jasmine.disabled = true
+	$Content/Characters/Lilith.disabled = true
+	$Content/Characters/Penny.disabled = true
+	
 	$Selection/VBoxContainer/HBoxContainer/Play.disabled = false
 
 func _on_Scarlett_pressed():
 	select($Content/Characters/Scarlett/Selection, scarlett, $Content/Characters/Scarlett/Sound)
+	$Content/Characters/Scarlett/Sound.play_defined_order()
 
 func _on_Jasmine_pressed():
 	select($Content/Characters/Jasmine/Selection, jasmine, $Content/Characters/Jasmine/Sound)
+	$Content/Characters/Jasmine/Sound.play_defined_order()
 
 func _on_Lilith_pressed():
 	select($Content/Characters/Lilith/Selection, lilith, $Content/Characters/Lilith/Sound)
+	$Content/Characters/Lilith/Sound.play_defined_order()
 
 func _on_Penny_pressed():
 	select($Content/Characters/Penny/Selection, penny, $Content/Characters/Penny/Sound)
+	$Content/Characters/Penny/Sound.play_defined_order()
 
 func select(selection, character, voice):
 	selection.set_by_id(choosing_player.device + 1)
