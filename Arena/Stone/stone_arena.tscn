@@ -89,12 +89,6 @@ butterfly_effect_template = ExtResource( 6 )
 min_effect_time = 6
 max_effect_time = 10
 
-[node name="StoneArenaAnimation" parent="." index="0" instance=ExtResource( 7 )]
-
-position = Vector2( 962.859, 540.221 )
-scale = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-
 [node name="Background" parent="." index="1"]
 
 visible = false

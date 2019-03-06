@@ -36,8 +36,12 @@ func set_blur(amount, darknes):
 	self.material.set_shader_param("darknes", darknes)
 
 func switch_controlls(id):
+	print(current_controll)
 	if id < controlls.size():
+		if current_controll != null:
+			current_controll.active = false
 		current_controll = controlls[id]
+		current_controll.active = true
 		return current_controll
 	else:
 		return null
@@ -99,6 +103,10 @@ func manage_input():
 		event = "ui_left"
 	if current_controll.state(Action.MENU_RIGHT):
 		event = "ui_right"
+	if current_controll.state(Action.MENU_SELECT):
+		event = "ui_accept"
+	if current_controll.state(Action.MENU_PAUSE):
+		event = "ui_cancel"
 	
 	if event != null:
 		var act = InputEventAction.new()

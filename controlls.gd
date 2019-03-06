@@ -19,7 +19,9 @@ const FORMAT_STRINGS = [
 	"player%d_menu_up",
 	"player%d_menu_down",
 	"player%d_menu_left",
-	"player%d_menu_right"
+	"player%d_menu_right",
+	"player%d_menu_select",
+	"player%d_menu_pause",
 ]
 
 export var prefere_controller_mode = true
@@ -60,7 +62,7 @@ func state(action):
 		return locked_states[action]
 	
 	match action:
-		Action.THROW, Action.DODGE, Action.THROW_SPECIAL, Action.MENU_UP, Action.MENU_DOWN, Action.MENU_LEFT, Action.MENU_RIGHT:
+		Action.THROW, Action.DODGE, Action.THROW_SPECIAL, Action.MENU_UP, Action.MENU_DOWN, Action.MENU_LEFT, Action.MENU_RIGHT,Action.MENU_SELECT,Action.MENU_PAUSE:
 			return Input.is_action_just_pressed(keys[action])
 		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT, Action.AIM_UP, Action.AIM_DOWN, Action.MOVE, Action.AIM:
 			return Input.is_action_pressed(keys[action])
