@@ -5,7 +5,7 @@
 [ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=3]
 [ext_resource path="res://MenuUI/Options/options_panel.png" type="Texture" id=4]
 [ext_resource path="res://dynamic_risque_options.tres" type="DynamicFont" id=5]
-[ext_resource path="res://MenuUI/Options/ticker.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Options/ticker2.png" type="Texture" id=6]
 [ext_resource path="res://slidertest.tres" type="StyleBox" id=7]
 [ext_resource path="res://slidertest_fill.tres" type="StyleBox" id=8]
 [ext_resource path="res://MenuUI/Options/HSliderHover.gd" type="Script" id=9]
@@ -147,8 +147,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -133.0
 margin_top = -161.0
-margin_right = 133.0
-margin_bottom = 239.5
+margin_right = 153.0
+margin_bottom = 324.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -256,7 +256,7 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 script = ExtResource( 9 )
-_sections_unfolded = [ "Focus", "Margin" ]
+_sections_unfolded = [ "Focus", "Margin", "custom_icons" ]
 next_scene = null
 particle_template = ExtResource( 10 )
 Amimation_Character_Selection_template = null

@@ -5,13 +5,13 @@
 [node name="Characterselection" type="Label"]
 
 anchor_left = 0.5
-anchor_top = 0.99074
+anchor_top = 0.98811
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -58.0
-margin_top = 0.000854492
+margin_top = 4.84131
 margin_right = 58.0
-margin_bottom = 10.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

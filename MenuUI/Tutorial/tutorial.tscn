@@ -27,7 +27,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Tutorial" type="Node2D" index="0"]
+[node name="Tutorial" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -157,6 +157,7 @@ _sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_constants" ]
 position = Vector2( 212.742, 40 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
