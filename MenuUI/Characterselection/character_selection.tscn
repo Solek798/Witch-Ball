@@ -38,7 +38,7 @@
 [ext_resource path="res://MenuUI/FadeIn.tres" type="Animation" id=36]
 [ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=37]
 
-[node name="Characterselection" type="CenterContainer" index="0"]
+[node name="Characterselection" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -610,7 +610,7 @@ _sections_unfolded = [ "Rect", "Transform" ]
 [node name="Panel" type="Sprite" parent="Content/Characters/Lilith/PanelAnimations" index="1"]
 
 position = Vector2( 16.7002, -8.90002 )
-rotation = 1.50996e-07
+rotation = 1.50996e-007
 scale = Vector2( -2.9, 2.88386 )
 texture = ExtResource( 24 )
 _sections_unfolded = [ "Rect", "Transform" ]
