@@ -11,4 +11,4 @@ func _on_BigPickUp_body_entered(body):
 func _on_Animation_animation_finished(anim_name):
 	if anim_name == "Spawn":
 		$Animation.play("Idle")
-		$Shockwafe.emitting = true
+		$Particles/Shockwafe.emitting = true
