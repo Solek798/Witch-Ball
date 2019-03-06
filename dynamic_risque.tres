@@ -4,9 +4,9 @@
 
 [resource]
 
-size = 28
+size = 30
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+_sections_unfolded = [ "Settings" ]
 

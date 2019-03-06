@@ -1,36 +1,46 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://MenuUI/Tutorial/tutorial.gd" type="Script" id=1]
 [ext_resource path="res://MenuUI/Tutorial/Schild.png" type="Texture" id=2]
-[ext_resource path="res://MenuUI/Tutorial/ControllerohneSchild.png" type="Texture" id=3]
-[ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=4]
-[ext_resource path="res://risque_regular.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://MenuUI/Tutorial/enter.png" type="Texture" id=6]
+[ext_resource path="res://MenuUI/Tutorial/tutorial.png" type="Texture" id=3]
+[ext_resource path="res://MenuUI/Characterselection/ball_soccet_35%.png" type="Texture" id=4]
+[ext_resource path="res://GUI/Info/round.tscn" type="PackedScene" id=5]
+[ext_resource path="res://risque_regular.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://MenuUI/Tutorial/a_button.png" type="Texture" id=7]
-[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=8]
+[ext_resource path="res://MenuUI/Tutorial/a_button02.png" type="Texture" id=8]
+[ext_resource path="res://MenuUI/FadeOut.tres" type="Animation" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 60
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Tutorial" type="Node2D"]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Tutorial" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 949.554, 530.675 )
+position = Vector2( 960, 140 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite2" type="Sprite" parent="." index="1"]
 
-position = Vector2( 949.554, 477.178 )
+position = Vector2( 990, 510 )
 scale = Vector2( 0.8, 0.78 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -59,10 +69,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 583.0
-margin_top = 43.0
-margin_right = 1324.0
-margin_bottom = 142.0
+margin_left = 664.0
+margin_top = 57.0
+margin_right = 1243.0
+margin_bottom = 128.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -70,21 +80,45 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
+_sections_unfolded = [ "Margin" ]
 
-[node name="Player1" parent="ConfirmPanel/HB1" index="0" instance=ExtResource( 4 )]
+[node name="ball_soccet_35%2" type="Sprite" parent="ConfirmPanel/HB1" index="0"]
 
-position = Vector2( -85.4854, 48.9815 )
+position = Vector2( -170, -156.587 )
+scale = Vector2( 0.720203, 0.720203 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player1" parent="ConfirmPanel/HB1" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( -170, 40 )
 scale = Vector2( 2, 2 )
 
-[node name="Label" type="Label" parent="ConfirmPanel/HB1" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmPanel/HB1" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 14.0
+margin_right = 579.0
+margin_bottom = 71.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="Label" type="Label" parent="ConfirmPanel/HB1/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 146.0
-margin_bottom = 85.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -92,40 +126,49 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.215686, 0.121569, 0.0431373, 0.806627 )
+custom_constants/shadow_offset_x = 2
 text = "Press"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="Enter" type="TextureRect" parent="ConfirmPanel/HB1" index="2"]
+[node name="VSeparator" type="Container" parent="ConfirmPanel/HB1/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 150.0
-margin_right = 267.0
-margin_bottom = 99.0
+margin_right = 280.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 130, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 1
+mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 6 )
-stretch_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_constants" ]
 
-[node name="Label2" type="Label" parent="ConfirmPanel/HB1" index="3"]
+[node name="A" type="AnimatedSprite" parent="ConfirmPanel/HB1/HBoxContainer" index="2"]
+
+position = Vector2( 212.742, 40 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label3" type="Label" parent="ConfirmPanel/HB1/HBoxContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 271.0
-margin_top = 14.0
-margin_right = 327.0
-margin_bottom = 85.0
+margin_left = 284.0
+margin_right = 579.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -133,56 +176,24 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "or"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="A" type="TextureRect" parent="ConfirmPanel/HB1" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 331.0
-margin_right = 442.0
-margin_bottom = 99.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 7 )
-stretch_mode = 0
-
-[node name="Label3" type="Label" parent="ConfirmPanel/HB1" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 446.0
-margin_top = 14.0
-margin_right = 741.0
-margin_bottom = 85.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.227451, 0.152941, 0.0745098, 0.801098 )
+custom_constants/shadow_offset_x = 2
 text = "to continue"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="Player2" parent="ConfirmPanel/HB1" index="6" instance=ExtResource( 4 )]
+[node name="ball_soccet_35%" type="Sprite" parent="ConfirmPanel/HB1/HBoxContainer" index="4"]
 
-position = Vector2( 837.63, 47.9071 )
+position = Vector2( 750.669, -156.587 )
+scale = Vector2( 0.720203, 0.720203 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player2" parent="ConfirmPanel/HB1" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 751.47, 38.5298 )
 scale = Vector2( 2, 2 )
 
 [node name="TimeBeforeTransition" type="Timer" parent="." index="3"]
@@ -199,7 +210,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/FadeOut = ExtResource( 8 )
+anims/FadeOut = ExtResource( 9 )
 blend_times = [  ]
 
 
