@@ -13,7 +13,6 @@ radius = 96.0592
 
 [node name="ManaPickUp" index="0" instance=ExtResource( 1 )]
 
-monitoring = true
 script = ExtResource( 2 )
 mana_gain = 5
 
@@ -23,12 +22,12 @@ shape = SubResource( 1 )
 
 [node name="Shadow" parent="." index="1"]
 
+modulate = Color( 1, 1, 1, 1 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="Texture" parent="." index="2"]
 
 rotation = 0.349066
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="IdleEffect" parent="." index="3" instance=ExtResource( 4 )]
@@ -39,6 +38,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="Animation" parent="." index="5"]
 
 anims/Idle = ExtResource( 5 )
+
+[node name="Bubbles" parent="." index="6"]
+
+emitting = true
 
 [connection signal="body_entered" from="." to="." method="_on_ManaPickUp_body_entered"]
 
