@@ -259,7 +259,7 @@ script = ExtResource( 15 )
 [node name="Dodge" type="AudioStreamPlayer2D" parent="." index="8"]
 
 stream = ExtResource( 16 )
-volume_db = -20.0
+volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
