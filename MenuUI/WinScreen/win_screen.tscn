@@ -35,7 +35,6 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-visible = false
 position = Vector2( 955.554, 282.975 )
 texture = ExtResource( 2 )
 
