@@ -46,8 +46,8 @@ func initialize():
 func start():
 	# creates the in player_count specified ammount of players
 	for i in player_count:
-		print(i)
 		create_player(player_identities[i])
+	
 	emit_signal("match_started", round_count)
 
 func reset():

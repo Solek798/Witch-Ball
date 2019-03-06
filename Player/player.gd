@@ -23,6 +23,7 @@ signal player_reseted(player)
 var body
 var next_bullet
 var identity
+var imp
 onready var current_aim = 0.0
 onready var current_movement = Vector2(0, 0)
 onready var health = max_health
@@ -31,7 +32,6 @@ onready var fast_shot = false setget set_fast_shot
 onready var big_shot = false setget set_big_shot
 onready var won_rounds = 0
 
-var imp
 
 func _ready():
 	randomize()
