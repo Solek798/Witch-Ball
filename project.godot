@@ -16,7 +16,7 @@ Tutorial=true
 
 config/name="Witch-Ball"
 run/main_scene="res://game.tscn"
-boot_splash/image="res://loading.png"
+boot_splash/image="res://loadingscreen.png"
 boot_splash/fullsize=false
 config/icon="res://Icon2.png"
 

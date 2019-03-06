@@ -1,0 +1,251 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (1).png" type="Texture" id=1]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (6).png" type="Texture" id=2]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (5).png" type="Texture" id=3]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (4).png" type="Texture" id=4]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (3).png" type="Texture" id=5]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T1 (2).png" type="Texture" id=6]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T2 (1).png" type="Texture" id=7]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T2 (3).png" type="Texture" id=8]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T2 (2).png" type="Texture" id=9]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (5).png" type="Texture" id=10]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (4).png" type="Texture" id=11]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (3).png" type="Texture" id=12]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (2).png" type="Texture" id=13]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (1).png" type="Texture" id=14]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T4 (6).png" type="Texture" id=15]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T5 (1).png" type="Texture" id=16]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T5 (3).png" type="Texture" id=17]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T5 (2).png" type="Texture" id=18]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T6 (1).png" type="Texture" id=19]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T6 (2).png" type="Texture" id=20]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T7 (1).png" type="Texture" id=21]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T7 (3).png" type="Texture" id=22]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T7 (2).png" type="Texture" id=23]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T8 (2).png" type="Texture" id=24]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T8 (1).png" type="Texture" id=25]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T9 (2).png" type="Texture" id=26]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T9 (1).png" type="Texture" id=27]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T9 (3).png" type="Texture" id=28]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T3 (1).png" type="Texture" id=29]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T3 (4).png" type="Texture" id=30]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T3 (3).png" type="Texture" id=31]
+[ext_resource path="res://Arena/Grass/Animation/Images/Tree/T3 (2).png" type="Texture" id=32]
+[ext_resource path="res://Arena/Grass/Animation/Animations/TreeScene.tres" type="Animation" id=33]
+
+[node name="TreeScene" type="Node2D" index="0"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [ -540.94 ],
+"_edit_vertical_guides_": [ -960.273 ]
+}
+
+[node name="Trees" type="Node2D" parent="." index="0"]
+
+z_index = -21
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="T1" type="Sprite" parent="Trees" index="0"]
+
+editor/display_folded = true
+position = Vector2( 950.246, 0 )
+texture = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T1" index="0"]
+
+position = Vector2( -115, -139.587 )
+rotation = -0.0168706
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T1/Sprite" index="0"]
+
+position = Vector2( 23, -116.288 )
+rotation = -0.034337
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T1/Sprite/Sprite" index="0"]
+
+position = Vector2( 21.1772, -101.813 )
+rotation = 0.0263329
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T1/Sprite/Sprite/Sprite" index="0"]
+
+position = Vector2( 9.62299, -91.0668 )
+rotation = 0.0460065
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T1/Sprite/Sprite/Sprite/Sprite" index="0"]
+
+position = Vector2( 14.6284, -64.8691 )
+rotation = -0.0823421
+texture = ExtResource( 6 )
+
+[node name="T2" type="Sprite" parent="Trees" index="1"]
+
+editor/display_folded = true
+position = Vector2( 775.862, -417.829 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T2" index="0"]
+
+position = Vector2( -13.981, -61.3011 )
+rotation = 0.0591212
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T2/Sprite" index="0"]
+
+position = Vector2( -9.9303, -40.5159 )
+rotation = -0.068373
+texture = ExtResource( 9 )
+
+[node name="T4" type="Sprite" parent="Trees" index="2"]
+
+position = Vector2( -948.981, -89.0191 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T4" index="0"]
+
+position = Vector2( 86.4958, -99.3451 )
+rotation = 0.0349316
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T4/Sprite" index="0"]
+
+position = Vector2( -17.2197, -107.859 )
+rotation = -0.0448926
+texture = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T4/Sprite/Sprite" index="0"]
+
+position = Vector2( -17.0875, -88.7425 )
+rotation = -0.0620821
+texture = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T4/Sprite/Sprite/Sprite" index="0"]
+
+position = Vector2( -5.91251, -74.2575 )
+rotation = 0.0691288
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T4/Sprite/Sprite/Sprite/Sprite" index="0"]
+
+position = Vector2( -11.0875, -49.7425 )
+rotation = 0.0165712
+texture = ExtResource( 15 )
+
+[node name="T5" type="Sprite" parent="Trees" index="3"]
+
+editor/display_folded = true
+position = Vector2( -774.772, -340.741 )
+texture = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T5" index="0"]
+
+position = Vector2( 4.4906, -90.8491 )
+rotation = -0.0315078
+texture = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T5/Sprite" index="0"]
+
+position = Vector2( -7.2475, -65.37 )
+rotation = 0.0302904
+texture = ExtResource( 18 )
+
+[node name="T6" type="Sprite" parent="Trees" index="4"]
+
+editor/display_folded = true
+position = Vector2( -633.351, -502.675 )
+texture = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T6" index="0"]
+
+position = Vector2( 11.0174, -29.4851 )
+texture = ExtResource( 20 )
+
+[node name="T7" type="Sprite" parent="Trees" index="5"]
+
+editor/display_folded = true
+position = Vector2( 102.441, -432.12 )
+texture = ExtResource( 21 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T7" index="0"]
+
+position = Vector2( -22.3099, -56.4784 )
+rotation = 0.0107333
+texture = ExtResource( 22 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="Trees/T7" index="1"]
+
+position = Vector2( -19.167, -96.7334 )
+texture = ExtResource( 23 )
+
+[node name="T8" type="Sprite" parent="Trees" index="6"]
+
+editor/display_folded = true
+position = Vector2( -418.64, -462.097 )
+texture = ExtResource( 24 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T8" index="0"]
+
+position = Vector2( 7.42029, -44.8242 )
+texture = ExtResource( 25 )
+
+[node name="T9" type="Sprite" parent="Trees" index="7"]
+
+editor/display_folded = true
+position = Vector2( 588.487, -412.885 )
+texture = ExtResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T9" index="0"]
+
+position = Vector2( -23.095, -63.5781 )
+texture = ExtResource( 27 )
+
+[node name="Sprite" type="Sprite" parent="Trees/T9/Sprite" index="0"]
+
+position = Vector2( 8.6037, -40.1505 )
+texture = ExtResource( 28 )
+
+[node name="TreesFront" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+z_index = -2
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="T10" type="Sprite" parent="TreesFront" index="0"]
+
+position = Vector2( 939.943, 512.941 )
+texture = ExtResource( 29 )
+
+[node name="Sprite" type="Sprite" parent="TreesFront/T10" index="0"]
+
+position = Vector2( -75.0936, -78.3698 )
+rotation = 0.0259132
+texture = ExtResource( 30 )
+
+[node name="Sprite" type="Sprite" parent="TreesFront/T10/Sprite" index="0"]
+
+position = Vector2( 15.7803, -125.859 )
+rotation = 0.0424133
+texture = ExtResource( 31 )
+
+[node name="Sprite" type="Sprite" parent="TreesFront/T10/Sprite/Sprite" index="0"]
+
+position = Vector2( 17.9125, -120.742 )
+rotation = -0.112068
+texture = ExtResource( 32 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = "GrasTrees"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/GrasTrees = ExtResource( 33 )
+blend_times = [  ]
+
+

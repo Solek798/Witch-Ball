@@ -12,7 +12,7 @@ playback/repeat = false
 playback/speed = 1.0
 script = ExtResource( 1 )
 distance = 200.0
-strength = 4.0
+strength = 10.0
 time = 1.0
 
 [connection signal="tween_completed" from="." to="." method="_on_Impulse_tween_completed"]

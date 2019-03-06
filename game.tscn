@@ -35,7 +35,7 @@ shader_param/amount = 2.5
 shader_param/darknes = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
