@@ -73,6 +73,7 @@ tracks/0/keys = {
 [node name="StoneArena" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 pickup_mana_template = null
 pickup_fast_template = null
 pickup_big_template = null
@@ -89,12 +90,18 @@ butterfly_effect_template = ExtResource( 6 )
 min_effect_time = 6
 max_effect_time = 10
 
+[node name="StoneArenaAnimation" parent="." index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 960, 540 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
 [node name="Background" parent="." index="1"]
 
 visible = false
 texture = ExtResource( 8 )
 
-[node name="River" parent="." index="2" instance=ExtResource( 9 )]
+[node name="River" parent="." index="3" instance=ExtResource( 9 )]
 
 position = Vector2( 15.8962, 6.80948 )
 
@@ -318,6 +325,7 @@ position = Vector2( 1469.8, 129.108 )
 
 [node name="Light2D" type="Light2D" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( 492.367, 188.676 )
 scale = Vector2( 1.5, 1.5 )
 enabled = true
