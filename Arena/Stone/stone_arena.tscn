@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Arena/arena.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Arena/Stone/stone_arena.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Arena/ArenaAnimationStone/Scene/StoneArenaAnimation.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Arena/Stone/stone_recent.jpg" type="Texture" id=8]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Arena/licht4.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,7 +51,26 @@ extents = Vector2( 10, 757.697 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.5225, 654.954 )
 
-[node name="StoneArena" instance=ExtResource( 1 )]
+[sub_resource type="Animation" id=9]
+
+resource_name = "light"
+length = 60.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 30, 60.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.4, 0.01 ]
+}
+
+[node name="StoneArena" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 stone_effect_template = ExtResource( 3 )
@@ -89,6 +109,7 @@ autostart = false
 [node name="Stones" type="Area2D" parent="." index="6"]
 
 editor/display_folded = true
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -152,6 +173,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Needles" type="Area2D" parent="." index="7"]
 
 editor/display_folded = true
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -290,6 +312,43 @@ position = Vector2( 409.26, 135.903 )
 [node name="Position2" type="Position2D" parent="Eyes" index="1"]
 
 position = Vector2( 1469.8, 129.108 )
+
+[node name="Light2D" type="Light2D" parent="." index="11"]
+
+position = Vector2( 492.367, 188.676 )
+scale = Vector2( 1.5, 1.5 )
+enabled = true
+editor_only = false
+texture = ExtResource( 10 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.3166
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Range", "Shadow", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Light2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/light = SubResource( 9 )
+blend_times = [  ]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 
