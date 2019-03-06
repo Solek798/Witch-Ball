@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SFX_Dodge.wav-3cc5d907d98ad49d85d0732dab43dc4a.sample"
+
+[deps]
+
+source_file="res://Player/SFX_Dodge.wav"
+dest_files=[ "res://.import/SFX_Dodge.wav-3cc5d907d98ad49d85d0732dab43dc4a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
