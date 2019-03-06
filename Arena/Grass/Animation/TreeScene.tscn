@@ -34,7 +34,7 @@
 [ext_resource path="res://Arena/Grass/Animation/Images/Tree/T3 (2).png" type="Texture" id=32]
 [ext_resource path="res://Arena/Grass/Animation/Animations/TreeScene.tres" type="Animation" id=33]
 
-[node name="TreeScene" type="Node2D"]
+[node name="TreeScene" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_horizontal_guides_": [ -540.94 ],
@@ -43,13 +43,11 @@ __meta__ = {
 
 [node name="Trees" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 z_index = -21
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="T1" type="Sprite" parent="Trees" index="0"]
 
-editor/display_folded = true
 position = Vector2( 950.246, 0 )
 texture = ExtResource( 1 )
 

@@ -4,20 +4,20 @@
 [ext_resource path="res://VFX/Particles/waves.png" type="Texture" id=2]
 [ext_resource path="res://Arena/Grass/Animation/Animations/RiverParticleGras.tres" type="Animation" id=3]
 
-[sub_resource type="Curve" id=7]
+[sub_resource type="Curve" id=1]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.750468, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=8]
+[sub_resource type="CurveTexture" id=2]
 
 flags = 4
 width = 2048
-curve = SubResource( 7 )
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -46,7 +46,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.3
 scale_random = 0.0
-scale_curve = SubResource( 8 )
+scale_curve = SubResource( 2 )
 color = Color( 1, 1, 1, 1 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -57,31 +57,31 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Scale" ]
 
-[sub_resource type="Gradient" id=9]
+[sub_resource type="Gradient" id=4]
 
 offsets = PoolRealArray( 0.923077, 1 )
 colors = PoolColorArray( 1, 1, 1, 0.353569, 0.953125, 0.930786, 0.930786, 0.154667 )
 
-[sub_resource type="GradientTexture" id=10]
+[sub_resource type="GradientTexture" id=5]
 
 flags = 4
-gradient = SubResource( 9 )
+gradient = SubResource( 4 )
 width = 2048
 
-[sub_resource type="Curve" id=11]
+[sub_resource type="Curve" id=6]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0.0742111, 0.0273438 ), 0.0, 2.72681, 0, 0, Vector2( 0.507291, 0.908203 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), -5.09668, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=12]
+[sub_resource type="CurveTexture" id=7]
 
 flags = 4
 width = 2048
-curve = SubResource( 11 )
+curve = SubResource( 6 )
 
-[sub_resource type="ParticlesMaterial" id=13]
+[sub_resource type="ParticlesMaterial" id=8]
 
 render_priority = 0
 trail_divisor = 1
@@ -110,8 +110,8 @@ angle = 0.0
 angle_random = 0.0
 scale = 1.46
 scale_random = 0.5
-scale_curve = SubResource( 12 )
-color_ramp = SubResource( 10 )
+scale_curve = SubResource( 7 )
+color_ramp = SubResource( 5 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -120,7 +120,7 @@ anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
 
-[node name="RiverGras" type="Node2D"]
+[node name="RiverGras" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -143,7 +143,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 6 )
+process_material = SubResource( 3 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
@@ -169,7 +169,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 6 )
+process_material = SubResource( 3 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
@@ -195,7 +195,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 13 )
+process_material = SubResource( 8 )
 texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
