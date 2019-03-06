@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Arena/arena.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Arena/Grass/grass_arena.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Arena/Animation/eyes_effect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/Animation/butterfly_effect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Arena/Grass/Grass_lvl_aktuell.png" type="Texture" id=7]
-[ext_resource path="res://Arena/Grass/Animation/GrassArenaAnimation.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -60,7 +59,6 @@ butterfly_effect_template = ExtResource( 6 )
 
 [node name="Background" parent="." index="0"]
 
-visible = false
 z_index = -21
 texture = ExtResource( 7 )
 
@@ -287,10 +285,6 @@ position = Vector2( 409.26, 135.903 )
 [node name="Position2" type="Position2D" parent="Eyes" index="1"]
 
 position = Vector2( 1469.8, 129.108 )
-
-[node name="GrassArenaAnimation" parent="." index="9" instance=ExtResource( 8 )]
-
-_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 

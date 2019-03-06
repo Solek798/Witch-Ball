@@ -1,0 +1,153 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0021_Color-Fill-2.png" type="Texture" id=1]
+[ext_resource path="res://Arena/Grass/Animation/Images/R1.png" type="Texture" id=2]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0017_Sand.png" type="Texture" id=3]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0013_Grass.png" type="Texture" id=4]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0006_Layer-159.png" type="Texture" id=5]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0005_Layer-163.png" type="Texture" id=6]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0009_Stones_Sketch.png" type="Texture" id=7]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0012_Stones_paint.png" type="Texture" id=8]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0010_Stones_OL.png" type="Texture" id=9]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0011_Stones_HL.png" type="Texture" id=10]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0007_TOP_LAYER.png" type="Texture" id=11]
+[ext_resource path="res://Arena/Grass/Animation/Images/R1+.png" type="Texture" id=12]
+[ext_resource path="res://Arena/Grass/Animation/Images/R11.png" type="Texture" id=13]
+[ext_resource path="res://Arena/Grass/Animation/Images/R10.png" type="Texture" id=14]
+[ext_resource path="res://Arena/Grass/Animation/Images/Grass_lvl_aktuell_0014_Foggy.png" type="Texture" id=15]
+[ext_resource path="res://Arena/Grass/Animation/Animations/RiverGras.tres" type="Animation" id=16]
+[ext_resource path="res://Arena/Grass/Animation/TreeScene.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Arena/Grass/Animation/RiverGras.tscn" type="PackedScene" id=18]
+
+[node name="GrassArenaAnimation" type="Node2D"]
+
+[node name="Ground" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 960, 540 )
+z_index = -21
+_sections_unfolded = [ "Z Index" ]
+
+[node name="BackGrundColor" type="Sprite" parent="Ground" index="0"]
+
+texture = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="Ground" index="1"]
+
+editor/display_folded = true
+modulate = Color( 0.302124, 0.78125, 0.590348, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="R1" type="Sprite" parent="Ground/Node2D" index="0"]
+
+position = Vector2( 0, -61.6461 )
+texture = ExtResource( 2 )
+
+[node name="R2" type="Sprite" parent="Ground/Node2D" index="1"]
+
+position = Vector2( 0, 13.8891 )
+texture = ExtResource( 3 )
+
+[node name="RasenGrund" type="Sprite" parent="Ground" index="2"]
+
+texture = ExtResource( 4 )
+
+[node name="GrüneRasenFlecke" type="Sprite" parent="Ground" index="3"]
+
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Schnee" type="Sprite" parent="Ground" index="4"]
+
+texture = ExtResource( 6 )
+
+[node name="Stone" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 960, 540 )
+z_index = -21
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Rand2" type="Sprite" parent="Stone" index="0"]
+
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fläche" type="Sprite" parent="Stone" index="1"]
+
+texture = ExtResource( 8 )
+
+[node name="Rand" type="Sprite" parent="Stone" index="2"]
+
+position = Vector2( 291.177, -16.4044 )
+texture = ExtResource( 9 )
+
+[node name="kanten" type="Sprite" parent="Stone" index="3"]
+
+texture = ExtResource( 10 )
+
+[node name="StoneDetail" type="Sprite" parent="Stone" index="4"]
+
+position = Vector2( -16.4044, 0 )
+texture = ExtResource( 11 )
+
+[node name="Stonefront" type="Node2D" parent="." index="2"]
+
+position = Vector2( 960, 540 )
+z_index = -3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="River" type="Node2D" parent="." index="3"]
+
+position = Vector2( 960, 540 )
+z_index = -21
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Wasser" type="Sprite" parent="River" index="0"]
+
+texture = ExtResource( 12 )
+
+[node name="Stein" type="Sprite" parent="River" index="1"]
+
+position = Vector2( -66.6583, 9.52264 )
+texture = ExtResource( 13 )
+
+[node name="Stein2" type="Sprite" parent="River" index="2"]
+
+position = Vector2( 57.1357, 31.2886 )
+texture = ExtResource( 14 )
+
+[node name="Dunst" type="Sprite" parent="River" index="3"]
+
+self_modulate = Color( 1, 1, 1, 0.436471 )
+position = Vector2( -5.44159, 12.2434 )
+texture = ExtResource( 15 )
+
+[node name="Dunst2" type="Sprite" parent="River" index="4"]
+
+self_modulate = Color( 1, 1, 1, 0.436471 )
+position = Vector2( -2.25506, 12.2434 )
+scale = Vector2( 0.982289, 1 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = "RiverGras"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/RiverGras = ExtResource( 16 )
+blend_times = [  ]
+
+[node name="TreeScene" parent="." index="5" instance=ExtResource( 17 )]
+
+position = Vector2( 960, 540 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RiverGras" parent="." index="6" instance=ExtResource( 18 )]
+
+position = Vector2( 15.9606, -89.8245 )
+
+
