@@ -253,7 +253,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "anim 2", "scale 2", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "Mix_Trow", "scale 3", 0, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "WinnJump", "scale 4", 0 ],
+"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "WinnJump", "scale 4", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "Mix_Trow", "scale 3", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "anim 2", "scale 2", 0 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -289,16 +289,10 @@ data = {
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_dodge_down",
+"id": "oneshot_walk_throw",
 "mix": false,
-"position": Vector2( 510, 516 ),
+"position": Vector2( 727, 8 ),
 "type": "oneshot"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
-"type": "animation"
 }, {
 "id": "Mix_Trow",
 "mix": 1.0,
@@ -316,14 +310,48 @@ data = {
 "position": Vector2( 712, 517 ),
 "type": "oneshot"
 }, {
+"id": "scale 4",
+"position": Vector2( 929, 119 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_dodge_down",
+"mix": false,
+"position": Vector2( 510, 516 ),
+"type": "oneshot"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 159, 43 ),
+"type": "blend2"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "Walk",
+"position": Vector2( 6, 146 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
+"type": "animation"
+}, {
 "animation": ExtResource( 8 ),
 "filter": [  ],
 "id": "anim 2",
 "position": Vector2( 250, 385 ),
 "type": "animation"
 }, {
-"id": "scale 2",
-"position": Vector2( 296, 191 ),
+"id": "scale 3",
+"position": Vector2( 658, 134 ),
 "scale": 2.0,
 "type": "timescale"
 }, {
@@ -339,14 +367,14 @@ data = {
 "type": "oneshot"
 }, {
 "autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_walk_throw",
+"id": "oneshot_idle_throw",
 "mix": false,
-"position": Vector2( 727, 8 ),
+"position": Vector2( 445, 28 ),
 "type": "oneshot"
 }, {
 "autorestart": false,
@@ -360,14 +388,8 @@ data = {
 "position": Vector2( 902, 5 ),
 "type": "oneshot"
 }, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
-}, {
-"id": "scale 3",
-"position": Vector2( 658, 134 ),
+"id": "scale 2",
+"position": Vector2( 296, 191 ),
 "scale": 2.0,
 "type": "timescale"
 }, {
@@ -375,28 +397,6 @@ data = {
 "filter": [  ],
 "id": "WinnJump",
 "position": Vector2( 884, 190 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 445, 28 ),
-"type": "oneshot"
-}, {
-"id": "scale 4",
-"position": Vector2( 929, 119 ),
-"scale": 2.0,
-"type": "timescale"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
 "type": "animation"
 } ]
 }
@@ -432,7 +432,7 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 use_parent_material = true
-position = Vector2( -9.18587, 5.80125 )
+position = Vector2( -4.39785, 2.95887 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
 __meta__ = {
@@ -452,7 +452,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -38.0608, -114.766 )
-rotation = 0.101205
+rotation = 0.0778878
 z_index = 4
 texture = ExtResource( 12 )
 offset = Vector2( 17.0357, 118.566 )
@@ -465,7 +465,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.0781051
+rotation = -0.0662476
 z_index = 1
 texture = ExtResource( 13 )
 offset = Vector2( 145.576, 357.073 )
@@ -488,7 +488,7 @@ _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 
 use_parent_material = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.230889
+rotation = 0.203885
 z_index = -5
 texture = ExtResource( 15 )
 offset = Vector2( -23.4915, 54.9353 )
@@ -501,7 +501,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.155667
+rotation = -0.123182
 texture = ExtResource( 16 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
@@ -513,7 +513,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -121.355, -14.2008 )
-rotation = -0.025704
+rotation = -0.0711597
 z_index = 4
 texture = ExtResource( 17 )
 offset = Vector2( 115.846, 3.52861 )
@@ -526,7 +526,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.0327909
+rotation = 0.0178664
 scale = Vector2( 0.999999, 0.999999 )
 z_index = 1
 texture = ExtResource( 18 )
@@ -546,7 +546,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.0822765
+rotation = -0.0393909
 z_index = -1
 texture = ExtResource( 19 )
 offset = Vector2( 39.0679, -290.996 )
@@ -559,7 +559,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.0828262
+rotation = 0.0396541
 z_index = -1
 texture = ExtResource( 20 )
 offset = Vector2( 9.48901, -415.964 )
@@ -572,7 +572,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 49.202, 250.398 )
-rotation = -0.0696837
+rotation = -0.033362
 scale = Vector2( 1, 1.2 )
 z_index = -2
 texture = ExtResource( 21 )
@@ -586,7 +586,7 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.0424852
+rotation = 0.0203403
 scale = Vector2( 1, 0.833333 )
 z_index = -2
 texture = ExtResource( 22 )
@@ -695,7 +695,6 @@ files = [ "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_1.wav", "res://
 [node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 24 )]
 
 position = Vector2( 0, -100 )
-volume_db = 10.0
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Haha_in_ya_Face_finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Hit_Sorry_not_Sorry_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Ouh_that_looked_liked_hurts_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Seems_like_ya_saw_a_Black_cat_this_morning_Finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_Whoops_was_that_my_fault_finish.wav", "res://Player/SFX/Scarlett/EnemyHit/If_Enemy_gets_You_should_be_lucky_that_this_wasn_t_a_curse_finish.wav" ]
 
