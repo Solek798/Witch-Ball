@@ -37,4 +37,4 @@ func update_round_state():
 			emit_signal("round_finished")
 
 func _on_AudioStreamPlayer_finished():
-	$Music.play()
+	$Music.play(2.0)
