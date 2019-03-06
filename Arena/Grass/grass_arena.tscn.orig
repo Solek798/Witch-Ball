@@ -1,4 +1,8 @@
+<<<<<<< working copy
+[gd_scene load_steps=16 format=2]
+=======
 [gd_scene load_steps=20 format=2]
+>>>>>>> merge rev
 
 [ext_resource path="res://Arena/arena.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Arena/Grass/grass_arena.gd" type="Script" id=2]
@@ -6,10 +10,14 @@
 [ext_resource path="res://Arena/Animation/needel_effect.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/Animation/eyes_effect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/Animation/butterfly_effect.tscn" type="PackedScene" id=6]
+<<<<<<< working copy
 [ext_resource path="res://Arena/Grass/Grass_lvl_aktuell.png" type="Texture" id=7]
-[ext_resource path="res://Arena/licht3.png" type="Texture" id=8]
-[ext_resource path="res://Arena/licht5.png" type="Texture" id=9]
-[ext_resource path="res://Arena/Grass/Animation/GrassArenaAnimation.tscn" type="PackedScene" id=10]
+=======
+[ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Arena/Grass/Grass_lvl_aktuell.png" type="Texture" id=8]
+[ext_resource path="res://Arena/licht3.png" type="Texture" id=9]
+[ext_resource path="res://Arena/licht5.png" type="Texture" id=10]
+>>>>>>> merge rev
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -85,6 +93,7 @@ tracks/1/keys = {
 [node name="grass_arena" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 stone_effect_template = ExtResource( 3 )
 needle_effect_template = ExtResource( 4 )
 eye_effect_template = ExtResource( 5 )
@@ -92,9 +101,12 @@ butterfly_effect_template = ExtResource( 6 )
 
 [node name="Background" parent="." index="0"]
 
-visible = false
 z_index = -21
 texture = ExtResource( 7 )
+
+[node name="Timer" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="Stones" type="Area2D" parent="." index="4"]
 
@@ -217,6 +229,8 @@ polygon = PoolVector2Array( 1721.66, 149.817, 1776.2, 25.8138, 1792.43, -123.8, 
 [node name="Border" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
+
+editor/display_folded = true
 visible = false
 
 [node name="Player" type="StaticBody2D" parent="Border" index="0"]
@@ -319,7 +333,7 @@ position = Vector2( 409.26, 135.903 )
 
 position = Vector2( 1469.8, 129.108 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="10"]
 
 root_node = NodePath("..")
 autoplay = "LightAnimationGrasArea"
@@ -336,7 +350,7 @@ rotation = -1.79769
 scale = Vector2( -2, -2 )
 enabled = true
 editor_only = false
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -364,7 +378,7 @@ rotation = -1.5708
 scale = Vector2( -1.5, -1.5 )
 enabled = true
 editor_only = false
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -384,8 +398,6 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range", "Transform" ]
-
-[node name="GrassArenaAnimation" parent="." index="10" instance=ExtResource( 10 )]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 
