@@ -163,9 +163,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 710.0
-margin_top = 221.0
+margin_top = 222.0
 margin_right = 1210.0
-margin_bottom = 857.0
+margin_bottom = 858.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -618,14 +618,12 @@ text_template = ExtResource( 24 )
 
 [node name="AnimirtesTutorial" type="Container" parent="." index="2"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = -1.0
 margin_right = 1920.0
-margin_bottom = 1079.0
+margin_bottom = 1080.0
 rect_min_size = Vector2( 1920, 1080 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1072,7 +1070,7 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( -234.081, 17.0564 )
-rotation = 1.5708
+rotation = 3.14159
 z_index = 6
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1100,8 +1098,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="WalkCurser" type="Sprite" parent="AnimirtesTutorial/Controler" index="2"]
 
-visible = false
 position = Vector2( -234.081, 17.0563 )
+rotation = 1.5708
 texture = ExtResource( 39 )
 offset = Vector2( 5.41585, 12.2043 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -1115,12 +1113,14 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="AimCurser" type="Sprite" parent="AnimirtesTutorial/Controler" index="4"]
 
+visible = false
 position = Vector2( 115.277, 142.895 )
 texture = ExtResource( 41 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="DogeButton" type="Sprite" parent="AnimirtesTutorial/Controler" index="5"]
 
+visible = false
 position = Vector2( -254.831, -195.77 )
 texture = ExtResource( 42 )
 _sections_unfolded = [ "Visibility" ]
@@ -1128,6 +1128,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="SprtialButton" type="Sprite" parent="AnimirtesTutorial/Controler" index="6"]
 
 visible = false
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 205.769, -137.548 )
 texture = ExtResource( 43 )
 _sections_unfolded = [ "Visibility" ]
@@ -1141,7 +1142,7 @@ _sections_unfolded = [ "Visibility" ]
 
 editor/display_folded = true
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1744.6, 402.683 )
+position = Vector2( 1465.65, 402.683 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Charakter" type="Node2D" parent="AnimirtesTutorial/Character" index="0"]
@@ -1299,6 +1300,7 @@ __meta__ = {
 
 [node name="Aim" type="Node2D" parent="AnimirtesTutorial/Character" index="1"]
 
+visible = false
 rotation = 1.5708
 scale = Vector2( 0.45, 0.45 )
 z_index = 6
@@ -1314,14 +1316,15 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Bullet" type="Node2D" parent="AnimirtesTutorial" index="4"]
 
 editor/display_folded = true
+visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1309.32, 451.285 )
+position = Vector2( 1373.48, 386.148 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="AnimirtesTutorial/Bullet" index="0"]
 
-position = Vector2( 170.69, 0 )
-scale = Vector2( 0.0859672, 0.0859672 )
+position = Vector2( -266.707, 0 )
+scale = Vector2( 0.0613798, 0.0613798 )
 texture = ExtResource( 56 )
 _sections_unfolded = [ "Transform" ]
 
