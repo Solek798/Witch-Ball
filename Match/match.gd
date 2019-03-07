@@ -18,11 +18,11 @@ var arena
 var gui
 var backstage
 var player_identities
+var winner
 
 
 func _ready():
 	initialize()
-	print("match_instanciated")
 	emit_signal("match_instanciated")
 
 func initialize():
@@ -66,7 +66,7 @@ func reset():
 	emit_signal("match_reseted")
 
 func stop():
-	emit_signal("match_finished", self)
+	self.queue_free()
 
 func create_player(identity):
 	#instanciates and sets th player to the specified position
@@ -80,12 +80,13 @@ func create_player(identity):
 	player.connect("player_reseted", arena, "_on_player_reseted")
 	player.connect("player_reseted", backstage, "_on_player_reseted")
 	backstage.connect("round_started", player, "_on_round_started")
+	backstage.connect("round_finished", player, "_on_round_finished")
 	backstage.connect("player_won_round", player, "_on_player_won_round" )
 	gui.connect("player_won_match", player, "_on_player_won_match")
 	
 	emit_signal("player_created", player)
 
 func _on_player_won_match(player):
-	print("Spieler ", player.identity.id, " kriegt einen Keks")
-	yield(backstage, "round_finished")
-	stop()
+	winner = player
+	yield(Transition, "done_on")
+	emit_signal("match_finished", self)

@@ -5,7 +5,6 @@ signal round_finished
 signal player_won_round(player)
 
 onready var players = []
-onready var match_winner = null
 
 
 func _ready():
@@ -37,10 +36,7 @@ func update_round_state():
 		Transition.on()
 		yield(Transition, "done_on")
 		
-		if match_winner:
-			pass
-		else:
-			emit_signal("round_started")
+		emit_signal("round_started")
 		
 		Transition.off()
 

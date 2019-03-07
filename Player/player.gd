@@ -199,6 +199,9 @@ func _on_enemy_hit():
 func _on_round_started():
 	reset()
 
+func _on_round_finished():
+	identity.controll.active = false
+
 func _on_ManaTimer_timeout():
 	increase_mana(mana_increase)
 
@@ -229,6 +232,8 @@ func _on_Dodge_timeout():
 	body.set_motion_blur(false, null)
 
 func _on_player_won_match(player):
-	if player == self:
-		body.play_voice(VoiceChannel.MATCH_WON)
+	
+	yield(Transition, "done_on")
+	identity.controll.active = false
+	self.visible = false
 

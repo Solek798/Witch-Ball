@@ -1,33 +1,34 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Jasmine/Icon_Player_Jasmine.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/motion_blur.tres" type="Material" id=3]
 [ext_resource path="res://MenuUI/VS/Jasnime.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Idle.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Hit.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/New_Hit_Ch2.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Throw_Ch2.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/WinnJump_Ch2.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_Ch2.tres" type="Animation" id=10]
+[ext_resource path="res://MenuUI/WinScreen/jasmine_win.png" type="Texture" id=5]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Idle.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Throw_Ch2.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/WinnJump_Ch2.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_Ch2.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Hit.tres" type="Animation" id=10]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Idle_throw.tres" type="Animation" id=11]
 [ext_resource path="res://Player/Animation/Jasmine/Resource/Walk_for_throw.tres" type="Animation" id=12]
-[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=13]
-[ext_resource path="res://Player/Animation/Jasmine/Resource/Reset.tres" type="Animation" id=14]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_T.png" type="Texture" id=15]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_l.png" type="Texture" id=16]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_l.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_r.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_r.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Head.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_f.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_b.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_l.png" type="Texture" id=23]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_l.png" type="Texture" id=24]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=25]
-[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=26]
-[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=27]
-[ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/New_Hit_Ch2.tres" type="Animation" id=13]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=14]
+[ext_resource path="res://Player/Animation/Jasmine/Resource/Reset.tres" type="Animation" id=15]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_T.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_l.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_l.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_r.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_A_d_r.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Head.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_f.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_Ha_b.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_l.png" type="Texture" id=24]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_l.png" type="Texture" id=25]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_r.png" type="Texture" id=26]
+[ext_resource path="res://Player/Animation/Jasmine/Images/Ch2_L_d_r.png" type="Texture" id=27]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=28]
+[ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=29]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -121,6 +122,7 @@ __meta__ = {
 image = ExtResource( 2 )
 motion_blur = ExtResource( 3 )
 versus_template = ExtResource( 4 )
+win_image = ExtResource( 5 )
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
@@ -131,7 +133,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 2", "scale", 0, "oneshot_WinnJump", "out", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "throw_Idle", "scale 3", 0, "Idle_Bein", "scale 4", 0, "oneshot_walk_throw", "oneshot_idle_throw", 0, "scale 3", "oneshot_idle_throw", 1, "oneshot_idle_throw", "oneshot_hit", 0, "hit_arm", "oneshot_hit", 1, "oneshot_hit", "oneshot_WinnJump", 0, "scale 5", "oneshot_WinnJump", 1, "mix 4", "scale 2", 0, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "anim 3", "mix 4", 0, "anim 4", "mix 4", 1, "Throw", "throw_Idle", 0, "scale 4", "throw_Idle", 1, "WinnJump", "scale 5", 0, "new_Hit", "oneshot_hit2", 1 ],
+"connections": [ "anim 2", "scale", 0, "oneshot_WinnJump", "out", 0, "Idle_Bein", "scale 4", 0, "oneshot_idle_throw", "oneshot_hit", 0, "hit_arm", "oneshot_hit", 1, "mix 4", "scale 2", 0, "oneshot_walk_throw", "oneshot_idle_throw", 0, "scale 3", "oneshot_idle_throw", 1, "blend_walk", "oneshot_walk_throw", 0, "scale 2", "oneshot_walk_throw", 1, "throw_Idle", "scale 3", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_hit", "oneshot_WinnJump", 0, "scale 5", "oneshot_WinnJump", 1, "anim 3", "mix 4", 0, "anim 4", "mix 4", 1, "WinnJump", "scale 5", 0, "Throw", "throw_Idle", 0, "scale 4", "throw_Idle", 1, "new_Hit", "oneshot_hit2", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -139,7 +141,7 @@ data = {
 "scale": 3.0,
 "type": "timescale"
 }, {
-"animation": ExtResource( 5 ),
+"animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "anim",
 "position": Vector2( 5, 84 ),
@@ -149,45 +151,44 @@ data = {
 "position": Vector2( 1086, 230 ),
 "type": "output"
 }, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "hit_arm",
-"position": Vector2( 406, 361 ),
-"type": "animation"
-}, {
 "animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "new_Hit",
-"position": Vector2( 527, 468 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
 "filter": [  ],
 "id": "Throw",
 "position": Vector2( 297, 14 ),
 "type": "animation"
 }, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 140, 69 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 9 ),
+"animation": ExtResource( 8 ),
 "filter": [  ],
 "id": "WinnJump",
 "position": Vector2( 658, 32 ),
 "type": "animation"
 }, {
-"id": "scale 3",
-"position": Vector2( 544, 99 ),
-"scale": 3.0,
-"type": "timescale"
-}, {
 "id": "scale 4",
 "position": Vector2( 328, 129 ),
 "scale": 2.0,
 "type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_hit",
+"mix": false,
+"position": Vector2( 761, 230 ),
+"type": "oneshot"
+}, {
+"id": "scale 2",
+"position": Vector2( 281, 311 ),
+"scale": 3.0,
+"type": "timescale"
+}, {
+"animation": ExtResource( 9 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 5, 195 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -202,20 +203,25 @@ data = {
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
+"autorestart_random_delay": 0.807843,
 "fade_in": 0.0,
 "fade_out": 0.0,
 "filter": [  ],
-"id": "oneshot_hit",
+"id": "oneshot_walk_throw",
 "mix": false,
-"position": Vector2( 761, 230 ),
+"position": Vector2( 389, 230 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 10 ),
+"id": "scale 3",
+"position": Vector2( 544, 99 ),
+"scale": 3.0,
+"type": "timescale"
+}, {
+"blend": 0.0,
 "filter": [  ],
-"id": "anim 2",
-"position": Vector2( 5, 195 ),
-"type": "animation"
+"id": "blend_walk",
+"position": Vector2( 140, 69 ),
+"type": "blend2"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -228,26 +234,11 @@ data = {
 "position": Vector2( 887, 230 ),
 "type": "oneshot"
 }, {
-"id": "scale 2",
-"position": Vector2( 281, 311 ),
-"scale": 3.0,
-"type": "timescale"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.807843,
-"fade_in": 0.0,
-"fade_out": 0.0,
+"animation": ExtResource( 10 ),
 "filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 389, 230 ),
-"type": "oneshot"
-}, {
-"id": "mix 4",
-"mix": 1.0,
-"position": Vector2( 189, 331 ),
-"type": "mix"
+"id": "hit_arm",
+"position": Vector2( 406, 361 ),
+"type": "animation"
 }, {
 "animation": ExtResource( 11 ),
 "filter": [  ],
@@ -255,15 +246,20 @@ data = {
 "position": Vector2( 227, 202 ),
 "type": "animation"
 }, {
-"id": "throw_Idle",
+"id": "mix 4",
 "mix": 1.0,
-"position": Vector2( 430, 42 ),
+"position": Vector2( 189, 331 ),
 "type": "mix"
 }, {
 "id": "scale 5",
 "position": Vector2( 786, 80 ),
 "scale": 1.5,
 "type": "timescale"
+}, {
+"id": "throw_Idle",
+"mix": 1.0,
+"position": Vector2( 430, 42 ),
+"type": "mix"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -276,7 +272,7 @@ data = {
 "position": Vector2( 808, 446 ),
 "type": "oneshot"
 }, {
-"animation": ExtResource( 8 ),
+"animation": ExtResource( 7 ),
 "filter": [  ],
 "id": "anim 3",
 "position": Vector2( 5, 312 ),
@@ -286,6 +282,12 @@ data = {
 "filter": [  ],
 "id": "anim 4",
 "position": Vector2( 5, 419 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 13 ),
+"filter": [  ],
+"id": "new_Hit",
+"position": Vector2( 527, 468 ),
 "type": "animation"
 } ]
 }
@@ -298,17 +300,17 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 6 )
-anims/Idle = ExtResource( 5 )
+anims/Hit = ExtResource( 10 )
+anims/Idle = ExtResource( 6 )
 anims/Idle_throw = ExtResource( 11 )
-anims/Indestructable = ExtResource( 13 )
-anims/New_Hit_Ch2 = ExtResource( 7 )
-anims/Reset = ExtResource( 14 )
-anims/Throw_Ch2 = ExtResource( 8 )
-anims/Walk_Ch2 = ExtResource( 10 )
+anims/Indestructable = ExtResource( 14 )
+anims/New_Hit_Ch2 = ExtResource( 13 )
+anims/Reset = ExtResource( 15 )
+anims/Throw_Ch2 = ExtResource( 7 )
+anims/Walk_Ch2 = ExtResource( 9 )
 anims/Walk_for_throw = ExtResource( 12 )
-anims/WinnJump_Ch2 = ExtResource( 9 )
-anims/indestructalbe = ExtResource( 13 )
+anims/WinnJump_Ch2 = ExtResource( 8 )
+anims/indestructalbe = ExtResource( 14 )
 blend_times = [  ]
 
 [node name="Charakter" type="Node2D" parent="." index="1"]
@@ -326,10 +328,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="Torso" type="Sprite" parent="Charakter" index="1"]
 
 use_parent_material = true
-position = Vector2( -0.850949, 4.19572 )
-rotation = 0.0906574
+position = Vector2( -0.0712751, 0.670375 )
+rotation = 0.00759341
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_bone_": true
@@ -348,9 +350,9 @@ __meta__ = {
 editor/display_folded = true
 use_parent_material = true
 position = Vector2( 17.7513, -41.9383 )
-rotation = 0.437644
+rotation = 0.377845
 z_index = -5
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 offset = Vector2( -17.7513, 41.9383 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -361,9 +363,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 169.429, -4.91098 )
-rotation = 0.243012
+rotation = 0.0203546
 z_index = 1
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 offset = Vector2( -187.18, 46.8493 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -375,9 +377,9 @@ __meta__ = {
 editor/display_folded = true
 use_parent_material = true
 position = Vector2( -114.023, -17.0859 )
-rotation = 0.126794
+rotation = 0.0769905
 z_index = 2
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( 114.023, 17.0859 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -388,9 +390,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -92.8417, 161.357 )
-rotation = -0.0283669
+rotation = -0.002376
 z_index = 1
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 offset = Vector2( 199.156, -105.902 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Visibility", "Z Index" ]
 
@@ -398,9 +400,9 @@ _sections_unfolded = [ "Material", "Offset", "Transform", "Visibility", "Z Index
 
 use_parent_material = true
 position = Vector2( -27.0435, -111.468 )
-rotation = 0.00754158
+rotation = 0.000631679
 z_index = 1
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 offset = Vector2( 27.0435, 111.468 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -411,9 +413,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -104.808, -207.38 )
-rotation = -0.0168674
+rotation = -0.0014128
 z_index = 1
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 offset = Vector2( 131.851, 318.848 )
 _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 __meta__ = {
@@ -425,7 +427,7 @@ __meta__ = {
 use_parent_material = true
 position = Vector2( -304.55, 318.848 )
 z_index = -5
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 
 [node name="Legs" type="Node2D" parent="Charakter/Torso" index="1"]
@@ -441,9 +443,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 24.9636, 233.633 )
-rotation = -0.365828
+rotation = -0.0306415
 z_index = -4
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 offset = Vector2( -24.9636, -233.633 )
 _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 __meta__ = {
@@ -454,9 +456,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 82.0213, 125.083 )
-rotation = 0.365488
+rotation = 0.0306131
 z_index = 1
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 offset = Vector2( -106.985, -358.716 )
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
 __meta__ = {
@@ -467,9 +469,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -57.0587, 270.543 )
-rotation = -0.409262
+rotation = -0.0342796
 z_index = -1
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 offset = Vector2( 57.0587, -270.543 )
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
 __meta__ = {
@@ -480,9 +482,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 43.0608, 145.589 )
-rotation = 0.458526
+rotation = 0.0384058
 z_index = -1
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 offset = Vector2( 13.9972, -416.131 )
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
 __meta__ = {
@@ -511,7 +513,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
 process_material = SubResource( 1 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -540,7 +542,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
 process_material = SubResource( 2 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -548,37 +550,37 @@ _sections_unfolded = [ "Drawing", "Process Material", "Transform", "Visibility" 
 
 [node name="Voice" type="Node2D" parent="." index="2"]
 
-[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 28 )]
+[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Jasmine/RoundWon/round_won_disgrace_final.wav", "res://Player/SFX/Jasmine/RoundWon/Round_won_losing_hobby_final.wav", "res://Player/SFX/Jasmine/RoundWon/Round_won_not_even_sweating_finish.wav", "res://Player/SFX/Jasmine/RoundWon/Round_won_No_Magic_final.wav", "res://Player/SFX/Jasmine/RoundWon/Round_won_teach_you_finish.wav", "res://Player/SFX/Jasmine/RoundWon/Round_won_too_easy_2_finish.wav" ]
 
-[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 28 )]
+[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Jasmine/MatchWon/Game_won_No-challenge_final.wav", "res://Player/SFX/Jasmine/MatchWon/Game_won_no_match_for_me_Final.wav", "res://Player/SFX/Jasmine/MatchWon/Game_won_train_more_2_finish.wav" ]
 
-[node name="Start" parent="Voice" index="2" instance=ExtResource( 28 )]
+[node name="Start" parent="Voice" index="2" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Jasmine/Start/train_more_finish.wav" ]
 
-[node name="Throw" parent="Voice" index="3" instance=ExtResource( 28 )]
+[node name="Throw" parent="Voice" index="3" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Jasmine/Throw/Throw_1.wav", "res://Player/SFX/Jasmine/Throw/Throw_2.wav", "res://Player/SFX/Jasmine/Throw/Throw_3.wav", "res://Player/SFX/Jasmine/Throw/Throw_4.wav", "res://Player/SFX/Jasmine/Throw/Throw_5.wav", "res://Player/SFX/Jasmine/Throw/Throw_6.wav" ]
 
-[node name="Hit" parent="Voice" index="4" instance=ExtResource( 28 )]
+[node name="Hit" parent="Voice" index="4" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Jasmine/Hit/Getting_Hit_1.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_2.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_3.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_4.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_5.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_6.wav", "res://Player/SFX/Jasmine/Hit/Getting_Hit_7.wav" ]
 
-[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 28 )]
+[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 29 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]

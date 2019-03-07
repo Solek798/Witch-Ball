@@ -1,30 +1,31 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Player/Animation/animation.gd" type="Script" id=1]
 [ext_resource path="res://Player/Animation/Scarlet/Icon_Player_Scarlet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Animation/motion_blur.tres" type="Material" id=3]
 [ext_resource path="res://MenuUI/VS/Scarlet.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=5]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=6]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=7]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=8]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=9]
-[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=10]
-[ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=11]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=12]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=13]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_f.png" type="Texture" id=14]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_b.png" type="Texture" id=15]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_l.png" type="Texture" id=16]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_l.png" type="Texture" id=17]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_r.png" type="Texture" id=18]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_rr.png" type="Texture" id=19]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_r.png" type="Texture" id=20]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=21]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=22]
-[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=23]
-[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=24]
-[ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=25]
+[ext_resource path="res://MenuUI/WinScreen/scarlet_win.png" type="Texture" id=5]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle.tres" type="Animation" id=6]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Idle_Throw.tres" type="Animation" id=7]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Throwing.tres" type="Animation" id=8]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Hit.tres" type="Animation" id=9]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Walk_Ch1.tres" type="Animation" id=10]
+[ext_resource path="res://Player/Animation/indestructalbe.tres" type="Animation" id=11]
+[ext_resource path="res://Player/Animation/Scarlet/Resource/Reset_Animation.tres" type="Animation" id=12]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_T.png" type="Texture" id=13]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_H.png" type="Texture" id=14]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_f.png" type="Texture" id=15]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_Ha_b.png" type="Texture" id=16]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_l.png" type="Texture" id=17]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_l.png" type="Texture" id=18]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_r.png" type="Texture" id=19]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_A_d_rr.png" type="Texture" id=20]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_r.png" type="Texture" id=21]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_r.png" type="Texture" id=22]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_l.png" type="Texture" id=23]
+[ext_resource path="res://Player/Animation/Scarlet/Images/Ch1_L_d_l.png" type="Texture" id=24]
+[ext_resource path="res://VFX/Particles/fire.png" type="Texture" id=25]
+[ext_resource path="res://Player/SFX/Sound.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Animation" id=1]
 
@@ -245,6 +246,7 @@ __meta__ = {
 image = ExtResource( 2 )
 motion_blur = ExtResource( 3 )
 versus_template = ExtResource( 4 )
+win_image = ExtResource( 5 )
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="0"]
 
@@ -255,7 +257,7 @@ base_path = NodePath("")
 active = true
 data = {
 "active": true,
-"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "Mix_Trow", "scale 3", 0, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "anim 2", "scale 2", 0, "WinnJump", "scale 4", 0 ],
+"connections": [ "Walk", "scale", 0, "oneshot_WinnJump", "out", 0, "oneshot_walk_throw", "oneshot_hit", 0, "Hit", "oneshot_hit", 1, "oneshot_dodge_down", "oneshot_dodge_up", 0, "anim", "blend_walk", 0, "scale", "blend_walk", 1, "Throw", "Mix_Trow", 0, "Throw bein", "Mix_Trow", 1, "oneshot_idle_throw", "oneshot_walk_throw", 0, "scale 3", "oneshot_walk_throw", 1, "WinnJump", "scale 4", 0, "Mix_Trow", "scale 3", 0, "oneshot_hit", "oneshot_WinnJump", 0, "scale 4", "oneshot_WinnJump", 1, "anim 2", "scale 2", 0, "blend_walk", "oneshot_idle_throw", 0, "scale 2", "oneshot_idle_throw", 1 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
@@ -263,7 +265,7 @@ data = {
 "scale": 3.0,
 "type": "timescale"
 }, {
-"animation": ExtResource( 5 ),
+"animation": ExtResource( 6 ),
 "filter": [  ],
 "id": "anim",
 "position": Vector2( 5, 42 ),
@@ -272,91 +274,6 @@ data = {
 "id": "out",
 "position": Vector2( 1092, 431 ),
 "type": "output"
-}, {
-"animation": ExtResource( 6 ),
-"filter": [  ],
-"id": "Throw",
-"position": Vector2( 417, 214 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 7 ),
-"filter": [  ],
-"id": "Hit",
-"position": Vector2( 749, 222 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "Throw bein",
-"position": Vector2( 416, 329 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_idle_throw",
-"mix": false,
-"position": Vector2( 445, 28 ),
-"type": "oneshot"
-}, {
-"id": "Mix_Trow",
-"mix": 1.0,
-"position": Vector2( 568, 246 ),
-"type": "mix"
-}, {
-"id": "scale 3",
-"position": Vector2( 658, 134 ),
-"scale": 2.0,
-"type": "timescale"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 1.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_walk_throw",
-"mix": false,
-"position": Vector2( 727, 8 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "oneshot_WinnJump",
-"mix": false,
-"position": Vector2( 1032, 5 ),
-"type": "oneshot"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "blend_walk",
-"position": Vector2( 159, 43 ),
-"type": "blend2"
-}, {
-"animation": ExtResource( 9 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 250, 385 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 8 ),
-"filter": [  ],
-"id": "Walk",
-"position": Vector2( 6, 146 ),
-"type": "animation"
-}, {
-"animation": SubResource( 1 ),
-"filter": [  ],
-"id": "WinnJump",
-"position": Vector2( 884, 190 ),
-"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -380,15 +297,94 @@ data = {
 "position": Vector2( 712, 517 ),
 "type": "oneshot"
 }, {
-"id": "scale 2",
-"position": Vector2( 296, 191 ),
-"scale": 2.0,
-"type": "timescale"
+"animation": SubResource( 1 ),
+"filter": [  ],
+"id": "WinnJump",
+"position": Vector2( 884, 190 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 7 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 250, 385 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "blend_walk",
+"position": Vector2( 159, 43 ),
+"type": "blend2"
+}, {
+"id": "Mix_Trow",
+"mix": 1.0,
+"position": Vector2( 568, 246 ),
+"type": "mix"
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 1.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_walk_throw",
+"mix": false,
+"position": Vector2( 727, 8 ),
+"type": "oneshot"
 }, {
 "id": "scale 4",
 "position": Vector2( 929, 119 ),
 "scale": 2.0,
 "type": "timescale"
+}, {
+"animation": ExtResource( 8 ),
+"filter": [  ],
+"id": "Throw",
+"position": Vector2( 417, 214 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 9 ),
+"filter": [  ],
+"id": "Hit",
+"position": Vector2( 749, 222 ),
+"type": "animation"
+}, {
+"id": "scale 3",
+"position": Vector2( 658, 134 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_WinnJump",
+"mix": false,
+"position": Vector2( 1032, 5 ),
+"type": "oneshot"
+}, {
+"id": "scale 2",
+"position": Vector2( 296, 191 ),
+"scale": 2.0,
+"type": "timescale"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "oneshot_idle_throw",
+"mix": false,
+"position": Vector2( 445, 28 ),
+"type": "oneshot"
+}, {
+"animation": ExtResource( 10 ),
+"filter": [  ],
+"id": "Throw bein",
+"position": Vector2( 416, 329 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -400,6 +396,12 @@ data = {
 "mix": false,
 "position": Vector2( 510, 516 ),
 "type": "oneshot"
+}, {
+"animation": ExtResource( 10 ),
+"filter": [  ],
+"id": "Walk",
+"position": Vector2( 6, 146 ),
+"type": "animation"
 } ]
 }
 
@@ -410,13 +412,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Hit = ExtResource( 7 )
-anims/Idle = ExtResource( 5 )
-anims/Idle_Throw = ExtResource( 9 )
-anims/Indestructable = ExtResource( 10 )
-anims/Reset_Animation = ExtResource( 11 )
-anims/Throwing = ExtResource( 6 )
-anims/Walk_Ch1 = ExtResource( 8 )
+anims/Hit = ExtResource( 9 )
+anims/Idle = ExtResource( 6 )
+anims/Idle_Throw = ExtResource( 7 )
+anims/Indestructable = ExtResource( 11 )
+anims/Reset_Animation = ExtResource( 12 )
+anims/Throwing = ExtResource( 8 )
+anims/Walk_Ch1 = ExtResource( 10 )
 anims/WinnJump = SubResource( 1 )
 blend_times = [  ]
 
@@ -433,8 +435,8 @@ __meta__ = {
 [node name="Torso" type="Sprite" parent="Charakter" index="0"]
 
 use_parent_material = true
-position = Vector2( -28.523, 17.2807 )
-texture = ExtResource( 12 )
+position = Vector2( -26.7902, 16.252 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_bone_": true
@@ -452,9 +454,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -38.0608, -114.766 )
-rotation = 0.195373
+rotation = 0.186934
 z_index = 4
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 offset = Vector2( 17.0357, 118.566 )
 _sections_unfolded = [ "Material", "Z Index" ]
 __meta__ = {
@@ -465,9 +467,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -128.539, -238.508 )
-rotation = -0.125994
+rotation = -0.121702
 z_index = 1
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 offset = Vector2( 145.576, 357.073 )
 _sections_unfolded = [ "Material", "Transform" ]
 __meta__ = {
@@ -478,19 +480,19 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 145.136, 356.02 )
-rotation = 4.65661e-010
+rotation = 4.65661e-10
 scale = Vector2( 0.999999, 0.999999 )
 z_index = -5
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 
 [node name="Arm_l" type="Sprite" parent="Charakter/Torso/Head_Arms" index="1"]
 
 use_parent_material = true
 position = Vector2( 21.0251, -52.5668 )
-rotation = 0.411711
+rotation = 0.330175
 z_index = -5
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 offset = Vector2( -23.4915, 54.9353 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -501,8 +503,8 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 160.468, 4.0683 )
-rotation = -0.373196
-texture = ExtResource( 17 )
+rotation = -0.275108
+texture = ExtResource( 18 )
 offset = Vector2( -184.675, 51.2988 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
@@ -513,9 +515,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -121.355, -14.2008 )
-rotation = 0.350382
+rotation = 0.141425
 z_index = 1
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( 115.846, 3.52861 )
 _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 __meta__ = {
@@ -526,10 +528,10 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -51.8834, 93.3846 )
-rotation = -0.501637
+rotation = -0.219045
 scale = Vector2( 0.999999, 0.999999 )
 z_index = 1
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 offset = Vector2( 174.778, -24.6302 )
 _sections_unfolded = [ "Material", "Visibility", "Z Index" ]
 
@@ -546,9 +548,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( -39.0679, 290.996 )
-rotation = -0.255477
+rotation = -0.239956
 z_index = -1
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 offset = Vector2( 39.0679, -290.996 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Visibility" ]
 __meta__ = {
@@ -559,9 +561,9 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 29.5789, 124.968 )
-rotation = 0.257183
+rotation = 0.241559
 z_index = -1
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 offset = Vector2( 9.48901, -415.964 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -572,10 +574,10 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 49.202, 250.398 )
-rotation = -0.216375
+rotation = -0.20323
 scale = Vector2( 1, 1.2 )
 z_index = -2
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 offset = Vector2( -49.202, -208.665 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
 __meta__ = {
@@ -586,10 +588,10 @@ __meta__ = {
 
 use_parent_material = true
 position = Vector2( 63.0907, 79.5739 )
-rotation = 0.131921
+rotation = 0.123906
 scale = Vector2( 1, 0.833333 )
 z_index = -2
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 offset = Vector2( -112.293, -345.887 )
 _sections_unfolded = [ "Material", "Visibility", "Z Index" ]
 __meta__ = {
@@ -618,7 +620,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
 process_material = SubResource( 2 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -645,7 +647,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
 process_material = SubResource( 3 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -659,40 +661,39 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Voice" type="Node2D" parent="." index="2"]
 
-[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 25 )]
+[node name="RoundWon" parent="Voice" index="0" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
 volume_db = 5.0
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Cmon_make_it_bit_harder_for_me_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_It_s_some_kind_of_magic_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_To_easy_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_Wished_someone_would_scream_Fatality_right_now_finish.wav", "res://Player/SFX/Scarlett/RoundWon/If_One_round_won_You_should_see_that_look_on_ya_face_finish.wav" ]
 
-[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 25 )]
+[node name="MatchWon" parent="Voice" index="1" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
-volume_db = -10.0
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/MatchWon/If_Game_won_Better_luck_next_time_finish.wav", "res://Player/SFX/Scarlett/MatchWon/If_Game_won_Cheer_up!_There_can_only be_one_winner_3_finish.wav", "res://Player/SFX/Scarlett/MatchWon/If_Game_won_I_always_loooved_this_game_finish.wav" ]
 
-[node name="Start" parent="Voice" index="2" instance=ExtResource( 25 )]
+[node name="Start" parent="Voice" index="2" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
 volume_db = -10.0
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Start/If_One_round_won_sums_the_starting_music_finish.wav" ]
 
-[node name="Throw" parent="Voice" index="3" instance=ExtResource( 25 )]
+[node name="Throw" parent="Voice" index="3" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_1.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_2.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_3.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_4.wav", "res://Player/SFX/Scarlett/Throw/If_get_hit_ouch_sound_3_5.wav" ]
 
-[node name="Hit" parent="Voice" index="4" instance=ExtResource( 25 )]
+[node name="Hit" parent="Voice" index="4" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]
 files = [ "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_1.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_2.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_1_3.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_1.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_2.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_3.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_4.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_5.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_6.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_7.wav", "res://Player/SFX/Scarlett/Hit/If_get_hit_ouch_sound_2_8.wav" ]
 
-[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 25 )]
+[node name="EnemyHit" parent="Voice" index="5" instance=ExtResource( 26 )]
 
 position = Vector2( 0, -100 )
 _sections_unfolded = [ "Transform" ]

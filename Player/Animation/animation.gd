@@ -3,6 +3,7 @@ extends Sprite
 export(Texture) var image
 export(ShaderMaterial) var motion_blur
 export(PackedScene) var versus_template
+export(Texture) var win_image
 
 
 func _ready():

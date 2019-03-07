@@ -25,9 +25,10 @@ func start_match(identities):
 	var new_match = match_template.instance()
 	new_match.player_identities = identities
 	
-	new_match.connect("match_finished", self, "_on_match_finished")
+	new_match.connect("match_finished", $Menu, "win_screen")
 	new_match.connect("match_instanciated", $Menu, "tutorial")
 	new_match.connect("match_reseted", Transition, "off")
+	new_match.connect("tree_exited", self, "_on_match_tree_exited")
 	$Menu.connect("restart_requested", new_match, "reset")
 	$Menu.connect("stop_requested", new_match, "stop")
 	$Menu.connect("intro_finished", new_match, "start")
@@ -36,9 +37,8 @@ func start_match(identities):
 	$Music.stop()
 	Transition.off()
 
-func _on_match_finished(finished_match):
+func _on_match_tree_exited():
 	Transition.off()
-	finished_match.queue_free()
 	$Music.play()
 	$Menu.menu()
 

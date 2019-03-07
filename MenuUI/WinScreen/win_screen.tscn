@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MenuUI/WinScreen/win_screen.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/Feuerwerk2/Feuer ExplosionNEW.tscn" type="PackedScene" id=2]
@@ -16,12 +16,8 @@
 [ext_resource path="res://MenuUI/PauseScreen/restart_pressed.png" type="Texture" id=14]
 [ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/WinScreen/rematchtext.tscn" type="PackedScene" id=16]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_normal.png" type="Texture" id=17]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_pressed.png" type="Texture" id=18]
-[ext_resource path="res://MenuUI/WinScreen/characterselection_hover.png" type="Texture" id=19]
-[ext_resource path="res://MenuUI/WinScreen/Characterselectiontext.tscn" type="PackedScene" id=20]
 
-[node name="WinScreen" type="Control"]
+[node name="WinScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -51,12 +47,12 @@ scale = Vector2( 0.497648, 0.497648 )
 
 position = Vector2( 963.757, 393.705 )
 
-[node name="Sprite" type="Sprite" parent="." index="3"]
+[node name="Image" type="Sprite" parent="." index="3"]
 
 position = Vector2( 955.554, 282.975 )
 texture = ExtResource( 4 )
 
-[node name="TextureRect" type="TextureRect" parent="." index="4"]
+[node name="Panel" type="TextureRect" parent="." index="4"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -76,34 +72,16 @@ texture = ExtResource( 5 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="font" type="HBoxContainer" parent="TextureRect" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.5
-anchor_top = 0.53
-anchor_right = 0.5
-anchor_bottom = 0.53
-margin_left = -142.5
-margin_top = -105.0
-margin_right = 142.5
-margin_bottom = -47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
-_sections_unfolded = [ "Margin", "Size Flags" ]
-
-[node name="player1" type="Label" parent="TextureRect/font" index="0"]
+[node name="Text" type="Label" parent="Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 157.0
-margin_bottom = 60.0
+margin_left = 82.0
+margin_top = 19.0
+margin_right = 427.0
+margin_bottom = 79.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -111,57 +89,12 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 6 )
-text = "Player1"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="player2" type="Label" parent="TextureRect/font" index="1"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 169.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
-text = "Player2"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="win!" type="Label" parent="TextureRect/font" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 161.0
-margin_right = 285.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
-text = " wins!"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" index="1"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -178,12 +111,13 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_constants/separation = 17
-alignment = 0
+alignment = 1
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="home" parent="TextureRect/HBoxContainer" index="0" instance=ExtResource( 7 )]
+[node name="home" parent="Panel/HBoxContainer" index="0" instance=ExtResource( 7 )]
 
-margin_right = 74.0
+margin_left = 45.0
+margin_right = 119.0
 margin_bottom = 77.0
 focus_neighbour_left = NodePath("../characterselection")
 focus_neighbour_right = NodePath("../rematch")
@@ -194,10 +128,10 @@ _sections_unfolded = [ "Focus", "Textures" ]
 particle_template = ExtResource( 11 )
 text_template = ExtResource( 12 )
 
-[node name="rematch" parent="TextureRect/HBoxContainer" index="1" instance=ExtResource( 7 )]
+[node name="rematch" parent="Panel/HBoxContainer" index="1" instance=ExtResource( 7 )]
 
-margin_left = 91.0
-margin_right = 165.0
+margin_left = 136.0
+margin_right = 210.0
 margin_bottom = 77.0
 focus_neighbour_left = NodePath("../home")
 focus_neighbour_right = NodePath("../characterselection")
@@ -208,18 +142,8 @@ _sections_unfolded = [ "Focus", "Textures" ]
 particle_template = ExtResource( 11 )
 text_template = ExtResource( 16 )
 
-[node name="characterselection" parent="TextureRect/HBoxContainer" index="2" instance=ExtResource( 7 )]
+[connection signal="pressed" from="Panel/HBoxContainer/home" to="." method="_on_home_pressed"]
 
-margin_left = 182.0
-margin_right = 256.0
-margin_bottom = 77.0
-focus_neighbour_left = NodePath("../rematch")
-focus_neighbour_right = NodePath("../home")
-texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 18 )
-texture_hover = ExtResource( 19 )
-_sections_unfolded = [ "Focus", "Textures" ]
-particle_template = ExtResource( 11 )
-text_template = ExtResource( 20 )
+[connection signal="pressed" from="Panel/HBoxContainer/rematch" to="." method="_on_rematch_pressed"]
 
 

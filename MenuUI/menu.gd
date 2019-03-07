@@ -4,6 +4,7 @@ export(PackedScene) var main_scene_template
 export(PackedScene) var pause_scene_template
 export(PackedScene) var tutorial_template
 export(PackedScene) var versus_template
+export(PackedScene) var win_screen_template
 
 signal intro_finished
 signal restart_requested
@@ -113,6 +114,13 @@ func versus(identities):
 	yield(versus, "tree_exited")
 	
 	get_parent().start_match(identities)
+
+func win_screen(finished_match):
+	open()
+	set_blur(2.5, 0.25)
+	var win_screen = win_screen_template.instance()
+	win_screen.finished_match = finished_match
+	add_child(win_screen)
 
 func manage_input():
 	var event
