@@ -89,12 +89,21 @@ stone_effect_template = ExtResource( 3 )
 needle_effect_template = ExtResource( 4 )
 eye_effect_template = ExtResource( 5 )
 butterfly_effect_template = ExtResource( 6 )
+min_effect_time = 6
+max_effect_time = 10
 
 [node name="Background" parent="." index="0"]
 
 visible = false
 z_index = -21
 texture = ExtResource( 7 )
+
+[node name="RandomEffect" type="Timer" parent="Timer" index="2"]
+
+process_mode = 1
+wait_time = 6.0
+one_shot = true
+autostart = true
 
 [node name="Stones" type="Area2D" parent="." index="4"]
 
@@ -318,6 +327,7 @@ position = Vector2( 1469.8, 129.108 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
 
+editor/display_folded = true
 root_node = NodePath("..")
 autoplay = "LightAnimationGrasArea"
 playback_process_mode = 1
@@ -383,6 +393,8 @@ shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range", "Transform" ]
 
 [node name="GrassArenaAnimation" parent="." index="10" instance=ExtResource( 10 )]
+
+[connection signal="timeout" from="Timer/RandomEffect" to="." method="_on_RandomEffect_timeout"]
 
 [connection signal="body_entered" from="Stones" to="." method="_on_Stones_body_entered"]
 

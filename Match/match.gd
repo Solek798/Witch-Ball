@@ -26,6 +26,7 @@ func _ready():
 	emit_signal("match_instanciated")
 
 func initialize():
+	print("In match: ", arena_template)
 	arena = arena_template.instance()
 	gui = gui_template.instance()
 	backstage = backstage_template.instance()

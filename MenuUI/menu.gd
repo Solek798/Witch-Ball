@@ -94,12 +94,13 @@ func pause():
 func tutorial():
 	if ProjectSettings.get_setting("Witch-Ball/Tutorial"):
 		set_blur(2.5, 0.25)
-		$Background.visible = false
 		var tutorial = tutorial_template.instance()
 		add_child(tutorial)
-		
+		$Background.visible = false
 		yield(tutorial, "tree_exited")
-		emit_signal("intro_finished")
+	
+	$Background.visible = false
+	emit_signal("intro_finished")
 	close()
 
 func versus(identities):

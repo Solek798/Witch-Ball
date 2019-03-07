@@ -5,27 +5,29 @@
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "extends Sprite
+script/source = "extends Node2D
 
 
 func start():
-	$Animation.play(\"Butterfly\")
-	print(\"Start Butterfly\")
+	$Texture/Animation.play(\"Butterfly\")
 
 func _on_Animation_animation_finished(anim_name):
 	self.queue_free()
 "
 
-[node name="ButterflyEffect" type="Sprite" index="0"]
+[node name="ButterflyEffect" type="Node2D"]
 
-position = Vector2( -233.771, -145.38 )
-rotation = -0.521709
-scale = Vector2( 5.61534e-007, 0.470875 )
-texture = ExtResource( 1 )
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Animation" type="AnimationPlayer" parent="." index="0"]
+[node name="Texture" type="Sprite" parent="." index="0"]
+
+rotation = -0.521709
+scale = Vector2( 5.61534e-07, 0.470875 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Animation" type="AnimationPlayer" parent="Texture" index="0"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -35,6 +37,6 @@ playback_speed = 1.0
 anims/Butterfly = ExtResource( 2 )
 blend_times = [  ]
 
-[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
+[connection signal="animation_finished" from="Texture/Animation" to="." method="_on_Animation_animation_finished"]
 
 

@@ -14,17 +14,17 @@
 [ext_resource path="res://MenuUI/Options/checked.png" type="Texture" id=12]
 [ext_resource path="res://MenuUI/Options/CheckBoxHover.gd" type="Script" id=13]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect_ChacherBox.tscn" type="PackedScene" id=14]
-[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=15]
-[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=16]
-[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=17]
-[ext_resource path="res://MenuUI/magic_button.gd" type="Script" id=18]
-[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=19]
-[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=20]
-[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=21]
-[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=22]
-[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=23]
-[ext_resource path="res://MenuUI/WinScreen/returntext.tscn" type="PackedScene" id=24]
-[ext_resource path="res://MenuUI/Tutorial/AnimationToutorial/AnimirtesTutorial.gd" type="Script" id=25]
+[ext_resource path="res://MenuUI/magic_button.gd" type="Script" id=15]
+[ext_resource path="res://MenuUI/magic_button.tscn" type="PackedScene" id=16]
+[ext_resource path="res://MenuUI/Options/cancel.png" type="Texture" id=17]
+[ext_resource path="res://MenuUI/Options/cancel_pressed.png" type="Texture" id=18]
+[ext_resource path="res://MenuUI/Options/cancel_hover.png" type="Texture" id=19]
+[ext_resource path="res://MenuUI/UI Particel/hover_effect_smal.tscn" type="PackedScene" id=20]
+[ext_resource path="res://MenuUI/WinScreen/returntext.tscn" type="PackedScene" id=21]
+[ext_resource path="res://MenuUI/Tutorial/AnimationToutorial/AnimirtesTutorial.gd" type="Script" id=22]
+[ext_resource path="res://MenuUI/Main/button.png" type="Texture" id=23]
+[ext_resource path="res://MenuUI/Main/button_pressed.png" type="Texture" id=24]
+[ext_resource path="res://MenuUI/Main/button_hover.png" type="Texture" id=25]
 [ext_resource path="res://MenuUI/UI Particel/hover_effect.tscn" type="PackedScene" id=26]
 [ext_resource path="res://dynamic_risque.tres" type="DynamicFont" id=27]
 [ext_resource path="res://MenuUI/Tutorial/AnimationToutorial/Animationen/AimPosition.tres" type="Animation" id=28]
@@ -157,15 +157,14 @@ blend_times = [  ]
 
 [node name="Panel" type="TextureRect" parent="." index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 710.0
-margin_top = 222.0
+margin_top = 221.0
 margin_right = 1210.0
-margin_bottom = 858.0
+margin_bottom = 857.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -178,7 +177,6 @@ _sections_unfolded = [ "Margin", "Visibility" ]
 
 [node name="Conent" type="VBoxContainer" parent="Panel" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -547,10 +545,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Textures" ]
 next_scene = null
 particle_template = null
@@ -601,7 +596,7 @@ custom_constants/separation = 5
 alignment = 0
 _sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
 
-[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 19 )]
+[node name="Menu" parent="Panel/Conent/Buttons" index="0" instance=ExtResource( 16 )]
 
 margin_right = 74.0
 margin_bottom = 71.0
@@ -609,21 +604,24 @@ focus_neighbour_top = NodePath("../../Options/VB1/HB2/Tutorial")
 focus_neighbour_bottom = NodePath("../../Options/VB1/Music")
 size_flags_horizontal = 5
 size_flags_vertical = 4
-texture_normal = ExtResource( 20 )
-texture_pressed = ExtResource( 21 )
-texture_hover = ExtResource( 22 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 19 )
 _sections_unfolded = [ "Focus", "Margin", "Size Flags", "Textures" ]
-particle_template = ExtResource( 23 )
-text_template = ExtResource( 24 )
+particle_template = ExtResource( 20 )
+text_template = ExtResource( 21 )
 
 [node name="AnimirtesTutorial" type="Container" parent="." index="2"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = -1.0
 margin_right = 1920.0
-margin_bottom = 1080.0
+margin_bottom = 1079.0
 rect_min_size = Vector2( 1920, 1080 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -631,7 +629,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 25 )
+script = ExtResource( 22 )
 _sections_unfolded = [ "Rect" ]
 path_to_own_template = null
 
@@ -695,10 +693,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -754,10 +752,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -813,10 +811,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -872,10 +870,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -931,10 +929,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus", "Textures" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -990,10 +988,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Focus" ]
 next_scene = null
 particle_template = ExtResource( 26 )
@@ -1077,7 +1075,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Pfeil" type="Sprite" parent="AnimirtesTutorial/Controler/Pfeil1" index="0"]
 
 position = Vector2( 103.674, 0 )
-rotation = -7.89492e-015
+rotation = -7.89492e-15
 texture = ExtResource( 38 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1092,7 +1090,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Pfeil" type="Sprite" parent="AnimirtesTutorial/Controler/Pfeil2" index="0"]
 
 position = Vector2( 103.674, 0 )
-rotation = -7.89492e-015
+rotation = -7.89492e-15
 texture = ExtResource( 38 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1309,7 +1307,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Pfeil" type="Sprite" parent="AnimirtesTutorial/Character/Aim" index="0"]
 
 position = Vector2( 343.804, 0 )
-rotation = -7.89492e-015
+rotation = -7.89492e-15
 texture = ExtResource( 38 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1369,9 +1367,9 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="pressed" from="Panel/Conent/Buttons/Menu" to="." method="_on_Menu_pressed"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial" method="_on_Walk_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial" method="_on_Walk_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_exited"]
 
@@ -1381,27 +1379,27 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial" method="_on_Aim_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial" method="_on_Aim_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial" method="_on_ThrowSpezial_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial" method="_on_ThrowSpezial_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial" method="_on_Doge_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial" method="_on_Doge_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial" method="_on_Tutorial_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial" method="_on_Tutorial_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_exited"]
 

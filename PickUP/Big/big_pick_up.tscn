@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 radius = 96.7643
 
-[node name="BigPickUp" index="0" instance=ExtResource( 1 )]
+[node name="BigPickUp" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
