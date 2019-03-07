@@ -29,10 +29,10 @@ func _ready():
 	$Content/Characters/Lilith/PanelAnimations/Selections.texture = blue
 	$Content/Characters/Penny/PanelAnimations/Selections.texture = blue
 	
-	#$Content/Characters/Scarlett/Sound.play_defined_order(true)
-	#$Content/Characters/Jasmine/Sound.play_defined_order(true)
-	#$Content/Characters/Lilith/Sound.play_defined_order(true)
-	#$Content/Characters/Penny/Sound.play_defined_order(true)
+	$Content/Characters/Scarlett/Sound.play_defined_order(true)
+	$Content/Characters/Jasmine/Sound.play_defined_order(true)
+	$Content/Characters/Lilith/Sound.play_defined_order(true)
+	$Content/Characters/Penny/Sound.play_defined_order(true)
 
 func switch_player():
 	$Content/Characters/Scarlett/PanelAnimations/Selections.texture = red

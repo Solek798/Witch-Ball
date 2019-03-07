@@ -2,6 +2,8 @@ extends AudioStreamPlayer2D
 
 export(Array, String, FILE, "*.wav") var files
 
+onready var new_order = []
+
 
 func play_random():
 	if files != null: 
@@ -10,11 +12,18 @@ func play_random():
 
 func play_defined_order(define_order = false):
 	if define_order:
-		files.sort_custom(self, "sort_random")
+		if bool(round(randf())):
+			new_order = [files.front(), files.back()]
+		else:
+			new_order = [files.back(), files.front()]
+		
 		return
 	
-	self.stream = load(files[files.find(self.stream) + 1])
+	if self.stream == null:
+		self.stream = load(new_order[0])
+	else:
+		self.stream = load(new_order[1])
 	self.play()
 
 func sort_random(a, b):
-	return round(randf())
+	return bool()
