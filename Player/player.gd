@@ -84,7 +84,8 @@ func _physics_process(delta):
 	
 	# calculates the rotation in this frame and rotates the aim pointer
 	var direction = identity.controll.get_aim()
-	#direction *= identity.side
+	if direction.x != 0.0:
+		direction *= identity.side
 	current_aim = atan2(direction.y, direction.x)
 	$Aim.rotation = current_aim
 
@@ -220,12 +221,6 @@ func _on_IndestructableTimer_timeout():
 
 func FillManaAnimation():
 	$AnimationPlayer.play("FillMana")
-	
-#func EmptyManaAnimationPlay():
-	#$AnimationPlayer.play("EmptyMana")
-	
-#func EmptyManaAnimationStop():
-	#$AnimationPlayer.stop("EmptyMana")
 
 func _on_Dodge_timeout():
 	identity.controll.active = true

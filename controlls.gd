@@ -101,15 +101,12 @@ func get_aim():
 	
 	if mode == CONTROLLER:
 		aim = get_controller_input(RIGHT)
-		# TEMP
-		if device == 1:
-			print("Device")
-			aim.x *= -1
 	else:
 		if Input.is_action_pressed(keys[Action.AIM_UP]):
 			aim.y -= DEGREE_IN_RADIANT
 		if Input.is_action_pressed(keys[Action.AIM_DOWN]):
 			aim.y += DEGREE_IN_RADIANT
+		#print(aim)
 	
 	return aim
 
