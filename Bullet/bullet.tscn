@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bullet/bullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullet/explosion.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=3]
-[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=4]
-[ext_resource path="res://Player/shadow.png" type="Texture" id=5]
+[ext_resource path="res://Bullet/SFX_Ball_Hits_Stone.wav" type="AudioStream" id=3]
+[ext_resource path="res://Bullet/SFX_Ball_Hits_Tree.wav" type="AudioStream" id=4]
+[ext_resource path="res://Bullet/SFX_Player_Hit.wav" type="AudioStream" id=5]
+[ext_resource path="res://Bullet/shot.wav" type="AudioStream" id=6]
+[ext_resource path="res://Bullet/collide.wav" type="AudioStream" id=7]
+[ext_resource path="res://Player/shadow.png" type="Texture" id=8]
 
-[node name="Bullet" type="RigidBody2D" index="0" groups=[
+[node name="Bullet" type="RigidBody2D" groups=[
 "Bullet",
 ]]
 
@@ -34,6 +37,9 @@ __meta__ = {
 "_edit_vertical_guides_": [ -983.436 ]
 }
 explosion_template = ExtResource( 2 )
+sfx_stone = ExtResource( 3 )
+sfx_tree = ExtResource( 4 )
+sfx_player = ExtResource( 5 )
 speed = 1250
 damage = 1
 
@@ -45,7 +51,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Shot" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 6 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
@@ -56,7 +62,7 @@ area_mask = 1
 
 [node name="Collide" type="AudioStreamPlayer2D" parent="." index="3"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 7 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -69,6 +75,6 @@ area_mask = 1
 
 position = Vector2( 0.0311298, 57.6711 )
 scale = Vector2( 0.124522, 0.105481 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 
 

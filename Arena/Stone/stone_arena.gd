@@ -21,6 +21,7 @@ func _on_Stones_body_entered(body):
 		anim.global_position = body.global_position
 		anim.emitting = true
 		add_child(anim)
+		body.get_node("Collide").stream = body.sfx_stone
 		body.destroy()
 
 func _on_Needles_body_entered(body):
@@ -28,6 +29,13 @@ func _on_Needles_body_entered(body):
 		var anim = needle_effect_template.instance()
 		anim.global_position = body.global_position
 		anim.emitting = true
+		
+		var sound = AudioStreamPlayer2D.new()
+		sound.global_position = body.global_position
+		add_child(sound)
+		sound.stream = body.sfx_tree
+		sound.play()
+		
 		add_child(anim)
 
 func _on_RandomEffect_timeout():
