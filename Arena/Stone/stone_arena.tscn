@@ -8,7 +8,7 @@
 [ext_resource path="res://Arena/Animation/butterfly_effect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Arena/Stone/stone_recent.jpg" type="Texture" id=7]
 [ext_resource path="res://Bullet/Effekte_Mohammad_Update/River/River.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Arena/licht4.png" type="Texture" id=9]
+[ext_resource path="res://Arena/licht2.png" type="Texture" id=9]
 [ext_resource path="res://Arena/ArenaAnimationStone/Scene/StoneArenaAnimation.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -303,7 +303,6 @@ position = Vector2( 1469.8, 129.108 )
 
 [node name="Light2D" type="Light2D" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 492.367, 188.676 )
 scale = Vector2( 1.5, 1.5 )
 enabled = true
@@ -341,7 +340,6 @@ blend_times = [  ]
 
 [node name="StoneArenaAnimation" parent="." index="11" instance=ExtResource( 10 )]
 
-scale = Vector2( 1, 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="timeout" from="Timer/RandomEffect" to="." method="_on_RandomEffect_timeout"]
