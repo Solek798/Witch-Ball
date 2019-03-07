@@ -16,10 +16,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6, 0.7, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.99, 0.99 ), Vector2( 1, 1 ), Vector2( 0.99, 0.99 ), Vector2( 1, 1 ), Vector2( 0.99, 0.99 ), Vector2( 1, 1 ), Vector2( 0.99, 0.99 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.99, 0.99 ), Vector2( 1, 1 ), Vector2( 0.99, 0.99 ), Vector2( 1, 1 ), Vector2( 0.99, 0.99 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:self_modulate")
@@ -34,7 +34,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0.0497255 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="BeginScene" type="Control" index="0"]
+[node name="BeginScene" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

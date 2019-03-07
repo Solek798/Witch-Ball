@@ -618,7 +618,6 @@ text_template = ExtResource( 24 )
 
 [node name="AnimirtesTutorial" type="Container" parent="." index="2"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -642,9 +641,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 30.0
-margin_top = 30.0
-margin_bottom = 1050.0
+margin_right = 200.0
+margin_bottom = 447.0
+rect_min_size = Vector2( 1920, 1080 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -660,9 +659,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 286.0
-margin_right = 200.0
-margin_bottom = 733.0
+margin_left = 860.0
+margin_top = 316.0
+margin_right = 1060.0
+margin_bottom = 763.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -673,73 +673,15 @@ custom_constants/separation = -3
 alignment = 1
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 
-[node name="Options" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 200.0
-margin_bottom = 77.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_neighbour_top = NodePath("../Doge")
-focus_neighbour_bottom = NodePath("../Walk")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-script = ExtResource( 18 )
-_sections_unfolded = [ "Focus" ]
-next_scene = null
-particle_template = ExtResource( 26 )
-text_template = null
-Amimation_Character_Selection_template = null
-
-[node name="Label" type="Label" parent="AnimirtesTutorial/Tutorial/Buttons/Options" index="0"]
-
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -55.0
-margin_top = -12.5
-margin_right = 53.0
-margin_bottom = 14.5
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 27 )
-custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
-text = "BACk"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
-
-[node name="Walk" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="1"]
+[node name="Walk" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 74.0
 margin_right = 200.0
-margin_bottom = 151.0
+margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../Options")
@@ -789,16 +731,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
-[node name="Throw" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="2"]
+[node name="Throw" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 148.0
+margin_top = 74.0
 margin_right = 200.0
-margin_bottom = 225.0
+margin_bottom = 151.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../Walk")
@@ -848,16 +790,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
-[node name="Aim" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="3"]
+[node name="Aim" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 222.0
+margin_top = 148.0
 margin_right = 200.0
-margin_bottom = 299.0
+margin_bottom = 225.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../Throw")
@@ -907,16 +849,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
-[node name="ThrowSpezial" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="4"]
+[node name="ThrowSpezial" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="3"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 296.0
+margin_top = 222.0
 margin_right = 200.0
-margin_bottom = 373.0
+margin_bottom = 299.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../Aim")
@@ -966,16 +908,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
-[node name="Doge" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="5"]
+[node name="Doge" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="4"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 370.0
+margin_top = 296.0
 margin_right = 200.0
-margin_bottom = 447.0
+margin_bottom = 373.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../ThrowSpezial")
@@ -1025,6 +967,65 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
+[node name="Options" type="TextureButton" parent="AnimirtesTutorial/Tutorial/Buttons" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 370.0
+margin_right = 200.0
+margin_bottom = 447.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../Doge")
+focus_neighbour_bottom = NodePath("../Walk")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+script = ExtResource( 18 )
+_sections_unfolded = [ "Focus" ]
+next_scene = null
+particle_template = ExtResource( 26 )
+text_template = null
+Amimation_Character_Selection_template = null
+
+[node name="Label" type="Label" parent="AnimirtesTutorial/Tutorial/Buttons/Options" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -55.0
+margin_top = -12.5
+margin_right = 53.0
+margin_bottom = 14.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 27 )
+custom_colors/font_color = Color( 0.0980392, 0.298039, 0.345098, 1 )
+text = "BACk"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
+
 [node name="AnimatonPlayer" type="Node2D" parent="AnimirtesTutorial" index="1"]
 
 position = Vector2( 1359.89, 363.285 )
@@ -1059,6 +1060,7 @@ blend_times = [  ]
 
 [node name="Controler" type="Sprite" parent="AnimirtesTutorial" index="2"]
 
+editor/display_folded = true
 position = Vector2( 524.386, 510.754 )
 scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 37 )
@@ -1068,7 +1070,7 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( -234.081, 17.0564 )
-rotation = 1.5708
+rotation = 3.14159
 z_index = 6
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1096,8 +1098,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="WalkCurser" type="Sprite" parent="AnimirtesTutorial/Controler" index="2"]
 
-visible = false
 position = Vector2( -234.081, 17.0563 )
+rotation = 1.5708
 texture = ExtResource( 39 )
 offset = Vector2( 5.41585, 12.2043 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -1111,12 +1113,14 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="AimCurser" type="Sprite" parent="AnimirtesTutorial/Controler" index="4"]
 
+visible = false
 position = Vector2( 115.277, 142.895 )
 texture = ExtResource( 41 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="DogeButton" type="Sprite" parent="AnimirtesTutorial/Controler" index="5"]
 
+visible = false
 position = Vector2( -254.831, -195.77 )
 texture = ExtResource( 42 )
 _sections_unfolded = [ "Visibility" ]
@@ -1124,6 +1128,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="SprtialButton" type="Sprite" parent="AnimirtesTutorial/Controler" index="6"]
 
 visible = false
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 205.769, -137.548 )
 texture = ExtResource( 43 )
 _sections_unfolded = [ "Visibility" ]
@@ -1295,6 +1300,7 @@ __meta__ = {
 
 [node name="Aim" type="Node2D" parent="AnimirtesTutorial/Character" index="1"]
 
+visible = false
 rotation = 1.5708
 scale = Vector2( 0.45, 0.45 )
 z_index = 6
@@ -1310,14 +1316,15 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Bullet" type="Node2D" parent="AnimirtesTutorial" index="4"]
 
 editor/display_folded = true
+visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1030.37, 451.285 )
+position = Vector2( 1373.48, 386.148 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="AnimirtesTutorial/Bullet" index="0"]
 
-position = Vector2( 170.69, 0 )
-scale = Vector2( 0.0859672, 0.0859672 )
+position = Vector2( -266.707, 0 )
+scale = Vector2( 0.0613798, 0.0613798 )
 texture = ExtResource( 56 )
 _sections_unfolded = [ "Transform" ]
 
@@ -1356,48 +1363,48 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="mouse_entered" from="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" to="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" method="_on_MagicButton_mouse_entered"]
 
-[connection signal="pressed" from="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" to="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" method="_on_MagicButton_pressed"]
-
 [connection signal="pressed" from="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" to="." method="_on_Animirtes_Tutorial_pressed"]
+
+[connection signal="pressed" from="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" to="Panel/Conent/Options/VB1/HB2/Animirtes Tutorial" method="_on_MagicButton_pressed"]
 
 [connection signal="pressed" from="Panel/Conent/Buttons/Menu" to="." method="_on_Menu_pressed"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_entered"]
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial" method="_on_Walk_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_exited"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial" method="_on_Throw_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_exited"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial" method="_on_Aim_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_exited"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial" method="_on_ThrowSpezial_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_exited"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial" method="_on_Doge_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_entered"]
+
+[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_exited"]
 
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial" method="_on_Tutorial_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_exited"]
 
 [connection signal="pressed" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="." method="_on_Options_pressed"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_entered"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial" method="_on_Walk_focus_entered"]
-
-[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_exited"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_entered"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial" method="_on_Throw_focus_entered"]
-
-[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_exited"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_entered"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial" method="_on_Aim_focus_entered"]
-
-[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_exited"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_entered"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial" method="_on_ThrowSpezial_focus_entered"]
-
-[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_exited"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_entered"]
-
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial" method="_on_Doge_focus_entered"]
-
-[connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_exited"]
 
 
