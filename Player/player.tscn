@@ -124,7 +124,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Special" type="Node2D" parent="Aim" index="1"]
 
-editor/display_folded = true
 position = Vector2( 248.266, 1.43688 )
 scale = Vector2( 1.33333, 1.33333 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]

@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(PackedScene) var bullet_template
 export(PackedScene) var bullet_fast_template
 export(PackedScene) var bullet_big_template
-export(int) var movement_speed 
+export(int) var movement_speed
 export(float) var aim_speed
 export(float) var chance_to_say_something_stupid = 0.25
 export(int) var max_health
@@ -169,6 +169,8 @@ func reset():
 	identity.controll.active = true
 	is_dead = false
 	VoiceChannel.blocked = false
+	self.fast_shot = false
+	self.big_shot = false
 	emit_signal("player_reseted", self)
 
 func increase_mana(ammount):
@@ -194,7 +196,7 @@ func _on_enemy_hit():
 	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
 		body.play_voice(VoiceChannel.ENEMY_HIT)
 
-func _on_round_finished():
+func _on_round_started():
 	reset()
 
 func _on_ManaTimer_timeout():

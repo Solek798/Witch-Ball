@@ -79,12 +79,14 @@ func _on_bullet_destroyed(sound_effect, vfx_effect):
 	add_child(sound_effect)
 	add_child(vfx_effect)
 
+func _on_round_started():
+	$Timer/PickUpSpawner.stop()
+
 func _on_round_finished():
 	for child in get_children():
 		if child.is_in_group("Bullet") or child.is_in_group("PickUp"):
 			child.queue_free()
 	
-	$Timer/PickUpSpawner.stop()
 	min_time = min_spawn_time
 	max_time = max_spawn_time
 	set_spawn_time()

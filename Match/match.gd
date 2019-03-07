@@ -42,6 +42,7 @@ func initialize():
 	self.connect("match_started", arena, "_on_match_started")
 	backstage.connect("player_won_round", gui, "_on_player_won_round")
 	backstage.connect("round_finished", arena, "_on_round_finished")
+	backstage.connect("round_started", arena, "_on_round_started")
 	gui.connect("player_won_match", self, "_on_player_won_match")
 
 func start():
@@ -78,7 +79,7 @@ func create_player(identity):
 	player.connect("player_reseted", gui, "_on_player_reseted")
 	player.connect("player_reseted", arena, "_on_player_reseted")
 	player.connect("player_reseted", backstage, "_on_player_reseted")
-	backstage.connect("round_finished", player, "_on_round_finished")
+	backstage.connect("round_started", player, "_on_round_started")
 	backstage.connect("player_won_round", player, "_on_player_won_round" )
 	gui.connect("player_won_match", player, "_on_player_won_match")
 	

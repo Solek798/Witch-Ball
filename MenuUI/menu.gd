@@ -15,7 +15,11 @@ var current_controll
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel") and not self.visible:
+	if Input.is_action_just_pressed("player1_menu_pause") and not self.visible:
+		switch_controlls(0)
+		pause()
+	if Input.is_action_just_pressed("player2_menu_pause") and not self.visible:
+		switch_controlls(1)
 		pause()
 	
 	if manage_input:
@@ -79,7 +83,7 @@ func menu():
 	$Background.visible = true
 	open()
 	add_child(main_scene_template.instance())
-	get_parent()
+	switch_controlls(0)
 
 func pause():
 	open()
