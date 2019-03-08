@@ -97,6 +97,7 @@ win_screen_template = ExtResource( 10 )
 
 [node name="Background" type="Sprite" parent="Menu" index="0"]
 
+editor/display_folded = true
 position = Vector2( 911.588, 539.699 )
 scale = Vector2( 1.05522, 1.05522 )
 z_index = -1

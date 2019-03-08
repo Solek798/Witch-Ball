@@ -17,7 +17,7 @@
 [ext_resource path="res://MenuUI/PauseScreen/restart_hover.png" type="Texture" id=15]
 [ext_resource path="res://MenuUI/WinScreen/rematchtext.tscn" type="PackedScene" id=16]
 
-[node name="WinScreen" type="Control" index="0"]
+[node name="WinScreen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

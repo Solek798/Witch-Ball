@@ -201,6 +201,9 @@ func _on_round_started():
 	reset()
 
 func _on_round_finished():
+	current_movement = Vector2(0, 0)
+	body.stop_walk()
+	$Smoke.emitting = false
 	identity.controll.active = false
 
 func _on_ManaTimer_timeout():

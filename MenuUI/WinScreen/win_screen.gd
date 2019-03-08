@@ -19,9 +19,6 @@ func _on_home_pressed():
 	Transition.on()
 	yield(Transition, "done_on")
 	
-	if get_parent().has_method("menu"):
-		get_parent().menu()
-	
 	finished_match.queue_free()
 	self.queue_free()
 

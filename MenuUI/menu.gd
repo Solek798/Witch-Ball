@@ -58,6 +58,7 @@ func switch_controlls(id):
 		return null
 
 func switch_scene(next_scene_template, return_scene):
+	print(next_scene_template, ", ", return_scene)
 	if not next_scene_template:
 		return
 	var new_scene = next_scene_template.instance()
