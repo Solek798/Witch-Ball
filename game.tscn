@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1014.59, 539.699 ), Vector2( 911.588, 539.699 ), Vector2( 1014.59, 539.699 ) ]
 }
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
