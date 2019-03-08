@@ -1,10 +1,5 @@
 extends Control
 
-export(Dictionary) var sets = {4: 5}
-export(PackedScene) var test
-# Idee 
-#bsp.: Wenn SPlayer 1 Scarlett Spiel dann wird unter ../player/P1 ein  child (var Scarlett)erzeugt
-
 
 func _ready():
 	$Animation.play("VS_Ani")

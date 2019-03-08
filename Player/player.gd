@@ -38,6 +38,7 @@ func _ready():
 	
 	body = identity.selection.instance()
 	add_child(body)
+	
 	$Mana.max_value = max_mana
 	$Mana.value = start_mana
 	next_bullet = bullet_template
@@ -45,15 +46,11 @@ func _ready():
 func _input(event):
 	if not identity.controll.active:
 		return
-	# TEMP!
-	# Cheat-shortcuts are going to be removed in final Version
-	if Input.is_action_just_pressed("cheat_fast_bullet"):
-		self.fast_shot = true
-	if Input.is_action_just_pressed("cheat_big_bullet"):
-		self.big_shot = true
 	
+	# update movement
 	current_movement = identity.controll.get_movement() * movement_speed
 	
+	# update motion
 	if current_movement:
 		body.play_walk()
 		$Smoke.emitting = true
@@ -74,7 +71,7 @@ func _input(event):
 			throw(current_movement)
 
 func _physics_process(delta):
-	
+	# updates modifiers
 	for mod in $Modifiers.get_children():
 		if mod.has_method("get_strength"):
 			$Modifiers.movement = imp * mod.get_strength()
@@ -97,17 +94,14 @@ func throw(movement):
 			identity.controll.vibrate(0.7, 0.2, 0.3)
 		return
 	
-	# calculates throm impuls
-	var player_position = self.global_position
-	var throw_point_position = body.get_throw_point()
-	
-	
 	# instanciates and sets a new bullet to thropoint position
+	var throw_point_position = body.get_throw_point()
 	var bullet = next_bullet.instance()
 	bullet.position = throw_point_position
 	bullet.own_player = self
 	var impulse
 	
+	# calculates throw impuls
 	impulse = Vector2(1, 0).rotated($Aim.rotation) * identity.side * bullet.speed
 	
 	# throw the bullet
@@ -137,10 +131,12 @@ func dodge():
 		identity.controll.active = false
 		$Timer/Dodge.start()
 		
+		# calculate dodge direction and speed
 		var dodge_vector = Vector2(1, 0) * dodge_distance
 		dodge_vector = dodge_vector.rotated(atan2(current_movement.y, current_movement.x))
 		current_movement = dodge_vector / $Timer/Dodge.wait_time
 		
+		# set blur and play sound
 		body.set_motion_blur(true, current_movement * get_process_delta_time())
 		$Dodge.play()
 
@@ -149,14 +145,18 @@ func take_damage(ammount):
 		return
 	
 	body.play_hit()
+	# play sound
 	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
 		body.play_voice(VoiceChannel.HIT)
+	# make player indestructable
 	$Timer/Indestructable.start()
+	
 	health -= ammount
 	identity.controll.vibrate(0.6, 0.6, 0.2)
 	emit_signal("player_damaged", self, ammount)
 	
 	if health <= 0:
+		# player is dead
 		identity.controll.active = false
 		is_dead = true
 		emit_signal("player_died", self)
@@ -193,6 +193,7 @@ func set_fast_shot(new_value):
 	$Aim/Special/Fast.visible = new_value
 
 func _on_enemy_hit():
+	# play sound
 	if randf() < chance_to_say_something_stupid and not VoiceChannel.blocked:
 		body.play_voice(VoiceChannel.ENEMY_HIT)
 
@@ -232,7 +233,7 @@ func _on_Dodge_timeout():
 	body.set_motion_blur(false, null)
 
 func _on_player_won_match(player):
-	
+	# hide player before win_screen starts
 	yield(Transition, "done_on")
 	identity.controll.active = false
 	self.visible = false

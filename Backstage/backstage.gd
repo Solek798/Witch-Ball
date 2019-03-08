@@ -28,7 +28,7 @@ func update_round_state():
 		players.back().won_rounds += 1
 		
 		emit_signal("player_won_round", players.back())
-		# startes and waits for the EndRoundTimer (EndScreenTimer) to finish
+		
 		$RoundWon.play()
 		$EndRoundTimer.start()
 		yield($EndRoundTimer, "timeout")

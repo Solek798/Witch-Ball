@@ -11,11 +11,13 @@ func _ready():
 	
 	$Music.play()
 	
+	# create all required controller
 	for id in controll_count:
 		var controll = controll_template.instance()
 		$Controlls.add_child(controll)
 		controll.setup(id)
 	
+	# set to first controller
 	$Menu.controlls = $Controlls.get_children()
 	$Menu.switch_controlls(0)
 
@@ -23,6 +25,7 @@ func start_match(identities):
 	Transition.on()
 	yield(Transition, "done_on")
 	
+	#instance match
 	var new_match = match_template.instance()
 	new_match.player_identities = identities
 	new_match.arena_template = load(arenas[randi() % arenas.size()])

@@ -202,7 +202,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 286.0
-margin_bottom = 380.0
+margin_bottom = 362.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -219,7 +219,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 286.0
-margin_bottom = 380.0
+margin_bottom = 362.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -474,7 +474,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 303.0
 margin_right = 286.0
-margin_bottom = 380.0
+margin_bottom = 362.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -492,7 +492,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 58.0
-margin_bottom = 77.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_top = NodePath("../../HB1/FullScreen")
@@ -532,8 +532,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 78.0
-margin_right = 278.0
-margin_bottom = 77.0
+margin_right = 78.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -583,9 +583,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 106.0
-margin_top = 446.0
+margin_top = 428.0
 margin_right = 180.0
-margin_bottom = 517.0
+margin_bottom = 499.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1367,9 +1367,9 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="pressed" from="Panel/Conent/Buttons/Menu" to="." method="_on_Menu_pressed"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial" method="_on_Walk_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Walk" to="AnimirtesTutorial/Tutorial/Buttons/Walk" method="_on_MagicButton_focus_exited"]
 
@@ -1379,9 +1379,9 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Throw" to="AnimirtesTutorial/Tutorial/Buttons/Throw" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial" method="_on_Aim_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Aim" to="AnimirtesTutorial/Tutorial/Buttons/Aim" method="_on_MagicButton_focus_exited"]
 
@@ -1391,15 +1391,15 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" to="AnimirtesTutorial/Tutorial/Buttons/ThrowSpezial" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial" method="_on_Doge_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Doge" to="AnimirtesTutorial/Tutorial/Buttons/Doge" method="_on_MagicButton_focus_exited"]
 
-[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_entered"]
-
 [connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial" method="_on_Tutorial_focus_entered"]
+
+[connection signal="focus_entered" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_entered"]
 
 [connection signal="focus_exited" from="AnimirtesTutorial/Tutorial/Buttons/Options" to="AnimirtesTutorial/Tutorial/Buttons/Options" method="_on_MagicButton_focus_exited"]
 

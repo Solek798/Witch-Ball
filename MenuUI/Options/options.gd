@@ -36,16 +36,11 @@ func _on_Music_value_changed(value):
 
 func _on_Animirtes_Tutorial_pressed():
 	$AnimirtesTutorial.visible = true
-	print("1")
 	$AnimirtesTutorial/Tutorial/Buttons/Options.grab_focus()
-	print("2")
 	$Panel.visible = false
-	pass # replace with function body
 
 
 func _on_Options_pressed():
-	
 	$Panel.visible = true
 	$AnimirtesTutorial.visible = false
 	$Panel/Conent/Buttons/Menu.grab_focus()
-	pass # replace with function body

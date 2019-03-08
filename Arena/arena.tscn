@@ -13,7 +13,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1.50659, 731.846, 0, 0, 0, 0, -6.02625, -12.0469 )
 }
 
-[node name="Arena" type="Node2D"]
+[node name="Arena" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]

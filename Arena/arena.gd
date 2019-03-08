@@ -16,19 +16,6 @@ func _ready():
 	min_time = min_spawn_time
 	max_time = max_spawn_time
 
-func _process(delta):
-	# TEMP!
-	# Cheat-shortcuts are going to be removed in final Version
-	if Input.is_action_just_pressed("cheat_mana_pickup"):
-		$PickUp_Spawn/Follow.unit_offset = 0.5
-		spawn_pickup(pickup_mana_template)
-	if Input.is_action_just_pressed("cheat_fast_pickup"):
-		$PickUp_Spawn/Follow.unit_offset = 0.5
-		spawn_pickup(pickup_fast_template)
-	if Input.is_action_just_pressed("cheat_big_pickup"):
-		$PickUp_Spawn/Follow.unit_offset = 0.5
-		spawn_pickup(pickup_big_template)
-
 func set_spawn_time():
 	$Timer/PickUpSpawner.wait_time = (randi() % (max_time - min_time)) + min_time
 
@@ -51,6 +38,7 @@ func _on_player_created(player):
 	players.append(player)
 
 func _on_player_reseted(player):
+	# reset player position
 	player.position = $Position.get_by_id(player.identity.id)
 
 func _on_match_started(round_count):
@@ -59,6 +47,7 @@ func _on_match_started(round_count):
 	$Timer/PickUpSpawnRate.start()
 
 func _on_SpawnTimer_timeout():
+	# pick random PickUp
 	$PickUp_Spawn/Follow.unit_offset = randf()
 	
 	match randi() % 10:
@@ -76,9 +65,10 @@ func _on_bullet_destroyed(sound_effect, vfx_effect):
 	add_child(vfx_effect)
 
 func _on_round_started():
-	$Timer/PickUpSpawner.stop()
+	$Timer/PickUpSpawner.start()
 
 func _on_round_finished():
+	# reset arena
 	for child in get_children():
 		if child.is_in_group("Bullet") or child.is_in_group("PickUp"):
 			child.queue_free()
@@ -86,7 +76,7 @@ func _on_round_finished():
 	min_time = min_spawn_time
 	max_time = max_spawn_time
 	set_spawn_time()
-	$Timer/PickUpSpawner.start()
+	$Timer/PickUpSpawner.stop()
 
 func _on_PickUpTimer_timeout():
 	min_time /= time_divider

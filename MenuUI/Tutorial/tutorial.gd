@@ -1,9 +1,6 @@
 extends Node2D
 
 
-func _ready():
-	print(self.modulate)
-
 func _process(delta):
 	if Input.is_joy_button_pressed(0, JOY_XBOX_A):
 		$ConfirmPanel/HB1/Player1.is_filled = true
@@ -23,3 +20,4 @@ func validate():
 		
 		$Animation.play("FadeOut")
 		self.queue_free()
+
