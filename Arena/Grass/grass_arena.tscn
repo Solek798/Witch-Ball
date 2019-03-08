@@ -299,8 +299,6 @@ shape = SubResource( 8 )
 
 [node name="Butterflies" type="Node" parent="." index="7"]
 
-editor/display_folded = true
-
 [node name="Position1" type="Position2D" parent="Butterflies" index="0"]
 
 position = Vector2( 175.717, 532.453 )
@@ -315,15 +313,17 @@ position = Vector2( 268.2, 138.66 )
 
 [node name="Eyes" type="Node" parent="." index="8"]
 
-editor/display_folded = true
-
 [node name="Position1" type="Position2D" parent="Eyes" index="0"]
 
-position = Vector2( 409.26, 135.903 )
+position = Vector2( 435.26, 61.903 )
 
 [node name="Position2" type="Position2D" parent="Eyes" index="1"]
 
-position = Vector2( 1469.8, 129.108 )
+position = Vector2( 1654.81, 135.425 )
+
+[node name="Position3" type="Position2D" parent="Eyes" index="2"]
+
+position = Vector2( 71.1778, 446.699 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
 
@@ -393,6 +393,8 @@ shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range", "Transform" ]
 
 [node name="GrassArenaAnimation" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 1, 0 )
 
 [connection signal="timeout" from="Timer/RandomEffect" to="." method="_on_RandomEffect_timeout"]
 

@@ -15,9 +15,9 @@ func _on_Animation_animation_finished(anim_name):
 	self.queue_free()
 "
 
-[node name="EyesEffect" type="Sprite"]
+[node name="EyesEffect" type="Sprite" index="0"]
 
-scale = Vector2( 1, 1e-05 )
+scale = Vector2( 0.5, 5e-006 )
 texture = ExtResource( 1 )
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
