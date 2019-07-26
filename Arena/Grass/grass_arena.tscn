@@ -6,7 +6,7 @@
 [ext_resource path="res://Arena/Animation/needel_effect.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Arena/Animation/eyes_effect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Arena/Animation/butterfly_effect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Arena/Grass/Grass_lvl_aktuell.png" type="Texture" id=7]
+[ext_resource path="res://Arena/Grass/Animation/png Final/grasslevel.png" type="Texture" id=7]
 [ext_resource path="res://Arena/licht3.png" type="Texture" id=8]
 [ext_resource path="res://Arena/licht5.png" type="Texture" id=9]
 [ext_resource path="res://Arena/Grass/Animation/GrassArenaAnimation.tscn" type="PackedScene" id=10]
@@ -82,7 +82,7 @@ tracks/1/keys = {
 "values": [ 0.01, 3.0, 0.01 ]
 }
 
-[node name="grass_arena" instance=ExtResource( 1 )]
+[node name="grass_arena" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 stone_effect_template = ExtResource( 3 )
