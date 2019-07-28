@@ -50,3 +50,5 @@ func _on_match_tree_exited():
 func _on_Game_tree_exiting():
 	ProjectSettings.save()
 
+func _on_Music_finished():
+	$Music.play()

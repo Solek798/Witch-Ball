@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1014.59, 539.699 ), Vector2( 911.588, 539.699 ), Vector2( 1014.59, 539.699 ) ]
 }
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 match_template = ExtResource( 2 )
@@ -63,7 +63,7 @@ controll_template = ExtResource( 3 )
 controll_count = 2
 arenas = [ "res://Arena/Stone/stone_arena.tscn", "res://Arena/Grass/grass_arena.tscn" ]
 
-[node name="Music" type="AudioStreamPlayer" parent="." index="0"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 
 stream = ExtResource( 4 )
 volume_db = 0.0
@@ -72,7 +72,7 @@ autoplay = false
 mix_target = 0
 bus = "Music"
 
-[node name="Menu" type="ColorRect" parent="." index="1"]
+[node name="Menu" type="ColorRect" parent="."]
 
 pause_mode = 2
 material = SubResource( 2 )
@@ -95,7 +95,7 @@ tutorial_template = ExtResource( 8 )
 versus_template = ExtResource( 9 )
 win_screen_template = ExtResource( 10 )
 
-[node name="Background" type="Sprite" parent="Menu" index="0"]
+[node name="Background" type="Sprite" parent="Menu"]
 
 editor/display_folded = true
 position = Vector2( 911.588, 539.699 )
@@ -104,7 +104,7 @@ z_index = -1
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Background" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Background"]
 
 root_node = NodePath("..")
 autoplay = "Neue Animation"
@@ -114,7 +114,7 @@ playback_speed = 1.0
 "anims/Neue Animation" = SubResource( 3 )
 blend_times = [  ]
 
-[node name="Animation" type="AnimationPlayer" parent="Menu" index="1"]
+[node name="Animation" type="AnimationPlayer" parent="Menu"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -125,15 +125,17 @@ anims/FadeIn = ExtResource( 12 )
 anims/FadeOut = ExtResource( 13 )
 blend_times = [  ]
 
-[node name="Main" parent="Menu" index="2" instance=ExtResource( 6 )]
+[node name="Main" parent="Menu" instance=ExtResource( 6 )]
 
 margin_left = 1.0
 margin_top = -3.0
 margin_right = 1.0
 margin_bottom = -3.0
 
-[node name="Controlls" type="Node" parent="." index="2"]
+[node name="Controlls" type="Node" parent="."]
 
 [connection signal="tree_exiting" from="." to="." method="_on_Game_tree_exiting"]
+
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
 
 
